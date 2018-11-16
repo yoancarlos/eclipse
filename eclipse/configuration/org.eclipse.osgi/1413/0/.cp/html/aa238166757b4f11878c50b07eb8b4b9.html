@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You can use the Aggregator step to combine multiple incoming messages into a single message."/>
+<meta name="description" content="You can use the Aggregator step to combine multiple incoming messages into a single message."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Define Aggregator</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioaa238166757b4f11878c50b07eb8b4b9">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Define Aggregator</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You can use the Aggregator step to combine multiple incoming messages into a single
+		message.</p>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="note caution"><span class="cautiontitle">Caution</span> 
+				<p class="p">Usage of an Aggregator step in a Local Integration
+            Process or Exception Subprocess is not supported.</p>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<div class="p">
+				<div class="note note"><span class="notetitle">Note</span> 
+					<p class="p">When you use the Aggregator step in combination with a polling SFTP sender
+						adapter and you expect a high message load, please consider the following
+						recommendation:</p>
+
+					<p class="p">For the involved in SFTP sender adapter set the value for <span class="ph uicontrol">Maximum
+							Messages per Poll</span> to a small number which is larger than 0
+						(for example, <kbd class="ph userinput">20</kbd>) (under <span class="ph uicontrol">Advanced
+							Parameters</span>). That way, you ensure a proper message
+						processing status logging at runtime.</p>
+
+				</div>
+
+			</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loioaa238166757b4f11878c50b07eb8b4b9__image_f5w_cpx_jr" src="loioe7b2a80fb0f54ee29022d2fefed87d3c_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Aggregator</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Place <span class="ph uicontrol">Aggregator</span> in the integration process and define
+					the message path.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify the attributes of the aggregator.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioaa238166757b4f11878c50b07eb8b4b9__d8219e15" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: </span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d3948885e98">
+                                <p class="p">Attribute</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d3948885e104">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3948885e98 ">
+                                <p class="p"><span class="ph uicontrol">Incoming Format</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3948885e104 ">
+                                <p class="p">Content type of the incoming message</p>
+
+                                <p class="p">Currently, only <kbd class="ph userinput">XML (Same Format)</kbd> can be
+                                    selected.</p>
+
+                                <p class="p">It is important that the incoming messages have the same
+                                    format.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3948885e98 ">
+                                <p class="p"><span class="ph uicontrol">Aggregation Algorithm</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3948885e104 ">
+                                <p class="p">Specifies how the correlated messages should be treated.</p>
+
+                                <p class="p">You can select one of the following options:</p>
+
+                                <ul class="ul" id="loioaa238166757b4f11878c50b07eb8b4b9__d8219e87">
+                                    <li class="li"><span class="ph uicontrol">Combine in Sequence</span>
+                                        <p class="p">Aggregated message contains all correlated incoming
+                                            messages, and the original messages are put into a
+                                            sequence. </p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">Combine</span>
+                                        <p class="p">Aggregated message contains all correlated incoming
+                                            messages.</p>
+
+                                    </li>
+
+                                </ul>
+
+                                <p class="p">The <span class="ph uicontrol">Aggregator</span> step generates an SAP
+                                    Process Integration <span class="ph emphasis emphasis">multi mapping</span> as
+                                    specific format. This is important to know because the
+                                    integration developer typically has to create a mapping from the
+                                    generated format to the message structure required by the
+                                    receiver. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3948885e98 ">
+                                <p class="p"><span class="ph uicontrol">Message Sequence Expression (XPath)</span></p>
+
+                                <p class="p">(only if for <span class="ph uicontrol">Aggregation Algorithm</span> the
+                                    option <span class="ph uicontrol">Combine in Sequence</span> has been
+                                    selected)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3948885e104 ">
+                                <p class="p">Enter an XPath expression for that message element based on which
+                                    a sequence is being defined.</p>
+
+                                <p class="p">You can use only numbers to define a sequence. Each sequence
+                                    starts with <kbd class="ph userinput">1</kbd>.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3948885e98 ">
+                                <p class="p"><span class="ph uicontrol">Last Message Condition (XPath)</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3948885e104 ">
+                                <p class="p">Define the condition (<samp class="ph codeph"><span class="keyword parmname">XPATH</span> =
+                                            <span class="keyword parmname">value</span></samp>) to identify the
+                                    last message of an aggregate.</p>
+
+                                <p class="p">You have the option to use an <span class="ph uicontrol">Router</span> step
+                                    after the <span class="ph uicontrol">Aggregator</span> in order to evaluate
+                                    the <samp class="ph codeph">Camel ${header.CamelAggregatedCompletedBy}</samp>
+                                    attribute, and, based on the value, decide how to continue.</p>
+
+                                <p class="p">Note that the header attribute can only have one of the following
+                                    values: </p>
+
+                                <ul class="ul" id="loioaa238166757b4f11878c50b07eb8b4b9__d8219e183">
+                                    <li class="li"><kbd class="ph userinput">timeout</kbd><p class="p">Processing of the aggregate
+                                            has been finished because the configured
+                                                <span class="ph uicontrol">Completion Timeout</span> has been
+                                            reached. </p>
+</li>
+
+                                    <li class="li"><kbd class="ph userinput">predicate</kbd><p class="p">Processing of the
+                                            aggregate has been finished because the
+                                                <span class="ph uicontrol">Completion Condition</span> has been
+                                            fulfilled. </p>
+</li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3948885e98 ">
+                                <p class="p"><span class="ph uicontrol">Completion Timeout</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3948885e104 ">
+                                <p class="p">Defines the maximum time between two messages before aggregation
+                                    is being stopped (<cite class="cite">period of inactivity</cite>). </p>
+
+                                <p class="p">You have the option to use an <span class="ph uicontrol">Router</span> step
+                                    after the <span class="ph uicontrol">Aggregator</span> in order to evaluate
+                                    the <samp class="ph codeph">Camel ${header.CamelAggregatedCompletedBy}</samp>
+                                    attribute, and, based on the value, decide how to continue.</p>
+
+                                <p class="p">Note that the header attribute can only have one of the following
+                                    values: </p>
+
+                                <ul class="ul" id="loioaa238166757b4f11878c50b07eb8b4b9__d8219e238">
+                                    <li class="li"><kbd class="ph userinput">timeout</kbd><p class="p">Processing of the aggregate
+                                            has been finished because the configured
+                                                <span class="ph uicontrol">Completion Timeout</span> has been
+                                            reached. </p>
+</li>
+
+                                    <li class="li"><kbd class="ph userinput">predicate</kbd><p class="p">Processing of the
+                                            aggregate has been finished because the
+                                                <span class="ph uicontrol">Completion Condition</span> has been
+                                            fulfilled. </p>
+</li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3948885e98 ">
+                                <p class="p"><span class="ph uicontrol">Data Store Name</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3948885e104 ">
+                                <p class="p">Enter the name of the transient data store where the aggregated
+                                    message is to be stored. The name should begin with a letter and
+                                    use characters (aA-zZ, 0-9, - _ . ~ ).</p>
+
+                                <p class="p">Note that only <span class="ph emphasis emphasis">local</span> data stores (that apply
+                                    only to the integration flow) can be used. Global data stores
+                                    cannot be used for this purpose. </p>
+
+                                <div class="note note"><span class="notetitle">Note</span> The Integration Operations feature provides a Data Store
+                                    Viewer that allows you to monitor your transient data
+                                    stores.</div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the configuration.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

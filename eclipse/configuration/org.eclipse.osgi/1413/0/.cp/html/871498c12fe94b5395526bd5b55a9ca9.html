@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Assign Adapter to Communication Channel</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio871498c12fe94b5395526bd5b55a9ca9">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Assign Adapter to Communication Channel</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loio871498c12fe94b5395526bd5b55a9ca9__ul_vcz_p1p_gr">
+					<li class="li">
+						<p class="p">You have logged on to<span class="ph pname" id="loio871498c12fe94b5395526bd5b55a9ca9__int-long-name">SAP Cloud Platform Integration</span> web
+							application.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You have copied or imported the integration package to your workspace.
+						</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You need to enable the communication between sender and receiver systems by assigning the
+				communication channel with the appropriate adapters. The integration package that
+				you have copied to workspace contains integration flows that have the relevant
+				adapters assigned to their communication channels.</p>
+
+			<div class="note note"><span class="notetitle">Note</span> You must click on the participant’s name of sender and receiver elements, to view the
+				header and property information. Also, you must drag and drop message flow over the
+				participant's name, to assign communication channels.</div>
+
+			<p class="p">You use this procedure if you want to change the adapter assigned to the
+				communication channel in integration flows.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Access <span class="ph pname">SAP Cloud Platform Integration</span> web application by launching the URL
+					provided by SAP.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loio871498c12fe94b5395526bd5b55a9ca9__image_arc_2bp_gr" src="loio2e38de020d5940a19f341ef8c54af5b9_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Design</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select the integration package that contains the integration flow in which you
+					want to assign adapter to communication channel.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select the integration flow and choose <span class="ph uicontrol">Edit</span>.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> In the case of OData service artifacts in integration packages, you have
+						to edit the OData service artifact in order to edit the required integration
+						flow. </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If a communication channel does not exist, go to step 7.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If there is a communication channel, choose the channel and in the palette
+					choose <img class="image" id="loio871498c12fe94b5395526bd5b55a9ca9__image_nhf_dcp_gr" src="loio99363cf558dd4e6cbd68fba097eae681_LowRes.png"/>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to define sender channel, choose <span class="ph uicontrol">Sender</span> and
+					drag the pointer to <span class="ph uicontrol">Start</span>.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> In the case of integration flows in OData service artifacts, you cannot
+						change the OData sender adapter.</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to define receiver channel, choose <span class="ph uicontrol">End</span> and
+					drag the pointer to <span class="ph uicontrol">Receiver</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Adapter Type</span> dialog, select the adapter you want to
+					assign.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you have assigned <span class="ph uicontrol">SuccessFactors</span> or <span class="ph uicontrol">SOAP</span>
+					adapter, in <span class="ph uicontrol">Message Protocol</span> dialog, choose the message
+					protocol you want to use.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the changes after configuring the adapter and other integration
+					flow elements.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> In the case of integration flows in OData service artifacts, you can save
+						the integration flow and deploy the OData service.</div>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

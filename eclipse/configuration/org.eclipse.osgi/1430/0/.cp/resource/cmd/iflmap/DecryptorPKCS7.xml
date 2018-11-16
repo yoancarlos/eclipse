@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Decrypt/version::1.0.1" ComponentName="sap:Decryptor" UIElementType="Flowstep">
+    <Variant VariantId="ctype::FlowstepVariant/cname::Decrypt/version::1.0.1" VariantName="PKCS7Decryptor" VariantDisplayName="PKCS7/CMS Decryptor" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Binary</ContentType>
+                <Schema></Schema>
+            </Content>
+            <Content>
+                <ContentType>Base64Encoded</ContentType>
+                <Schema></Schema>
+            </Content>
+        </InputContent>
+        <!-- allowed output content type -->
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </OutputContent>
+        <Tab id="iflow.advance.decrypt.tab">
+            <AttributeGroup id="generalDetails">
+                <GuiLabels>
+                    <Label language="EN">General Details</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>Activity_Name</ReferenceName>
+                    <Restriction>[A-Za-z]+[A-Za-z0-9_]*</Restriction>
+                    <description>Enter a name for the Decryptor step. Begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>isBodyBase64Encoded</ReferenceName>
+                    <description>Select this to specify if the body of the incoming message is Base64 encoded</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PKCS7SignContentType</ReferenceName>
+                    <description>Select 'Enveloped Data Only' if encrypted only payload is expected.
+Select 'Signed and Enveloped Data' if encrypted and signed payload is expected.
+Select 'Enveloped or "Signed and Enveloped Data"' if either of these content types can be processed.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>publicKeyAliases</ReferenceName>
+                    <OrCondition>
+                        <EditCondition>
+                            <AttributeName>PKCS7SignContentType</AttributeName>
+                            <AttributeValue>EnvelopedDataOrSignedAndEnvelopedData</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>PKCS7SignContentType</AttributeName>
+                            <AttributeValue>SignedAndEnvelopedData</AttributeValue>
+                        </EditCondition>
+                    </OrCondition>
+                </AttributeReference>
+            </AttributeGroup>
+            <description>Define the parameters to decrypt the content of incoming message</description>
+        </Tab>
+        <!-- additional information -->
+        <AllowedHeaders></AllowedHeaders>
+        <ReferencedComponents></ReferencedComponents>
+    </Variant>
+    <AttributeMetadata>
+        <Name>Activity_Name</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <AutoGenerate>
+            <Prefix>PKCS7Decryptor</Prefix>
+        </AutoGenerate>
+        <Default>PKCS7Decryptor</Default><!-- until AutoGenerate works use default -->
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>isBodyBase64Encoded</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <GuiLabels>
+            <Label language="EN">Body is Base64 Encoded</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PKCS7SignContentType</Name>
+        <Usage></Usage>
+        <DataType>xsd:string</DataType>
+        <Default>EnvelopedData</Default>
+        <GuiLabels>
+            <Label language="EN">Signatures</Label>
+        </GuiLabels>
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>EnvelopedData</Value>
+                <GuiLabels>
+                    <Label language="EN">Enveloped Data Only</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>EnvelopedDataOrSignedAndEnvelopedData</Value>
+                <GuiLabels>
+                    <Label language="EN">Enveloped or "Signed and Enveloped" Data</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SignedAndEnvelopedData</Value>
+                <GuiLabels>
+                    <Label language="EN">Signed and Enveloped Data</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>publicKeyAliases</Name>
+        <Usage>required</Usage>
+        <GuiLabels>
+            <Label language="EN">Public Key Alias</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>publicKey</ReferenceName>
+            <description>Enter the public key aliases of all expected senders. The public keys are used to verify the signature(s).</description>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>publicKey</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <GuiLabels>
+            <Label language="EN">Public Key Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

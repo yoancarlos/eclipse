@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="To ensure a successful conversion from XML format to JSON format, you should make yourself familiar with the conversion rules."/>
+<meta name="description" content="To ensure a successful conversion from XML format to JSON format, you should make yourself familiar with the conversion rules."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Conversion Rules for XML to JSON Conversion</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio778aed733e3140cea0435f4615d53812">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Conversion Rules for XML to JSON Conversion</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc">To ensure a successful conversion from XML format to JSON format, you should make
+		yourself familiar with the conversion rules.</p>
+
+		<p class="p">The conversion from XML format to JSON  format follows the following rules:</p>
+
+		<ul class="ul" id="loio778aed733e3140cea0435f4615d53812__ul_pv2_1cf_kr">
+			<li class="li">
+                    <p class="p">An element is represented as JSON member whose name is the concatenation of
+                        JSON prefix corresponding to the XML namespace, JSON delimiter, and the
+                        element name. If the element has no namespace, no prefix and JSON delimiter
+                        is added to the JSON name.</p>
+
+                </li>
+
+			<li class="li">
+                    <p class="p">An attribute is represented as JSON member whose name is the concatenation of
+                            <samp class="ph codeph">'@'</samp> , the JSON prefix corresponding to the XML
+                        namespace, JSON delimiter, and the attribute name. If the attribute has no
+                        namespace, no prefix and JSON delimiter are added to the JSON name. </p>
+
+                </li>
+
+			<li class="li">
+                    <p class="p">An element with no characters or child elements is represented by
+                            <samp class="ph codeph">"element" : ""</samp>
+                    </p>
+
+                </li>
+
+			<li class="li">
+                    <p class="p">An element with multiple child elements of the same name is represented by an
+                        array. This also holds if between the children with the same name other
+                        children with another name reside. </p>
+
+                    <p class="p">Example:
+                            <samp class="ph codeph">&lt;root&gt;&lt;childA&gt;A1&lt;/childA&gt;&lt;childB&gt;B&lt;/childB&gt;&lt;childA&gt;A2&lt;/childA&gt;&lt;/root&gt;</samp>
+                        is transformed in the non-streaming case to
+                            <samp class="ph codeph">{"root":{"childA":["A1","A2"],"childB":"B"}}</samp>, which
+                        means that the order of the children is not preserved.</p>
+
+                    <p class="p">In the streaming case, the result is:
+                            <samp class="ph codeph">{"root":{"childA":["A1"],"childB":"B","childA":["A2"]"}}</samp>,
+                        which means that a non-valid JSON document is created because the member
+                            <samp class="ph codeph">"childA" </samp>appears twice. </p>
+
+                </li>
+
+			<li class="li">
+                    <p class="p">The value of a complex element (having attributes for example) is represented
+                        by a separate member <samp class="ph codeph">"$":"value"</samp>.</p>
+
+                </li>
+
+			<li class="li">
+				<p class="p">Elements with mixed content (for example.
+						<samp class="ph codeph">&lt;A&gt;mixed1_value&lt;B&gt;valueB&lt;/B&gt;mixed2_value&lt;/A&gt;</samp>)
+					are not supported. Currently you get wrong results for XML to JSON:
+						<samp class="ph codeph">{"A":{"B":"valueB","$":"mixed1_valuemixed2_value"}}</samp> in the
+					non-streaming case or
+						<samp class="ph codeph">{"A":"$":mixed1_value","B":"valueB","$":"mixed2_value"}}</samp> in
+					the streaming case. </p>
+
+			</li>
+
+			<li class="li">
+				<p class="p">All element/attribute values are transformed to JSON string.</p>
+
+			</li>
+
+			<li class="li">
+				<p class="p">No namespace declaration is written into the JSON document.</p>
+
+			</li>
+
+			<li class="li">
+				<p class="p">Tabs, spaces, new lines between elements and attributes are ignored. However, a white space
+					value of an element with simple type is represented in JSON; example
+						<samp class="ph codeph">&lt;A&gt; &lt;/A&gt;</samp> is represented by <samp class="ph codeph">"A":"
+						"</samp>.</p>
+
+			</li>
+
+			<li class="li">
+				<p class="p">If you have an element with namespace but without XML prefix whose namespace is not contained
+					in the XML-namespace-to-Json-prefix map, then you get an exception:
+						<samp class="ph codeph">&lt;A xmlns="http://test"/&gt;</samp> leads to
+						<samp class="ph codeph">IllegalStateException Invalid JSON namespace: http://test</samp>. </p>
+
+				<p class="p">This is not the case if you choose the streaming option. With streaming the
+					namespace is just ignored: <samp class="ph codeph">&lt;A xmlns="http://test"/&gt;v&lt;/A&gt;</samp>
+					leads to <samp class="ph codeph">{"A":"v"}</samp>. </p>
+
+			</li>
+
+			<li class="li">
+				<p class="p">If you have an element with namespace and XML prefix whose namespace is not contained in the
+					XML-namespace-to-Json-prefix map then the XML prefix is used as JSON prefix
+						<samp class="ph codeph">&lt;ns:A xmlns:ns:="http://test"/&gt;</samp> leads to
+						<samp class="ph codeph">"ns.A":""</samp> (if JSON delimiter is <samp class="ph codeph">'.'</samp>).</p>
+
+			</li>
+
+		</ul>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="4e05044231654134a7d19f4dded517e6.html" title="During streaming the XML document is processed in parts or segments:">How Streaming in the XML-to-JSON Converter Works</a></div>
+<div><a class="link" href="a5b4641c393f406bb544987497c90a72.html" title="To ensure a successful conversion form XML to JSON format you have to know the limitations for this conversion.">Limitations for XML-to-JSON Conversion</a></div>
+<div><a class="link" href="e8e0fff0280c4ddb8359e198a2c20c8c.html" title="Examples and Special Cases of JSON Message without Root Element Tag">Example: Transformation to a JSON Message without Root Element Tag</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

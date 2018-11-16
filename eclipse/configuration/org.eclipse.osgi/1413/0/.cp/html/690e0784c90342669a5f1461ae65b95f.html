@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Define Exception Subprocess</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio690e0784c90342669a5f1461ae65b95f">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Define Exception Subprocess</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>You use this element to catch any exceptions thrown in the integration process and handle
+			them.</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio690e0784c90342669a5f1461ae65b95f__steps_npc_31j_gy"><li class="li step stepexpand">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="ph uicontrol">Model
+						Configuration</span> editor.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">To add an exception subprocess to the integration flow, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Process</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Exception Subprocess</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> from the palette. The subprocess can be dropped into the
+					integration process and should not be connected to any of the elements of the
+					integration flow.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select the exception subprocess.</span>
+				<ol type="a" class="ol substeps" id="loio690e0784c90342669a5f1461ae65b95f__substeps_r1q_zv1_3y">
+					<li class="li substep">
+						<span class="ph cmd">In the property sheet specify a name.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Start the process with <span class="ph uicontrol">Error Start</span> event always.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">End the process with either <span class="ph uicontrol">End Message</span> or  <span class="ph uicontrol">Error
+						End</span> or <span class="ph uicontrol">Escalation</span> event.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio690e0784c90342669a5f1461ae65b95f__ul_vxc_3j3_x4">
+							<li class="li">You can use an <span class="ph uicontrol">End Message</span> event to wrap the
+								exception in a fault message and send it back to the sender in the
+								payload.</li>
+
+							<li class="li">You can use an <span class="ph uicontrol">Error End</span> event to throw the
+								exception to default exception handlers.</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">You can also add other flow elements between the start and end events . </span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio690e0784c90342669a5f1461ae65b95f__ul_g5f_xw1_3y">
+							<li class="li">
+								<p class="p">For example, you can choose <span class="ph uicontrol">Add Service
+										Call</span> from the context menu of a connection
+									within the pool. This enables you to call another system to
+									handle the exception. </p>
+
+							</li>
+
+							<li class="li">The following elements are not supported within an
+									<span class="ph uicontrol">Exception Subprocess</span>:<ul class="ul" id="loio690e0784c90342669a5f1461ae65b95f__ul_f32_1x1_3y">
+									<li class="li">
+										<p class="p"><span class="ph uicontrol">Another Exception Subprocess</span></p>
+
+									</li>
+
+									<li class="li">
+										<p class="p"><span class="ph uicontrol">Integration Process </span></p>
+
+									</li>
+
+									<li class="li">
+										<p class="p"><span class="ph uicontrol">Local Integration Process</span></p>
+
+									</li>
+
+									<li class="li">
+										<p class="p"><span class="ph uicontrol">Sender </span></p>
+
+									</li>
+
+									<li class="li">
+										<p class="p"><span class="ph uicontrol">Receiver </span></p>
+
+									</li>
+
+									<li class="li">
+										<p class="p"><span class="ph uicontrol">Start Message </span></p>
+
+									</li>
+
+									<li class="li">
+										<p class="p"><span class="ph uicontrol">Terminate Message</span></p>
+
+									</li>
+
+									<li class="li">
+										<p class="p"><span class="ph uicontrol">Timer Start </span></p>
+
+									</li>
+
+									<li class="li">
+										<p class="p"><span class="ph uicontrol">Start Event </span></p>
+
+									</li>
+
+									<li class="li">
+										<p class="p"><span class="ph uicontrol">End Event </span></p>
+
+									</li>
+
+								</ul>
+</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the changes. </span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio690e0784c90342669a5f1461ae65b95f__ul_z13_hkp_xp">
+							<li class="li">The message processing log will be in an error state even if a user
+								catches an exception and performs additional processing on it. </li>
+
+							<li class="li">You can get more details on exception using
+									<kbd class="ph userinput">${exception.message}</kbd> or
+									<kbd class="ph userinput">${exception.stacktrace}</kbd>.</li>
+
+							<li class="li">You cannot catch exceptions of local integration process in the main
+								integration process.</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

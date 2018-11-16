@@ -1,0 +1,4 @@
+# Debugging options for the com.sap.ndb.studio.editor plugin.
+
+# Turn on debugging
+com.sap.ndb.studio.editor/debug=false

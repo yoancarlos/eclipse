@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Version History, please document the changes after version change!
+1.0.0: d003364: 
+ -Created CMD for AutoUI
+ -->
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Encrypt/version::1.0.3" ComponentName="sap:Encryptor" UIElementType="Flowstep">
+    <Variant VariantId="ctype::FlowstepVariant/cname::Encrypt/version::1.0.3" VariantName="Encryptor" VariantDisplayName="PKCS7/CMS Encryptor" scope="Across Pools" AttachmentBehavior="Preserve">
+        <!-- allowed input content type -->
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </InputContent>
+        <!-- allowed output content type -->
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Binary</ContentType>
+                <Schema></Schema>
+            </Content>
+        </OutputContent>
+        <!-- Attribute Groupings and Restriction -->
+        <Tab id="iflow.advance.encrypt.tab">
+            <GuiLabels>
+                <Label language="EN">Define the parameters to encrypt the content of incoming message</Label>
+            </GuiLabels>
+            <AttributeGroup id="General Details">
+                <AttributeReference>
+                    <ReferenceName>Activity_Name</ReferenceName>
+                    <Restriction>^[a-zA-Z][a-zA-Z0-9_]{3,30}$</Restriction>
+                    <ErrorMessage>Name not specified for Encryptor step</ErrorMessage>
+                    <ErrorMessage>Cannot have same name for multiple Encryptor steps</ErrorMessage>
+                    <ErrorMessage>Name should begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30</ErrorMessage>
+                    <description>Enter a name for the Encryptor step. Begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>Block_Size</ReferenceName>
+                    <Restriction>^[0-9]+$</Restriction>
+                    <ErrorMessage>Specify a valid Block Size value for Encryptor step</ErrorMessage>
+                    <description>Enter block size of data to be encoded. Whole data is encoded for block size less than or equal to zero</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>shouldEncodeBodyKey</ReferenceName>
+                    <description>Select this if you want the message body to be encoded with Base64.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PKCS7SignContentType</ReferenceName>
+                    <description>Select 'Signed and Enveloped Data' if payload shall be signed and encrypted.\nSelect 'Enveloped Data Only' if payload shall only be encrypted. </description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>Encryption_Algorithem</ReferenceName>
+                    <ErrorMessage>Encryption Algorithm not specified for Encryptor step</ErrorMessage>
+                    <description>Select an algorithm that has the format of Cipher/Operation Mode/Padding Scheme for encrypting the content</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>Key_Length</ReferenceName>
+                    <ErrorMessage>Secret Key Length not specified for Encryptor step</ErrorMessage>
+                    <description>Select the key length for the secret key to be used for content encryption</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>headers</ReferenceName>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PKCS7PrivateKeyAliases</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>PKCS7SignContentType</AttributeName>
+                        <AttributeValue>signedAndEnveloped</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+        <AllowedHeaders></AllowedHeaders>
+        <ReferencedComponents></ReferencedComponents>
+    </Variant>
+    <AttributeMetadata>
+        <Name>Activity_Name</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <AutoGenerate>
+            <Prefix>PKCS7Encryptor</Prefix>
+        </AutoGenerate>
+        <Default>PKCS7Encryptor</Default><!-- until AutoGenerate works use default -->
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>Block_Size</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>2048</Default>
+        <GuiLabels>
+            <Label language="EN">Block Size(in bytes):</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PKCS7SignContentType</Name>
+        <Usage/>
+        <DataType>xsd:string</DataType>
+        <Default>enveloped</Default>
+        <GuiLabels>
+            <Label language="EN">Signatures:</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>enveloped</Value>
+                <GuiLabels>
+                    <Label language="EN">Enveloped Data Only</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>signedAndEnveloped</Value>
+                <GuiLabels>
+                    <Label language="EN">Signed and Enveloped Data</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>Encryption_Algorithem</Name>
+        <Usage/>
+        <DataType>xsd:string</DataType>
+        <Default>AES/CBC/PKCS5Padding</Default>
+        <GuiLabels>
+            <Label language="EN">Content Encryption Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>AES/CBC/PKCS5Padding</Value>
+                <GuiLabels>
+                    <Label language="EN">AES/CBC/PKCS5Padding</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>ARCFOUR/ECB/NoPadding</Value>
+                <GuiLabels>
+                    <Label language="EN">ARCFOUR/ECB/NoPadding</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Camellia/CBC/PKCS5Padding</Value>
+                <GuiLabels>
+                    <Label language="EN">Camellia/CBC/PKCS5Padding</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>DES/CBC/PKCS5Padding</Value>
+                <GuiLabels>
+                    <Label language="EN">DES/CBC/PKCS5Padding</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>DESede/CBC/PKCS5Padding</Value>
+                <GuiLabels>
+                    <Label language="EN">DESede/CBC/PKCS5Padding</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>RC2/CBC/PKCS5Padding</Value>
+                <GuiLabels>
+                    <Label language="EN">RC2/CBC/PKCS5Padding</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>CAST5/CBC/PKCS5Padding</Value>
+                <GuiLabels>
+                    <Label language="EN">CAST5/CBC/PKCS5Padding</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>Key_Length</Name>
+        <Usage/>
+        <DataType>xsd:string</DataType>
+        <Default>128</Default>
+        <GuiLabels>
+            <Label language="EN">Secret Key Length</Label>
+        </GuiLabels>
+        
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>40</Value>
+                <GuiLabels>
+                    <Label language="EN">40</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>48</Value>
+                <GuiLabels>
+                    <Label language="EN">48</Label>
+                </GuiLabels>
+            </FixedValue>
+            <OrCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>ARCFOUR/ECB/NoPadding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>RC2/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>CAST5/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+            </OrCondition>
+        </FixedValues>
+
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>56</Value>
+                <GuiLabels>
+                    <Label language="EN">56</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>64</Value>
+                <GuiLabels>
+                    <Label language="EN">64</Label>
+                </GuiLabels>
+            </FixedValue>
+            <OrCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>ARCFOUR/ECB/NoPadding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>RC2/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>CAST5/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>DES/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+            </OrCondition>
+        </FixedValues>
+        
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>72</Value>
+                <GuiLabels>
+                    <Label language="EN">72</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>80</Value>
+                <GuiLabels>
+                    <Label language="EN">80</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>88</Value>
+                <GuiLabels>
+                    <Label language="EN">88</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>96</Value>
+                <GuiLabels>
+                    <Label language="EN">96</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>104</Value>
+                <GuiLabels>
+                    <Label language="EN">104</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>112</Value>
+                <GuiLabels>
+                    <Label language="EN">112</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>120</Value>
+                <GuiLabels>
+                    <Label language="EN">120</Label>
+                </GuiLabels>
+            </FixedValue>
+            <OrCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>ARCFOUR/ECB/NoPadding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>RC2/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>CAST5/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+            </OrCondition>
+        </FixedValues>
+
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>128</Value>
+                <GuiLabels>
+                    <Label language="EN">128</Label>
+                </GuiLabels>
+            </FixedValue>
+            <OrCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>ARCFOUR/ECB/NoPadding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>RC2/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>CAST5/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>AES/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>Camellia/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>DESede/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+            </OrCondition>
+        </FixedValues>
+
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>192</Value>
+                <GuiLabels>
+                    <Label language="EN">192</Label>
+                </GuiLabels>
+            </FixedValue>
+            <OrCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>AES/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>Camellia/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>DESede/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+            </OrCondition>
+        </FixedValues>
+
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>256</Value>
+                <GuiLabels>
+                    <Label language="EN">256</Label>
+                </GuiLabels>
+            </FixedValue>
+            <OrCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>AES/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>Encryption_Algorithem</AttributeName>
+                    <AttributeValue>Camellia/CBC/PKCS5Padding</AttributeValue>
+                </EditCondition>
+            </OrCondition>
+        </FixedValues>
+
+    </AttributeMetadata>
+
+    <AttributeMetadata>
+        <Name>shouldEncodeBodyKey</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <GuiLabels>
+            <Label language="EN">Encode Body with Base64</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>headers</Name>
+        <Usage>required</Usage>
+        <GuiLabels>
+            <Label language="EN">Receiver Public Key Alias</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>Public Key Alias</ReferenceName>
+        </AttributeReference>
+        <AttributeReference>
+            <ReferenceName>recipientInfoId</ReferenceName>
+            <EditCondition>
+                <AttributeName>Block_Size</AttributeName>
+                <AttributeValue>-1</AttributeValue>
+            </EditCondition>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>Public Key Alias</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Public Key Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>recipientInfoId</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN"></Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>PKCS7PrivateKeyAliases</Name>
+        <Usage>required</Usage>
+        <GuiLabels>
+            <Label language="EN">Signer Parameters</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>privateKeyAlias</ReferenceName>
+        </AttributeReference>
+        <AttributeReference>
+            <ReferenceName>signAlgo</ReferenceName>
+        </AttributeReference>
+        <AttributeReference>
+            <ReferenceName>includeCert</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>privateKeyAlias</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Private Key Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signAlgo</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>SHA512/RSA</Default>
+        <GuiLabels>
+            <Label language="EN">Signature Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>SHA512/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA512/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA384/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA384/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA256/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA256/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA224/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA224/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>RIPEMD128/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">RIPEMD128/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>RIPEMD160/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">RIPEMD160/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>RIPEMD256/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">RIPEMD256/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>MD5/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">MD5/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>includeCert</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <GuiLabels>
+            <Label language="EN">Include Certificates</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>true</Value>
+                <GuiLabels>
+                    <Label language="EN">true</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>false</Value>
+                <GuiLabels>
+                    <Label language="EN">false</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+</ComponentMetadata>

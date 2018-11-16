@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=3691203040233034"/>
+<title>Merging the Content using EGit</title>
+</head>
+<body class="" id="loioa21b60f4e55f4cf7b39928569e51cf28">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Merging the Content using EGit</h1>
+<div class="body taskbody"><p class="shortdesc"/>
+<div class="section context" id="loioa21b60f4e55f4cf7b39928569e51cf28__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You perform this task to make the content of the &lt;Source&gt; branch of the central
+				Git Repository available in the &lt;Target&gt; branch of the cloned repository. </p>
+
+			<p class="p">For example, in a scenario, the content needs to be merged from <em class="ph i">&lt;TenantID&gt;_Test</em>
+				branch of the Git Repository with the <em class="ph i">&lt;TenantID&gt;_Live</em> branch of the
+				cloned repository.</p>
+
+			<div class="note note" id="loioa21b60f4e55f4cf7b39928569e51cf28__note_N10028_N10014_N10011_N10001"><span class="notetitle">Note</span>  Merge fails if any file in the <span class="keyword uilabel">Staged Changes</span> or <span class="keyword uilabel">Unstaged
+					Changes </span> has been modified in the &lt;Source&gt; branch. You can
+				either commit the changes or stash it. </div>
+
+		</div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loioa21b60f4e55f4cf7b39928569e51cf28__steps_mw1_pdm_wh"><li class="li step stepexpand" id="loioa21b60f4e55f4cf7b39928569e51cf28__step_N10039_N10035_N10011_N10001"><span class="ph cmd">In the main toolbar, choose <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Window</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Open Perspective</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Others...</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span></li>
+<li class="li step stepexpand" id="loioa21b60f4e55f4cf7b39928569e51cf28__step_N10052_N10035_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Open Perspective</span>dialog, select <span class="keyword uilabel">Git Repository
+						Exploring</span>.</span></li>
+<li class="li step stepexpand" id="loioa21b60f4e55f4cf7b39928569e51cf28__step_N10063_N10035_N10011_N10001"><span class="ph cmd">To create a new &lt;Target&gt; branch into which the content of the
+					&lt;Source&gt; branch is merged, perform the following substeps:</span><ol type="a" class="ol substeps" id="loioa21b60f4e55f4cf7b39928569e51cf28__substeps_gyr_c4m_sh"><li class="li substep"><span class="ph cmd">In the <span class="keyword uilabel">Git Repositories</span> view, expand all the nodes under the cloned
+							repository. </span></li>
+<li class="li substep"><span class="ph cmd">Right-click on <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Branch </span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol"> Local</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> and choose <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Switch to…</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">New Branch</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> from the context menu.</span></li>
+<li class="li substep"><span class="ph cmd">In the <span class="keyword uilabel">Create Branch</span> wizard, from the <span class="keyword uilabel">Source ref:</span>
+							dropdown, select the branch in the Git Repository that you want to map
+							in the local branch. The Branch name field gets automatically filled
+							with the same name. For example, if the <span class="keyword uilabel">Source ref:</span>
+							branch is <em class="ph i">refs/head/Live</em> then the branch name is filled as
+								<em class="ph i">Live</em>.</span></li>
+<li class="li substep"><span class="ph cmd">Under the <span class="keyword uilabel">Pull Strategy</span> section, select the <span class="keyword uilabel">Merge</span>
+							option.</span></li>
+<li class="li substep"><span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span></li>
+</ol>
+ 
+					<div class="note note" id="loioa21b60f4e55f4cf7b39928569e51cf28__note_N100D8_N100D5_N10064_N10036_N10011_N10001"><span class="notetitle">Note</span> The new Target branch gets automatically checked out. </div>
+
+				</li>
+<li class="li step stepexpand" id="loioa21b60f4e55f4cf7b39928569e51cf28__step_N100DD_N10035_N10011_N10001"><span class="ph cmd">If you already have the &lt;Target&gt; branch under <span class="keyword uilabel">Local</span> and it is not
+					checked out then, right-click on <span class="ph uicontrol">Branches </span> and choose <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Switch To... </span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">&lt;Target&gt;Branch</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span></li>
+<li class="li step stepexpand" id="loioa21b60f4e55f4cf7b39928569e51cf28__step_N100FA_N10035_N10011_N10001"><span class="ph cmd">Right-click on the cloned repository and choose <span class="ph uicontrol">Pull</span> to be updated
+					with any new content.</span></li>
+<li class="li step stepexpand" id="loioa21b60f4e55f4cf7b39928569e51cf28__step_N10107_N10035_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Git Repositories</span> view, right-click on the &lt;Target&gt; branch
+					and choose <span class="ph uicontrol">Merge</span>.</span></li>
+<li class="li step stepexpand" id="loioa21b60f4e55f4cf7b39928569e51cf28__step_N10118_N10035_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Merge</span> dialog, under the <span class="keyword uilabel">Remote</span> section, choose
+					the &lt;Source&gt; branch from which you need to move the content to the
+					&lt;Target&gt; branch.</span></li>
+<li class="li step stepexpand" id="loioa21b60f4e55f4cf7b39928569e51cf28__step_N10129_N10035_N10011_N10001"><span class="ph cmd">Choose <span class="ph uicontrol">Merge</span>.</span>  The content is now available in the &lt;Target&gt; branch of the cloned
+					repository. </li>
+</ol>
+</div>
+<div class="related-links"> </div>
+</div></div>
+</body>
+</html>

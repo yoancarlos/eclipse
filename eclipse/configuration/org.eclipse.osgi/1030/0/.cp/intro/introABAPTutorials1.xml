@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<introContent>
+
+	<extensionContent id="com.sap.adt.intro.abap.dev.tut"
+		style="css/sample.css" name="ABAP DEVELOPMENT" path="tutorials/@">
+
+<!--  
+		<group style-id="content-group" id="content-group">
+
+			<link label="Using ABAP Knowlegde Resources"
+				url="http://org.eclipse.ui.intro/openBrowser?url=http://adt.wdf.sap.corp:8080/intro/tutorials/aie_tutorials_welcome_page/aie_tutorials_welcome_page.html"
+				id="abapstandard_vid" style-id="content-link">
+				<text>
+					Get to know a wide array of user assistance components like
+					ABAP
+					samples, video tutorials, cheat sheets, useful shortcuts, and
+					more.
+				</text>
+			</link>
+
+		</group>
+
+		<group style-id="content-group" id="content-group" label="Working with ABAP Projects ">
+
+			<link label="Creating ABAP Projects"
+				url="http://org.eclipse.ui.intro/openBrowser?url=http://adt.wdf.sap.corp:8080/intro/tutorials/aie_tutorials_project_explorer\aie_tutorials_project_explorer.html"
+				id="abapproject_vid" style-id="content-link">
+				<text>Learn how to create your first ABAP project and handle system
+					connection,
+					even for different ABAP systems at the same time. 
+				</text>
+			</link>
+
+ -->
+
+			<group style-id="content-group" id="content-group" label="ABAP Development">
+
+				<link
+					url="http://org.eclipse.ui.intro/showStandby?partId=org.eclipse.platform.cheatsheet&amp;input=com.sap.adt.cheatsheet.create.abap.project"
+					label="Create Your First ABAP Project" id="abapproject_exe"
+					style-id="content-link">
+					<text>The cheat sheet guides you interactively through all steps
+						necessary to create your first ABAP project and handle system
+					connection, even for different ABAP systems at the same time.
+					</text>
+				</link>	
+<!-- 		
+				
+			</group>
+
+			<link label="Adding New Objects to the ABAP Project"
+				url="http://org.eclipse.ui.intro/openBrowser?url=http://adt.wdf.sap.corp:8080/intro/tutorials/aie_tutorials_add_new_class/aie_tutorials_add_new_class.html
+				"
+				id="abapproject_vid" style-id="content-link">
+				<text>Learn how to add new development objects such as ABAP classes
+					to an existing project.
+          		</text>
+			</link>
+			
+			
+			<group style-id="content-group" id="content-group" label="Just do it...">
+ -->
+
+				<link
+					url="http://org.eclipse.ui.intro/showStandby?partId=org.eclipse.platform.cheatsheet&amp;input=com.sap.adt.cheatsheet.add.abap.devobjects"
+					label="Create ABAP Development Objects" id="abapproject_exe"
+					style-id="content-link">
+					<text>The cheat sheet shows you how to add new development objects to your ABAP project.</text>
+				</link>
+				
+<!--  
+			</group>				
+			<link label="Comparing Souce Code Versions"
+				url="http://org.eclipse.ui.intro/openBrowser?url=http://adt.wdf.sap.corp:8080/intro/tutorials/aie_tutorials_versioning/aie_tutorials_versioning.html"
+				id="abapproject_vid" style-id="content-link">
+				<text>Learn how to compare your ABAP source code versions in different systems.
+          		</text>
+			</link>		
+			
+		</group>
+ -->
+ 
+ 
+ 				<link
+					url="http://org.eclipse.ui.intro/showStandby?partId=org.eclipse.platform.cheatsheet&amp;input=com.sap.adt.cheatsheet.search.abap.devobjects"
+					label="Apply Global Search and Where-Used Function" id="abapsearch_exe"
+					style-id="content-link">
+					<text>This cheat sheet shows you how to carry out a system-wide search for any ABAP development object.</text>
+				</link>
+ 
+				<link
+					url="http://org.eclipse.ui.intro/showStandby?partId=org.eclipse.platform.cheatsheet&amp;input=com.sap.adt.cheatsheet.abap.templates"
+					label="Create Your Own ABAP Code Templates" id="abapstandard_exe"
+					style-id="content-link">
+					<text>This cheat sheet assists you when creating and using your own
+						ABAP templates.</text>
+				</link> 
+ 
+ 		</group>
+ 		
+	</extensionContent>
+
+</introContent>

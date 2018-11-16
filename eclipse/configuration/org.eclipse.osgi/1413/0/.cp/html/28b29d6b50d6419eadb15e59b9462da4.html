@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure Communication Channel with SuccessFactors (SOAP) Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio28b29d6b50d6419eadb15e59b9462da4">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure Communication Channel with SuccessFactors (SOAP) Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loio28b29d6b50d6419eadb15e59b9462da4__ul_uv3_rqp_gr">
+					<li class="li">
+						<p class="p">You have logged into your customer workspace in <span class="ph pname">SAP Cloud Platform
+                        Integration</span>I
+							web tooling.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You have assigned the SuccessFactors adapter to the communication
+							channel.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You have selected SOAP message protocol while assigning the
+							SuccessFactors adapter.</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">The SuccessFactors adapter enables you to communicate with the SuccessFactors system.
+				You use the SOAP message protocol to connect to the SOAP based web services of the
+				SuccessFactors system. </p>
+
+			<div class="note note"><span class="notetitle">Note</span> 
+				<p class="p">You can now pass filter conditions via header or property while performing an
+					asynchronous or ad-hoc operation.</p>
+
+			</div>
+
+			<div class="note restriction"><span class="restrictiontitle">Restriction</span> An integration flow you deploy in <span class="ph pname">Cloud Integration</span> deploys in
+				multiple IFLMAP worker nodes. Polling is triggered from only one of the worker
+				nodes. The message monitoring currently displays the process status from the worker
+				nodes where the <span class="ph uicontrol">Scheduler</span> is not started. This results in the
+				message monitor displaying messages with less than a few milliseconds, where the
+				schedule was not triggered. These entries contain
+					<span class="ph uicontrol">firenow=true</span> in the log. You can ignore these
+				entries.</div>
+
+			<p class="p">You use this procedure to configure communication channel with SuccessFactors
+				adapter.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Select the integration flow you want to configure and choose
+					<span class="ph uicontrol">Edit</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the communication channel you want to configure. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">General</span> tab page, provide channel name and
+					description in the relevant fields if required. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Adapter Specific</span> tab page and provide values in
+					fields based on description in table.</span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loio28b29d6b50d6419eadb15e59b9462da4__table_y5d_zqp_gr" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Field Name and Description for SuccessFactors SOAP Adapter Processing
+							Details</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="50%" id="d811356e123">
+										<p class="p">field</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="50%" id="d811356e129">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d811356e123 ">
+										<p class="p">SFSF Data Center</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d811356e129 ">
+										<p class="p">SuccessFactors data center that you want to connect
+											to</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d811356e123 ">
+										<div class="p">Address<div class="note note"><span class="notetitle">Note</span> 
+												<p class="p">This field is enabled only if you choose
+												<span class="ph uicontrol">Other</span> in SFSF Data Center
+												field.</p>
+
+											</div>
+</div>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d811356e129 ">
+										<p class="p">URL of the SuccessFactors data center that you want to
+											connect to</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d811356e123 ">
+										<p class="p">Address Suffix</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d811356e129 ">
+										<p class="p">System automatically populates this value as
+												<span class="keyword uinolabel">/sfapi/v1/soap</span> as you have
+											selected the SOAP message protocol</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d811356e123 ">
+										<p class="p">Proxy Type</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d811356e129 ">
+										<p class="p">Type of proxy you want to use to connect to
+											SuccessFactors system.</p>
+
+										<p class="p">If you choose <span class="ph uicontrol">Manual</span>, you should
+											enter values for fields <span class="ph uicontrol">Proxy
+												Host</span> and <span class="ph uicontrol">Proxy
+												Port</span>. </p>
+
+										<p class="p"><span class="ph uicontrol">Proxy Host</span> is the name of proxy
+											host you are using.</p>
+
+										<p class="p"><span class="ph uicontrol">Proxy Port</span> is the port number that
+											you are using.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d811356e123 ">
+										<p class="p">Credential Name</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d811356e129 ">
+										<p class="p">Credential name for your credentials that has been
+											deployed on the tenant </p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d811356e123 ">
+										<p class="p">Call Type </p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d811356e129 ">
+										<p class="p">It is <span class="ph uicontrol">Synchronous Query</span> by
+											default. If you want to execute an Adhoc operation,
+											select <span class="ph uicontrol">Adhoc / Asynchronous</span> from
+											the dropdown list</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d811356e123 ">
+										<p class="p">Entity</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d811356e129 ">
+										<p class="p">Entity that you want to access in SuccessFactors system.
+										</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d811356e123 ">
+										<p class="p">Operation </p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d811356e129 ">
+										<p class="p">Operation that you want to perform on the entity that you
+											are accessing on the SuccessFactors system</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d811356e123 ">
+										<p class="p">Query</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d811356e129 ">
+										<p class="p">Query that you are executing</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d811356e123 ">
+										<p class="p">Page Size</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d811356e129 ">
+										<p class="p">Maximum number of records to be fetched in one page of
+											response</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d811356e123 ">
+										<p class="p">Timeout</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d811356e129 ">
+										<p class="p">Maximum time system waits for a response before the
+											connection ends or is timed out. By default, 60000ms or
+											5 minutes is the timeout value if you do not provide
+											input.</p>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to select or change the entity, and modify the query, follow the steps in <a class="xref" href="a6ee60308011402abd8fe9ac1bc5a460.html">Modifying SuccessFactors SOAP Entity and Operation</a>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you are using the SuccessFactors SOAP adapter in the receiver channel of a
+						<span class="ph uicontrol">Local Integration Process</span>, select <span class="ph uicontrol">Process
+						in Batches</span>.</span>
+				<div class="itemgroup info">
+					<p class="p">You cannot use <span class="ph uicontrol">Process in Batches</span> option with
+							<span class="ph uicontrol">Query</span> operation if the <span class="ph uicontrol">Process
+							Call</span> step is used in a <span class="ph uicontrol">Multicast</span>
+						branch.</p>
+
+					<div class="note note"><span class="notetitle">Note</span> By selecting <span class="ph uicontrol">Process in Batches</span>, you enable the
+						adapter to process messages in batches. The size of a message batch is
+						defined by the value that you specify in <span class="ph uicontrol">Page
+						Size</span>.</div>
+
+					<div class="note tip"><span class="tiptitle">Tip</span> In the <span class="ph uicontrol">Process Call</span> step in which you
+						are calling the <span class="ph uicontrol">Local Integration Process</span>, ensure
+						that you enable looping and <span class="ph uicontrol">Expression Type</span> as
+							<span class="ph uicontrol">Non-XML</span>, <span class="ph uicontrol">Condition
+							Expression</span> as
+							<kbd class="ph userinput">${property.SAP_SuccessFactorsHasMoreRecords.&lt;receiver.system.name&gt;}
+							contains 'true'</kbd> and <span class="ph uicontrol">Maximum Number of
+							Iterations</span> as <kbd class="ph userinput">999</kbd>. If you have
+						specified a channel name while configuring the adapter, enter the
+							<span class="ph uicontrol">Condition Expression</span> as
+							<kbd class="ph userinput">${property.SAP_SuccessFactorsHasMoreRecords.&lt;receiver.system.name&gt;.&lt;channel.name&gt;}
+							contains 'true'</kbd></div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you are configuring the sender channel, choose the
+						<span class="ph uicontrol">Scheduler</span> tab page and provide values in fields based
+					on description in table.</span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loio28b29d6b50d6419eadb15e59b9462da4__table_dch_trp_gr" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+							
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="33.33333333333333%" id="d811356e458">
+										<p class="p">Scheduler Option</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="33.33333333333333%" id="d811356e464">
+										<p class="p">Field</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="33.33333333333333%" id="d811356e470">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e458 ">
+										<p class="p">Run Once</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e464 ">
+										<p class="p">NA</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e470 ">
+										<p class="p">Select to execute the operation immediately after
+											deploying the integration content</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" rowspan="4" valign="top" width="33.33333333333333%" headers="d811356e458 ">
+										<p class="p">Schedule on Day</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e464 ">
+										<p class="p">On Date</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e470 ">
+										<p class="p">Specify the date on which you want the operation to be
+											executed</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e464 ">
+										<p class="p">On Time</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e470 ">
+										<p class="p">Specify the time on which you want the operation to be
+											executed </p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e464 ">
+										<p class="p">Every</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e470 ">
+										<p class="p">Specify the interval in which the operation has to be
+											executed. </p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e464 ">
+										<p class="p">Time Zone</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e470 ">
+										<p class="p">Select the time zone that you want the scheduler to use
+											as a reference for the date and time settings</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" rowspan="3" valign="top" width="33.33333333333333%" headers="d811356e458 ">
+										<p class="p">Schedule to Recur</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e464 ">
+										<p class="p">Daily </p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e470 ">
+										<p class="p">Select the time or interval and time zone for the
+											schedule to recur </p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e464 ">
+										<p class="p">Weekly</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e470 ">
+										<p class="p">Select the checkboxes to indicate the days of the week on
+											which the operation has to be executed. Also, specify
+											the time or interval for the schedule to recur</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e464 ">
+										<p class="p">Monthly</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d811356e470 ">
+										<p class="p">Select the day of the month on which the operation has to
+											be executed. Also indicate the time or the interval
+											during which the schedule has to recur</p>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+<div class="related-links"> 
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

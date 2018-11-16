@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<introContent>
+	<extensionContent id="com.sap.bw.modeling.intro" name="BW Modeling Tools Overview"
+		style="css/overview.css" path="overview/@">
+		<group label="BW Modeling Tools" id="content-group" style-id="content-group">
+			<!-- <text style-id="group-description"> The BW Modeling Tools for SAP 
+				HANA BW (in short: BW Modeling Tools) represents a new modeling IDE (Integrated 
+				Development Environment) build on top of the Eclipse platform. Its main objective 
+				is to support BW model developers in today’s increasingly complex BI environments 
+				by offering state-of-the-art modeling tools. These tools include integration 
+				with SAP HANA modeling and the consumption of HANA elements in BW Open ODS 
+				Views or CompositeProviders with powerful UI (user interface) capabilities. 
+				</text> -->
+			<link label="Getting Started" style-id="content-link" 
+					 url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.docu.bw.help/html/f0b1baed6f3e41d29425cf96b306e477.html" 
+			 		id="BWMT_modelsLink">
+				<text>
+					Provides compact knowledge you
+					may need when working BW Modeling Tools for the first time.
+				</text>
+			</link>
+			<link label="Tasks" style-id="content-link" 
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.docu.bw.help/html/66c896fedbf14a6aaf5fc2ee83a92cc7.html" 
+					id="BWMT_modelsLink">
+				<text>
+					Get familiar with fundamental activities in the area of BW projects and with 
+					functions and utilities for creating, editing, navigating, or searching BW objects.
+				</text>
+			</link>
+			<link label="SAP Community Network" style-id="content-link" url="http://scn.sap.com/docs/DOC-64470" id="BWMT_modelsLink">
+				<text>
+					Visit the SAP Community Network to browse through a collection of videos, tutorials and links to useful tips and tricks 
+					when working with the BW Modeling Tools.
+				</text>
+			</link>
+			<!-- <anchor id="SAPUI5_overviewAdditions"/> -->
+		</group>
+	</extensionContent>
+	<extensionContent id="com.sap.bw.modeling.intro.news"
+		style="css/overview.css" name="BW Modeling Tools" path="whatsnew/@">
+		<group style-id="content-group" id="content-group">
+			<link label="BW Modeling Tools"
+				url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.docu.bw.help/html/c7e0ca89f56148fe930e61e625721c65.html"
+				id="BWMT_modelsLink" style-id="content-link">
+				<text>
+					Find out about changes made to the BW Modeling Tools.    
+				</text>
+			</link>
+			
+       	</group>
+  	</extensionContent>
+</introContent>

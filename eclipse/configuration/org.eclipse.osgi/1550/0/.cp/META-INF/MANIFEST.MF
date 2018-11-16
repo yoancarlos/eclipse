@@ -1,0 +1,138 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.sap.ndb.studio;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: ppurple
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui
+ .console,org.eclipse.equinox.security.ui,org.eclipse.ui.views.log,org
+ .eclipse.ui.intro,org.eclipse.ui.ide.application,com.sap.ide.support,
+ com.sap.ndb.studio.common,org.eclipse.e4.ui.workbench,org.eclipse.e4.
+ ui.model.workbench
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Name: %Bundle-Name
+Bundle-Version: 2.3.39
+Bundle-Activator: com.sap.ndb.studio.StudioPlugin
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_66
+
+Name: narrow_book.css
+SHA-256-Digest: ZbsUVpXTech3duSXV9mwRSDOqP1OLly8UF8WrLieieU=
+
+Name: macosx_narrow_book.css
+SHA-256-Digest: FU/XpemebXstnu5vk6M3TP3aNnaAF6UPQihCTB5Bj+k=
+
+Name: about.properties
+SHA-256-Digest: hBIY1gntAS5ugqKI16q4viuidLJQci/D1H5UWQv3Gwc=
+
+Name: plugin.xml
+SHA-256-Digest: jKtIb61tNOnDZCOS9ZRTQWT/38WLWoSNKKoWLfEtMuc=
+
+Name: com/sap/ndb/studio/StudioStartup.class
+SHA-256-Digest: utye/T2e2vtNoWhPeoRwKsoYNgi/NPpsc/zEg5TZ72s=
+
+Name: com/sap/ndb/studio/StudioPlugin.class
+SHA-256-Digest: LpyXOP/Go50uXrqgyclkZnfReFAo6iyz76REVIUzpD0=
+
+Name: splash.bmp
+SHA-256-Digest: zZgf0PrhCC3sQ/21vETVhQ+qWltDriP0OgzjptOuZOY=
+
+Name: .options
+SHA-256-Digest: YaMDk6Ss4wWL+llPWjNreHtKZulC23zWf0OmIMU/77I=
+
+Name: plugin_customization.properties
+SHA-256-Digest: ZqZaaw39XKy9P3PCrWU0Plc4ooJO4iT3xXtYCMNVSW0=
+
+Name: about.mappings
+SHA-256-Digest: bHcXUVc0/O/rNGf0zC70cOjcD7/rQrrZENL0JMz7YpA=
+
+Name: images/studio16.png
+SHA-256-Digest: lgjDbyYw+q52cVrtMVG94OeHjd0jO9F7ZAa+oMQZNBg=
+
+Name: com/sap/ndb/studio/internal/supportinfo/StudioSupportInfoProvide
+ r.class
+SHA-256-Digest: WGt+zuc0gCAXlMQpiweY41gvnzaaI9z4rKCRurhwycg=
+
+Name: images/studio.xpm
+SHA-256-Digest: IBmVE/kOJymAT5dm8F7ooR0cNJva2uOkgFZXlSXZmYM=
+
+Name: book.css
+SHA-256-Digest: pmu6avXS9QEEX9GcntPu1PAhxi/I7yr3iFJwcno8oSU=
+
+Name: images/about.png
+SHA-256-Digest: Bwk3wkHJBkvquGw3vpb0JkZZWo68uMI+vFWuzjwMIu4=
+
+Name: about.ini
+SHA-256-Digest: /GkWbRRJUyGdQSzeWPM6m2zQ6/CoAHbh6OTfoEYukGo=
+
+Name: com/sap/ndb/studio/i18n/Messages.class
+SHA-256-Digest: qbq9ZaDykIyjvsiA/FgREnfVmugaECUUYWa71WTl9QA=
+
+Name: intro/overviewExtensionContent1.xml
+SHA-256-Digest: qy1bMb4bxhq7Crkn8jVxsiIC6INPcLfldjcRZFKp5lw=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio/pom.xml
+SHA-256-Digest: DB53foPu13N0XRt+GkXfHcmdbEfrb6fwmU+jTH2a6Eo=
+
+Name: introData.xml
+SHA-256-Digest: Stg02MILURTb9e0AdgUVueMyOaBQo26LysSHNuL8hLY=
+
+Name: plugin_customization.ini
+SHA-256-Digest: i/zLJ31vgsOfbJDVqhm3yCi/aEp/50ErmD/Q3rv89sY=
+
+Name: images/studio.icns
+SHA-256-Digest: 1uHynjkqRrVOoIZ+s8RHHvWKI8PeCcBBMa9O85J1m6w=
+
+Name: com/sap/ndb/studio/internal/splash/StudioSplashHandler.class
+SHA-256-Digest: nMmRiB7ASSFWgj6fwvRyLMGN3n2o15k5KlPyeZfIna8=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio/pom.propert
+ ies
+SHA-256-Digest: l9gmOweZeJtOafH0wA9+O2r08s1i+UghYUNVPhjzjoM=
+
+Name: com/sap/ndb/studio/i18n/messages.properties
+SHA-256-Digest: peTpsFL+9hS0R2bx6RxYbCxDqPdBSN9tu7DB87r2IYA=
+
+Name: intro/css/overview.css
+SHA-256-Digest: DxMDRskWl48ILSkUiTWajwBz2K4+2jvql5YBiYrdD24=
+
+Name: intro-eclipse.png
+SHA-256-Digest: pf7dkPZf3OTOuFBr+6RZHm5pg/sxpPM5fo36X2k3f1k=
+
+Name: intro/css/graphics/picto/5Docs.png
+SHA-256-Digest: ts0rN3HdErulHijbgPQRNreU5/BMAmDCzD5ak7tfooU=
+
+Name: intro/overviewExtensionContent2.xml
+SHA-256-Digest: UYNUEoSWQuQ0Ms+906am2PmCs5k/SYulxhDsoY8LbuE=
+
+Name: images/studio.ico
+SHA-256-Digest: qFVEO889IO2yShNyUTL2jAzzwsz0+NBP6YSC2piX0J4=
+
+Name: images/studio128.png
+SHA-256-Digest: ilCFrSMG+VQhQnOaMLIL10UZVsX4KfNfHv0a28799Xw=
+
+Name: images/studio32.png
+SHA-256-Digest: XpB2cXDOWW0ZEinGhWU0sYhWnAwn2PUMv9lLHfB5jso=
+
+Name: com/sap/ndb/studio/StudioPlugin$1.class
+SHA-256-Digest: DyehC0/Hy2X0f6A+C0rMpBPUcNGgFEv/4rGPhO1nBuE=
+
+Name: images/progress.gif
+SHA-256-Digest: QbAmtNpWuIzHqNJD51DuSTQjP6HchiKLCEV08CMc8xE=
+
+Name: com/sap/ndb/studio/actions/OpenPerspective.class
+SHA-256-Digest: lPcZ1ZvxpA29cBJx/zPJWJ17wyAvIy4UOEQYK2kloXc=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: VrpM5jcGzeLn8k+wmriMHFzplwBgYCcXFbz+4BUgMuU=
+
+Name: images/studio256.png
+SHA-256-Digest: Xq3SsbhpDLQX8Q1CLEx9VCf5StcOBNd/PHr3RI9udEQ=
+
+Name: com/sap/ndb/studio/StudioPlugin$1$1.class
+SHA-256-Digest: mdS5wXdNr+AM/BUfIsw9h8tzf1EGPR5R+q3VIEO9iPA=
+
+Name: disabled_book.css
+SHA-256-Digest: vsyrQtXycATf7+qa6NVZEECUj3xrmFPX+JKaKqjBOrA=
+

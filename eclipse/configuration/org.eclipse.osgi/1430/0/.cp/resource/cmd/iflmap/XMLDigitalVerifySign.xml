@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::VerifySign/version::1.0.7" ComponentName="sap:VerifySign" UIElementType="Flowstep">
+    <Variant VariantId="ctype::FlowstepVariant/cname::XMLDigitalVerifySign/version::1.0.7" VariantDisplayName="XML Signature Verifier" VariantName="XMLDigitalVerifySign" AttachmentBehavior="Preserve">
+        <!-- allowed input content type -->
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality = "" isStreaming="">
+            <Content>
+                <ContentType>Xml</ContentType>
+                <Schema/>
+            </Content>
+        </InputContent>
+        <!-- allowed output content type -->
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality = "" isStreaming="">
+            <Content>
+                <ContentType>Xml</ContentType>
+                <Schema/>
+            </Content>
+        </OutputContent>
+        <Tab id="iflow.xml.verify.sign">
+            <GuiLabels>
+                <Label language="EN">General</Label>
+            </GuiLabels>
+            <AttributeGroup id="General_Details">
+                <AttributeReference>
+                    <ReferenceName>Activity_Name</ReferenceName>
+                    <description>Enter a name for the Verifier step. Begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30.</description>
+                    <Restriction>^[a-zA-Z][a-zA-Z0-9_ ]{3,30}$</Restriction>
+                    <ErrorMessage>Name not specified for Verifier step</ErrorMessage>
+                    <ErrorMessage>Name should begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30</ErrorMessage>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>verifySignatureType</ReferenceName>
+                    <description>Select one of the expected signature types. Enveloping or Enveloped XML Signature: If the signature is contained within the content or the signature contains the signed data. Detached XML Signatures: If the signatures are siblings of the signed elements.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>schemaFieldPath</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>verifySignatureType</AttributeName>
+                        <AttributeValue>Detached XML Signatures</AttributeValue>
+                    </EditCondition>
+                    <description>Select the XML schema file in the xsd folder. If the folder is empty insert the XML schema file.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>CheckForKeyInfo</ReferenceName>
+                    <description>Select this option to check that the XML Signature contains a Key Info element</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>omitXmlDeclaration</ReferenceName>
+                    <description>Select this option to exclude the XML declaration header in the outgoing XML message. For example, &lt;?xml version=\"1.0\"; encoding=\"UTF-8"\&gt; will be excluded.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>disallowDoctypeDecl</ReferenceName>
+                    <description>Select this option to disallow DTD DOCTYPE declaration in the incoming XML message</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>publicKeyAliases</ReferenceName>
+                    <description>Enter an alias name to select a public key and corresponding certificate from the keystore</description>
+                    <ErrorMessage>Public Key Alias not specified for Verifier step</ErrorMessage>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+    </Variant>
+
+    <AttributeMetadata>
+        <Name>Activity_Name</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <AutoGenerate>
+            <Prefix>XML Signature Verifier</Prefix>
+        </AutoGenerate>
+        <Default>XML Signature Verifier</Default><!-- until AutoGenerate works use default -->
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>verifySignatureType</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Enveloping or Enveloped XML Signature</Default>
+        <GuiLabels>
+            <Label language="EN">Expected Signature Type</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>Enveloping or Enveloped XML Signature</Value>
+                <GuiLabels>
+                    <Label language="EN">Enveloping or Enveloped XML Signature</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Detached XML Signatures</Value>
+                <GuiLabels>
+                    <Label language="EN">Detached XML Signatures</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <!-- This should be the same attribute as in XMLDigitalSigner : "schemaResourceUri" -->
+    <AttributeMetadata>
+        <Name>schemaFieldPath</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <HelpService>
+            <HelpServiceName>resourceLookupService</HelpServiceName>
+            <HelpServiceQueryAttributes>
+                <HelpServiceQueryAttribute>
+                    <Name>Type</Name>
+                    <Value>XSD</Value>
+                </HelpServiceQueryAttribute>
+                <HelpServiceQueryAttribute>
+                    <Name>ResourceLocation</Name>
+                    <Value>xsd</Value>
+                </HelpServiceQueryAttribute>
+                <HelpServiceQueryAttribute>
+                    <Name>ContentType</Name>
+                    <Value>application/xsd+xml</Value>
+                </HelpServiceQueryAttribute>
+            </HelpServiceQueryAttributes>
+        </HelpService>
+        <GuiLabels>
+            <Label language="EN">XML Schema File Path</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>CheckForKeyInfo</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <GuiLabels>
+            <Label language="EN">Check for Key Info Element</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>omitXmlDeclaration</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <GuiLabels>
+            <Label language="EN">Exclude XML Declaration</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>disallowDoctypeDecl</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <GuiLabels>
+            <Label language="EN">Disallow DOCTYPE Declaration</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>publicKeyAlias</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>publicKeyAliases</Name>
+        <Usage>required</Usage>
+        <GuiLabels>
+            <Label language="EN">Public Key Aliases</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>publicKeyAlias</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+
+</ComponentMetadata>

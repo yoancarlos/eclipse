@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="An End Message event ends a message processing sequence."/>
+<meta name="description" content="An End Message event ends a message processing sequence."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring an End Message Event</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioad6fda385d0c4e07b8dcf7be286d9fd5">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring an End Message Event</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">An End Message event ends a message processing sequence.</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><div class="sectiondiv">
+            <p class="p">This is how using an End Message event has an impact on the message status (shown in
+                the message processing log).</p>
+
+            <div class="note note"><span class="notetitle">Note</span> 
+                <p class="p">To catch any exceptions thrown in the integration process and handle them, you
+                    can use an Exception Subprocess.</p>
+
+            </div>
+
+            <p class="p">If an exception occurs during the processing sequence which has been handled in an
+                Exception Subprocess, the message status displayed in the message processing log is
+                    <samp class="ph codeph">Failed</samp>. </p>
+
+            
+            <p class="p">When there is no error during exception
+                handling, the message status displayed in the message processing log is
+                    <samp class="ph codeph">Completed</samp>. </p>
+
+            <p class="p">If you like to configure your
+                integration flow that way that the message status displayed in the message
+                processing log is <samp class="ph codeph">Failed</samp> (even in case an exception occurs during
+                the processing sequence which has been handled successfully in an Exception
+                Subprocess), you have the following options: </p>
+
+            <ul class="ul" id="loioad6fda385d0c4e07b8dcf7be286d9fd5__d5903e42">
+                <li class="li">
+                    <p class="p">Use an Error End event.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">Use an Escalation End event (sets message status to
+                            <samp class="ph codeph">Escalated</samp> in that case).</p>
+
+                </li>
+
+            </ul>
+
+        </div><p class="p"/>
+</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><div class="li step p">
+				<span class="ph cmd"/><br/>
+			</div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

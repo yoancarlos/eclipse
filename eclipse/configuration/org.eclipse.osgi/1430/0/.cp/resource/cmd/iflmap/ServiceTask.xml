@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:ServiceTask/version::1.0.3" ComponentName="sap:ServiceTask" UIElementType="Flowstep">
+	<Variant VariantId="ctype::FlowstepVariant/cname::Send" VariantName="Send" scope="Across Pools">
+		
+		<!-- allowed input content type -->
+		<InputContent Cardinality="1"  Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+		</InputContent>		
+		
+		<!-- allowed output content type -->
+		<OutputContent Cardinality="1"  Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+		</OutputContent>
+
+		<!-- additional information -->	
+		<AllowedHeaders/>
+		<ReferencedComponents/>
+	</Variant>	
+</ComponentMetadata>

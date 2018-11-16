@@ -1,0 +1,8 @@
+<?xml version= "1.0" encoding= "UTF-8" ?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Route/version::1.0" ComponentName="Route" UIElementType="Flowstep">
+	
+	<!-- Route for Parallel Multicast Flowstep -->
+	<Variant VariantId="ctype::FlowstepVariant/cname::sap:MulticastRoute/version::1.0.0" VariantName="Multicast Route" VariantDisplayName="Multicast Route">		
+	</Variant>
+	<!-- Attribute Metadata Definition -->
+</ComponentMetadata>

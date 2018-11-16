@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="The XML validator validates the message payload in XML format against the configured XML schema."/>
+<meta name="description" content="The XML validator validates the message payload in XML format against the configured XML schema."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Validating Message Payload against XML Schema</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiodaeca02e069640d6bfcf2b27036d882a">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Validating Message Payload against XML Schema</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">The XML validator validates the message payload in XML format against the configured XML
+		schema.</p>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<p class="p">You have the XML schema (XSD files) added in the .src.main.resources.xsd location of your
+				integration flow project. If you do not thave the specified location in your
+				project, you need to create one first and then add the XSD files.</p>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this procedure to assign XML schema (XSD files) to validate the message payload in a
+				process step. The validator checks the message payload against configured XML
+				schema, and report discrepencies in message payload. If the validation fails, the
+					<span class="ph pname">SAP Cloud Platform
+                        Integration</span> system
+				stops the whole message processing by default.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="ph uicontrol">Model
+						Configuration</span> editor.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">To add a XML Validator step to the integration flow, choose <span class="ph uicontrol">Message
+						Validator</span>-&gt;<span class="ph uicontrol">Validator</span> from the context
+					menu of a connection within the pool. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select the <span class="ph uicontrol">XML Validator</span> tab in the
+						<span class="ph uicontrol">Properties</span> view.</span>
+				<div class="itemgroup info"/>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Name</span> field, enter an appropriate validator flow step
+					name.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">XML Schema</span> field, select
+						<span class="ph uicontrol">Browse</span>. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose an XSD file that you want to use to validate the format. </span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loiodaeca02e069640d6bfcf2b27036d882a__ul_ykr_1xm_w5">
+							<li class="li">
+								<p class="p">You can have references to other XSDs within the same project.
+									XSDs residing outside the projects cannot be referred. </p>
+
+							</li>
+
+							<li class="li">
+								<p class="p">You can enter a value less than 5000 for attribute
+										<span class="ph uicontrol">maxOccurs</span>, in input xsd. You can also
+									enter <kbd class="ph userinput">unbounded</kbd>, if you do not want to
+									check for max occurrence but would like to support any number of
+									nodes.</p>
+
+							</li>
+
+							<li class="li">
+								<p class="p">If there are any validation errors in the payload, the details of
+									the error is visible in MPL attachment. The link for the
+									attachment is available in MPL log.</p>
+
+							</li>
+
+							<li class="li">Use <kbd class="ph userinput">${header.XmlValidationResult</kbd> to get more
+								details on validation excecptions.</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to continue the processing even if the system encounters error
+					while validating, then select the check box <span class="ph uicontrol">Prevent Exception on
+						Failure</span>.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> If an exception occurs, then the error payload is added to
+							<span class="ph uicontrol">SAP_XmlValidationResult</span> header.</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

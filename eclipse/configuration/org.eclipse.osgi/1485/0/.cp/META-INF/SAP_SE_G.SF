@@ -1,0 +1,678 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: Yz2EyXCJ7/A/B1dFmz4zH3yVysmXb
+ 3cLyLbP/wJCcI8=
+SHA-256-Digest-Manifest: njdWtupbppk7XnnYBFT1rTAf3VYVFik8FAAqp5cIL5I=
+Created-By: 1.8.0_121 (Oracle Corporation)
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLocalL
+ auncher$1.class
+SHA-256-Digest: 5TrCsvsBHCvwuD9KVVINlsDgmnntsyndK5rmRhD1K/Y=
+
+Name: plugin.xml
+SHA-256-Digest: 8IKHcgCqvMVPZO3FtMHOpjk8WBYEhnLq7JKp4J8fmDM=
+
+Name: com/sap/jvm/profiling/ui/perspective/PerspectivePreferencePage$P
+ erspectiveContentProvider.class
+SHA-256-Digest: l2Cqmt4Nyxdiy4/d3tnlQTT6vNP5A0J6WCssVzpdZQI=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ DelegateUtils$2.class
+SHA-256-Digest: HytBR2RYn26ZW39ZuvDuDJH/IplgU/mHDqbqgHVI9KI=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingOfflin
+ eTab$2.class
+SHA-256-Digest: hm2wXVSjL4oij1KauGJEi4eqhs3VPg2itKiZ8ocP2L4=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/SynchronizationAnal
+ ysisShortcut.class
+SHA-256-Digest: UdvjTcK6a4htvIFqr0h8/U9E1Pt5CGpqftaRfWo2wco=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingTransportService$3.
+ class
+SHA-256-Digest: fdZkARvPxIleGbZG/HwuO9Z1ExM55BwmA/P3SLcpH+E=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingEquino
+ xLaunchConfigurationDelegate.class
+SHA-256-Digest: zOh3QBsO9SOMkdD26m9X+PEh0citIBBou8ou0DXFzI8=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ DelegateWrapper$1.class
+SHA-256-Digest: vZ6dW7RhoYqE+MT2Z+ZeAAPYKse0yQnUDOLmMFehXZA=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/ThreadHotspotAnalys
+ isShortcut.class
+SHA-256-Digest: 0iXQO++0HIs5X28vQjQOvCzs6zWMdESAHsTExEf5yhQ=
+
+Name: com/sap/jvm/profiling/ui/sourcelookup/ProfilingSourceLookupManag
+ erImpl$1.class
+SHA-256-Digest: w8k/+c+m3aAK3OcIIcmnOVZk+7oj+CHKaSnwhz04cWI=
+
+Name: com/sap/jvm/profiling/ui/actions/ProfilingMPTAction.class
+SHA-256-Digest: SWfnAy+tm1kJL+2nttsbW8Ey5taWjQDsY9OiFfq8IEI=
+
+Name: com/sap/jvm/profiling/ui/actions/ProfilingOfflineLauncher.class
+SHA-256-Digest: 5tWdlXVd05KyhN9cQ7azsS+/tGkfV3XexfZfKGx7qEE=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ ConfigurationDelegate$1.class
+SHA-256-Digest: d/5MBEv+gZRfksc63+B6iLagDjiAKxlPuPmIjbetM4M=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingPDELau
+ nchConfigurationTabGroup.class
+SHA-256-Digest: t8VhRIlGw+4vM4R0jI5jnX4unGCUrZ3Mtamo0foQUSg=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingAbstractConnector$I
+ ntegerArgumentImpl.class
+SHA-256-Digest: UFJMtHAQunbsuqxDRhv+XNZBy8vvPundKWVeGj1Y8IQ=
+
+Name: about.ini
+SHA-256-Digest: zn5PyUqmm8MArw0kBDdSchRmwTrfTtQy46lDS5XnPZc=
+
+Name: com/sap/jvm/profiling/ui/ProfilingPlugin$1.class
+SHA-256-Digest: 2W6utZzaIzBL7LPNbsmjMgLR+SgJiJFmWenmM/OdZ7E=
+
+Name: com/sap/jvm/profiling/ui/actions/ProfilingToolbarAction.class
+SHA-256-Digest: GTKKAAqWrSfwG5j8+rPa8RkMb1K4dSIDQk2Fw2SmwaY=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingOSGiLa
+ unchConfigurationDelegate$1.class
+SHA-256-Digest: y6mrMEN4bNBMsPJeRNu5rAEIYq33mwRYaUNJTD9LjSI=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingAttachConnector.cla
+ ss
+SHA-256-Digest: /NB36RZTqp8OLkZd1OGj4DBJyKgS9Ao4OXjvf++fhrs=
+
+Name: com/sap/jvm/profiling/ui/actions/ProfilingLaunchConfigurationAcc
+ essor$1.class
+SHA-256-Digest: qubrYZgBoXu+L9FTHLdf58GXRFTxk2Mt25vOHNv2agk=
+
+Name: intro/css/graphics/obj_48/profiler_group.png
+SHA-256-Digest: 91M3pj22ArMR2GzcJa+rqjjXDho30YNUxHJ00J8/a+o=
+
+Name: com/sap/jvm/profiling/ui/views/ProfilingConfigurationView$2.clas
+ s
+SHA-256-Digest: lFo9F6upNwoNr60M4OWAu1BmJ72Nw13vkUszsBylfww=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingConnec
+ tTab$2.class
+SHA-256-Digest: IG1PhXkm4UMFL132HyLoTvPm3pq0MBMzWgmUYmHOkNs=
+
+Name: com/sap/jvm/profiling/ui/filter/ProfilingTypeNamesProviderImpl$M
+ ethodImpl.class
+SHA-256-Digest: 5SgXhr3g5E+eXPtlaGqBB6l9qEZhkR4WxH85e79SHt0=
+
+Name: intro/css/overview.css
+SHA-256-Digest: 7SqEi9htN+0AUrUACZ5+cOzrh5WD45eC65VpXxpTWwg=
+
+Name: com/sap/jvm/profiling/ui/sourcelookup/ProfilingSourceLookupManag
+ erImpl$ShownTypeResult.class
+SHA-256-Digest: MQabDT3SBYTnJLyy6I4Tc+19dfSKuE1Z0qfXG6LRvsQ=
+
+Name: intro/overviewExtensionContent.xml
+SHA-256-Digest: uMS2E5jn+6yv7aJeiulzGJd0Wk+IFg2amb4w4jTGL08=
+
+Name: intro/css/whatsnew.css
+SHA-256-Digest: PlwJA/BYval3P0HPxmsSuW1vs5OiMqekFd7YYdLgaWk=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingAbstractConnector$A
+ rgumentImpl.class
+SHA-256-Digest: I9njJjT33fY5EdM0b1Azwzzbb9V3jInRLhSSp/wrlQc=
+
+Name: com/sap/jvm/profiling/ui/sourcelookup/ProfilingSourceLookupDirec
+ tor.class
+SHA-256-Digest: 1YY8EwdIpR/FU6ibqhOnu2fbs4YmMQXr14UDLF+lHxQ=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/OnlineProfiling
+ LaunchConfigurationDelegate$1.class
+SHA-256-Digest: 7HFa30TRwsNNsldisaXbgLEveJ0QF0mAYGChRR2vZZ0=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/OnlineProfiling
+ LaunchConfigurationDelegate$4.class
+SHA-256-Digest: McO0T35VxOGgEwUFb02W3AFub+hEvY5D/jcIldeNydE=
+
+Name: com/sap/jvm/profiling/ui/perspective/PerspectivePreferencePage$1
+ .class
+SHA-256-Digest: zCIxz0uydWb+Hc/9NT2RnxQzWq55QMam3oJSEwEnOF0=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/OfflineProfilin
+ gLaunchConfigurationTabGroup.class
+SHA-256-Digest: x5wQgrdROBSKektvMb6ghrRNO/8gNsIU3gjo4eaiCr0=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/JavaLaunchShortcut.
+ class
+SHA-256-Digest: +si9VW6AHn0JxyGiFJ0KNrP8r24Ot+t87mhxDmi8fl4=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingT
+ abGroup$1.class
+SHA-256-Digest: BcBdwLwubpEZJNefQnSU7WV4Nzgm33ZsabsAiSnqMfE=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingPDELau
+ nchConfigurationDelegate.class
+SHA-256-Digest: 51qeGOlNi4mjMnPplka7TOMH+p/Kp0ZcuytvxOX9r0E=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ DelegateWrapper$3.class
+SHA-256-Digest: AsVWobprhdxV2D0zTbVwB1Y/WT94rdKtpwRLnnonvFM=
+
+Name: icons/method_parameter_analysis.gif
+SHA-256-Digest: o/hn5pkMBdgFfn0X6NiyabbwgVaJN8QR8xEjCGKWMNs=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingPDEJUn
+ itLaunchConfigurationTabGroup.class
+SHA-256-Digest: 9GtCEQ0+BmBRNqwzXM69JsvRENDyhfjci0POqg891E4=
+
+Name: com/sap/jvm/profiling/ui/perspective/ProfilingPerspective.class
+SHA-256-Digest: l78YPFkC83cE+5KggyRzEryF9oE4dcsARiKzeP15W44=
+
+Name: com/sap/jvm/profiling/launching/ProfilingLauncher.class
+SHA-256-Digest: LTVkJEiZliGmxOTmmFkaEN+lVtbyy+dFTiNg75sa4zA=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingPDEJUn
+ itLaunchConfigurationDelegate$1.class
+SHA-256-Digest: n/PZTUA6vGQPebAu8nDWNTLYJ5iRlbUdmeM/ZaXLdtA=
+
+Name: com/sap/jvm/profiling/ui/perspective/PerspectivePreferencePage$P
+ rofilingLaunchGroupFilter.class
+SHA-256-Digest: 6Q0yboWvh1kjMcqv2ECvaeRQY09pZ9YcOOzMD6OYIoo=
+
+Name: com/sap/jvm/profiling/ui/views/ProfilingConfigurationView$IDEDeb
+ ugerListener$1.class
+SHA-256-Digest: dcj3AzSW9r0zVnHChY6Y4gSA5MU6WSoUC+dzE7cJH5o=
+
+Name: com/sap/jvm/profiling/ui/views/ProfilingConfigurationView$IDEDeb
+ ugerListener.class
+SHA-256-Digest: bdhueQPVJMkaY2U7stPkcXYWl0LvPMZCyVY6Vgo++uo=
+
+Name: icons/io_analysis.gif
+SHA-256-Digest: y38oGJs4cd1kUiq+6yEUPmmM/PPAXRBWwzRsvZ1clWY=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingD
+ elegate$1.class
+SHA-256-Digest: t25IWCN5KQLcOAF+2Y79t6iuKSGRCjARJhW2CGQj4ew=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLocalL
+ auncher$LaunchContext.class
+SHA-256-Digest: RvwmwRwGaevq2AYWN0j6mYvsb0G3vw3U2t/Mgm7NLLA=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingJUnitL
+ aunchConfigurationTabGroup.class
+SHA-256-Digest: OmaT+H/6vEY7ZBCEL89mc1hDSAMnF6lUzkGOnc7SMmk=
+
+Name: intro/css/graphics/obj_48/profiler.png
+SHA-256-Digest: 8QCmbtTN7bOhlsxloxv566TbZJgM0z0WG+gZe63bDQg=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/OnlineProfiling
+ LaunchConfigurationDelegate$2.class
+SHA-256-Digest: bjX1fr0m3d9x3VmDO0ZfehawwFfyDcwhYGD0ngKegfM=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/IOAnalysisShortcut.
+ class
+SHA-256-Digest: SeyKUXvqQitU3IIDoAxlPVLwvSXe2p3JOjNM6Kn08jw=
+
+Name: com/sap/jvm/profiling/ui/filter/ProfilingTypeNamesProviderImpl$4
+ .class
+SHA-256-Digest: SuEtUJoAE+M8cu1rMJsqiz0rfYMiFx//5pv2JYyXB1E=
+
+Name: icons/profiling_exc.gif
+SHA-256-Digest: ypJ8MvdkfHjbhYKfujSeRnSA9Q1M29Z/JOBqHdDNKJg=
+
+Name: com/sap/jvm/profiling/ui/actions/OpenProfileConfigurations.class
+SHA-256-Digest: PPqKhX6iWA5KWImRNqyh+FD4VyB7xpkXWu/NzDJsP1Q=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/SapJvmStartupTe
+ ster$1.class
+SHA-256-Digest: c3JLsL/55E81lqzTY2WCSFsTMxETewYFiDMDNjJnOZk=
+
+Name: icons/net_analysis.gif
+SHA-256-Digest: 5oFTmkqKCW7pOefw0d5TxannRMNT3pXfJXgV1d98uHQ=
+
+Name: com/sap/jvm/profiling/ui/perspective/PerspectivePreferencePage.c
+ lass
+SHA-256-Digest: m+46tmxlO3gDy34XfTRJz4WsACV9xrlLRlXYWl1K9KY=
+
+Name: com/sap/jvm/profiling/ui/target/OnlineProfilingTarget.class
+SHA-256-Digest: iQPTgPYdWKQ0uDGVPkXlTYy4Iy/031pun6oF3tqP9HI=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingT
+ abGroup$JavaConnectTab$1.class
+SHA-256-Digest: i4CxrzCr8n1UdRUYy7s1yo3LI/Eg0iLCA6ZWqzW+Ye0=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingConfig
+ urationTab$2.class
+SHA-256-Digest: NF7l12RNOtkV22ECiCaoXU8H4i5Y6BlzaCIo7iVRZhM=
+
+Name: icons/vm_monitor.gif
+SHA-256-Digest: MafnghA25ym9h2wL4arMj97d2BsLmlSoa+f3JAoa4do=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingTransportService$JD
+ IDebuggingConnection.class
+SHA-256-Digest: 35NE38lxtsft2iii64MDHK1AwjHV1R1q5a12oQYn4A8=
+
+Name: com/sap/jvm/profiling/ui/ProfilingPlugin.class
+SHA-256-Digest: J9fI+2xu5aiZQgBVjEup1cAqO/+pZcBWBsbEjax83rs=
+
+Name: com/sap/jvm/profiling/ui/filter/ProfilingTypeNamesProviderImpl.c
+ lass
+SHA-256-Digest: VMvhWE2B+k333CDfR7aGzH6WqAdSKToTckZQV45ljNI=
+
+Name: com/sap/jvm/profiling/ui/ProfilingUIConstants.class
+SHA-256-Digest: SzMVCqw+3lEUXH0Aa3QyRE4q29PFpqIB5r1yZzsMtYQ=
+
+Name: intro/css/whatsnew.properties
+SHA-256-Digest: N9mgGTr/Tx1+MwOVb9zjvR3E2la154oE3oCFS/PAEXo=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingD
+ elegate$2.class
+SHA-256-Digest: lB75gyM9eqGhhZiSuF1gIEzqDp1NWGlN5aYlWkSV6L0=
+
+Name: com/sap/jvm/profiling/ui/filter/ProfilingTypeNamesProviderImpl$5
+ .class
+SHA-256-Digest: AZ/+Ph8Swq2VewpwQVKKp58bx7udktnE2UnBZXT1fdI=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/OnlineProfiling
+ LaunchConfigurationDelegate.class
+SHA-256-Digest: +bMGARYxw8HwlEPcoLv4DKMx6jXkuSyiHpPOBtqrf4I=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingConnec
+ tTab$1.class
+SHA-256-Digest: Bw1xa9BXiN+Tp6VXBSdvUYpNpTgZd2WtEjgpy0RIP54=
+
+Name: icons/allocation_analysis.gif
+SHA-256-Digest: W1VZ0jHXy8a3x6JsFTmNKm83CV48Ww67utxeYr46z4E=
+
+Name: icons/vm_explorer.gif
+SHA-256-Digest: Pq0YU+dVySzzz+3nflcccxupUzyM3cEUKSN6bz0069I=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/JavaApplicationLaun
+ chShortcut$MainMethodSearchEngine.class
+SHA-256-Digest: gDiqvgj8m3WZg8QXRX2QDc2Espsle4G1hUilxSI8OqY=
+
+Name: com/sap/jvm/profiling/ui/perspective/PerspectivePreferencePage$P
+ erspectivePanel$1.class
+SHA-256-Digest: SuIHQa8oulDt2Z+eWGg75bkyXbDgj+fjs6HazTJ+UGQ=
+
+Name: icons/vm_monitor_disabled.gif
+SHA-256-Digest: 05kNbbzES/9kcAowDgHJsgYUC6LJdsPVKF4rqPV+46g=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingT
+ abGroup.class
+SHA-256-Digest: /cO1IQu3AMnRHmwbEugIdWp2Uf0ygblGAbvjO0IlOBA=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/JavaApplicationLaun
+ chShortcut$1.class
+SHA-256-Digest: Q+PbGb51YxF4VB58/VmYq0YLILXMnB9aJqwyDb28ZCU=
+
+Name: com/sap/jvm/profiling/ui/filter/NamesUtil.class
+SHA-256-Digest: 2kkwfztQunr7VmQHT6ZU3fIb8l+VsV3PodCTPVzsDME=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingConfig
+ urationTab$1.class
+SHA-256-Digest: 5LnFQ6SbfM9MdbKpbaiYPKzwN1hYpA1niXW7kK7d594=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ ConfigurationTabGroup.class
+SHA-256-Digest: 5n/xJcWQD1TzBIeXMVuh8zjk4gClBWYK3HOKWW0E0UE=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingPDELau
+ nchConfigurationDelegate$1.class
+SHA-256-Digest: Z/LFdukqRmGkpe41RefCXqR2JgdW3/JqMAnQlbOSkXw=
+
+Name: com/sap/jvm/profiling/ui/views/ConfigurationImpl.class
+SHA-256-Digest: b5YSxlmLLK+LRDFFhAqk4wBzYEUZGAKkoWZwbeP1rHU=
+
+Name: icons/profiler.gif
+SHA-256-Digest: HYbaMPlNqQJE6dNYODjDquBueg7/f7dOzRkr7W3Jyag=
+
+Name: icons/perspective.gif
+SHA-256-Digest: aBx3rFswKzcR9WPBszacPhc8OZJlfVJ0fQE4/RjCTvM=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ DelegateUtils$ScanState.class
+SHA-256-Digest: FjVeEVvxRohYWNYPDNSW7RGEYbWU3w88b0aIb+grbPg=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/NetworkAnalysisShor
+ tcut.class
+SHA-256-Digest: bZnHo2c8NSNa7nWfmoML3Zr2vESGqA9nCm/G01e0wqI=
+
+Name: com/sap/jvm/profiling/ui/actions/VmExplorerAction.class
+SHA-256-Digest: 9HTCtSn10yM7ZeJsdh5LHxc6+uvgBR7NUepoToi1V50=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingOSGiLa
+ unchConfigurationTabGroup.class
+SHA-256-Digest: 6cv/wySL0WWYjDZLAV0In+DalH8Ipg84DkROZaCGqqM=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/OnlineProfiling
+ LaunchConfigurationTabGroup.class
+SHA-256-Digest: 6AAeAm6XsDuY+ja1aSE5o9YxAwgG+Fb7Hyw+yiyCFYw=
+
+Name: com/sap/jvm/profiling/ui/runtime/ProfilingPluginRuntime.class
+SHA-256-Digest: jkDSwFLOsvVpGGOIybP0+3CojfFqXQXsoChqFWWUe7g=
+
+Name: icons/online_prof_app.gif
+SHA-256-Digest: Eth6yUM2+LBWMumRN7OH1mvBoKY+in1NOTm4p9EZJdE=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/OnlineProfiling
+ LaunchConfigurationDelegate$3.class
+SHA-256-Digest: 1gE5x6rPpE8RgRqQQ4KFXlT7FzYe0QjORUVhZ7nn+nY=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLocalL
+ auncher.class
+SHA-256-Digest: 71Cp11oAwb3Fr0NJI1e6trhgvoXTJgig0oD7jJ6nHNk=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingT
+ abGroup$JavaConnectTab.class
+SHA-256-Digest: pRs1pH07/7Vt6CgFDSLoG0QsFzbaP0bhMFDfnvyUtjU=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingD
+ elegate.class
+SHA-256-Digest: lYnXTpXQZ+0q6c6pLa1772UYMcWuMkks8o3LPiFFYFA=
+
+Name: plugin.properties
+SHA-256-Digest: 1SuFRDRfv/DWbzSB3NtL1OSR29bGb7hFthJPRXsoCEE=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingOfflin
+ eTab.class
+SHA-256-Digest: BejtLUpY3H0QVOkC+rf4REgueTtyVJWRNsY/4h/tKQM=
+
+Name: icons/method_analysis.gif
+SHA-256-Digest: OahumxGUP2my3+q47GTS1tmQ/5k7FuHgrqAbjnYGiI0=
+
+Name: com/sap/jvm/profiling/ui/filter/ProfilingTypeNamesProviderImpl$T
+ ypeImpl.class
+SHA-256-Digest: 5TcFPMDd9dqgFg63eCtT6SATy54rNZ4DQgt8RquV+gE=
+
+Name: com/sap/jvm/profiling/ui/filter/ProfilingTypeNamesProviderImpl$1
+ .class
+SHA-256-Digest: AXZdG/LdTR4DJq3RVqH5wM+BLHG2PBCJA9B24NDcY8s=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingAbstractConnector$S
+ tringArgumentImpl.class
+SHA-256-Digest: ymOp8f7bmm6EacjVnkGYadxSYhuBEJRHxoasXpGD8AY=
+
+Name: com/sap/jvm/profiling/ui/startup/ProfilingPluginStartup.class
+SHA-256-Digest: r0GkmbKLoeMgXRC5xPF5seBzuzxX7lcNG4ZW4FjtoGk=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingD
+ elegate$3.class
+SHA-256-Digest: 0JJYuZP0bERivk8HaxNK33OGxKQmoKrIj8OvUC62Vvo=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/JavaApplicationLaun
+ chShortcut.class
+SHA-256-Digest: qkViWGjIhrWeb/3TnILPafPFSXwG9RYZ4IUh5Jr33DA=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/SapJvmStartupTe
+ ster$VMTestInfo.class
+SHA-256-Digest: rHKcbgJveVLcKrMVMygd6yITACs5Sr5qNzxUOy62XyI=
+
+Name: com/sap/jvm/profiling/ui/target/OnlineProfilingTarget$1.class
+SHA-256-Digest: 35eCzL5Lpz05g+YhruaJAR9LBh19W9tIlhn0zLpRAos=
+
+Name: com/sap/jvm/profiling/ui/filter/ProfilingTypeNamesProviderImpl$6
+ .class
+SHA-256-Digest: So2MotgDpLw5kdZEtIohP0fHNScdjJi9D3VyQ+/iXuU=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingT
+ abGroup$SecurePreference.class
+SHA-256-Digest: wZz+B6tZHauElzl+12NJDCadQgKOsL0UPi/G9OtTAfE=
+
+Name: icons/offline_prof_app.gif
+SHA-256-Digest: pV6H/RTFHjdVdwH9OlwyS4OLELQuWIpZzHnh/51tlxE=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ DelegateUtils$1.class
+SHA-256-Digest: O2WbD5iSLkNnGjbDPSVUPdcyPdj9rEYLWwJJU83KdgE=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ DelegateWrapper$2.class
+SHA-256-Digest: vCgwrtViTf6ZgTfE1IdeEXj0zL5LhuJYRM6WRA3ovuE=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/PerformanceHotspotA
+ nalysisShortcut.class
+SHA-256-Digest: uYIFgbATQrPdMces4JrUxd3wzItQRuIbFChL6qEj/ew=
+
+Name: icons/profileLast.gif
+SHA-256-Digest: d7Lk1YlU70LNnoCNeYlflyWBnjva6qifIVBpRtc/i3Y=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/SapJvmStartupTe
+ ster.class
+SHA-256-Digest: cE1Q5mC4SwmE5PoyRci7QNyladtPnQO5vks32oWPntg=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/ProfilingLaunchShor
+ tcut.class
+SHA-256-Digest: 5enJINrtA95YkoTkpfyZdGuo87+BEZ7IyC67VqODQIo=
+
+Name: com/sap/jvm/profiling/ui/filter/JDK.dic
+SHA-256-Digest: 2M4RT09Q7XD7g53TaoC1Cm7CVssftP3YFeG0TDKPLo4=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingOfflin
+ eTab$1.class
+SHA-256-Digest: AZJvkRAMjq1/O/eU5ljwdt+a9pZDxCfID7Low2V9VgA=
+
+Name: com/sap/jvm/profiling/ui/views/ProfilingConfigurationView.class
+SHA-256-Digest: BKtJDw/hbwTHvBb6e1pVRL+tkUrMWYZ2ZYFWlZwHBUw=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingOSGiLa
+ unchConfigurationDelegate.class
+SHA-256-Digest: N5Hzi9uKnz5oMroRCjWgKOeHtQ+uSMTzzRMQYmaFYfw=
+
+Name: icons/synchronization_analysis.png
+SHA-256-Digest: 6B4XD538asxlAKccgPVR6lOAmunHx8s31rlTZAG4Y30=
+
+Name: com/sap/jvm/profiling/ui/filter/ProfilingTypeNamesProviderImpl$3
+ .class
+SHA-256-Digest: NlDq8jCsb06zswDpeNeJls4W29rdESC2bn2q+DXSskM=
+
+Name: com/sap/jvm/profiling/ui/perspective/SwitchToPerspectiveAction.c
+ lass
+SHA-256-Digest: Bng/4lokHlIGLu+FGu0xZ0yNb9sm1Xj21OeQKkP2SIQ=
+
+Name: intro/css/graphics/obj_48/profilerhov.png
+SHA-256-Digest: vcwJFdJ3hC7b4OF4trTL4LH1N4ymHYq8ilcI55w/GFE=
+
+Name: com/sap/jvm/profiling/ui/views/ProfilingConfigurationView$1.clas
+ s
+SHA-256-Digest: Rhij3jqCS4oJ1OyCAQ9nph/6ohZA+BMegNFXpEKvS+U=
+
+Name: com/sap/jvm/profiling/ui/sourcelookup/ProfilingSourceLookupManag
+ erImpl$StorageEditorInput.class
+SHA-256-Digest: tSA9beoFrOAPINWAAdllqsXnhB1ynHtQgFQ89G8Ls3o=
+
+Name: com/sap/jvm/profiling/ui/actions/ProfilingLaunchConfigurationAcc
+ essor.class
+SHA-256-Digest: +Ln6WJiRYLCnbtmjofm/2n/uof007vYpvyp+5PTYEtk=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingD
+ elegate$3$1.class
+SHA-256-Digest: oou3zixyj33NwEBiZgmqH02/6e/VBtYQz+Cg23dAAvE=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingConnec
+ tTab.class
+SHA-256-Digest: eVenqLMHFlRLxeFIkuw7hjMgtq6Njs/XGUDee6uJ/MA=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingEquino
+ xLaunchConfigurationDelegate$1.class
+SHA-256-Digest: wrz5xLRAAiydmI+MZLgN/uoQyufBLnN7oJCPNa85rQY=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingAbstractConnector$1
+ .class
+SHA-256-Digest: C9gdUgh1ruQyT8G2upMHLoQ778XTZf55xSjay5HKDZA=
+
+Name: icons/profilingWiz.gif
+SHA-256-Digest: lPao77l1q83LaKWn7XbVcNm9NliLAsv+Xaf/dYoJYAU=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/JavaApplicationLaun
+ chShortcut$MainMethodSearchEngine$1.class
+SHA-256-Digest: ktyGbZhkNkKXMUt38CqOl+VEiHk2TjhoGzNgzGedHyM=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/AllocationHotspotAn
+ alysisShortcut.class
+SHA-256-Digest: zg2cXGEPCD5VDH7lb3BBRde6N0HliXYlHQD7FuGS1Tw=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingTransportService.cl
+ ass
+SHA-256-Digest: kTpnGPEoqvlVP7hAU9KmCM/pG2dx7ZUIClgsu0/eNxw=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingT
+ abGroup$PasswordFieldEditor.class
+SHA-256-Digest: D8/FDUow2/MKhdo17tJqdz2IlKZgwxcUFwXySm2WU8A=
+
+Name: com/sap/jvm/profiling/ui/target/OfflineProfilingTarget.class
+SHA-256-Digest: Ii4nd2D2qnPC/IHpYRhSdAXkgXuwgjRyjekwH7DEVfA=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingListeningConnector.
+ class
+SHA-256-Digest: 5YsJN/JQjX6y7HRzoIVUvJzgH5RgL0wdCC3lHdBQpAM=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/OfflineProfilin
+ gLaunchConfigurationDelegate.class
+SHA-256-Digest: ByLHRXWCsXeuUdHtIV8TgHfGuhnXLl7BiCcdUfE5nbk=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingConnec
+ tTab$3.class
+SHA-256-Digest: avJ5kTGMTaK6wCtC3eb6BebRQhL2kBZNk/fUvlfp4OE=
+
+Name: icons/thread_analysis.gif
+SHA-256-Digest: L1nW7MqG9fzC04QyaMSzMkOWxx/x08n6cgla64+WB3k=
+
+Name: com/sap/jvm/profiling/launching/LauncherFactory$1.class
+SHA-256-Digest: jc4u6rtYzz2NgevkheefWnUZoxpQ3yfxnXIMUTSEXEs=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingVMRunner.class
+SHA-256-Digest: MzWb6IMvRP82A0yT/oFYmvTkJetRzjb5SMPJpsMC1xg=
+
+Name: com/sap/jvm/profiling/ui/perspective/PerspectivePreferencePage$P
+ rofilingLaunchConfigurationTypeContribution.class
+SHA-256-Digest: SIi1sbZb2g88x6QZmXd6xk0EbAf2EPiOdTiNEcX6LO8=
+
+Name: com/sap/jvm/profiling/ui/actions/ProfileHistoryMenuAction.class
+SHA-256-Digest: YJOGahp1AySJ6aIcOaYXoU8GBDr81j02PggBJTrVErY=
+
+Name: intro/whatsnewExtensionContent.xml
+SHA-256-Digest: 7i0llScU7kELLcLfqMAEEbSwZPtLZOSGHkBZvCPhrno=
+
+Name: icons/neo.gif
+SHA-256-Digest: a7ihEXJoxz0WrjmQTW389GVoS1cIM1AfNR+ttzyhQAA=
+
+Name: com/sap/jvm/profiling/ui/filter/ProfilingTypeNamesProviderImpl$R
+ equestor.class
+SHA-256-Digest: G5VWhxx5tj3ztuitV4gtnnAHebA3P18f0cRBGyVa9R8=
+
+Name: com/sap/jvm/profiling/ui/sourcelookup/ProfilingSourceLookupManag
+ erImpl.class
+SHA-256-Digest: IxxKuxL08r8aDdeArKZE8RqzstKK6AtPMx9BLTfAy88=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/OfflineProfilin
+ gLaunchConfigurationDelegate$1.class
+SHA-256-Digest: AqhZm2KNlgnBfFcLVt1X045M6vj6pKXB67/W0QHYOaA=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingTransportService$2.
+ class
+SHA-256-Digest: ZyCZdYZ7EeIYWQoH6A1Wp9XHGB91sEYcDqYrbam2urI=
+
+Name: com/sap/jvm/profiling/ui/filter/ProfilingTypeNamesProviderImpl$P
+ ackageImpl.class
+SHA-256-Digest: sgrfSDOhWkpXtitiuzVxnafC6hzlLMuQtgrsyq4B8SE=
+
+Name: com/sap/jvm/profiling/ui/launching/shortcuts/JavaApplicationLaun
+ chShortcut$MainMethodSearchEngine$MethodCollector.class
+SHA-256-Digest: iel9pvsaLq/5vZNF7M0HYNrHMk2Q3I/rpZsL+yB4oKI=
+
+Name: com/sap/jvm/profiling/ui/actions/ProfilingLaunchConfigurationAcc
+ essor$2.class
+SHA-256-Digest: AZft7++RD+c4l6yh56nk0kV6tTsp3bMmoquqfSUQaQA=
+
+Name: icons/performance_analysis.gif
+SHA-256-Digest: kRUvz3bGpuSZOT+4kKa4S34CTxMyxIEhZp0MOFWOveI=
+
+Name: com/sap/jvm/profiling/ui/actions/ProfileContextualLaunchAction.c
+ lass
+SHA-256-Digest: o819FaLInEonPhDoBheAd8SKF5l6nkScq2VZ9qVBtyM=
+
+Name: com/sap/jvm/profiling/ui/actions/VmConnectionWizardAction.class
+SHA-256-Digest: fzV1xep4ix8k851BWuWosXYb0qZSp97AbhBQygnILbE=
+
+Name: com/sap/jvm/profiling/ui/perspective/PerspectivePreferencePage$P
+ erspectivePanel.class
+SHA-256-Digest: 9DrCKCK2H9Dp8ZCNuoh99mVvwGk8yeTwaX6yh8lF/5Y=
+
+Name: com/sap/jvm/profiling/ui/views/ConfigurationManagerImpl.class
+SHA-256-Digest: hL+11ziqO03RWIY3kzCdvzX308fciq4zChttk0//WkA=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingConfig
+ urationTab$2$1.class
+SHA-256-Digest: nDJ/uh7Fvb/2jyQTd3GaCy02xG6r0X8R2FgeibDoKFY=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ DelegateUtils.class
+SHA-256-Digest: cYjqSdetH3vSZazS5P3gmAOTiqfZJhZk3o2i3ufJhug=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingPDEJUn
+ itLaunchConfigurationDelegate.class
+SHA-256-Digest: vrAGiVaQHdt5XpHo1WWLRRfaV7jsVt41SFaydVKJc40=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/CloudProfilingT
+ abGroup$SecureStoreState.class
+SHA-256-Digest: qgTZ+sMUgCSd9l37pgaQdWC5hrC8INgV2EMw86J66G0=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingConfig
+ urationTab$LaunchConfigurationDelegate.class
+SHA-256-Digest: WAe3PdTUC+VMD8BnCGpGlPTkf3GCoqiIJayAYpoMmsA=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingAbstractConnector.c
+ lass
+SHA-256-Digest: xywgORsh4ag6zj6WfsJlGQ6Bx40ibV02xvTCoqsT91s=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ DelegateUtils$LaunchConfiguration.class
+SHA-256-Digest: pKKodK+FCO8rxjbswDO2r6mpxALUZqVG1/5noHOctZI=
+
+Name: com/sap/jvm/profiling/launching/LauncherFactory.class
+SHA-256-Digest: XqOxdvV9wTYXYuGQ7SotRBWh7VfA+H9fT5hX9EEsmCE=
+
+Name: icons/parameter.gif
+SHA-256-Digest: pwO/AoGZR7kKGHHBjON8B46pzALVnqHVSQtIDOxNfEk=
+
+Name: icons/profileLast_disabled.gif
+SHA-256-Digest: kYg1ddfVKApZOWvXC02EqlIJsZlCH51vzTM097xkRwA=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingJUnitL
+ aunchConfigurationDelegate$1.class
+SHA-256-Digest: UbrQYLX+jY/m1YDDPogbkiPZsJRNFr46/XSTyCWajS8=
+
+Name: icons/prof_app.gif
+SHA-256-Digest: 8HjVPEr9sy0CTo+9RxXroKIlOHnL5IV9uplx0qTGf7w=
+
+Name: intro/css/swt.properties
+SHA-256-Digest: O7VtRLFIawV/8dDAEcI2DSGjdRyMb6+pNazOndtsigs=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingJUnitL
+ aunchConfigurationDelegate.class
+SHA-256-Digest: 6/bRSdzMB8DFpVMgsLU1xWOfGXOypKHnUJjAdTvODYQ=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/OfflineProfilin
+ gLaunchConfigurationDelegate$2.class
+SHA-256-Digest: 4ZEJxo9bY/rq6xb3mxE1BhrM3G44ju8BUrkTwJOPJpQ=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ ConfigurationDelegate.class
+SHA-256-Digest: buorrcqKLILod+kiGZL/u2FLKXhWmjxG/cIQUUFX1QY=
+
+Name: com/sap/jvm/profiling/ui/filter/ProfilingTypeNamesProviderImpl$2
+ .class
+SHA-256-Digest: YghjTmd00yrIRAY7CxRNHVedDw0f0pzjzdCLuUbyvmo=
+
+Name: com/sap/jvm/profiling/ui/actions/ProfileAsAction.class
+SHA-256-Digest: sNLDR7fgEEgyRVhfzj27XnzrSMy/9gi8dCvePF+xwtU=
+
+Name: com/sap/jvm/profiling/ui/connection/ProfilingTransportService$1.
+ class
+SHA-256-Digest: /FOSUvgNZKkYk2V7Qf3/1jL2EEr5SXvNnAiRxpapUdU=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingConfig
+ urationTab.class
+SHA-256-Digest: 472ZDe7VaRXwiU5pSJ0guCuOeWn5qnLcD8brtpo60Ko=
+
+Name: com/sap/jvm/profiling/ui/launching/configuration/ProfilingLaunch
+ DelegateWrapper.class
+SHA-256-Digest: Jlv27zERm+C3Wy6omfuzckaV/SPcRQdvtVjIoC4cBSg=
+

@@ -1,0 +1,2551 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: 4dbZ1M0GeAtCzwGJNET7Ia0OfHl4Y
+ PXcsnl8r5UYoEk=
+SHA-256-Digest-Manifest: XWjsZq89/g/7ILcvLaaYAb8wT9aPBA4I3Zl/UXuDNLg=
+Created-By: 1.8.0_45 (Oracle Corporation)
+
+Name: com/sap/bw/core/ui/providers/FilterFieldLabelProvider.class
+SHA-256-Digest: QDDBS6cSxAqch8xV2TTVnGBn/UHH+++W4shEiA/7+Bs=
+
+Name: icons/blue_np.png
+SHA-256-Digest: W5finw9m1BzA4w4MLhT1rJPvSK/TJShb5qkEcdacLMI=
+
+Name: icons/condition.png
+SHA-256-Digest: 3S2mOE3QedM2rVaDTDNiRuTfE0zNqkJLbtOS+G2VXaY=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/AbstractProposalProvide
+ r.class
+SHA-256-Digest: OVaLB1qEVCJtjP3Pa2021VyGuxa7KGIZvRx7h8z2W+k=
+
+Name: com/sap/bw/core/ui/utils/InfoObjectExistResult.class
+SHA-256-Digest: EqAQKpFI9wos9G1RJP3xmu4Jb+iP8flukkZOsdWXKb4=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ProposalProviderDialog$
+ 3.class
+SHA-256-Digest: /sdZV+z3ZtsD29FIVDruwzSYRL69Gq+0U67egmt2GQI=
+
+Name: icons/blue_lt.png
+SHA-256-Digest: 7z5pC4qfh7ZhNR5bMOVamhQVuQmzNzLW86rCqE1SS8Y=
+
+Name: com/sap/bw/core/ui/contentassist/IComboContentProvider.class
+SHA-256-Digest: Mw462x82nlaK1knmfF9xD5/e2euhUZTGVmj6lZ7XaZs=
+
+Name: com/sap/bw/core/ui/dialogs/model/DimensionUiElement.class
+SHA-256-Digest: lHK+SpfXK5IszEFi3wxyhMGMOWsYS/I0wTij8+bgIXI=
+
+Name: com/sap/bw/core/ui/dialogs/ValueHelpDialog$5.class
+SHA-256-Digest: iw2emk4UkJEzRWDCRNL6Rnk7GIWcNIOkKgoIyVwIGiA=
+
+Name: com/sap/bw/core/ui/formula/FormulaOperandSelector$INodeSelector.
+ class
+SHA-256-Digest: m8es9BfoS3cKwwmvDANUGOgN+s5Rc51UAHXCbjEDskk=
+
+Name: icons/planning_level.png
+SHA-256-Digest: fRcAs6hL14e649r4hCr+2HviE2FYs1MKhlAes0IvDCU=
+
+Name: icons/parameter.png
+SHA-256-Digest: 9x08S8NRWwsGlXriNl3dGiMVGS6ZRxngTGz7GeIQNMk=
+
+Name: icons/icon_supplier.gif
+SHA-256-Digest: bbANS/95w7wy0H0SVGoLs5sfNE+42VuQddDQas4pmiE=
+
+Name: com/sap/bw/core/ui/utils/IWorkbenchUtil.class
+SHA-256-Digest: t6+9rSf7ibaTh6kMwKXD8EQ2aC1QjssgFxdFt3BtkF4=
+
+Name: com/sap/bw/core/ui/DefaultTreeContentProvider.class
+SHA-256-Digest: c2qbDQuuQy45NlDjAVkTE8fX4Ijvh/EmEOjp0ELKbu0=
+
+Name: icons/bwformula.png
+SHA-256-Digest: 16EqYPOUzRMxx3u0PN34dk1XJl1Itw7LMAlEZ9C3c9k=
+
+Name: com/sap/bw/core/ui/utils/BwStatusBarUtil$2.class
+SHA-256-Digest: fRPnNiIOD/Z6J20fdmWbuVTg5bZk6sQ4b+krPoCcbl4=
+
+Name: com/sap/bw/core/ui/providers/ScalingFieldLabelProvider.class
+SHA-256-Digest: VQ0VXs2qdUQAJFoNtpoWUlPJCmKy2psN9C85hF+FyAc=
+
+Name: com/sap/bw/core/ui/wizard/WizardListViewer$2.class
+SHA-256-Digest: usvG7C5aA7cpDu2QUiQAW6SkBCKwSXZauRQwjtTBzGs=
+
+Name: com/sap/bw/core/ui/help/StandardHelpContext.class
+SHA-256-Digest: +bX1Ht4RjfjAitv9EUk0ejUbQi8kJmx6cwz3H00dxoo=
+
+Name: icons/test.png
+SHA-256-Digest: UssMDE0vQ1F9e254tiUiWPUvmA2/uiSzRaLcxEXUwu8=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/AssociationComposite$1.c
+ lass
+SHA-256-Digest: KMagVdoVAzDBUG0ujr0Xdk0iJ9nfDqZaN7HU5nSzqGo=
+
+Name: icons/decoratorSumNoFrame.png
+SHA-256-Digest: 52VQ6VBWQSPyMG5cv775Y3y3BQRkDhRt38zVEni78oU=
+
+Name: icons/data_source_wizard.png
+SHA-256-Digest: 6hiCTU3P8Wm+N5gMJo3qm10jGbYFARn0kQIq8B3LB5M=
+
+Name: icons/blue_le.png
+SHA-256-Digest: 8UO/Zjj4tsYhHQNw79+TmXjq1evCRiF2O5cCJz/erSE=
+
+Name: icons/ndb_title.png
+SHA-256-Digest: /aqTmiQFgA2lc8fmAobkFQcRtfAj9Bl+KtV9JoRKdoQ=
+
+Name: icons/dtpaInactive.png
+SHA-256-Digest: eAq6fhMsx83tkOA+hsCyR6FnsqRNUdKFijI78Yr0MMQ=
+
+Name: icons/time.png
+SHA-256-Digest: V8Iy3KYOoq0i7b9K/8rtDjgUxsNxL4g/veSlzBH6jAs=
+
+Name: com/sap/bw/core/ui/providers/DisplayFieldLabelProvider.class
+SHA-256-Digest: rr5GXKh14/5GbjxvDQR80ygDV8Rd1P3wo0dKqbW1kRM=
+
+Name: com/sap/bw/core/ui/ModificationFieldHandler$ModifyEventJob.class
+SHA-256-Digest: LVR8jn+1qyzV+pvRjPnM1c7CQnivhNyFq+yBbz+bq3A=
+
+Name: com/sap/bw/core/ui/wizard/SearchListComposite$DetailsLabel$1.cla
+ ss
+SHA-256-Digest: roDwT2iLB/C3ZAIbvKClR6Eqyfctax3nwa/t9mSQbgU=
+
+Name: icons/red_le.png
+SHA-256-Digest: eRd8K7JjLvTp6QFQaA+tkr0VZNj6Vivhj9ELfxf2YZY=
+
+Name: icons/bwvar_nb.png
+SHA-256-Digest: bbJ61ILCwyrnN/5dsUZjz9c2SUqmKoQnFbtHVcfY0MA=
+
+Name: com/sap/bw/core/ui/localization/Messages.class
+SHA-256-Digest: NbWoEYR/T3DimSRE+Il7YGnz0zCO41g7w3lw/MG2L6c=
+
+Name: com/sap/bw/core/ui/dialogs/ValueHelpDialog.class
+SHA-256-Digest: enBueWij5v5tcQ7gNIaA0qojblf8wuIYR6bL4acLNsg=
+
+Name: com/sap/bw/core/ui/controls/DataTypeSectionContentComposite.clas
+ s
+SHA-256-Digest: 8QKNAHtt4YsZALPzNMjEU9ZL6keDAzhRhHp/fdADrZk=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ProposalProviderDialog$
+ ModifyRefreshJob.class
+SHA-256-Digest: tbVQYS1aErknU+A/ShZ4eqhI3gyzPPHGwW4a7jQ8pxA=
+
+Name: icons/bwhier.png
+SHA-256-Digest: D8NQJ1Ivv9Qh+87DVjwi3gqIL7QSOttpNxMTfl+um6Q=
+
+Name: icons/activate.gif
+SHA-256-Digest: ko38AWujiZpnHlHQyu2bjdoeiZG3SXFciwyOxQFrWl0=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractSelectionDialog$ModifyRefresh
+ Job.class
+SHA-256-Digest: quo+7ARmlQmazOTfeLpEp0XnWzv/ZDzwTOYY1PlhYMk=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/AdsoProposalProvider.cl
+ ass
+SHA-256-Digest: aXjzMWJqwfUuvTJ+wC9UizL/NR/PSGWAIE0llf47xCU=
+
+Name: com/sap/bw/core/ui/localization/messages_de.properties
+SHA-256-Digest: PgW0OTGPm9RlY2x0XMKRh6R3qGPIWw9EbKJ/SXv7EVs=
+
+Name: icons/s_rankin.png
+SHA-256-Digest: SFZ6YXH5P3Qh7w/+w6DERCxGUPdcCpb+l/Nz2+yxVxA=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ISRowContentProposal.cl
+ ass
+SHA-256-Digest: l8OHaEyEFoVWNii8UIXywuxvGQmhfAajsrwdoDM58iU=
+
+Name: icons/red_np.png
+SHA-256-Digest: Oy2KLeS5/VDpYht9IIJX0Ta+EUGM+Iuab2jZGOcgGg8=
+
+Name: com/sap/bw/core/ui/utils/BwStatusBarUtil.class
+SHA-256-Digest: GU+exN/xFg9ezwRS7C28THDrbTfKB1f1Jx7Xnj9AF3A=
+
+Name: com/sap/bw/core/ui/dialogs/BwAndHANAObjectSelectionDialog$2.clas
+ s
+SHA-256-Digest: uMgcjsh86sPSEEgc4iGzQmbOpapyEMKjANW7Ewd8Voc=
+
+Name: icons/web.png
+SHA-256-Digest: OLUmwLArgS5y3pveUMUHToPdfaUhcVEMut345tDilr4=
+
+Name: icons/red_lt.png
+SHA-256-Digest: zvQMiaz5fkpT7m067ONJjXbMRzegzGZub0O47auseUU=
+
+Name: icons/process_chain.png
+SHA-256-Digest: ARAJ15ZPopc9AMbWy01rVSincrZyCuAGS/TjkQFaqkw=
+
+Name: icons/icon_connect.gif
+SHA-256-Digest: e4HFPMzGoGdSHnnlBtDAAFK30VrWg7M8IlMxB4dkEWU=
+
+Name: icons/bwvar_lt.png
+SHA-256-Digest: VTei6QNE8m5YkEtAWK1NtGvPN4i2abWMsIVVJr71uCk=
+
+Name: icons/bwxxliobj.png
+SHA-256-Digest: D+udB3yvKbsnFCjXGayMZnvtu9hQdwUF6w9l2IZ4M/s=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog$2.class
+SHA-256-Digest: hX65G8q7hXdSbOsbDEUzrkB6HwOnuZnykA+b5U1FOZ8=
+
+Name: icons/display_set.png
+SHA-256-Digest: kNngELh1sdo00a/JeOH7LDvTG+JYe0YIJMcWgX8zPnc=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/SourceTypeandReleasePro
+ posalProvider.class
+SHA-256-Digest: YFmQ6cX/qFaA0sgISfV3eUv3lK0YGlSiNrkVaji7JZ4=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ProposalProviderDialog.
+ class
+SHA-256-Digest: aSw5aRucya008TMoFRgBeFSk7pR+tcg8Alu55jdhS80=
+
+Name: com/sap/bw/core/ui/utils/AccessibilityUtil$3.class
+SHA-256-Digest: lMIANmYNKEz/rX0Vf2rIroiA36tJWzfDYEm65QPbTfQ=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/ProposalResultProviders
+ .class
+SHA-256-Digest: fDhIIypsrWS7ehxMVcfKTOVeVYikXEZhcwzIFi8BHvU=
+
+Name: icons/bwiprov.png
+SHA-256-Digest: RQvkKOMzgigqs6PC1K2i7eFbRgb95LjkBPwsj1e0MxI=
+
+Name: icons/infosource.png
+SHA-256-Digest: iRjH56rm/76ljvtRJmF7BN1sZKbcfJt8j7cY0WN0D5I=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/BWProjectProposalProvid
+ er.class
+SHA-256-Digest: dVLLFCQlc/rkI42+o8PDigSNI9vWrxBIp0iXi5J3wOQ=
+
+Name: icons/key.png
+SHA-256-Digest: vfW/8SSTB2F5HTuMsyo6iiUlgmRkgi6SkDywW3KKwrg=
+
+Name: com/sap/bw/core/ui/providers/SelectionFieldLabelProvider.class
+SHA-256-Digest: 29HQmLWnh3y/Sg948eriUfH/UDFYpf/s78ZCkGKMnOU=
+
+Name: icons/bwfilter_reused.png
+SHA-256-Digest: y0sr1IGaf/SRXRauZx/Gt0GCYzWW9J6S9B6zOD8bsnU=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/HANAEntityContentPropos
+ al.class
+SHA-256-Digest: C59J594S64ddC88vNlPcXfWYy4YUq+Ed5fm2KtubN4U=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/InitialRunProposalProvi
+ derDialog.class
+SHA-256-Digest: w/4QIy0qpZoBB13jxeCJR1IfE1dC2+YmeIvUOKh+stI=
+
+Name: icons/bw_application.png
+SHA-256-Digest: bIFhsQXuNlAk8yE5mNHP+UE+IY6Lyb3zu5uOztt/yII=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/ProposalControl.class
+SHA-256-Digest: FLLmX7bPDkBn5H27ukX64L/uUZvcl/C9wEYrDYxE6Y0=
+
+Name: com/sap/bw/core/ui/wizard/SearchListComposite$5.class
+SHA-256-Digest: ugiSehFd4+y0NsM5tukA68IB7GfnVE9r6LBXRv8EU58=
+
+Name: com/sap/bw/core/ui/history/BwHistoryPage$5.class
+SHA-256-Digest: jwC79tCeQKOqZ3G5bA/DqRFVMnn5+HSwAAnrDxEqVsM=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$4.class
+SHA-256-Digest: TvjxEiIUTIr9fsfH6MJptouOxx/inFl0OVwB0RUoglc=
+
+Name: com/sap/bw/core/ui/label/LabelProviderUtil$ISearchStringProvider
+ .class
+SHA-256-Digest: Dqu6eGnrbEu/jwwmuqcsb0tBLoLiq1C9mwByClpcgrE=
+
+Name: com/sap/bw/core/ui/dialogs/DelayedProgressMonitorDialog$1.class
+SHA-256-Digest: L2z55kElARaikojoUEMfEW8psYOi9X5dV1eP7SahEfo=
+
+Name: icons/InsertRowAbove.png
+SHA-256-Digest: fLO8M5ir+ZbKD0iOoBf5Wtm0tmrgNQ/AaArDEKZ8hXY=
+
+Name: icons/global.png
+SHA-256-Digest: Yn0bfiAuB9d5x6JdyKvfA4weX8WAZsl7OdTF7Czpn1Y=
+
+Name: com/sap/bw/core/ui/fieldassist2/ProposalProviderBuilder.class
+SHA-256-Digest: XYy9ud6WfOw4xVBJPVRU2fhp9B8yeS8LtsH1hGR8u8I=
+
+Name: icons/hierarchy.png
+SHA-256-Digest: voJs6yNTlPYRv4mEfoqO+XTSoCe0E02biB2saK0gR9k=
+
+Name: icons/replace.png
+SHA-256-Digest: hAO0r7uKF/gWbFKZuciINyGbRcb7a/tJCO3QKaRU+9Y=
+
+Name: icons/bwmpro.png
+SHA-256-Digest: 6on5CT0DMNApwmutzC6FA62k9v3UtBs/p3VvcUIR2jM=
+
+Name: icons/connectedOn.png
+SHA-256-Digest: eGH/Etz9bZ4F2JQgWik/zvL+nymosGoPG0bbdb44LOY=
+
+Name: com/sap/bw/core/ui/help/IBwHelpContext.class
+SHA-256-Digest: Nkq2Jm7I8rg698otAiPfsz5mQEHpHS6sK/RJ9iiCO1g=
+
+Name: icons/bwadso_modification.png
+SHA-256-Digest: kGTi/qTby3DBUbySofkImeb/wPsCVSexBibJQU+DR4w=
+
+Name: icons/column.png
+SHA-256-Digest: gr1q3DVZlzUEb5qYOH4rIclkyp3R8dH6YxIWigcLal8=
+
+Name: com/sap/bw/core/ui/wizard/WizardProblemsStack$ProblemDetails.cla
+ ss
+SHA-256-Digest: sAJUXMnri5TuOmiAHOTA5DbWcAxEqkbllyonfhweBbU=
+
+Name: com/sap/bw/core/ui/label/SearchPatternFinder.class
+SHA-256-Digest: xQFSsIVdHxx1fW36PQbmdvwW2zDkiU+stoQBX9rDw1w=
+
+Name: com/sap/bw/core/ui/prefs/BwPreferenceConstantsFBP.class
+SHA-256-Digest: 9RwuqvjkwSAAn04rSbBQ7WNZIm9nOMgD7QAoZJ1sbJQ=
+
+Name: com/sap/bw/core/ui/dialogs/BWProjectSelectionDialog.class
+SHA-256-Digest: O06dEvbqp3zJF3Y92RJqL2vzQVj0O694aOfvLii5yxU=
+
+Name: icons/ArrowGreyUp.png
+SHA-256-Digest: 2SCMOM/qJjOZuVLsjXlsiU1IaVHiiZQsyyGWDR9WRj4=
+
+Name: com/sap/bw/core/ui/openurl/registration/WinRegistry$IWinRegistry
+ Value.class
+SHA-256-Digest: KNubOn+THtq7JGXaC1k5MK3AfCsZ2+lxm3000ngY9Rg=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/EditCComboField.class
+SHA-256-Digest: Np6NcmwYEnl/RE9QUhxGtU5B3/OGqcEzLO1lvfDtE0I=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/GroupsProposalProvider.
+ class
+SHA-256-Digest: 5/d+n0pqUIAQJA4NzftiV5qlWqJcVqC0fPqKOp22BLU=
+
+Name: icons/bwvar_incl.png
+SHA-256-Digest: CVcVEr64ygXAdrLzlj3OeFJCi9Er7roT/bGbEX10TnQ=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/ProposalResultProviders
+ $1.class
+SHA-256-Digest: I/DrLJB90ZUVQO70x/6mzh8ejIs1uH8B8hCK2RZnCvk=
+
+Name: icons/decoratorMaximumNoFrame.png
+SHA-256-Digest: RDTLtX0wgrVEKU95y0SrcSrIwpt55NjjCyf7yOdRDCU=
+
+Name: com/sap/bw/core/ui/prefs/BwPreferenceDefaults$1.class
+SHA-256-Digest: NNRCd4PeV6k9n0epoqIEQxbqsOp/Nx2v68eC7LrJzkM=
+
+Name: com/sap/bw/core/ui/fieldassist2/ParameterCallBacks$2.class
+SHA-256-Digest: wGL42nkgBUmObcCpMU1sd5op4QxUREF6oO82YmdpEgQ=
+
+Name: com/sap/bw/core/ui/controller/InfoProviderRuntimePropertiesContr
+ oller$Key.class
+SHA-256-Digest: 8Sm6jto4ymqwU552bE2i79OedQdCjWraArru9XTaTVs=
+
+Name: icons/bwprop.png
+SHA-256-Digest: n4AzcUsgDYj85vjrvqF7yfLZKPXivFHX+WmzloaoXrU=
+
+Name: icons/backward.png
+SHA-256-Digest: CQr5NJVVDorHDTAg1Q4K9Om6FZYC9DcBu/6Czmuxay4=
+
+Name: icons/refresh.png
+SHA-256-Digest: TxiU/4KsFaWJqRzanyGX0TZW3w3v6kPnl44y3eK19Io=
+
+Name: com/sap/bw/core/ui/contentassist/BWContentProposal.class
+SHA-256-Digest: zPmRfIQCFDj+7/W1BTQsiCqxTsy7bHECZpWeJUegaxs=
+
+Name: com/sap/bw/core/ui/providers/QueryExecutionFieldLabelProvider.cl
+ ass
+SHA-256-Digest: VZTdy2UDjitulD7+YmJgrU7a5HF0isupYln513F3Qcw=
+
+Name: com/sap/bw/core/ui/internal/BwToolsUiStartUp$2$1.class
+SHA-256-Digest: HIiBPOVBUqsEGUmUiZvT9ozxAkDACAwM/R0WnmVRBb4=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ConversionRoutinePropos
+ alProvider.class
+SHA-256-Digest: IYCEk/XWdMWI/n2zwudo41wrG4pYhP+T0718Kk34F1A=
+
+Name: com/sap/bw/core/ui/history/BwHistoryPage$1.class
+SHA-256-Digest: AmUQq6f5uUkH/jLWwGeDDIYCjx3kGjT4om2Vdr192WY=
+
+Name: icons/write_obj.gif
+SHA-256-Digest: FzBQ+kII9IMN3v2Yn1yYYs/dBFsIRdSQSWTqQXP7aUk=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$8.class
+SHA-256-Digest: zorR2eZsxcY37gPBaGN2ZT0rCW1eO9frtT2K6qqH4kU=
+
+Name: com/sap/bw/core/ui/internal/TransportSelectionUI.class
+SHA-256-Digest: IQC0ftF33LzkZEGgL5b0irOEdC76+EP4wJnD8v0CKVo=
+
+Name: com/sap/bw/core/ui/fieldassist2/IProposalApplyListener$Event.cla
+ ss
+SHA-256-Digest: jr3xfit+g/EdRpUk9GydWNWk+36ARER4XPCvjyr6NtU=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/MDInfoProviderProposalD
+ ialog$TransProvModeAction.class
+SHA-256-Digest: jwWFynaifBez93zzZ34wOgJrUj7Gwx0WEiCUU+lg5dU=
+
+Name: com/sap/bw/core/ui/dialogs/BwAndHANAObjectSelectionDialog$Builde
+ r.class
+SHA-256-Digest: l1JsXj9DhLbYHC1JmC+qL2Ev9LZ3akDg9YHedV1D+ME=
+
+Name: com/sap/bw/core/ui/wizard/BwProjectWizard.class
+SHA-256-Digest: 6tYtbrHseWh7lvVkkANkPD5ZfNI1zqfvv1/pq4u8Cqs=
+
+Name: com/sap/bw/core/ui/label/ITextModeListener.class
+SHA-256-Digest: NQ5n8bipgiNkzr9Bvr0stzQRTDXr91WDjBJGD/hKJ6g=
+
+Name: com/sap/bw/core/ui/help/BwHelp.class
+SHA-256-Digest: /37oO4YGDJMBeFmTkApMEBVFJyxnu3dFf+lIEqJMJUQ=
+
+Name: com/sap/bw/core/ui/label/LabelProviderUtil$ISearchStringProvider
+ Acceptor.class
+SHA-256-Digest: Ouh4rDCKgMGB+bp9Wygggf6bB3g+0I4wbR4+B4uwos4=
+
+Name: icons/red_nb.png
+SHA-256-Digest: zCsUglIkvjbn3M6qGo8ktrQKWg48d2RraflwQMswnIM=
+
+Name: icons/bwvar_le.png
+SHA-256-Digest: fMEJAGtPh99YwZlEBvxoboF6jIKXC3SzoUbZswb//Jk=
+
+Name: icons/blue_eq.png
+SHA-256-Digest: MF59kjCXngx2aF2ssgc+Rhz+/+NC3L4i0WKcWSsUC7o=
+
+Name: com/sap/bw/core/ui/open/JoinPartType.class
+SHA-256-Digest: zkupeUaSJ8QdzPEe7tnTnRTM2EBA7y3JLGvw02aAVpo=
+
+Name: icons/aie.png
+SHA-256-Digest: NCBlVz+obfB1F6bq/PQJfKjIgzC3DiscwJBoVSoYx/4=
+
+Name: icons/transferstructure.gif
+SHA-256-Digest: jFHRokFxuUBL8IyaxrjQvz6y/sy97P6/aCQnGJMTwgs=
+
+Name: com/sap/bw/core/ui/utils/InfoAreaUtil.class
+SHA-256-Digest: nbHiVs041edPPnFX6+MxnHWLmiV5ks3HnAmI8Rfg3lE=
+
+Name: icons/bwcopr.png
+SHA-256-Digest: UxhFaOEprhN3zbmBcrQ6eUX8z3DkpH3DfxbnLyJ9Sm4=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/DefaultProposalResult.c
+ lass
+SHA-256-Digest: lGJZKKj7pI9H05DfQXfQ1nAcB2Tm3K3uIHFZZfybOZs=
+
+Name: com/sap/bw/core/ui/wizard/ICheckFieldProvider.class
+SHA-256-Digest: 7YYDjWIzrwhLyj1qxVinHvmTMMphZqKODNgMwtD2hRo=
+
+Name: icons/bwcharacteristic_wizard.png
+SHA-256-Digest: k583EOxOZzcbS7x9YnkJdN9N6IiXkVDU7iTcIKg6nGE=
+
+Name: icons/sheet.png
+SHA-256-Digest: HtIr0t9nre5B6svnKrOTEIu08AmYMBD3xEb+nlfhd3c=
+
+Name: icons/default.png
+SHA-256-Digest: eDMb1gvKvFG4yguQ+i5Q2gSZzfDJ1Lq41NXeJx0ar+4=
+
+Name: com/sap/bw/core/ui/IDataTypeSectionContentComposite.class
+SHA-256-Digest: N3GJE5osm8lA6zMFbD0klBHMxaf8GNuK6NpXTE6umy4=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/BWPackageField.class
+SHA-256-Digest: WRfQmng3+Ka0N/lAQuqwzUJO9S1Ygwrlf7xHGIWRSlw=
+
+Name: icons/bwadso.png
+SHA-256-Digest: Q4ukrlVhDy8QNIrfHgMXZoiqC9aXoMwwaWlXi0h+cGU=
+
+Name: icons/ruleDirectAssignmentNoFrame.png
+SHA-256-Digest: XPrXVeozwdhZdVNShBfiBU18mpDwLU5beG+FAeH7drc=
+
+Name: com/sap/bw/core/ui/internal/BwPerspectiveFactory.class
+SHA-256-Digest: SbLsjlonVbpceo2edy7+wTqn8wmmsFy+mO1MjyZH5eo=
+
+Name: icons/delete.png
+SHA-256-Digest: ezxka5Lkmd+/AESXP+O5u8ZykdEnvRgaKrDdpzgkQIk=
+
+Name: com/sap/bw/core/ui/label/MoveTreeLabelProvider.class
+SHA-256-Digest: /DSUlnMyTzUY8dsXcGJA1w9CqOSgCehrVE2DNixEQT4=
+
+Name: icons/CheckOff.png
+SHA-256-Digest: u0u3oPWPX/Cgh5IyZwp7IOKFzWdGWb8aCGYFEp0hcM8=
+
+Name: icons/forward.png
+SHA-256-Digest: PWzs5ne0dY2W1DrhGpRKm/4sKWddcsamvP3FdEbnr7A=
+
+Name: com/sap/bw/core/ui/openurl/registration/WinRegistry.class
+SHA-256-Digest: IdRoESRnwYn8S6TcwqnbSEJFsMqjQ9xFnrtzrj20EHs=
+
+Name: com/sap/bw/core/ui/history/ShowInHistoryHandler.class
+SHA-256-Digest: NxpNXT1nWROa6ltNPUyv8OJi60UnTEPt+BQUDfzqYMw=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog$6.class
+SHA-256-Digest: 3whZJlry77RubLl+3sOK9/vEANb3YoHWbNEjYPqd5+M=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/GroupsProposalProvider$
+ 1.class
+SHA-256-Digest: qUXyy1V0y/9tj20G7863wof5bqisqCbyUxZBJBHBQ7Q=
+
+Name: icons/bwhybr.png
+SHA-256-Digest: P4+z/CM/QW+Y0UPSCuJYx4HaHFZxLGGDA2UgJMqrIKs=
+
+Name: icons/bwalvl_wizard.png
+SHA-256-Digest: EwW5gNze6HNXakEcepJm57Ty9k4GXfJs/yPEzZ0F6Jw=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/IProposalProvider2.clas
+ s
+SHA-256-Digest: O8f7zwJNIkpaWaNJlvqkPJMvRtXe0snMNf22KVF3GWU=
+
+Name: icons/ruleHanaRoutineFramed.png
+SHA-256-Digest: vQYa7hzCcO3fn3y0yJFqvrd55oZjeh7agEVojI4nCs0=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$9.class
+SHA-256-Digest: 4BlrIDDWUn6Vlp9G7N6MmV/dgYlL/UJhi5jDuhi5cQE=
+
+Name: icons/prefs.png
+SHA-256-Digest: HxCzq0Z++SAWlg5OzOZvOKJmC9/ltcqTPSA7OMn1unE=
+
+Name: icons/bwiobjhry.png
+SHA-256-Digest: VJ095360ZAjDMFXtiiWylrpadKtFLzHeOufHWLBAniI=
+
+Name: com/sap/bw/core/ui/wizard/IBwStandardTransportModeListener.class
+SHA-256-Digest: weHWw2tFnPSaQ+UDx7AKO+20nZ0yaQ0DDs941y1QIt0=
+
+Name: icons/ovl_bw.png
+SHA-256-Digest: 3l8SDfESwUCacn7+Xrmty/dfDIazojH3Kz1BBUfLCmg=
+
+Name: plugin_customization.ini
+SHA-256-Digest: bgZIaDViB4nPQ1ZhYwN3ceTGm/T7TYq5J/yKkl9cBT0=
+
+Name: icons/src_system_biw_own.png
+SHA-256-Digest: JdYcuw6EMfl0OiUAh9uikgu6yzXolRWmNqZtlHUtfzY=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog$7.class
+SHA-256-Digest: mH7u1m29ID9el/01qy31VN8Cf9IkTm5kvl4o0hP0wHo=
+
+Name: com/sap/bw/core/ui/prefs/BwPreferenceDefaults.class
+SHA-256-Digest: fzXmJ397qDmg7x6iGbhBsnjnS1r3euQ7D7P80QkNa7o=
+
+Name: icons/perform_check.gif
+SHA-256-Digest: DI+5LtWSaEZjQniimW3Y+KVaX3NWMhgSdWmAh3+bz9U=
+
+Name: icons/decoratorConversionNoFrame.png
+SHA-256-Digest: fz9yPZ/0d4b5AJ0ktD8SECRAwEweB/pbF4luHDB9yo8=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractSelectionDialog$1.class
+SHA-256-Digest: Dts1/o1CWw181ryL4GBtdGtT2e/A8Xi9WPGA8Ei25U8=
+
+Name: com/sap/bw/core/ui/prefs/BwCorePreferencePage$1.class
+SHA-256-Digest: bXQD1bFfmYkfGPRktKfRSQG4tZ0EILomFQvuBRQ3bhQ=
+
+Name: com/sap/bw/core/ui/fieldassist2/valuehelp2/ValueHelpResultProvid
+ er.class
+SHA-256-Digest: xXvvkD04hoJv1350F7XtRVFEq0I6oCf56VaAPvPw/1U=
+
+Name: icons/blue_nb.png
+SHA-256-Digest: TwIJp+eONbq1QmwYCK7RtDe6sbOs1MVhNlN2sgJfjW0=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/RemoteHierarchyClassExt
+ ernalCharacteristicsProposalProvider.class
+SHA-256-Digest: j/fU/2H9xs4xCSSzSFawC7KhmTi4SOHvLa9TWX7SK88=
+
+Name: icons/logoff.png
+SHA-256-Digest: WDgv2KZfgyar2ty+auHIvZRqXKt8FRKwFI2RtKKZtAM=
+
+Name: com/sap/bw/core/ui/utils/AbapClassNavigationAdapter.class
+SHA-256-Digest: 6R/hJZrdzkP9epIRgPPHjrLDQb9znDx4Q27o9uK0t+E=
+
+Name: com/sap/bw/core/ui/listener/KeyListenerAdapter.class
+SHA-256-Digest: 14zJjcRMRil5JK2dLj+v7Wns0AigPpYw+d3wUA3IeLI=
+
+Name: com/sap/bw/core/ui/wizard/BwProjectWizard$1.class
+SHA-256-Digest: WP/b222gZ7Xml2QhHgRBgy+eZ5vQUpHlKuRv+VqBq38=
+
+Name: com/sap/bw/core/ui/prefs/BwCorePreferencePage$2.class
+SHA-256-Digest: a+vVfZ8yT4fpN01/SH0Hv0h02EHHtBAp4QMIFnLJRyI=
+
+Name: icons/bwarea.png
+SHA-256-Digest: K266rw79HUafwS4x41GIFral/vP5kZSflxPVv5J1iXA=
+
+Name: icons/bwstructure_wizard.png
+SHA-256-Digest: 9dXsIGQMZk0+IYdcXA3UwRqpulmGId7glUtRxZ7DdzA=
+
+Name: com/sap/bw/core/ui/wizard/SearchListComposite$1.class
+SHA-256-Digest: ntbkkabbY6pWaxV68G7R4dAr++QAPDH5mz4DAydo1EM=
+
+Name: icons/bwarea_wizard.png
+SHA-256-Digest: Bc0yajoJj1KiP4NirmdTzjRP2vq2WySyASz6AzZNkpM=
+
+Name: icons/s_b_summ.gif
+SHA-256-Digest: UGieGJ2AOayknQglvMqAOpYe5f3ITqPbhRGo/BZIq9c=
+
+Name: com/sap/bw/core/ui/open/HanaViewTypes.class
+SHA-256-Digest: k6DJEzjzKRnCvrxe1tb7ETPfUCZrV4NWsrw9rxON9S0=
+
+Name: icons/not_assigned.png
+SHA-256-Digest: s/FtRdpbmYrFUpftCnpLUHjbv12EBb74tJJjJ7o4Z3k=
+
+Name: icons/ovl_deleted.png
+SHA-256-Digest: /NnaTQ/xi5OBMn6FtMJLptVKOixrAz0CMMuNxDBsNE4=
+
+Name: icons/red_eq.png
+SHA-256-Digest: NN0TLi1Mglw980/exrdhRHpV9uon3FSIBEzasn+Hynk=
+
+Name: icons/CheckOn.png
+SHA-256-Digest: rcknJ9z8dlbqQVCa1h6fARR2OE7fmdfigI8z43Du/0k=
+
+Name: icons/Highlight.png
+SHA-256-Digest: 8+8L4vMa2nCG/QksiQVs3ghQZSAC0d4n5aR7mReptis=
+
+Name: com/sap/bw/core/ui/wizard/SearchListComposite$ViewerEntry.class
+SHA-256-Digest: xL5aHo7cZbTs12JeBCmpMY2Z+62SzvE7cW4kSzyLaYk=
+
+Name: icons/write_obj_disabled.gif
+SHA-256-Digest: QVtodx6iuUINDKEKNOjnumsMz/By5irRMIQ6wpevi7A=
+
+Name: com/sap/bw/core/ui/open/ListComparator.class
+SHA-256-Digest: HLA42ctu/+8DP6Zy1dnin2r5Ya2IUf5Nuu0tlabiLSA=
+
+Name: icons/arrow.png
+SHA-256-Digest: 0JnGNXhNrtkpejMBYMM/YSNus/a3Q92KtMbFbRQhiJY=
+
+Name: com/sap/bw/core/ui/providers/RepresentationQueryExecutionFieldLa
+ belProvider.class
+SHA-256-Digest: GVA5nFTFF/JP1ETbBoiY4XG/3yN1qADajJ0QQmH7gOk=
+
+Name: icons/bwvar_ge.png
+SHA-256-Digest: +lvPbYoBOzDZBJ2w+Hq5ck+pk//UHPchHJcjGb4ZYYs=
+
+Name: icons/app_big.png
+SHA-256-Digest: GIyglZpTiJaOeAcpZgr3SePx23a3UpXdi8O4h1X0tcE=
+
+Name: icons/bwfilter.png
+SHA-256-Digest: VYAn83coeT4KmOmmlBpNEhE06f1r+kvzzorlyybTPNQ=
+
+Name: icons/rows.png
+SHA-256-Digest: SERr75saMW+4cXRql5KmrtC+X4uoI43iN8bbuch97WM=
+
+Name: icons/logo.png
+SHA-256-Digest: 1TiIYg75tlWwM+S/Co4gv+E+IFEKAj5ZJXNK9scyYZo=
+
+Name: com/sap/bw/core/ui/fieldassist2/ParameterCallBacks$3.class
+SHA-256-Digest: ICFG1GslfF//IJ1/80N8AnMC8uM2CXIQLSJP5MeoSK8=
+
+Name: com/sap/bw/core/ui/fieldassist/ICommonField.class
+SHA-256-Digest: WMQcyDW7uIZF4jVFeIDFZAWNflfIN1GEqT8ewTcRrLE=
+
+Name: icons/excel_workbook.png
+SHA-256-Digest: PjkNj/lCyIHF8xAdknYwTHCRENunX8wW4EA25zneMO4=
+
+Name: icons/ruleAbapRoutineFramed.png
+SHA-256-Digest: xV+/vHKSXThvLd7r8goRxc4cGor4Gx8spYfW46Pnro0=
+
+Name: com/sap/bw/core/ui/wizard/PartProviderDetails.class
+SHA-256-Digest: 4C263tEAaj1ELis7lLjvhdLhCOyk1yaWKMQUCcign+Y=
+
+Name: com/sap/bw/core/ui/open/HanaLabelProvider.class
+SHA-256-Digest: 9AAFtfdp33zuI/DjTefYuWeRn4NHynccM3rYBQ+zVNo=
+
+Name: com/sap/bw/core/ui/formula/SyntaxPrefPageCompliantRuntimeModule$
+ DummyAntlrTokenFileProvider.class
+SHA-256-Digest: 93qnYtfUvZfbVG654Vnz+t9m+9YvlR/ejmIAKxfScMk=
+
+Name: com/sap/bw/core/ui/providers/DecimalPlacesFieldLabelProvider.cla
+ ss
+SHA-256-Digest: 9tb47qdVfPvgLlNdq/sqYZ9QnBAnHlasrrZz1lu/bto=
+
+Name: icons/dtpaDraft.png
+SHA-256-Digest: Q0WhlpxSHRTU0JxVgUpQ+RaOMdGmHwnjUOkqhv3Ptnw=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/WizardProposalProvider$
+ 2.class
+SHA-256-Digest: aYwsgNrc2quvg5l0C160wxogZUv9LVcAVvzKVJ45D2E=
+
+Name: icons/new_wizard.png
+SHA-256-Digest: CZFHQSsM6IGF4AAsHGaZGRqzMXQkEELK3H3duUcfX9Q=
+
+Name: icons/personal_set.png
+SHA-256-Digest: bVxV9FAZbvjjoQ7ITIBQWFMYFO8/V7lsmcKnpjKIDgY=
+
+Name: com/sap/bw/core/ui/wizard/ModificationHandler.class
+SHA-256-Digest: RHyxQBB/3xvgbgg7zUdNOyvAMl0hvat2T0JeBK4BciQ=
+
+Name: com/sap/bw/core/ui/formula/SyntaxPrefPageCompliantRuntimeModule.
+ class
+SHA-256-Digest: Dq6Ce8j+WoaSVahCXfFy/1aL5yugeSqGHlLs/gjPHH0=
+
+Name: com/sap/bw/core/ui/internal/BwToolsUiStartUp$1.class
+SHA-256-Digest: ziWkK7ZQ63KfVO82PSqNJp0ngEJrPxJ8m6DN73C3hu8=
+
+Name: intro/css/overview.css
+SHA-256-Digest: SzMRYP/N6JsqUri8glQtdMjxmiduMcfFpQBLqSv51F8=
+
+Name: com/sap/bw/core/ui/dialogs/BwAndHANAObjectSelectionDialog$1.clas
+ s
+SHA-256-Digest: g2C2sViQ/ExOp8EAziOuCtCJPXWTBifKrSA8HZJdCTQ=
+
+Name: com/sap/bw/core/ui/wizard/WizardProblemsStack.class
+SHA-256-Digest: CUs8bJyyrrBfhvmrBMyefQNPXT+O/cDcJj8EGI3ZfPI=
+
+Name: icons/Error.gif
+SHA-256-Digest: XbwssWxQLiJfYG8if6OcF2slQYahFCJthOnzakpuQ2I=
+
+Name: icons/InsertColumnLeft.png
+SHA-256-Digest: rzn+4ncwOnzR3gv6R1GC0F+oBhYP6xarnSpcSa2xjPA=
+
+Name: icons/bwmeasure_wizard.png
+SHA-256-Digest: TLtfD7T3wGLy55OIGrYEj70QFrIWsR9RUusjkZSwMI4=
+
+Name: com/sap/bw/core/ui/openurl/registration/WinRegistry$RegistryRoot
+ Key.class
+SHA-256-Digest: K+iV/8kog20E8OkllOYFDGF6tCGsKSgzbQQdZKqtscY=
+
+Name: com/sap/bw/core/ui/utils/MasterDataReadHierarchyClassCapabilitie
+ s.class
+SHA-256-Digest: uO4EvSzPqXjg2n5pyh8BjGAyOQIHD6tLdX5hK3G0Yh0=
+
+Name: com/sap/bw/core/ui/prefs/CompositeProviderPreferencePage.class
+SHA-256-Digest: LSZtZq9x1UxrGJDgpVGbu/UOuOBnHZ9TovVf6y8wXDU=
+
+Name: com/sap/bw/core/ui/controller/InfoProviderRuntimePropertiesContr
+ oller.class
+SHA-256-Digest: 9H7sSqzq58HvBTpLr7ElRS8op9zeb8TVUiMW6wFiEDE=
+
+Name: com/sap/bw/core/ui/editsupp/ISearchListCallback.class
+SHA-256-Digest: WE4B7tCVYm8sFsoJiMENtxfOkC97LlLiQtCkgOx9JZc=
+
+Name: icons/bwstructure_reused.png
+SHA-256-Digest: lRoj8d0JFOFzvXgNwdVYg2c6HRwaFe8FthZN/GgSp3o=
+
+Name: icons/arrowup.png
+SHA-256-Digest: m3oP1o7GM9bnRxxOSffXPMul2iQ4aPu2HE8N9XE+omI=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$10.class
+SHA-256-Digest: UX4pOJGl4D12E6gCJ1f49MYsyc898CZmsIAXSxJxr0o=
+
+Name: com/sap/bw/core/ui/dialogs/model/DimensionUiElementList.class
+SHA-256-Digest: m8IIyTXrpZukeUDeBZh0PlX0SXfrPHF/fAvlkqfNgVg=
+
+Name: icons/ledgreen.png
+SHA-256-Digest: ZAKiR9FpxAxZ72bPMTbxtcb2syDv5Q2aetchdFK71uU=
+
+Name: icons/add_condition.png
+SHA-256-Digest: hA2+MbEQLUyEzKpAFTV3386XKqa9PyxTqetRJTAocwU=
+
+Name: icons/blue_ge.png
+SHA-256-Digest: 3TzFAJty223dICQ0lIm59ERdYKOtrjOGXkMOG2G0FJk=
+
+Name: icons/bwmodel_small.png
+SHA-256-Digest: 0KcJoGAlTD9R76oyWEn0vJASDPUIrc5zJgc8YUw+Gfo=
+
+Name: icons/where_used.png
+SHA-256-Digest: PKCMvwukw8Ul96CVHLnq1xdSHvnBrI9oPaJny33AzCU=
+
+Name: icons/bwxxliobj_wizard.png
+SHA-256-Digest: xngUIKZeIP3iFCucJudEECF8RltKyBmrd7EQVBv/DZI=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/MDInfoProviderProposalP
+ rovider.class
+SHA-256-Digest: kA+o1mDMcTMgt3VlBFwK610HLPisF7teWiJe8usLrC4=
+
+Name: icons/bwvar_gt.png
+SHA-256-Digest: SEhzNHKF38nleUQ8EYYrHtGovjdJQadX8SmSHKVo18E=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/MDTransProviderProposal
+ Provider.class
+SHA-256-Digest: X5J+7k7HjaevyrPcFP1MFCF9HiKgPFOYSZPxyHlIyoo=
+
+Name: icons/data_source.png
+SHA-256-Digest: h25UlK9h7KSYM9q75a2QA26MfGcx31U9yOr+hH8+tfk=
+
+Name: icons/StatusInactive.gif
+SHA-256-Digest: bNNcMeAYhG0LxJX3+gt5DgvS08Lf7AlGtFpuXIpvygY=
+
+Name: icons/filterpanel.png
+SHA-256-Digest: XwvV0vZvvy+YpT5pOvo1UoeaOyWg1F9d437zeHsquPs=
+
+Name: icons/edit.png
+SHA-256-Digest: PvHCCRJZX8UejIBvLZynl0kkRm9GDWlnQqcqVRE7CrY=
+
+Name: com/sap/bw/core/ui/utils/ExceptionUtil.class
+SHA-256-Digest: RS/PlTz1t7+s5sSMQxBJ9ebfNLLljdheQlAnIO9s3rc=
+
+Name: icons/icon_bw_data_marts.gif
+SHA-256-Digest: p5QjziwZSoCibId4ZFdcu9zAX8RceS9CeMHZYv+UFxA=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/AssociationComposite.cla
+ ss
+SHA-256-Digest: b8D8hzPkD5J1vPnvBiLd2LOurLkSUkDAhOOhM1qGJD0=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/BWPackageField$1.class
+SHA-256-Digest: gcXCDxiu7Cvar34KGnEh3yYlaL1wZHwW3M5soqL12UE=
+
+Name: com/sap/bw/core/ui/utils/AccessibilityUtil$2.class
+SHA-256-Digest: diUKY8vwB63zqL/rRmW5zEEV70SlqPBLRRSlP33Ocgo=
+
+Name: com/sap/bw/core/ui/openurl/registration/BwmtHandlerPreferencePag
+ eSection.class
+SHA-256-Digest: QSNoKbzFOPOHqBigrZ5uwR5BgwvSxtowb9h7ZabePT8=
+
+Name: com/sap/bw/core/ui/utils/CommonModelModify.class
+SHA-256-Digest: ftzz4Z5vYfeG4rqZteXG5TrJco8OPclRJYLZ0C3Wi5Y=
+
+Name: icons/role.png
+SHA-256-Digest: oz6wMEuRTuHFulNAa9JUUXZaRkkP8L9WNr0hRUqQDBU=
+
+Name: icons/filter.png
+SHA-256-Digest: kEPEb2nnVb1ZNV0pYQDyZiqstj9aBdfAImN+9q6lGnM=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/AbstractStandardProposa
+ lProvider.class
+SHA-256-Digest: oa9w9uqdLv9NWDq1e2mnkfJEYMEY+L16H4KUqYUO7NE=
+
+Name: com/sap/bw/core/ui/formula/CommonFormulaPreferenceStoreAccessor.
+ class
+SHA-256-Digest: AN6dXskCs7ok3ScH3LS5KM4tyCVbFVw4tRWNW7IKtMo=
+
+Name: com/sap/bw/core/ui/label/BwDecoratingLabelProvider.class
+SHA-256-Digest: xB0nmFesaRwoiMeAKbu7xiEpjuiNUuLLvyJf0c9LLRk=
+
+Name: com/sap/bw/core/ui/wizard/WizardListViewer$1.class
+SHA-256-Digest: CddwU7Usa1G4SNs5CcSGVydF3nfGN90hZcsOmIPgtCU=
+
+Name: com/sap/bw/core/ui/wizard/WizardListViewer$ColumnViewerComparato
+ r.class
+SHA-256-Digest: OzHwT2rukmD4ManA5BANwc+1kXO4hRcb5YHYH/Ubsl8=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/CharacteristicValuesPro
+ posalProvider.class
+SHA-256-Digest: DfzQfEtaVLSWR+yTMzEBo6YjuYg1emQ8NCISqH5qhQ8=
+
+Name: com/sap/bw/core/ui/event/GuiEventHandler.class
+SHA-256-Digest: jZ5zSv7ayYf5SZrZlz4INuQCOId6kbSFz8MWeUnq8VM=
+
+Name: com/sap/bw/core/ui/testaccess/BwPreferencesStub.class
+SHA-256-Digest: zWCiQZ5qa+l3QAe4oj9IDHIp4WPXVjsm1UFrVbsJXyw=
+
+Name: icons/trashcan.gif
+SHA-256-Digest: KK3dh7nyrst4MToxElw3V5QTSNfa3urI8Vn1ifhER4E=
+
+Name: com/sap/bw/core/ui/history/BwHistoryPageSourceAdapterFactory.cla
+ ss
+SHA-256-Digest: m1/AkW0IHvj26f3l6cw+2g8bV0j79XOuZ3Pz7sNtFBo=
+
+Name: com/sap/bw/core/ui/label/TextModeDependentLabelProvider2.class
+SHA-256-Digest: Plz09JJ6vvkAsSgCHjOOYf3lS8uSmMoBuN/9fIyRtAQ=
+
+Name: icons/display.png
+SHA-256-Digest: B1X4hxUnWRCoduZB2y33KyDOnZ1DEI3zXxaeuuueBOI=
+
+Name: com/sap/bw/core/ui/formula/CommonFormulaHighlightingConfiguratio
+ n.class
+SHA-256-Digest: rSuEYF781Pgp9HsGjp3ZATN/pU3Azdb3UKpKOVqenXc=
+
+Name: com/sap/bw/core/ui/prefs/IPrefsStoreSync$Direction.class
+SHA-256-Digest: uwjKB7O70bqKdFWBrH07Q8LAswX3j6YWz/TeMHOJl0E=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/CharacteristicProposalP
+ rovider.class
+SHA-256-Digest: hgisLKysCWbq7v0K1f4YQ0pelZY228zlGH1hf/aNRvI=
+
+Name: com/sap/bw/core/ui/wizard/SearchListComposite$4.class
+SHA-256-Digest: CPj8QpGbpEvKA1mK5LHqawHpCRJD+A27VSDU6dPvrys=
+
+Name: icons/info_package.png
+SHA-256-Digest: tGG6t+7ySLN8ndjKSOTjrzz+T4ytEMy8pZ3QxB1s4vE=
+
+Name: com/sap/bw/core/ui/fieldassist2/valuehelp2/ValueHelpLabelProvide
+ r.class
+SHA-256-Digest: 8RmsA7NJsjZ8WMjy/TfHI5W4EhCmrO/2LwVaAWpGmMg=
+
+Name: icons/ovl_added.png
+SHA-256-Digest: Vo4wbbSarreU5ouJMJFhCZ5oEfPpTB+jt06fy6PC16U=
+
+Name: icons/bwmember.png
+SHA-256-Digest: lngayV4ddTRwNS4WvnMPAuZwW+570nWxthsfqQ7aTOM=
+
+Name: com/sap/bw/core/ui/IEditorService.class
+SHA-256-Digest: XF2gpBf/IPHr/PEo1xUp8h7vjvPGacoAdeaR/Vf4Kgk=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/WizardProposalProvider.
+ class
+SHA-256-Digest: ENNNnjLBqVpT8dmD2TfIuBhZAa0fXxeNMVY0cDlkYdI=
+
+Name: icons/propose_join.png
+SHA-256-Digest: qeDZnHZRpejQZLCz5Ov2bWMP8Oj0SyA+ldDZtfMsVfg=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/BWProjectProposalProvid
+ er$ProposalComparator.class
+SHA-256-Digest: ai4fkUyPLvI2I2VI1Dv7X5dVycslCxDU19/vs/K5fm8=
+
+Name: icons/ovl_time_ctrl.png
+SHA-256-Digest: 7j9b2RM1dzK35MzUt5YPLDsWIpgtz67RQg7q12Ucq7k=
+
+Name: icons/src_system_by_design.png
+SHA-256-Digest: 3pcXKCYfe0bRF8V9fHx1j00qXGHR6KTLTvEfIyli/Sc=
+
+Name: icons/control_flow.png
+SHA-256-Digest: mWoAe9KJHV3uFo3I14k6DvynKeExs5CcQ1nwOQkBIVk=
+
+Name: com/sap/bw/core/ui/dialogs/ValueHelpDialog$1.class
+SHA-256-Digest: b71ync2/RemYH0cNoAAZwWiZDaDnl14oEjrxT5f/aYY=
+
+Name: com/sap/bw/core/ui/history/BwHistoryPage.class
+SHA-256-Digest: CuLXNPOULK3ggPpqtYQuRHpEG2+Ru4AsXk1VpnxPOIQ=
+
+Name: com/sap/bw/core/ui/label/LabelProviderUtil$1.class
+SHA-256-Digest: sqmSiB1YyuWq6ToSjNbKzfdNb0+8hI/kQC+os4Uz4Mg=
+
+Name: com/sap/bw/core/ui/prefs/Semantic.class
+SHA-256-Digest: lhiw4MUgzyFcCCufAyRUQb6P1trHeT8XyLNxN1MJQyM=
+
+Name: com/sap/bw/core/ui/prefs/IPrefsStoreSync.class
+SHA-256-Digest: Lhnhg2SXi1YgmyKsoudZ6Cdn4yBbb7w1RX64F/+sZxA=
+
+Name: icons/ruleFormulaNoFrame.png
+SHA-256-Digest: bhhFu8J7wfrxItAvDNvyH5jQFXeIDWKsAZO9x+Yex14=
+
+Name: com/sap/bw/core/ui/ModificationFieldHandler.class
+SHA-256-Digest: s65ZlAD74/HeNJ1Nj/05CJJAIQo6s7JbOxigY5DlkzM=
+
+Name: icons/bwhaap.png
+SHA-256-Digest: Bf24KftH4MWbRMtdYzqi5bUgJrQcQNuFUjc8L5lgY/w=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/PlanableInfoproviderPro
+ posalProvider.class
+SHA-256-Digest: VdWdbqegz2PJHYc4D/dcOJGoleU3nSJB7AHc9K/dEnQ=
+
+Name: icons/transformationDraft.png
+SHA-256-Digest: qaZYql3IzOQ6gzwi/2wDI5z8hvTuF8DT4rODvwU56KI=
+
+Name: com/sap/bw/core/ui/dialogs/BwAndHANAObjectSelectionDialog$4.clas
+ s
+SHA-256-Digest: pEQcIVOklu1q/5HnFlRguEBNbrtGz77AY1R6q39J8YE=
+
+Name: icons/3xinfosource.png
+SHA-256-Digest: nuVq89+g0W4jJtvIIJOKWnT0Hg++q0Rcqtdb4f1/Olg=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/BWCopyFromField.class
+SHA-256-Digest: NBw8zrp6OqEm2DomKeTrDM488+l6oSBmJQgMAMKvrns=
+
+Name: com/sap/bw/core/ui/localization/messages_en.properties
+SHA-256-Digest: qMLi/W3CONAmcjd9HGJyD7wgRIAbun/3TDIxRqwNgFQ=
+
+Name: com/sap/bw/core/ui/validators/DimensionDisplayNameValidator.clas
+ s
+SHA-256-Digest: v7Mi44c+0d2nI+G9ZNBT9A6dhj+Ky4+X4Y2ywcmKrjs=
+
+Name: com/sap/bw/core/ui/fieldassist2/ParameterCallBacks.class
+SHA-256-Digest: TZ/FVBcNl96tx7w1NlblU/SOF4ImBAqq99zjM7U2XRE=
+
+Name: com/sap/bw/core/ui/prefs/BwPreferenceConstants.class
+SHA-256-Digest: oFRsH1UQHF40ODFKSolGOHfktt8Nx0bNBNwhZ0J6a+Y=
+
+Name: icons/connectedOff.png
+SHA-256-Digest: PcregMe8ZYB3tgJ/troRVzUr4q9fix6R3W1EhoYF6vc=
+
+Name: com/sap/bw/core/ui/fieldassist/EditField.class
+SHA-256-Digest: 7hh2ZI9s+MW/M7dzCle+Cajtz27SbVzTnO5YkJNS3cc=
+
+Name: icons/blue_ne.png
+SHA-256-Digest: SGjHNGTJMPt5kWtEZzx/hIZC3fN+1wlaUM0a4XSWaWQ=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/HANAEntityProposalProvi
+ der.class
+SHA-256-Digest: mYjVGb5B7Zcem6j/dVD69M0bDUDZqQTDZv9uY9/j230=
+
+Name: icons/constant.png
+SHA-256-Digest: uWC6Twk3fGcWVK5WPoGnlIwm/2cd7ayCOyD62OHDDPo=
+
+Name: icons/Timesplit.png
+SHA-256-Digest: gI5jye+kRloruo7j4iONDSzwr9IVcibKnZC4Se8yi6Q=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog$3.class
+SHA-256-Digest: xjsXKePLIvw4BP+iH1XQAbSeWbA6IygwHDFsYEnD+8U=
+
+Name: com/sap/bw/core/ui/utils/WorkbenchUtil.class
+SHA-256-Digest: ZbdZiffSDu7dA00U6sUGKCh7/eplg9GQ0VjuG6PMSi0=
+
+Name: com/sap/bw/core/ui/dialogs/BwAndHANAObjectSelectionDialog$3.clas
+ s
+SHA-256-Digest: prO+xEsVUc2p3P61PmnjV72ek7nfZnNS9QoNjmrlB+o=
+
+Name: com/sap/bw/core/ui/wizard/WizardBaseDetails.class
+SHA-256-Digest: nNLZB39aUH1F2meQgjjoJgJdgyC6Pl8qTbOKjmXi3AQ=
+
+Name: icons/ruleHanaRoutineNoFrame.png
+SHA-256-Digest: ks1F8mWSRA/8u4FYMQaW3PgHm84GNcgzTMe2xs5TprQ=
+
+Name: com/sap/bw/core/ui/fieldassist2/IProposalApplyListener.class
+SHA-256-Digest: Gz29kQHI0D9VoRiMAyZW59W2eTdENRaqwvS7VMFExqc=
+
+Name: com/sap/bw/core/ui/formula/FormulaOperandSelector$1.class
+SHA-256-Digest: YSNEseIVOq3/gr9v4iCLJvnReyLr1CA5S/GLSOQFR2Q=
+
+Name: icons/report_to_report.png
+SHA-256-Digest: F46asKi9DMQP+HJTmqQ+EwioiJ4ea5aKCY2gQOwATLM=
+
+Name: com/sap/bw/core/ui/ConnectivityErrorHandler.class
+SHA-256-Digest: UYgah9LtkRBvzgqGtf3mj63J5VKkp4oNI851aWR/T7I=
+
+Name: com/sap/bw/core/ui/fieldassist2/IFilterDialogProvider.class
+SHA-256-Digest: SCJhUZKSiNoFk+X2DWxFgRvb3hvfrVc9TDXgstypWqk=
+
+Name: icons/view.png
+SHA-256-Digest: y9KxfymG6e8Z2Ng+cFNE4T7qafvG3ocCsbyB301D/uo=
+
+Name: icons/bwiset.png
+SHA-256-Digest: ynoERcJ2Py+GM0sK5jIsICeTn0lTJUrZWCQXOckjEzU=
+
+Name: icons/bwcalc_wizard.png
+SHA-256-Digest: t/LV9FgrVR51czJR5j7xL7aJFruGYGhT/DYkLfgOoAI=
+
+Name: icons/activate_inactive.gif
+SHA-256-Digest: p8y+s3BArHFvkBDJzXxI1Q0M2QyWZSAJbRnR40EJJxc=
+
+Name: com/sap/bw/core/ui/fieldassist2/IProposalValueProvider.class
+SHA-256-Digest: bUiUA8iYnlVLUrO24epdx5vvlS1raKPDjJ+I1n7K6AM=
+
+Name: com/sap/bw/core/ui/wizard/SearchListComposite$DetailsLabel.class
+SHA-256-Digest: pd0597FjHz3RxehadUBDpV+vKsEfx3DbCtDPFTwGxao=
+
+Name: com/sap/bw/core/ui/label/LabelProviderUtil$2.class
+SHA-256-Digest: cLAuPF4Yp0o68Ijoy6dtlyjl940yqYm9Xia2ROXkJmo=
+
+Name: icons/src_system_biw_gen.png
+SHA-256-Digest: F8eDbyON/gty32xHHUh0Qp4uqOQ3YOlPjcz6t0dAMPI=
+
+Name: com/sap/bw/core/ui/controls/KeyfigurePropertiesSectionContentCom
+ posite.class
+SHA-256-Digest: 1PCohiuDl07xhIo8NcY+pWXgl/ZPhfSig2atj8+i5SY=
+
+Name: com/sap/bw/core/ui/providers/DigitsDisplayFieldLabelProvider.cla
+ ss
+SHA-256-Digest: mjsMKAHlBkvf3ue+8Mkp+lSjxXai+2f6CYMEStLSt+8=
+
+Name: icons/warning.png
+SHA-256-Digest: 0JZleSJEt5VPdNihjXvXrCdicrnwfWFMYdk2eYZSHOA=
+
+Name: com/sap/bw/core/ui/ext/AbstractWizardService.class
+SHA-256-Digest: kr2t7a0fV1ukztmchYsIA5iMM/mAiF1RgSm+Y+QZEr8=
+
+Name: OSGI-INF/l10n/bundle_de.properties
+SHA-256-Digest: jYpiPWBBt2zooWQYlGyGXn0yVFWbZUT2fUQ53E53tOs=
+
+Name: com/sap/bw/core/ui/editsupp/IModifyCallback.class
+SHA-256-Digest: CbMVAezfiGfmZSDG3iJI7VABSiL7nGXyzgEDWgZRPZU=
+
+Name: com/sap/bw/core/ui/openurl/OpenMailDialogHandler.class
+SHA-256-Digest: a9ZtyzYkMPAX+laVVPvPUVfeJ1vVKAfv6EbCcbqy0f0=
+
+Name: icons/web_document.png
+SHA-256-Digest: A63XnRu8970ZiIr5v2yrZB1GZpYSEhsMelTw/j8783w=
+
+Name: icons/bwtransprov.png
+SHA-256-Digest: EZwusq/IotPU7XqtJiAAa/zE/Z9VAgIDvoI0c341cW4=
+
+Name: com/sap/bw/core/ui/providers/AssociationObjectTypeFieldLabelProv
+ ider.class
+SHA-256-Digest: 8d+dQl5GVwoUnP3/0Ys/scrvmiGLEApUm4KLCzlv3OY=
+
+Name: icons/bwvar.png
+SHA-256-Digest: 7MOi8ty7uYJDTc823Fh4hfEmXEkkV581FwPSsFlA96U=
+
+Name: icons/Boolean.png
+SHA-256-Digest: BJ8eAe8Tb+XZgur7/IY3+kB2dJhQxzQPLLo+KvMjkgA=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: kQz58FL07ToI0IdmFzsPl36CVL1WShCn+eqoJK01I7Q=
+
+Name: com/sap/bw/core/ui/fieldassist/AbstractContentAssist$1.class
+SHA-256-Digest: X2SO18kHqKSIk9VRr+ayQkePBgfGZynfTCt/V2VNgsk=
+
+Name: icons/folder.png
+SHA-256-Digest: wni6sDAmJVnEihRtLELUPt6l0tbn1Brdhy6LZH9AM6k=
+
+Name: com/sap/bw/core/ui/contentassist/TextField.class
+SHA-256-Digest: neMD1C4mLS/4X4dBGeTFuT3dBKN7mgE5SH56FQ1lIx0=
+
+Name: icons/template_object.png
+SHA-256-Digest: XP0U2V1vmTJCcXIclH1xbCmSZ3D5uPSOYekqKSGUoU0=
+
+Name: com/sap/bw/core/ui/history/BwHistoryPageSource.class
+SHA-256-Digest: RLosqbu7WFkZaFKjsn9UkoK9hLEObZxxmun2TaW1XFA=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog$1.class
+SHA-256-Digest: 04Od8beLlzErJPSHqhfTLDrEu2qFre7S4cyXhQh5Pn0=
+
+Name: icons/ovl_wizard.png
+SHA-256-Digest: knpZiPiAT17NOcHUcp3RJBIOunLcXOFbQ42vDciBNI4=
+
+Name: com/sap/bw/core/ui/IconForStatus.class
+SHA-256-Digest: +xTFY5bawAgAxskk4HOsL5tMakgs76CLqCx7zVLA/Bo=
+
+Name: icons/app_med.png
+SHA-256-Digest: ljRvKY4AErJ0XTGA+Drhxzfy7F3A+32Dnr37iCm9rfk=
+
+Name: com/sap/bw/core/ui/dialogs/ValueHelpDialog$3.class
+SHA-256-Digest: iiw343wc7TUuDRJuIPQWcBRMcepPb0+fDm3BheRnDy0=
+
+Name: com/sap/bw/core/ui/open/DetailsLabelProvider.class
+SHA-256-Digest: d/v+l2fa+ThrxOOm1Hz7QLAmBn6gLCGntinNuGkWxoE=
+
+Name: com/sap/bw/core/ui/fieldassist/EditFieldFactory.class
+SHA-256-Digest: fk1huyYeRl0c7rUCRQvWl9HrsRecFCVGr530JSxgd60=
+
+Name: com/sap/bw/core/ui/dialogs/ValueHelpDialog$ValueHelpFilter.class
+SHA-256-Digest: NypnG31NzQthh4OeAiAGJ7q3KN4Ucu8I4Fo8iaNGRp8=
+
+Name: icons/template.gif
+SHA-256-Digest: wleQisBA9QHLYuOMi9P63OyGoLeBkf+L30TlgeAmY8Y=
+
+Name: com/sap/bw/core/ui/wizard/WizardBaseDetails$1.class
+SHA-256-Digest: W18As8PKWKOFgG84+OLlnBvt+fP1azjda6DXbEi2XGg=
+
+Name: icons/src_system_odp.png
+SHA-256-Digest: W3ESr+iiRpR92U0ULmauqzsZdq/WBWzdYLjBPdKHDvg=
+
+Name: icons/check.png
+SHA-256-Digest: teBs5G9eFyOgk74594ldfEAALAl+Ovb31wOZXVYZnPo=
+
+Name: com/sap/bw/core/ui/fieldassist/AbstractContentAssist$2.class
+SHA-256-Digest: 8K1vIZ5hxuwbndratwtQd4ZbHcYaKhbV7qcHujsgARg=
+
+Name: icons/decoratorMinimumNoFrame.png
+SHA-256-Digest: Ouns3K+04+PzV0NPDpN2urvV7gRGGaFpvm4/RpcodrY=
+
+Name: com/sap/bw/core/ui/dialogs/ValueHelpDialog$2.class
+SHA-256-Digest: 2E1z27GcAIJgG2q5Z/VnF2wN6Uv8Xk8wNjUTCn6qcI8=
+
+Name: icons/bwvar_excl.png
+SHA-256-Digest: EIpaj8hDbH+PksAm+wqdqqarJhBTSROVk5maYeB1WsE=
+
+Name: com/sap/bw/core/ui/Activator$BWObjectLifeListener.class
+SHA-256-Digest: HJkSIsP9KC3RTyyKlOOqt447rm/wsTkzhewZw9hqpvE=
+
+Name: icons/unlocked.png
+SHA-256-Digest: avUmsTwxHFV/6zZg3hGcJxh/wJtSAmDeSuYJMgpFLtc=
+
+Name: icons/save.png
+SHA-256-Digest: jnImVSYYy0rkrgtwHCIUPjLsjFo3sW2zyA3rmKWqneE=
+
+Name: com/sap/bw/core/ui/providers/DataTypeFieldLabelProvider.class
+SHA-256-Digest: cwz5ZuyiclxMpmv6JTgDnoqqDKt7zYb6KR4vJEu/IHo=
+
+Name: icons/bwmeascatalog.png
+SHA-256-Digest: ozSzT6jBrYtM476TPTB3oGgD7Ha/Zzyvi3DQqtolxbg=
+
+Name: icons/object.png
+SHA-256-Digest: kWBlqBpd26gNTQXDUnwaORVAXZ7oi87aEPFLDdm3o0U=
+
+Name: icons/bwiobject.png
+SHA-256-Digest: qryy3fLfvepno6BNm2TELdGbJy8QHNwLD100Pm3KbbY=
+
+Name: com/sap/bw/core/ui/wizard/ICopyFromTemplateListener.class
+SHA-256-Digest: EwzjEeTXJPvJftVsesQXGmgUXNh4w1/uHlERaDeyOvA=
+
+Name: com/sap/bw/core/ui/history/BwHistoryPage$BwFileRevisionLabelProv
+ ider.class
+SHA-256-Digest: OAcol09SgJ2fAX/fPlWxNHvd7urOJ+iwyD9n5CFZJ5A=
+
+Name: com/sap/bw/core/ui/internal/BwToolsUiStartUp$2.class
+SHA-256-Digest: YtNAd6manu+/j886ZFKdjLkXUXDr+Vw8akSM8rsARuk=
+
+Name: icons/open_hub_dest_wizard.png
+SHA-256-Digest: MYFv660QvHTB1TD5rbtvfZe5oDIsFdr7iz60N6/lpTQ=
+
+Name: com/sap/bw/core/ui/utils/RemoteHierarchyClassExternalCharacteris
+ tic.class
+SHA-256-Digest: ajBKIwso219pnYSuBNnjjILsVkH1KW8IaXYm18S5LCw=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/FieldHistoryConstants.c
+ lass
+SHA-256-Digest: bPgt4Vzs4M2RwK/JHwtFRYhVQQgxlJ0Uhb18OGuuSAs=
+
+Name: icons/s_vwswth.gif
+SHA-256-Digest: kJSkQ1JKGZxpSx9vaKNfp3lW6YqNh1CvxsCezGC75z0=
+
+Name: com/sap/bw/core/ui/formula/CommonFormulaSyntaxColoringPrefPage.c
+ lass
+SHA-256-Digest: m3/1ruPkgRrKdeb7RCt4NF/mohiUIANrwDLm1HKWon4=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ISRowLabelProvider.clas
+ s
+SHA-256-Digest: 1f6uQCIodGBDHwTh/aS0nIST4gDiNpSKmbZzOmMvu/g=
+
+Name: icons/src_system_biw_ext.png
+SHA-256-Digest: MDzRw/DjPZZVnHwyvG8mB5T/KLM55ciV1SEazPwBiN0=
+
+Name: icons/bwreskf_wizard.png
+SHA-256-Digest: UPFIuYIDlA+PKIgPjA6li5kKQD1qiut0JVhF9BtENXQ=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/ProposalProvider2.class
+SHA-256-Digest: 7vVrQ2P4Ss9faxSHUcwO9ik76AYu4LFZWdhqEPgiiPc=
+
+Name: com/sap/bw/core/ui/contentassist/BWContentProposalProvider.class
+SHA-256-Digest: oTAZ3wukHzEqW/Qku0T+AEKC93VYN+G+hZCOnqZz5sg=
+
+Name: com/sap/bw/core/ui/wizard/ModificationHandler$1.class
+SHA-256-Digest: 21T0tkqNrC8xeaWEo7KsRKegonfoBxKXYqJs548F3Os=
+
+Name: com/sap/bw/core/ui/prefs/CheckPreferencePage$1.class
+SHA-256-Digest: 7htXj747FDwVMLnuDHh4Q+y9z7Vnurnhrf2mUfZIJGo=
+
+Name: com/sap/bw/core/ui/UiServiceFactory.class
+SHA-256-Digest: jrglMRu4bgUztC/HzIL4Lf1g1LXun+lAtfID4QLxjFU=
+
+Name: icons/help_big.png
+SHA-256-Digest: yZMN1vhWXKa7X6Jyrr/cZnW14B0EXRiquoutXB2DbH4=
+
+Name: com/sap/bw/core/ui/dialogs/ValueHelpDialog$4.class
+SHA-256-Digest: 19eprp6aSYMLAm0gnHEqFlzBbpL8lPazhKmL1EeX+P4=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/GroupsUiProposalProvide
+ r$1.class
+SHA-256-Digest: Rf6444tOJLjtBzy8Lc1rlaVgCdp5SSFYKlrkuSu/dV8=
+
+Name: icons/add.gif
+SHA-256-Digest: 5fj0NzY+ixDAePQcDQX/fnhSr3BqPMoT57jRghmNiI4=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog.class
+SHA-256-Digest: hCxwmBUtNi9BBSLQUgqjsoY+rT3y1pVwUW6CfLuJirE=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$11.class
+SHA-256-Digest: cW6M0AN5YntZtLjMNNG/mbO65jPI4fzY/agm/a+pI1U=
+
+Name: icons/dtpa.png
+SHA-256-Digest: CihFTJzQt6p9EVyVGnoNoDpLg0qS+DdnNiCL9PVwvXA=
+
+Name: com/sap/bw/core/ui/ext/IBwWizardDialog.class
+SHA-256-Digest: Vr3Bx/8xJlG6nwY3V8cDMDtTgVwO+NejAad9i1gtnS8=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ProposalProviderDialog$
+ ResourceSelectionHistory.class
+SHA-256-Digest: bsf1EFMmZRbJ7M3JwzQSBlotboG6RF1DJlMP3bVY2Zo=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/EditTextField.class
+SHA-256-Digest: DNGmRarJYsYH7sdfbAGqXn4VqZS8zZ5OoUcEhPDRdeY=
+
+Name: icons/abap_routine.png
+SHA-256-Digest: loETZRlogj9QsXMBwu6SvuFm/bDfG7OS/3bO5ZoYwvA=
+
+Name: com/sap/bw/core/ui/formula/CommonFormulaUiModule.class
+SHA-256-Digest: Ij7JN+oXoNRX9ZkQUmueq4zHu8aI9PautyG3qgYXkz4=
+
+Name: com/sap/bw/core/ui/internal/BwToolsUiStartUp$4.class
+SHA-256-Digest: o+/qVI+CvxUhjWSZ4V65/sMCZxlfXBIDASHKTM6gIdk=
+
+Name: icons/bwfilter_wizard.png
+SHA-256-Digest: lLV6aBlpLPPBeLzj8kWJHAioNVYYJeitaGPaQtkvgcg=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/GroupsUiProposalProvide
+ r.class
+SHA-256-Digest: phjX6H37jMstPEAsZJOkqmd5jNFP8uYMso1fjB5E7yo=
+
+Name: icons/url.gif
+SHA-256-Digest: EuIGnOQD8iRp5M5gi7gmC2feOIhD5YgO4Rhvbyzqp5E=
+
+Name: com/sap/bw/core/ui/wizard/SearchListComposite$ModifyRefreshJob.c
+ lass
+SHA-256-Digest: 2k3UyXGEodHjBdND4CNn/Dyj+q+2oGwC/HDh+lWCdwI=
+
+Name: icons/attrib_view.png
+SHA-256-Digest: KjAC/4RAYM6UUui53FmXGhwjFqNLV2QoGVCBkTCj6OY=
+
+Name: icons/bwiobc.png
+SHA-256-Digest: QawfK4UZ1sYkPfgIEgnAzOG+qeCOnAVBkZMSC9tbTU4=
+
+Name: icons/view_menu.png
+SHA-256-Digest: uV9GtiIT3ma5g6qtyp4OFieiI6aqSOBymGvhikGj5O0=
+
+Name: com/sap/bw/core/ui/providers/AggregationTypeFieldLabelProvider.c
+ lass
+SHA-256-Digest: LKnU6ddKgZu1Hq7nHz6ry7jPdlgkBk3b76eQT8LR+3E=
+
+Name: com/sap/bw/core/ui/wizard/ObjectCreationTemplate.class
+SHA-256-Digest: j4VlUOKwZ701ObalMcckzf/hddm8cB7gm0BidZdG1no=
+
+Name: com/sap/bw/core/ui/prefs/IPrefsStoreSync$Identifier.class
+SHA-256-Digest: LQExUY/BVFikA1uoGQPqmjIUi06kvAe1GpfOKUiLHnI=
+
+Name: icons/ruleFormulaFramed.png
+SHA-256-Digest: PR7G8/yAU4oVBxyPF2ahEi0V7i+7QFgeRhEqWZg4uGU=
+
+Name: icons/restriction.png
+SHA-256-Digest: 4CFStWlb50EPqK5Efr1oeVxWMwsrnx5oIZbdBC9Fe+g=
+
+Name: icons/bwmodel_wizard.png
+SHA-256-Digest: UY+L3aIwojEdTnfWjF26vJgPaxYhanB9zEV+Zrn2xyE=
+
+Name: com/sap/bw/core/ui/controller/FieldRenderingContent.class
+SHA-256-Digest: sf7/BudqGUnIBn7aUzMNzDxXAUJi43i/o796PvV/frM=
+
+Name: com/sap/bw/core/ui/internal/BwToolsUiStartUp$3.class
+SHA-256-Digest: k7cRFu2tTPQyptDyb9V8QKkkFhYtFP5Y8AB8IUpFEzc=
+
+Name: com/sap/bw/core/ui/wizard/HanaSystemSelectionPage.class
+SHA-256-Digest: aEUXO9w50h7KUnhoO37GbKNKDBj7OdyHnBFjZDAHzzs=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/IProposalProviderVersio
+ n2.class
+SHA-256-Digest: gCl7CAlGGfgELNneBj4hGUnp8RF2klZSbfHb9Juy35Y=
+
+Name: com/sap/bw/core/ui/fieldassist2/IProposalRequestedListener.class
+SHA-256-Digest: 8Xjq0JmVIsqqkYnW8Kg30JRNo8Y4p5vmFxOPUdkb5aU=
+
+Name: com/sap/bw/core/ui/fieldassist/internal/CComboContentAdapter.cla
+ ss
+SHA-256-Digest: KVLJd0Yu137qbTCDLdNY1E9niGb+HAxFcFTOAJGVUmk=
+
+Name: icons/function.png
+SHA-256-Digest: 6slHJtO6hYKv0wMjJ7VHIPktN+W5BD6qNp/XgTkvjMs=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/RadioButtons.class
+SHA-256-Digest: uV0RUL/kKKwK+azdqI7kJiq0IfWhnV3EwY6c8L+dRhM=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/emf/EmfMatcherAndValueP
+ rovider.class
+SHA-256-Digest: rtrbnkubv9jtbsMdClp6FMgBO8gXGpy5ik5MbZMgFjw=
+
+Name: icons/activateMulti.gif
+SHA-256-Digest: x3dMAI5hNBvy9T/Q4BmRO6rsWEW1QrtaGM26SwF6aFc=
+
+Name: com/sap/bw/core/ui/actions/MarkerLongTextDisplayHandler.class
+SHA-256-Digest: br06876bn2sG6CTWjXnwvr7FpKyfxAzbNAd4EODG7/E=
+
+Name: icons/history_view.gif
+SHA-256-Digest: LZSwLaBNr8h6WSpr9jUbiYoiSSx5nVPX51WvTvMoWJQ=
+
+Name: com/sap/bw/core/ui/contentassist/ITextFieldContentProvider.class
+SHA-256-Digest: wTovBA2xy7p9Ob8t9qOo5Hf64IpiDLJ5Ro0eJejYo9U=
+
+Name: com/sap/bw/core/ui/dialogs/DelayedProgressMonitorDialog$Clock$1.
+ class
+SHA-256-Digest: 70myQCRKd0bK6QeK7Eexsa9VZjR5yjHBcOedhaCB5yU=
+
+Name: icons/bwopenods_wizard.png
+SHA-256-Digest: tiCndLiSheIhwhjuqG2ojKCLRzjobw2Jxm4LUYh4w/0=
+
+Name: icons/package.png
+SHA-256-Digest: DwA/E9tUcQCdjooE9QxeOp6mpY+Y1WiuBqcq/j8R5G4=
+
+Name: icons/bwdmod_wizard.png
+SHA-256-Digest: oL9s+oc2K8AoWdSpdeOjsSZGQUnamqOF8Lc7UifAhtk=
+
+Name: com/sap/bw/core/ui/wizard/TargetObjectInformation.class
+SHA-256-Digest: lCo1Try15B3nr/QASaFKwZ0QEbP+/YMdDzQo1QFjG64=
+
+Name: com/sap/bw/core/ui/label/TreeViewerColumnPatternFilter.class
+SHA-256-Digest: yI3FtCCzBwbxXtjVfocHtI9uw9eSSP8VUo0vYLjKXH4=
+
+Name: icons/transport.png
+SHA-256-Digest: 010GYRjRecuRwWT/rXJjfCHxtGCdyU4s/NCv2vfByS0=
+
+Name: com/sap/bw/core/ui/dialogs/ProblemDetailsHtmlDialog.class
+SHA-256-Digest: 7eWKZ45+D77NAeVUREP5GtP304nk2pbG2Csp2qKyMsc=
+
+Name: com/sap/bw/core/ui/open/NodeType.class
+SHA-256-Digest: 80CubtR5ws9CK/597OPO1b8qBeKacu45YYCH9kmX0ZM=
+
+Name: com/sap/bw/core/ui/IKeyfigurePropertiesSectionContentComposite.c
+ lass
+SHA-256-Digest: pFCtXIDjK0Xh4yFGFk8NPbEAfOu2aUoigl63ndHOnWM=
+
+Name: com/sap/bw/core/ui/utils/AccessibilityUtil$1.class
+SHA-256-Digest: Uxo94FFfe6IDFXru5oBqFXBlCMrrVP2uH+o/movpNRc=
+
+Name: com/sap/bw/core/ui/dialogs/ValueHelpDialog$RefreshJob.class
+SHA-256-Digest: x/rjz4192w3VDlgZ8pA3MnVxiRXjAAWE4Jm9azdQ4ps=
+
+Name: com/sap/bw/core/ui/open/ResultLabelProvider.class
+SHA-256-Digest: S1pxfkcvXmckjqLm/fJ1wbBQMWOzfYxFEXg/XFVOT3M=
+
+Name: com/sap/bw/core/ui/internal/EditorService.class
+SHA-256-Digest: Jah+yAIB2cWHCcpPKXq8gUPrM5ZJJt+Jh+XYSPjP3gM=
+
+Name: com/sap/bw/core/ui/utils/ComponentHryReusable.class
+SHA-256-Digest: KqP8nQih5hjilIcIul40rMfZCMOxWVL55dU6r+TeA6k=
+
+Name: icons/bwqryrepl_wizard.png
+SHA-256-Digest: RobC1bnmX3kXoa5emivXGjtL/X+68tOsImTSLlF0hMM=
+
+Name: com/sap/bw/core/ui/openurl/registration/WinRegistryException.cla
+ ss
+SHA-256-Digest: xHybzje6ABRkttINeDsZJEn9rSpDcjlxaYYrZgN1GoA=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/MasterDataReadClassProp
+ osalProvider.class
+SHA-256-Digest: oarPAlpvgKxOANBLGQaMIzMS5rk61OI9zMgl+8+aeHY=
+
+Name: com/sap/bw/core/ui/Activator$SerchResultPageActionListener.class
+SHA-256-Digest: 9ZUYs04Y/fH8zBKenkXgs1nej9IoRWIXiFhyCd49kVE=
+
+Name: com/sap/bw/core/ui/wizard/ProxyURIGenerator.class
+SHA-256-Digest: AHQ3xcRpMU4aP7aY6G44QNdppjrUgjFFjT1g1NAbbTs=
+
+Name: icons/ruleTypeTime.png
+SHA-256-Digest: ZXapxp4MmHQslLUMTbZskUaktOnAQpwVA85rTQTUjSw=
+
+Name: com/sap/bw/core/ui/wizard/WizardProblemsStack$Severity.class
+SHA-256-Digest: 3tB/1S0yHo4RxwlowtyL7EYmtsWFELe6MywuORDHD1A=
+
+Name: com/sap/bw/core/ui/contentassist/CComboField.class
+SHA-256-Digest: FgYqUHwLRhUXTJPtjYSFeWc7gdSyGGLN8MdvJMWE5As=
+
+Name: icons/sort.png
+SHA-256-Digest: 6oynnpZy6FMTgx3ACot7k+qEH29/AnatHV0nLoos0MQ=
+
+Name: icons/sap.png
+SHA-256-Digest: Vmbf63T4k+73ZqlcWBZqUp5j6GjTe56TLU8ItzgqklU=
+
+Name: com/sap/bw/core/ui/label/RoleObjectLabelProvider.class
+SHA-256-Digest: Ljm6Pd4YfqrhlMvG+hkju3nwkVSXTzzNpYaZSfYz5ug=
+
+Name: icons/src_system_biw_file.png
+SHA-256-Digest: L+0SaNmUzl3mkowX2Kl8rZ5q58YKNX7SWv8UNlBZGNk=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/IProposalProvider.class
+SHA-256-Digest: 6SrdQV3vxWUNp1z/p8sRKin+tQCfDRTmUlB40BzgWqY=
+
+Name: com/sap/bw/core/ui/dialogs/AddEditDimensionDialog.class
+SHA-256-Digest: NL47wggQxDKyWDt9jAasAQiofkd+3FOj4wFYZH46s+M=
+
+Name: com/sap/bw/core/ui/label/DisplayModeHandler$TextMode.class
+SHA-256-Digest: Rw6wxGOPKjWe+dWisDqqjVkC++pgakuIiMpOK4/Iyrs=
+
+Name: com/sap/bw/core/ui/prefs/CheckPreferencePage.class
+SHA-256-Digest: A7gMjjwPEWmxn3ANwg0/1kCmzFkyLoZthSGgmhVW/ws=
+
+Name: com/sap/bw/core/ui/openurl/ShareLinkDialog$LinkElementItem.class
+SHA-256-Digest: dSR1KVrCgjyoo8MSR0Q+tEoCXbCpJl2k46KNXaEEKMc=
+
+Name: icons/src_system_bobjds.png
+SHA-256-Digest: dzGJvrUPc8COuDl8A8wE1soDq8TpCAGow/5oIV2s81k=
+
+Name: com/sap/bw/core/ui/history/BwHistoryPage$3.class
+SHA-256-Digest: 1MywEPhsj+ZR32YuwHwvPckE8kIM3xppGof7yz9nuuM=
+
+Name: com/sap/bw/core/ui/openurl/ShareLinkDialog$BwmtLinkType.class
+SHA-256-Digest: 4vB78VDB+DFrl75zd5Ngt17R2eOH/5CPXwQXfU5LaDs=
+
+Name: icons/bwformula_inv.png
+SHA-256-Digest: cO2eSTJna/5WmxV/L1PMdmq0UXRcQ8JMn3tjUJD9LQo=
+
+Name: com/sap/bw/core/ui/controls/ViewerHeaderPanel.class
+SHA-256-Digest: aMriHaQqYGRtaNtq2AxXLryEFNGIQl+J6eUomlsMYyA=
+
+Name: icons/blue_cp.png
+SHA-256-Digest: MuJw+QPPD92XC3Fy4aqA1nSzLz/HZ30ghGyG+f66hGE=
+
+Name: com/sap/bw/core/ui/wizard/HanaSystemSelectionPage$2.class
+SHA-256-Digest: UL+0xozBD29b9HzPxGq6//U+ncqv2kwBAA+hMwg8G90=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/BwAndOdsProposalProvide
+ rDialog.class
+SHA-256-Digest: Y7b9co80zAP9hm7wS9One8kXte7oSysdVpoUxDlqW9o=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$6.class
+SHA-256-Digest: hyk2HvZ5KGESy1PI99ShMNAcZpv3lQxzpTxd4qJRhRg=
+
+Name: icons/bwsegr_wizard.png
+SHA-256-Digest: dNlCrNM6WP+Ub46cCDSJBjqgBCoGzRzEEyKzbUNYIp4=
+
+Name: icons/transformationInactive.png
+SHA-256-Digest: sOccuR9cSEyWYMh6RJRFZD5ddXgi8TQmLCKLtiD9GWY=
+
+Name: icons/collapseall.gif
+SHA-256-Digest: OkKqUh/f+CBZgcOCCx39WxrNGL8y5ou4U5dIGBAaNDQ=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/BWPackageField$2.class
+SHA-256-Digest: Ci2MtgiiRRKvqCfNMuu+AadWFwquYKBFXbrRfdA2TnM=
+
+Name: icons/ovl_error.gif
+SHA-256-Digest: L9ytzVOSYVhMnfZRNFvaXIk2MkgHGSe4rNTTCaKbAms=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/ProposalControlCompliant
+ TextField.class
+SHA-256-Digest: fyHDNDejMxaxizvteMICtsNTUsD8y1Te/gQhLijaZ5c=
+
+Name: icons/bwcharacteristic.png
+SHA-256-Digest: RoAR3jRoNoLP6o6BRmdZvEEARXNom5/cjRY9XO+mpeM=
+
+Name: icons/ruleInitialNoFrame.png
+SHA-256-Digest: 1Stf0BkfuleHFrCaoUkib8e5sc4iYAbg+pVxX4KJGUo=
+
+Name: com/sap/bw/core/ui/ext/IWizardService.class
+SHA-256-Digest: VxngIvGdBjArcd8Rz6RKVLekaEdNCdH70fQmxwsPlLg=
+
+Name: com/sap/bw/core/ui/dialogs/BwAndHANAObjectSelectionDialog$5.clas
+ s
+SHA-256-Digest: 3fRe0pux7XWsT+GRqSCslCSMVMlO30HEVBT/K4oJnrk=
+
+Name: icons/calc_view.png
+SHA-256-Digest: nz5An9ibrZgxX3e0bJBZjmSLlpLTLDA32NKd+V3o29Y=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$1DropdownSelectionListener$1.cla
+ ss
+SHA-256-Digest: KHf3RXhxhV/YWddUXbRVVtQFLJk59Yc34qzsGeoFoY8=
+
+Name: icons/data_source_3x.png
+SHA-256-Digest: wycZ5roGhATDTDU4kMR/r0DPCThNgQvKoGYViKkozuY=
+
+Name: icons/bwvar_exclhry.png
+SHA-256-Digest: RRTAzMO4n92wCCGRc7Z+dpB0QHW5maZoPZVT41RFAT8=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/WizardProposalProvider$
+ 1.class
+SHA-256-Digest: c3zxqCATUI7PUj4IjZN7Qeon2UP+Bb3tH/lfoYklx7A=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/QueryProposalProvider.c
+ lass
+SHA-256-Digest: NXeNhkDJzfAkqJYKqK/sehRTh4koh1mk/dNszrtFIxY=
+
+Name: com/sap/bw/core/ui/openurl/ShareLinkActionHandler.class
+SHA-256-Digest: 7qhabTzsxA+7nan9rHnoW9/1G2YJH6rpmJ9BRkjlZ/A=
+
+Name: icons/class_obj.png
+SHA-256-Digest: 21MHtq1iAxPNKa3Btlz1xJT7FdIq5kpPnkfbqwZz1d0=
+
+Name: icons/content_object.png
+SHA-256-Digest: +C9RRLGVPBDBDiXl/gCox6/l+m0v3+H36QveDf3G75M=
+
+Name: com/sap/bw/core/ui/internal/TransportDialogWrapper.class
+SHA-256-Digest: CjgT/xP/7epteToTg5RoUXyv9UstMtP2pMXIPc1xQDc=
+
+Name: icons/bwset.png
+SHA-256-Digest: 5zwjWg2t3IMesFqhhBUtJVBxDjyZcZPMWRjPe7wroZU=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog$4.class
+SHA-256-Digest: n54fN8ChJFzIaE0D/fTGlksAeayoZSMelTQFs22GPXQ=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ProposalProviderDialog$
+ 5.class
+SHA-256-Digest: r7U47UyW24C5pkhuT4MHidAmyXLGRDMnYF+ZbgQ343g=
+
+Name: icons/library_obj.gif
+SHA-256-Digest: Iqu6Y0LCaZ0aMgXvnQM4kN4eVvOMzRiplm5ElbwCGbE=
+
+Name: icons/bwopenods.png
+SHA-256-Digest: EcgxVPuU2AgNRcQnYLn36HiAWaKyEwJZtU5XOf9B3Hg=
+
+Name: com/sap/bw/core/ui/controls/KeyfigurePropertiesSectionContentCom
+ posite$1.class
+SHA-256-Digest: /u2MgMN9pp+f7raJfi7clhUD+EfPd7JbBhOSojn/0o4=
+
+Name: com/sap/bw/core/ui/fieldassist/AbstractContentAssist.class
+SHA-256-Digest: Mp3lWOXrMbSBa0xieVFAgRnpCid0j7sxku1FpUlRg4o=
+
+Name: com/sap/bw/core/ui/utils/UiUtil.class
+SHA-256-Digest: e3MOybeEptJmPcekARlTT/UmUJfE9QV39esg+/9W3wA=
+
+Name: icons/rule_constant_noborder.png
+SHA-256-Digest: +8z1iiLVi/QMskxv2q18dqe4qIFogo9DhLMWcomloz4=
+
+Name: com/sap/bw/core/ui/internal/BwToolsUiStartUp$1$1.class
+SHA-256-Digest: qFTKpfwmccB4xBKgcsg5kvPxYOnkO5kJU1BKkeQwZOI=
+
+Name: META-INF/maven/com.sap.bw.modeling/com.sap.bw.core.ui/pom.proper
+ ties
+SHA-256-Digest: i38KEy66xTBv2iW9McVxn7Bi6JZ7tkAAdWm6xUWGF+0=
+
+Name: icons/perform_check_inactive.gif
+SHA-256-Digest: mUeYgumTWx4S784b9VA8zChF9bLbjF/11NDkSdsOlqE=
+
+Name: icons/check_mark.png
+SHA-256-Digest: f8g5YpgFLNtTiNtEHNZi6UxApvuV8FXYP2yACGwxP0I=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/LabelProviderBasedMatch
+ erAndValueProvider.class
+SHA-256-Digest: 1kg67MqpRsC1ftjGQ7B8H/SRYShTFMbp/DrKnAIY+z0=
+
+Name: icons/bwquery_wizard.png
+SHA-256-Digest: zV5v+HR8i9MBLpNkSqWiGDFtTDgDnoDMiYmbn3oFfn0=
+
+Name: icons/measure.png
+SHA-256-Digest: pNcrs+lzl0q73JV1Vwv4+z7e+CP2YeLvXEVgoGMwIRs=
+
+Name: icons/properties.png
+SHA-256-Digest: VrY9EK9qjFE/YFGZjtKRu1lejd6eXLVtEnm1oh65KPk=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/VariablesProposalProvid
+ er.class
+SHA-256-Digest: 7tBco8seeRG+SkKEbnkAx01Nv1QZTFLj9Jon8gBT4M4=
+
+Name: com/sap/bw/core/ui/utils/AccessibilityUtil.class
+SHA-256-Digest: IoGdkNZGivwGv/Umgnl/8y25It2e4Kwp4CHtyg1b6Fw=
+
+Name: icons/src_system_bw_db.png
+SHA-256-Digest: DmRZ9GRJEcxkVaVqZBi7WOswpWw90+pus45+mJgDBgo=
+
+Name: com/sap/bw/core/ui/event/GuiEventHandler$1.class
+SHA-256-Digest: /Bhn7ZwDsbwSOhQ1abW+dNaYR6pLPcz7+uw3PRHxQsY=
+
+Name: com/sap/bw/core/ui/ext/WizardController.class
+SHA-256-Digest: 0rVuco+iTgRSk1ovDFELv+wM+WvsUvczkO7BSwI7uU0=
+
+Name: com/sap/bw/core/ui/wizard/ModificationHandler$ModifyEventJob.cla
+ ss
+SHA-256-Digest: jhlYc1ZlJhFOTsBdwaumUDB5rEWX8x/Ybl/99kc6lXA=
+
+Name: com/sap/bw/core/ui/wizard/WizardField.class
+SHA-256-Digest: iFAVHvvIHc0CgqOzKG5dElVVSXjUNB02DeLFowmtBmQ=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ProposalProviderDialog$
+ 6.class
+SHA-256-Digest: DfoNpRSMel6mLekCKHge90KzMGfyF7qu76FcXBjrYBI=
+
+Name: icons/relation.png
+SHA-256-Digest: zli8BpbOWDN3nFhJl8Rl6XuLQwA4fl3Ut9YQp8VMKc8=
+
+Name: com/sap/bw/core/ui/Activator.class
+SHA-256-Digest: nIfpt0QvfPGRw5OJ9g3TkIhUgQw8whqR9PAcva6ehRo=
+
+Name: com/sap/bw/core/ui/utils/MasterDataReadHierarchyClass.class
+SHA-256-Digest: qQO1x7jqsp3FgQI+l0aWMOyEyGZ7nr0bkwMjcWIEXCc=
+
+Name: com/sap/bw/core/ui/providers/StringLabelProvider.class
+SHA-256-Digest: NCMz6oPELZdoA4gOuKulIKWmMiLa+GKaiH5cje4yC14=
+
+Name: com/sap/bw/core/ui/contentassist/IDependingFields.class
+SHA-256-Digest: 6xgjHPirpiBTF3LAx0oAc5OFgOVw5wRu6w8KBESdNYE=
+
+Name: intro/overview.xml
+SHA-256-Digest: 92H8Kkk3jNheZvRt4VLzxE5Jblp/Cgu/gitUq6wdd18=
+
+Name: icons/ovl_lock.png
+SHA-256-Digest: V8Lmu5qhMb1GZr74LJSWjQw7J5+kQal+oPRRKtO5KnM=
+
+Name: icons/bwsegr.png
+SHA-256-Digest: q0tetRGejGCorPOdlCX2w659qaRMOsStzQ4tam1NL10=
+
+Name: icons/exception_inactive.png
+SHA-256-Digest: w/7pys8bbUTLRtX3xik56s/WPhrMod5dO6jj9V9j2ro=
+
+Name: com/sap/bw/core/ui/prefs/BwPreferenceConstantsHCPR.class
+SHA-256-Digest: pbEKOlTruBUP8wMC6EIsGQiV9oNUYkrzkA/lOjJEYCQ=
+
+Name: com/sap/bw/core/ui/internal/StatusHandlerInternal.class
+SHA-256-Digest: TA3udqxrv9kJAdJUag6knrWYsZHidemVjL/yOO7grXA=
+
+Name: com/sap/bw/core/ui/Activator$IProjectExplorerRefresher.class
+SHA-256-Digest: da1OGxqsHGC5f8pHH9M69/ed2eodaxJpMBpP+6fv8Vo=
+
+Name: com/sap/bw/core/ui/localization/messages.properties
+SHA-256-Digest: v+mYjZnKUYXxqAORLfLL/DIvivGt35DSD7wEklVbO70=
+
+Name: com/sap/bw/core/ui/wizard/BwProjectWizard$BwSystemLoginRunnable.
+ class
+SHA-256-Digest: JSI2PO7tcmpGfwmkEW9OvZB9r+tMh9pI7PhhYtuZfC0=
+
+Name: com/sap/bw/core/ui/openurl/ShareLinkDialog$LinkListViewer.class
+SHA-256-Digest: FrRdiQVhKcLLPI4RxzBFSCB8t4eXWdqu2oZOqhBZXxs=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/ProposalContentAssistPr
+ ocessor$2.class
+SHA-256-Digest: SEx7wRfr0WHwJKgEbgesXamZtJCnzJOPNQ0MU5gTRaA=
+
+Name: com/sap/bw/core/ui/providers/RuntimePropertiesLabelProvider.clas
+ s
+SHA-256-Digest: G5PIJ2MfTbFa9TrghwkqQktL2L0JpzyFWKyaHyCqFNM=
+
+Name: icons/explorer.png
+SHA-256-Digest: 3ifS+iUK/BfC95M2bLyzwYhC9i/e5U3nuk/6mcdD7HU=
+
+Name: com/sap/bw/core/ui/formula/CommonFormulaPreferenceStoreAccess.cl
+ ass
+SHA-256-Digest: 7zZd/EZtbvkqH5IUNwED1QQEQoxKv/P//iuIzOOVvM0=
+
+Name: com/sap/bw/core/ui/label/TextModeCellLabelProvider.class
+SHA-256-Digest: ss1q4WiRufTnj2M9y5+SoChOYvLfL4SvEA1zjs7lYqA=
+
+Name: com/sap/bw/core/ui/utils/ComponentHierarchy.class
+SHA-256-Digest: 8OSnq1pGDl+POWVunthU+BgOcOpW3IuHiqJaLtV0p7E=
+
+Name: icons/remove.gif
+SHA-256-Digest: Fd4Nz88VG1iG67kT3QxlMa204qZyqhlSITtfOYXVHT8=
+
+Name: com/sap/bw/core/ui/fieldassist/IExchangeableEntityType.class
+SHA-256-Digest: 0cE5qhL6m+TISRIORY5HcKIfMbcTKHDbs/Ec9GeEWDc=
+
+Name: icons/info.png
+SHA-256-Digest: tovLbiWLdMahVodZJYNzFaJkzb7kZ+fttEID7kghq3Q=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/ProposalProviderUtil.cl
+ ass
+SHA-256-Digest: Z8t4crlm8g02txVH4SzOK98C+GB+r9LinaBQWg8XyFw=
+
+Name: com/sap/bw/core/ui/openurl/BwmtLinkOpenHandler$1.class
+SHA-256-Digest: 8rePvePsMn0KnOQ2TaCPyXJDEsrs/BTsLZ3poe2ypBg=
+
+Name: com/sap/bw/core/ui/contentassist/IComboContentLine.class
+SHA-256-Digest: cghKC5HWbRijKV4gU3vFLH1U7AriAbx7eKPKiqiuKeg=
+
+Name: com/sap/bw/core/ui/openurl/registration/WinRegistry$WinRegistryV
+ alue.class
+SHA-256-Digest: 16QcIHC5AFWAjzcrSIfk9r5u+SDa+7Gnq4sqfJX+duA=
+
+Name: icons/bwreport.png
+SHA-256-Digest: vJZu26/Uys0RZUjNWLcHo2gxUTAl8mYrJ9lEUqyE9xc=
+
+Name: icons/ledyellow.png
+SHA-256-Digest: OzXn/ZkqYD0lzjQg1wIgmtW1FypTVNSjfaWr+Zt6mEA=
+
+Name: com/sap/bw/core/ui/contentassist/IValidateablePage.class
+SHA-256-Digest: dX+MlWtReh8MPJq8SSHVglga4On7Lx7nqZr2zuyZGqs=
+
+Name: com/sap/bw/core/ui/openurl/ShareLinkDialog.class
+SHA-256-Digest: nhWCaLKr36rgWOrSuJzNO9kNAYfPOMC6G6Rx2zip26E=
+
+Name: icons/hierarchy_vertical.png
+SHA-256-Digest: GPBFt/BPVUuaXnLU0fdE43CQE53+eySX4oG6hwmze6E=
+
+Name: icons/bwmodel_big.png
+SHA-256-Digest: KOr5mW7uQymDs+YOc5d7PE6Sj8LYdYYChrZ/McEqNYk=
+
+Name: com/sap/bw/core/ui/fieldassist2/ParameterCallBacks$1.class
+SHA-256-Digest: cbtjFl6v95avjR9qwnFDiRQ04O+nOPv56FV9lBMMViM=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/MDInfoProviderProposalD
+ ialog$1.class
+SHA-256-Digest: 58/JBj0kCjeRJ8mCf2t75v7n9VPI85wwb7d2pxeMbEE=
+
+Name: com/sap/bw/core/ui/history/BwHistoryPage$2.class
+SHA-256-Digest: f0wXO+Bs4mrm6Nw0UzCb7bOUXW6wV9O9Tq8EuwP4G18=
+
+Name: com/sap/bw/core/ui/dialogs/BwAndHANAObjectSelectionDialog.class
+SHA-256-Digest: tGHeIn3dQmVHAkApgIBYZCPel0p8jtLBhF/Tb9mvpM4=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ODPContextProposalProvi
+ der.class
+SHA-256-Digest: QYKCmlG8pu1XmgKQpnZJe5rUL07Q41n2HocRyC0MreI=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog$5.class
+SHA-256-Digest: +bAuWDtFCMAi9kCAl8hPxCltUZ2po9Sp/zq2gmE5ciQ=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$7.class
+SHA-256-Digest: Q+VAc4KAi/MksnIwDGaXwnhN7ChqfMlP5Z7IdEj4d+o=
+
+Name: icons/expandall.gif
+SHA-256-Digest: pJ4j1DhF+ZH73igzczUpOGeXGTsnddMWJ/AOgUDqnQw=
+
+Name: icons/blue_bt.png
+SHA-256-Digest: pOwguPC3ZQtiML1kzmmBR4SC3yZjeWNDCzYaOga873c=
+
+Name: com/sap/bw/core/ui/providers/QueryDefinitionFieldLabelProvider.c
+ lass
+SHA-256-Digest: +OhL6+pzlDxIocCHyuuh1vv2Jgt2RpSl8FXK4apM1dg=
+
+Name: com/sap/bw/core/ui/utils/ComponentHryEntity.class
+SHA-256-Digest: D2yn34CgZ10qWZjVCU39iytbgO2u3U85GsthPUBhkRU=
+
+Name: com/sap/bw/core/ui/fieldassist2/ProposalFilterDialog$1.class
+SHA-256-Digest: vkTYh3UosZuoVdxZp1lCzYZOie6V7w6+ZtuaaNiVWgg=
+
+Name: com/sap/bw/core/ui/fieldassist2/ILabelProviderWithStaticImage.cl
+ ass
+SHA-256-Digest: 4vSUZcZ1t5VOWnWkuPtutcI5gqz71VW/1G2qZzEbCUw=
+
+Name: icons/red_gt.png
+SHA-256-Digest: BOd/ot1BgjMLvRkQN98h8hxzPooWEdnNTv9tzEYzVxo=
+
+Name: com/sap/bw/core/ui/openurl/BwmtLinkOpenHandler.class
+SHA-256-Digest: 44EmjQACm08CXjPz5uMPXAYhFohCSCARLPNiWWmtjv8=
+
+Name: icons/bwlevel.png
+SHA-256-Digest: dukCalVD00cuOpGTCzg/ayZ7WA9R4166IwjSf1Bp+8g=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/MasterDataReadClassPara
+ metersProposalProvider.class
+SHA-256-Digest: medODr1maJnkThyzXPzFG9FKf0RLhgQxnh1yCCBaWjo=
+
+Name: com/sap/bw/core/ui/openurl/registration/BwmtWindowsUrlHandlerReg
+ istrator.class
+SHA-256-Digest: U62CPZFFf0la1PsgteQoVT96N603Y+S+YSPmjn9zKg8=
+
+Name: com/sap/bw/core/ui/label/BWLabelProvider.class
+SHA-256-Digest: qDuH0Pgm8vkKYtfy5sgMYBlExXMrsyN5yIOHaUGmKig=
+
+Name: icons/src_system_hana.png
+SHA-256-Digest: rJR1k+OOZ7dEoZ/AyCIrLLygjRqNKvibQPgHqaBEv1M=
+
+Name: com/sap/bw/core/ui/wizard/SearchListComposite$3.class
+SHA-256-Digest: 6T6TCH8Eoy1TSO6bXhCAwzp4MsEkKLmYH2pNGPe734Q=
+
+Name: icons/ruleLookupNoFrame.png
+SHA-256-Digest: KrJ54ntQxGwpo1ZrVJvsX0u7nEJtXzDLpJNPVzJcA24=
+
+Name: icons/src_system_bw_web.png
+SHA-256-Digest: 2CzwrPLQvnn6e0OC+9Q52N83RLFu6HTrdwy3jQ1hOKo=
+
+Name: com/sap/bw/core/ui/dialogs/DelayedProgressMonitorDialog$Clock.cl
+ ass
+SHA-256-Digest: uNH2LK0tMh0LqfT1V9MWJDGPRnH+e4/hSj50D7v8hKM=
+
+Name: icons/ruleTypeTimeNoFrame.png
+SHA-256-Digest: A6a8mZ3Y58dne/tWwQJT4jUvAHUJSi5M94h4iHgRI08=
+
+Name: icons/bwadso_wizard.png
+SHA-256-Digest: SWwBz0DQpjzjy6FMG85d8GiRxtJ8zHNpqHbHynYgWX8=
+
+Name: icons/state_ssl.gif
+SHA-256-Digest: cFvDTTyLeKLghcxGq8wJHtGQb5tUKL1GLDLkf8Mobm4=
+
+Name: com/sap/bw/core/ui/openurl/OpenBwmtFromClipboardHandler.class
+SHA-256-Digest: wb66rcjSdNLC+k7A89Tsh5oOp1yAMP9HJC9C4Pf0DqA=
+
+Name: com/sap/bw/core/ui/history/ICompareAction.class
+SHA-256-Digest: hMpD0NTFJuiSXTuJAq11YKBGQRmgagekEPZ5dP2oUdo=
+
+Name: icons/red_cp.png
+SHA-256-Digest: mWJulYydauk+RBFqgLxdRuwYitMN8/Hi6MZ4irx3clo=
+
+Name: com/sap/bw/core/ui/contentassist/UriValuePair.class
+SHA-256-Digest: K2iqgAIK+B/3lp7/mNNUu9ElljL7HDqGVY0vcid7lvU=
+
+Name: com/sap/bw/core/ui/wizard/HanaSystemLabelProvider.class
+SHA-256-Digest: uUFnlHNGbiV7loWR35NdoQ/cYtWXFqW7ADANQ8tOyeM=
+
+Name: icons/bwcurrunit_wizard.png
+SHA-256-Digest: uqoCaqWUsIsmwgtil/NwIkr5+r8JewLr6bh/1oIPNbw=
+
+Name: com/sap/bw/core/ui/openurl/BwmtFileSystem.class
+SHA-256-Digest: OjP4QgFkSBVey22cBI4w6qU03PyiRf3wblCB8Y17S+k=
+
+Name: com/sap/bw/core/ui/label/DisplayModeHandler.class
+SHA-256-Digest: mXKd8gGv2u3kHSTIMq5pUiWB/YVimm2HLo07lQRIfVU=
+
+Name: icons/bwcharrel.png
+SHA-256-Digest: ueI8XUkQc68YF9hbzlLGuC2sjBz/jVkrgdSotc9cF08=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/ProposalContentAssistPr
+ ocessor$1.class
+SHA-256-Digest: /KoFO7Bjs5LRFLvkLal9TRUNXzy1+bU11m+URmIh7Eg=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$1DropdownSelectionListener.class
+SHA-256-Digest: NdZKUytLy9yBDo+VK0Clwxq1zmkNUBGdXhmx1hy4K5o=
+
+Name: com/sap/bw/core/ui/fieldassist2/IValueHelpParameterCallback.clas
+ s
+SHA-256-Digest: F+Rxl875Mv8KLhef98BWtRUYq6z5LW5xD5VjMzsHjdQ=
+
+Name: com/sap/bw/core/ui/Icons.class
+SHA-256-Digest: /ZJRSkdP6D9K5sq9ZwqsWba2ClhNEiL6sk/nWriZS3E=
+
+Name: com/sap/bw/core/ui/utils/TextModeRunnable.class
+SHA-256-Digest: Kk8y2nIIRNl7bHFIcORbmfws+diEatuYUGl7ruvRVME=
+
+Name: com/sap/bw/core/ui/wizard/WizardListMessage.class
+SHA-256-Digest: 8edHpFRdIjD1MRExpR/NfZCsJiOamu6rNlAblW+DV1Q=
+
+Name: com/sap/bw/core/ui/utils/EntityUtil.class
+SHA-256-Digest: KEpQJiT0BGAr+ln3Rk/c/RY8o0ghMphUrLeBcdOnOo4=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/BWProjectProposalProvid
+ er$LocalProposal.class
+SHA-256-Digest: ci7EGJp6DpwnblTTjrIS8+cosGnF8bKGHSdfSAjt7fI=
+
+Name: icons/Grid.gif
+SHA-256-Digest: WiEgD7tUrnyeWmzYWOGukjMJPMubMIfBrpsVmJ6nKLA=
+
+Name: icons/ruleInitial.png
+SHA-256-Digest: MOsdExZy2yS4sQwJHUCU0I1OEdoZRWLpvUE7J21Kgbk=
+
+Name: icons/bwtext.png
+SHA-256-Digest: TEu+j0J9bDSw9aCSRi3fn4hcHnYoClwTtUKlVpwy9Aw=
+
+Name: com/sap/bw/core/ui/wizard/SearchListComposite$2.class
+SHA-256-Digest: u5Wv3jwcnt7Yt8aSfKtUOrpI0DQytldOoy6xahkyIOk=
+
+Name: icons/red_bt.png
+SHA-256-Digest: cDR1jMYJ8iUazi15tbefWNglHv/9c+gOst3WcUnRB7A=
+
+Name: icons/ledred.png
+SHA-256-Digest: 7YoFgkX0P+sBkDHKrVleQ8oJtxgQVYR69FTdKpB/r/U=
+
+Name: icons/bwdims.png
+SHA-256-Digest: vb+AiZkZPBjLuNQBInvHCXoACRQPDi/wTRfrOIEGnHE=
+
+Name: icons/bwvar_inclhry.png
+SHA-256-Digest: 8t2cmxT1+jdM9TxTe+r+Ion1zUFRrLTsAbb/ejA/crA=
+
+Name: com/sap/bw/core/ui/formula/SyntaxPrefPageCompliantUiModule.class
+SHA-256-Digest: S4T7Xf6BNy9JFJKjfMZqhhNGi//wpQHAYaI1b4D/WWg=
+
+Name: com/sap/bw/core/ui/IconForType.class
+SHA-256-Digest: ubR1AxAb5f1JNUIpUPHUJvQqAiw0qC+vJH0SpJcX91A=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ApplicationComponentPro
+ posalProvider.class
+SHA-256-Digest: 9dhuu6wpHWdyDUnsiFd9JW6tAAkgTi4AIIXDJ+fa4Tw=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/OpenODSViewProposalProv
+ ider.class
+SHA-256-Digest: o50PBJHvAA11zUtLNL0Q0WqK10P4XQYWveEf4GorR2I=
+
+Name: com/sap/bw/core/ui/fieldassist2/ParameterCallBacks$4.class
+SHA-256-Digest: iqeeEohaLSCH7wEFzuboqvexJrjnlkz5zU+rAy1q/6c=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog$8.class
+SHA-256-Digest: Z0aK87JymBIU8a6JCWJrRmHMtitXV3aKlyCqOcH78qo=
+
+Name: com/sap/bw/core/ui/internal/BwPreferences.class
+SHA-256-Digest: FRSkzpt/hheSZwrHEosPQ2a6fh4VW3sDcbI9Di7iUWg=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractSelectionDialog$2.class
+SHA-256-Digest: jaeZrjPYUOgT1FVhjZ+b+ckiswPzN0F9lowpFExk/kw=
+
+Name: com/sap/bw/core/ui/help/CoreHelpContext.class
+SHA-256-Digest: X6b2Pp9M2+7xPSQH8zU9exiufMvBThYiUbFYkpc+xRM=
+
+Name: icons/src_system_biw_r3.png
+SHA-256-Digest: sCrMvL0cKzy9pbldgGiRXCnvkuKGZv/PI31r32YAKP4=
+
+Name: icons/new.png
+SHA-256-Digest: E7vVQUzb0tsuBbDaiFROGADkixIee4zwrRoWZjY0w5A=
+
+Name: icons/src_system_type.png
+SHA-256-Digest: Yy8gjv0ThdUmoLB3D54jUkdVEdxHS/uIVI1JAmC7eLs=
+
+Name: com/sap/bw/core/ui/formula/IgnoreCaseContainsPatternMatcher.clas
+ s
+SHA-256-Digest: 1D591q7y31pakm9aMxoRC46nQV0v3Df94qEtf8byHf8=
+
+Name: icons/src_system_slt.png
+SHA-256-Digest: MbdDy5Y/oFOPV6CYtz5ZbViYk1LuDc9/NVCgqS741no=
+
+Name: icons/attribute.png
+SHA-256-Digest: GHTs0MCZPhsNGlScpX3WfWPFyMki6CfEllq2PaFQql8=
+
+Name: com/sap/bw/core/ui/OverlayImageIcon.class
+SHA-256-Digest: KozVpb2SBNpfG+uM9efFsE1FoWv6WstWuT7wrKZjkF4=
+
+Name: icons/table.png
+SHA-256-Digest: lS1390Kg/jIZcTjb61NCqdv6XE5yyaB5Se8jSdwUC1I=
+
+Name: com/sap/bw/core/ui/providers/BExDescriptionTypeLabelProvider.cla
+ ss
+SHA-256-Digest: MU/lKlg9KhCvPgRPY7bC96yjymxf07Vr/CKKZEJ/Pxw=
+
+Name: com/sap/bw/core/ui/fieldassist2/ProposalFilterDialogFactory.clas
+ s
+SHA-256-Digest: So5Z/5KTvPltwdlFhyFh0GFGPYvX0TzqFmMfjd+Ou0E=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractSelectionDialog$3.class
+SHA-256-Digest: rBXYKBIKXL6MVL2Dyp+tSdswwdc6sQKT9Py5fJl6VNg=
+
+Name: com/sap/bw/core/ui/fieldassist2/IProposalMatcher.class
+SHA-256-Digest: /WOoSCwxI4KXfibI8Gjt59CH1BhCn8Mcb+aCAECB7oI=
+
+Name: com/sap/bw/core/ui/INativeEditorInformation.class
+SHA-256-Digest: N6d4GQA9XjPzs5LHl5duXVneGzccohtpCE4nD8OU39k=
+
+Name: icons/open_hub_dest.png
+SHA-256-Digest: OP9RPfmEIxhzAtCwO8Z6PotFZJe02h+EujumRSuqPwA=
+
+Name: icons/InsertRowBelow.png
+SHA-256-Digest: K0e5//eE26LpzdDdLj/ICGP2TqCSCXOaMeHcQZXh37Q=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog$9.class
+SHA-256-Digest: Z6l9HhdlVVtervBLF2Fev5b/eYLVPYxJJ4+ehFUysjE=
+
+Name: com/sap/bw/core/ui/fieldassist2/ParameterCallBacks$EmptyObject.c
+ lass
+SHA-256-Digest: CTOtMl8mLwMbM96KtopVxUgQck7VgPMU2VS4bcsnSM0=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$TreeInsertPosition.class
+SHA-256-Digest: 4+SVkMpaBVxz7cw3mUdp2AnG9iaQ5UCYfF0zQmkooV4=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/BWProjectField.class
+SHA-256-Digest: mfwcHsw0gbDbq+VS1VBSac5U7zVRI+xyvYkh+AYbicg=
+
+Name: icons/blue_gt.png
+SHA-256-Digest: 17K47DbCiKStj9Q8wepHobL/553HkwLc0yzS9Tz2+zU=
+
+Name: icons/logon.png
+SHA-256-Digest: Ra1hnkaPrx/wqUe8Mg2MYz/r4zZNooGlbzH9sp5oIuk=
+
+Name: com/sap/bw/core/ui/contentassist/DefaultLabelProvider.class
+SHA-256-Digest: 1hUQkYfsUmfjzYCY1fqcVLsNvgOvhLwEapMCuId5JfE=
+
+Name: plugin.xml
+SHA-256-Digest: BUqXbi6CuMoxG0tTgC4o1gtt7CxPlc9iyuYIMU2iVc4=
+
+Name: icons/lock.png
+SHA-256-Digest: bCIsd4ofxyHgELbbH575tEX5Z6VrEFxKKXN8j+avsII=
+
+Name: icons/freechar.png
+SHA-256-Digest: CGMGDfgsqsCUiom8uKkD4bmmreE7SVCICMbL0U0A6Ac=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/IValueHelpResultProvide
+ r.class
+SHA-256-Digest: 2m4z3n+cjf8AGZVR2xbNsLjCS9fheFg2XpdQD63s8Fg=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/MDInfoProviderProposalD
+ ialog.class
+SHA-256-Digest: oD3lu/LGkdKQfU5v4T1qawuEkR6rYOkzdwS9/aSpBd4=
+
+Name: icons/bw_title.png
+SHA-256-Digest: HmaVjfoiGhDrzJVk0jDsUkbJKb8x4ns5WKQfwXrIPcw=
+
+Name: icons/cells.png
+SHA-256-Digest: D8Vp5t7vdN8qVXOW4hPMBYugvo+Gs8IPnI5uST1M5PQ=
+
+Name: icons/bwdmod.png
+SHA-256-Digest: QB8sjbqbF9921i/8nESY1itlLYAphxWsRylB10DLMxw=
+
+Name: com/sap/bw/core/ui/history/BwHistoryPage$4.class
+SHA-256-Digest: 9Qd2yHt+fSGzWh1avZbgTrQtfMGT8q++ktcZVicX3Zw=
+
+Name: com/sap/bw/core/ui/wizard/WizardProblemsStack$4.class
+SHA-256-Digest: buHMGrusCMTX+1EwdtfbiSq53nV5WfMPt+kJuu/ohG8=
+
+Name: com/sap/bw/core/ui/wizard/HanaSystemSelectionPage$1.class
+SHA-256-Digest: sGIdJX9sSv339T5dyaXJsqZ/uQ3RPC2+ssvNSEANMsk=
+
+Name: com/sap/bw/core/ui/label/TextModeDependentLabelProvider.class
+SHA-256-Digest: RJHYC4wf0yIYd3PmNN+4NHrc51YA1GVY6gU2/+3T8bA=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$5.class
+SHA-256-Digest: oL3UrqZWvSf4GCVRQVvD0Qz3xVzOj7jrsVZ2N7jbQ/c=
+
+Name: com/sap/bw/core/ui/ModificationFieldHandler$1.class
+SHA-256-Digest: XHCsVawWkXHyRCfqb6PBj1q48lMAZTlLoeCoOVNFOq4=
+
+Name: com/sap/bw/core/ui/openurl/BwmtFileStore.class
+SHA-256-Digest: aC4K0r7oCTnZo2pJOcZVTTdij9ODPjiElXkLN90k3+g=
+
+Name: icons/bwiobjhry_excl.png
+SHA-256-Digest: 3L8u5syiMMr4tbgneSx26E2WPDhu9ECkwX8yzmhVuZs=
+
+Name: icons/services.png
+SHA-256-Digest: z14HUz5xHBL3nGTYg77g4aLEEAnHsJMmsR2P9QRfS4I=
+
+Name: com/sap/bw/core/ui/utils/WrapperText.class
+SHA-256-Digest: KL2rLliqEzykKeliNKYsbO4Jx44BS8/B/qvHFligheE=
+
+Name: com/sap/bw/core/ui/utils/BwStatusBarUtil$1.class
+SHA-256-Digest: SrwKnGdyUNyZKxgSgFQI15FtVmAEXOm7d/xEfK7lAhg=
+
+Name: com/sap/bw/core/ui/fieldassist/IDestinationIdProvider.class
+SHA-256-Digest: 1/xTBAONVC7GW84BMqPMYJE6ZphLgx0GdwSf1bdv1Yo=
+
+Name: OSGI-INF/l10n/bundle_en.properties
+SHA-256-Digest: qj36DmqY/MrhHRFeVLzY7GMoXGNDjeXtPSdJNPw7EmE=
+
+Name: META-INF/maven/com.sap.bw.modeling/com.sap.bw.core.ui/pom.xml
+SHA-256-Digest: UK95oKcFQmf/5r5q2yEpyxJmFuvvoBblk0Qxepbqjng=
+
+Name: icons/bwvirt.png
+SHA-256-Digest: FimR9NeEW8bZbcyo2quwQ8M+9AUPRjnBzi26Lfg/398=
+
+Name: com/sap/bw/core/ui/fieldassist2/IProposalResult.class
+SHA-256-Digest: AzuEz4Wwf088z8imrvdSpyD7Om0+8n1ixLcfONxT41s=
+
+Name: icons/proc_run.png
+SHA-256-Digest: zzDjhUWARDaFu+FGrvrDq9K4dffEI3/qiL8ylOw9Moc=
+
+Name: icons/bwiobjtime.png
+SHA-256-Digest: C6DmZnfxlre8NWPP2xrxGL48MfIHEnPkg/0GBadrEco=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ProposalProviderDialog$
+ 2.class
+SHA-256-Digest: 7hgE+7pYTNqjsyL8AGY8cXiwn9x/QzPcOlU67V9C7u8=
+
+Name: icons/listview.png
+SHA-256-Digest: mHt/IuE5rU2Y+1MYw7zDQ0G/pcv4+LrCBFJU1W5MAW0=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/MIMETypeProposalProvide
+ r.class
+SHA-256-Digest: ZFkT4Zi0qDHArTqQqBpkSBPApm7Pmdp5iVJcyAovq3w=
+
+Name: icons/role_title.png
+SHA-256-Digest: vgoLeD9G4Oxhf3jInYQRnILUH/Xu32coCEJUSN8q2Po=
+
+Name: com/sap/bw/core/ui/label/DisplayModeHandler$1.class
+SHA-256-Digest: MH1JyVqDKt7yXAvyTDRD3qPheKuN4E6QMGp5CK5Ccc8=
+
+Name: icons/preview.png
+SHA-256-Digest: F+ZvrKFHOZUF8H2L1nGWvbbe2vxMKGpEabvMt2vYvO8=
+
+Name: icons/search.png
+SHA-256-Digest: sdjbElc5PSkhamd3I8yc7blBQYifoSvft/ZzCD0s+ps=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/IProposalFilterDialog.c
+ lass
+SHA-256-Digest: v10JQ4cjRZSBkMNZfeM+S7LiGXwGR1FhVoflGd9ooLg=
+
+Name: com/sap/bw/core/ui/utils/MasterDataReadHierarchyClassParameter.c
+ lass
+SHA-256-Digest: HoIiCCFwpQg/Bpk1H0QcaXPxjb35DUaAGhTUymuCRbw=
+
+Name: com/sap/bw/core/ui/fieldassist/IEditField.class
+SHA-256-Digest: RvL5qjF9+Teym4TNh6dJBV9eLshMMCXOUHuaXAS1CWU=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog$10.class
+SHA-256-Digest: fifyWBEILv+HUQQMbG1zfhfI3kx1pu8vN7+0VcYjYxk=
+
+Name: icons/questionmark.png
+SHA-256-Digest: J6yQ9OMKxTtN5e6ixTfQMbk5RxeGhPgDj1ybW0xFi38=
+
+Name: com/sap/bw/core/ui/dialogs/AddEditDimensionDialog$1.class
+SHA-256-Digest: dnembU8vRIyjPDzV8YXyqB0dXPbfroiStUHwHYwB5eE=
+
+Name: icons/exception.png
+SHA-256-Digest: jQW1AbOz1xGtJcqSePR9RPUy0LSQNCic8+Qt5NTyYvM=
+
+Name: icons/bwlpoa.png
+SHA-256-Digest: 22DKGTOl7YqeHEx1J+/eA9ytOTnes6M5njEi0pTp/c8=
+
+Name: com/sap/bw/core/ui/label/ITextAndDescriptionLabelProvider.class
+SHA-256-Digest: SPAnUXbu8bpmHt8Q7obW+0rh/dYqfKWvuuzMI+QOCEY=
+
+Name: com/sap/bw/core/ui/fieldassist2/ProposalFilterDialog.class
+SHA-256-Digest: AnOfD4F+7AWQnhbLtG+ufSSHoKXE552ao4QAJeERGH8=
+
+Name: icons/proc_stop.png
+SHA-256-Digest: xBgkdAAJHVlpUDEbm4KnOGMZ65jhpnr4CYlqRAbS2ss=
+
+Name: icons/src_system.png
+SHA-256-Digest: cMre9TJu1i3SIxZNNYKuv1qnFTJXaBSedDAtnGymmrk=
+
+Name: com/sap/bw/core/ui/fieldassist2/IProposalResultProvider.class
+SHA-256-Digest: iRvd69wpABzE+mEyS3H6LJckkmPPI/Vk4mSAQXxtFS4=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/RadioButtons$1.class
+SHA-256-Digest: LuVJM/MyZfipZ8lQZwqeAflYD9VJGk1XZ72bLoNFzi0=
+
+Name: com/sap/bw/core/ui/PartAdapter.class
+SHA-256-Digest: rZs2duI8Yy3iwVzdRuRcBNCXAG+qzQktAbp/pE1VMP0=
+
+Name: com/sap/bw/core/ui/fieldassist2/ProposalControlFactory.class
+SHA-256-Digest: mTJf2TAxU6mD6LwzXQYmCIwdv7ve4WOHgk4AbIhJjcw=
+
+Name: com/sap/bw/core/ui/contentassist/IObjectListUpdater.class
+SHA-256-Digest: SIk3Y/jJBLojTD7l9b028sc7gXeyEvHFLbtf9G2Qp/o=
+
+Name: icons/ruleLookupFramed.png
+SHA-256-Digest: 7Wen7V4YwnuPBP4P9Ser6MeLtJTOQttfY8Fnw34A6/4=
+
+Name: icons/dimension.png
+SHA-256-Digest: znd7Zw0cGePT3X8OcZcvTkrn2zNvOnbIX1xxqG0i0AE=
+
+Name: icons/src_system_bw_udc.png
+SHA-256-Digest: 9N0gKbmv0NSo7iTBIEtO/TFPtuojFxMSXf5HdcfkgE4=
+
+Name: icons/bwhcpr.png
+SHA-256-Digest: MTupPiMZHWGWMQw087Vde3Cu330PDEQjIYCtsvR/ShY=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ProposalProviderDialog$
+ 4.class
+SHA-256-Digest: 9HyGZnVtA0FwY55vgbV0y7veAizj2sGcXc8cqjCVWhQ=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/ProposalContentAssistPr
+ ocessor.class
+SHA-256-Digest: qdR5Cpg+LmVFKHo/WSZ6jHkyEvNOqvs3m0l9jsDFgMw=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/InfoProviderProposalPro
+ vider.class
+SHA-256-Digest: +wlrni72azpVa0Wst9unGcP2FKxHjkHwRq/hDMHAeaA=
+
+Name: icons/bwstructure.png
+SHA-256-Digest: 6LsnBsd775P5VtxagAfZCth0rkE2oFQRLxFFwVfArl8=
+
+Name: com/sap/bw/core/ui/internal/UILogonService.class
+SHA-256-Digest: HLNY5kC6CRpqSO+b0NQHgf7BiShnxm3LwTUD+TEYjWY=
+
+Name: com/sap/bw/core/ui/prefs/SourceType.class
+SHA-256-Digest: pLXnN8s/bhIzIUzIpaGaJqndy1WeVyBdboZ9sOfBgQI=
+
+Name: icons/InsertColumnRight.png
+SHA-256-Digest: aM3jiCw+nhExgj6AFisPEObkY/F7Bm+YAgq2iWIx5Pw=
+
+Name: com/sap/bw/core/ui/openurl/ShareLinkDialog$1.class
+SHA-256-Digest: pPX1bnSH9nr5GBmAH7BKFOchzNfEOYBVSwb2BUNmOIY=
+
+Name: icons/condition_inactive.png
+SHA-256-Digest: L5hRElcMxe21svkvrvLa4+4v3yqXkkCvN8dOYyZ+VEE=
+
+Name: icons/bwodso.png
+SHA-256-Digest: JkQ7YjdSXfhvy7XMmEBxYnegI1VJjQyKhYQWo16EK6s=
+
+Name: com/sap/bw/core/ui/contentassist/BWContentAssist.class
+SHA-256-Digest: K9FqLADgQsGS251hc1r60wgk5/x4GCyT9DvuHDcv3Kk=
+
+Name: com/sap/bw/core/ui/providers/CenteredImageLabelProvider.class
+SHA-256-Digest: PE7FiRHc6XJhjb9wfr8smlMkDA5RUe5W0nfCjGgZiPE=
+
+Name: icons/type.png
+SHA-256-Digest: ErFaVaRSh4XLPus+9ozBYFBlUx5uo3Yb+LuR9eAKwE4=
+
+Name: com/sap/bw/core/ui/formula/FormulaTemplateProposal.class
+SHA-256-Digest: 38I/VCJm9hhB6y8+NKEXwaSQUTS0bZTRyNkiywBk2ss=
+
+Name: com/sap/bw/core/ui/BwNaturePropertyTester.class
+SHA-256-Digest: 3I1S2bfa03jnYtORVnn+sQ6SCCJMJfDRa6Ne7SOw1oY=
+
+Name: icons/hana_modeler.png
+SHA-256-Digest: ibynVBvl16/7Uj3U8YOxxj9w7sNZjq/QrfAbBVcQMFw=
+
+Name: com/sap/bw/core/ui/label/DisplayModeHandler$1$1.class
+SHA-256-Digest: eqsBSRhg8GzOW0m8ORtGhJXok9Dud5Rl9OecbKSUqJE=
+
+Name: icons/prio_order.png
+SHA-256-Digest: in2UW94BGAOY+O+yw90EOIoqu9yWVV5vPE2sM5GRaqI=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/ProposalControl$1.class
+SHA-256-Digest: BPlkY57r9ibJSSGY6PzCdgM2OaIayai0q/b3SvTXrYQ=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/EditFieldType.class
+SHA-256-Digest: GauSf6zsYkD21haIGbAMQI6Z8+OZRX3pHyQ6sQLIGGA=
+
+Name: com/sap/bw/core/ui/providers/AuthorizationRelevanceFieldLabelPro
+ vider.class
+SHA-256-Digest: TYvOX8CKYytK/R6VaU/wVCBZkMBjdn34pbJ/zYvlU94=
+
+Name: com/sap/bw/core/ui/contentassist/IWizardBaseDetailsUser.class
+SHA-256-Digest: GhkbZZC2yMaAYhqQhmgWEdwo/VRvHm5bfyeyES0crYc=
+
+Name: com/sap/bw/core/ui/fieldassist2/DefaultDialogProvider.class
+SHA-256-Digest: d09guOsHlMKVy4RV3/pyQsEYEvdwYKSwKcuxHwzHTmQ=
+
+Name: icons/bwcalc_reused.png
+SHA-256-Digest: 8BtEPi5m/35LO8tQu3B5S+nrn0/eGd4IzvNSL4O9S/I=
+
+Name: com/sap/bw/core/ui/fieldassist/InfoProviderLabelProvider.class
+SHA-256-Digest: SwGdzF4CgKioEUQkSbJk3FPK71lOOx4DzG6osAiCj64=
+
+Name: icons/infosource_wizard.png
+SHA-256-Digest: +t2md+1a08X4NBJdh5Oxa/nGyVY4t6XuApC3T25wvzk=
+
+Name: icons/sap_system.gif
+SHA-256-Digest: Yl7uYcTzTLSr7XnNrIIP5QuD3IK8fUyWmTZpVMU+szc=
+
+Name: com/sap/bw/core/ui/controller/InfoProviderRuntimePropertiesContr
+ oller$TEST_MODE.class
+SHA-256-Digest: kZFGaCvbZ4p0obcR5phgYF5vCKKy4jxQMCg/27yfAh0=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/ValueProviderBasedMatch
+ er.class
+SHA-256-Digest: nRO99LSab8FWBGtfUZZGiOm7uawCsH0+3+xPwA9E2zE=
+
+Name: com/sap/bw/core/ui/openurl/registration/BwmtHandlerPreferencePag
+ eSection$1.class
+SHA-256-Digest: aNVqpRYGqW3bc8p+HEg2f/96O0Q7TzXBVEFlqwQmrUs=
+
+Name: com/sap/bw/core/ui/fieldassist2/valuehelp2/ValueHelpMatcherAndVa
+ lueProvider.class
+SHA-256-Digest: ql6oKEuwoJUqexjfvS6xAZ5gX9G22ZxA6WU/fUmrHTE=
+
+Name: com/sap/bw/core/ui/internal/EditorService$1.class
+SHA-256-Digest: uuW+VUvJxOiPwgsEt1acgeLH445Vwf6wVmgGCHPv6IU=
+
+Name: com/sap/bw/core/ui/controller/InfoProviderRuntimePropertiesContr
+ oller$RuntimePropertyContent.class
+SHA-256-Digest: 0+NPhJW7YexMGGtDmECwtU8vSEyzSwFGRUHcmQSJzTk=
+
+Name: com/sap/bw/core/ui/wizard/WizardProblemsStack$Location.class
+SHA-256-Digest: m/Qxcw2XV8X0y/9NiDXNrGQ4Rcyu0g4te0fEcb9jySo=
+
+Name: icons/bwlpoa_sapgui.png
+SHA-256-Digest: ETf6aQszT6Y0i8cQP55K3KLwdbjEtaywkaiNWY8xRCE=
+
+Name: icons/bwattrib.png
+SHA-256-Digest: ujGsnOmBr6x2pG3g3bXpsYZMByDXuPqHxXxYJ/HjGRc=
+
+Name: com/sap/bw/core/ui/formula/FormulaOperandSelector.class
+SHA-256-Digest: wCTWFOpfOsq1y/KWpZvDvqlFLji175trEBEtUYJk7EA=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/InfoAreaProposalProvide
+ r.class
+SHA-256-Digest: xVkH4D7/UfIbk6zubSRcvjjaEAxwj+6CQYmrU7BFAR4=
+
+Name: com/sap/bw/core/ui/fieldassist/IAssociationComposite.class
+SHA-256-Digest: +FzimJvWRlxunzQL32hLFJB+8wET8B1s9vYMCMmPAHI=
+
+Name: icons/ruleDirectAssignmentFramed.png
+SHA-256-Digest: 5i/BsvK0IPtoCIu1KKn6BncCih9XTCLGSaSr4D3UvEs=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$3.class
+SHA-256-Digest: RrYfIck0s/yzHICcK15Rs3Cd0vCFlBFCJDtFX2C/61g=
+
+Name: icons/propose_join_wizard.png
+SHA-256-Digest: bV+BpKTfWgumssQxbFnST0eLcYBlv3PKPi2VR/Gfg/c=
+
+Name: com/sap/bw/core/ui/internal/EditorService$2.class
+SHA-256-Digest: JbROGIVZSC220U6RMih2ihG/sQjWVlhbsjnT7KsjAUk=
+
+Name: icons/bwreskf_reused.png
+SHA-256-Digest: 913psm5129yIihbI3ki3aG+2iUCwBUAu04bRV4WaQvg=
+
+Name: icons/arrowleft.png
+SHA-256-Digest: 7KP1sQlQjnLgs5/ltbS6Q0gvGVqOqLQKqVRMIDMyaaw=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/RadioButtons$2.class
+SHA-256-Digest: Gs1be3tl/+7LHnbAVdJvZFmVCKDTs9DseYBaCjoZmpo=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$2.class
+SHA-256-Digest: ha2GzL+qkJmMICc5SrQblGkvd8qOlQaiMP7EOOjQAPE=
+
+Name: icons/ruleAbapRoutineNoFrame.png
+SHA-256-Digest: R2h7dDR75VikMHLfziF5i8PM2JJvRmtakyNzG/4+3Aw=
+
+Name: com/sap/bw/core/ui/internal/BwPreferences$1.class
+SHA-256-Digest: YsfiyaGKFXXHMuu66Vsihp87PtV/Q8v66GL8jgBeZo0=
+
+Name: icons/columns.png
+SHA-256-Digest: u1zshR8v37kFQ6CstDwoQtag9pVQpCfk8ttqNmc0BqE=
+
+Name: com/sap/bw/core/ui/prefs/IPrefsStoreSync$Operations.class
+SHA-256-Digest: CoxrbdJVTfLmGqP7mHedolgwuhZyxF1tT3PuWovO1pg=
+
+Name: com/sap/bw/core/ui/dialogs/DelayedProgressMonitorDialog.class
+SHA-256-Digest: qOYc3j/w3lPsTJRG7lxMgvwx/5e6NsWiU7+YX6npjq4=
+
+Name: icons/publish.png
+SHA-256-Digest: sL4h+3bk3zZBh3gT1qAEZMDWzqY+Mv6ksXz72dXivaI=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractAssignmentDialog$11.class
+SHA-256-Digest: Il35n1tMTnmDO5nqB0aGxlQgZM4m+Aj2d0HUggj8KX8=
+
+Name: com/sap/bw/core/ui/IconsWithState.class
+SHA-256-Digest: yX5umWYTakyitFiDujlyNQLQBLYw7pg8zjrbR2jJbp0=
+
+Name: com/sap/bw/core/ui/internal/BwToolsUiStartUp.class
+SHA-256-Digest: E7ExOxC1iLF6S+LIVeSGN9gAL6g0tLTMcY8NXjeFIfk=
+
+Name: icons/analytic_view.png
+SHA-256-Digest: VdewAY0Xp/BJ7REqYMT5YIi30VuCB+QrEXSCIe7sr54=
+
+Name: com/sap/bw/core/ui/fieldassist2/valuehelp2/ValueHelpResultProvid
+ er$1.class
+SHA-256-Digest: 0eK8vItl9BuuJJ9e5aUd44lQuhl6edCNQrGm4jkNgZM=
+
+Name: com/sap/bw/core/ui/utils/ComponentUtil.class
+SHA-256-Digest: QG9IQqF0Fhw3oC+8sP0rX5TCqEQKfQwtTOJN7DvE2Yc=
+
+Name: icons/bwreport_sel.png
+SHA-256-Digest: lcr/QNjSWbfGMLSv3hhs1hhv3NkUaL1O8L/VptYlkRs=
+
+Name: icons/app_small.png
+SHA-256-Digest: 5AOGtBxwE+4yCVhxwdrr2PIrBmFRUV+InVVjrwU6EAM=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/emf/EMFLabelProvider.cl
+ ass
+SHA-256-Digest: iSmuksN6931L8oOMaxrUvnKueblarR6DZhT1WnxsXG4=
+
+Name: com/sap/bw/core/ui/fieldassist2/AbstractProposalLabelProvider.cl
+ ass
+SHA-256-Digest: qOEMr5wv3Q7nMWJxq/YZlsnorhu9A9AFL1waL2JWccM=
+
+Name: icons/bwquery.png
+SHA-256-Digest: GTx1fqz4ftlfugvV0U2UWMaANj+/1tFlePTT3iDMkfQ=
+
+Name: icons/ovl_changed.png
+SHA-256-Digest: L+sx6jLrMKTduy00lUh8WkvUJUquvvWqZkYgj9/AdgQ=
+
+Name: com/sap/bw/core/ui/open/HanaIcons.class
+SHA-256-Digest: wM2yWAPyIyypgSRrwN0+Ro9L1FXcCo9vI43A6bjTQ9w=
+
+Name: icons/decoratorMoveNoFrame.png
+SHA-256-Digest: jOClUwc20m+T0g0WFXZGrPAZQBhTaDw+NdreMhmhEwE=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/VariablesProposalProvid
+ er$VariableRowContentProposal.class
+SHA-256-Digest: j5mCRAJFtowQRaNIKRWYLD2yZlTCvFahwRdI26MizS8=
+
+Name: com/sap/bw/core/ui/wizard/WizardProblemsStack$1.class
+SHA-256-Digest: 6oz5TodHuUcVHcLZ5uu8Dg4m99097v3fW8vgMlL5hxc=
+
+Name: com/sap/bw/core/ui/fieldassist/controls/EditComboField.class
+SHA-256-Digest: +D4iEgEgZQ1FtidWwQtFnvUuyE/opnLfMnN+R+JmCTI=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ProposalProviderDialog$
+ 1.class
+SHA-256-Digest: pWqbgmm1U+xjz43OGOCtjWU/ikLHFoPXsgasYV4/3aM=
+
+Name: com/sap/bw/core/ui/utils/UiUtil$1.class
+SHA-256-Digest: 4LQDrOOVGcMlnihcd47SyhDloWJnOmpsS4d5OI4p6jU=
+
+Name: icons/bwcube.png
+SHA-256-Digest: ropkBKUcGLmiacKfnqkh7KbXoYlxBHRwieeAxPEbo/U=
+
+Name: icons/bwmodel_med.png
+SHA-256-Digest: wR08F8xZeGWEV/stFVg6544sV4cvYfT9NKblwKFcsvo=
+
+Name: com/sap/bw/core/ui/utils/MetricsUtil.class
+SHA-256-Digest: nbqrTw3kod9Pl6j63DzeRyqvZGZ8DUBBkxB2r9g0AAk=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/BwAndOdsProposalProvide
+ rDialog$1.class
+SHA-256-Digest: nP7rboiBvAyWWWVZaeMjzIKf57a3tBqxRaB4Xb8OVys=
+
+Name: icons/openbwobject.png
+SHA-256-Digest: Hbp+oZK4EUKxDE0uUMNMEtuxOHJEJvwefK3ai2V1JAs=
+
+Name: com/sap/bw/core/ui/prefs/IBwPreferences.class
+SHA-256-Digest: SHPFOEE7BXpilsNR/eFSRRa5hnK+575fWVbLWPdaLT0=
+
+Name: com/sap/bw/core/ui/dialogs/AddEditDialog.class
+SHA-256-Digest: kDWfDSkCoMiepHkiKT+sMTkXXbghw/EtETcL7Adm1q0=
+
+Name: icons/ovl_time.png
+SHA-256-Digest: mH79/JxUyCypzUnT+to1cJ2BMVs9jSSAjEyZPCu5Y3o=
+
+Name: icons/bwcurrunit.png
+SHA-256-Digest: PQyIBTtfjqX0XXXmXjZdZWO3kQlXlYbLVMzifRiPNKw=
+
+Name: icons/transformation.png
+SHA-256-Digest: bllgARx5GlsgQSXL39MFcNlpbd1t245YGIGcOSXqul4=
+
+Name: com/sap/bw/core/ui/wizard/WizardProblemsStack$2.class
+SHA-256-Digest: bHDjZD8iNdzCXlm22oD5fB1cj7By+ld3MzeBmo5P+9Q=
+
+Name: com/sap/bw/core/ui/label/DisplayModeHandler$TextModeLabelProvide
+ r.class
+SHA-256-Digest: Tc4GQqPRzJkRP0X49/9YnKncqD7Bz5LhHCJpM0ZQFr4=
+
+Name: com/sap/bw/core/ui/formula/CommonFormulaTextAttributeProvider.cl
+ ass
+SHA-256-Digest: KwEYUcaeKW/02Ve4lnjyppu5++grHeaW/LBYfYZgkpc=
+
+Name: icons/bwiobject_wizard.png
+SHA-256-Digest: VxtQxMmWVNRDQTRwT+83NXXjUtJd0DIM6G5WMDhpwrg=
+
+Name: com/sap/bw/core/ui/internal/BwToolsUiStartUp$PerspectiveListener
+ .class
+SHA-256-Digest: uN/r3QoJLcXAPcQo8sf1N5nWXY6mpdJ7NkR6dXsp6h4=
+
+Name: com/sap/bw/core/ui/wizard/WizardListViewer.class
+SHA-256-Digest: wgoJkkSIth55DnitFzijJhxM8vCoLIxLtdC0BWq7AWQ=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/InfoObjectProposalProvi
+ der.class
+SHA-256-Digest: clEJjLh39QmBaDocI9QZkQc3ZKr00+nAwcKwKX06UgM=
+
+Name: com/sap/bw/core/ui/validators/DimensionNameValidator.class
+SHA-256-Digest: rDLWRpfG/Bh1NaTwaSHPDsIiNgNQQDMvcmz/UZTDFyI=
+
+Name: icons/analysis_app.png
+SHA-256-Digest: jDBQ5tF/zDNX3k5de11oqLsXpHnhSiqFj14VUS/QFig=
+
+Name: com/sap/bw/core/ui/label/ValueHelpLabelProvider.class
+SHA-256-Digest: MK8uJwVFVWycR77mLs00v5nUKSi/IFGwS3R2zquorhY=
+
+Name: com/sap/bw/core/ui/fieldassist2/valuehelp2/ValueHelpResultProvid
+ er$2.class
+SHA-256-Digest: cEqXnLRqlgupdYb+D3YaZ32tIcNjDsiTZOfHydzSC5M=
+
+Name: icons/bw_wizard.png
+SHA-256-Digest: mcG8ztWEVVFZfQSF0ynCGutol3cgsuHJVE3SNKv11LU=
+
+Name: icons/bwvar_wizard.png
+SHA-256-Digest: wnXuBHJxwOL4BTiiASsw0dOgV2R2T8Bw+COwO4fusN0=
+
+Name: com/sap/bw/core/ui/dialogs/AbstractSelectionDialog.class
+SHA-256-Digest: z+NVa6FnlMsfTgWKHnafVsqKG9a7zVsnl4tYVigatnc=
+
+Name: icons/ovl_inactive.png
+SHA-256-Digest: B/1avF2ZNM0mEBdEPjPtwcMJQ+0PilpUQkXxLFRQd+k=
+
+Name: com/sap/bw/core/ui/openurl/registration/WinRegistry$RegistryType
+ .class
+SHA-256-Digest: e6gUZJBrhvKWhEvuHDZNVD6VxUmZd/xUrrMwfy+9ERo=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ProposalProviderDialog$
+ SearchDescriptionFlagAction.class
+SHA-256-Digest: otjNe7PuyUVKnSFxrH6jAKym5Uw3dJ/IlSjWL1ht9Bk=
+
+Name: com/sap/bw/core/ui/internal/BwToolsUiStartUp$SfsCacheInitializer
+ Job.class
+SHA-256-Digest: 3FGD2lsTGUsqgeF09n4GylAztI1/SsIbH/P45kdYRrE=
+
+Name: com/sap/bw/core/ui/wizard/WizardProblemsStack$3.class
+SHA-256-Digest: GMgWTKV02yvr+rAxEV//YLba/SQmPHy4Hk9GUeBxPgU=
+
+Name: com/sap/bw/core/ui/OverlayImageIcon$OverlayPosition.class
+SHA-256-Digest: tbId4Ljremsj8GDmPuUDOWNPXwaLtLJwtzO7zGf3sXo=
+
+Name: com/sap/bw/core/ui/wizard/WizardConstants.class
+SHA-256-Digest: wBjGjKIWof3b/0RiPn/L9+kiWahJtqg0xH5of2IGK2I=
+
+Name: icons/red_ne.png
+SHA-256-Digest: 1rv6JvBugMiAF9yNq/8JzNgDxa4EEMRgwMI2JkrNHt8=
+
+Name: com/sap/bw/core/ui/wizard/SearchListComposite.class
+SHA-256-Digest: /lz68X8WXNEMcOplAKEzIAiivjrXLgt7efooHeznZBs=
+
+Name: icons/bwmeasure.png
+SHA-256-Digest: wSdP4pt0THQ82WaiBkyTVBKYhImQwyncwyLfQAM4gBw=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ProposalProviderDialog$
+ MyItemsFilter.class
+SHA-256-Digest: afJ1dGytLkhAvFO3U8SNGLUTKkTx34JzY3n+vQJ80Qg=
+
+Name: icons/bwselobj_global.png
+SHA-256-Digest: 47TZHXd0jwoBjLxJwATiFfMUPDG0FBxyiadrHr45b+c=
+
+Name: icons/bwhcpr_wizard.png
+SHA-256-Digest: 8SEdc+n9wVx5J+DAvdqSCQIsxErkrdUzyhyrdsWvRIc=
+
+Name: com/sap/bw/core/ui/providers/DimensionTreeLabelProvider.class
+SHA-256-Digest: V2DKddEZUO6642lkprI+NTjYUyrE69dn4RRCrak6V5A=
+
+Name: icons/Meter.gif
+SHA-256-Digest: GYTH/ESi9lQ0iTv38yHma2Kl2TKFRexCFReE0/W7oAA=
+
+Name: com/sap/bw/core/ui/formula/CommonFormulaExecutableExtensionFacto
+ ry.class
+SHA-256-Digest: A+Zw0ChVvXk8V7v4P9Cct7UBIjnfzmFZy1It3UMYTCA=
+
+Name: com/sap/bw/core/ui/fieldassist2/IProposalControl.class
+SHA-256-Digest: tuCY5R6Ev/0yVtNHzCzjosp1Loz6STOAYzKCiMVcC9c=
+
+Name: icons/bwvar_bt.png
+SHA-256-Digest: Rbe2Ebu2gFpPC0ClxziHxjp71mzI+o2h3IKtx3iGyw4=
+
+Name: com/sap/bw/core/ui/fieldassist/providers/ODPDataProposalProvider
+ .class
+SHA-256-Digest: O3sAhKaVTnhbEObCVtQStrQ8orvB+kCGZvFSyEQbv7o=
+
+Name: com/sap/bw/core/ui/fieldassist2/internal/CompletionProposal.clas
+ s
+SHA-256-Digest: p/omy5d2d84lAPclxhdLhjJ4ilTxcY5SYll6IeeHY4U=
+
+Name: icons/open_by_role.png
+SHA-256-Digest: Q794jZIsSEqa+D6UpQckmOrAYP6vQCJlJvCD0kL1qug=
+
+Name: com/sap/bw/core/ui/IUILogonService.class
+SHA-256-Digest: UKWtByUYczvIJ1WVn0lLGGmxp+aZ06UkOtR6EKCiS2M=
+
+Name: icons/ArrowGreyDown.png
+SHA-256-Digest: 7fUFqW2nG/FSvRZoEIMR+L6qSKlmk2RfJ1wLCbu3Sf8=
+
+Name: icons/designer.png
+SHA-256-Digest: +KaLBm+L1MlvG9vNOok31C6jWWSnevIG3LUf3E57jBY=
+
+Name: com/sap/bw/core/ui/prefs/BwCorePreferencePage.class
+SHA-256-Digest: uy8ZWy0dDxRS/3eaM7W6XefzRseN9uoWJfc4X1d7jTs=
+
+Name: com/sap/bw/core/ui/IconsDisabled.class
+SHA-256-Digest: levqKKJF6+4by6WDneew/cPXF0ov5oZcG1lM9x8Br/Q=
+
+Name: icons/ExpendToArea.gif
+SHA-256-Digest: IJysBgU4KfE22YXdg/ada1iIo/798NoB8gdOVBsmpmg=
+
+Name: com/sap/bw/core/ui/wizard/WizardProblemsStack$5.class
+SHA-256-Digest: mdRFIUZJTjIz9AfgbFFoL8+KIPDCXMjfoJ2922M6sKg=
+
+Name: com/sap/bw/core/ui/providers/DimensionTreeContentProvider.class
+SHA-256-Digest: bUyvAbSoTyVIQbt9Xc4FyP2yZ/3Jkv2Qmt+qzvqh22E=
+
+Name: com/sap/bw/core/ui/open/OpenBwObjectHandler.class
+SHA-256-Digest: h8u5Ul1PAIdFyiFBPhpY1OsdZJRcTqaavC6jyEFTosI=
+
+Name: com/sap/bw/core/ui/open/OpenBwObjectHandler$1.class
+SHA-256-Digest: dCYFoBeCrm9ufFPNdKmjIe9To0lS74Zp42CUChNPkzk=
+
+Name: icons/red_ge.png
+SHA-256-Digest: KYjLWSwGUhFdpgv4JbcDx3YGDyj7vAPh69JRQKhvD6A=
+
+Name: com/sap/bw/core/ui/utils/ComponentHryNode.class
+SHA-256-Digest: 8QhG1+B2X3FHsNEXNbBdZp94c74EvE0TjwOiC3AEpZY=
+
+Name: icons/bwodso_wizard.png
+SHA-256-Digest: X4vLH0aspy3wYnnzrTySV1/Jir6XaM31Ctm/QNF+tQs=
+
+Name: icons/bwalvl.png
+SHA-256-Digest: hX4l5VDZqmGXTkfbrmXjBCjecGql0VrH2LDqtQUHlHQ=
+
+Name: icons/fav.png
+SHA-256-Digest: NVvNhh6g3aUV1CKeIipZBUU2pMP0oe67tmjJnX10zzo=
+
+Name: com/sap/bw/core/ui/fieldassist/DestinationIdAdapter.class
+SHA-256-Digest: bKmVzVPC4eavdyjc6ijuuD3kSJ1s3+aPfh0ICx750BU=
+
+Name: icons/delivery_date.png
+SHA-256-Digest: Krg8pbJAELLi1498r/fzapQEeLw7So7aa1NYTNKzKhs=
+
+Name: icons/bwdataslice.png
+SHA-256-Digest: 93he+9kxUSecTFHFOuZy7uKSICsBQLTe7R1o3rSLnMI=
+
+Name: com/sap/bw/core/ui/label/LabelProviderUtil.class
+SHA-256-Digest: Uirdu/GAri2PxejYJBU3tEaEy/uW+279neloFExFqkQ=
+

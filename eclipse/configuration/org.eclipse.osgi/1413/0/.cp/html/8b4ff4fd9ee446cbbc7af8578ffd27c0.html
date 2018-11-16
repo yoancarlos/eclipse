@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring SuccessFactors Adapter with OData V2 Message Protocol</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio8b4ff4fd9ee446cbbc7af8578ffd27c0">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring SuccessFactors Adapter with OData V2 Message Protocol</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this procedure to configure the SuccessFactors adapter with the OData V2 message
+				protocol.</p>
+
+			<div class="note remember"><span class="remembertitle">Remember</span> The OData V2 message protocol is only available if you are using the
+				SuccessFactors adapter in the receiver channel.</div>
+
+			<div class="note restriction"><span class="restrictiontitle">Restriction</span> An integration flow you deploy in <span class="ph pname">SAP Cloud Platform
+                        Integration</span> deploys in
+				multiple IFLMAP worker nodes. Polling is triggered from only one of the worker
+				nodes. The message monitoring currently displays the process status from the worker
+				nodes where the <span class="ph uicontrol">Scheduler</span> is not started. This results in the
+				message monitor displaying messages with less than a few milliseconds, where the
+				schedule was not triggered. These entries contain
+					<span class="ph uicontrol">firenow=true</span> in the log. You can ignore these
+				entries.</div>
+
+			<div class="note tip"><span class="tiptitle">Tip</span> If your input payload contains nodes without data, the output also
+				contains empty strings. If you want to avoid empty strings in the output, ensure
+				that the input payload does not contain any empty nodes.</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step">
+				<span class="ph cmd">On the <span class="ph uicontrol">Model Configuration</span> tab, double-click the channel that you
+					want to configure.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Go to the <span class="ph uicontrol">General</span> tab and choose <span class="ph uicontrol">Browse</span> in
+					the <span class="ph uicontrol">Adapter Type</span> screen area.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">In the <span class="ph uicontrol">Choose Adapter</span> window, select
+						<span class="ph uicontrol">SuccessFactors</span>  and choose
+					<span class="ph uicontrol">OK</span>.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Choose <span class="ph uicontrol">OData V2</span> from the dropdown list in the <span class="ph uicontrol">Message
+						Protocol</span> field.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Go to the <span class="ph uicontrol">Adapter Specific</span> tab.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Provide values in the fields based on the descriptions in the following table.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio8b4ff4fd9ee446cbbc7af8578ffd27c0__choicetable_qf3_2qw_gv">
+<thead><tr><th valign="bottom" align="left" id="d1700674e107-option">
+							<p class="p">Field</p>
+
+						</th>
+<th valign="bottom" align="left" id="d1700674e107-desc">
+							<p class="p">Description</p>
+
+						</th></tr></thead>
+<tbody>
+					
+					<tr class="strow chrow">
+						<td valign="top" headers="d1700674e107-option" id="d1700674e126" class="stentry choption" width="50%"><strong>
+							<p class="p">Address</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1700674e107-desc d1700674e126" class="stentry chdesc" width="50%">
+							<p class="p">URL of the SuccessFactors data center that you would like to connect to.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1700674e107-option" id="d1700674e141" class="stentry choption" width="50%"><strong>
+							<p class="p">Address Suffix</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1700674e107-desc d1700674e141" class="stentry chdesc" width="50%">
+							<p class="p">The system provides a value for this field based on the protocol you choose. For
+									<span class="ph uicontrol">SOAP</span>, the value is
+									<span class="ph uicontrol">/odata/v2</span>.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1700674e107-option" id="d1700674e162" class="stentry choption" width="50%"><strong>
+							<p class="p">Credential Name</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1700674e107-desc d1700674e162" class="stentry chdesc" width="50%">
+							<p class="p">Credential name that you have used while deploying credentials on the tenant.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1700674e107-option" id="d1700674e177" class="stentry choption" width="50%"><strong>
+							<p class="p">Proxy Type</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1700674e107-desc d1700674e177" class="stentry chdesc" width="50%">
+							<p class="p">Type of proxy you want to use to connect to the SuccessFactors system.</p>
+
+							<p class="p">You can choose <span class="ph uicontrol">Internet</span> or
+									<span class="ph uicontrol">On-premise</span>.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1700674e107-option" id="d1700674e202" class="stentry choption" width="50%"><strong>
+							<p class="p">Operation Details</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1700674e107-desc d1700674e202" class="stentry chdesc" width="50%">
+							<p class="p">Operation that you have created using the operations modeler. For
+								more information, see <a class="xref" href="9285d0f71bcd4849a4f0f0ababdb6ea3.html">.</a></p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1700674e107-option" id="d1700674e222" class="stentry choption" width="50%"><strong>
+							<p class="p">Content Type</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1700674e107-desc d1700674e222" class="stentry chdesc" width="50%">
+							<p class="p">Format of the request payload. You can select
+									<span class="ph uicontrol">Atom</span> or <span class="ph uicontrol">JSON</span>.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1700674e107-option" id="d1700674e243" class="stentry choption" width="50%"><strong>
+							<p class="p">Content Type Encoding</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1700674e107-desc d1700674e243" class="stentry chdesc" width="50%">
+							<p class="p">Encoding standard to be used for encoding content. Currently,
+									<span class="ph uicontrol">UTF-8</span> is supported.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1700674e107-option" id="d1700674e261" class="stentry choption" width="50%"><strong>
+							<p class="p">Page Size</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1700674e107-desc d1700674e261" class="stentry chdesc" width="50%">
+							<p class="p">This field is only applicable for <span class="ph uicontrol">Query</span> operations. It indicates
+								the number of records that the <span class="ph pname">SAP Cloud Platform
+                        Integration</span>
+								system reads from the SuccessFactors system in one polling cycle
+								when <span class="ph uicontrol">Operation</span> is executed. </p>
+
+							<p class="p">If you find that the <span class="ph uicontrol">Operation</span> stops due to a timeout, reduce the
+									<span class="ph uicontrol">Page Size</span> and execute the operation
+								again.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1700674e107-option" id="d1700674e294" class="stentry choption" width="50%"><strong>
+							<p class="p">Timeout (in min)</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1700674e107-desc d1700674e294" class="stentry chdesc" width="50%">
+							<p class="p">Maximum time system waits for a response before the connection ends or is timed out. By
+								default, 5 minutes is the timeout value if you do not provide
+								input.</p>
+
+						</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+<div class="related-links"> 
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

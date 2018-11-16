@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure Adapter in Communication Channels</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio1f066330e8314324bf3ebe3b6adc21b2">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure Adapter in Communication Channels</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc"/>
+
+		<p class="p">You should configure the adapters assigned to communication channels before deploying the
+			integration flow.</p>
+
+		<p class="p">The following adapter types are available:</p>
+
+		<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio1f066330e8314324bf3ebe3b6adc21b2__d554e15" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Adapter</span></caption>
+<colgroup><col width="17.006802721088437%"/><col width="82.99319727891157%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="17.006802721088434%" id="d573930e38">
+                                <p class="p">Adapter</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="82.99319727891157%" id="d573930e44">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">Ariba</span> sender or receiver adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Connect a tenant to the Ariba network (this allows SAP and
+                                    non-SAP cloud applications to send and receive business-specific
+                                    documents in cXML format to and from the Ariba network).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">Facebook</span> receiver adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Access and extract information from Facebook based on certain
+                                    criteria such as keywords or user data (transport protocol:
+                                    HTTP).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 "><p class="p"><span class="ph uicontrol">HTTP</span> receiver adapter</p>
+</td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 "><p class="p">Connect to a receiver system using HTTP (transport protocol:
+                                    HTTP).</p>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">HTTPS</span> sender adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Connect to a sender system using HTTPS (transport protocol:
+                                    HTTP).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 "><p class="p"><span class="ph uicontrol">IDoc</span> sender or receiver
+                                adapter</p>
+</td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 "><p class="p">Exchange IDoc messages with another system (transport
+                                    protocol: HTTP).</p>
+</td>
+
+                        </tr>
+
+                        
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">LDAP</span> receiver adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Connect to LDAP directory service.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">Mail</span> sender adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Receiver e-mails from an e-mail server (transport protocol:
+                                    SMTP).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">Mail</span> receiver adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Send e-mails to an e-mail server (transport protocol: SMTP).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">OData</span> sender and receiver adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Connect to systems exposing OData services (OData service
+                                    providers) (transport protocol: HTTP).</p>
+
+                                <p class="p">OData stands for the Open Data Protocol.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">ODC</span> receiver adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Connect to SAP Gateway OData Channel</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">SFTP</span> sender adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Connect to a remote system using the SSH File Transfer protocol
+                                    (also referred to as Secure File Transfer protocol) to read
+                                    (poll) files from the system (transport protocol: SFTP).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">SFTP</span> receiver adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Connect to a remote system using the SSH File Transfer protocol
+                                    to write files to the system (transport protocol: SFTP).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">SOAP /SOAP 1.x</span> sender and receiver
+                                    adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Exchange messages with another system that supports SOAP 1.1 or
+                                    SOAP 1.2 (transport protocol: HTTP).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">SOAP / SOAP RM</span> sender and receiver
+                                    adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Exchange messages with another system based on the SOAP
+                                    communication protocol and SAP RM as the message protocol
+                                    (transport protocol: HTTP).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">SuccessFactors</span> sender and receiver
+                                    adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Connect to a SuccessFactors system using the SOAP, OData, and
+                                    REST message protocol (transport protocol: HTTP).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">Twitter</span> receiver adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Access Twitter and either read or post tweets (transport
+                                    protocol: HTTP). </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="17.006802721088434%" headers="d573930e38 ">
+                                <p class="p"><span class="ph uicontrol">XI</span> sender and receiver adapter</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="82.99319727891157%" headers="d573930e44 ">
+                                <p class="p">Connect a tenant to a remote system that can process the XI
+                                    message protocol.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+		<p class="p">If you are quick configuring an integration flow, you can configure a few adapter parameters.
+			Refer to the relevant adapter configuration details for information on those
+			parameters.</p>
+
+		<p class="p">If you are developing an OData service, you can configure a SOAP, OData or HTTP adapter
+			assigned to the receiver channel and the OData adapter assigned to the sender
+			channel.</p>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="98da76c5d29348498e8b9e22ded9c028.html">Configure Communication Channel with Ariba Adapter</a></div>
+<div><a class="link" href="3dcc4080897c4bd4bf55bb8bf1bcac0d.html">Configure Communication Channel with Facebook Adapter</a></div>
+<div><a class="link" href="2da452effb764b3bb28f8e0a2f5bd480.html">Configure Receiver Channel with HTTP Adapter</a></div>
+<div><a class="link" href="0ae4a78909c4479cbc3cc414250919de.html">Configure Sender Channel with HTTPS Adapter</a></div>
+<div><a class="link" href="9597227a3a044904988fb9dca54aaceb.html">Configure Communication Channel with IDoc Adapter</a></div>
+<div><a class="link" href="f1145cc852ff476db659dc527372fe41.html" title="The receiver mail adapter allows you to send out encrypted messages by e-mail. The mail sender adapter can download e-mails and access the e-mail body content as well as attachments.">Configure a Channel with Mail Adapter</a></div>
+<div><a class="link" href="ff4cfc53ea5c440da78fe039d85b8319.html">Configure Communication Channel with OData Adapter</a></div>
+<div><a class="link" href="e3dce8814857444eacbcf0d3ca4e6706.html">Configure Communication Channel with SFTP Adapter</a></div>
+<div><a class="link" href="efff064fdb9140adbc4e195fdf906e3e.html">Configure Communication Channel with SOAP (1.x) Adapter</a></div>
+<div><a class="link" href="6bd724f37f29493eb619338c94982b01.html">Configure Communication Channel with SOAP (SAP RM) Adapter</a></div>
+<div><a class="link" href="6a51910140da45c38eecf4ac2c41c99e.html">Configure Communication Channel with SuccessFactors (OData V2) Adapter</a></div>
+<div><a class="link" href="9df8cc675ffd42e3afcf881127a2777f.html">Configure Communication Channel with SuccessFactors (REST) Adapter</a></div>
+<div><a class="link" href="28b29d6b50d6419eadb15e59b9462da4.html">Configure Communication Channel with SuccessFactors (SOAP) Adapter</a></div>
+<div><a class="link" href="453c174be6ca4098a8c99dc4c1262d25.html">Configure Communication Channel with Twitter Adapter</a></div>
+<div><a class="link" href="3cdbc29ca2b641738513ab8665bab9fd.html">Configure Communication Channel with ODC Adapter</a></div>
+<div><a class="link" href="06a753f90fd64272af1692603cdd3b9e.html">Configure a Channel with LDAP Adapter</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,805 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: M3B8guybGauxk63WlTqwe+K58/NO6
+ 3G5Wy+MaeWkIMM=
+SHA-256-Digest-Manifest: CmN6EkxoDPU+9z4zqY+jZzqKSGoSSLc3pYRUVh9PoeY=
+Created-By: 1.8.0_121 (Oracle Corporation)
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitsWizardpage$IDeliver
+ yUnitSorting.class
+SHA-256-Digest: eYDAIb5eAQQrm46TlW3hjvhTHBZ0NBpalJMTmQdrvDQ=
+
+Name: icons/calendar_GIF.gif
+SHA-256-Digest: VSW3M1r8p8gpO65sn/OHV27jccQmi5d7zGzkqG0QHQU=
+
+Name: plugin.xml
+SHA-256-Digest: 0LUx5Qcb/0KlHS9l4852R8G0opVSdJsxcNm1YCbzlqA=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeAbstractTabFolder$2.class
+SHA-256-Digest: eAEhSqrlEqndHQ15dYd3Z7pLixsJHDhCGEDcOiWV2rE=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog$GenerateTim
+ eDataJobChangeListner.class
+SHA-256-Digest: ic0QGaPdaoC23I4QJYeNhXbYOu/DKobzPc184vajoJQ=
+
+Name: com/sap/ndb/studio/bi/dialogs/DeliveryUnitsDialog$4.class
+SHA-256-Digest: /qNMrAhxemRan3Ugi73fdVVcok7zi9CqaLbbAm+dqeM=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog$7.class
+SHA-256-Digest: UVn1cJ10cMo8fsq6oEkLHmep0+Vh9Kj4P1AQRPgmfSc=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$8.class
+SHA-256-Digest: b2exF0VWNwzNryMLLaGbaECWdJu+NVxCJH42C08wWc8=
+
+Name: com/sap/ndb/studio/bi/welcome/DataHandler$1.class
+SHA-256-Digest: 161fKQzp5oEqqGA8nXs452OhvI2E+1T14sB0ikHCwmk=
+
+Name: com/sap/ndb/studio/bi/dialogs/ConfigureImportServerDialog$3.clas
+ s
+SHA-256-Digest: ITykl790TCKk1PJ59E2+3WMbLKM3vBGs3aRVVFLCjdA=
+
+Name: about.ini
+SHA-256-Digest: puEkLSTgm1JrQVZuDiXBwdnD79BZVpoH8CUPbs0Z88w=
+
+Name: com/sap/ndb/studio/bi/providers/PackageAssignmentContentProvider
+ .class
+SHA-256-Digest: UajFTf8JoydQuWuKD3MUzg3euEwCRcpd6umgMfKA/Io=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$13.class
+SHA-256-Digest: Qg+y8e31fQcYfgpp02CfUXKNN+Xm4exeKNztSm1Ca34=
+
+Name: com/sap/ndb/studio/bi/quickview/configureimportserver/ConfigureI
+ mportServerWizardPage$3.class
+SHA-256-Digest: utZ8/p3SDr9hnJvEwwZVdwlSv3Kew4H63ShD/2FMjlo=
+
+Name: com/sap/ndb/studio/bi/dialogs/AssignPackagesToDeliveryUnitDialog
+ $1.class
+SHA-256-Digest: /bXIn5nhazngrD6KdZVsGfbhPEtGcLeRHmHZ+4yy8UU=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage.class
+SHA-256-Digest: VN0mmVDOeX3tYwNDPKjk4arsERi+NAt5eP8JlENTo1A=
+
+Name: com/sap/ndb/studio/bi/dialogs/CreateDeliveryUnitDialog$1.class
+SHA-256-Digest: U8Vm+SwCl3h4ECBidz3Pb44p7zv+4arylq07JkKMiEo=
+
+Name: intro/css/overview.css
+SHA-256-Digest: LjD6b1C5nud5w7fYk5vr3yxFVbU0TWBk8DrO2ea6PkQ=
+
+Name: com/sap/ndb/studio/bi/welcome/MainTabFolderTabItem$3.class
+SHA-256-Digest: ZE7i/dL7m8IUvJF2dihRIQFA0ej32iaqJOX6QumyqHE=
+
+Name: com/sap/ndb/studio/bi/dialogs/ErrorDialog$2.class
+SHA-256-Digest: k08MVdNlJejn6QRwO18Kxf38H1ausSC6HphLDea10Qw=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler$3.class
+SHA-256-Digest: 5U8Vmxe89qTY2N0J7WqUhcroNEDx13tjwD51EoXDrwE=
+
+Name: icons/modeling_perspective_icon_v2.png
+SHA-256-Digest: xNrfC0gwnDF60Z2CRKVFMH7TV/may50cwkXrvCXfpGc=
+
+Name: icons/thumbnail.gif
+SHA-256-Digest: LGqUex2BsW/h2rqNmzlGCHB7Sh8SRb3r4ZxA9xLxp2Q=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler$9.class
+SHA-256-Digest: M75gDea0Z5X6WWbm7gdmwmN7usGC3ueR8YswwE5oOhg=
+
+Name: com/sap/ndb/studio/bi/quickview/actions/GenerateTimeDataHyperlin
+ kAdapter$1.class
+SHA-256-Digest: S730zUVgng6yUQ54WdfrwZqFOImWlnAlxuAFEmGkDZg=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitsWizardpage$6.class
+SHA-256-Digest: 1b6GPCs/x89kwdk8GAJtkU9Hnn4ksgkltXiUbNNSEhI=
+
+Name: com/sap/ndb/studio/bi/providers/DeliveryUnitsModifier.class
+SHA-256-Digest: ElyPd+lZMdfRcGWaBkNScfQnBYAOKk2xjbxDQX1holc=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$2.class
+SHA-256-Digest: AUmsX6FHxsKwy/FnNwdM4aSr8WjHD+m98m0/6VsXBuA=
+
+Name: com/sap/ndb/studio/bi/welcome/MainTabFolderTabItem$2.class
+SHA-256-Digest: v53M4FoA/GDBVH/2mzsSxCypyp9/ENs4TTjNRn/PPas=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler$4.class
+SHA-256-Digest: Fg8zaop+JYHOqxmK6aNEIJ4DUm17+AGDBiB9/LCAG4U=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeEditor.class
+SHA-256-Digest: 2ir9x7JhA27EoTSBizXKiYTd6CJqSncmZzB9MmMjqWU=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$10.class
+SHA-256-Digest: S3GdfLc1Wy3WPajTl6gwTQM0yyGvyLDExdJwlRSbGdw=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeEditor$5.class
+SHA-256-Digest: 8kctnUeIIIcmD1fZncV+VrB/pwsoYoRSEMoUiA0MYO8=
+
+Name: com/sap/ndb/studio/bi/providers/DeliveryUnitsDetailsLabelProvide
+ r.class
+SHA-256-Digest: EySiZwY+ANbhtizW44Nevs9qwKyMTErWvlsS3NJ3sNg=
+
+Name: about.mappings
+SHA-256-Digest: 9F8qNnXmh8wO4gtMKhrDOUzjd9Qzy1ORA7YTWQ/Czx8=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$5.class
+SHA-256-Digest: twiDBQ/Mr28gFXlx5g+clBWwnVna+jkBr37aZSEcwyo=
+
+Name: com/sap/ndb/studio/bi/welcome/InformationHandler.class
+SHA-256-Digest: /4kv5O1OgqniGQ/UDDj1tuRtz2qn1Nh5j0kkIDhI9mo=
+
+Name: com/sap/ndb/studio/bi/dialogs/PackageAssignmentFirstPage.class
+SHA-256-Digest: 3K26g2UAfroqHPxVEaNu9917b5+YuxrRywVMuRmvXS0=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$3.class
+SHA-256-Digest: rLsx3wz0EI0k49Fk27DE0tJIQ29FYKW7srE4DoAEQlk=
+
+Name: com/sap/ndb/studio/bi/dialogs/DeliveryUnitsDialog$IDeliveryUnitS
+ orting.class
+SHA-256-Digest: 0ccXSVEbC7DV0SvSVX7mlMKJVyJWAXK74Iivjl4T7Tc=
+
+Name: com/sap/ndb/studio/bi/quickview/configureimportserver/ConfigureI
+ mportServerActionWizard.class
+SHA-256-Digest: s7IhRg85xsYTHOSbjAAFx+YAeZCyXxjqGl3I0lSJJwk=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aSystemSelectionPage.class
+SHA-256-Digest: MEsx+JkX0eMlK0cEjdrLTjBHL0j/K8vpUkypLzWdp0U=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler$11.class
+SHA-256-Digest: gODIJiW0AlKxAUiOCZlHQKG8RmEiJE34LB+nBrfDsy4=
+
+Name: com/sap/ndb/studio/bi/quickview/configureimportserver/ConfigureI
+ mportServerWizardPage$4.class
+SHA-256-Digest: 6Hxs+D2p4IaWdZcwx4Znio6th8Zn6V5c4pQJqXE8sMA=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$4.class
+SHA-256-Digest: BdLv7nncLLBUYb3SX+law1MxAcaZi0rAbMX/I1fyOt4=
+
+Name: com/sap/ndb/studio/bi/icons/HeaderImage1.bmp
+SHA-256-Digest: yj6v2g5zSuTNEwqisH1grlzfLsNFzy2cTMuhXO+xcYk=
+
+Name: icons/run_data_package_16.png
+SHA-256-Digest: 3IxvqMzLRtPGSrsP4fKCg8jrNtnbGHS7UNj3AwFak6Y=
+
+Name: com/sap/ndb/studio/bi/icons/newAnalytical.bmp
+SHA-256-Digest: LpS/kTaDf+XzzpP0H6JkA30TVmgUA8FxTyR9xdMeoHo=
+
+Name: com/sap/ndb/studio/bi/icons/messageLable.bmp
+SHA-256-Digest: RKzvUyUXyKtywfRIdQOpei4R4p4NCp/4BZrRhTU40rU=
+
+Name: icons/modeling_about.png
+SHA-256-Digest: H1oIjE1Xo4lfpvjetBCUrwwSrdF3LUmXfGCp3gfsW8Q=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitsWizardpage$7.class
+SHA-256-Digest: jdonpdf3kvWfw0WK/lJsnmfl3WRvziNPT+StR4ZgLLE=
+
+Name: com/sap/ndb/studio/bi/dialogs/ConfigureImportServerDialog$4.clas
+ s
+SHA-256-Digest: PD7lktc8HJygEPCT7U3KORU8r3Q9mr2oBZ3VPvBr/Hc=
+
+Name: com/sap/ndb/studio/bi/dialogs/DeliveryUnitsDialog$3.class
+SHA-256-Digest: 2AmBpzqOlK/xxdZiKbwOGyyz3Yl8/7UNMyFAwlH+zVQ=
+
+Name: com/sap/ndb/studio/bi/quickview/actions/GenerateTimeDataHyperlin
+ kAdapter.class
+SHA-256-Digest: 224RCwgEA5KBEi5UizVAhfVf/iHUUua1ZJItHwoQnKI=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$11.class
+SHA-256-Digest: l3cOGhg2e3w0AeJ/GHKPMrTa5Qyg51BinwSpkrdVo/U=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitsWizardpage$1.class
+SHA-256-Digest: KqMYhi35x14LhBuTPk2f8IoPOwWUpR8mJ8NDOoJLJqg=
+
+Name: com/sap/ndb/studio/bi/actions/ChooseConnectionAction$ChooseConne
+ ctionLabelProvider.class
+SHA-256-Digest: yzCYgER1WJpUN+OvjXBx0omRzffu4atzLb0bCVPiAHU=
+
+Name: com/sap/ndb/studio/bi/icons/welcomeHeader2.bmp
+SHA-256-Digest: BsAKtxaa0TZpvgK4WQXoxxiqbtw/JB8wNsgP/DdlYaU=
+
+Name: com/sap/ndb/studio/bi/welcome/DataHandler$2$1.class
+SHA-256-Digest: jI7lJ/5fRdo9N47grS1miOh1qFj3WxtYpn7DLZd5WLo=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aActionWizard.class
+SHA-256-Digest: cFpPiNXaes5tsZUFYSy6SlgCa+VPMIb+JRQRvr3bHEU=
+
+Name: com/sap/ndb/studio/bi/icons/document.bmp
+SHA-256-Digest: 7kp/7v71IB8NVXZODRkVpdS2RpFcqbyHJjufmRlgpyo=
+
+Name: com/sap/ndb/studio/bi/dialogs/PackageAssignmentFirstPage$1.class
+SHA-256-Digest: 1/1mQyFoN/W187nvxg9SNl2tDExri8+k/fdqRtVxXoQ=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeAbstractTabFolder$9.class
+SHA-256-Digest: UJ4frxHPfqmPt1B585tBAzGTl7WrzjvrrmB1AsqOKoo=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitsWizardpage.class
+SHA-256-Digest: JT+8l/LKTAr+7XtEUYLbmqKtexEJTcII7udCWObdzoQ=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog$3.class
+SHA-256-Digest: S8ohCmHrVpPj0xOeWEZVokHyEOGKG/tNRWNKnwQzmdU=
+
+Name: com/sap/ndb/studio/bi/icons/QuickLink.bmp
+SHA-256-Digest: g69t7Om6h6bP73n+9bEgxWX2Ep4/3qYZO8uj8JyC4VQ=
+
+Name: com/sap/ndb/studio/bi/icons/newDimension.bmp
+SHA-256-Digest: 6GSML2TFrXpM1MUjjJT9+QKJjnPlSZN8vLSj8m1PLiQ=
+
+Name: com/sap/ndb/studio/bi/welcome/MainTabFolderTabItem.class
+SHA-256-Digest: M0sWWEasrrldxIK63jsB4l5/Ghl8E7PzwyfFR3mJRj0=
+
+Name: com/sap/ndb/studio/bi/welcome/MainTabFolderTabItem$4.class
+SHA-256-Digest: 84eqz3EXxahvbynAN0zbz2SewZFtOfTrz9wB6/y81FU=
+
+Name: com/sap/ndb/studio/bi/dialogs/ErrorDialog$3.class
+SHA-256-Digest: xUpVcctMMRh/H5p/MasW4tf3wqnFvE61+gEXxarMKB0=
+
+Name: com/sap/ndb/studio/bi/icons/newCube.bmp
+SHA-256-Digest: B5G8/ZZeRYDX6rlGdE0ANf2Oqdi7/8pVPbSZYvdH9uY=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler$2.class
+SHA-256-Digest: fSpiwN2B5Pk+wF4t2qhx9o48cPrEcHfY5fz4w1N5+i0=
+
+Name: com/sap/ndb/studio/bi/actions/DataManagementAction.class
+SHA-256-Digest: mY5TTS21UDTTp5OzO0wXL2zJRfa+9KoptzurlfDRzOo=
+
+Name: com/sap/ndb/studio/bi/providers/ErrorDialogContentProvider.class
+SHA-256-Digest: BUek3/Nu7bQi/5iGrPI6n3Yeas4zTEO1QVDVpzn2Zww=
+
+Name: com/sap/ndb/studio/bi/actions/GenerateTimeData.class
+SHA-256-Digest: mVRnoDBiGURTyi8HaJRrAB1BzhdDWgBvyIMhH8ev2kU=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$12.class
+SHA-256-Digest: e8+lXroA+l/D5il9YfZ5V76jE/Br1irOB53AtR/jfC8=
+
+Name: com/sap/ndb/studio/bi/icons/newTable.bmp
+SHA-256-Digest: nKWi9dJLOE4onDusQ6rYJd0iTOF0sndgv/YqAhIXtKM=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitsWizardpage$2.class
+SHA-256-Digest: Vb7e3IhVQ5WVJOV3asmcMAAiApH4W3qoVKodUykkjOo=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeEditor$2.class
+SHA-256-Digest: c6vaeAEIPLWiO3MniYFdS0Ve6z+sHT6L78peIma24yU=
+
+Name: com/sap/ndb/studio/bi/handlers/SelectedItemsHandler.class
+SHA-256-Digest: AOYTgHfsos5U4tCCrjR7O7URIJvRKNbtbrRaOpIuwD8=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$6.class
+SHA-256-Digest: DarA725V7iBUMMOmXBVyzHD15Xqkcqg3ycM4FsvXZbw=
+
+Name: icons/Delivery_Unit.gif
+SHA-256-Digest: /nxFmOj3RZF86w+48vbPDbjY1E1FlpwEttWH1de9Q/k=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeEditor$5$3.class
+SHA-256-Digest: C6LrAzumrHyUJ0iXuNigrYhG3+tPw6CbWmRqrVjcn2s=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$9.class
+SHA-256-Digest: ZYENxsTWrJhWOXLJblFpnrsmmC4J7tyVrfgpksPrgl4=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$9.class
+SHA-256-Digest: 4USXrn1KuAlOgGpr4SjzG9zgtEa42NohAOj/Am/X5k4=
+
+Name: com/sap/ndb/studio/bi/icons/TimeDimension.png
+SHA-256-Digest: WO4ykrOZ5+N/LqaBMHfufJAEuG5YMYyWqeTDzL5faWY=
+
+Name: com/sap/ndb/studio/bi/handlers/GenerateTimeDataHandler$2.class
+SHA-256-Digest: c1SHccy3lI3BKLy1KcJQrWGTYwHjtLnGYppvzrQ6A8U=
+
+Name: com/sap/ndb/studio/bi/providers/PackageAssignmentLabelProvider.c
+ lass
+SHA-256-Digest: WqW0IzOSmQ0Y8j4mYYAClFMgCQyFnQ8wssigjgp3Flk=
+
+Name: com/sap/ndb/studio/bi/welcome/OpenWelcomeEditorAction.class
+SHA-256-Digest: T5RzxTTsMmBx70qD11dnOxHBNTSPPLurOMBY5mQIPy8=
+
+Name: com/sap/ndb/studio/bi/dialogs/CreateDeliveryUnitDialog$5.class
+SHA-256-Digest: DXJgKD5/HxrjSS5y6Edf+SsL/Ap1tssmyFqScBiA24U=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$12.class
+SHA-256-Digest: AfLST9Svvn5GnOFMOEL4qcLcrYarg/609/jocSwz4tQ=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aSystemSelectionPage$1.class
+SHA-256-Digest: T2VZdfUsJ+uUewx8mLw+vPOI23Onru7mP5HEE0BwqUE=
+
+Name: com/sap/ndb/studio/bi/dialogs/PackageAssignmentSecondPage.class
+SHA-256-Digest: lWPpJ1lb2xB+puHU0cMFG5zY4aKkPnDiZpKI5o4F6YY=
+
+Name: com/sap/ndb/studio/bi/dialogs/ConfigureImportServerDialog$2.clas
+ s
+SHA-256-Digest: IPKyC+tksMsq8XXNV3hCO02foVhbpXuCCyX2F8+1lqc=
+
+Name: com/sap/ndb/studio/bi/welcome/InformationHandler$1.class
+SHA-256-Digest: qF0LXhnKpLGNLnj06h/GcjomQsSYcxB+cMips5I2zzk=
+
+Name: com/sap/ndb/studio/bi/icons/Cube.png
+SHA-256-Digest: cYblgVWPJjYdcd8jzIDwtFaZnTcJqeqwWSR+fgSWjV4=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeAbstractTabFolder$6.class
+SHA-256-Digest: xYJcWA65+JZet+IcW1DMYnzmbspAQh8bY3l29otIdDY=
+
+Name: icons/ImportWizard.jpg
+SHA-256-Digest: c9M2VpbtBQ+lcLklUayg9exR4QFPx9Y/7MlgwFVzCQw=
+
+Name: com/sap/ndb/studio/bi/welcome/DataHandler$3$1$1.class
+SHA-256-Digest: /eI7E+pRpqmGh+1HunQGk5T8rRenoHHvV9Ys2aMZA18=
+
+Name: com/sap/ndb/studio/bi/quickview/configureimportserver/configureI
+ mportServerSelectionPage.class
+SHA-256-Digest: 0EpIcahms3ABsGA45Yy51LulM2SNigXkaykqtpsofkQ=
+
+Name: com/sap/ndb/studio/bi/actions/ChooseConnectionAction.class
+SHA-256-Digest: NIe3HnfEsCkD4OJAjPdr7F6VJTtTe6eKuz+gWa6Ke9w=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$13.class
+SHA-256-Digest: +CvCzz5RySGE7gaPr6NYK5KnwAnGKsYbj5nGswQ7Afc=
+
+Name: com/sap/ndb/studio/bi/handlers/TimeDataGenerator.class
+SHA-256-Digest: Kz0fmj0zEBBYZqiiMsSJ3K7tLpc+QZbTIWvoTL13fR4=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeAbstractTabFolder$7.class
+SHA-256-Digest: 9HroUF9+NvaofNpIo09yEHvvl8WQKu1m5aT1pRuGCnc=
+
+Name: com/sap/ndb/studio/bi/welcome/IContextURI.class
+SHA-256-Digest: TP8lUKTyohciJOhT0hC5GQ0qZVxsGQgIXF0xJUvBnxA=
+
+Name: icons/program.gif
+SHA-256-Digest: sD5+ohUGJygS05DP/JcVJBW6Rct3b5/icvV+V2oFqjs=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler.class
+SHA-256-Digest: Cairos3mEsJf58kz2G8F18B6azy50UzQdTUCQS+OWl0=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeEditor$5$2.class
+SHA-256-Digest: CXN4okc46HudsLNuKlojkCP0GaBE4s3DlCQy/fEL9Qg=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeEditor$1.class
+SHA-256-Digest: FctNIfbX2fcnnyi8JEq1eGcZato1wGG/YStZlCiwis4=
+
+Name: com/sap/ndb/studio/bi/icons/welcomeHeader1.bmp
+SHA-256-Digest: L3kzIx8SLXKBQwN3YVz+XgnvN1krL/TMKeU1bz4EEXc=
+
+Name: com/sap/ndb/studio/bi/welcome/MainTabFolderTabItem$5.class
+SHA-256-Digest: CyYZapkuVObiUEm8J1osNHgT6VlU+NDxgN/zYJeAatE=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitsWizardpage$5.class
+SHA-256-Digest: lIxu4nUQwLp+WZQQ3YgkrmxailjHGN72POelnKk74hs=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog$TimeGenJob.
+ class
+SHA-256-Digest: HNx+r58h0vKYW8ahVrhATBQFtZRz6MefSQwhMUZVQRI=
+
+Name: com/sap/ndb/studio/bi/handlers/GenerateTimeDataHandler$1.class
+SHA-256-Digest: ViW3VxFJ2MsuyACIr4und6H7iDrjG/bPe25Z3+hhBD0=
+
+Name: com/sap/ndb/studio/bi/perspective/ModelingPerspective.class
+SHA-256-Digest: OGOxpAg9e5+5nBCFHyDyP525HSdJKZYVbD7GSWCn7ng=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog$1.class
+SHA-256-Digest: TDOnsMj+HNm/YuTT4JY9pqyUhZ/kEr6BG7ihza116fI=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$6.class
+SHA-256-Digest: q9K8KVCs83ilx1mapt+HI4q1KWgVWnpkSrfx8UHlY6Y=
+
+Name: com/sap/ndb/studio/bi/dialogs/ErrorDialog$1.class
+SHA-256-Digest: nCsOKafTyfkV8bcf473Pb4yIPS17GDkGepEII+BzBe8=
+
+Name: intro/overviewExtensionContent1.xml
+SHA-256-Digest: b4FGY9TVr1FVwuuuQ040+gCTWQNBpMCaRHyC0K8SdMg=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.bi/pom.xml
+SHA-256-Digest: Gmzmo564H/84ls+q0AHv9+NzFjCjyZgJ8vsxM6qnSac=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeAbstractTabFolder$8.class
+SHA-256-Digest: 1QXhrh7Rzfcpp6cuwVmgJIkELOoWyyk3am+PeA3n9wU=
+
+Name: com/sap/ndb/studio/bi/dialogs/ConfigureImportServerDialog$1.clas
+ s
+SHA-256-Digest: NrR/yQpYIPnZDQwjK3ABgCpcjGC1Yk7ROnwZFw6y/18=
+
+Name: com/sap/ndb/studio/bi/dialogs/PackageAssignmentFirstPage$2.class
+SHA-256-Digest: d7GB6onprIi86QYo79mb6irtA62gYNHJTjKhxfzCOqQ=
+
+Name: com/sap/ndb/studio/bi/icons/dataPreview.bmp
+SHA-256-Digest: cyTinvYsmJE5tL8kkHzetplg9fjtGq702ANtldCPI0M=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$TimeGenJob.class
+SHA-256-Digest: sSQXYU3w/YNKHdDeymz54sMSe43GRlCXdmFlvpJqRwY=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitsWizardpage$4.class
+SHA-256-Digest: LFZdppOlkoPgJmvDlKNJ6Wh8vEgBWmObA91cN4z/thU=
+
+Name: com/sap/ndb/studio/bi/dialogs/PackageAssignmentSecondPage$1.clas
+ s
+SHA-256-Digest: thtRVi31/lP49erIicBR3+EfPj8mG98EkUvlXbnP9T0=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog$2.class
+SHA-256-Digest: I+bs6eUXNEaetmXSjQhRAs/jFESKO8LFUX0P07b4w3M=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$8.class
+SHA-256-Digest: BKoMsOP8FS9dCbu7rgukKxWJwOHxRzN0ssDM5I4A62M=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler$1.class
+SHA-256-Digest: GftUdYcx33o5QcNyuhIeRuBa3YtkwLydLX+K4oTo6Qs=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$11.class
+SHA-256-Digest: GRP9HuXoLsgxypmi4AADOKZlIeC42gg9GibbFBxu0Ww=
+
+Name: icons/sample.gif
+SHA-256-Digest: nityhfdwDBvBTJAmLEfJHWWF9m4KlBIJ1DoECZjq87w=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$7.class
+SHA-256-Digest: diZT40NXy01d0ZDSwHbB2rVAhioFloK/RKGzP43X9WA=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog.class
+SHA-256-Digest: uNZrRGW52DrtaC7i3faAsKGYnZ77uiIK4kUCmuz2P3w=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeEditor$5$1.class
+SHA-256-Digest: L8zkIHlBoXYXGdkUK90tX6TOdXReuI3wWg6Coun+Oqk=
+
+Name: com/sap/ndb/studio/bi/icons/sample.gif
+SHA-256-Digest: Tu+pc9Hq/vCnDxNdmKIhxcBarmk+JJbQN0zfmXNe9pk=
+
+Name: com/sap/ndb/studio/bi/i18n/Messages.class
+SHA-256-Digest: lqdneJ03gRvex4OmpUsoXhvo0WngnLNXyquk4sMWMTY=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeEditor$3.class
+SHA-256-Digest: d/01Gl6HiRnAf69aIxSFmrxcKguy4Qxw/VH+hBJn3QU=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeAbstractTabFolder$10.class
+SHA-256-Digest: SzQCcnmaP0M7qVVDV4GBgd+jYYkcH0qRx5wIAooJRp8=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$5.class
+SHA-256-Digest: NB6ILjSfXrv9vVZEu9mWfSKVfOGuFMHgPTT6JIxbyvM=
+
+Name: com/sap/ndb/studio/bi/welcome/LimitationsDialog.class
+SHA-256-Digest: 1OWf0/L3K+JznK7/Xv4/JsAItS23SAJ/LMBAX36PWT0=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeAbstractTabFolder.class
+SHA-256-Digest: i7pDO8jk1ScMgK0DWwzITlf6SX4lVHT6B7scQVIcRTQ=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler$6.class
+SHA-256-Digest: t0Y/0JrRhbq1tmTsslTtZiBYK2n9Rhck8JB6L4AEoSw=
+
+Name: icons/Configure_Import_Server.png
+SHA-256-Digest: GE0eJTv4569qWERmeAZjlNqrtUg/HNJDDg/3+JJez+0=
+
+Name: com/sap/ndb/studio/bi/providers/DeliveryUnitsCotentProvider$IDel
+ iveryUnitSorting.class
+SHA-256-Digest: c3Iz8u/MeAeGV6X4invzyPn/oNL2FJjZZAKTasxwkao=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$GenerateTimeDataJobChangeListner.class
+SHA-256-Digest: NvCZ/Hc7Og2UrnEkJqWJ51LnwSXMOxJ/Aw1xnYs84K4=
+
+Name: com/sap/ndb/studio/bi/icons/Attribute.png
+SHA-256-Digest: eQLVD1TH6qjpnWkmhAioc55H2OtPIxieTy+y/AAEn04=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitsWizardpage$3.class
+SHA-256-Digest: yoZK5n5muEJkuEt9YE/EqbNexnDbP0yROC4Z6AQWAFw=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeAbstractTabFolder$5.class
+SHA-256-Digest: h6FkAc/xJb7cx02ewn9HH+1WvmyEcjnE2z7CjDpvXZU=
+
+Name: com/sap/ndb/studio/bi/dialogs/PackageAssignTableCellModifier.cla
+ ss
+SHA-256-Digest: NV4NsCprm83XnTsSkni8SGxJIZgCmFDVlWUw1xGiCbM=
+
+Name: com/sap/ndb/studio/bi/icons/saplogo.bmp
+SHA-256-Digest: vM6Ro7nMI9HHpEIa4EGAHR3mgKYYsF98RSs4hJvruG8=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$10.class
+SHA-256-Digest: DfLixs0P0+uXfhlW28h25x9CkxhmiDtYlJXejTw0C+A=
+
+Name: com/sap/ndb/studio/bi/providers/AssignPackagesContentProvider.cl
+ ass
+SHA-256-Digest: GsWDzNHNADjiQnd+cQtL9+nGFcpcOJxjMarfwz9nDVA=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$7.class
+SHA-256-Digest: xvdhiTJeuPNW6qOpZdDu4ReMWxdKQfcZmvFrnbRh6Sg=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeHeaderFormEditor$1.class
+SHA-256-Digest: fZxbODzK2+xCow+RyJS3Qs92lQRBRIIgJk2T09pJ2CM=
+
+Name: com/sap/ndb/studio/bi/icons/importObject.bmp
+SHA-256-Digest: vUazG9bpF7sGN/FC9mFhm9C/gCr7bzgvTLC3JwWj3dw=
+
+Name: com/sap/ndb/studio/bi/actions/ChooseConnectionAction$1.class
+SHA-256-Digest: F0SJsICC+RT2w0YEp58Sj24r+VHVn8K2Zigh69U1cJU=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog$4.class
+SHA-256-Digest: eocEgxy3A1d4axziLaWJ7vBN5J33f5ClRyzqc7kJVtI=
+
+Name: com/sap/ndb/studio/bi/dialogs/DeliveryUnitsDialog$1.class
+SHA-256-Digest: yavjA1ic9vwDa1mOilTEpihYSkkAMmQcoox+Klqm+cY=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitsWizardpage$9.class
+SHA-256-Digest: lNFSdou43GAwlmptb7eMXSz8e6v8OitCHtzaLT5Z0d4=
+
+Name: intro/css/graphics/picto/CirclesSquaresConnected.png
+SHA-256-Digest: CwvroffZFPyec3AdZ1e2DxYR0Nv6NPAReNktI8TRSYE=
+
+Name: com/sap/ndb/studio/bi/i18n/messages.properties
+SHA-256-Digest: uLNbqB2mJSQzPDD8twsWRJyT8f/oJcNCLcX9S4wHoKM=
+
+Name: com/sap/ndb/studio/bi/welcome/SetupHandler.class
+SHA-256-Digest: PjZf2TrCf/0su/hPrW88H73aUb/bQeISJ5f022J2HYI=
+
+Name: com/sap/ndb/studio/bi/welcome/ProjectType.class
+SHA-256-Digest: ONQQiVKO9Hc4SbH5LFAfNrnTWiou3AkN6uDqfj7/S8o=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeTabFolderBand.class
+SHA-256-Digest: BDOtBU5aqsegKBoW/ISOAAfCDIOW5kcQ1alVPrj4JBU=
+
+Name: com/sap/ndb/studio/bi/quickview/DUSystemSelectionPage.class
+SHA-256-Digest: secp0k/lXnzonU4MfRQcmJKsbCtW3Hq7fc9KQi3y4yY=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: o4O7++C6KIxTj/EuvrubD2s6nqNY/fjOkcA/eLMa4dI=
+
+Name: com/sap/ndb/studio/bi/welcome/MainTabFolderTabItem$6.class
+SHA-256-Digest: ICwSE0mnkOseyHMFh6Ck0r4mlI38n1fpXSxlaxGbtas=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog$5.class
+SHA-256-Digest: IcGSomMNp9bTrQ8dls8ZGR/gAKtDiBXtVPztOO/gHAo=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler$10.class
+SHA-256-Digest: 4FrfgO+XK90N7+Z7LhGS5SwY/p/dpFpStHGpgCypeH0=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeAbstractTabFolder$4.class
+SHA-256-Digest: LpUqO0gmqpJa9MzHB4BFyWaOLX8b2oZ2lp+8l5q9enQ=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitsWizardpage$8.class
+SHA-256-Digest: voo/hvTM84gIu2BxWOAtdczYcnuIvw4ycH8YcYrtLfE=
+
+Name: com/sap/ndb/studio/bi/welcome/OpenViews.class
+SHA-256-Digest: mrAgndwHcZOws8TG8cp6B5vNg3Ue0i9Kp73Whl2oZeM=
+
+Name: com/sap/ndb/studio/bi/icons/Metric.png
+SHA-256-Digest: ePQJ2pp8e0Cu9MzKGS3GJzIrv68rPJMzjXSPxJ2tZTE=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.bi/pom.prop
+ erties
+SHA-256-Digest: WMOWFz9R5f/nyL1NEYaTETb8prtf/4qg4N4WPvg8upw=
+
+Name: com/sap/ndb/studio/bi/welcome/SetupHandler$4.class
+SHA-256-Digest: Rz7swXF8t0L0/sJYtKKLfVJs8yTrCaeKStEIX+5CNsk=
+
+Name: com/sap/ndb/studio/bi/quickview/actions/ConfigureImportServerHyp
+ erlinkAdapter$1.class
+SHA-256-Digest: lVXvuYpNq/DE555WBhPIPixB/qMM5WZoyYL/DkFd2UA=
+
+Name: com/sap/ndb/studio/bi/dialogs/CreateDeliveryUnitDialog$4.class
+SHA-256-Digest: ISksqoVdzg1K09K/BD+kjdRMLMoar5/FiBicUWlerfQ=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryunitsWizard.class
+SHA-256-Digest: bEcuOoCygInMA8XoHCyr3sjjcJodBRpB6pa28YAcTqs=
+
+Name: com/sap/ndb/studio/bi/dialogs/DeliveryUnitsDialog$2.class
+SHA-256-Digest: L5RTNi6krXPLIWCF/Rvc2cbOyhrT4Sj/yUwnc/aoFw4=
+
+Name: com/sap/ndb/studio/bi/icons/Dimension.png
+SHA-256-Digest: K6ikNUFCvd/5uNonFUZ3aCqbbt10EAdbwQzPSFrCLDY=
+
+Name: com/sap/ndb/studio/bi/ModelingActivator.class
+SHA-256-Digest: caUedSJlau5eYinq1mkFkwgq68/BXHq/q0YLqfOHOjg=
+
+Name: com/sap/ndb/studio/bi/welcome/MainTabFolderTabItem$1.class
+SHA-256-Digest: s+KDsrYMGPJ60Lu4v4JMUsPVLGd3dCWahebu/b3VL1w=
+
+Name: com/sap/ndb/studio/bi/dialogs/CreateDeliveryUnitDialog$3.class
+SHA-256-Digest: NnBpaGcC+aAgPLbH+XDZA7cHfyQTXTBJzrHKzVQB7/0=
+
+Name: com/sap/ndb/studio/bi/icons/scenario.gif
+SHA-256-Digest: Cd2fXNq3Dv81LhzNtZ3mVsSmFeKPIah43ixmodXabNE=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$4.class
+SHA-256-Digest: Y+Z2mQcwDqnwDdtZ8ibvjyWRk1ztP1UxIY0Ki6VLIFY=
+
+Name: com/sap/ndb/studio/bi/icons/package.GIF
+SHA-256-Digest: 4h8wtEwFi5p7VFedB258DCR3K7AqwD7/JPez9sMi4Vs=
+
+Name: com/sap/ndb/studio/bi/dialogs/DeliveryUnitsDialog.class
+SHA-256-Digest: eSZjFkfRh4yHXpZrT1eOinoKTFPApsAeKYA3+fzcio4=
+
+Name: com/sap/ndb/studio/bi/providers/DeliveryUnitsLableProvider.class
+SHA-256-Digest: dIoNpYIb9PyVQZIe/dhf++NR4kzh2HFLBb8yQiVJqZI=
+
+Name: com/sap/ndb/studio/bi/providers/PackageTableWrapper.class
+SHA-256-Digest: oJWF+BqIU/kFdJ4zyVnPJ9iKFm5+HP7h+OcytxkCjnY=
+
+Name: com/sap/ndb/studio/bi/handlers/GenerateTimeDataHandler$2$1.class
+SHA-256-Digest: 9m7n9sb8o0aUDluU9E3E9zyWUOPcUwJYjHzYYvznUJw=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeEditor$4.class
+SHA-256-Digest: uYOGSrVlq8dQYO94POM3BHjCx5t82yKffVQyBhz8qU0=
+
+Name: about.properties
+SHA-256-Digest: mxVa7nREK/KgRbZaQ8HG82IA1k+WqRd4vkhqOuqG7fk=
+
+Name: com/sap/ndb/studio/bi/dialogs/CreateDeliveryUnitDialog$2.class
+SHA-256-Digest: e8VS1M7tmquyqrAg6RstYlrNB9fOlGmvZ7DihN5gArg=
+
+Name: icons/TimePeriod.png
+SHA-256-Digest: 2ZIf7RCuopjwMinUfQzRospfOlckCn1il0CGnyoidcY=
+
+Name: com/sap/ndb/studio/bi/dialogs/CreateDeliveryUnitDialog.class
+SHA-256-Digest: xOepMbdL2adoMB0gj51lFV2TLZFzy29wZ4WugC9i4W0=
+
+Name: com/sap/ndb/studio/bi/providers/DeliveryUnitsCotentProvider.clas
+ s
+SHA-256-Digest: 0vA3T+8W24fRFd882nBmLhkh58kaYzRYJsTj8MrJewc=
+
+Name: icons/quicklaunch.png
+SHA-256-Digest: 29eoalN/yi/T9TdhE5UiTWjFEPlfNV3H0M3wP8RYxFs=
+
+Name: com/sap/ndb/studio/bi/welcome/DocumentaionTypeHandler$1.class
+SHA-256-Digest: nplWr7VudsvTkDzHKFCe61VA0UX7Vz7e4koLimnJ4wA=
+
+Name: com/sap/ndb/studio/bi/quickview/generatetimedata/GenerateTimeDat
+ aWizardPage$1.class
+SHA-256-Digest: KOLadPdggjnMxkEHGPnaEBxH4uk4A0uM8XY9VWL/c4w=
+
+Name: com/sap/ndb/studio/bi/icons/welcomeHeader.bmp
+SHA-256-Digest: 42vmheKdcYjzdlL+nRp4SVQddRbZJTh2m6XKXJ3rQbE=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitHyperlinkAdapter.cla
+ ss
+SHA-256-Digest: Iy6EmUEpZRIjkaR8Lz90wP3+CGfnAqCrKXP1L2l51BU=
+
+Name: icons/import.gif
+SHA-256-Digest: 6buK13BSRmJr99zPgG1JaTKqr2/IP1JbXyNX6Zv7yLQ=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler$5.class
+SHA-256-Digest: LAfaEyZ0mbuu9nY+jJT1X/Zb6nnwFgZw/QfFwjWeS/8=
+
+Name: icons/package.GIF
+SHA-256-Digest: 2cNqsh7/t8/jUiXydmLM3qRN7ZeRSYMx2qh/AINr2MM=
+
+Name: com/sap/ndb/studio/bi/welcome/SetupHandler$1.class
+SHA-256-Digest: IBS3FaCh6G2V7OjEcd2Od1AWS2soofXWnKGJIzCK+6g=
+
+Name: com/sap/ndb/studio/bi/dialogs/ConfigureImportServerDialog.class
+SHA-256-Digest: EA4yY/lW4txS/wFKoMiFJkOjgu0KGKQMkpVCr+qXg80=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitHyperlinkAdapter$DUW
+ izardDialog$1.class
+SHA-256-Digest: nMugACcqwxxc5V93d/t77Rk3jp6KHRMMW2zKFwNwy10=
+
+Name: com/sap/ndb/studio/bi/welcome/SetupHandler$3.class
+SHA-256-Digest: i6kPca9VmiI5Hg9sY0Sivx6zOzsMxw8E+d6rYazwFkc=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeAbstractTabFolder$3.class
+SHA-256-Digest: 39lIEKNgHAm3gYBTqpOkgHNaCLwV5KQn/ENNV8LXk3I=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog$6.class
+SHA-256-Digest: anS+q6gchqwZb3Yyzl8mJoGZ9xfBWGQyeWqY/1ZRt0g=
+
+Name: com/sap/ndb/studio/bi/quickview/actions/ConfigureImportServerHyp
+ erlinkAdapter.class
+SHA-256-Digest: gfJ+gQnZSTPvX/3PQyl6YKCRCuynpDAfwjngCzgatbM=
+
+Name: com/sap/ndb/studio/bi/handlers/GenerateTimeDataHandler.class
+SHA-256-Digest: O2s286ZeRLkAlibe/O5GsKexLxEomKNhn4lu/UUjdw8=
+
+Name: icons/scenario.gif
+SHA-256-Digest: QWeOhpElu0kXDfmNIUW307/7q6gVNxi07rQ9/hCExYU=
+
+Name: com/sap/ndb/studio/bi/providers/CellModifyListener.class
+SHA-256-Digest: UIPsdMxa5X/VC5960UqW1wWkKQJdglsdny78SmhTa1s=
+
+Name: com/sap/ndb/studio/bi/welcome/DataHandler$3$1.class
+SHA-256-Digest: 0+Cvbac+agOtumK9LskZLUaWCcnzw+K4PWrC3kyu71I=
+
+Name: com/sap/ndb/studio/bi/icons/Key.png
+SHA-256-Digest: GYJrn9mEM+gI8e9NFBJWxJ3YQzhrVF+xvNmLQkozy/4=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$3.class
+SHA-256-Digest: +UjfDj/sbhlxLTw5kk91I8cxlFIV8vQ8tdkQjjEzctc=
+
+Name: com/sap/ndb/studio/bi/preferences/MainPreferencePage.class
+SHA-256-Digest: 0Moe5X3+3uCbHK8bzejtcPswGXSPAHrIOOezeYjS1OE=
+
+Name: com/sap/ndb/studio/bi/icons/sqlEditor.bmp
+SHA-256-Digest: avbTwzHEfoSVLNI0uIssirK7TnwfqWCAsd9O2MN1dmw=
+
+Name: com/sap/ndb/studio/bi/quickview/configureimportserver/ConfigureI
+ mportServerWizardPage$2.class
+SHA-256-Digest: VYuSMzj5I26fnRdxyD6X3tKQFS/PGhso+q3w9j29cd4=
+
+Name: com/sap/ndb/studio/bi/welcome/DataHandler.class
+SHA-256-Digest: 0myp6zKtO84jzeh31ePuLIRcR9HshxOj3VIpTQnadec=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler.class
+SHA-256-Digest: ljFisRe6GTu93+FBsXOfalk4HQgF+am7Snbr+Q66QtY=
+
+Name: com/sap/ndb/studio/bi/welcome/DataHandler$3.class
+SHA-256-Digest: HyVf06VKxj4zNARSGPEerrxpB2KzRTDF1W5OqAEKg8E=
+
+Name: com/sap/ndb/studio/bi/dialogs/DeliveryUnitsDialog$5.class
+SHA-256-Digest: mlxkm7xON2E05LAn7921kqjXOc5E9VmLHGfrgcdLK3c=
+
+Name: icons/export.gif
+SHA-256-Digest: KfCjfFijFoUsyy5VOOsxpqB1TSouaVOU0J37mDwJvjQ=
+
+Name: icons/welcomeEditoricon.bmp
+SHA-256-Digest: Lesy0iD5FoEvDcdQ7MITmiIqvf3tSAC1aGNSMSgCFMA=
+
+Name: icons/welcomeEditorImage.bmp
+SHA-256-Digest: 6iXLlsv+bt9s2yV/UzCNM0p5N4ZOYg+8RSerN3WfQ9U=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeTabFolderBand$PaintInfos.cl
+ ass
+SHA-256-Digest: AslltKVRouhj4eWC7Yc+HultcTg8+dzCbkkTC5U0/K4=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler$8.class
+SHA-256-Digest: cUzM9X6s6w7d4utBy9/VKl7IfrEIXUlbLnkDhHXlj/M=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$2.class
+SHA-256-Digest: SYyX/C1g8+kxKjgkdb0SYb5+Tn/dw16tSKTtdFK6s5I=
+
+Name: com/sap/ndb/studio/bi/welcome/DocumentaionTypeHandler.class
+SHA-256-Digest: ovMpMkbkzNMwH7vXRWuxLNZR7VqSFx1434MpCRrkAqA=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeHeaderFormEditor.class
+SHA-256-Digest: 6jrxlE3QocxLvI+/me1gWUhwwp1Ns6lnRiD34ZMROfg=
+
+Name: com/sap/ndb/studio/bi/quickview/configureimportserver/ConfigureI
+ mportServerWizardPage$1.class
+SHA-256-Digest: mllHiQCpTsTL8uzEnWLuPS2ZSs41jtwIhWxx/OcRnA8=
+
+Name: com/sap/ndb/studio/bi/quickview/DeliveryUnitHyperlinkAdapter$DUW
+ izardDialog.class
+SHA-256-Digest: 6Lbgebgfan7LIVDJCrG/WOV5NjwDlkrIULrTWMK/OR4=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog$9.class
+SHA-256-Digest: d9qGG6SCAxvtOdpkCXay2D3WGu1O1ZGnkUqP1tDdEXQ=
+
+Name: com/sap/ndb/studio/bi/dialogs/ErrorDialog.class
+SHA-256-Digest: UpQyO9zznq3diE2VicpQkVagpbLi2HHNEgcBaxyezio=
+
+Name: com/sap/ndb/studio/bi/providers/AssignPackagesLabelProvider.clas
+ s
+SHA-256-Digest: Eqbi9lAY9j8o1E/a0wVbHkfIFjDV/y7zpNHcoOdZhNI=
+
+Name: com/sap/ndb/studio/bi/dialogs/DeliveryUnitsDialog$6.class
+SHA-256-Digest: EPMAmAMvwh25oAKT0ivivn9f02nG+ITjKsOo11cYGtk=
+
+Name: com/sap/ndb/studio/bi/dialogs/AssignPackagesWizard.class
+SHA-256-Digest: 33qpEo1hM04rdqtWFU8ttxQpslsd8kxbPTvOWmwZu2Q=
+
+Name: com/sap/ndb/studio/bi/welcome/PreferencesHandler$1.class
+SHA-256-Digest: 7Uf1sTPtXsH3lbQNqA5in7grXVTrcz+0KbesFRWRXYM=
+
+Name: com/sap/ndb/studio/bi/welcome/QuickLinksHandler$7.class
+SHA-256-Digest: lHLPsHt96DnQL2bVnGkCUs+tWPdB0s7WYHTMVErWf4A=
+
+Name: com/sap/ndb/studio/bi/welcome/DataHandler$2.class
+SHA-256-Digest: BUVGYN0OXHQhOvB7cnP5IfNdgMhawMDJX2qLLkR0Rkg=
+
+Name: com/sap/ndb/studio/bi/dialogs/GenerateTimeDataDialog$8.class
+SHA-256-Digest: cMVO2eoOqZ7KZPNGNFgHcv61UQqXsWqBMVHSAKJJo1Y=
+
+Name: com/sap/ndb/studio/bi/quickview/configureimportserver/ConfigureI
+ mportServerWizardPage.class
+SHA-256-Digest: CNs2IuG0IshZybMGVIimxU3lab/7ZJxZTk54ph4ntqM=
+
+Name: com/sap/ndb/studio/bi/welcome/WelcomeAbstractTabFolder$1.class
+SHA-256-Digest: 0GFlXLNj7vlkODPWS7VdJyjcxS/qTt1NvUdND8UZ8/o=
+
+Name: com/sap/ndb/studio/bi/welcome/SetupHandler$2.class
+SHA-256-Digest: lRyPNzabD32Oad8hbLd2Cqoh59yk89zx4w/dlICm+Yo=
+
+Name: com/sap/ndb/studio/bi/dialogs/AssignPackagesToDeliveryUnitDialog
+ .class
+SHA-256-Digest: Nt1kbGC3OM4QZZOloh1ajTMBnMp6CWveodVROeRiG1k=
+

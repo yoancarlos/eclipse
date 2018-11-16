@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Verifying the XML Digital Signature</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio969f8165175e4946ba31b3e8de55e3f2">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Verifying the XML Digital Signature</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><div class="sectiondiv">
+            <p class="p">The XML Signature Verifier validates the XML signature contained in the incoming
+                message body and returns the content which was signed in the outgoing message
+                body.</p>
+
+            <div class="p">
+                <div class="note note"><span class="notetitle">Note</span> For enveloping and enveloped XML signatures the incoming message body must
+                    contain only one XML signature.</div>
+
+            </div>
+
+            <p class="p">The Verifier supports enveloping and enveloped XML signatures and detached XML
+                signatures. In the enveloping XML signature case, one reference whose URI references
+                the only allowed 'Object' element via ID, and an optional reference to the optional
+                KeyInfo element via ID is supported</p>
+
+        </div><div class="sectiondiv">
+            <p class="p"><span class="ph emphasis emphasis">Working of XML Signature Verifier</span></p>
+
+            <p class="p">In the validation process, a public key is required and it is fetched from the worker
+                node keystore. On receiving the XML message, the Verifier canonicalizes the data
+                identified by the 'Reference' element and then digests it to give a digest value.
+                The digest value is compared against the digest value available under the
+                'Reference' element of the incoming message. This helps to ensure that the target
+                elements were not tampered with.</p>
+
+            <p class="p">Then, the digest value of the canonicalized 'SignedInfo' is calculated. The resulting
+                bytes are verified with the signature on the 'SignedInfo' element, using the
+                sender's public key. If both the signature on the 'SignedInfo' element and each of
+                the 'Reference' digest values verify correctly, then the XML signature is valid.</p>
+
+            <div class="p">
+                <div class="note note"><span class="notetitle">Note</span> XML Signature Verifier supports both enveloping and enveloped
+                    signatures</div>
+
+            </div>
+
+        </div></div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio969f8165175e4946ba31b3e8de55e3f2__steps_cjt_5rs_vk"><li class="li step stepexpand">
+				<span class="ph cmd"> In the <span class="ph uicontrol">Model Configuration</span> editor, select
+						<span class="ph uicontrol">Verifier</span> element and from the context menu, select
+						<span class="ph uicontrol">Switch to XML Signature Verifier</span> option.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">XML Signature Verifier</span> tab page, enter the parameters to
+					verify XML digital signature for the incoming message.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio969f8165175e4946ba31b3e8de55e3f2__d4459e46" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Parameters and Values of XML Signature Verifier</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d1872823e93">
+                                <p class="p">Parameters</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d1872823e99">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1872823e93 ">
+                                <p class="p">Name</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1872823e99 ">
+                                <p class="p">Name for the Verifier step</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1872823e93 ">
+                                <p class="p">Expected Signature Type</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1872823e99 ">
+                                <p class="p">Select the expected Signature type:</p>
+
+                                <div class="p">
+                                    <ul class="ul" id="loio969f8165175e4946ba31b3e8de55e3f2__d4459e107">
+                                        <li class="li">
+                                            <p class="p"><span class="ph emphasis emphasis">Enveloping or Enveloped XML
+                                                  Signature</span>: If the signature is
+                                                contained within the content or the signature
+                                                contains the signed data.</p>
+
+                                            <p class="p"><span class="ph emphasis emphasis">Verifying Enveloping Signature</span>:
+                                                If the incoming message has enveloping signature</p>
+
+                                            <div class="p">
+                                                <ul class="ul" id="loio969f8165175e4946ba31b3e8de55e3f2__d4459e123">
+                                                  <li class="li">an optional 'Reference' to the optional
+                                                  'KeyInfo' element via ID is supported</li>
+
+                                                  <li class="li">'References' can have one optional transform
+                                                  whose algorithm must be a canonicalization
+                                                  method</li>
+
+                                                </ul>
+
+                                            </div>
+
+                                            <p class="p">So it implies, an enveloping XML signature with only
+                                                the following structure is supported ("?" denotes
+                                                zero or one occurrence, the brackets [] denotes
+                                                variables whose values can vary).</p>
+
+                                            <div class="p">
+                                                <div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;Signature&gt;
+      &lt;SignedInfo&gt;
+             &lt;CanonicalizationMethod&gt;
+             &lt;SignatureMethod&gt;
+             &lt;Reference URI="#[object_id]"&gt;
+                    (&lt;Transform Algorithm=[canonicalization method]/&gt;)?
+                   &lt;DigestMethod&gt;
+                   &lt;DigestValue&gt;
+             &lt;/Reference&gt;
+             (&lt;Reference URI="#[keyinfo_id]"&gt;
+                   (&lt;Transform Algorithm=[canonicalization method]/&gt;)?
+                   &lt;DigestMethod&gt;
+                   &lt;DigestValue&gt;
+             &lt;/Reference&gt;)?
+      &lt;/SignedInfo&gt;
+      &lt;SignatureValue&gt;
+      (&lt;KeyInfo (Id="[keyinfo_id]")?&gt;)?
+      &lt;Object Id="[object_id]"/&gt;
+&lt;/Signature&gt;
+</pre></div>
+
+                                            </div>
+
+                                            <p class="p"><span class="ph emphasis emphasis">Verifying Enveloped Signature</span>:
+                                                If the incoming message has enveloped signature</p>
+
+                                            <div class="p">
+                                                <ul class="ul" id="loio969f8165175e4946ba31b3e8de55e3f2__d4459e150">
+                                                  <li class="li">One reference with empty URI and an optional
+                                                  reference to the KeyInfo element via its ID is
+                                                  allowed</li>
+
+                                                  <li class="li">An additional transform containing a
+                                                  canonicalization method is supported, beside the
+                                                  transform with algorithm
+                                                  "http://www.w3.org/2000/09/xmldsig#enveloped-signature".</li>
+
+                                                </ul>
+
+                                            </div>
+
+                                            <p class="p">So it implies, an enveloped XML signature with only
+                                                the following structure is supported ("?" denotes
+                                                zero or one occurrence, the brackets [] denotes
+                                                variables whose values can vary).</p>
+
+                                            <div class="p">
+                                                <div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;[parent]&gt;
+       &lt;Signature&gt;
+           &lt;SignedInfo&gt;
+             &lt;CanonicalizationMethod&gt;
+             &lt;SignatureMethod&gt;
+             &lt;Reference URI=""&gt;
+                    &lt;Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/&gt;
+                    (&lt;Transform Algorithm="[canonicalization method]"/&gt;)?
+                   &lt;DigestMethod&gt;
+                   &lt;DigestValue&gt;
+             &lt;/Reference&gt;
+             (&lt;Reference URI="#[keyinfo_id]"&gt;
+                   (&lt;Transform Algorithm="[canonicalization method]"/&gt;)?
+                   &lt;DigestMethod&gt;
+                   &lt;DigestValue&gt;
+             &lt;/Reference&gt;)?
+           &lt;/SignedInfo&gt;
+           &lt;SignatureValue&gt;
+           (&lt;KeyInfo (Id="[keyinfo_id]")?&gt;)?
+       &lt;/Signature&gt;
+&lt;/[parent]&gt;
+</pre></div>
+
+                                            </div>
+
+                                        </li>
+
+                                        <li class="li">
+                                            <p class="p"><span class="ph emphasis emphasis">Detached XML Signatures</span>: If the
+                                                signature is contained within the content or the
+                                                signature contains the signed data.</p>
+
+                                            <p class="p"><span class="ph emphasis emphasis">Verifying Detached Signature</span> If
+                                                the incoming message has detached signature:</p>
+
+                                            <div class="p">
+                                                <ul class="ul" id="loio969f8165175e4946ba31b3e8de55e3f2__d4459e184">
+                                                  <li class="li">Signature element must be a sibling of the
+                                                  signed element</li>
+
+                                                  <li class="li">Signed element must have an attribute of type
+                                                  ID</li>
+
+                                                  <li class="li">Signature references signed element via the ID
+                                                  value</li>
+
+                                                </ul>
+
+                                            </div>
+
+                                            <p class="p">So it implies, a detached XML signature with only the
+                                                following structure is supported ("?" denotes zero
+                                                or one occurrence, the brackets [] denotes variables
+                                                whose values can vary).</p>
+
+                                            <div class="p">
+                                                <div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">(&lt;[signed element] Id="[id_value]"&gt;
+	&lt;!-- signed element must have an attribute of type ID --&gt;
+	...
+
+	&lt;/[signed element]&gt;
+	&lt;other sibling/&gt;* &lt;!-- between the signed element and the corresponding signature element, there can be other siblings --&gt;
+	&lt;Signature&gt;
+		&lt;SignedInfo&gt;
+			&lt;CanonicalizationMethod&gt;
+			&lt;SignatureMethod&gt;
+			&lt;ReferenceURI="#[id_value]"type="[optional_type_value]"&gt;
+			&lt;!-- reference URI contains the ID attribute value of the signed element --&gt;
+				&lt;TransformAlgorithm=[canonicalization method]/&gt;
+				&lt;DigestMethod&gt;
+				&lt;DigestValue&gt;
+			&lt;/Reference&gt;
+			(&lt;ReferenceURI="#[generated_keyinfo_Id]"&gt;
+				&lt;TransformAlgorithm="<a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/TR/2001/REC-xml-c14n-20010315" target="_blank" alt="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" title="http://www.w3.org/TR/2001/REC-xml-c14n-20010315">http://www.w3.org/TR/2001/REC-xml-c14n-20010315"<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>/&gt;
+				&lt;DigestMethod&gt;
+				&lt;DigestValue&gt;
+			&lt;/Reference&gt;)?
+	&lt;/SignedInfo&gt;
+	&lt;SignatureValue&gt;
+	(&lt;KeyInfoId="[generated_keyinfo_id]"&gt;)?
+	&lt;Signature&gt;)+</pre></div>
+
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1872823e93 ">
+                                <p class="p">Check for Key Info Element</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1872823e99 ">
+                                <p class="p">Select this option to check that the XML Signature contains a Key
+                                    Info element</p>
+
+                                <p class="p">The KeyInfo element has to contain either the certificate chain,
+                                    the certificate, the Issuer Distinguished Name and Serial
+                                    Number, or the Key Value element (or combinations of these
+                                    attributes).</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> In case multiple public key aliases are specified (using the
+                                        <span class="ph uicontrol">Public Key Alias</span> attribute), this
+                                    option is mandatory (to make sure that from the KeyInfo the
+                                    public key can be derived).</div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1872823e93 ">
+                                <p class="p">Disallow DOCTYPE Declaration</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1872823e99 ">
+                                <p class="p">Select this option to disallow DTD DOCTYPE declaration in the
+                                    incoming XML message</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1872823e93 ">
+                                <p class="p">Public Key Alias</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1872823e99 ">
+                                <p class="p">Enter an alias name to select a public key and corresponding
+                                    certificate</p>
+
+                                <p class="p">Using the <span class="ph uicontrol">Public Key Alias</span>, you can enter
+                                    one or multiple public key aliases for the Verifier.</p>
+
+                                <div class="p">
+                                    <div class="note note"><span class="notetitle">Note</span> In general, an alias is a reference to an entry in a
+                                        keystore. A keystore can contain multiple public keys. You
+                                        can use a public key alias to refer to and select a specific
+                                        public key from a keystore.</div>
+
+                                </div>
+
+                                <p class="p">You can use this attribute to support the following use
+                                    cases:</p>
+
+                                <div class="p">
+                                    <ul class="ul" id="loio969f8165175e4946ba31b3e8de55e3f2__d4459e283">
+                                        <li class="li">Management of the certificate lifecycle: Certificates
+                                            have a certain validity period. Using the
+                                                <span class="ph uicontrol">Public Key Alias</span> attribute in
+                                            the Verifier step, you can enter both an alias of an
+                                            existing certificate (which will expire within a certain
+                                            time period) and an alias for a new certificate (which
+                                            not necessarily has to exist already in the keystore).
+                                            That way, the Verifier is configured to verify messages
+                                            signed by either the old or the new certificate. As soon
+                                            as the new certificate has been installed and imported
+                                            into the keystore, the Verifier refers to the new
+                                            certificate. That way, certificates can be renewed
+                                            without any downtime. </li>
+
+                                        <li class="li">You can use different aliases to support different
+                                            signing senders with the same Verifier step. Using the
+                                            Public Key Alias attribute, you can specify a list
+                                            signing senders.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

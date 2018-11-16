@@ -1,0 +1,2462 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: dcwnlD4Z28mqfHwrt3xhkn1N5G+Iy
+ KhWjOOoA9ZaUkE=
+SHA-256-Digest-Manifest: Qo6qWudILxtl5m2Vw2ABwr1yBxU/chuLY4wkRU40PTo=
+Created-By: 1.8.0_121 (Oracle Corporation)
+
+Name: icons/full/elcl16/new_repository_package.gif
+SHA-256-Digest: fyph2ZP1zfVRcJrBK3XUWjiQmNrH7KOSE5D5ymvlhSs=
+
+Name: icons/full/obj16/repository_workspace_node_remote.gif
+SHA-256-Digest: U0utp0c74P+7+xnVHcr+qM/mOSN63dJPnVWj5rirsig=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/listeners/RepositoryReso
+ urceChangeListener$7.class
+SHA-256-Digest: 3qKyeF3EK23WlcjoTy+uMTiDsv1nT/Sa9QLW4MNiuEQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/SyncDbUnlockHan
+ dler$1.class
+SHA-256-Digest: Ddy4t5cc/+OoHKPRAkgJ/1xf7Tl9sC1xzpWPvjUuRfE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResultPage$1.class
+SHA-256-Digest: HEoyb1FmqBB/8dppmo0qR37BEKRgRzpWOXCBUeFvSso=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$18.
+ class
+SHA-256-Digest: x67pOTueZxhY0Al0IlF59xgcrfok1uU0J/z0HKL0gBs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/statushandlers/RetryActi
+ vateErrorHandler$1.class
+SHA-256-Digest: knkVzYSMaJuL7Wwh23C0Yy4dwi8vWV+MSa/1Xa/nWIo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$1$1.c
+ lass
+SHA-256-Digest: Od92EZawi76vLyqTtvffA7ct7ZbUMHWV6C93zru5GO8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/RepositoryContentViewer$5
+ .class
+SHA-256-Digest: 45lHWyeb4n181GBRBePjK/ctqN9OQfNSijXiBOnLR6U=
+
+Name: icons/open_repository_object.png
+SHA-256-Digest: dHmR9KzjH1k+uMt04v3H5cEganwepaZPHAZEFJ6TR8Q=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewer$TreeViewerCheckStateListener.class
+SHA-256-Digest: Rl19/XOSHTSAy2KxSAHGw2pn2s6CI22Vy8/BlxPsy4A=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryResol
+ veHandler.class
+SHA-256-Digest: CuAp09P7RG/MnKLijvCco6nbooNs/yG4qEm0XYxmB3E=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/StandaloneOpenWithMenu$Stat
+ usHandler.class
+SHA-256-Digest: /dyUp/2VMJ7YAce/pz4f7NeXoXMvokWDaKBgqASU/k8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/StatusEntitiesArea$2.clas
+ s
+SHA-256-Digest: HKf3Y5axxGIPKLDdKIWEvjKBAd7Dq+vYWzMMSUC4peA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/ImportRemoteWorkspaceWiza
+ rd.class
+SHA-256-Digest: ohISRLl5YJ+ublePqa6j9mjxnvkNrRWId9HbbV4TwLQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView.class
+SHA-256-Digest: JuMr4S9ydeoacyvBaHxAu3EPUTjTeupVObTJL1JJBhI=
+
+Name: icons/full/ovr16/error_co_buildpath.gif
+SHA-256-Digest: GD77Fug0YbQR+v7tLGp+LNvSok0HCem+eFjMqF4sGTo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/SwitchOwnershipWizard$1.c
+ lass
+SHA-256-Digest: qQ7Lm4a/VhVM93yXeLbPHKhujGKTdBjTQwK7Dql8Hls=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/RepositoryContent
+ DragAdapterAssistant.class
+SHA-256-Digest: Dx+XBtKnzRZSG0EQjoYqqzPNUFC1n1gdaF1fxEtcRKs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceRegener
+ ateHandler$1.class
+SHA-256-Digest: LyNNroKMO/H5EkbHg3hLUHu4lJwjGuHbQGUMGhOdInM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/statushandlers/IRetryAct
+ ivateErrorHandlerCallback.class
+SHA-256-Digest: Ri0sxyfsUovQvi0a5MDJnUNVG6HwSPcTyqulxnIZRYM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ProjectUnshareH
+ andler$1.class
+SHA-256-Digest: eHMugIdFSf78AuLcbSzVv49d7dzHShcutAS+8QT1Fjo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/RepositoryBrowserProject
+ ImportHandler$ProjectSharingJob.class
+SHA-256-Digest: 1mpoQadu1JrDQN5zueRtty185wGLmqxbhlGG/QvnN78=
+
+Name: OSGI-INF/TeamFileSynchronizationUiServiceProvider.xml
+SHA-256-Digest: Xbvx+Aq7dYfEIWnMoK+7GwCBUXPVXYGnB4tFFy3ZnrA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteFo
+ reignUserWorkspacesHandler$DetailMessageDialogExtension$1.class
+SHA-256-Digest: LDHMBn11ayoR588n0uhYBLCrdDzB7Jd/1GGw10IKB0A=
+
+Name: com/sap/ndb/studio/dwb/team/ui/sync/HanaSynchronizeParticipant$2
+ $1.class
+SHA-256-Digest: YdV0ciyzyKvcFoS2xj1nccJinT8upOt1NRjXVRjrK8s=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/ProjectConfigP
+ roblemResolutionGenerator$AddHanaNatureQuickFix.class
+SHA-256-Digest: tM1mJMSADcIavH+QOaFno0TUZMKY/1zjNIraL15i/G0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/UpdateProjectHa
+ ndler$1.class
+SHA-256-Digest: g2INp3ERTj5WSZtwEEyZWZ5XHpTu5lu3ewOw31slCsc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewer$TreeViewerExpandRunnable.class
+SHA-256-Digest: dwIseCy2T8ojfeHzar349ibf4bmA7Ky0khuuCt75O7g=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$Check
+ boxAction$1.class
+SHA-256-Digest: oxrWqwESqc8StuktDibXpSpFSgN5cX04jNu2M8Qlxus=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryReset
+ Handler.class
+SHA-256-Digest: D/kTSaPhC3Hhes53gTswWK9jaiz/bUsQeqEgb0MkOFU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$1.c
+ lass
+SHA-256-Digest: GunVzho2Y5KjmTGM58N0JmDxHuaxby+HUN77UwZ3IKs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteWo
+ rkspacesHandler$4.class
+SHA-256-Digest: vizyFlJSq4Ddw2PbY172+o891HW+oXEAP7ubSWZB4/4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/propertytesters/Workspac
+ eLocallyKnownTester.class
+SHA-256-Digest: zn5FV/V1FwqpRK5aY/OmyAQGlm7xXb6ij1HdMZ0wO9g=
+
+Name: icons/checkin_action.gif
+SHA-256-Digest: SOzR7FDcgWxpt6XDQTDWKcK25Hq6KbocpuNrABUk86c=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResultPage$6.class
+SHA-256-Digest: wxl3PI8hW/acO6wHdXY8scwBoCvO16szAxbBDLykpVc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/decorators/RepositoryFil
+ eRevisionDecorator.class
+SHA-256-Digest: jvz3hJDUJzXHTM230SUZvHcodUzMqi1Fx6QdxxO97Vo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositorySearchR
+ esultFileNode.class
+SHA-256-Digest: 8CXvrOWnm7UtTggK3cEABbRIe+ZnHasV05HRL/yj3JM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/CompareHandler.
+ class
+SHA-256-Digest: BFhga4IGQjww/I1hZc3LuWe2kRA6Nj6Nc7dEXCF4If8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceShowHis
+ toryHandler.class
+SHA-256-Digest: X7qKGx5BRwE0wqEMq+bp9QzIMdkPnpo4uN09FeH0WUg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreatePackageWizard$1.cla
+ ss
+SHA-256-Digest: k5TwrhNcTRFNgcp10PoTGiCH5GtRDYlJDTwTSIgJl4A=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackageHeaderPage$7.class
+SHA-256-Digest: t6bCQOZinAGTJurlLMK7ccD/WmH+phRTPotans3jPWY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$1.cla
+ ss
+SHA-256-Digest: btnbcN6VAx4O0Vc+jJIztQ3O+4QBbLrlgfxRZEbOH0o=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/SearchResultArray
+ Comparator.class
+SHA-256-Digest: 9EfgstwnTbz29roIgHa5XUSu1Ev/kyKbK4hYHTbLddQ=
+
+Name: icons/full/obj16/repository_workspace.gif
+SHA-256-Digest: 3Mrs8tbNW+SqOrQBwTF08G08rrCUmOPxtNsyEZ8NYJs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/SapSystemViewer$2.class
+SHA-256-Digest: ECH9DwhifTI88Hl80nB6lKFYvGOwTJTw2lhTYPDi9QU=
+
+Name: icons/full/elcl16/import_remote_repository_workspace.gif
+SHA-256-Digest: RY194KPmOQlq3lhh72uYC3HJbkBbRbgyX6P931yP5HA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/StandaloneNewWizardMenu$1.c
+ lass
+SHA-256-Digest: qEoU+LXYZWh6wUKoaMpb4ndtcBV4AtmeBf0KcxYMhtk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/ActivationFailedDialog.cl
+ ass
+SHA-256-Digest: E3tJI9Rdm+dkfJK/nf9HXN9/o9M50xnp7g66LlLCBtU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteRe
+ sourcesHandler$1.class
+SHA-256-Digest: k4Wd/9pfiBJCn4s8c9q93w1TeRGIphr5NXfF7vgznJw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewerWithButtons$4.class
+SHA-256-Digest: h2JFz5garQ5rhmgHQFv69MlZKSOJ0+vk2ROcNjWMM8w=
+
+Name: icons/full/obj16/repository_no_privilege_package_node.gif
+SHA-256-Digest: rwIVbMondvN/el8ED7izsJ1Ow9nj8Y86oKxjgEPuDH4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $7.class
+SHA-256-Digest: Dx/clB1s3Le4iJeuFAbMUKGWimiTHe+CSWwsJ7yaO9w=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResult$RepositoryTextSearchEditorMatchAdapter.class
+SHA-256-Digest: 5LXPP2zsZQQ/2J1O/uJxtGjwHC8fHZuLbGFJTW5NaDc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/RepositoryBrowser
+ FileNode.class
+SHA-256-Digest: oytA9AtIB/GxdwG8Uw47DTwhc8xi+Csdz31LVe5B1Hs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspaceSelectionPa
+ ge$1.class
+SHA-256-Digest: Ldh8qI48TgCT8R3pkVh+3gFKSWSkF9kEMCKvEoDqRd4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPageSource.class
+SHA-256-Digest: DmXsghatpwBNaS65kSsoVu9A26f0+SvvGrNqk0wxX7c=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/SapSystemViewer$SapSystem
+ ViewerDataModelPublisherListener.class
+SHA-256-Digest: XnlCNCeBQfcabUlxmq14Srmpym4RDA5M4fSsFCLkW6w=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaWorkspaceSelectionPag
+ e$5.class
+SHA-256-Digest: q4A6gt1WIYxYvuwR1mgH0nAnwLwWu5jm8j2PEb/pgZg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/CommandConstants.class
+SHA-256-Digest: dMUQL8OCu/25isJMu/h+2jHhPbhM7Ut/5epSXLf78qA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/RepositoryBrowser
+ ElementNode.class
+SHA-256-Digest: /t79p+VCQV7ZcDCQxSAmew0fAQwf8I2Jf/eGSMF8o4s=
+
+Name: icons/activate.gif
+SHA-256-Digest: YiEb4l006K37lMXEsJ6tJSqu/8SdrUUtU3FthJ6VAp0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryReset
+ Handler$1.class
+SHA-256-Digest: KCgYeYUpVJiWLEx6Fth+GlyKEaFo69g4zjc6AYPXQqM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/SapSystemSelectionDialog$
+ SystemViewerWithButtons.class
+SHA-256-Digest: tyMLG3EfAI+f4+g6b+xzlrbtQmYahtTZaijP91sfSyg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/ExpandNodeJob.class
+SHA-256-Digest: BeSHXIGvQ0T4D0pqTOffHcJyuFfxlMYPsAA7uhjfNJ0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceResetHa
+ ndler.class
+SHA-256-Digest: qY8MJhnp829lQx4OwS8ebgERi7MZoXrcOZx6Zng/zes=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$ReadHistoryJob.class
+SHA-256-Digest: dLCdm9NqCrc6L0JsFt1/reJB39gGkBTEDurGqujTu3c=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserReassign
+ SapSystemHandler$SapSystemValidator.class
+SHA-256-Digest: kbMB3tBg2/RzywR4RbSKDDRTyC0EwzzW9ouSExaG3lY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/util/LateWorkerUi$2.clas
+ s
+SHA-256-Digest: cVoXZPICJ5T/hJs0yMq4AugXlZAyi601YUraayrXeb0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserComparator
+ $RepositoryResourceType.class
+SHA-256-Digest: EP+qtJIjGUDCu3hWTJONB1Ks68eWsyCL2CDZ6wHLmeM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$6.cla
+ ss
+SHA-256-Digest: bg6ExM1eTRFf0/ugEQHIw8FG4VywZJ2dYKxgtlI8rME=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserReassign
+ SapSystemHandler.class
+SHA-256-Digest: ecgUqp5UVl/7bX5Rh4P2G5vbv/3EOnbpAOYix9QnmSc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$11.class
+SHA-256-Digest: 9ho5W/acWc4SfeJhIlPic/Tv+MotL97b19w7SdLRPaY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/EditPackageWizard$1.class
+SHA-256-Digest: i10jr9Y5c2GlIejQAFu6HEt9qfT7l8XEgWCM/yd+X/g=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/RepositoryBrowserRepairW
+ orkspaceHandler.class
+SHA-256-Digest: RrazvQWpEdoMqXoMvNkAZXjjLki/CQz8lja3STpptm4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$Len
+ gthValidator.class
+SHA-256-Digest: LOmn4vHeU3vvTZTwMIpgCW8t5Q0sxAju1xzgsZ7x9dI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage.cla
+ ss
+SHA-256-Digest: rMV8zJR6cXgFohtcRYHC/RcpypB8S2irneutO9oDwVU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewerWithButtons$2.class
+SHA-256-Digest: bMG9r3Kw1ZhgpxsbCuDi2LTBb1YFXhckegm4aIM87ig=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/ProjectExplorerOp
+ enActionProvider.class
+SHA-256-Digest: OXWgcYTH7PNGTtse6qxon4QuZ8NGz7s3dtym9OMcydc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/DwbTeamUiErrorHandler$1.
+ class
+SHA-256-Digest: YzJ1wFBz+SMu/4hSXsLXOYSpSQieHlskb5Aa6jZzMDM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/StandaloneOpenWithMenu$1.cl
+ ass
+SHA-256-Digest: VFp92DyKOElhEMWgCgK+vPsUmcGbrnopsm1E1i/Dl+A=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/WorkbenchStatusAdapter.c
+ lass
+SHA-256-Digest: GQ84XjLGL9C+CSmX5VMfQzPbQzbH0fr5WZzeAu6q1Y0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceActivat
+ eHandler$1.class
+SHA-256-Digest: GrZwHh7Z3Ewnf0bHIApTmsEu1ifDrflZGyKM5lYOrRk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/jobs/JobFactoryUi.class
+SHA-256-Digest: nCC+VuS1HDc/QZDnLq3Km2ax/0iWJ97GCxpuYkKtw1o=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $SearchResultTreeObservableFactory.class
+SHA-256-Digest: sGTTroBZ983hbIEjBUt89rbXgeBXCqcQ8GndC5guufc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserHanaPro
+ jectProviderAdapterFactory$1.class
+SHA-256-Digest: eclX6xpr8mc8akRF6IAoF41Rr6EiHqbe0N8BcRTn05k=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteFo
+ reignUserWorkspacesHandler$DetailMessageDialogExtension$3.class
+SHA-256-Digest: gNmwbyf7SDmYGtTBklPm47TY18k71PbtopBzjT+xLv4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$6.class
+SHA-256-Digest: auJSLayDaL/Pfo0PghOgeyK0H6+MPhTuiuGlKa3mEyM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaWorkspaceSelectionPag
+ e$7.class
+SHA-256-Digest: UJwFBKAne3MbFhIlEt3QSQ8iAIKlKnslRq1jku2cIJs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/SapSystemSelectionDialog$
+ SystemViewerWithButtons$1.class
+SHA-256-Digest: H4XJUGWaPHfASSm39XBo8P43ou9PjM0wY2aj+cuEk7U=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$8.c
+ lass
+SHA-256-Digest: zHdIRH1371c3bTgAgnZlpgkwdv/TxzFZeKipDITXfIU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspaceWizard$Wor
+ kspaceClientLocationBean.class
+SHA-256-Digest: AEUCphfFiQTweyg+aaJef4BJtWhHWyMvlnUDOq8wU24=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/UpdateProjectHa
+ ndler$1$1.class
+SHA-256-Digest: +d3+DR0gqJOsVA1hwzBcB2QYEnaq3HnqviiIwNMt5xw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackageWizardBase.class
+SHA-256-Digest: yTwuomTHP3LZO/xq1J6yiR3tKqTuWeD65jVjdlT+xD4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CheckoutImportProjectsWiz
+ ard$2.class
+SHA-256-Digest: LKYdR0AnPY/yf+L2B/MJguav8kluwvf/wnDdDOhERO4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/CopyQualifiedNa
+ meHandler.class
+SHA-256-Digest: dQKnKelA2Uy1P8fhjj4+Frk5asv5d60A/SOylovfzLQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryPackage
+ ItemProvider$5.class
+SHA-256-Digest: K6I+rThNJFowVe2tc16Ow+q236F8mQzC2DGmaeiXSQc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResultPage$3.class
+SHA-256-Digest: aua/OZ/4d/ahAV6YaiygYqa87uemQmd5RVIbLK1rGTo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryFileIte
+ mProvider$1.class
+SHA-256-Digest: X5wQzv3e6wajAZtakOB1cdenS6i7JrNDF0DLD0AxBio=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/DwbTeamUiErrorHandler.cl
+ ass
+SHA-256-Digest: CNWsuDjL0WSxdRHbUqJDGQDiUtAHGKSXpaH/O+w1qNQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/decorators/HanaResourceD
+ ecorator.class
+SHA-256-Digest: P12XHZwdr5nSoPvKjROeqUV/RgHps1RbYH0Ksx/5W6k=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/RepositoryBrowserProject
+ ImportHandler$ImportWizardUIJob.class
+SHA-256-Digest: sifQdqenXA6v/vh7E2mGPal5+9spFcxpEUYtxv8VFEQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/SyncDbUnlockHan
+ dler$2$1.class
+SHA-256-Digest: gypd8RdtlfCVLCFYs4JfcboCM+woYsrxTP7uQiMBgOA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteFo
+ reignUserWorkspacesHandler$1$1.class
+SHA-256-Digest: NhL4wF6CBQQyGYXsm2X6LJaReVffpENUBbltUD2glvM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ProjectUnshareH
+ andler.class
+SHA-256-Digest: IlOcX8EK9GnQW5zV2aRiAxIQpNyxWOJYUFzx7RMTtMI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/CheckboxConfirma
+ tionDialog$2.class
+SHA-256-Digest: z79LnvSZhH9XwJSwtTtdZdnPi030q1Q6AtvDMunwYdk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/RepositoryContentViewer$3
+ .class
+SHA-256-Digest: K1aNqLDewuf1Yz+VH8jJBD5WBvR8goKP/sR+T+GtoaM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$3.cla
+ ss
+SHA-256-Digest: GBAhRSpSULg55tedQArOWAGkLkat1yeqE1fflgNwmhI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/jobs/IRepositoryBrowserJobErrorHa
+ ndler.class
+SHA-256-Digest: 2Q8One7DN6B+6LTBwsKoozckfmbElxlHP4RqvI2KMYE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/SapSystemSelectionDialog$
+ 1.class
+SHA-256-Digest: FL/wfvfkKbECj1ZMi3xUAEUuzBf93gI1zJPPeNgu8TY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/statushandlers/RetryActi
+ vateErrorHandler.class
+SHA-256-Digest: j1mWl6GrSsL5EDMpzSZ4kOlNB838t9ydmT/PCywfQAI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age.class
+SHA-256-Digest: jdywuZRHDrHDu5AZ071Z34b1fSgTeCHmfuQ9lS3d2IE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserImportLo
+ calWorkspacesHandler$ImportLocalWorkspacesWizardDialog.class
+SHA-256-Digest: eI6gZS8AEZEpsMMkMwLRm6NsP+uMj75IjUYc85papjQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$8.class
+SHA-256-Digest: NlSXnbyL8c7fLGcUt9AjYP/9lwhx8ahx8DqhFiBzEDI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$Repos
+ itoryBrowserPropertySheetPage.class
+SHA-256-Digest: BqMYu0GY8XjSvn49QFqO9IotIzIjcBcp+opgsvsplDI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteWo
+ rkspacesHandler$WorkspaceState.class
+SHA-256-Digest: RR/1Wq0+b1vRKtEIl4GupfvELWvrsIExdIDn96xAPhM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$SyncDbListener$1.class
+SHA-256-Digest: bx5v808iPS31vx0aWCl7C+j+FaaIRNyO9O3moaZkGbI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserHanaPro
+ jectProviderAdapterFactory.class
+SHA-256-Digest: 51KWB5vsV1wjMovrsBH1IZ6vLQ5B8BJL2XUYXon2F84=
+
+Name: icons/full/elcl16/import_local_repository_workspace.gif
+SHA-256-Digest: Bxb3+mST3PDrHbd31+iDeapWzbH8ysoiitaVZPt3M3M=
+
+Name: com/sap/ndb/studio/dwb/team/ui/sync/SynchronizeConfigurationWiza
+ rd.class
+SHA-256-Digest: O/SL68E/ughrVs7EBumlt4M61WOkoP6IcVTkohRUguo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/StandaloneNewWizardMenu.cla
+ ss
+SHA-256-Digest: onOSxROxK+qhEZuGIsUk2ZZ240gq7c5sywAOhE2YtQk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/databinding/WorkspaceNam
+ eToDisplayNameConverter.class
+SHA-256-Digest: /j6tpALY6tsiy/m0mQKAwL5Pf0N5pNGBV1qoRfFLKY4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $SearchDirectoryValidator.class
+SHA-256-Digest: TIZL9jBjyn+7xt0GpG9/mCFLo4EhMFDl1UDDkuVv61w=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/TeamProviderSupport.clas
+ s
+SHA-256-Digest: WSNY3f7Ernbffiq2PnPUb15p76n1aPlV0uATqWPmXKg=
+
+Name: intro/overviewExtensionContent1.xml
+SHA-256-Digest: 6uCCeTNJxYd5nx+RNSstkq/BoDMbeLtG1RmfZdgaEvY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/LocalResourceProvider.cl
+ ass
+SHA-256-Digest: 1E/o2Jw+X5QKiH6oNMZsWkbJgYEIeI6Fd4wFaHBN71Q=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$7$1
+ .class
+SHA-256-Digest: jSGBEX5ZyxhNAryFaxGDExbAK/fKEm6xC+7EnbCWlfk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/ISharedImages.class
+SHA-256-Digest: kDoumN7bHQWM0o2+3PuvrS5LbX3eJs6w83PTpWhAqIQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserActivate
+ Handler$1.class
+SHA-256-Digest: 1HdvDerHhjPuslGvoTA9f8EApD5tInztG28R9udcG5A=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryEditP
+ ackageHandler.class
+SHA-256-Digest: ErrpnQYk0ourGO7NGG05dwgCHLP6WZXHjCMRYTdj9c4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/statushandlers/UserNotif
+ icationErrorStatusHandler.class
+SHA-256-Digest: AZwW5Ka4ElUZesBGN27wn30SNv2rnccKXQgtjxzPQHI=
+
+Name: icons/checkout_action.gif
+SHA-256-Digest: 4tN4mNpUf/4IvvGONa5DAn6PJCc+N01K5A65wfp10d8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$7$1
+ $1.class
+SHA-256-Digest: AGnL4CGZNcr5PBsy0UFzbKdT2dzeQpj2KAdDXCxZODo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResultTreeContentProvider.class
+SHA-256-Digest: G8OWEC/1KFdvxfTZbzBLMnP4Q8vzrF/65P+YMRQnNqA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/IRepositoryTextSe
+ archResultContentProvider.class
+SHA-256-Digest: 7jsLEeKNusdHL7LMoS+5ftk0BEk8SyAciYhZTy9l55Q=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/HistoryViewOpen
+ Handler.class
+SHA-256-Digest: MELyRCXbBMyQ56Xy/F7E91h7TjSLVB4OmlzFpbU1ubE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryPackage
+ ItemProvider$3.class
+SHA-256-Digest: jO2I/D+EEO0DnsJYrYTUaak/oluVzOG5CBpYZx5YcpM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/ActiveVersionInfo
+ ItemProvider$1$1.class
+SHA-256-Digest: 83IwkJ0tdNZGTtG+iFlMkvWR5v/IPovX4nDJpsBjJbI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/VersionTypeProper
+ tyItemLabelProvider.class
+SHA-256-Digest: HUIIzgucZZlOsxxPIHl8S1d1BGTIdsYfXf7CgweBxqg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$5.cla
+ ss
+SHA-256-Digest: 8kVzasj/k5GH8Duyk2nvYJlMdbQpv/PCvtSnlhh6sww=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$6.c
+ lass
+SHA-256-Digest: Rl00P0qG8kHqyM9wzazjOUTWADWC7QPvTb2y3MRATtA=
+
+Name: icons/full/obj16/repository_workspace_node.gif
+SHA-256-Digest: XF6ChhmZxX9559L6NfA6y9RVC1qnUPl7YrOdqtrAQ+g=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/propertytesters/Containe
+ dInSharedProjectTester.class
+SHA-256-Digest: cMQ697e35ChwCrjJPX6Mfoqayml1QG0NCPr8i1UO160=
+
+Name: com/sap/ndb/studio/dwb/team/ui/sync/HanaSynchronizeParticipant.c
+ lass
+SHA-256-Digest: X4ivKhy9nBH4Mmw18ZHV9k5zoRqBt3KP2fE85bWeS94=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserActivate
+ Handler.class
+SHA-256-Digest: qJ6J0rd02/152QFTSOlsYhaAKsFgzdlPn2N/DXo5wq0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$3.cla
+ ss
+SHA-256-Digest: B16p45cKkUFi3y2NgldN7X3ejlACUNaQoKUWiAGhHtM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/decorators/HanaDecorator
+ Base$1.class
+SHA-256-Digest: G4EzSXuE7W09i6iPGU/wytwWzTwFxRgrnlVJBypkHV4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewer$TreeViewerLabelProvider.class
+SHA-256-Digest: orWibNme3xASPByEDN0cyGLhS5l4l7XU1K9ZuplBJcU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$6$1
+ $1.class
+SHA-256-Digest: C9ygA/fG9Y9tmfOd6h3Imb8+BRcf6te3vuzVBzDAi4I=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserFileNod
+ eWorkbenchAdapter.class
+SHA-256-Digest: rMrlM/RTDjctlHYRBYS20P9ow4K+wVmRUNYsXO2D2MM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/Handler$Util$2$
+ 1.class
+SHA-256-Digest: oCHXmnzrPT91sE4BTu+rSLurMzBbOXrWvMY3lTURlbc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/Handler$Util$2.
+ class
+SHA-256-Digest: uebI5cDMzB6+vDB8Cf/JoNPfdd3G5oOMel/8ngGgN9s=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/actions/OpenRepositoryFi
+ leSearchDialogAction.class
+SHA-256-Digest: l2Q+DJGAsJW/eCctnA9tCDJNv486YUEu+GjqbSY8/K8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$4.c
+ lass
+SHA-256-Digest: UojBqVJGfLBkjhxW++WtFqUsbL+C9boKk1/NN0XzfoA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CheckoutImportProjectsWiz
+ ard$CheckoutRunnable.class
+SHA-256-Digest: NnlABpA4kQ5xSwNIA04g5G43BxRFSNAX9o2YENNusgo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/listeners/RepositoryReso
+ urceChangeListener$4.class
+SHA-256-Digest: tseEMfcwQDIq/gCzCfCdvG5CbSHHMlB6/QptwnI3rdo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteRe
+ sourcesHandler$DeleteResourcesErrorHandler.class
+SHA-256-Digest: hnRXKS03HeKaspafEpIWWwiNOP8svv6vfWL3jNx1m6k=
+
+Name: com/sap/ndb/studio/dwb/team/ui/jobs/JobFactoryUi$1.class
+SHA-256-Digest: JQshZkrcDKdp0dxP5Zubg3HE7IjwmgTOXve7CAT6WzQ=
+
+Name: icons/mergetool.gif
+SHA-256-Digest: BLJ5/Zu6Rc8NXy5y5SgSAYObwDwhzBK1QCvJPe0kzQI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/FileStoreEditorInputAdap
+ terFactory.class
+SHA-256-Digest: cSGamg6Ns7WwIRJMZznm7aZFcydcWIy2e/lOAVycBGY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/preferences/DeveloperWor
+ kbenchMainPreferencePage$CommitFieldEditor.class
+SHA-256-Digest: YF/jItwhm3z+1HTDHOeL/nGvRwZPmt+xuI+gXmYYiR8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/SapSystemSelectionDialog.
+ class
+SHA-256-Digest: 38YPkMKVogxBN7YpzSbFHWIQ966KQ3EqZ8z3JLgTxz4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreatePackageWizard$3.cla
+ ss
+SHA-256-Digest: yz/fADjUzc69KsNmgFbaJ6MNQZHxcMnQfh0K362iwRs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/CheckResultDetailsDialog.
+ class
+SHA-256-Digest: 4WoJ0V5TxSC7hRPpesOVWBXB9Q9f3RbT8J2BPfwq1Ik=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/HistoryViewOpen
+ WithMenu.class
+SHA-256-Digest: p0uQgbiwk3egL23OK4qj3CBkeydWd6bHaDUWQVNpyAg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$2.cla
+ ss
+SHA-256-Digest: jnWfTsvRSvP2r6TYW8ucrbEIvZ6by66auiQDqnXmz50=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/CheckResultStatusDialog.c
+ lass
+SHA-256-Digest: r++mrCxW0kwfgNOzOniuy8IgAZmMqZIMpaDqg65spcM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositorySearchNodeWork
+ benchAdapter.class
+SHA-256-Digest: Z9XKd5TS/zrYrdyJkRU9uBN/rh3Yq40WqQ2baOkOxzA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryCheck
+ outHandler.class
+SHA-256-Digest: 1Abx62UOxmPIZoDY/gYb/xmHr7Asp5kY9j/U8e399/0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/sync/HanaSynchronizeParticipant$2
+ $4.class
+SHA-256-Digest: NW8llkBxqwkKYa+Xn0ABIaiiXSf/+uNTnGOPKmAXYoQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/StatusEntitiesArea$CheckR
+ esultContentProvider.class
+SHA-256-Digest: +bOafJXZOlMpxnnWxb75jYfL26lLVv8xXBngag+N50w=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/ActivateAllFiles
+ Dialog.class
+SHA-256-Digest: mu/YgOdDpYTcxmlf/KUQMFEgyMNo39Zser3wiJJFrnI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryPackage
+ ItemProvider$1.class
+SHA-256-Digest: KLVu9dtDzuoNolUO6KoY2lS5+xPSV380TXijdV5Gol8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/util/LateWorkerUi.class
+SHA-256-Digest: vJOOrtp0wX97u0mZQoxkIhH1usTQ7YW6Qj4dozenKKg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteFo
+ reignUserWorkspacesHandler$DetailMessageDialogExtension$4.class
+SHA-256-Digest: TzAy5csjtruL321T9Fnt9h3nhlAYCf2WHUQiZPz0g1o=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/statushandlers/UserNotif
+ icationErrorStatusHandler$1.class
+SHA-256-Digest: DMLDPnQW4lAh+NU3hHv+nIyZSXLGYEivvCqTv/eBQgU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $9.class
+SHA-256-Digest: n4r+iHp2Zypg6CALF0WjKpREpOMS4soyiZCJFpSxxvc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserSwitchOw
+ nershipHandler.class
+SHA-256-Digest: Rti5rGp0Lbf7ExA5MWwbT8Uhhjqe2dRkaWmravPTfZo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryShowI
+ nHandler.class
+SHA-256-Digest: goBKh9ueAypStJof+tQE7TJqXbqitC96aBV0XWt1q3A=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserRefreshH
+ andler.class
+SHA-256-Digest: ln3ryZkgsLZsrrxuNWY0Zo7/oPzITOmgwgGVGrevI6Q=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResultTableContentProvider.class
+SHA-256-Digest: ZOQMTRkYKPrm+QuoDSIvwNwNwykttTKkfeP4V0vL2qg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$13.class
+SHA-256-Digest: qb9AKsIRncY4lLnLxXc5ldx1b00aTNmip/NuaOSyDl8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/ProjectExplorerOp
+ enActionProvider$1.class
+SHA-256-Digest: hItSVjABnWvDBgwT4EnnMVfqQgTOvFABilQd3ak+3lA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/RepositoryBrowser
+ NoPrivilegePackageNode.class
+SHA-256-Digest: vlq3rcqXV1pTd4WuYlb4kpetsl5CzJwuaWRaonTYmeM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryNodePropertyAd
+ apterFactory.class
+SHA-256-Digest: 3wmO5CJT2MR8AUgtaRZ0z2dimSjp/lpFAuYubveDiFs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserContentPro
+ vider.class
+SHA-256-Digest: 3Y94k18eUECCnoIXpdT2+Lg3izUVqToeh8DOYTvrZOQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserImportRe
+ moteWorkspaceHandler.class
+SHA-256-Digest: hfYeSAz1a9aEKuQZJoT0kv+BpbYQ/K7A7O4hToBpbwM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/RepositoryPackageSelectio
+ nDialog$1.class
+SHA-256-Digest: qIJfACGxMUo8Z5fKgKXz1d+OKiOmXxVKdlUXM8nXEUs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/StatusEntitiesArea$CheckR
+ esultLabelProvider.class
+SHA-256-Digest: Ldi/3itPmAkXUQdRFkFu6IObjSJo5q+qYmpAkgytySw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/TeamUiWizardBase.class
+SHA-256-Digest: mbBiB75TyaFllMyjgCc7wdyPKqckAvGvBWuOhgl5+MM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserDestina
+ tionNodeWorkbenchAdapter$1.class
+SHA-256-Digest: ePSuyqvyRkr2slzk3InLSCbhMxmkDsPgfTceyAzEZO8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/ValueHelpDialog.
+ class
+SHA-256-Digest: txIWQvToJLe3Gbsl7eyic5jckwihkBGvisrnLfrgbJE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$1.cla
+ ss
+SHA-256-Digest: bWkgMXu5rTR4FkZUP0Ehj2cMHzbwzL84xwWaNRVXWrs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/SwitchOwnershipWizard$Ina
+ ctiveObjectsSelectionPageItemValidator.class
+SHA-256-Digest: R4Y/xc0+RIAk9lwHHf6uGbFVd8YaW0pJQW4hFeHa5Uk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteFo
+ reignUserWorkspacesHandler$DetailMessageDialogExtension$5.class
+SHA-256-Digest: FFXBLzFr/CkQluY+0OOiGyfFlf3DWI/QgGWb3XHmHKw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/listeners/RepositoryReso
+ urceChangeListener$5.class
+SHA-256-Digest: zRF4VGWR5Ct1Ie6vrL9VT3YRH+Zofdg5Y351QNKDzak=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/DwbTeamUiPluginStartup$P
+ erspectiveListener.class
+SHA-256-Digest: PnyEj/P27kwFig3PBonJZaNh3r/hBeywv1rFsKB1hgY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceRegener
+ ateHandler.class
+SHA-256-Digest: RAQZYdqLjNa2X1+GwwGXt3bRzIE/8OZgIaDF7tlJlv8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/propertytesters/ClientWo
+ rkspaceLockedProjectTester.class
+SHA-256-Digest: 5pvCbr2ayqelwyYFXwDC0w6SbhDczhxhIckW55FLSV0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/RepositoryPackageSelectio
+ nDialog.class
+SHA-256-Digest: UK6I4OW9ofp3LgAfJm+3GvnFGd/niStYGjtv9fNNCRA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$2$1.c
+ lass
+SHA-256-Digest: ybOibE0Ff6ACsZrm7/LmIXd4Jx01DnCck9u1AzIdQGs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/RepositoryBrowser
+ PackageNode.class
+SHA-256-Digest: IpAv50SEeqS0PqDL24hCMG2DDB450J/Ww27/imVfR94=
+
+Name: intro/css/graphics/picto/LaptopBoxPencil.png
+SHA-256-Digest: 28alrD+D7oGS9LKMRUciLEuBj7KWB/m0pqhzYUUrNRM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/RepositoryPackageSelectio
+ nDialog$2.class
+SHA-256-Digest: IzI8VePga1oicqWssfVagdDm/eGR2Q28w2H5ceaocwA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/IRepositoryBrowse
+ rElementNode.class
+SHA-256-Digest: QXgSVE4QgDfZNWx2iKT2t9G2rY8JqRHujfyg7hh7iBQ=
+
+Name: icons/activate_all.gif
+SHA-256-Digest: 0nQVYS7+2Hr4xo1l0rFrEs/v/SLmnNytvymw+/ERlLE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreatePackageWizard$2.cla
+ ss
+SHA-256-Digest: MLuJqEZJ/ZWAUGM6ksJhdR7LMqcZVz8N/ZnXp+0P6II=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaSharingWizard$CheckAu
+ thorizationRunnable.class
+SHA-256-Digest: dOhap0NwlFHWygBe4k/c0XXNOIcUBluase+tO7Wsdgc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$12.class
+SHA-256-Digest: aNgrgYp8cbG5dG6wmvIclqUbLVTFpnmVc/6WxhmGllk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/actions/EditorAwareActio
+ n.class
+SHA-256-Digest: lRRm+fGWFUIeClyP6H7iPO2dtbjo5NtlfiDBnufsUqQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$3.c
+ lass
+SHA-256-Digest: K8lIyMekcU5kKt+DSvA8TU15fcLfj0GUbMiZr2iegKA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/statushandlers/RetryActi
+ vateErrorHandler$1$1.class
+SHA-256-Digest: kU2uJTdFLTYrfSZbESqE2KJjjJH4pusOiMKzPNYeBZ4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchDialogPage.class
+SHA-256-Digest: 5uaKXNivkDneX5pzdfaBpa/YtkXH68TW4kcl54jEwSA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/ValueHelpDialog$
+ ValueHelpComparator.class
+SHA-256-Digest: ORsU+LsOm3zGVLuW5kEjU+tB/fKkR1foZIhjdrIkiGs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$Repos
+ itoryBrowserPartListener.class
+SHA-256-Digest: B+bkUpykVfp1phud86lngnNDWfsgZ43E/CX0B2OA4uQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/sync/HanaSynchronizeParticipant$2
+ $3.class
+SHA-256-Digest: dRn97WmL623Q8mrFj4CP2kBhQm726KrNY6KKlvq5sHE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryHandl
+ er.class
+SHA-256-Digest: sFv8QYltstJeWELfFXdLAvICky/j7zjSga2dEnu667A=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewerWithButtons$5.class
+SHA-256-Digest: qVWWb/afaoqyfRIF9VU+5jdmDIU/UxNXMmC7yq0hZXo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/SapSystemViewer$Decoratin
+ gWorkbenchLabelProvider.class
+SHA-256-Digest: 0dHDCN9xMtFhghs3DE5rLQA74EOTSNFXZgM3kBPsUIU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/CheckboxConfirma
+ tionDialog.class
+SHA-256-Digest: B7w/z2XjGc5AFtp/o4CQ2+65cstuuF/PImtIGSArl9s=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserContentPro
+ vider$RepositoryPendingUpdateAdapter.class
+SHA-256-Digest: n4uBM7I4RL0ofDDBKDIaVxos1UVFLqJnhGjF1pnh+mA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/statushandlers/CheckResu
+ ltStatusHandler.class
+SHA-256-Digest: 9uBuosINN6xw9ijkF4Tegv6eQGGlLppeqrRTF2Y7ZF0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceActivat
+ eHandler.class
+SHA-256-Digest: RsgGko4KJCVcjUUvqmqOrIlwHLd++4+jq24Mb2/EPTM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$1.class
+SHA-256-Digest: h6eQ/tHMgdpUFFZ/xyXe9FnAv+5mg6eXNDxEyEea3A0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/CreateSystemPro
+ jectHandler$1$1.class
+SHA-256-Digest: s9JzC9xT9hmR6emw3atzbsFeOpYCQfStrxA/Dnylmjo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserResetHan
+ dler$1.class
+SHA-256-Digest: 8Nym0LWztHKlo8CzJU/leKcTKy6p8yPiWF31N6qwerU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/listeners/RepositoryReso
+ urceChangeListener.class
+SHA-256-Digest: Xxmwthqu2/NrHmkorEwJ4lsfXMQBqR2kvpQqkXWgp9w=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/ActivateAllFiles
+ Dialog$ComboViewerSelectionListener.class
+SHA-256-Digest: aAWZIXrfSWDk1p4vpSzvbfcUtol9APkRHzmxRL7azg4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/RepositoryBrowser
+ DestinationFolderNode.class
+SHA-256-Digest: Phq5nAKX70ch8A+QyjgceMsm1Fnr53ZfxNYDO6a1IVw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/ImportRemoteWorkspaceWiza
+ rd$1.class
+SHA-256-Digest: lT9LPecjYRaNS4ZbmRpZZEs1et/POeSuu2jR5b22quc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/ActiveVersionInfo
+ ItemProvider$1.class
+SHA-256-Digest: l96dM0ip8ZffkJstpr5Cd2fgLEFHs4xcRb631zVrZiU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/ProjectConfigP
+ roblemResolutionGenerator.class
+SHA-256-Digest: I+N6PT8f82pYMVltnwHHO9tgz1vekgy7N2ltVYx4BVc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/DwbTeamUiPluginStartup.c
+ lass
+SHA-256-Digest: PxBrqPsTffVQ09HCqpRSNhQbpACDpcTqhEWWe9FjYIo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/IHanaWorkspaceSelectionPage.class
+SHA-256-Digest: U83xOjE9enPN2QwHncJvOkPL2UQv0HRui+yIpNgltT0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/RepositoryBrowserRepairW
+ orkspaceHandler$1.class
+SHA-256-Digest: NfJMoe3pUN+ScT847Q8VaOrkkNq+7k19f/i/C346yWU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/StatusEntitiesArea$CheckR
+ esultContentProvider$1.class
+SHA-256-Digest: ja+9Kqlc1ffbUKSGsohC7MjS26fVWBXxRh2xl58D6/Y=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResultPage.class
+SHA-256-Digest: 4dCQUoTRA2zAXr40PEBO2uHlmFxf4YNk14YUNMbmm5A=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$Works
+ paceValidator.class
+SHA-256-Digest: fIBTKdPy0P6EZs+A0WBlsKM7MXaGvmLoyRJ5LRB1lFA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$2.class
+SHA-256-Digest: S2xJxdAYxn48H2LsqkpWIieThUJ/HUrq0s4mlTn1tms=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/VersionInfoItemPr
+ ovider$VersionInfoItemPropertyDescriptor.class
+SHA-256-Digest: PCA0CZaXSIA4wTF/ept6SQh8fHCS3nUZqwo2ttdqdLU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/RepositoryPackageSelectio
+ nDialog$RepositoryContentProvider$RepositoryTreeDeferredContentManage
+ r$1.class
+SHA-256-Digest: rOAFW9P807/glbd/z/rSJWdqDrhNGz1aG5CYyfB5dVU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryCompa
+ reWithActiveHandler.class
+SHA-256-Digest: onF7ViKdOn7auXnkAJKfHN8ZNWyrSeain969BzeRlDo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$5.class
+SHA-256-Digest: zLiNHrpPK1vX8orjD/6yWoVYIk0mZmYVc/zgWzyo1+0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryNodeWorkbenchA
+ dapterFactory.class
+SHA-256-Digest: zason7YnnpL7gkl97DanqDGIDt1lfLkZi9GmGz/iir4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserDestina
+ tionNodeWorkbenchAdapter$WorkspaceNodes.class
+SHA-256-Digest: CtQuhzN5FUuew8Ke/d62hck0qO2aIJ+Rlmfev3CM2jw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/EditPackageWizard.class
+SHA-256-Digest: WoBMKmd/F9S9ZsCfBuieogs/4GqLMOvoQhyi1+XIHF0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/WizardPageSupport.class
+SHA-256-Digest: GWG0jl9zIDmTRaXKC5NNDd2qzmxgarAv2p0X8DmRzAs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResult$RepositoryTextSearchEditorMatchAdapter$2.class
+SHA-256-Digest: jFhVgl1ml7/jZDce8hhhv2Om0Gi0ypkd7tWsb7jkjUI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$14.class
+SHA-256-Digest: Z2MhWCWFy3ohD7WWYMVVJGcSKvxnbbzB2EQulQYWOjA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$10.cl
+ ass
+SHA-256-Digest: JNfplLB+GT0Wvs19oxpUzJSsrePTaTa0seOWkH4V3gY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/actions/EditorAwareActio
+ n$SyncDbListener.class
+SHA-256-Digest: 7EfqMaOn9LmeU0lXj4Zn3UcSHfMc9AjHrXWsKUohNHo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$SyncD
+ bListener.class
+SHA-256-Digest: X3H/YOqKVujTPhdmzzsJ1n6K31nsN9GhBhRrvgarSBI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewer$TreeViewerContentProvider$RepositoryResourceIdCompara
+ tor.class
+SHA-256-Digest: zpNTsuV0iEobDtZ9QRB7HzDjW//jRcdti57sqNYjuSQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/listeners/RepositoryReso
+ urceChangeListener$3.class
+SHA-256-Digest: /HCTvH4U8oTKNawIHw7OCKOp5PDecAB7s//cneJFrOE=
+
+Name: icons/full/elcl16/synced.gif
+SHA-256-Digest: zXaJBB3tMJNbsvV4xfQ7NuhGYnRfp/ZFUDI+hR40HEY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yAdapterFactory.class
+SHA-256-Digest: GijRsBxLhncevssnjbuUuXdH177nGJylYC66h+XUg+0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/i18n/messages.properties
+SHA-256-Digest: orzjVbTDgFUT9snNbcpEuQLAYq2Ddr82ivSwWJPxvM0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/ITeamServiceUi.class
+SHA-256-Digest: FjOIbsXiN6UBc7cbYTUyPECag74T7E3E1SmtJp3C26g=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreatePackageWizard$4.cla
+ ss
+SHA-256-Digest: qnp46uOO0F60JIb5n8Mtd286vpNtZaw3XGrY1GSBlEM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $5.class
+SHA-256-Digest: iSmUyt0iFuyQ67YOVkcGva4Kvo4lhBml2y3crsVOmIw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceCommitH
+ andler$1.class
+SHA-256-Digest: U+E/P4sdFbaoV7+dua/9sv2+F/gk/0yZz+S54pR/fgk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $2.class
+SHA-256-Digest: JpuOjHkJMYYpjcNPR17BkLgy8FWUrzYjDbgYA3yuLQk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/Handler$Util.cl
+ ass
+SHA-256-Digest: TB+vRLx4XsdiiP2gMeY/4ePpl5gv0Rtrojs9uC9xqjA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspaceSelectionPa
+ ge$2.class
+SHA-256-Digest: jfgDm3aPZUGdJAr8rqDGMcur5/ruAuK+wfnBvHyv9ow=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteFo
+ reignUserWorkspacesHandler$DetailMessageDialogExtension.class
+SHA-256-Digest: 9W3bsS1qZqUQAh6zm9vT+k+xAorO6H6eMLVGwzXDixw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/util/WorkbenchUtil.class
+SHA-256-Digest: 6e+Q8luk64Y0mT9O+UHJNhKqgTbd6LnUTMN5EEZoVuU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserResetDef
+ aultWorkspaceHandler.class
+SHA-256-Digest: DibY7deIzRgxsvzc4vvUSpEYEiARQKTp6CVi1zLE3Vg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/listeners/RepositoryReso
+ urceChangeListener$2.class
+SHA-256-Digest: gRJV0zwkH6quXY1Z3Az440EZLjR+GJXY6iWY8coPK8g=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResult$RepositoryTextSearchEditorMatchAdapter$1.class
+SHA-256-Digest: DVftUVgbCOamBQrqDWNNoRrmShNjlr9f3PWPKgNmF+g=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspaceWizard$1.c
+ lass
+SHA-256-Digest: +60PCcCtiRIB0oVZOGfUr99oROeYxMeIg4VarcNbwg4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/actions/EditorAwareActio
+ n$1.class
+SHA-256-Digest: 5n75n3kBLRieRNRjd+0o+ZA8Gtagex0i2VFktEJ6zR4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/SapSystemSelectionDialog$
+ SystemViewerWithButtons$2$1$1.class
+SHA-256-Digest: Kp0cKeA+1XZpjCiCqmVA9xrBcNWHfHbKPw1ec/brMuE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/ImportLocalWorkspacesWiza
+ rd.class
+SHA-256-Digest: AE3q0/HAkOIrnnmPZVAddqf3LfXb/qDuGXEYJpv7K1o=
+
+Name: com/sap/ndb/studio/dwb/team/ui/jobs/JobErrorAction.class
+SHA-256-Digest: 8vBwB56LbjiMJ7XXWgtxwuBE3l1sG4oqSzRafXtSoA0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/VersionInfoItemPr
+ ovider.class
+SHA-256-Digest: 3W90CQgCUULKW6HO2GvvvOHQ3SlmfzmE8ujhrM085Iw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserShowHist
+ oryHandler.class
+SHA-256-Digest: 3wr0WUZOkpAUVed82h6k2CB9gLd86o0mk+WVd2/E4/s=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryModelIt
+ emProviderAdapterFactory.class
+SHA-256-Digest: a94cd9sIYWcQSS4smd9a+lDlhlRJBJMpdH/jFuTieRA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$3.class
+SHA-256-Digest: h3nNw2QieyfkYf0QAAFyarrx3gwxx74scV/CqigbgZs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $WorkerRealm.class
+SHA-256-Digest: 74QMeJtoHm/HjkFOJpNOMFb7qleEn24aJJlFP7cHQ4M=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/RepositoryPackageSelectio
+ nDialog$RepositoryContentProvider.class
+SHA-256-Digest: ovq0k9uy66LU4d9KvCWAfFf9GiCtH0tv0pjOLBzP8N4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaWorkspaceSelectionPag
+ e$LocalRepositoryBrowserLabelProvider.class
+SHA-256-Digest: mnjJGTXIoEuh8crtAOZBd/IXfJRgeCLfyEb3ETUr5h8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $3.class
+SHA-256-Digest: /ag1X2MnokVaClnv4tOHR/+/kBkk4o2A7icUk999gFg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/Handler$CommonR
+ ootFinder.class
+SHA-256-Digest: 8rGSpPzjTYru2EAV3VT8KHP0kW+kqIiY4WCjLRtJ5g4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaSharingWizard$Structu
+ ralPackageChecker.class
+SHA-256-Digest: 7WXFqSUiGHUYNnn9kcqddrV8CMZP/DrYFDghwTESKMM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$4.class
+SHA-256-Digest: wgspxaRYO4gixwCnO+2s2R/x8n+2dGEGcGS36KtsoyE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/RepositoryBrowser
+ ResourceNode.class
+SHA-256-Digest: EM/eK/jjT9wGpN6I+VN68mjyevUfJJWehbQVJJ9uw+E=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/SelectNodeJob.class
+SHA-256-Digest: HpLIGMdewkDS42MwhgcM1LHRljvw3rzwuDZ0YdhQXzY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/CommitProblemR
+ esolutionGenerator$FileEncodingQuickFix.class
+SHA-256-Digest: dit+XnyYEqooLEGKPX50WRhwR7m/MBoyMJPxrxjP23Y=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserComparator
+ .class
+SHA-256-Digest: XjFwjMH9IlOP9K+yL51Wa5+nkXmVfYzi9cR7CyiIPmE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$7$1$1.class
+SHA-256-Digest: 9/MWng2Yr2bnbM74725nB+xyOP258a6VuOK/3g+CXeY=
+
+Name: icons/full/obj16/repository_package_node.gif
+SHA-256-Digest: /LUDX4M+n/zR8ur+V0PTmZ5lGOaId2xSqLKZw7Y0S1c=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/Handler$Util$1.
+ class
+SHA-256-Digest: iaTzd+POiVm6V+LVr+lWVwkNBg0/zUdxFqKmguDoop0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryRegen
+ erateHandler.class
+SHA-256-Digest: qtAi2sTjI9NihB+Ks2gB/rKsEzrJPUSXuIiNwP9lqN0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/decorators/HanaTeamDecor
+ ator.class
+SHA-256-Digest: u3T96lmMaEiV79wj90ee0JgfXx14o45PBCVzM2x1fQU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/IToolTipProvider.class
+SHA-256-Digest: PSorctSEzmbLYfZbXQNM4SS4kTaEZUj6J30+S3o+vfE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $4.class
+SHA-256-Digest: Zz2cS/D3xrn0ED8BMUEpCivOggBZ2Wy+1wX1s8OEV7E=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/CreateSystemPro
+ jectHandler$1.class
+SHA-256-Digest: SJnfJn6n1E1my26wGQQY38pskxNA0CAmanjApfk7/xg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/RepositoryBrowserProject
+ ImportHandler.class
+SHA-256-Digest: 0Zlh869WDLIXNZyehI7q7QUfH3gXm2XoEy6ff1SV/gw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/listeners/RepositoryReso
+ urceChangeListener$VisitationResult.class
+SHA-256-Digest: STVsJqlruJB0zLdLg2EmYatTWHmCaeXNa4+Cy1RgSho=
+
+Name: com/sap/ndb/studio/dwb/team/ui/help/IDwbTeamUiHelpContextIds.cla
+ ss
+SHA-256-Digest: wyOysLGsFBsNzVuvZEJYt/7+FhiJbBuWUvt86ugcW2k=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/listeners/RepositoryReso
+ urceChangeListener$1.class
+SHA-256-Digest: fK5h72xBTQPSZYqtqbA/6mOplXyIHGzBY8pCIgcqAn0=
+
+Name: plugin.xml
+SHA-256-Digest: ECTKXaPeBvTTCKTGjMyXYPwr9qV8VAvzu+Hmbz0K77s=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/decorators/HanaRepositor
+ yDecorator.class
+SHA-256-Digest: uYL6w23BLZFGpwTcM44F9zcYbfWZpqmNe7ngtbdwHww=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchDialogPage$1.class
+SHA-256-Digest: xYYYjKn8EloWKTg3TF0cl0H5Fk7umL+GF46LyE7LwXU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $1.class
+SHA-256-Digest: jlNXSdluEhqUSeyURBdcqEU+U7WuFYzaGKDClNezCuM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryCheck
+ Handler.class
+SHA-256-Digest: W2SYfXjmrYMzGtZlFUbLh2gTz+uGjBZm0uGun8jxyok=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/compare/ConflictingFileC
+ ompareEditorInput$ConflictFileElement.class
+SHA-256-Digest: GV/bMdkxc+6ChJGHQN9tDhyCd10nQE2B1DaOvTt5pXs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$7.c
+ lass
+SHA-256-Digest: h8Ajj4ZCr9Agg5fJgis/FIKbP3nH+ygsGwrzV00zI7k=
+
+Name: icons/full/etool16/import_wiz.gif
+SHA-256-Digest: IXZcpgv6NO7ZtzMUlfdO2CPutuh1OEfqG6dRnKdhdaQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/RepositoryBrowser
+ LocalFileNode.class
+SHA-256-Digest: 9ZFORctR7kIYlEX5E7bIUIUaNJhB/nP5etvBq0XfIo4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserViewRefres
+ her$WorkspaceLocationAndResourceIdTask.class
+SHA-256-Digest: z6lYJe9AcTXoDmGgKgzX2K0bMFTOWVql3AqWBXGGzLI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$2.cla
+ ss
+SHA-256-Digest: /77kR40s3qSjh3Djs7t7wpdkx/4Gr5zd3Pdt5NmQseo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaSharingWizard$1.class
+SHA-256-Digest: nf8NfDC/bpBX3PtVXzS4kdU+CSIC2COdisL1g7tU5Qg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/RepositoryBrowserProject
+ ImportHandler$3.class
+SHA-256-Digest: 25uu+HmYG60u1OkH2OtQYCplCfrzUHRYTfC47e12hDo=
+
+Name: icons/full/wizban/importproj_wiz.png
+SHA-256-Digest: fCMBNvnczxuaZ+9sAZY9LUUm7NGHDn8DyvbBnXL49Fk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/compare/ConflictingFileC
+ ompareEditorInput$ConflictFileRevision.class
+SHA-256-Digest: RAPPdilDSTd9siWC/zAWpE61FRJLGIL8WNr1EoC9ugs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserPackage
+ NodeWorkbenchAdapter$FetchPackageContentJob.class
+SHA-256-Digest: mnyPwluekZ6YCu2e7d6TSxRQ2vcBsY4SWbrKxfI/6gU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryPackage
+ ItemProvider$4.class
+SHA-256-Digest: CQVzT38kOmGhmuf+iHPOBgLhdHp//zX7bJk8dQyZOwE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/actions/EditorAwareActio
+ n$2.class
+SHA-256-Digest: z3+i4j7rlxjU9ws9+r2Um2oVWyMbUl6du12PUJw3jkA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewer$TreeViewerContentProvider.class
+SHA-256-Digest: IEO7doO/CnMHW3HMbeWS0mMymrJz4I3ZhU3cdqpi+Ho=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewer$TreeViewerExpandRunnable$1.class
+SHA-256-Digest: YEBdJbxXLDd0CBdu6tr9h9Nv0cZr425BOdr/linyTVE=
+
+Name: icons/full/elcl16/groupby.gif
+SHA-256-Digest: 1AIdOBNQyxNIuGj+bwnAYr++OqUPLZSJUH/N4ifFwj0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewerWithButtons$3.class
+SHA-256-Digest: cTHv5os0X0IIjj91tBFsakMjVj/Amkht05+krTCwd6o=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$10.class
+SHA-256-Digest: abeeo/B1XgGZE9uJLhPlY3MUHapu0yuUcKLBa1vay0Q=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/RepositoryBrowser
+ DestinationNode.class
+SHA-256-Digest: BNCwKNwWcDwCw6OU6/TSjpZ6GIn17ksnkvmZzJDjrpk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ .class
+SHA-256-Digest: czxEcctsZcL+w/o3EyiUhrVzzS7ansV2A2/YHOuWmU4=
+
+Name: intro/css/overview.css
+SHA-256-Digest: vlBd+5Mq3173Nmo9fBPvYXYXs2zI7r+MiMNMTvIvmHw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteRe
+ sourcesHandler.class
+SHA-256-Digest: PzeI/2Fzuwufn+XrrS84f/vL4OzNSFn+wth+ms5LZow=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/actions/EditorAwareActio
+ n$PublisherAdapter.class
+SHA-256-Digest: V1AlvV+5J5z0lGQ3Qh0XNkB7GIP8R318M98+BZLiVHM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/PerspectiveManager.class
+SHA-256-Digest: juax7wRH/1dZdG4xoaVkYomMqzmcBrL1PWtp3YKyVDQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/util/SyncDbAccessUi$1.cl
+ ass
+SHA-256-Digest: vfcRdkMV8EpKIbkxQcumhIA+kRHDL9rbBoqo9ctqPrY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewer$SegmentCountComparator.class
+SHA-256-Digest: zBBbGvLu/L/faolQaBKJnJadUuGQfoiHt9SxeO73wMY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/StandaloneOpenWithMenu$File
+ Adapter.class
+SHA-256-Digest: /DnChpVDWxYaP1MYNYKWXsfIluc7BINwvcevEYm3WyI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $SearchResultTreeElement.class
+SHA-256-Digest: yG/1S1jUX/Q67Pb9pfZjl4hJwjjzbHnUn4u1mNUakzM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ActivateAllFile
+ sHandler.class
+SHA-256-Digest: NTXv7Vz/eCwL6Na0HLoeagwPKkgMbpIZZfuxzbaugVg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$7.class
+SHA-256-Digest: n+26zt2Tq4+TKEfFdGv3Ybdyosv90/ALObgKulnI+UM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/RepositoryPackageSelectio
+ nDialog$RepositoryContentProvider$RepositoryTreeDeferredContentManage
+ r.class
+SHA-256-Digest: WlsO3Px2lTdN10QcmJEftPMkh0Jzyl1ZNLW7IeHJLEw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackageHeaderPage$1.class
+SHA-256-Digest: iCNIwZ/oLT+ctLMPaqz59dcC9iH4949IGaaJ9Y6yoNw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserWorkspa
+ ceNodePropertySource$Fields.class
+SHA-256-Digest: cxbx7NoOf+t2Hm0wAl5Qh+5yOfpL7U0duMkH0dVWVnY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/DetailMessageDialog$3.cla
+ ss
+SHA-256-Digest: 8XjoiDssLdgYqnc60g4O03b7QngnIspcIXevZf+BSss=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/HistoricalVersion
+ InfoItemProvider.class
+SHA-256-Digest: tDVnOZAG1MyP5lrM82ZNOHIzoegcRj+8vCnk7pmhsA8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaWorkspaceSelectionPag
+ e$6.class
+SHA-256-Digest: vlEER8ZOPyRxzRQS4KinKj56Pz1YWU9UsfDKUKkN/cc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceCheckHa
+ ndler.class
+SHA-256-Digest: oS5vjit/bR8TxUW8trhvb4vxd8W9kVaF7L08K5QGhRg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/CheckboxConfirma
+ tionDialog$1.class
+SHA-256-Digest: c6eyveg7WqnhgeyhMac3aEfnbPLs4imJDkAVK0ArMmc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/compare/RepositoryCompar
+ eEditorInput.class
+SHA-256-Digest: oLkVPh6ljwuPq36Mf1miws3zaLdynl/xjgKdiTCMrK0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/SwitchOwnershipWizard.cla
+ ss
+SHA-256-Digest: iDy8zYbKDUdYvCa2/JXLFyqp+TmZOlg/jyMN9hOSs0s=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $SearchPageValidator.class
+SHA-256-Digest: zCvyNyW9t4jFBJCwmve4zhf1Yme0g85o16rVek5eCXo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$2.c
+ lass
+SHA-256-Digest: bKi3YYInY0/pfPFcOIOVD5oeXt3dtFSCZjN0uo5/TqE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/sync/HanaSynchronizeParticipant$2
+ $2.class
+SHA-256-Digest: flH/rOeC/m0/TFWIgt32g4L/c8wYyf79FzKF5gfqUDg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$2$1
+ .class
+SHA-256-Digest: Hoz9OxzG994TEYMkMU+Ph0x2fg0APPC35+dWmi9j2yQ=
+
+Name: icons/full/ovr16/StatusUpdated.gif
+SHA-256-Digest: SmKhWOvkPxHh56k+njhhpRTGqan+KBSSPzPK65F9hfk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserImportLo
+ calWorkspacesHandler.class
+SHA-256-Digest: +Dt9yBFLagJgdBLVHx/mSVNcMBy3HHaVU5pBOxuntYU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteWo
+ rkspacesHandler$5.class
+SHA-256-Digest: oZi8AhZyc5z/HgfqjcfD17PzlzL8g93QmkzQ7d6aQbA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/ActivateAllFiles
+ Dialog$ActivateAllFilesDialogCheckStateListener.class
+SHA-256-Digest: JoEIpUvyOt+y8nd0VY5j7F2x+ZtENqzW+x3xjdgMaws=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $6.class
+SHA-256-Digest: YUtTKGb04/ifPIfPd7xnfzkdlAEsV9hCHtaIID2etao=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/StandaloneOpenWithMenu.clas
+ s
+SHA-256-Digest: i23sRtsqA9N0D93+69JwUuYiFZ4xWRUiO+chs3WkPzg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResultPage$2.class
+SHA-256-Digest: qOVQA1fwPhygdsCSCk3wIz3cTbn5XgKroYvHPH4HW1Q=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserLabelProvi
+ der.class
+SHA-256-Digest: MazEt7o/CC5KM4rKWVupToPFM1uTSD9VdAjPcbS4W0U=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$IPageItemValidator.class
+SHA-256-Digest: 3xiT5PzRruZMr/rwJcptktmkGjHvdl6oe/7vyEULWgk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserSwitchOw
+ nershipHandler$PreExecuteRunnable.class
+SHA-256-Digest: ZJJMQKKmKqOnXLblCNGiWj+5LS4EXgx8ECTFlKaxLL4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserContentPro
+ vider$ClientLocationSettingsObserver.class
+SHA-256-Digest: kotCFotnpmV/C8WtskEwunAWJpPUJoX9w8kra5KtpNY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/DwbTeamUiPlugin.class
+SHA-256-Digest: g6goA5JLGaXUBCH/6MxAwqJ2M5kiIYwIhbfdzDZ8ndA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserWorkspa
+ ceNodePropertySource.class
+SHA-256-Digest: cwlhBdndJdO8kFnBFhOlytrKV/U9A7coX+sH4WJLOAw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackageHeaderPage$6.class
+SHA-256-Digest: pL+c98+5Jtapo9MmsRYmKUg6nLTTunVxwBfJaMfU3p4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryActiv
+ ateHandler.class
+SHA-256-Digest: 6A2LeLGyiKyDDpAAOWwjHThlfMqGJYJZufpb7PCes24=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceActivat
+ eHandlerEnabledOffline.class
+SHA-256-Digest: snfNBXIhza23Sb61J1iVABwTGGx4MwoBaBsA32tU9kg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserViewRefres
+ her.class
+SHA-256-Digest: fay+J5ElpWdP3bwuJTqTTT1eKlv4la71HUq6EJ/MliM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/util/SyncDbAccessUi.clas
+ s
+SHA-256-Digest: TQJs5yzmvcePRgaVqtdlOFEHvm/gyjuGq6Dcs7pYI1g=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryFileIte
+ mProvider.class
+SHA-256-Digest: 7ArPhBmYbM7RY+6aySh3FDo/TkXdsSoiv/82PLFTgU4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/HanaProjectConten
+ tNode.class
+SHA-256-Digest: pI07K3JzvyTfQIrNqxT3GiIJJY2m6hYfUGhArz7C5qw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$6$1.class
+SHA-256-Digest: o0sRbPILC2adup+GwyHzmn784Sbd7h+If8UpuKROeFA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/HanaMoveDelete
+ Hook.class
+SHA-256-Digest: ljmOHnQyaU+bk3iARgRQ0z+KxOmZD51RWFjuWzcYzQk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/propertytesters/SysRegiF
+ olderTester.class
+SHA-256-Digest: hvIl41lA89EXfDtRt3iEhpJ79iTz+sVoo0a3mlk+ens=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$6.cla
+ ss
+SHA-256-Digest: Dhp/QPkB53zeicUTFU4B6swB3KYYu7ZBnWLV/f+qUCI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserContentPro
+ vider$RepositoryBrowserDataModelPublisher.class
+SHA-256-Digest: rKO9590ZLRAZa73l0TWRN7Fmj/T6IpIpmH5NVSxfd9c=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/databinding/WorkspaceDis
+ playNameToNameConverter.class
+SHA-256-Digest: pfARrokaTeaoQDqvNxZSr/DZ9LDya1whq6t2SzSaoAw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $8.class
+SHA-256-Digest: I0ICHdF7pnbSpnY4fCp3fuN+RC+z/u9A30JPm2blvoA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/TeamProviderSupport$1.cl
+ ass
+SHA-256-Digest: Tl9DCLtw1ucLQU5L7gJI8sdyNuEhOuMtEmHNP6rAfb0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspaceSelectionPa
+ ge.class
+SHA-256-Digest: vOG1jSaxxwjcoWOXulMx4NwoslG2rbzji0KfZWKZcsU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/ActivateAllFiles
+ Dialog$1.class
+SHA-256-Digest: /aNrisZvqIPEeBxmSoW1SZtW9el/7a0Z2F7e4qhNTWU=
+
+Name: icons/full/elcl16/filter_ps.gif
+SHA-256-Digest: SyFfvpC8a26n8aYov1dEumHjzT4fH/SXKjT+FpNV3q4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/SyncDbUnlockHan
+ dler.class
+SHA-256-Digest: GgOB5Ju/fKvIkCVWgFGIJSZvylTgtwx97Wnwx5ZCVYg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/statushandlers/RetryActi
+ vateErrorHandler$1$1$1.class
+SHA-256-Digest: nc15PHfqMS4Ib/Ncxuq28flwMd3YIvsmQc+C5wuk1qE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/editors/HanaIgnoreFileEd
+ itor$RegiIgnoreCompletionProcessor.class
+SHA-256-Digest: gCqQjelSzrdfPLAKHkuBfEGkiZ2yQC80O8Z1HyOjdUk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/DetailMessageDialog.class
+SHA-256-Digest: xBPdt8B9coF7EYyntfJEmrWGMaaQzN7t6ARG2jFSbN8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/StatusEntitiesArea$1.clas
+ s
+SHA-256-Digest: Bh7u+Y6AvJmsJSchXwVtOy2GLKpCXepscHXIl/+Q5Ic=
+
+Name: com/sap/ndb/studio/dwb/team/ui/util/IStatusLineHelper.class
+SHA-256-Digest: d0aXQi8FqWsy8R++VrZ2SMx7bqSPaLJhMiN1H6IDb4g=
+
+Name: OSGI-INF/DeploymentServiceUiProvider.xml
+SHA-256-Digest: y5HcJVtteB8UHeGLAxomnRTalDu+8+3j8dltsbxvgto=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/ValueHelpDialog$
+ ValueHelpFilter.class
+SHA-256-Digest: MoAbWMnBwZmsn6u1M6kPfV4jUcYxLUt4/HqS0PzAZnk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$Repos
+ itoryBrowserDoubleClickListener.class
+SHA-256-Digest: SHbHWGxFSf4P+8h1rnM102qRwGH5mGwK1+OKDmpB+Ts=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$PageV
+ alidator.class
+SHA-256-Digest: pUSRA41VH/hi3fsgMj4JtwjEcyQ+nmG7YcIEUAzQ7I8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CheckoutImportProjectsWiz
+ ard.class
+SHA-256-Digest: r8F+QLQ1t9Co6gk5Yy85G9ZPkV2TQuTUCH/hQTwz4Qo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/ActivePartShel
+ lProvider.class
+SHA-256-Digest: C7EgcZN9z7K4awBLHeXKYR05TEi9eQ4WKl7SY2jqy2E=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/SapSystemSelectionDialog$
+ SystemValidatorDelegate.class
+SHA-256-Digest: iMYY+WqBUkDXQr79spftI6r0zixor1DfG2WfwD2zWZw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/ImportLocalWorkspacesWiza
+ rd$1.class
+SHA-256-Digest: QRS/5f6vUE5Zz8k5FC4NJhN0lw7EE4abpnnVZJcll3E=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$Repos
+ itoryBrowserPropertySheetPage$1.class
+SHA-256-Digest: wTfXSE6IyKLCXkvfudWBMEulxrcz0jy9W5AWKDimCGs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserPackage
+ NodeWorkbenchAdapter.class
+SHA-256-Digest: C6dpJiaZch7ItZxVtebo/yHBbu8/vXJ7kg+5P6PrxWw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaSharingWizard$MovePro
+ jectRunnable.class
+SHA-256-Digest: vlfQVdtLDHY9eL3HfMZy4eHwWInJIgJsEdPOJbIbmfM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreatePackageWizard.class
+SHA-256-Digest: PFvBCxXSAlBWe/Z1RH5YaqNQuSO1Flm/fjnF1nIh1yU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/listeners/RepositoryReso
+ urceChangeListener$RepositoryFileDeltaVisitor.class
+SHA-256-Digest: PDTHQan2vRT5eQvEuU/2keCQSGP+Fbf0qFGtS7vvzf8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryEditP
+ ackageHandler$1.class
+SHA-256-Digest: 9ge9EQFodESlDzfWh4ALzdzJlQrQLidym2fE15Cbtds=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/SystemNodeOpenF
+ ileHandler.class
+SHA-256-Digest: bvro+6WaACMLWFGEIOK7xAA1iwBguER+oMGDdepiXUk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/IRepositoryBrowse
+ rContainerNode.class
+SHA-256-Digest: nrkYVVmFu0ZUfViAQgUbfwsPPbX0wXXi20uC1sTGVZI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/listeners/RepositoryReso
+ urceChangeListener$6.class
+SHA-256-Digest: xlnDgvMekv4j26/jJ8o2KWdvF5doprzC4O4ZxVyGNpA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$17.
+ class
+SHA-256-Digest: pePSXgca37mMOji8VoAP7W5eBBcGKMl/lW+KZ1wxY0o=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaWorkspaceSelectionPag
+ e$ColorStyler.class
+SHA-256-Digest: VYsVzWD29/cCCc9Cdmc/eE52L3Piy995L/+RIbX2rUw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/ActivateAllFiles
+ Dialog$ActivateAllFilesDialogRunnableContext.class
+SHA-256-Digest: tOtBsFATbh3JKfZXfbsyGZJ+QmqliKfFxQZTtlljrdk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/ActivateRetryDialog$1.cla
+ ss
+SHA-256-Digest: WyJiDLWtuH/SHxoEH7n9ZLTmwTFaOFJc4c5udwxcCks=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewer.class
+SHA-256-Digest: UjIlbHmIoox0vWh3TC4n1YRINl5KzzxU9pWINRtIRXo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/HistoryViewComp
+ areWithWorkspaceHandler.class
+SHA-256-Digest: 3wU8Cei28RRkp3vaLhmc7R4uaKgzE7Lr/zBw/9raB4E=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryPackage
+ ItemProvider$2.class
+SHA-256-Digest: +lXjx8dgZ37Qrq7d9RkOCBSGxUbj6fCKW56VUXxVm2c=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserViewOption
+ s$PersistableOption.class
+SHA-256-Digest: EI8mrBxWi7Q3SMWhHTBleF0DkQoSY//wUiLq/t4H8Uw=
+
+Name: icons/full/etool16/exportzip_wiz.png
+SHA-256-Digest: rzEGXmnNFs2CYy4rZkvU0O5dOgscjMZ+vahan0MLcxk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/i18n/Messages.class
+SHA-256-Digest: k+g5Fd1SDHJueEhwdtlzMc0FjsHIF3N+6iJh7LzHq74=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$4.cla
+ ss
+SHA-256-Digest: WUqPTHQiCT5rCmeiEP0ZZ6zb5ymOIzgwCxJ45isFqLM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $10.class
+SHA-256-Digest: zu2RMF4nR3vgo9XgevuKF0948KDJlb+dTgDSIrJF7Qs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserOpenFile
+ Handler.class
+SHA-256-Digest: yLsSki6CNbZC+31vTnj0dDzb4x5vFRxfqLDaj+Gk4gc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaSharingWizard.class
+SHA-256-Digest: NDBW3CFaOKG9ZcAX9Q3iQ5KmBsjSP1wuIGHWPd8NhCU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserWorkspa
+ ceNodePropertySource$CategoryPropertyDescriptor.class
+SHA-256-Digest: jT/h4a0xHeAxmjy8cmvSGmxtn3E2SYneoz+y/pnxObg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceActivat
+ eHandler$2.class
+SHA-256-Digest: qgx1gS/oCITcAyurO6bLhA+ifd9vTx2dwGVbOIGUVOk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/NewMenuHandler.
+ class
+SHA-256-Digest: aWBbcd3GbLXwWab3eOP8+ps5mKj06MM7+BOJr5MGXnY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaWorkspaceSelectionPag
+ e.class
+SHA-256-Digest: SdI+pOldukXbK1vhf3ZhbnfiRhpD0QYHOx4g8c4Dths=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/RepositoryContentViewer$R
+ epositoryFileFilter.class
+SHA-256-Digest: f2XNmiREzs5NwcGhdmMqv/lFKr+j1VHJvW2nqpHb+p4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/RepositoryContentViewer$4
+ .class
+SHA-256-Digest: Oi7JV8y99zRLwIQLZBHYebmCtYJ/bJvzm7Sa48JFKC8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/ResourceActionHandlerUti
+ l.class
+SHA-256-Digest: Q9dLy4jpaVis1lVC2ZaWOl8cNO4iJnCE8zv/kjbP8HM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage.class
+SHA-256-Digest: uDL9u4Van85s3XML0pb4iktio72Ok+jZjdGYF5bTGy0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$4.cla
+ ss
+SHA-256-Digest: s7hP9lmx8Zpw1L8gwhizwNzah8TNgbJL17kz3s1FZcI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/decorators/HanaDecorator
+ Base.class
+SHA-256-Digest: EerQGQdhJJecKxyjiW2pEzpPHaqLFvz4oHZ9PLgp8tI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$5.c
+ lass
+SHA-256-Digest: cno3duuKb6Qt2AhRT6LnTHRZQNCvdTChDAb8BFPRIyc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/InactiveVersionIn
+ foItemProvider.class
+SHA-256-Digest: DluKqvdtDgMZyK8+cVO2t2pml1n1J31zYEWk+2M6byQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/util/LateWorkerUi$1.clas
+ s
+SHA-256-Digest: M//6og8vCOtdy3wi8+sING1K+LYKHiBdnPJW8PGfKPA=
+
+Name: icons/sap_system.gif
+SHA-256-Digest: Yl7uYcTzTLSr7XnNrIIP5QuD3IK8fUyWmTZpVMU+szc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewer$1.class
+SHA-256-Digest: vMIqKBUhH9b7b3EXQNFdUYPgnQDnUxGZYdrUORwhR0U=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResultPage$5.class
+SHA-256-Digest: bWTv6WLzjsPIL2SgI4EHWLZhPGPTsu8nHf9Wz5EldYQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$9.class
+SHA-256-Digest: 2tUHiNFtX8BLFaSmnRxTlOJWRkbOYbT0F5jiays8BhM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewerWithButtons$1.class
+SHA-256-Digest: VQznAexgnHeawi+x6oeNIN6HYL/cRyCg6KBwCU/2H1I=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserRegenera
+ teHandler.class
+SHA-256-Digest: BEKLl8kHafly0Hpr2mG7L+hZ1jYyH5mNh7ZEJqnLAAQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/UpdateProjectHa
+ ndler.class
+SHA-256-Digest: wq01oyqcz2K838zf9VlKhkHlFNPnluIMX3MIlK27Vhk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CheckoutImportProjectsWiz
+ ard$1.class
+SHA-256-Digest: saE+XPnrqnkwWrgCiv6L8W/W5rPqqwsnlaJ3KuW4+mI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/util/StatusLineHelper.class
+SHA-256-Digest: c07iDvVTUhd2mBhxtfYhCMdj8GtK1qp2r64XbtUXEPc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/RepositoryContentViewer.c
+ lass
+SHA-256-Digest: 8N+SrSBQJvcnxh1cQX5W95ChvRWLxJ3qJEAwQ+gc0gM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteFo
+ reignUserWorkspacesHandler$DetailMessageDialogExtension$2.class
+SHA-256-Digest: mxlmSXl/4oy0k5ilzIEw4lzc5rhkmV8xRqMIu9E6FGs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/DwbTeamUiErrorHandler$2.
+ class
+SHA-256-Digest: pDgYjGpVrc3EjN24ViejMaBfhPNLdWPPeppO5f/Kol0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/CommitProblemR
+ esolutionGenerator.class
+SHA-256-Digest: 6S0Bt2Uzt/mu9ufWDFhxEEJRSdcrrfo61I+ml417/xo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/CommitProblemR
+ esolutionGenerator$CommitResourceQuickFix.class
+SHA-256-Digest: nTSvualnCrtZyspqvYTNiHnQere8UK3qS34Y59beWx0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/ActiveVersionInfo
+ ItemProvider.class
+SHA-256-Digest: hjcmc9qpbrSd6BCluO6AbQNtO+u6qXY3YmbCF/irYL0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/SapSystemViewer.class
+SHA-256-Digest: 4uFLGGlon7HJF4xUgZiOFrCJMJv1PrjP136nkqSZ844=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaWorkspaceSelectionPag
+ e$ProjectLocationValidator.class
+SHA-256-Digest: HBu8SC5jwwutZplk7ewAw+n3+Zfne12k5xSy1MC0tVg=
+
+Name: icons/full/wizban/newpack_wiz.png
+SHA-256-Digest: Dt5ADRqwGzRKppwoJV26Pp+Aggh/66ncBxfR79zsJqg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/SapSystemSelectionDialog$
+ SystemViewerWithButtons$2.class
+SHA-256-Digest: 8jH5JuHJB1gj/C1Z2lyzCto8TA5s/8nc1zlAZySe4Vs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositorySearchNodeWork
+ benchAdapter$ColorStyler.class
+SHA-256-Digest: AfDCgS86I9lpmBshFP9H9vPO6nRQI5l7+OfhWBNd9IU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserResetHan
+ dler.class
+SHA-256-Digest: XruuPfzB0JD7V9vwcNuIh4/Wv2U3SFdzSSHXIjY9Kp4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/databinding/WorkspaceDis
+ playNameValidator.class
+SHA-256-Digest: 98thqcE+9L8CFLdrZtTBE6t6LKhiaHbXhX2WPavU+d4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/runnables/CheckAuthoriza
+ tionRunnableWithConnection.class
+SHA-256-Digest: DZc/Q3eHFq8Hcmq+tILpPOfNJMsqIPecnnVxih8GucA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/RepositoryPackageSelectio
+ nDialog$CheckAuthorizationRunnable.class
+SHA-256-Digest: eOD/FndHnwWvnGBCGMKY7zfVwxtY5+GYnxqVAd6c8wY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/RepositoryContentViewer$2
+ .class
+SHA-256-Digest: 2nW+0VyFzdPrWN7TyfONG9hqPv2lFNamleqdNadvTPI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryPackage
+ ItemProvider.class
+SHA-256-Digest: QMDTmYF3hZBwalj5J849isBwKxafdBg64/o11KVf08A=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$Repos
+ itoryBrowserViewDragSource.class
+SHA-256-Digest: G8rVq5QQWdrQlXnlB1TC3Axg26Y0vDuxrPazCg50L64=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$15.
+ class
+SHA-256-Digest: eYeKZA40pyTOc1v2uu0qeBT5RqzM+PUgpfvdE4EKbxA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/actions/CheckAction.clas
+ s
+SHA-256-Digest: N05ynWTGcW0Ot2XSbjJfd3l/rQMguye8ZTBQ+G6MVCA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/DeploymentServ
+ iceUiProvider.class
+SHA-256-Digest: m8/QL8OLkYMRIeha2U4PssSTVRd0DGq9unStLyeJZrU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResultPage$6$1.class
+SHA-256-Digest: zmuhO4q/UOIspLULgnDUGv6baBMhduat3QVfdgD2+tg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/ActivationFailedDialog$IC
+ loseCallback.class
+SHA-256-Digest: Bi3dkwTmsg7NDGtAE81rKicaZY6qp7INyh6VrDKkljQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryPackage
+ ItemProvider$7.class
+SHA-256-Digest: oaMOyFg26qVs9I3pb2GogK5Ut3OtMsyleHTmzfcF6D4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/SemanticMatch.cla
+ ss
+SHA-256-Digest: u+mGavLj116VGvnGPcgzJu/jz8i+H14PSw725+XEY7A=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserContentPro
+ vider$RepositoryBrowserDeferredTreeContentManager.class
+SHA-256-Digest: 22ZmYd5xWm8rGIg9JUg5cMhBiqveWT4H3ApLHynu2Ck=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResultPage$4.class
+SHA-256-Digest: OsBJ1VUH8PcdMTiHKP6Qs9uyEwEF3H0M6VPmwubdxYw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/SapSystemSelectionDialog$
+ SystemViewerWithButtons$3.class
+SHA-256-Digest: 4tr6CTNEffQgmi4wei6/aYmNfJ0EdLptUPgao/Kd/a8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$Works
+ paceLocationValidator.class
+SHA-256-Digest: cR6TSxFob8zaNPEIRwxN2PUiDYf7Xb4N3QFYadDuXFQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $SearchResultTreeStructureAdvisor.class
+SHA-256-Digest: gJYpAZsOr2wc7fCljENasmFcSyL2rDbL9S7Qkn3h778=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$Check
+ boxAction.class
+SHA-256-Digest: U7WA69FmhyXtu1STziRHqTDezh7QQcSFDd7PVAfTLXY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryFileIte
+ mProvider$2.class
+SHA-256-Digest: tRt+10xXoUpGOJsbjiVc2YJHycJbW6i1AWg8oEzDbis=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/statushandlers/CheckResu
+ ltStatusHandler$1.class
+SHA-256-Digest: 3mp8LodZYh3KH3+Pne4/5takmo2cEWS9nh3kr8QYXtQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/sync/HanaSynchronizeParticipant$1
+ .class
+SHA-256-Digest: Us2t2yOd9mi6M/fOXVDJESF1fn5spOlhk8rN9iqHAFI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$6$1
+ .class
+SHA-256-Digest: rkxTF8rNVlZSvO3UpIzCA7FVhq9oTXmapShIjy1l1Y8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositorySearchResultNo
+ dePropertyAdapterFactory.class
+SHA-256-Digest: WVMfgGuNi0wjOsVMixPNJJ/9yJnGbMdf5meI5uqxizk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserViewOption
+ s.class
+SHA-256-Digest: OGWRuPLRwR3A/MMh3601uc42+00et3UFPVWrEXcebac=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/IWorkspaceLocatio
+ nProvider.class
+SHA-256-Digest: WU87iF3GbGpYdXxdRZDFFiMvUcCeVAj2uGvIjZbcVpM=
+
+Name: icons/Check.png
+SHA-256-Digest: 841XpywfZeWY6lsUxG6s9oh1hzr+gXiQUvclBmMG1Wo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$5.cla
+ ss
+SHA-256-Digest: ZoNIJkgWRAWEPGjnMimnckLLc/eGdiTqAVLAbOeEX78=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$4.class
+SHA-256-Digest: XeGMJf69ThuPjt2P85P0K+Z3Ug1OIqoAEUyPpdvf/hU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/compare/ConflictingFileC
+ ompareEditorInput.class
+SHA-256-Digest: 4Hfowextw8OLWu8KexCe16pAwb/x2PtB/dQ12D6J5pQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceCommitH
+ andler.class
+SHA-256-Digest: hkmYe9kYr1kLQQ6iB/n6atg0wWyrUVsowrHcSmIzoMM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/ResourceCheckHa
+ ndlerEnabledOffline.class
+SHA-256-Digest: S2G7pnJEpJVxQINlBjTwk5Hs93PGm5QBB2VHLdL96uU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaWorkspaceSelectionPag
+ e$3.class
+SHA-256-Digest: sr0CqpStNIqlKtpZafCa9TKlK3ZJ3mxOCrk97mGWGhQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/CheckResultStatusDialog$1
+ .class
+SHA-256-Digest: eY7bqROgLk9OkvRjCu2kQoaFVrIQfDgH3sWP14wPwH8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/RepositoryBrowserProject
+ ImportHandler$1.class
+SHA-256-Digest: oSW29jRhZegkDuxHfQPvaOX4Lh+h/+LwOgEkBhia5x0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/SapSystemViewer$Decoratin
+ gLabelProvider.class
+SHA-256-Digest: WTmEjG+IGh/gffvDVQQd1vLerhCd349oM9sfbOxX34g=
+
+Name: com/sap/ndb/studio/dwb/team/ui/cts/IChangeTrackingProvider.class
+SHA-256-Digest: djBBk9HTIP1uXIYUZdM5INy9stFYD4eyz+YlFyk0tUY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/CommitProblemR
+ esolutionGenerator$FileEncodingQuickFix$1.class
+SHA-256-Digest: iVG8yzR05e2ChM2QKQhWffG18Lblzposl3Q8CrTH77s=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/MergeToolHandler.class
+SHA-256-Digest: +6WgCUBYnvxoQ5p/VV1y3bY+vpf/YOz11b0xv45QINc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackageHeaderPage$4.class
+SHA-256-Digest: vHceLmwyE9oi6vSrcDLHGb8Z+N1PimjMgLizWG2xu24=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchDialogPage$4.class
+SHA-256-Digest: clr1xNZYL+Ueo8Tb8wEiDKUQXJenbGWNo3busIGqc2s=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: A5VXCm15hRzgmn1sDsvFZRn3uNg5FTCkyC/hW/BB3xE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$9.c
+ lass
+SHA-256-Digest: QVB7X7ASzUHYUK0MHNgcM0RIZlW9AUOIZJrQdNnYZ3A=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspacesSearchPage
+ $SearchResultTreeLabelProvider.class
+SHA-256-Digest: jouDgzpBfFGMTgx7aYOvp0OH7dbX6zdONGDIEQ8D8bA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/compare/RepositoryFileRe
+ visionTypedElement.class
+SHA-256-Digest: AbIaAAMU7C0KrsjihFTDIWv6wjGU1Z9huRANx/FwShg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$5.class
+SHA-256-Digest: yjaM2tyGzi7EIMw6Rdst7VDIuTxqEJjcm8R10h3Pfow=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/databinding/StatusToBool
+ eanConverter.class
+SHA-256-Digest: m2DLf2qHZT2T91tI2DCpjdUHZ7XGx44mH7QeamJeOD8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserCompareW
+ ithEachOtherHandler.class
+SHA-256-Digest: +nWm5i/yzX+iv8eSZd9bxKbn5GwrnEdEH1sJN2Gm2FU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$10.
+ class
+SHA-256-Digest: BIOi74xI8fJDat2h9c/qpP6B7t86VoM4Y4YkDLXOQMg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$16.
+ class
+SHA-256-Digest: qAM0yfJXsIqC5ygOU7qQOIDAeDPULww02v7+RLt81aU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryRemov
+ eFromClientHandler.class
+SHA-256-Digest: XWksSjeGTTk0NppuUrA/wzy7NVjJzG40zFPE7eCDKvs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/listeners/RepositoryReso
+ urceRefreshListener.class
+SHA-256-Digest: EFP5JTI7EHqXCPFdx5igbnEKz7Alr5R0K4kSbcUBxYc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserWorkspa
+ ceNodeWorkbenchAdapter$FetchRootPackageJob.class
+SHA-256-Digest: 1W+hciJ/1qU9J8R1/ROe3VmPeIjyCck0y9bnlipwjLE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/propertytesters/DefaultW
+ orkspaceTester.class
+SHA-256-Digest: tDxJdyAbZTjyHKyRkNZEqDgohLAuRgACfqA+y1UHOIs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryReset
+ Handler$1$1.class
+SHA-256-Digest: BaoBr2A2jfbI27cJVE1abffdKzq/yHo4V2N9zOHdvCY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspaceWizard.cla
+ ss
+SHA-256-Digest: YLT+qsuMXBZI8JP5mjST5S2mAKIuUOjybRKq0V4VaQI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/SyncDbUnlockHan
+ dler$3.class
+SHA-256-Digest: kX/RAVJuMYfR/Bk+WhGBFoBqlQKHZZE/wP9mlcU64jI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$SyncDbListener.class
+SHA-256-Digest: bhtP9eU6e0iwcuc+uLNQkpYd+cTUzgv4JMT/ebQNINc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$7.cla
+ ss
+SHA-256-Digest: gxW1RHK5yaNgUgI1kJme5KatXNeJoh+aAp+clDOK0BY=
+
+Name: icons/full/eview16/repositorybrowser.gif
+SHA-256-Digest: fL/gYbtbtUtGgYDIDMl6n3YkQZ8dYyl29s6m92x1eDI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteWo
+ rkspacesHandler$4$1.class
+SHA-256-Digest: HZj8Q2TWyA01S34wiWHNYVkUUBHgUUAozU8xMBndN14=
+
+Name: icons/full/obj16/repository_structural_package_node.gif
+SHA-256-Digest: ofcF8Q5CuFBmJrKeJf9UrGsMc4un0o66Po5CmT5INi8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryEditP
+ ackageHandler$EditPackageWizardDialog.class
+SHA-256-Digest: ZpOyUQEPtjiw4F3idyAyaLRh+eEfkX42MiRAbL3171g=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/preferences/DeveloperWor
+ kbenchMainPreferencePage.class
+SHA-256-Digest: Fx42DXfI5nmN3Avwuzyhq/IXEnCGxeUA6CBXJmXXTx8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/viewers/RepositoryConten
+ tCheckboxViewerWithButtons.class
+SHA-256-Digest: MbFESfPb8GGqWOujjs1uoi/iHiaLBKTymUHrPgUi2FU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackageHeaderPage.class
+SHA-256-Digest: SoxkBewyker8dfYnMDGu4AmL8z3tdoMO/2BY0H2/UPE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryPackage
+ ItemProvider$6.class
+SHA-256-Digest: mspgQ3eB2KOzF1GGTbD214f93QXVvmk0pI4rrjWyBtY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$Works
+ paceRootTextValidator.class
+SHA-256-Digest: x64VmgjdNpQCxsCIS1vmEOQSHMN/IypTRceVZK2IgGM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/CheckResultStatusDialog$2
+ .class
+SHA-256-Digest: 540CQWjy8skwofF9EaP8bMTowqOSirOAAHUNBlcW6wQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/CalendarPropertyI
+ temLabelProvider.class
+SHA-256-Digest: v6UbHHXj3T57ZzZJTQu+pk2ENXJCb6/v1/zPa7HTL+U=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/RepositoryContentViewer$1
+ .class
+SHA-256-Digest: jeIkHc5X5fdCgTxeVNhk5+8jYcCy9k1A/SYxK2oC5CA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/SyncDbRepairHan
+ dler.class
+SHA-256-Digest: WfkcP+6sEXTl17J8fjuYcBP33g/PAGAqoQjqIw8E0Ss=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/HistoryViewChec
+ koutFileRevisionHandler.class
+SHA-256-Digest: mN6Kps8jno14CoGdPCScfiWdolEKVEoTAh/hmjDyCZg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$WorkerRealm.class
+SHA-256-Digest: UvOh42aicf/ilRtOgU0DHs9YTRc3zAesIRtWb2wAciQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserCheckHan
+ dler.class
+SHA-256-Digest: tqNTHskShCumgRuVqdB578EAiiTwb4T3pY/iVfFSrus=
+
+Name: icons/full/etool16/hana_search.gif
+SHA-256-Digest: 5LaAD0j68Teg4FVke0zF0BCsHHMQJuAuiqjzadFJcws=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$8.cla
+ ss
+SHA-256-Digest: 9Nj/pQ3eG3FgLYff/+N8wcgN7p/JVmeeRm4iS0Q6xP0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackageHeaderPage$5.class
+SHA-256-Digest: 33cNooaffGkboFtA6MPeVPB/pJz/ro9sTUJqNAmBzUE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$3.class
+SHA-256-Digest: zaRrq5e5z1EDwhZpr4on64WKUJID+G0EWaXJVCI43rQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/HanaMoveDelete
+ Hook$1.class
+SHA-256-Digest: Fen5LxR90KdjvjczCHDFu2mqzYEHEpJ8Gim6PXoiT5Q=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$7$1.class
+SHA-256-Digest: 9X+0TC+YaY5SyzRy60OzAROHsgrhMOH/EZxXY6MdBrE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$PageItemValidatorAdapter.class
+SHA-256-Digest: yR2UUVHeykuLQn24rRtvEuoaY0WhyekMMZUoEwFtN7c=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteWo
+ rkspacesHandler$3.class
+SHA-256-Digest: svdGnpio8xCczARjOYNhuqBTQyyfyrX1L9Ti4zsLkl8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchQuery.class
+SHA-256-Digest: 4ek6QpcOfJb9hS2i2ja8FDJrabr5uX1BDokmhPMcHDA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaWorkspaceSelectionPag
+ e$1.class
+SHA-256-Digest: klThOLIXOsz4d5QBT2FDReOTMY9Hj/InhmgRTbGDPjM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/sync/HanaSynchronizeParticipant$2
+ .class
+SHA-256-Digest: kPm1VHilm6Vft10oIKYkZW9P4PLd0qOw7HhqSdx03/w=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/dialogs/ValueHelpDialog$
+ PatternBasedStyledLabelProvider.class
+SHA-256-Digest: gtL9+VsrYirpf5Et8SJ2xjHXAYX4NaAv2N8QD2KWRFE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackageHeaderPage$2.class
+SHA-256-Digest: ezOB98JRc4x8CrdJOSG+fII54i4RGI8+iEKpvnewyhw=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserView$9.cla
+ ss
+SHA-256-Digest: qOlgRTcLtg8qPLoimr53NBgl6i30+9QYHlbf3y3fMWc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$11.
+ class
+SHA-256-Digest: 50LIFCXzQFa9BzpfiS/Et6Rx0TEaRNZDph+0QNFi4eQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/SyncDbRepairHan
+ dler$1.class
+SHA-256-Digest: oM0ObQIV9fIYxalpEm3eBsSbAOuGYHiLZ4rJvKfpjDk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteWo
+ rkspacesHandler$5$1.class
+SHA-256-Digest: WHxfQpjj+YUCMWNiNJBd7I0aykIEt95svOW1e1O/pFE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/TeamFileSynchr
+ onizationUiServiceProvider.class
+SHA-256-Digest: rxReJMJs7Rq+ZUb4Rn1UIM7yFYO0yoZtZseUDdHuoYc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchResult.class
+SHA-256-Digest: /ncBPanSyCIr1IyKxMx3X51XJDK9r+fNzx16usYmyWg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/viewers/SapSystemViewer$1.class
+SHA-256-Digest: HsJuzLTzWWsEXyTNw8oUutW5rb7b42MozSIYl5vsv2s=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/runnables/ReadInactiveFi
+ lesRunnableWithProgress.class
+SHA-256-Digest: 0srNc4Ia96QE57mxykpm4mYH7OpV6mjj6RsXFGRbJMY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteWo
+ rkspacesHandler.class
+SHA-256-Digest: FFV/6ZUzqF7cDD75GGYF5iprkEKzeRedjTkT5fB1kSY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaWorkspaceSelectionPag
+ e$4.class
+SHA-256-Digest: TRaJF3IvwftB09iO3TZbwbR0z/2ID0coczHSuxG/SH4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/StatusEntitiesArea.class
+SHA-256-Digest: R6CKnODPABfmLD8R3g0oD1Z0oaM2se/Ihfr7LkYp5eI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryPackage
+ ItemProvider$8.class
+SHA-256-Digest: 4MiZso/Osw4LQjiIn2wIVjBAVuLC7shmvJfsr7WMfbg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositorySearchR
+ esultPackageNode.class
+SHA-256-Digest: 0qho1nAQvJgL7tw6/Ru41O5u2Fxc/lmRpWBQf2i/NKk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/editors/HanaIgnoreFileEd
+ itor$RegiIgnoreConfiguration.class
+SHA-256-Digest: rP/7kMrdStEP7frK2W2nx0jslhNsz0qGeKFUXECutJE=
+
+Name: icons/full/ovr16/system_project_ovr.gif
+SHA-256-Digest: a3aNHrSVrXQk1ewvcFSvir3dpiSwJ4UheY4UWTt0ssY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/Handler$1.class
+SHA-256-Digest: kDqLQaAaGWBZtSqBSIVyru67lB8bC7VERlGkoDszjXY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$UseDe
+ faultWorkspaceToWorkspaceNameTextConverter.class
+SHA-256-Digest: evrjAe4hsBlNqUNUbWvYrczWXb4ZT03mTXZuEUcKT0U=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/compare/RepositoryCompar
+ eEditorInput$EmptyTypedElement.class
+SHA-256-Digest: tmCqyjrfs1NdAxl41M05xpTvTvojvnyKNI0EaSBNskA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/ActivateRetryDialog.class
+SHA-256-Digest: FDlPjsfERuzbZbYer9pk0CoT0FhTg2LSJzXui2/IbYE=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.dwb.team.ui
+ /pom.properties
+SHA-256-Digest: kaBzq9BBcR5kUMfpyFLxCXVTjbiDt0qssGnxcBIrd7Q=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$14.
+ class
+SHA-256-Digest: Hykibs+mawI4BDVb1ievEr4OX8sfry1QhgPDU7C7eJY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CreateWorkspacePage$Syste
+ mValidator.class
+SHA-256-Digest: 1LWFqCbrQcf/zhxdFse2G6HL0QgP6ZNZ4nCyFzWV4ak=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/HistoryViewChec
+ koutFileRevisionHandler$1.class
+SHA-256-Digest: vug+AV4Dx4CV0fKAUZID6L81wGaUBZ5+CsLfdZLquyI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserContentPro
+ vider$ClientLocationSettingsObserver$1.class
+SHA-256-Digest: /E5UZ19N5FZSGppWqlivGmMhuuAZ/5Uauy/+LzfD0xM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/util/SyncDbAccessUi$1$1.
+ class
+SHA-256-Digest: m9NBYGXMV3TxkBMqGdt1l6nAY+xcL6Sjz/NCOOTJ7RY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/editors/HanaIgnoreFileEd
+ itor.class
+SHA-256-Digest: JLSNNMqHdXnLkcztwRVIwDhkVuLq9B89QQU56c2eE8Y=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositorySearchR
+ esultNode.class
+SHA-256-Digest: Yj9TazNuo6S/otP0L+z8AdGrsRSk57m04v8oXHXjCpU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserSwitchOw
+ nershipHandler$SwitchOwnershipWizardDialog.class
+SHA-256-Digest: MXLEbkLYy352an2pmWM3dBSdv6kZ1ViOQuVtTE35uAQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserCreateWo
+ rkspaceHandler.class
+SHA-256-Digest: nd3REy2bZfeCrpUiSA8E4k/WRGz7ZNTTVDmF+U3hQIQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaSharingWizard$SharePr
+ ojectRunnable.class
+SHA-256-Digest: 2pOB8HMx4HgCumxTKNC8GkDbmNXTWEvGj6oqbSJF4/E=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserContentPro
+ vider$RepositoryBrowserDataModelPublisher$1.class
+SHA-256-Digest: EZA6hsdVfQWK5tKo/lT7m2lsy/hAV/7fZyTVTiCmfpA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/CreateSystemPro
+ jectHandler.class
+SHA-256-Digest: XsXvRX4F5hispw/LuA7XT5Vb8l4wLUcDmC7O2DN7DPE=
+
+Name: com/sap/ndb/studio/dwb/team/ui/util/StatusLineHelper$1.class
+SHA-256-Digest: e7htZL1MeXEJojP3RALQgRfmmeCRXBWbiZjbZ/d8Zl8=
+
+Name: icons/full/obj16/history.gif
+SHA-256-Digest: uiV57bjfCGs5BPTBmnJPh0vi99l9tXR6g9HFyJNZ3DQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/SyncDbUnlockHan
+ dler$2.class
+SHA-256-Digest: CLmO6aWP4kGcuIlRRutelSw9x4ZJBfvzM+ZT2tcEzN8=
+
+Name: OSGI-INF/TeamServiceUiProvider.xml
+SHA-256-Digest: Vwj4RhovagVWNL70bJrxgEky3WM7EkKE5um3phiTwAc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/providers/TeamServiceUiP
+ rovider.class
+SHA-256-Digest: LABk+lo9FPKrKg1roS6ZQcCEtp4gV7Tca1egZN41Ndo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteFo
+ reignUserWorkspacesHandler$1.class
+SHA-256-Digest: N0laDC76esI60nm7ntuAlGKgvYgb537l8R6i+Y1sIMc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/decorators/SyncEntryDeco
+ rator.class
+SHA-256-Digest: i6yzVb1QCRAnAbJr7jhmJUaBCFB+LQTpjmECb2Lh7oM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$13.
+ class
+SHA-256-Digest: v6cjbENbU6jjV+DclXZiPugg0uan7k6DBF/ggg/xy00=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserWorkspa
+ ceNodeWorkbenchAdapter.class
+SHA-256-Digest: r0zUsGl3LSGyEY7Rb12WPurrC0hFPEjT3GiawiT+e7s=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteWo
+ rkspacesHandler$DeletionMode.class
+SHA-256-Digest: renVcexnRRyzPEFxxF5Ea3ACzftZ3FlMaU2jv4Mdp5M=
+
+Name: com/sap/ndb/studio/dwb/team/ui/util/RepositoryBrowserUtil.class
+SHA-256-Digest: T2LBgeTjidhHBn5vA6L11STxfy3akdIxSm7eJiy9u6g=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$FileRevisionLabelProvider.class
+SHA-256-Digest: LpWyWwFP6mxPhNCjQxb9hJb6cnRAEwz4QbYVRu9X2eU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/DetailMessageDialog$2.cla
+ ss
+SHA-256-Digest: /AkRbXpxQ1tpwtXVuG9XCJcN/kg3ZVqS9zaKi6RUSIY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$ReadHistoryJob$2.class
+SHA-256-Digest: zrRs5dpNLo6ZMa8HilYeX05a5alNSU/JFOWwVwtKy1Q=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchDialogPage$3.class
+SHA-256-Digest: SgOWwg8atfMY4exmTJnEkgSS5zzPGQNHQmTTIjGK3Xc=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteWo
+ rkspacesHandler$1.class
+SHA-256-Digest: 8ba7pwO/RRUFyvES5C2kuPYBipEsc44Ap6D8UxZN2GQ=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/preferences/DeveloperWor
+ kbenchMainPreferencePage$1.class
+SHA-256-Digest: jI7QKkV7lOryZ7QEdBMFIRWyRZkZwJC1gWcLETbwFxY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/CheckoutImportProjectsWiz
+ ard$CheckoutPage.class
+SHA-256-Digest: u8XaY7e4s26HmShhDmvIwdsCZObUXa0nSAjMVdSjmjY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage.class
+SHA-256-Digest: kvGi4c9gKHL4K4WdjSrEWJ8Xpa1FqcKxw0OUg/CJ3nY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/LocalWorkspaceSelectionPa
+ ge$WorkspaceLocationValidator.class
+SHA-256-Digest: scSy+5qjuWMS7vhdC3G75+pAadKDUT5uBOKzcWYCpgM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/TeamUiWizardBase$StatusRu
+ nnableWithProgress.class
+SHA-256-Digest: S+P0xNEHP2R58zD924/xlxL/12WRZunCxVwXtPAsL9M=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$1.class
+SHA-256-Digest: 9t5131fba505FsEDxQjmtdn/4dKKkIjVd4NLedIkInA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteRe
+ sourcesHandler$DeleteResourcesErrorHandler$1.class
+SHA-256-Digest: H79lg+Dq34LTGT93HQFexRg+ta36+9sQdQ54ULuIgTk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/NewMenuHandler$
+ 1.class
+SHA-256-Digest: rRQtSEvmp47Nd2+L0V2Mr2lMVQNhKaSPobUDP5yKrGE=
+
+Name: icons/classpath.gif
+SHA-256-Digest: 9qNfPguDWu9YaCNPPtwOZHBIscKJCkRHk1wnmKjaVo8=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackageHeaderPage$3.class
+SHA-256-Digest: yncKTa2qlT46ueBg/KgV4AXl+Aea5pMEW1CloikeRJ0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/DevWorkbenchPerspectiveF
+ actory.class
+SHA-256-Digest: NHIt0ET5jmffvexLyMnDs7EOMDMvRukP9NZs+7jNm+g=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryExpor
+ tPackageZipHandler.class
+SHA-256-Digest: 5v6ZZ99IWjNMXv2wZnK4jUKYqRgPN7HiUVB63I89Cvo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryHandl
+ er$1.class
+SHA-256-Digest: HU00wFsNCSj5jq9R/JsKR17A69vEIREU9DTsiySIAx0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/decorators/HanaResourceD
+ ecorator$1.class
+SHA-256-Digest: 536scXRVPqdFZstmM8KmjInNim7GRsDSArYAsOCnfcA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserContentPro
+ vider$RepositoryBrowserDeferredTreeContentManager$1.class
+SHA-256-Digest: 5Yoe7fumvFRsPIF6oLtLPUOBTEmhSWiFuRugUjCCgE0=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/DwbTeamUiPluginStartup$W
+ indowListener.class
+SHA-256-Digest: iERafa6HTgk89NtiQ5XDo1Ul46xIQ7Rx4mSJFD/k+Qo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$FileRevisionLabelProvider$TableLabelProvider.class
+SHA-256-Digest: l6BxDrVKsLrWf7fB+c3q8rdKjcWUq/wlDof2sQV/k7I=
+
+Name: icons/full/ovr16/lock_ovr.png
+SHA-256-Digest: tMNe4cRIOv5OAy1JXhRFJDAL2HHwyXLMMLz4yfP0t4Q=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.dwb.team.ui
+ /pom.xml
+SHA-256-Digest: I/2m4k7cbTHsqLXQjHnglmng9NZuEG5l7FUOytjwXPo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryExpor
+ tPackageZipHandler$1.class
+SHA-256-Digest: uLHymCvb2si/+SbCxsCnrTIxm7mo+PhZaqtQiUcfYyI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryPackage
+ ItemProvider$9.class
+SHA-256-Digest: 8t/b4yewrx2Ob3WogFT++wXSL1bzkwBS438x1GVUqks=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/DwbTeamUiPluginStartup$1
+ .class
+SHA-256-Digest: tV7ruUVUJ3Hy+2rzksf/0BMCWuoO2FFWbKcBan/oHQA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/adapters/RepositoryBrowserDestina
+ tionNodeWorkbenchAdapter.class
+SHA-256-Digest: WGYjpsADKdGOn6/Qr6gcIg7fuevKEaOIJQHjljqUbxI=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryResourc
+ eItemProvider.class
+SHA-256-Digest: 8qNKw5AA5+ftEYODvXmXrkuTsJ6RaJARegWiL4IapVg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/RepositoryRemov
+ eFromClientHandler$1.class
+SHA-256-Digest: QqN8kU6oHT+B8Tsg65q++FXGEKSqPc8UkubhfAJfJJA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/DetailMessageDialog$1.cla
+ ss
+SHA-256-Digest: 464cp5E2aLVLTgzAP2fU7vKBpzSgkohl0tyRNyJuTck=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/HanaWorkspaceSelectionPag
+ e$2.class
+SHA-256-Digest: jncJs5OFvT4jqFxLjQyi/qJz/Pd5h0/+5RyJIlrmyZs=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/HistoryViewComp
+ areWithEachOtherHandler.class
+SHA-256-Digest: 1DzKdAEn3IiuizHl0UDzGYHzWbHqDO7nMh5ITh1GtKo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/RepositoryBrowser
+ LocalPackageNode.class
+SHA-256-Digest: ckdqq44L0V4hen8wkR9NfJUpwX6y5tJToD1HL/pt6po=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/history/RepositoryHistor
+ yPage$ReadHistoryJob$1.class
+SHA-256-Digest: Rq+ZqXdysX2gXZlE1Fp0sE8h65lAaxnsGU/B5lJ4kNA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteFo
+ reignUserWorkspacesHandler$DetailMessageDialogExtension$2$1.class
+SHA-256-Digest: o6aDF2hHJwvm1bwgrs4PYPRfXaLIMzMFsQ/h3CzEUEk=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/search/RepositoryTextSea
+ rchDialogPage$2.class
+SHA-256-Digest: lRg69dSPD1V0qudfhFM4mwnzbdmd1OpqPuw8W1tLkWA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/handlers/RepositoryBrowserProject
+ ImportHandler$2.class
+SHA-256-Digest: y9hEzuEDeWTCDCaW3ZzebQ6TVY11ge27MMkbkhCFo0o=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteWo
+ rkspacesHandler$2.class
+SHA-256-Digest: PGk0WSqPVgi4KlpEntE0dhX5sQ5Nk8b3ghcWnEWkcG4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/RepositoryBrowserContentPro
+ vider$1.class
+SHA-256-Digest: HoJQTtwVYRKsR+5v8v0onTja2TzocYhVWbomjX9yVco=
+
+Name: com/sap/ndb/studio/dwb/team/ui/dialogs/SapSystemSelectionDialog$
+ SystemViewerWithButtons$2$1.class
+SHA-256-Digest: XnFYANsCxH1sxYzd5Sz+leVasUMsWWc7fad02hWNaIM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserReassign
+ SapSystemHandler$1.class
+SHA-256-Digest: 6rDmU9Hy3qZN2Bq8YI8gubbL4VrYcIGqdvC7+lGQ964=
+
+Name: icons/full/ovr16/repository_external_package_ovr.gif
+SHA-256-Digest: U/hDx7YPIxAdBKVIzXB25hZujtLC+1z7yBlm7UqARQU=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/providers/RepositoryPackage
+ ItemProvider$10.class
+SHA-256-Digest: BrXk0nrYFOUwgPpeFxOd4ws9QqonU/APOcIB3CMoeYg=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/BrowserDeleteFo
+ reignUserWorkspacesHandler.class
+SHA-256-Digest: kRzEXZ0q6AWa3vQeBdkXo9vFmvjVqcOcL7rFcMGqQ9o=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/HistoryViewComp
+ areWithActiveHandler.class
+SHA-256-Digest: QjeYDNxSctPaz+kM7fNh8GFwTRI2aqMhZn/XcHktAt4=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/handlers/Handler.class
+SHA-256-Digest: TMlkQvZgYMR4an6fmgicZsn5+zc5KsgkvoS30K9E+Fo=
+
+Name: com/sap/ndb/studio/dwb/team/ui/internal/actions/ActivateAction.c
+ lass
+SHA-256-Digest: kafiLMlq2Bzo3oWQf5Lk5wZ3YTSt46HlwID9gSodlO8=
+
+Name: icons/full/elcl16/new_repository_workspace.gif
+SHA-256-Digest: ka/8Q+1sNpu/3Gku+CfKz/sHcDhhKDcGDFJG0/tQcCA=
+
+Name: com/sap/ndb/studio/dwb/team/ui/views/treemodel/RepositoryBrowser
+ WorkspaceNode.class
+SHA-256-Digest: fG2ecY/Tk3kqRiNioazsnjK/tGUoHVohoeYSBPhzauc=
+
+Name: icons/dev_workbench_perspective.gif
+SHA-256-Digest: ly+TJu/UUJFVj8cBy6tEiN4V0U6t54H1oe0iSd5MWeY=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/InactiveObjectsSelectionP
+ age$2.class
+SHA-256-Digest: kYjmnel1O9ZWYK9oTVmwOLj4SYxzjz/43TAaNKw6dDM=
+
+Name: com/sap/ndb/studio/dwb/team/ui/wizards/PackagePropertiesPage$12.
+ class
+SHA-256-Digest: FCJBo0CMfai7sscFvq5t+eGczQmLMemvGnb3wkP6Hlw=
+

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Encoder/version::1.1.3" ComponentName="sap:Encoder" UIElementType="Flowstep" IsExtension="false" IsFinal="true" IsPreserves="false">
+   
+    <Variant VariantId="ctype::FlowstepVariant/cname::MIME Multipart Message Encode/version::1.1.3" VariantDisplayName="MIME Multipart Encoder" VariantName="MIME Multipart Message Encode" AttachmentBehavior="Drop" MetadataVersion="2.0">
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema />
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema />
+            </Content>
+        </OutputContent>
+        <Tab id="iflow.mime.multipart.encode.tab">
+            <GuiLabels>
+                <Label language="EN">Processing</Label>
+            </GuiLabels>
+			<AttributeGroup id="iflow.mime.multipart.encode.general_details">
+                <AttributeReference>
+                    <ReferenceName>MultipartSubtype</ReferenceName>
+                    <description>Select the subtype of the generated MIME multipart</description>
+                </AttributeReference>
+				<AttributeReference>
+					<ReferenceName>MultipartAddHeadersInline</ReferenceName>
+					<description>Select to add the MIME headers of the multipart as part of the message body instead of a message header</description>
+				</AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>IncludeHeaders</ReferenceName>
+                    <description>Specify a regular expression matching the message headers to be included as MIME headers in the MIME multipart. Example: headerA|headerB|MyCompany.*|x-.*</description>
+                    <EditCondition>
+                        <AttributeName>MultipartAddHeadersInline</AttributeName>
+                        <AttributeValue>true</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+			</AttributeGroup>
+		</Tab>
+        <AllowedHeaders />
+        <ReferencedComponents />
+    </Variant>
+    
+    <AttributeMetadata>
+        <Name>MultipartSubtype</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Mixed</Default>
+        <GuiLabels>
+            <Label language="EN">Multipart Subtype</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>Alternative</Value>
+                <GuiLabels>
+                    <Label language="EN">Alternative</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Digest</Value>
+                <GuiLabels>
+                    <Label language="EN">Digest</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Mixed</Value>
+                <GuiLabels>
+                    <Label language="EN">Mixed</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Parallel</Value>
+                <GuiLabels>
+                    <Label language="EN">Parallel</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Related</Value>
+                <GuiLabels>
+                    <Label language="EN">Related</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>    
+    <AttributeMetadata>
+        <Name>MultipartAddHeadersInline</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <GuiLabels>
+            <Label language="EN">Add Multipart Headers Inline</Label>
+        </GuiLabels>
+    </AttributeMetadata>    
+    <AttributeMetadata>
+        <Name>IncludeHeaders</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <GuiLabels>
+            <Label language="EN">Include Headers</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

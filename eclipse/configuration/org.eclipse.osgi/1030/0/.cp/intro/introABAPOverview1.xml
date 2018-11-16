@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<introContent>
+
+
+<!-- Overview Page - (2 groups) -->
+
+
+ 	<extensionContent id="com.sap.adt.intro.qtools" style="css/sample.css" name="ABAP Development Q Tools" path="overview/@">
+       		
+       	<group label="ABAP Development - Quality Tools" style-id="content-group" id="content-group">	       	
+			
+			<link label="Checking Quality of ABAP Code with ATC"
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/tasks/ATC%20Getting%20Started.html"
+					id="abapstandard_doc" style-id="content-link">
+				<text>
+					Get familiar with ABAP Test Cockpit (ATC) tools for checking the quality of your ABAP code.      
+				</text>	
+			</link>       		
+			<link label="Running ABAP Unit Tests"
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/tasks/ABAP_Unit_Getting_Started.html"
+					id="abapstandard_doc" style-id="content-link">
+				<text>
+					Learn how to run ABAP Units tests for your development objects.  
+				</text>	
+			</link>            		
+       	</group>
+       	
+       	<group label="ABAP Development - Troubleshooting Tools" style-id="content-group" id="content-group">	       	
+			
+			<link label="Debugging ABAP Code"
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/tasks/ABAP_Debugging_Getting_Started.html"
+					id="abapstandard_doc" style-id="content-link">
+				<text>
+					Follow the steps for debugging ABAP source code and get familiar with debugger functions.    
+				</text>	
+			</link> 
+			      		
+			<link label="Using ABAP Profiling (ABAP Trace)"
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/tasks/ABAP_Trace_Getting_Started.html"
+					id="abapstandard_doc" style-id="content-link">
+				<text>
+					Learn how to identify performance hot spots and analyze the program flow of an ABAP application.  
+				</text>	
+			</link>
+			            		
+			<link label="Getting ABAP Feeds"
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/tasks/ABAP_Feeds_Getting_Started.html"
+					id="abapstandard_doc" style-id="content-link">
+				<text>
+					Subscribe to ABAP feeds to view ABAP runtime errors and short dumps.    
+				</text>	
+			</link>
+       	</group>
+       	
+  	</extensionContent>
+
+
+
+</introContent>

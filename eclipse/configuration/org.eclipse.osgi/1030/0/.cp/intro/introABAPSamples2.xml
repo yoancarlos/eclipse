@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<introContent>
+
+  	<extensionContent id="com.sap.adt.intro.epm.demo.app" name="Enterprise Procurement Model" style="css/sample.css" path="samples/@">
+
+  	   <group label="Enterprise Procurement Model" style-id="content-group" id="content-group">   
+           
+            <text style-id="group-description">The Enterprise Procurement Model (EPM) is intended to be used for demonstration and testing purposes in the SAP NetWeaver technology stack.
+            This demo application is based on real-world business logic and scenarios that can be used for various testing approaches and also provides you with utilities to generate meaningful test data.
+            </text>
+
+            <link style-id="content-link" label="Introduction to the Enterprise Procurement Model" 
+                  url="http://org.eclipse.ui.intro/openBrowser?url=http://scn.sap.com/docs/DOC-31458" id="abapstandard_doc">
+            
+          		<text>Visit our community page to get an introduction to the Enterprise Procurement Model, its technical prerequisites, the intended usage, and features provided. </text>
+       		</link>
+       		
+            <link style-id="content-link" label="Disclaimer">
+                  <!-- 
+                   url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/disclaimer_epm.html" id="abapstandard_doc">
+                   -->
+          		<text>The following is only meant to be an example for demonstration purposes and not intended to be used in a productive environment. Any use by the customer is therefore at its own risk. </text>
+       		</link>       		
+
+            <link style-id="content-link" label="Demo Project for the Enterprise Procurement Model" url="http://org.eclipse.ui.intro/runAction?pluginId=com.sap.adt.abapdev.guide.doc.user.ext&amp;class=com.sap.adt.abapdev.guide.doc.user.internal.samples.CreateAbapSampleProjectAction" id="abapstandard_exe">
+          		<text>Click here to create a demo ABAP project. As result of this action, the relevant EPM demo packages are added to the favorite list of the ABAP project created.</text>
+       		</link>
+       				        
+       </group>
+       
+  	</extensionContent>
+
+</introContent>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure Communication Channel with SuccessFactors (OData V4) Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiocd091fc8051d42ee95eda2858ca2a2f0">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure Communication Channel with SuccessFactors (OData V4) Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<div class="p">The SuccessFactors adapter enables you to communicate with the SuccessFactors system. You use
+				the OData V4 message protocol to connect to the OData V4-based Web services of the
+				SuccessFactors system. <div class="note note"><span class="notetitle">Note</span> The OData V4 message protocol for the SuccessFactors
+					adapter is only available in the receiver channel. </div>
+<div class="note tip"><span class="tiptitle">Tip</span> If
+					your input payload contains nodes without data, the output also contains empty
+					strings. If you want to avoid empty strings in the output, ensure that the input
+					payload does not contain any empty nodes.</div>
+</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step">
+				<span class="ph cmd">Choose the communication channel you want to configure. </span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Select the integration flow you want to configure and choose
+						<span class="ph uicontrol">Edit</span>.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">On the <span class="ph uicontrol">General</span> tab, provide the channel name and description in the
+					relevant fields, if required. </span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Go to the <span class="ph uicontrol">Adapter Specific</span> tab and provide values in the fields
+					based on the descriptions in the table below.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loiocd091fc8051d42ee95eda2858ca2a2f0__choicetable_st1_b4c_3v">
+<thead><tr><th valign="bottom" align="left" id="d4508597e59-option">
+							<p class="p">Field</p>
+
+						</th>
+<th valign="bottom" align="left" id="d4508597e59-desc">
+							<p class="p">Description</p>
+
+						</th></tr></thead>
+<tbody>
+					
+					<tr class="strow chrow">
+						<td valign="top" headers="d4508597e59-option" id="d4508597e78" class="stentry choption" width="50%"><strong>
+							<p class="p">Address</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d4508597e59-desc d4508597e78" class="stentry chdesc" width="50%">
+							<p class="p">URL of the SuccessFactors data center that you want to connect to.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d4508597e59-option" id="d4508597e93" class="stentry choption" width="50%"><strong>
+							<p class="p">Credential Name</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d4508597e59-desc d4508597e93" class="stentry chdesc" width="50%">
+							<p class="p">Credential name that you have used while deploying credentials on the tenant.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d4508597e59-option" id="d4508597e108" class="stentry choption" width="50%"><strong>
+							<p class="p">Proxy Type</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d4508597e59-desc d4508597e108" class="stentry chdesc" width="50%">
+							<p class="p">Type of proxy you want to use to connect to the SuccessFactors system.</p>
+
+							<p class="p">Currently, you can only choose <span class="ph uicontrol">Internet</span> as the proxy type. </p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d4508597e59-option" id="d4508597e129" class="stentry choption" width="50%"><strong>
+							<p class="p">Operation</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d4508597e59-desc d4508597e129" class="stentry chdesc" width="50%">
+							<p class="p">Select the operation that you want to perform from the dropdown
+								list.</p>
+
+							<p class="p"><span class="ph uicontrol">Query(GET)</span>, <span class="ph uicontrol">Create(POST)</span> and
+									<span class="ph uicontrol">Update(PUT)</span> operations are currently
+								supported.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d4508597e59-option" id="d4508597e156" class="stentry choption" width="50%"><strong>
+							<p class="p">Resource Path</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d4508597e59-desc d4508597e156" class="stentry chdesc" width="50%">
+							<p class="p">Provide the resource path of the entity that you want to access.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d4508597e59-option" id="d4508597e171" class="stentry choption" width="50%"><strong>
+							<p class="p">Query Options</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d4508597e59-desc d4508597e171" class="stentry chdesc" width="50%">
+							<p class="p">Query options that you want to send to the OData V4 service with operation details.</p>
+
+						</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">Save or deploy the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

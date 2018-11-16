@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Externalizing Parameters of Integration Flow</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio1db65d7205864e638627265ee7f32bf0">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Externalizing Parameters of Integration Flow</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loio1db65d7205864e638627265ee7f32bf0__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><p class="p">Externalizing parameters is useful when the
+				integration content has to be used across multiple landscapes, where the endpoints
+				of the integration flow can vary in each landscape. This method helps you to declare
+				a parameter as a variable entity to allow you to customize the parameters on the
+				sender and receiver side with a change in landscape. </p>
+<p class="p">When you externalize a
+				parameter, it will be available in the integration flow configuration when you
+				import content in <span class="ph pname">SAP Cloud Platform
+                        Integration</span> Web
+				Application.</p>
+<p class="p">Partial Parameterization enables to change part of a field rather
+				than the entire field. This variable entity of the field is entered within curly
+				braces. </p>
+<div class="sectiondiv"><strong class="ph b">List of parameters that can be externalized on the sender
+					side</strong><ul class="ul" id="loio1db65d7205864e638627265ee7f32bf0__ul_nyh_4mr_b3">
+					<li class="li">SOAP (SAP RM) adapter: Address, URL to WSDL</li>
+
+					<li class="li">SOAP (SOAP 1.x) adapter: Address, URL to WSDL, WS Security, Private Key
+						Alias for Response Signing, Private Key Alias for Encrypting</li>
+
+					
+					<li class="li">IDoc (IDoc-SOAP) adapter: Address, URL to WSDL</li>
+
+					<li class="li">SFTP adapter: Server Host , Server Path, File Name,User Name , Archive
+						Directory <p class="p">The following
+							parameters under <span class="ph uicontrol">Processing Parameters</span>:
+							Post-Processing (all options that can be selected in this drodown list),
+							Idempotent Repository, Read Lock Strategy </p>
+</li>
+
+					<li class="li">SuccessFactors Adapter: Address, Page Size Credential Name, Address Suffix,
+						Parameters</li>
+
+					
+					<li class="li">Sender Authorization: Subject DN and Issuer DN</li>
+
+				</ul>
+</div><div class="sectiondiv"><strong class="ph b">List of parameters that can be externalized on the
+					receiver side</strong><ul class="ul" id="loio1db65d7205864e638627265ee7f32bf0__ul_dzt_ghx_st">
+					<li class="li">Mail Adapter: Address, Protection, Authentication, Credential Name, Mail
+						Attributes (From, To, Cc, Bcc, Subject, Mail Body)</li>
+
+					<li class="li">IDoc (IDoc SOAP)Adapter: Address, Proxy Type, URL to WSDL, Private Key
+						Alias, Credential Name, Authentication, Allow Chunking. </li>
+
+					<li class="li">SOAP (SAP RM) adapter: Address, Proxy Type, URL to WSDL, Private Key Alias,
+						Allow Chunking.</li>
+
+					<li class="li">SOAP (SOAP 1.x) adapter: Address, Proxy Type, URL to WSDL, Authentication,
+						Private Key Alias, Credential Name, User Name Token, Private Key Alias for
+						Signing, Private Key Alias for Encrypting, Allow Chunking.</li>
+
+					
+					<li class="li">HTTP Adapter: Address, Query, Proxy Type, Authentication, Private Key Alias,
+						Credential Name</li>
+
+					<li class="li">SFTP adapter: File Name,User Name , Archive Directory, Address </li>
+
+					<li class="li">SuccessFactors Adapter: Address, Page Size, Credential Name, Address Suffix,
+						Parameters</li>
+
+					<li class="li">OData Adapter: Address, Proxy Type, Authentication, Custom Query Options,
+						Page Size</li>
+
+					
+					<li class="li">Twitter Adapter: Endpoint, User, Page Size, Number of Pages, Locations,
+						Keywords, User Names, Language, Consumer Key, Consumer Secret, Access Token,
+						Access Token Secret.</li>
+
+				</ul>
+<div class="note note"><span class="notetitle">Note</span> 
+					<p class="p">If you externalize the Proxy Type parameter, you do not see the display
+						values from the UI in the parameter file, but the technical representatives
+						of these values (for example, sapcc for the value On-Premise, and default
+						for the value Internet). </p>
+
+				</div>
+<div class="note note"><span class="notetitle">Note</span> 
+            <p class="p">You can externalize all attributes related to the configuration of the authentication
+                option. This includes the attributes with which you specify the authentication
+                option as such (if you either intend to use basic authentication , certificate-based
+                authentication or no authentication), as well as all attributes with which you
+                specify further security artifacts that are required for any configurable
+                authentication option (<span class="ph uicontrol">Private Key Alias</span> or
+                    <span class="ph uicontrol">Credential Name</span>).  </p>
+
+            <p class="p">Apply <span class="ph emphasis emphasis">one</span> of the following two recommendations when
+                externalizing such attributes.</p>
+
+            <ul class="ul" id="loio1db65d7205864e638627265ee7f32bf0__d274e140">
+                <li class="li">
+                    <p class="p">Externalize <span class="ph emphasis emphasis">all attributes</span> related to the configuration
+                        of all options (for example, <span class="ph uicontrol">Authentication Option</span>,
+                            <span class="ph uicontrol">Credential Name</span> and <span class="ph uicontrol">Private Key
+                            Alias</span>). </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">Externalize only one of the following attributes: <span class="ph uicontrol">Private Key
+                            Alias</span>
+                        <span class="ph emphasis emphasis">or</span>
+                        <span class="ph uicontrol">Credential Name</span>.</p>
+
+                </li>
+
+            </ul>
+
+            <p class="p"><span class="ph emphasis emphasis">Avoid incomplete externalization</span> such that, for example, you
+                externalize only the attribute for the <span class="ph uicontrol">Authentication Option</span>
+                but not the related <span class="ph uicontrol">Credential Name</span>. In such cases, the
+                integration flow configuration (based on the externalized parameters) cannot work
+                properly. </p>
+
+            <p class="p">The reason for this is the following: When you have externalized the
+                    <span class="ph uicontrol">Authentication Option</span> attribute and only the
+                    <span class="ph uicontrol">Private Key Alias</span> (but no <span class="ph uicontrol">Credential
+                    Name</span>), in the integration flow configuration dialog all
+                authentication options (<span class="ph uicontrol">Basic</span>,
+                    <span class="ph uicontrol">Certificate-Based</span> and <span class="ph uicontrol">None</span>) are
+                selectable in a drop-down list. However, when you now select <span class="ph uicontrol">Basic
+                    Authentication</span> from the drop-down list, no <span class="ph uicontrol">Credential
+                    Name</span> can be configured. </p>
+
+        </div>
+</div></div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio1db65d7205864e638627265ee7f32bf0__steps_dgl_2y1_ck"><li class="li step stepexpand" id="loio1db65d7205864e638627265ee7f32bf0__step_N100B1_N1004E_N10011_N10001">
+				<span class="ph cmd">Externalize parameters by extraction.</span>
+				<div class="itemgroup info">
+					<div class="note note" id="loio1db65d7205864e638627265ee7f32bf0__note_N100BB_N100B8_N100B1_N1004E_N10011_N10001"><span class="notetitle">Note</span> You can extract
+						certain parameters that are already configured in the integration flow, so
+						that the parameters are externalized. You can view the extracted parameters
+						in the <span class="ph uicontrol">Externalized Parameter</span> view. If you have already
+						extracted a parameter, the parameter cannot be extracted again.</div>
+
+				</div>
+				<ol type="a" class="ol substeps" id="loio1db65d7205864e638627265ee7f32bf0__substeps_sjz_spk_3j">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">From the <span class="ph uicontrol">Project Explorer</span> view, open the <span class="ph filepath">&lt;integration
+								flow&gt;.iflw</span> in the editor. </span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Model Configuration</span> editor, right-click the graphical area
+							outside the model and choose <span class="ph uicontrol">Extract Parameters</span>
+							from the context menu.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Extract Parameters</span> dialog, select the parameters that have to
+							be extracted and be available for externalization.</span>
+						<div class="itemgroup info">
+							<div class="note note" id="loio1db65d7205864e638627265ee7f32bf0__note_N100F3_N100F0_N100E5_N100C5_N100B1_N1004E_N10011_N10001"><span class="notetitle">Note</span> In the
+									<span class="ph uicontrol">Console</span> view, you can see a summary of the
+								parameter extraction.</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Open the <span class="ph uicontrol">Externalized Parameters</span> view.</span>
+						<div class="itemgroup info">
+							<div class="note note" id="loio1db65d7205864e638627265ee7f32bf0__note_N10117_N10114_N100FE_N100C5_N100B1_N1004E_N10011_N10001"><span class="notetitle">Note</span> You can view the
+								externalized parameters of the field in the integration flow. The
+								field is now available as a variable.</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">From the toolbar of the view, choose <img class="image" id="loio1db65d7205864e638627265ee7f32bf0__image_d4g_vwz_pj" src="loio494aabc0a7b34d8bb6d29c9551003c18_LowRes.jpg" alt="SyncWithEditor_FSN" title="SyncWithEditor_FSN"/>(<span class="ph uicontrol">Sync with Editor</span> icon) to synchronize the
+							integration flow that is currently open with the <span class="ph uicontrol">Externalized
+								Parameters</span> view.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">You can edit parameter values and then choose <img class="image" id="loio1db65d7205864e638627265ee7f32bf0__image_lhy_1xz_pj" src="loio715b5be83e8649af8cbb902a8bcea89c_HiRes.jpg" alt="SaveAsTest_FSN" title="SaveAsTest_FSN"/>(<span class="ph uicontrol">Save
+								Parameters</span> icon), from the toolbar of the view.</span>
+						<div class="itemgroup info">
+							<div class="note note" id="loio1db65d7205864e638627265ee7f32bf0__note_N10200_N101FD_N101EB_N10173_N1015E_N1004E_N10011_N10001"><span class="notetitle">Note</span> The <span class="ph uicontrol">Save Parameters</span> icon is enabled only if
+								the parameter values and the type are consistent. For drop down or
+								combo box the values should be edited from here else, the parameter
+								references are lost.</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <img class="image" id="loio1db65d7205864e638627265ee7f32bf0__image_ovt_twz_pj" src="loioe1fd11cfd91b4a1ab920cb33f8c07db8_HiRes.jpg" alt="ReloadParameters_FSN" title="ReloadParameters_FSN"/>(<span class="ph uicontrol">Reload</span> icon) to update the view with the
+							list of externalized parameters.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you have made modifications to the integration flow model and there are unused
+							parameters then you must choose <img class="image" id="loio1db65d7205864e638627265ee7f32bf0__image_ymw_ymm_hw" src="loio9aaad6cdaf3b470780e6b5166306ce3e_LowRes.png"/> (<span class="ph uicontrol">Remove Unused Parameters</span> icon) to remove
+							unused parameters.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand" id="loio1db65d7205864e638627265ee7f32bf0__step_N1004B_N10048_N10011_N10001">
+				<span class="ph cmd">Externalize parameters by manual configuration. </span>
+				<div class="itemgroup info">
+					<div class="note remember"><span class="remembertitle">Remember</span> 
+						<p class="p">You can use this method to externalize fields that allow text input.</p>
+
+						<div class="p">Here's a list of attributes that you cannot externalize using manual
+							configuration method:<ul class="ul" id="loio1db65d7205864e638627265ee7f32bf0__ul_qtr_yjq_xv">
+								<li class="li">
+									<p class="p">Channel name</p>
+
+									<p class="p"><span class="ph emphasis emphasis">Example:</span> If you are using SuccessFactors
+										adapter, you cannot externalize the
+											<span class="ph uicontrol">Name</span> field in the
+											<span class="ph uicontrol">General</span> tab.</p>
+
+								</li>
+
+								<li class="li">
+									<p class="p">Flow step name</p>
+
+									<p class="p"><span class="ph emphasis emphasis">Example:</span> If you are using <span class="ph uicontrol">CSV
+											to XML Converter</span>, you cannot externalize the
+											<span class="ph uicontrol">Name</span> field in the
+											<span class="ph uicontrol">Properties</span> tab.</p>
+
+								</li>
+
+								<li class="li">
+									<p class="p">Branch name in <span class="ph uicontrol">Multicast</span></p>
+
+									<p class="p"><span class="ph emphasis emphasis">Example:</span> When you use
+											<span class="ph uicontrol">Multicast</span>, you can assign a name
+										to each outgoing branch from the
+											<span class="ph uicontrol">Multicast</span> step in the
+											<span class="ph uicontrol">Branch Name</span> field. You cannot
+										externalize this <span class="ph uicontrol">Branch Name</span>
+										field.</p>
+
+								</li>
+
+								<li class="li">
+									<p class="p">Table Elements</p>
+
+									<p class="p"><span class="ph emphasis emphasis">Example:</span> If you are configuring the
+											<span class="ph uicontrol">Sender</span> step, you cannot
+										externalize the <span class="ph uicontrol">Subject DN</span> or
+											<span class="ph uicontrol">Issuer DN</span> fields when you are
+										using certificate-based authentication. </p>
+
+								</li>
+
+							</ul>
+</div>
+
+					</div>
+
+					<div class="note note" id="loio1db65d7205864e638627265ee7f32bf0__note_N1005C_N10059_N10051_N1004E_N10011_N10001"><span class="notetitle">Note</span> You can use the step below if you
+						want to externalize certain parameters in such a way that you do provide any
+						values in the integration flow but want to manually configure the attributes
+						in the <span class="ph uicontrol">Externalized Parameters</span> view.</div>
+
+				</div>
+				<ol type="a" class="ol substeps" id="loio1db65d7205864e638627265ee7f32bf0__substeps_dbc_plr_rh">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Project Explorer</span> view, open the <span class="ph uicontrol">&lt;integration
+								flow&gt;.iflw</span> in the editor. </span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Model Configuration</span> editor, double-click the channel or
+							select the flow step field that you want to externalize.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Properties</span> view or the <span class="ph uicontrol">Adapter
+								Specific</span> tab for adapters, enter a value for the field
+							that you want to externalize in this format:
+							{{&lt;parameter_name&gt;}}.</span>
+						<div class="itemgroup info">
+							<div class="note note"><span class="notetitle">Note</span> 
+								<ul class="ul" id="loio1db65d7205864e638627265ee7f32bf0__ul_v1n_2nm_hw">
+									<li class="li">You can use alphanumeric characters, underscore and hyphen
+										for parameter name.</li>
+
+									<li class="li">You can externalize the value of the field so that the field
+										is now a variable. For example, you might need to change the
+										'Address' field of a connector at the receiver without
+										making any other changes to the integration flow. So, you
+										enter <kbd class="ph userinput">{{server}}</kbd> in the 'Address'
+										field. The steps below show how you can specify data for the
+										externalized parameters.<p class="p">Only part of the field can also
+											be changed. For example, in the given URL,
+												http://<kbd class="ph userinput">{{host}}</kbd>:<kbd class="ph userinput">{{port}}</kbd>/FlightBookingScenario,
+											host and port are the variable entities.</p>
+</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Save the changes in the channel editor.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Open the <span class="ph uicontrol">Externalized Parameters</span> view.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">From the toolbar of the view, choose <span class="ph uicontrol">Sync with Editor</span> (icon) to
+							synchronize the integration flow that is currently open with the
+								<span class="ph uicontrol">Externalized Parameters</span> view. </span>
+						<div class="itemgroup info">
+							<div class="note note" id="loio1db65d7205864e638627265ee7f32bf0__note_N100D4_N100D1_N100BB_N10066_N10051_N1004E_N10011_N10001"><span class="notetitle">Note</span>  In the
+									<span class="ph uicontrol">Externalized Parameters</span> view, you can see all
+								the parameters that have been externalized in the integration flow.
+								For example, if you have externalized the 'Address' field of a
+								connector as <kbd class="ph userinput">{{server}}</kbd> or you have selected
+								this field for extraction, you can see the parameter under the
+									<span class="ph uicontrol">Name</span> column.</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Open the <span class="ph uicontrol">Externalized Parameters</span> view and choose <img class="image" id="loio1db65d7205864e638627265ee7f32bf0__image_srf_lby_mj" src="loioe1fd11cfd91b4a1ab920cb33f8c07db8_HiRes.jpg" alt="ReloadParameters_FSN" title="ReloadParameters_FSN"/>(<span class="ph uicontrol">Reload</span> icon).</span>
+						<div class="itemgroup info">
+							<div class="note note" id="loio1db65d7205864e638627265ee7f32bf0__note_N10100_N100FD_N100E7_N10066_N10051_N1004E_N10011_N10001"><span class="notetitle">Note</span> In the
+									<span class="ph uicontrol">Externalized Parameters</span> view, you can view
+								all the parameters that have been externalized in the integration
+								flow. For example, if you have externalized the 'Address' field of a
+								connector as <kbd class="ph userinput">{{server}}</kbd> or you have selected
+								this field for extraction, you can see the parameter under the
+									<span class="ph uicontrol">Name</span>.</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">From the toolbar of the <span class="ph uicontrol">Externalized Parameters</span> view, choose
+								<img class="image" id="loio1db65d7205864e638627265ee7f32bf0__image_j45_mby_mj" src="loio715b5be83e8649af8cbb902a8bcea89c_HiRes.jpg" alt="SaveAsTest_FSN" title="SaveAsTest_FSN"/>(<span class="ph uicontrol">Save
+								Parameters</span> icon).</span>
+						<div class="itemgroup info">
+							<div class="note note" id="loio1db65d7205864e638627265ee7f32bf0__note_N1012C_N10129_N10113_N10066_N10051_N1004E_N10011_N10001"><span class="notetitle">Note</span> 
+								<ul class="ul" id="loio1db65d7205864e638627265ee7f32bf0__ul_vv3_kmk_kj">
+									<li class="li">The <span class="ph uicontrol">Save Parameters</span> icon in the
+											<span class="ph uicontrol">Externalized Parameters</span> view is
+										enabled only if the parameter values and the type are
+										consistent.</li>
+
+									<li class="li">If you do not save the view using the <span class="ph uicontrol">Save Parameters</span> icon, the
+											<span class="ph filepath">parameters.prop</span> file is not updated
+										with the new externalized parameters, which is indicated
+										with an error marker in the <span class="ph uicontrol">Integration Flow
+										</span> editor. If the editor has no unsaved changes,
+										the error marker remains even though the parameter content
+										is saved. In such a case, you can execute the consistency
+										check by using the <span class="ph uicontrol">Execute Checks</span>
+										context menu option in the <span class="ph uicontrol">Model
+											Configuration</span> editor.</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+</ol>
+
+	</div>
+
+<div class="related-links"> 
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

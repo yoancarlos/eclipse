@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Character Encodings: Background Information</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio083c971d418c44848d45b865eafe5b4c">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Character Encodings: Background Information</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc"/>
+
+		<p class="p">When configuring integration flows, you are usually dealing with the following kinds of data
+			representations: </p>
+
+		<div class="section"><div class="section_title">Binary Data</div><div type="Binary Data">
+			
+			<p class="p">There is always some loss of data when binary data is converted into strings. You should
+				therefore avoid converting pure binary data to strings.</p>
+
+		</div></div>
+
+		<div class="section"><div class="section_title">Text Data</div><div type="Text Data">
+			
+			<p class="p">Text data can be represented in binary or string form. In order to convert string
+				representation to binary representation and the other way round,, the desired (or
+				existing) binary encoding needs to be known. </p>
+
+			<p class="p">The integration framework uses the following scheme to determine the type of character
+				encoding: </p>
+
+			<ol class="ol" id="loio083c971d418c44848d45b865eafe5b4c__ol_rvs_kpn_tt">
+				<li class="li">
+					<p class="p">If the header <samp class="ph codeph">CamelCharsetName</samp> is set, the value of this header is used as
+						the character encoding.</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">If the exchange property <samp class="ph codeph">CamelCharsetName</samp> is set, the value of this
+						exchange property is used as the character encoding. </p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">If neither the header nor the exchange property are defined, <span class="ph emphasis emphasis">UTF-8</span> is
+						used as the character encoding. </p>
+
+				</li>
+
+			</ol>
+
+			<p class="p">There is no universal way to determine the correct encoding for the data. However, for some
+				communication protocols (such as mail or HTTP) this information may be transferred
+				via the protocol header. </p>
+
+			<p class="p">The integration developer needs to make sure that the character encoding that is defined by
+				the header or exchange property and the binary content encoding are in sync.
+				Otherwise, subtle, hard-to-solve issues can occur. These issues often aren't
+				revealed by testing, as they  usually only occur with non-ASCII characters.</p>
+
+		</div></div>
+
+		<div class="section"><div class="section_title">XML Data Conversions</div><div type="XML Data Conversions"><p class="p">There are three type of representation for XML
+				data: </p>
+<ul class="ul" id="loio083c971d418c44848d45b865eafe5b4c__ul_lqm_xpn_tt">
+				<li class="li">
+					<p class="p">Serialized binary representation of the XML document </p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">Serialized string representation of the XML document </p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">Parsed (binary) representation of the XML document </p>
+
+					<p class="p">This representation is used for operations such as XPath or XSLT
+						processing.</p>
+
+				</li>
+
+			</ul>
+<p class="p">XML documents usually contain information about the character encoding in
+				serialized form within the XML declaration (at the beginning of the XML document).
+				</p>
+<p class="p">However, note that this XML declaration is irrelevant if string
+				representation is used for the document. If the XML document is parsed from or
+				marshaled (serialized) to binary representation, the charset definition (and the
+				byte order marker (BOM)) are used to determine the content encoding. </p>
+<p class="p">If no
+				encoding is defined, <span class="ph emphasis emphasis">UTF-8</span> is assumed (unless a BOM is present
+				when it is UTF-16). </p>
+<div class="note caution"><span class="cautiontitle">Caution</span> 
+				<p class="p">The conversion between the parsed and the serialized form works fine without any
+					configuration and has a mechanism to determine and use the correct character set
+					for the conversion. However, issues can occur when converting directly between
+					the two serialized forms (binary and string). This conversion is not
+					XML-specific and uses the scheme for text data. This conversion will actually
+					damage the content of the document if the character encoding used in Camel does
+					not match the character encoding used in the XML document.</p>
+
+				<p class="p">The following figure illustrates this.</p>
+
+			</div>
+<img class="image" id="loio083c971d418c44848d45b865eafe5b4c__image_fgw_tqn_tt" src="loioc9f2cbacfb3e406aa090ecb715bdf1eb_LowRes.png"/><p class="p">If
+				a conversion between binary XML and parsed XML takes place, the encoding that is
+				defined in the XML declaration is used as the character encoding in the XML
+				document. If it is converted to a string first, the encoding defined in the
+					<samp class="ph codeph">CamelCharsetName</samp> header or property is used. If these values do
+				not match, conversion via a string might break the document. </p>
+<p class="p">Conversions
+				between binary and string (highlighted in the figure) generally require attention
+				from the integration developer because there is no generic way to determine the
+				character encoding of the binary text or XML content (and the integration developer
+				must be sure to set the correct value there). </p>
+<p class="p">XSLT sheets can change the
+				content encoding of the XML document if they convert XML to XML. In this case, the
+				output encoding will either be defined by the XSLT or it will be UTF-8, even if the
+				input document has a different encoding. If direct binary-to-string conversion takes
+				place before and after the XSLT, the integration developer has to make sure that the
+					<samp class="ph codeph">CamelCharsetName</samp> property or header is defined
+				appropriately.</p>
+</div></div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

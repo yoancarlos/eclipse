@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Working with ABAP Code Templates">
+   <intro>
+      <description>
+         Code templates reduce the time spent on routine coding. ABAP Development Tools provide a number of predefined code templates for ABAP. To use these templates, first write the beginning characters of the template and then press <b>ctrl + space</b> (code completion). Alternatively, you can use the <b>Templates</b> view to insert the template code via <b>Drag &amp; Drop</b>.
+<br/>
+<br/>
+You can add your own templates also – for example, if you need a skeleton for an executable ABAP program that already includes a local class and a main method.   
+<br/>
+<br/>
+This cheat sheet will assist you when creating your own ABAP templates.
+      </description>
+   </intro>
+   <item
+         skip="true"
+         title="Create a New ABAP Program">
+      <description>
+         The subsequent steps require that an empty <b>executable ABAP program </b> in your project exists and the corresponding source editor is open. 
+<br/>
+<br/>
+If this is not the case, choose “Click to perform” to launch the appropriate creation wizard.
+      </description>
+      <command
+            required="false"
+            serialization="org.eclipse.ui.newWizard(newWizardId=com.sap.adt.programs.ui.newWizards.NewProgramWizard)"/>
+   </item>
+   <item
+         skip="true"
+         title="Search for ABAP Templates Available">
+      <description>
+         To obtain quick access to all templates available for the currently active ABAP source code editor, open the editor-specific <b>Templates</b> view.  
+<br/>
+<br/>
+To add the Templates view to the current perspective, choose <b>Window &gt; Show View &gt; Other... &gt; General &gt; Templates</b> or choose “Click to perform”.
+<br/>
+<br/>
+NOTE
+<br/>
+Alternatively, you can search for templates available by means of the preferences page (Window &gt; Preferences &gt; ABAP Development &gt; Templates).
+      </description>
+      <command
+            required="false"
+            serialization="org.eclipse.ui.views.showView(org.eclipse.ui.views.showView.viewId=org.eclipse.ui.texteditor.TemplatesView)"/>
+   </item>
+   <item
+         title="Write Your Own Code Template">
+      <description>
+         In the following steps, you will define a skeleton for an executable ABAP program that already includes a local class and a predefined main method.
+<br/>
+<br/> 
+Proceed as follows:
+<br/>
+<br/>
+1. Copy the following code lines into clipboard:
+<br/>
+<br/>
+class ${lcl_demo} definition.
+<br/>
+  public section.
+  <br/>
+    class-methods ${main}.
+    <br/>
+endclass.
+<br/>
+<br/>
+class ${lcl_demo} implementation.
+<br/>
+  method ${main}.
+  <br/>
+    ${cursor}data text type string value &apos;Hello&apos;.
+    <br/>
+    message text type &apos;I&apos;.
+    <br/>
+  endmethod.
+  <br/>
+endclass.
+<br/>
+<br/>
+start-of-selection.
+<br/>
+  ${lcl_demo}=&gt;${main}( ).
+ <br/>
+<br/>
+<br/>
+2. In the toolbar of the <b>Templates</b> view, choose the <b>Create a New Template</b> icon. <br/>  
+<br/>
+3. Specify the shortcut name, the description, and the pattern for the template as follows: 
+<br/>
+<b>Name:</b>  progSkeleton
+<br/>
+<b>Description:</b> Program skeleton with local class
+<br/>
+<b>Pattern: </b>
+<br/>
+a). Paste the code lines from clipboard (that you have copied in step 1) into the <b>Pattern</b> area. 
+<br/>
+b). Improve the format for your code template manually.
+<br/>
+c). To save the template, choose <b>OK</b>.
+<br/>
+      </description>
+   </item>
+   <item
+         title="Use the New Template">
+      <description>
+      Now you can use the new custom template in your ABAP program - like any other template. 
+<br/>
+<br/>
+To insert the template code, use one of the two options: 
+<br/>
+<br/>
+a. In the <b>Templates</b> view, select the template and use <b>Drag &amp; Drop</b>.
+<br/>
+ or 
+ <br/>
+b. In the ABAP source editor, write the beginning characters of the template and then press <b>ctrl + space</b>.
+<br/>
+<br/>
+      </description>
+   </item>
+   <item
+         skip="true"
+         title="Check and Run Your Program - Optional">
+      <description>
+         To run the resulting ABAP program, perform the following steps: 
+<br/>
+<br/>
+1. Save - To save the content of the active program editor, choose the <b>Save</b> icon in the toolbar. 
+<br/>
+<br/>
+2. Check Syntax - To check the syntax of the ABAP program, choose <b>Check ABAP Development Object</b> icon in the toolbar. 
+<br/>
+<br/>
+3. Activate - To activate the ABAP program, choose <b>Activate ABAP Development Object</b> icon in the toolbar. 
+<br/>
+<br/>
+4. Run – To run the ABAP program, press the key <b>F8</b>.   
+<br/>
+      </description>
+   </item>
+</cheatsheet>

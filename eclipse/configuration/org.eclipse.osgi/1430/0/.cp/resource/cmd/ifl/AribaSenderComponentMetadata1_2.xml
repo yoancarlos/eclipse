@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:Ariba/version::1.2.0"
+	ComponentName="sap:Ariba" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" gen:RuntimeComponentBaseUri="sap-ariba" xmlns:gen="http://www.w3.org/2001/XMLSchema-instance"
+	IsRequestResponse="true" IsDefaultGenerator="true" MetadataVersion="2.0">
+	<Variant VariantName="Ariba Component Sender" VariantId="ctype::AdapterVariant/cname::Ariba/tp::HTTPS/mp::cXML/direction::Sender/version::1.2.0" gen:RuntimeComponentBaseUri="sap-ariba" gen:FirstUriPart="consumer" supportsPolling="true" useDefaultScheduler="true" MetadataVersion="2.0" AttachmentBehavior="Modify">
+		<InputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</OutputContent>
+		<Tab id="Processing">
+			<GuiLabels guid="da7683f0-080e-4736-be98-281085435d4c">
+				<Label language="EN">Processing</Label>
+				<Label language="DE">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id="ProcessingDetails">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Processing Details</Name>
+				<GuiLabels guid="ae2dc3c4-38cd-440c-ab2b-b9916b96885c">
+					<Label language="EN">Processing Details</Label>
+					<Label language="DE">Processing Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>aribaNetworkID</ReferenceName>
+					<description>Enter the ID, which is associated with the Ariba Network. Default Ariba Network ID is AN010000001.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>cXMLVersion</ReferenceName>
+					<Restriction>Constraint.isValidRegex(^([1-9]\d*)(\.)?([2-9]\d*|[1-9][0-9]\d*)(\.)?([0][1-9][8-9]|[0][2-9][0-9]|[1-9][0-9][0-9])$)</Restriction>
+					<ErrorMessage>Enter a valid version. E.g: 1.2.018 or higher.</ErrorMessage>
+					<description>The cXML version to be used. 1.2.018 and above is supported.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>userAgent</ReferenceName>
+					<description>Enter the user agent details with software company name and product name.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>language</ReferenceName>
+					<description>Language that is used for constructing the cXML conversation. Only English (United States) is supported.</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<Tab id="Connectivity">
+			<GuiLabels guid="da7683f0-080e-4736-be98-281085435d4d">
+				<Label language="EN">Connection</Label>
+				<Label language="DE">Connection</Label>
+			</GuiLabels>
+			<AttributeGroup id="ConnectionDetails">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Connection Details</Name>
+				<GuiLabels guid="75099e6b-48b3-4488-8cfc-4c2510e5ac34">
+					<Label language="EN">Connection Details</Label>
+					<Label language="DE">Connection Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>getProfileURL</ReferenceName>
+					<Restriction>Constraint.isValidRegex((^(https://)[^\s]+)|(^(\$\{((header\.)|(property\.))).+}$))</Restriction>
+					<ErrorMessage>Enter a valid address or header expression or property expression. E.g. https://example or ${header.url} or ${property.url}</ErrorMessage>
+					<description>Ariba Network endpoint address on which request is polled. Please use the following URLs: Client Certificate authentication - https://certservice.ariba.com/service/transaction/cxml.asp. Shared Secret authentication - https://service.ariba.com/service/transaction/cxml.asp.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>deploymentMode</ReferenceName>
+					<description>Requests sent to Ariba Network will be handeled as test or a live request</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>accountType</ReferenceName>
+					<description>The Ariba network account type to which the requests has to be sent</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>inboundRequestType</ReferenceName>
+					<EditCondition>
+						<AttributeName>accountType</AttributeName>
+						<AttributeValue>BUYER</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>outboundRequestType</ReferenceName>
+					<EditCondition>
+						<AttributeName>accountType</AttributeName>
+						<AttributeValue>SUPPLIER</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>maximumMessages</ReferenceName>
+					<Restriction>Constraint.isValidRegex(^([1-9]|[1-9][0-9]|[1][0-9][0-9]|20[0-0])$)</Restriction>
+					<ErrorMessage>Enter a valid number in the range of 1 to 200.</ErrorMessage>
+					<description>The maximum messages to be polled in a single request. Minimum of 1 and a maximum of 200 is supported. Default value is 10.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>authenticationDomain</ReferenceName>
+					<description>The credentials used by the Ariba Network for authentication. E.g: AN010000001 for Network ID and xyz@abc.com for Network User ID.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>authentication</ReferenceName>
+					<description>The authentication mode configured on the Ariba Network account. Shared Key: If you have set the shared key in your Ariba account.
+					Client Certificate: If you have configured your certificate from a trusted certificate authority in to the Ariba account.
+					</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>credentialName</ReferenceName>
+					<description>Enter a name. This name is treated as an alias to the secure store where the user credentials are deployed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>privateKeyAlias</ReferenceName>
+					<EditCondition>
+						<AttributeName>authentication</AttributeName>
+						<AttributeValue>CLIENT_CERTIFICATE</AttributeValue>
+					</EditCondition>
+					<description>Enter an alias, which is used to identify the Key store credentials deployed on the HCI account.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>scheduleKey</ReferenceName>
+					<EditCondition>
+					  <AttributeName>scheduleKey</AttributeName>
+					  <AttributeValue>flagToPreventRendering</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+	</Variant>	
+	<AttributeMetadata>
+		<Name>aribaNetworkID</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>AN01000000001</Default>
+		<Length></Length>
+		<GuiLabels guid="fd7b3f0b-07da-4053-b877-0ef3bd58ab6c">
+			<Label language="EN">Ariba Network ID</Label>
+			<Label language="DE">Ariba Network ID</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>cXMLVersion</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>1.2.025</Default>
+		<Length></Length>
+		<GuiLabels guid="6d2c6220-bd29-4789-be31-db19fa2a03e7">
+			<Label language="EN">cXML Version</Label>
+			<Label language="DE">cXML Version</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>userAgent</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>Ariba SN</Default>
+		<Length></Length>
+		<GuiLabels guid="2b9daee6-5873-4044-bd22-14c126043462">
+			<Label language="EN">User Agent</Label>
+			<Label language="DE">User Agent</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>language</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>EN_US</Default>
+		<Length></Length>
+		<GuiLabels guid="23261524-431a-4d7d-8e30-2f12ea59a8fb">
+			<Label language="EN">Language</Label>
+			<Label language="DE">Language</Label>
+		</GuiLabels>
+		<FixedValues>
+		<FixedValue>
+			<Value>EN_US</Value>
+			<GuiLabels guid="81bae587-da54-4f89-a56f-0f88067d8201">
+				<Label language="EN">English (United States)</Label>
+				<Label language="DE">English (United States)</Label>
+			</GuiLabels>
+		</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>getProfileURL</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="41b86838-7250-4c5b-81e8-10b8a970554b">
+			<Label language="EN">Ariba Network URL</Label>
+			<Label language="DE">Ariba Network URL</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>inboundRequestType</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>InvoiceDetailRequest</Default>
+		<Length></Length>
+		<GuiLabels guid="ce48725f-5d4e-4f6e-879f-4b65834e8304">
+			<Label language="EN">Request Type</Label>
+			<Label language="DE">Request Type</Label>
+		</GuiLabels>
+		<FixedValues>
+		<FixedValue>
+			<Value>InvoiceDetailRequest</Value>
+			<GuiLabels guid="b8a49b42-6371-46f0-93fa-3b2da6e7efff">
+				<Label language="EN">Invoice Detail</Label>
+				<Label language="DE">Invoice Detail</Label>
+			</GuiLabels>
+		</FixedValue>
+		<FixedValue>
+			<Value>ShipmentNoticeRequest</Value>
+			<GuiLabels guid="7ad6d39f-a662-49e7-bbea-08df8fcc6e1e">
+				<Label language="EN">Shipment Notice</Label>
+				<Label language="DE">Shipment Notice</Label>
+			</GuiLabels>
+		</FixedValue>
+		<FixedValue>
+			<Value>ConfirmationRequest</Value>
+			<GuiLabels guid="bc4ea0fe-c612-4c62-9991-f20ac652bc0e">
+				<Label language="EN">Order Confirmation</Label>
+				<Label language="DE">Order Confirmation</Label>
+			</GuiLabels>
+		</FixedValue>
+		<FixedValue>
+			<Value>QuoteMessage</Value>
+			<GuiLabels guid="3a9fa5d7-bfb0-44b1-aa7a-97ef7b280b60">
+				<Label language="EN">Quote Message</Label>
+				<Label language="DE">Quote Message</Label>
+			</GuiLabels>
+		</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>deploymentMode</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>PRODUCTION</Default>
+		<Length></Length>
+		<GuiLabels guid="74fd2a73-8614-4784-b2e3-eee669fad8c3">
+			<Label language="EN">Connection Mode</Label>
+			<Label language="DE">Connection Mode</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>TEST</Value>
+				<GuiLabels guid="b6312de0-eff8-49a3-9a0f-85cd7a026b02">
+					<Label language="EN">Test</Label>
+					<Label language="DE">Test</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>PRODUCTION</Value>
+				<GuiLabels guid="136fc364-5d20-468a-8a42-80227e738fbb">
+					<Label language="EN">Production</Label>
+					<Label language="DE">Production</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>	
+	<AttributeMetadata>
+		<Name>authenticationDomain</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>NETWORK_USER_ID</Default>
+		<Length></Length>
+		<GuiLabels guid="13c8f6d4-3948-4ae8-818f-fb2122392cb0">
+			<Label language="EN">Authentication Domain</Label>
+			<Label language="DE">Authentication Domain</Label>
+		</GuiLabels>
+		<!-- <FixedValue> <Value>DUNS</Value> <GuiLabels guid="a7fc3564-ff97-4953-807f-d44ee261fbbd"> 
+			<Label language="EN">DUNS</Label> <Label language="DE">DUNS</Label> </GuiLabels> 
+			</FixedValue> -->
+		<FixedValues>
+			<FixedValue>
+				<Value>NETWORK_USER_ID</Value>
+				<GuiLabels guid="478de1a5-e70a-4e7d-971a-0d4054d7abde">
+					<Label language="EN">Network User ID</Label>
+					<Label language="DE">Network User ID</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>NETWORK_ID</Value>
+				<GuiLabels guid="c44e1e83-d715-4a8d-a73c-ef631850f994">
+					<Label language="EN">Network ID</Label>
+					<Label language="DE">Network ID</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>accountType</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>BUYER</Default>
+		<Length></Length>
+		<GuiLabels guid="b74ef68d-2501-4404-82b1-8f34a4691560">
+			<Label language="EN">Account Type</Label>
+			<Label language="DE">Account Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>BUYER</Value>
+				<GuiLabels guid="4fdb3041-4ad8-41c3-ba39-c6de57c4668e">
+					<Label language="EN">Buyer</Label>
+					<Label language="DE">Buyer</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>SUPPLIER</Value>
+				<GuiLabels guid="5d66b878-44cd-4327-8b71-fd00150f9e1b">
+					<Label language="EN">Supplier</Label>
+					<Label language="DE">Supplier</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>privateKeyAlias</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="758c71ec-9266-4112-b118-66995e28af0e">
+			<Label language="EN">Private Key Alias</Label>
+			<Label language="DE">Private Key Alias</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>maximumMessages</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>10</Default>
+		<Length></Length>
+		<GuiLabels guid="1b1472a0-94fa-4ce6-b97f-384e68794003">
+			<Label language="EN">Maximum Messages</Label>
+			<Label language="DE">Maximum Messages</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>credentialName</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="9507af56-9a48-4569-a827-1b2a50dd9d70">
+			<Label language="EN">Credential Name</Label>
+			<Label language="DE">Credential Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>outboundRequestType</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>OrderRequest</Default>
+		<Length></Length>
+		<GuiLabels guid="5a5548ec-eea5-4758-a522-64b1d1214ac6">
+			<Label language="EN">Request Type</Label>
+			<Label language="DE">Request Type</Label>
+		</GuiLabels>
+		<FixedValues>
+		<FixedValue>
+			<Value>PaymentRemittanceRequest</Value>
+			<GuiLabels guid="0ff01e47-83b1-4e45-8cdf-51a16889c904">
+				<Label language="EN">Payment Remittance</Label>
+				<Label language="DE">Payment Remittance</Label>
+			</GuiLabels>
+		</FixedValue>
+		<FixedValue>
+			<Value>OrderRequest</Value>
+			<GuiLabels guid="0dea98d1-f769-4f04-9773-fe25381be6c8">
+				<Label language="EN">Purchase Order</Label>
+				<Label language="DE">Purchase Order</Label>
+			</GuiLabels>
+		</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>authentication</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>SHARED_KEY</Default>
+		<Length></Length>
+		<GuiLabels guid="bca415e4-273b-49be-b77a-3b32da21f9c1">
+			<Label language="EN">Authentication</Label>
+			<Label language="DE">Authentication</Label>
+		</GuiLabels>
+		<FixedValues>
+		<FixedValue>
+			<Value>SHARED_KEY</Value>
+			<GuiLabels guid="23d71db0-388a-4080-bd75-078abfada20d">
+				<Label language="EN">Shared Key</Label>
+				<Label language="DE">Shared Key</Label>
+			</GuiLabels>
+		</FixedValue>
+		<FixedValue>
+			<Value>CLIENT_CERTIFICATE</Value>
+			<GuiLabels guid="14a43561-610c-4baa-a794-aeb03d45c594">
+				<Label language="EN">Client Certificate</Label>
+				<Label language="DE">Client Certificate</Label>
+			</GuiLabels>
+		</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+	  <Name>scheduleKey</Name>
+	  <Usage>required</Usage>
+	  <DataType>custom:schedule</DataType>
+      <Default>0 0/1 0-24 ? * *</Default>
+	  <AttributeBehavior>Scheduler_ScheduleOnDay,Scheduler_ScheduleToRecur</AttributeBehavior>
+      <isparameterized>true</isparameterized>
+	  <GuiLabels>
+	    <Label language="EN">Schedule</Label>
+	  </GuiLabels>
+	</AttributeMetadata>
+</ComponentMetadata>

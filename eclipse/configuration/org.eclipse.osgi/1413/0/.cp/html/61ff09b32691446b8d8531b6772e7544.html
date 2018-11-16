@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining Multicast of Messages</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio61ff09b32691446b8d8531b6772e7544">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining Multicast of Messages</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<ul class="ul" id="loio61ff09b32691446b8d8531b6772e7544__ul_w5t_lt3_lp">
+				<li class="li">You have created an integration project and integration flow. </li>
+
+				<li class="li">You have opened the <span class="ph uicontrol">Integration Designer</span>
+					perspective.</li>
+
+			</ul>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">Multicast enables you to send the same message to more than one receiver. This allows you to
+				perform multiple operations on the same message in a single integration flow.
+				Without multicast, you require separate integration processes to perform different
+				operations on the same incoming message. </p>
+
+			<div class="p">There are two types of multicast that you can choose:<ol class="ol" id="loio61ff09b32691446b8d8531b6772e7544__ol_urp_2t3_lp">
+					<li class="li">Parallel multicast</li>
+
+					<li class="li">Sequential multicast</li>
+
+				</ol>
+</div>
+
+			<p class="p">Parallel multicast initiates message transfer to all the receiver nodes in parallel. </p>
+
+			<p class="p">Sequential multicast provides an option to define the sequence in which the message
+				transfer is initiated to the receiver nodes. </p>
+
+			<p class="p">If you want to aggregate the message that is sent to more than one receiver node, you
+				can use the join and gather elements. </p>
+
+			<div class="note restriction"><span class="restrictiontitle">Restriction</span> 
+				<ol class="ol" id="loio61ff09b32691446b8d8531b6772e7544__ol_an4_4dk_tq">
+					<li class="li">You cannot use <span class="ph uicontrol">Process in Batches</span> option in
+						SuccessFactors adapter with SOAP message protocol within a multicast branch.
+						For more information, see <a class="xref" href="aad94bc587904765b64f1bbbf80aac19.html">Configuring SuccessFactors Adapter with SOAP Message Protocol</a>.</li>
+
+					<li class="li">You cannot use <span class="ph uicontrol">Splitter</span> within a <span class="ph uicontrol">Multicast</span>
+						branch.</li>
+
+					<li class="li">If you are using SFTP receiver with parallel multicast, the message might be corrupted in
+						one or more of the <span class="ph uicontrol">Multicast</span> branches. The message is
+						corrupted in the branches where the SFTP receiver does not write the
+						complete data in its respective SFTP files. <div class="p">You can overcome this
+							limitation in two ways:<ol class="ol" type="a" id="loio61ff09b32691446b8d8531b6772e7544__ol_xgk_zdk_tq">
+								<li class="li">Add a content modifier before the SFTP receiver. In the content
+									modifier, specify the <span class="ph uicontrol">Body</span> as
+										<kbd class="ph userinput">${bodyAs(byte[])}</kbd>.</li>
+
+								<li class="li">You can switch from parallel multicast to sequential
+									multicast.</li>
+
+							</ol>
+</div>
+</li>
+
+				</ol>
+
+			</div>
+
+			<div class="note remember"><span class="remembertitle">Remember</span> 
+                <p class="p">You cannot use <span class="ph uicontrol">Exception Subprocess</span> with
+                        <span class="ph uicontrol">Multicast</span> as <span class="ph uicontrol">Exception
+                        Subprocess</span> is not executed in case of an exception within the
+                        <span class="ph uicontrol">Multicast</span> branches.</p>
+
+                <p class="p"> If you want to enable the execution of <span class="ph uicontrol">Exception
+                        Subprocess</span> when an exception occurs in one of the
+                        <span class="ph uicontrol">Multicast</span> branches, ensure that you use version
+                        <span class="ph emphasis emphasis">1.1</span> of both <span class="ph uicontrol">Multicast</span> and
+                        <span class="ph uicontrol">Integration Process</span>. </p>
+
+            </div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><p class="li stepsection">You use this procedure to add a multicast and join elements to your
+				integration flow. </p><ol class="ol steps"><li class="li step">
+				<span class="ph cmd">In the <span class="ph uicontrol">Model Configuration</span> editor, access the palette.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">If you want to add a multicast or join element, perform the following
+					substeps.</span>
+				<ol type="a" class="ol substeps" id="loio61ff09b32691446b8d8531b6772e7544__substeps_l43_453_lp">
+					<li class="li substep">
+						<span class="ph cmd">Choose <span class="ph uicontrol">Message Routing</span>.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">If you want to add parallel multicast, drag the <img class="image" id="loio61ff09b32691446b8d8531b6772e7544__image_agw_s53_lp" src="loio8c337c1d894a4570af92cafafda59ead_LowRes.png"/> element from palette to the integration flow.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">If you want to add sequential multicast, drag the <img class="image" id="loio61ff09b32691446b8d8531b6772e7544__image_r12_kv3_lp" src="loiodf174d8929bb413d8d49a1d9ee8beb71_LowRes.png"/> element from the palette to the integration flow.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">If you want to combine the messages, see <a class="xref" href="e7540fa25e884337891d628b7c38e6eb.html">Defining Join and
+						Gather</a>.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Add the necessary elements based on your scenario to complete the integration
+					flow.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

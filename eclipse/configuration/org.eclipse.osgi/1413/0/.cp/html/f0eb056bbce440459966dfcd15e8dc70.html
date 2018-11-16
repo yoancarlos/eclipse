@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Assign Sender and Receiver Components</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiof0eb056bbce440459966dfcd15e8dc70">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Assign Sender and Receiver Components</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p"/>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loiof0eb056bbce440459966dfcd15e8dc70__step_N10020_N1001D_N10011_N10001">
+				<span class="ph cmd">Open the integration flow in the editor. </span>
+			</li>
+<li class="li step stepexpand" id="loiof0eb056bbce440459966dfcd15e8dc70__step_N1002D_N1001D_N10011_N10001">
+				<span class="ph cmd">From the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Participants</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> (<img class="image" id="loiof0eb056bbce440459966dfcd15e8dc70__image_hss_5mt_cv" src="loiob709e60b992b47deb2215ce77bda63cb_LowRes.png"/>) and then <span class="ph uicontrol">Sender</span> or
+						<span class="ph uicontrol">Receiver</span>. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Only relevant when you assign a <span class="ph uicontrol">Sender</span>: For certain adapter types,
+					you need to specify the inbound authorization.</span>
+				<div class="itemgroup info">
+					<p class="p">To do this, select the configuration interface of the associated sender
+						adapter. </p>
+
+					<p class="p">In case the <span class="ph uicontrol">Authentication Type</span> option is still
+						displayed for the sender participant, you might have created this
+						integration flow shape some time back or you have selected a certain product
+						profile where inbound authorization is still be performed per sender
+						participant.</p>
+
+					<p class="p">In that case, either proceed with the following step or create a new sender
+						participant shape (and, in that case, continue configuring the authorization
+						option in the associated sender channel).</p>
+
+					<p class="p">More information: <a class="xref" href="1f9e87975f03433b9855bf9e760b1060.html">Adapter and Integration Flow Step Versions</a></p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">When you specify the <span class="ph uicontrol">Authentication Type</span> as part of the
+						<span class="ph uicontrol">Sender</span>, consider the following. </span>
+				<div class="itemgroup info"/>
+				<div class="itemgroup info">
+            <p class="p">You have the following options to authenticate the sender.</p>
+
+            <ul class="ul" id="loiof0eb056bbce440459966dfcd15e8dc70__d3788e18">
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">Role-based Authentication</span></p>
+
+                    <p class="p">Select this options if you like to configure one of the following use
+                        cases:</p>
+
+                    <ul class="ul" id="loiof0eb056bbce440459966dfcd15e8dc70__d3788e29">
+                        <li class="li">
+                            <p class="p">Basic authentication</p>
+
+                        </li>
+
+                        <li class="li">
+                            <p class="p">Client certificate authentication with certificate-to-user
+                                mapping</p>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">Client Certificate Authentication</span></p>
+
+                    <p class="p">Select this option if you like to configure the use case that the permissions
+                        of the sender are to be checked on the tenant by evaluating the
+                        distinguished name (DN) of the client certificate (sent by the sender).</p>
+
+                    <p class="p">Choose <span class="ph uicontrol">Add…</span> to browse and add an authorized client
+                        certificate or enter the <span class="ph uicontrol">Subject DN</span> and
+                            <span class="ph uicontrol">Issuer DN</span> manually.</p>
+
+                </li>
+
+            </ul>
+
+        </div>
+				<div class="itemgroup info">
+					<p class="p">Which option you choose, depends on the combination of authentication and
+						authorization option you like to configure for inbound calls.</p>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

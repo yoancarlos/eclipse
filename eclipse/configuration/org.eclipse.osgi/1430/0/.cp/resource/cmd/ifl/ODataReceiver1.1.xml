@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:HCIOData/version::1.1.1" MetadataVersion="2.0"  ComponentDisplayName="OData" ComponentName="sap:HCIOData" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true">
+	<Variant VariantId="ctype::AdapterVariant/cname::HCIOData/tp::HTTP/mp::OData V2/direction::Receiver/version::1.1.1" VariantName="OData v2 Receiver" MetadataVersion="2.0">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality = "" isStreaming="">
+		 	<Content>
+				<ContentType>Xml</ContentType>
+				<Schema/>
+			</Content>
+		 	<Content>
+				<ContentType>None</ContentType>
+				<Schema/>
+			</Content>
+		</InputContent>		
+		<OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality = "" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema/>
+			</Content>
+		 	<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+		</OutputContent>		
+				<Tab id="tabGeneral">
+					<GuiLabels>
+							<Label language="EN">Adapter Specific</Label>
+					</GuiLabels>
+					<AttributeGroup id = "channelDetails">
+						<GuiLabels>
+							<Label language="EN">Connection Details</Label>
+						</GuiLabels>
+						<AttributeReference>
+							<ReferenceName>address</ReferenceName>
+							<description>Enter service root URL of the OData service provider</description>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>proxyType</ReferenceName>
+							<description>Proxy type to be used to connect to the service</description>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>proxyHost</ReferenceName>
+							<EditCondition>
+								<AttributeName>proxyType</AttributeName>
+								<AttributeValue>manual</AttributeValue>
+							</EditCondition>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>proxyPort</ReferenceName>
+							<EditCondition>
+								<AttributeName>proxyType</AttributeName>
+								<AttributeValue>manual</AttributeValue>
+							</EditCondition>
+						</AttributeReference>	
+						<AttributeReference>
+							<ReferenceName>authenticationMethod</ReferenceName>
+							<description>Select the type of authentication from dropdown list</description>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>alias</ReferenceName>
+							<EditCondition>
+								<AttributeName>authenticationMethod</AttributeName>
+								<AttributeValue>Basic</AttributeValue>
+							</EditCondition>
+							<description>Enter the Credential Name to connect to the system as deployed in the tenant using Operations Wizard</description>
+						</AttributeReference>
+						<AttributeReference>
+	                        <ReferenceName>odataCertAuthPrivateKeyAlias</ReferenceName>
+	                        <description>Enter an alias to identify the private key to communicate with a receiver.</description>
+	                        <EditCondition>
+	                            <AttributeName>authenticationMethod</AttributeName>
+	                            <AttributeValue>Client Certificate</AttributeValue>
+	                        </EditCondition>
+                    	</AttributeReference>
+					</AttributeGroup>
+					<AttributeGroup id = "processingDetails">
+						<GuiLabels>
+							<Label language="EN">Processing Details</Label>
+						</GuiLabels>
+						<AttributeReference>
+							<ReferenceName>action</ReferenceName>
+							<description>Choose Model Operation to specify the Entity, Operation Type, Field List and Generate the XSD</description>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>customQueryOptions</ReferenceName>
+							<description>Enter custom query options in the format &lt;option&gt;=&lt;value&gt; separated by '&amp;'; for example, custom query option for connecting to SAP ERP OData services is sap-client=100</description>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>contentType</ReferenceName>
+							<description>Format in which request is sent to the server</description>
+						</AttributeReference>
+						<AttributeReference>
+								<ReferenceName>characterEncoding</ReferenceName>
+								<description>Character encoding parameter to be used for encoding content</description>
+							</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>odatapagesize</ReferenceName>
+							<description>Specify page size to retrieve required the number of records per page fetch</description>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>receiveTimeOut</ReferenceName>
+							<description>Maximum time system waits before operation is terminated</description>
+						</AttributeReference>
+					</AttributeGroup>
+				</Tab>
+	</Variant>
+
+	<AttributeMetadata>
+		<Name>action</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<MultiLine>true</MultiLine>
+		<isparameterized>false</isparameterized>
+		<HelpService>
+			<HelpServiceName>OdataqueryEditorF4Help</HelpServiceName>
+			<HelpServiceQueryAttributes>
+				<HelpServiceQueryAttribute>
+					<Name>ServiceName</Name>
+					<Value>Model Operation...</Value>
+				</HelpServiceQueryAttribute>
+			</HelpServiceQueryAttributes>
+		</HelpService>
+		<GuiLabels>
+			<Label language="EN">Operation Details</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+		<Name>odatapagesize</Name>
+		<DataType>xsd:integer</DataType>
+		<Default>200</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Page Size</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+
+	<AttributeMetadata>
+		<Name>enableBasicAuthentication</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Basic Authentication</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>alias</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Credential Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>address</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Address</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>authenticationMethod</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Authentication</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>None</Value>
+				<GuiLabels>
+					<Label language="EN">None</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Basic</Value>
+				<GuiLabels>
+					<Label language="EN">Basic</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+			<Value>Client Certificate</Value>
+			<GuiLabels>
+				<Label language="EN">Client Certificate</Label>
+			</GuiLabels>
+		</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>contentType</Name>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Content Type</Label>
+		</GuiLabels>
+		<FixedValues>
+		<FixedValue>
+			<Value>application/atom+xml</Value>
+			<GuiLabels>
+				<Label language="EN">Atom</Label>
+			</GuiLabels>
+		</FixedValue>
+		<FixedValue>
+			<Value>application/json</Value>
+			<GuiLabels>
+				<Label language="EN">JSON</Label>
+			</GuiLabels>
+		</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>characterEncoding</Name>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Content Type Encoding</Label>
+		</GuiLabels>
+		<FixedValues>
+		<FixedValue>
+			 <Value>none</Value>
+			<GuiLabels>
+				<Label language="EN">None</Label>
+			</GuiLabels>
+		</FixedValue>
+		<FixedValue>
+			<Value>utf8</Value>
+			<GuiLabels>
+				<Label language="EN">UTF-8</Label>
+			</GuiLabels>
+		</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+      <Name>proxyType</Name>
+      <Usage>true</Usage>
+      <DataType>xsd:string</DataType>
+      <Default>default</Default>
+      <Length />
+      <isparameterized>true</isparameterized>
+      <GuiLabels>
+          <Label language="EN">Proxy Type</Label>
+      </GuiLabels>
+      <FixedValues>
+          <FixedValue>
+              <Value>default</Value>
+              <GuiLabels>
+                  <Label language="EN">Internet</Label>
+              </GuiLabels>
+          </FixedValue>
+          
+          <FixedValue>
+	            <Value>sapcc</Value>
+	            <GuiLabels>
+	                <Label language="EN">On-Premise</Label>
+	            </GuiLabels>
+	        </FixedValue>
+          <NotCondition>
+                         <EditCondition>
+                         <AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+                         <AttributeValue>true</AttributeValue>
+                         </EditCondition>
+                  </NotCondition>
+      </FixedValues>
+      <FixedValues>
+          <FixedValue>
+              <Value>default</Value>
+              <GuiLabels>
+                  <Label language="EN">Internet</Label>
+              </GuiLabels>
+          </FixedValue>
+          <FixedValue>
+                 <Value>manual</Value>
+                 <GuiLabels>
+                     <Label language="EN">Manual</Label>
+                 </GuiLabels>
+             </FixedValue>
+                  <EditCondition>
+                         <AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+                         <AttributeValue>true</AttributeValue>
+                  </EditCondition>
+      </FixedValues>
+  </AttributeMetadata>
+	<AttributeMetadata>
+		<Name>customQueryOptions</Name>
+		<Usage>optional</Usage>
+		<DataType>xsd:string</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Custom Query Options</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<!-- proxy changes -->
+	<AttributeMetadata>
+		<Name>proxyHost</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Proxy Host</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>proxyPort</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:integer</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Proxy Port</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>odataCertAuthPrivateKeyAlias</Name>
+		<Usage>optional</Usage>
+		<DataType>xsd:string</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Private Key Alias</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>receiveTimeOut</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>1</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Timeout (in min)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<!--  -->
+</ComponentMetadata>

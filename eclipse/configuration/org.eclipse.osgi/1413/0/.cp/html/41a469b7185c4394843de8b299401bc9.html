@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Modifying an Integration Flow Model</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio41a469b7185c4394843de8b299401bc9">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Modifying an Integration Flow Model</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loio41a469b7185c4394843de8b299401bc9__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You perform this task if you want to modify the existing integration flow model. For example,
+				if the templates provided by SAP do not exactly match your requirement, you can
+				modify the integration flow created from the templates while adhering to SAP's
+				modeling constraints.</p>
+
+			<p class="p">To add integration flow elements, you can drag the notations for systems,
+				connections, mappings, routers, and so on, from the palette and drop it at the
+				required location of the integration flow model in the graphical editor.
+				Alternatively, you can add elements, such as mapping and split, to the integration
+				flow model using the context menu options available on the connections of the
+				model.</p>
+
+			<div class="note note"><span class="notetitle">Note</span> The integration flow should match the SAP supported scenarios to avoid
+				deployment failure.</div>
+
+			<div class="note sap-example example"><span class="exampletitle">Example</span> Consider an example which requires you to model an integration flow with
+				multiple pools. The scenario with multiple pool may involve any of the following:<ul class="ul" id="loio41a469b7185c4394843de8b299401bc9__ul_eft_tmf_jj">
+					<li class="li">Hosting same endpoint with different connectors, such as SFTP and SOAP
+						connector</li>
+
+					<li class="li">Polling content from different servers</li>
+
+					<li class="li">Grouping similar integration logic that uses different interfaces</li>
+
+				</ul>
+The list of elements that you require to model a multiple pool  integration
+				flow are:<ol class="ol" id="loio41a469b7185c4394843de8b299401bc9__ol_qsc_g3s_3j">
+					<li class="li">One <span class="keyword uilabel">Sender</span> element</li>
+
+					<li class="li">N <span class="keyword uilabel">Receiver</span> elements</li>
+
+					<li class="li">N <span class="keyword uilabel">Integration Process</span> pools for each incoming message
+						from the <span class="keyword uilabel">Sender</span> to a <span class="keyword uilabel">Receiver</span></li>
+
+					<li class="li">N <span class="keyword uilabel">Message Flows</span> from the <span class="keyword uilabel">Sender</span> to the
+							<span class="keyword uilabel">Start Message</span> element in the <span class="keyword uilabel">Integration
+							Process</span> pool. This indicates N incoming message.</li>
+
+					<li class="li"> N <span class="keyword uilabel">Message Flows</span> from each <span class="keyword uilabel">End Message</span>
+						element in the <span class="keyword uilabel">Integration Process</span> pool to the
+						corresponding <span class="keyword uilabel">Receivers</span>. This indicates N outgoing
+						message flows.</li>
+
+					<li class="li">Finally, <span class="keyword uilabel">Sequence Flows</span> to connect the <span class="keyword uilabel">Start
+							Message</span> and <span class="keyword uilabel">End Message</span> within each pools.
+						This completes the integration flow modeling.</li>
+
+				</ol>
+</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step" id="loio41a469b7185c4394843de8b299401bc9__step_N10020_N1001D_N10011_N10001">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="keyword uilabel">Model Configuration</span>
+					editor.</span>
+			</li>
+<li class="li step" id="loio41a469b7185c4394843de8b299401bc9__step_N10029_N1001D_N10011_N10001">
+				<span class="ph cmd">To modify the graphical diagram using the notations in the <span class="keyword uilabel">Palette</span>,
+					follow the substeps below:</span>
+				<ol type="a" class="ol substeps" id="loio41a469b7185c4394843de8b299401bc9__substeps_kmv_5rq_rh">
+					<li class="li substep">
+						<span class="ph cmd">If the <span class="keyword uilabel">Palette</span> pane is hidden in the <span class="keyword uilabel">Model
+								Configuration</span> editor, choose <span class="keyword uilabel">Show
+								Palette</span> arrow at the right edge of the editor.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Choose the required BPMN notation to modify the integration flow
+							model.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step" id="loio41a469b7185c4394843de8b299401bc9__step_N10082_N1001D_N10011_N10001">
+				<span class="ph cmd">To modify the graphical diagram using the context menu options, follow the substeps
+					below:</span>
+				<ol type="a" class="ol substeps" id="loio41a469b7185c4394843de8b299401bc9__substeps_zgc_gtq_rh">
+					<li class="li substep">
+						<span class="ph cmd">In the <span class="keyword uilabel">Model Configuration</span> editor, right-click on
+							the connections within the pool.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">From the context menu, choose the necessary action to add an element. For example,
+								<span class="ph uicontrol">Add Routing</span> adds an <span class="keyword uilabel">Router</span>
+							notation to your graphical diagram that can be used either as a receiver
+							router or an interface router. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Save the changes.</span>
+					</li>
+
+				</ol>
+
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

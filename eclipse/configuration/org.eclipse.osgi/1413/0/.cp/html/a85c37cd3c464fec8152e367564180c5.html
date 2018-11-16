@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring Multiple Externalized Parameters</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioa85c37cd3c464fec8152e367564180c5">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring Multiple Externalized Parameters</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">You have enabled mass configuration of system properties. <div class="note note"><span class="notetitle">Note</span> Please refer to the
+					below procedure steps for enabling mass configuration of system
+					properties.</div>
+</div>
+
+		</div>
+
+		<div class="section context" id="loioa85c37cd3c464fec8152e367564180c5__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this task when you want to provide the same values for the common parameterized
+				attributes across multiple integration projects. The tool offers quick
+				parameterization with the <span class="keyword uilabel">Configurations</span> view that displays a
+				list of externalized parameters from all the projects. If multiple integrations
+				require same values for the externalized parameters, you can choose the
+					<span class="keyword uilabel">Mass Parameterize</span> option to fill values for all the common
+				parameters.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">For receiver system, you must have a single participant for every logical
+					system.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loioa85c37cd3c464fec8152e367564180c5__ul_t5s_fn4_5v">
+							<li class="li">If all receivers are the same logical system then you can have one
+								participant rather than multiple participants in the integration
+								flow to which all channels can be connected. </li>
+
+							<li class="li">If the channel names are same or not added, then you must add unique
+								channel names. </li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">To externalize certificate information at the sender system, execute the
+					following substeps:</span>
+				<ol type="a" class="ol substeps" id="loioa85c37cd3c464fec8152e367564180c5__substeps_qqw_qn4_5v">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Certificate Based Authentication</span> table,
+							enter the key names( <kbd class="ph userinput">{{sender}},
+							{{issuer}}</kbd>).</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Externalized Parameters</span> view, enter the
+							values. </span>
+						<div class="itemgroup info">
+							<div class="note note"><span class="notetitle">Note</span> Do not use <span class="ph uicontrol">Extract Parameters</span> option
+								directly.</div>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">To externalize private key alias and credential details at the receiver,
+					execute the following substeps:</span>
+				<ol type="a" class="ol substeps" id="loioa85c37cd3c464fec8152e367564180c5__substeps_kds_1mp_5v">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the channel editor table, enter the key name
+								(<kbd class="ph userinput">{{privatekeyalias}}</kbd>).</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Externalized Parameters</span> view, enter the
+							values. </span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Select <span class="ph uicontrol">Basic Authentication</span> table.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the channel editor table, enter the key name(
+								<kbd class="ph userinput">{{credential}}</kbd>).</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Externalized Parameters</span> view, enter the
+							values. </span>
+						<div class="itemgroup info">
+							<div class="note note"><span class="notetitle">Note</span> Do not use <span class="ph uicontrol">Extract Parameters</span> option
+								directly.</div>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">To externalize system details for receiver address, execute the following
+					substep:</span>
+				<ol type="a" class="ol substeps" id="loioa85c37cd3c464fec8152e367564180c5__substeps_u4w_s4p_5v">
+					<li class="li substep">
+						<span class="ph cmd">In the<span class="ph uicontrol"> Address</span> field, enter the value in the
+							format
+								<kbd class="ph userinput">https://{{host}}:{{port}}/&lt;appDetails&gt;?client={{client}}</kbd>
+							.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">To externalize authentication modes at sender and receiver systems, execute the
+					following substeps:</span>
+				<ol type="a" class="ol substeps" id="loioa85c37cd3c464fec8152e367564180c5__substeps_cwc_bpp_5v">
+					<li class="li substep">
+						<span class="ph cmd">Extract all parameters relevant to sender authentication mode using the
+							format
+								<kbd class="ph userinput">&lt;sender&gt;_enableBasicAuthentication_&lt;randomnumber&gt;</kbd>.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Extract all parameters relevant to receiver channel authentication mode
+							using the format
+								<kbd class="ph userinput">&lt;receiver&gt;_enableBasicAuthentication_&lt;randomnumber&gt;</kbd>.
+						</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the context menu, select <span class="ph uicontrol">Execute Checks</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">To view and configure parameters, execute the following substeps:</span>
+				<ol type="a" class="ol substeps" id="loioa85c37cd3c464fec8152e367564180c5__substeps_jjs_mqp_5v">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the main menu, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Window</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol"> Show View</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Others</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="keyword uilabel">Show View</span> dialog, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Others</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Configurations</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>. </span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="keyword uilabel">Configurations</span> view toolbar, choose <img class="image" id="loioa85c37cd3c464fec8152e367564180c5__image_m44_5by_mj" src="loio343fa3ee8aa14d0484e76b0060bbb370_LowRes.jpg" alt="MassConfigure_FSN" title="MassConfigure_FSN"/>(<em class="ph i">Mass
+								Configure</em>).</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="keyword uilabel">Mass Configuration</span> wizard, select the
+							projects that contain the common parameters and choose
+								<span class="ph uicontrol">Next</span>.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Enter values for the list of parameters and choose
+								<span class="ph uicontrol">Next</span>. These values get applied to their
+							corresponding parameters that are common across the selected projects. </span>
+						<div class="itemgroup info">
+							<div class="note note"><span class="notetitle">Note</span> A common parameter that has been assigned different values, is
+								indicated using the tag <span class="keyword uilabel">Parameter has Different
+									Values</span>. If you delete this tag and enter a new value
+								or keep it empty, the value of the common parameter changes
+								accordingly across all the projects that use it.</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Confirm if you want to update the common parameters with the new
+							values.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want to view or change externalized parameters in the
+							integration flow from the <span class="keyword uilabel">Configurations</span> view,
+							double-click any file under the <span class="keyword uilabel">Configurations</span> view
+							to open the <span class="keyword uilabel">Model Configuration</span> editor and the
+								<span class="keyword uilabel">Externalized</span> view.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want to deploy the projects, select <span class="ph uicontrol">Deploy
+								Integration Content</span> and enter the <span class="keyword uilabel">Tenant
+								ID</span>.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span>
+					</li>
+
+				</ol>
+
+			</li>
+</ol>
+
+		<div class="section result" id="loioa85c37cd3c464fec8152e367564180c5__result_N100BC_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div>The completion of this task triggers the build
+			automatically and your projects get deployed with the updated externalized parameters. </div>
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

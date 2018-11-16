@@ -1,0 +1,5 @@
+# Debugging options for com.sap.ndb.studio.admin plug-in.
+
+com.sap.ndb.studio.admin/debug=false
+com.sap.ndb.studio.admin/debug/operations=false
+com.sap.ndb.studio.admin/debug/sql=false

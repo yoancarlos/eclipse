@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+
+/* BW Modeling default icon with 48pix. */
+a#BWMT_modelsLink img { background-image : url(../../icons/bwmodel_big.png); }
+a#BWMT_modelsLink:hover img { background-image : url(../../icons/bwmodel_big.png); }
+
+/* General help icon with 48pix. */
+a#BWMT_helpLink img { background-image : url(../../icons/help_big.png); }
+a#BWMT_helpLink:hover img { background-image : url(../../icons/help_big.png); }

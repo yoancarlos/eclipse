@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Mapping/version::1.1.8" ComponentName="sap:Mapping" UIElementType="Flowstep" MetadataVersion="2.0">
+	<Variant VariantId="ctype::FlowstepVariant/cname::XSLTMapping/version::1.1.8" VariantName="XSLT Mapping" VariantDisplayName="XSLT Mapping" AttachmentBehavior="Preserve">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema />
+			</Content>
+			<Content>
+				<ContentType>Text</ContentType>
+				<Schema />
+			</Content>
+		</OutputContent>
+		<Tab id="iflow.advance.endpoints.tab">
+			<GuiLabels>
+				<Label language="EN">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id="General Details">
+				<AttributeReference>
+					<ReferenceName>mappingSource</ReferenceName>
+					<description>Source of the mapping</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>mappingpath</ReferenceName>
+					<description>XSLT Mapping Resource</description>
+					<EditCondition>
+						<AttributeName>mappingSource</AttributeName>
+						<AttributeValue>mappingSrcIflow</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>mappingHeaderNameKey</ReferenceName>
+					<description>Provide mapping reference from header</description>
+					<EditCondition>
+						<AttributeName>mappingSource</AttributeName>
+						<AttributeValue>mappingSrcHeader</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>mappingoutputformat</ReferenceName>
+					<description>Output format of the mapping</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+	</Variant>
+	<AttributeMetadata>
+		<Name>mappingSource</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>mappingSrcIflow</Default>
+		<Length></Length>
+		<GuiLabels guid="bca415e4-273b-49be-b77a-3b32da21f9c1">
+			<Label language="EN">Source</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>mappingSrcHeader</Value>
+				<GuiLabels guid="23d71db0-388a-4080-bd75-078abfada20d">
+					<Label language="EN">Header</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>mappingSrcIflow</Value>
+				<GuiLabels guid="14a43561-610c-4baa-a794-aeb03d45c594">
+					<Label language="EN">Integration Flow</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>mappingpath</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:idref</DataType>
+		<isparameterized>false</isparameterized>
+		<HelpService>
+			<HelpServiceName>resourceLookupService</HelpServiceName>
+			<HelpServiceQueryAttributes>
+				<HelpServiceQueryAttribute>
+					<Name>Type</Name>
+					<Value>xsl,xslt</Value>
+				</HelpServiceQueryAttribute>
+				<HelpServiceQueryAttribute>
+					<Name>ResourceLocation</Name>
+					<Value>mapping</Value>
+				</HelpServiceQueryAttribute>
+				<HelpServiceQueryAttribute>
+					<Name>MimeType</Name>
+					<Value>application/xslt+xml,text/xml</Value>
+				</HelpServiceQueryAttribute>
+				<HelpServiceQueryAttribute>
+					<Name>ContentType</Name>
+					<Value>application/xslt+xml</Value>
+				</HelpServiceQueryAttribute>
+				<HelpServiceQueryAttribute>
+					<Name>ContentFileSize</Name>
+					<Value>2097152</Value>
+				</HelpServiceQueryAttribute>
+			</HelpServiceQueryAttributes>
+		</HelpService>
+		<GuiLabels>
+			<Label language="EN">Resource</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>mappingHeaderNameKey</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="bca415e4-273b-49be-b77a-3b32da21f9c1">
+			<Label language="EN">Header Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>mappingoutputformat</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>Bytes</Default>
+		<Length></Length>
+		<GuiLabels guid="bca415e4-273b-49be-b77a-3b32da21f9c1">
+			<Label language="EN">Output Format</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>String</Value>
+				<GuiLabels guid="23d71db0-388a-4080-bd75-078abfada20d">
+					<Label language="EN">String</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Bytes</Value>
+				<GuiLabels guid="14a43561-610c-4baa-a794-aeb03d45c594">
+					<Label language="EN">Bytes</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+</ComponentMetadata>

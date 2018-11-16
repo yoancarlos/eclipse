@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1542103386554" transient="false">
+	<site updateable="true" url="file:../../../.p2\pool\" enabled="true" policy="MANAGED-ONLY">
+		<feature id="com.sap.jvm.profiling" version="2.4.6" url="features/com.sap.jvm.profiling_2.4.6/" plugin-identifier="com.sap.jvm.profiling.ui">
+		</feature>
+		<feature id="com.sap.adt.pitools.npm" version="1.87.0" url="features/com.sap.adt.pitools.npm_1.87.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.sybase.feature" version="1.14.100.201802061753" url="features/org.eclipse.datatools.enablement.sybase.feature_1.14.100.201802061753/" plugin-identifier="org.eclipse.datatools.enablement.sybase">
+		</feature>
+		<feature id="org.eclipse.epp.mpc" version="1.7.0.v20180613-1243" url="features/org.eclipse.epp.mpc_1.7.0.v20180613-1243/" plugin-identifier="org.eclipse.epp.mpc.ui">
+		</feature>
+		<feature id="com.sap.ndb.studio.portal.feature" version="2.3.39" url="features/com.sap.ndb.studio.portal.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.ndb.studio.afm.feature" version="2.3.39" url="features/com.sap.ndb.studio.afm.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.bw.feature.query.devedition" version="1.18.23" url="features/com.sap.bw.feature.query.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.ndb.studio.foundation.feature" version="2.3.39" url="features/com.sap.ndb.studio.foundation.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.jdbc.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.jdbc.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.sybase">
+		</feature>
+		<feature id="com.sap.adt.tools.bopf" version="1.71.0" url="features/com.sap.adt.tools.bopf_1.71.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.bw.feature.dest" version="1.18.23" url="features/com.sap.bw.feature.dest_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.jpt.jaxb.eclipselink.feature" version="1.4.201.v201803161350" url="features/org.eclipse.jpt.jaxb.eclipselink.feature_1.4.201.v201803161350/" plugin-identifier="org.eclipse.jpt.jaxb.eclipselink.branding">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.finfo">
+		</feature>
+		<feature id="com.sap.adt.pitools.tlf" version="1.87.0" url="features/com.sap.adt.pitools.tlf_1.87.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.emf.edit" version="2.13.0.v20180421-1151" url="features/org.eclipse.emf.edit_2.13.0.v20180421-1151/">
+		</feature>
+		<feature id="com.sap.bw.feature.dtpa.devedition" version="1.18.23" url="features/com.sap.bw.feature.dtpa.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.mysql.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.mysql.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.finfo">
+		</feature>
+		<feature id="com.genuitec.eclipse.theming.designer.feature" version="1.11.0.201810241355" url="features/com.genuitec.eclipse.theming.designer.feature_1.11.0.201810241355/">
+		</feature>
+		<feature id="org.eclipse.rse.ssh" version="3.7.0.201610260947" url="features/org.eclipse.rse.ssh_3.7.0.201610260947/" plugin-identifier="org.eclipse.rse.services.ssh">
+		</feature>
+		<feature id="org.eclipse.jpt.jaxb.feature" version="1.5.100.v201803012210" url="features/org.eclipse.jpt.jaxb.feature_1.5.100.v201803012210/" plugin-identifier="org.eclipse.jpt.jaxb.branding">
+		</feature>
+		<feature id="org.eclipse.jpt.common.eclipselink.feature" version="1.3.200.v201803012210" url="features/org.eclipse.jpt.common.eclipselink.feature_1.3.200.v201803012210/" plugin-identifier="org.eclipse.jpt.common.eclipselink.branding">
+		</feature>
+		<feature id="org.eclipse.wst.json_ui.feature" version="1.1.2.v201805161856" url="features/org.eclipse.wst.json_ui.feature_1.1.2.v201805161856/" plugin-identifier="org.eclipse.wst.json.ui">
+		</feature>
+		<feature id="org.eclipse.wst.server_userdoc.feature" version="3.3.300.v201802152148" url="features/org.eclipse.wst.server_userdoc.feature_3.3.300.v201802152148/">
+		</feature>
+		<feature id="org.eclipse.draw2d" version="3.10.100.201606061308" url="features/org.eclipse.draw2d_3.10.100.201606061308/">
+		</feature>
+		<feature id="org.eclipse.datatools.sqldevtools.feature" version="1.14.100.201802061753" url="features/org.eclipse.datatools.sqldevtools.feature_1.14.100.201802061753/" plugin-identifier="org.eclipse.datatools.sqltools.common.ui">
+		</feature>
+		<feature id="com.sap.cds" version="1.75.0" url="features/com.sap.cds_1.75.0/">
+		</feature>
+		<feature id="org.eclipse.rse.telnet" version="3.7.0.201610260947" url="features/org.eclipse.rse.telnet_3.7.0.201610260947/" plugin-identifier="org.eclipse.rse.services.telnet">
+		</feature>
+		<feature id="com.sap.core.tools.eclipse.server.cloud.feature" version="1.85.0" url="features/com.sap.core.tools.eclipse.server.cloud.feature_1.85.0/" plugin-identifier="com.sap.core.tools.eclipse.server.cloud">
+		</feature>
+		<feature id="com.sap.ide.ui5.team.feature.external" version="1.56.1" url="features/com.sap.ide.ui5.team.feature.external_1.56.1/" plugin-identifier="com.sap.ide.ui5.team">
+		</feature>
+		<feature id="com.sap.ndb.studio.hdb.editor.feature" version="2.3.39" url="features/com.sap.ndb.studio.hdb.editor.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.ide.ui5.team.feature" version="1.56.1" url="features/com.sap.ide.ui5.team.feature_1.56.1/" plugin-identifier="com.sap.ide.ui5.team">
+		</feature>
+		<feature id="org.eclipse.m2e.wtp.jaxrs.feature" version="1.4.0.20180606-2005" url="features/org.eclipse.m2e.wtp.jaxrs.feature_1.4.0.20180606-2005/" plugin-identifier="org.eclipse.m2e.wtp.jaxrs">
+		</feature>
+		<feature id="org.eclipse.cft.server.ui.feature" version="1.0.10.v201805291812" url="features/org.eclipse.cft.server.ui.feature_1.0.10.v201805291812/" plugin-identifier="org.eclipse.cft.server.branding.ui">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.jdt.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.jdt.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.jdt.classpath">
+		</feature>
+		<feature id="org.eclipse.jpt.jpa.feature" version="3.5.101.v201803161350" url="features/org.eclipse.jpt.jpa.feature_3.5.101.v201803161350/" plugin-identifier="org.eclipse.jpt.jpa.branding">
+		</feature>
+		<feature id="com.sap.core.tools.eclipse.server.feature" version="1.86.0" url="features/com.sap.core.tools.eclipse.server.feature_1.86.0/" plugin-identifier="com.sap.core.tools.eclipse.server.branding">
+		</feature>
+		<feature id="org.eclipse.zest" version="1.7.0.201606061308" url="features/org.eclipse.zest_1.7.0.201606061308/" plugin-identifier="org.eclipse.zest.core">
+		</feature>
+		<feature id="com.sap.it.ide.adapter.sdk.feature" version="2.43.2" url="features/com.sap.it.ide.adapter.sdk.feature_2.43.2/">
+		</feature>
+		<feature id="com.sap.bw.feature.apco" version="1.18.23" url="features/com.sap.bw.feature.apco_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.xtext.runtime" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.runtime_2.10.0.v201605250459/">
+		</feature>
+		<feature id="com.sap.ndb.studio.lcm.feature" version="2.3.39" url="features/com.sap.ndb.studio.lcm.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.bw.feature.fbp.devedition" version="1.18.23" url="features/com.sap.bw.feature.fbp.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.bw.feature.hana.devedition" version="1.18.23" url="features/com.sap.bw.feature.hana.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.bw.feature.segr" version="1.18.23" url="features/com.sap.bw.feature.segr_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.adt.tools.testdoubles" version="1.22.0" url="features/com.sap.adt.tools.testdoubles_1.22.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.tm.terminal.control.feature" version="4.4.0.201806112243" url="features/org.eclipse.tm.terminal.control.feature_4.4.0.201806112243/" plugin-identifier="org.eclipse.tm.terminal.control">
+		</feature>
+		<feature id="com.sap.bw.feature.base" version="1.18.23" url="features/com.sap.bw.feature.base_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.mylyn.commons.identity" version="1.16.0.v20170629-1728" url="features/org.eclipse.mylyn.commons.identity_1.16.0.v20170629-1728/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="org.eclipse.jst.server_ui.feature" version="3.4.300.v201802152148" url="features/org.eclipse.jst.server_ui.feature_3.4.300.v201802152148/">
+		</feature>
+		<feature id="org.eclipse.wst.jsdt.chromium.debug.feature" version="0.6.0.v201705091354" url="features/org.eclipse.wst.jsdt.chromium.debug.feature_0.6.0.v201705091354/" plugin-identifier="org.eclipse.wst.jsdt.chromium.debug">
+		</feature>
+		<feature id="com.sap.adt.tools.cds" version="2.94.0" url="features/com.sap.adt.tools.cds_2.94.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="de.jcup.egradle.eclipse.feature.editor" version="2.5.0" url="features/de.jcup.egradle.eclipse.feature.editor_2.5.0/" plugin-identifier="de.jcup.egradle.eclipse.plugin.branding">
+		</feature>
+		<feature id="org.eclipse.emf.validation" version="1.10.0.201606071713" url="features/org.eclipse.emf.validation_1.10.0.201606071713/">
+		</feature>
+		<feature id="org.eclipse.ecf.core.feature" version="1.5.0.v20180426-1936" url="features/org.eclipse.ecf.core.feature_1.5.0.v20180426-1936/">
+		</feature>
+		<feature id="org.eclipse.tm.terminal.connector.local.feature" version="4.3.0.201806112243" url="features/org.eclipse.tm.terminal.connector.local.feature_4.3.0.201806112243/">
+		</feature>
+		<feature id="com.sap.adt.tools.hana" version="2.94.0" url="features/com.sap.adt.tools.hana_2.94.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.jst.ws.axis2tools.feature" version="1.1.301.v201802222200" url="features/org.eclipse.jst.ws.axis2tools.feature_1.1.301.v201802222200/" plugin-identifier="org.eclipse.jst.ws.axis2.ui">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.rcp.feature" version="1.4.0.v20180515-1348" url="features/org.eclipse.equinox.p2.rcp.feature_1.4.0.v20180515-1348/">
+		</feature>
+		<feature id="com.sap.bw.feature.hcpr.devedition" version="1.18.23" url="features/com.sap.bw.feature.hcpr.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.ndb.studio.models.feature" version="2.3.39" url="features/com.sap.ndb.studio.models.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.postgresql.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.postgresql.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.finfo">
+		</feature>
+		<feature id="com.sap.bw.feature.iobj.devedition" version="1.18.23" url="features/com.sap.bw.feature.iobj.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.mylyn.commons.notifications" version="1.16.0.v20170629-1728" url="features/org.eclipse.mylyn.commons.notifications_1.16.0.v20170629-1728/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="com.sap.ndb.studio.dwb.tools.core.feature" version="2.3.39" url="features/com.sap.ndb.studio.dwb.tools.core.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.ssl.feature" version="1.1.100.v20180301-0132" url="features/org.eclipse.ecf.filetransfer.ssl.feature_1.1.100.v20180301-0132/">
+		</feature>
+		<feature id="org.eclipse.rse" version="3.7.2.201610260947" url="features/org.eclipse.rse_3.7.2.201610260947/">
+		</feature>
+		<feature id="org.eclipse.datatools.sqldevtools.sqlbuilder.feature" version="1.14.100.201805031905" url="features/org.eclipse.datatools.sqldevtools.sqlbuilder.feature_1.14.100.201805031905/">
+		</feature>
+		<feature id="org.eclipse.rse.useractions" version="3.7.0.201610260947" url="features/org.eclipse.rse.useractions_3.7.0.201610260947/">
+		</feature>
+		<feature id="org.eclipse.wst.ws_ui.feature" version="3.8.1.v201802222200" url="features/org.eclipse.wst.ws_ui.feature_3.8.1.v201802222200/">
+		</feature>
+		<feature id="com.sap.bw.feature.segr.devedition" version="1.18.23" url="features/com.sap.bw.feature.segr.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.core.ui.decorator.feature" version="1.12.0" url="features/com.sap.core.ui.decorator.feature_1.12.0/">
+		</feature>
+		<feature id="org.eclipse.jst.server_adapters.ext.feature" version="3.3.602.v201805281856" url="features/org.eclipse.jst.server_adapters.ext.feature_3.3.602.v201805281856/">
+		</feature>
+		<feature id="org.eclipse.mylyn.context_feature" version="3.24.0.v20170629-2230" url="features/org.eclipse.mylyn.context_feature_3.24.0.v20170629-2230/" plugin-identifier="org.eclipse.mylyn.context.core">
+		</feature>
+		<feature id="org.eclipse.recommenders.mylyn.rcp.feature" version="2.5.3.v20180609-1554" url="features/org.eclipse.recommenders.mylyn.rcp.feature_2.5.3.v20180609-1554/" plugin-identifier="org.eclipse.recommenders.mylyn.rcp">
+		</feature>
+		<feature id="org.eclipse.datatools.doc.user" version="1.14.100.201802022135" url="features/org.eclipse.datatools.doc.user_1.14.100.201802022135/">
+		</feature>
+		<feature id="com.sap.adt.wda.core.devedition" version="1.87.2" url="features/com.sap.adt.wda.core.devedition_1.87.2/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.emf.codegen.ecore" version="2.14.0.v20180418-0836" url="features/org.eclipse.emf.codegen.ecore_2.14.0.v20180418-0836/">
+		</feature>
+		<feature id="org.eclipse.m2e.wtp.jsf.feature" version="1.4.0.20180606-2005" url="features/org.eclipse.m2e.wtp.jsf.feature_1.4.0.20180606-2005/" plugin-identifier="org.eclipse.m2e.wtp.jsf">
+		</feature>
+		<feature id="org.eclipse.mylyn.team_feature" version="3.24.0.v20170629-2230" url="features/org.eclipse.mylyn.team_feature_3.24.0.v20170629-2230/" plugin-identifier="org.eclipse.mylyn.context.core">
+		</feature>
+		<feature id="com.sap.conn.jco.eclipse.feature" version="1.6.1" url="features/com.sap.conn.jco.eclipse.feature_1.6.1/">
+		</feature>
+		<feature id="com.sap.bw.feature.query" version="1.18.23" url="features/com.sap.bw.feature.query_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.emf.mapping.ui" version="2.10.0.v20180125-1130" url="features/org.eclipse.emf.mapping.ui_2.10.0.v20180125-1130/">
+		</feature>
+		<feature id="com.sap.adt.fwk.ci" version="2.94.1" url="features/com.sap.adt.fwk.ci_2.94.1/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.emf.common.ui" version="2.13.0.v20180127-1015" url="features/org.eclipse.emf.common.ui_2.13.0.v20180127-1015/">
+		</feature>
+		<feature id="org.eclipse.jst.jsf.apache.trinidad.tagsupport.feature" version="2.6.1.v201802231403" url="features/org.eclipse.jst.jsf.apache.trinidad.tagsupport.feature_2.6.1.v201802231403/">
+		</feature>
+		<feature id="org.eclipse.wst.server_core.feature" version="3.3.700.v201803052214" url="features/org.eclipse.wst.server_core.feature_3.3.700.v201803052214/">
+		</feature>
+		<feature id="org.eclipse.jst.enterprise_ui.feature" version="3.9.100.v201804120404" url="features/org.eclipse.jst.enterprise_ui.feature_3.9.100.v201804120404/" plugin-identifier="org.eclipse.jst.jee.ui">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.sap.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.sap.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.finfo">
+		</feature>
+		<feature id="com.sap.adt.connectivity" version="2.25.2" url="features/com.sap.adt.connectivity_2.25.2/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.wst.web_ui.feature" version="3.10.0.v201805161856" url="features/org.eclipse.wst.web_ui.feature_3.10.0.v201805161856/" plugin-identifier="org.eclipse.wst.web.ui">
+		</feature>
+		<feature id="com.sap.ndb.studio.bi.feature" version="2.3.39" url="features/com.sap.ndb.studio.bi.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.jst.ws.jaxws_userdoc.feature" version="1.0.402.v201802222200" url="features/org.eclipse.jst.ws.jaxws_userdoc.feature_1.0.402.v201802222200/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.core.feature" version="1.5.0.v20180515-1348" url="features/org.eclipse.equinox.p2.core.feature_1.5.0.v20180515-1348/">
+		</feature>
+		<feature id="org.eclipse.epp.package.jee.feature" version="4.8.0.20180619-1200" url="features/org.eclipse.epp.package.jee.feature_4.8.0.20180619-1200/" plugin-identifier="org.eclipse.epp.package.jee">
+		</feature>
+		<feature id="org.eclipse.xtend" version="2.2.0.v201605260315" url="features/org.eclipse.xtend_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.mylyn.discovery" version="3.24.0.v20170629-1728" url="features/org.eclipse.mylyn.discovery_3.24.0.v20170629-1728/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="com.sap.adt.notifications.feature" version="2.90.0" url="features/com.sap.adt.notifications.feature_2.90.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.emf.converter" version="2.13.0.v20180131-0817" url="features/org.eclipse.emf.converter_2.13.0.v20180131-0817/">
+		</feature>
+		<feature id="com.sap.bw.feature.dest.devedition" version="1.18.23" url="features/com.sap.bw.feature.dest.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.datatools.sdk.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.sdk.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.sdk">
+		</feature>
+		<feature id="org.eclipse.epp.package.common.feature" version="4.8.0.20180619-1200" url="features/org.eclipse.epp.package.common.feature_4.8.0.20180619-1200/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.extras.feature" version="1.4.0.v20180515-1348" url="features/org.eclipse.equinox.p2.extras.feature_1.4.0.v20180515-1348/">
+		</feature>
+		<feature id="org.eclipse.wst.xml_core.feature" version="3.10.0.v201805022129" url="features/org.eclipse.wst.xml_core.feature_3.10.0.v201805022129/">
+		</feature>
+		<feature id="org.eclipse.datatools.sqldevtools.parsers.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.sqldevtools.parsers.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.sqltools.parsers.sql">
+		</feature>
+		<feature id="com.sap.bw.feature.datasource.devedition" version="1.18.23" url="features/com.sap.bw.feature.datasource.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.datatools.sqldevtools.ddlgen.feature" version="1.14.100.201802061437" url="features/org.eclipse.datatools.sqldevtools.ddlgen.feature_1.14.100.201802061437/" plugin-identifier="org.eclipse.datatools.sqltools.ddlgen.ui">
+		</feature>
+		<feature id="com.genuitec.eclipse.common.explorer.jdt.feature" version="1.11.0.201809241613" url="features/com.genuitec.eclipse.common.explorer.jdt.feature_1.11.0.201809241613/">
+		</feature>
+		<feature id="com.sap.ndb.studio.dwb.feature" version="2.3.39" url="features/com.sap.ndb.studio.dwb.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.bw.feature.datasource" version="1.18.23" url="features/com.sap.bw.feature.datasource_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.jst.ws.cxf.feature" version="1.1.301.v201802222200" url="features/org.eclipse.jst.ws.cxf.feature_1.1.301.v201802222200/" plugin-identifier="org.eclipse.jst.ws.cxf.core">
+		</feature>
+		<feature id="com.genuitec.eclipse.base.feature" version="1.11.0.201810241355" url="features/com.genuitec.eclipse.base.feature_1.11.0.201810241355/">
+		</feature>
+		<feature id="com.sap.adt.datapreview" version="1.74.0" url="features/com.sap.adt.datapreview_1.74.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.ndb.studio.modeler.reuse.feature" version="2.3.39" url="features/com.sap.ndb.studio.modeler.reuse.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.egit" version="5.0.0.201806131550-r" url="features/org.eclipse.egit_5.0.0.201806131550-r/">
+		</feature>
+		<feature id="org.eclipse.emf.codegen.ecore.ui" version="2.14.0.v20180418-0836" url="features/org.eclipse.emf.codegen.ecore.ui_2.14.0.v20180418-0836/">
+		</feature>
+		<feature id="org.eclipse.tm.terminal.connector.telnet.feature" version="4.3.0.201806112243" url="features/org.eclipse.tm.terminal.connector.telnet.feature_4.3.0.201806112243/">
+		</feature>
+		<feature id="com.genuitec.eclipse.theming.feature" version="1.11.0.201810241355" url="features/com.genuitec.eclipse.theming.feature_1.11.0.201810241355/">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.hsqldb.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.hsqldb.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.finfo">
+		</feature>
+		<feature id="org.eclipse.tm.terminal.view.feature" version="4.3.0.201806112243" url="features/org.eclipse.tm.terminal.view.feature_4.3.0.201806112243/" plugin-identifier="org.eclipse.tm.terminal.view.core">
+		</feature>
+		<feature id="com.sap.adt.tools.base.devedition" version="2.94.4" url="features/com.sap.adt.tools.base.devedition_2.94.4/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.it.ide.commons.feature" version="2.42.0" url="features/com.sap.it.ide.commons.feature_2.42.0/">
+		</feature>
+		<feature id="org.eclipse.jst.web_core.feature" version="3.9.1.v201802222200" url="features/org.eclipse.jst.web_core.feature_3.9.1.v201802222200/">
+		</feature>
+		<feature id="org.eclipse.mylyn.wikitext.editors_feature" version="3.0.19.201711172000" url="features/org.eclipse.mylyn.wikitext.editors_feature_3.0.19.201711172000/" plugin-identifier="org.eclipse.mylyn.wikitext">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.oda.designer.feature" version="1.14.100.201802061455" url="features/org.eclipse.datatools.enablement.oda.designer.feature_1.14.100.201802061455/" plugin-identifier="org.eclipse.datatools.enablement.oda.xml.ui">
+		</feature>
+		<feature id="com.sap.ndb.studio.dwb.repository.core.feature" version="2.3.39" url="features/com.sap.ndb.studio.dwb.repository.core.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.core.tools.eclipse.logging.feature" version="1.33.0" url="features/com.sap.core.tools.eclipse.logging.feature_1.33.0/" plugin-identifier="com.sap.core.tools.eclipse.logging">
+		</feature>
+		<feature id="org.eclipse.datatools.intro" version="1.14.100.201801242337" url="features/org.eclipse.datatools.intro_1.14.100.201801242337/">
+		</feature>
+		<feature id="com.sap.it.ide.mapping.mm.feature" version="1.10.0" url="features/com.sap.it.ide.mapping.mm.feature_1.10.0/">
+		</feature>
+		<feature id="org.eclipse.rse.dstore" version="3.7.0.201610260947" url="features/org.eclipse.rse.dstore_3.7.0.201610260947/" plugin-identifier="org.eclipse.rse.services.dstore">
+		</feature>
+		<feature id="com.sap.bw.feature.charrel" version="1.18.23" url="features/com.sap.bw.feature.charrel_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.sqlite.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.sqlite.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.finfo">
+		</feature>
+		<feature id="com.sap.bw.feature.trcs" version="1.18.23" url="features/com.sap.bw.feature.trcs_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.jst.web_userdoc.feature" version="3.6.0.v201802141513" url="features/org.eclipse.jst.web_userdoc.feature_3.6.0.v201802141513/">
+		</feature>
+		<feature id="org.eclipse.emf.databinding.edit" version="1.5.0.v20180130-1145" url="features/org.eclipse.emf.databinding.edit_1.5.0.v20180130-1145/">
+		</feature>
+		<feature id="org.eclipse.oomph.p2" version="1.10.0.v20180829-1028" url="features/org.eclipse.oomph.p2_1.10.0.v20180829-1028/">
+		</feature>
+		<feature id="org.eclipse.jpt.jpa.eclipselink.feature" version="3.4.101.v201803161350" url="features/org.eclipse.jpt.jpa.eclipselink.feature_3.4.101.v201803161350/" plugin-identifier="org.eclipse.jpt.jpa.eclipselink.branding">
+		</feature>
+		<feature id="org.eclipse.m2e.logback.feature" version="1.9.0.20180606-2036" url="features/org.eclipse.m2e.logback.feature_1.9.0.20180606-2036/" plugin-identifier="org.eclipse.m2e.logback.configuration">
+		</feature>
+		<feature id="com.sap.bw.feature.infoarea" version="1.18.23" url="features/com.sap.bw.feature.infoarea_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.mylyn.ide_feature" version="3.24.0.v20170629-2230" url="features/org.eclipse.mylyn.ide_feature_3.24.0.v20170629-2230/" plugin-identifier="org.eclipse.mylyn.context.core">
+		</feature>
+		<feature id="org.eclipse.tips.feature" version="0.1.0.v20180608-1525" url="features/org.eclipse.tips.feature_0.1.0.v20180608-1525/">
+		</feature>
+		<feature id="org.eclipse.wst.jsdt.nodejs.feature" version="1.1.0.v201803202007" url="features/org.eclipse.wst.jsdt.nodejs.feature_1.1.0.v201803202007/" plugin-identifier="org.eclipse.wst.jsdt.nodejs">
+		</feature>
+		<feature id="com.sap.core.tools.eclipse.users.editor.feature" version="1.19.0" url="features/com.sap.core.tools.eclipse.users.editor.feature_1.19.0/" plugin-identifier="com.sap.core.tools.eclipse.users.editor">
+		</feature>
+		<feature id="org.eclipse.jpt.jpadiagrameditor.feature" version="1.2.300.v201604110621" url="features/org.eclipse.jpt.jpadiagrameditor.feature_1.2.300.v201604110621/" plugin-identifier="org.eclipse.jpt.jpadiagrameditor.branding">
+		</feature>
+		<feature id="com.sap.it.ictools.feature" version="1.44.0" url="features/com.sap.it.ictools.feature_1.44.0/">
+		</feature>
+		<feature id="org.eclipse.egit.mylyn" version="5.0.0.201806131550-r" url="features/org.eclipse.egit.mylyn_5.0.0.201806131550-r/" plugin-identifier="org.eclipse.egit">
+		</feature>
+		<feature id="com.sap.adt.common" version="1.87.0" url="features/com.sap.adt.common_1.87.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.ndb.studio.feature" version="2.3.39" url="features/com.sap.ndb.studio.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.emf.workspace" version="1.10.0.201606071900" url="features/org.eclipse.emf.workspace_1.10.0.201606071900/">
+		</feature>
+		<feature id="com.sap.ndb.studio.admin.feature" version="2.3.39" url="features/com.sap.ndb.studio.admin.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.ide.ui5.cloud.feature" version="1.56.1" url="features/com.sap.ide.ui5.cloud.feature_1.56.1/">
+		</feature>
+		<feature id="org.eclipse.emf.query" version="1.10.0.201606071631" url="features/org.eclipse.emf.query_1.10.0.201606071631/">
+		</feature>
+		<feature id="org.eclipse.datatools.connectivity.oda.designer.core.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.connectivity.oda.designer.core.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.connectivity.oda.design.ui">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.discovery.feature" version="1.2.0.v20180512-1128" url="features/org.eclipse.equinox.p2.discovery.feature_1.2.0.v20180512-1128/">
+		</feature>
+		<feature id="com.sap.cds.diagram" version="1.75.0" url="features/com.sap.cds.diagram_1.75.0/">
+		</feature>
+		<feature id="com.sap.ndb.studio.xse.debugger.feature" version="2.3.39" url="features/com.sap.ndb.studio.xse.debugger.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.ndb.studio.sqlscript.feature" version="2.3.39" url="features/com.sap.ndb.studio.sqlscript.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.datatools.connectivity.doc.user" version="1.14.100.201802022135" url="features/org.eclipse.datatools.connectivity.doc.user_1.14.100.201802022135/">
+		</feature>
+		<feature id="com.sap.bw.feature.fbp" version="1.18.23" url="features/com.sap.bw.feature.fbp_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.it.commons.command.base.feature" version="1.23.1" url="features/com.sap.it.commons.command.base.feature_1.23.1/">
+		</feature>
+		<feature id="org.eclipse.mylyn.commons" version="3.24.0.v20180613-1658" url="features/org.eclipse.mylyn.commons_3.24.0.v20180613-1658/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="com.sap.ndb.studio.fuzzysearch.feature" version="2.3.39" url="features/com.sap.ndb.studio.fuzzysearch.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.jgit" version="5.0.0.201806131550-r" url="features/org.eclipse.jgit_5.0.0.201806131550-r/">
+		</feature>
+		<feature id="com.sap.adt.core.devedition" version="2.94.7" url="features/com.sap.adt.core.devedition_2.94.7/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.emf.edit.ui" version="2.14.0.v20180213-0527" url="features/org.eclipse.emf.edit.ui_2.14.0.v20180213-0527/">
+		</feature>
+		<feature id="org.eclipse.mylyn.tasks.ide" version="3.24.0.v20170629-1737" url="features/org.eclipse.mylyn.tasks.ide_3.24.0.v20170629-1737/" plugin-identifier="org.eclipse.mylyn.tasks.core">
+		</feature>
+		<feature id="org.eclipse.wst.ws_userdoc.feature" version="3.1.400.v201802222200" url="features/org.eclipse.wst.ws_userdoc.feature_3.1.400.v201802222200/">
+		</feature>
+		<feature id="com.sap.adt.tools.base" version="2.94.4" url="features/com.sap.adt.tools.base_2.94.4/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.ndb.studio.admin.feature.devedition" version="2.3.39" url="features/com.sap.ndb.studio.admin.feature.devedition_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.ndb.studio.xs.feature" version="2.3.39" url="features/com.sap.ndb.studio.xs.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.emf.databinding" version="1.5.0.v20180130-1145" url="features/org.eclipse.emf.databinding_1.5.0.v20180130-1145/">
+		</feature>
+		<feature id="org.eclipse.oomph.setup.core" version="1.11.0.v20181107-0652" url="features/org.eclipse.oomph.setup.core_1.11.0.v20181107-0652/">
+		</feature>
+		<feature id="org.eclipse.mylyn.wikitext_feature" version="3.0.19.201711172000" url="features/org.eclipse.mylyn.wikitext_feature_3.0.19.201711172000/" plugin-identifier="org.eclipse.mylyn.wikitext">
+		</feature>
+		<feature id="com.sap.adt.pitools.tlf.devedition" version="1.87.0" url="features/com.sap.adt.pitools.tlf.devedition_1.87.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.ndb.studio.runtime.feature" version="2.3.39" url="features/com.sap.ndb.studio.runtime.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.tm.terminal.feature" version="4.4.0.201806112243" url="features/org.eclipse.tm.terminal.feature_4.4.0.201806112243/" plugin-identifier="org.eclipse.tm.terminal.view.core">
+		</feature>
+		<feature id="org.eclipse.datatools.connectivity.oda.feature" version="1.14.100.201802212225" url="features/org.eclipse.datatools.connectivity.oda.feature_1.14.100.201802212225/" plugin-identifier="org.eclipse.datatools.connectivity.oda">
+		</feature>
+		<feature id="com.sap.adt.wda.core" version="1.87.2" url="features/com.sap.adt.wda.core_1.87.2/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.it.ide.ifl.feature" version="2.43.2" url="features/com.sap.it.ide.ifl.feature_2.43.2/">
+		</feature>
+		<feature id="org.eclipse.datatools.sqldevtools.data.feature" version="1.14.100.201805031905" url="features/org.eclipse.datatools.sqldevtools.data.feature_1.14.100.201805031905/">
+		</feature>
+		<feature id="org.eclipse.xtend.dependencies" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.dependencies_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.datatools.connectivity.oda.designer.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.connectivity.oda.designer.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.connectivity.oda.design.ui">
+		</feature>
+		<feature id="org.eclipse.e4.rcp" version="1.6.100.v20180611-0422" url="features/org.eclipse.e4.rcp_1.6.100.v20180611-0422/">
+		</feature>
+		<feature id="org.eclipse.graphiti.feature" version="0.13.2.v20161129-0820" url="features/org.eclipse.graphiti.feature_0.13.2.v20161129-0820/" plugin-identifier="org.eclipse.graphiti.ui">
+		</feature>
+		<feature id="org.eclipse.xpand" version="2.2.0.v201605260315" url="features/org.eclipse.xpand_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.jpt.dbws.eclipselink.feature" version="1.2.201.v201803161350" url="features/org.eclipse.jpt.dbws.eclipselink.feature_1.2.201.v201803161350/" plugin-identifier="org.eclipse.jpt.dbws.eclipselink.branding">
+		</feature>
+		<feature id="com.sap.bw.feature.trcs.devedition" version="1.18.23" url="features/com.sap.bw.feature.trcs.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.jst.server_adapters.feature" version="3.2.500.v201806111634" url="features/org.eclipse.jst.server_adapters.feature_3.2.500.v201806111634/">
+		</feature>
+		<feature id="org.eclipse.wst.ws_core.feature" version="3.7.200.v201806042237" url="features/org.eclipse.wst.ws_core.feature_3.7.200.v201806042237/">
+		</feature>
+		<feature id="org.eclipse.jsf.feature" version="3.10.0.v201803271721" url="features/org.eclipse.jsf.feature_3.10.0.v201803271721/">
+		</feature>
+		<feature id="org.eclipse.wst.server_ui.feature" version="3.3.700.v201805282004" url="features/org.eclipse.wst.server_ui.feature_3.3.700.v201805282004/">
+		</feature>
+		<feature id="com.sap.ndb.studio.cds.tools.feature" version="2.3.39" url="features/com.sap.ndb.studio.cds.tools.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.ingres.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.ingres.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.finfo">
+		</feature>
+		<feature id="org.eclipse.wst.common.fproj" version="3.7.1.v201711202234" url="features/org.eclipse.wst.common.fproj_3.7.1.v201711202234/" plugin-identifier="org.eclipse.wst.common.project.facet.core">
+		</feature>
+		<feature id="com.sap.ndb.planviz.feature" version="2.3.39" url="features/com.sap.ndb.planviz.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.bw.feature.alvl.devedition" version="1.18.23" url="features/com.sap.bw.feature.alvl.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.ndb.studio.rules.feature" version="2.3.39" url="features/com.sap.ndb.studio.rules.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.adt.tm.feature" version="1.91.0" url="features/com.sap.adt.tm.feature_1.91.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.it.ide.commons.plugins.feature" version="1.21.0" url="features/com.sap.it.ide.commons.plugins.feature_1.21.0/">
+		</feature>
+		<feature id="com.sap.bw.feature.adso" version="1.18.23" url="features/com.sap.bw.feature.adso_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.m2e.feature" version="1.9.0.20180606-2036" url="features/org.eclipse.m2e.feature_1.9.0.20180606-2036/" plugin-identifier="org.eclipse.m2e.core">
+		</feature>
+		<feature id="org.eclipse.jdt" version="3.14.0.v20180611-0500" url="features/org.eclipse.jdt_3.14.0.v20180611-0500/">
+		</feature>
+		<feature id="com.sap.rnd.feature" version="1.70.0" url="features/com.sap.rnd.feature_1.70.0/">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.oracle.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.oracle.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.finfo">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature" version="1.1.100.v20180301-0132" url="features/org.eclipse.ecf.filetransfer.httpclient4.ssl.feature_1.1.100.v20180301-0132/">
+		</feature>
+		<feature id="org.eclipse.rse.ftp" version="3.7.1.201610260947" url="features/org.eclipse.rse.ftp_3.7.1.201610260947/" plugin-identifier="org.eclipse.rse.services.files.ftp">
+		</feature>
+		<feature id="com.sap.core.tools.eclipse.connectivity.editor.feature" version="1.35.0" url="features/com.sap.core.tools.eclipse.connectivity.editor.feature_1.35.0/" plugin-identifier="com.sap.core.tools.eclipse.connectivity.editor">
+		</feature>
+		<feature id="com.sap.ide.ui5.app.feature" version="1.56.1" url="features/com.sap.ide.ui5.app.feature_1.56.1/" plugin-identifier="com.sap.ide.ui5.app.plugin">
+		</feature>
+		<feature id="com.sap.adt.tools.bopf.devedition" version="1.71.0" url="features/com.sap.adt.tools.bopf.devedition_1.71.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.emf" version="2.14.0.v20180529-1144" url="features/org.eclipse.emf_2.14.0.v20180529-1144/">
+		</feature>
+		<feature id="org.eclipse.gef" version="3.11.0.201606061308" url="features/org.eclipse.gef_3.11.0.201606061308/">
+		</feature>
+		<feature id="de.jcup.egradle.eclipse.feature.core" version="2.5.0" url="features/de.jcup.egradle.eclipse.feature.core_2.5.0/" plugin-identifier="de.jcup.egradle.eclipse.plugin.branding">
+		</feature>
+		<feature id="org.eclipse.mylyn_feature" version="3.24.0.v20180227-0955" url="features/org.eclipse.mylyn_feature_3.24.0.v20180227-0955/" plugin-identifier="org.eclipse.mylyn.tasks.core">
+		</feature>
+		<feature id="org.eclipse.xtext.xtext.ui" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.xtext.ui_2.10.0.v201605250459/">
+		</feature>
+		<feature id="com.sap.bw.feature.trfn" version="1.18.23" url="features/com.sap.bw.feature.trfn_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.bw.feature.iobj" version="1.18.23" url="features/com.sap.bw.feature.iobj_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.ndb.studio.appdev.feature.devedition" version="2.3.39" url="features/com.sap.ndb.studio.appdev.feature.devedition_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.emf.mapping.ecore.editor" version="2.11.0.v20180125-1130" url="features/org.eclipse.emf.mapping.ecore.editor_2.11.0.v20180125-1130/">
+		</feature>
+		<feature id="com.sap.ide.platform.feature" version="1.35.0" url="features/com.sap.ide.platform.feature_1.35.0/">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.editor" version="2.14.0.v20180212-1111" url="features/org.eclipse.emf.ecore.editor_2.14.0.v20180212-1111/">
+		</feature>
+		<feature id="org.eclipse.emf.mapping.ecore" version="2.10.0.v20180125-1130" url="features/org.eclipse.emf.mapping.ecore_2.10.0.v20180125-1130/">
+		</feature>
+		<feature id="com.sap.ndb.studio.appdev.feature" version="2.3.39" url="features/com.sap.ndb.studio.appdev.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.eclemma.feature" version="3.1.0.201805281015" url="features/org.eclipse.eclemma.feature_3.1.0.201805281015/" plugin-identifier="org.eclipse.eclemma.ui">
+		</feature>
+		<feature id="org.eclipse.emf.transaction" version="1.10.0.201606071900" url="features/org.eclipse.emf.transaction_1.10.0.201606071900/">
+		</feature>
+		<feature id="org.eclipse.tm.terminal.connector.ssh.feature" version="4.3.0.201806112243" url="features/org.eclipse.tm.terminal.connector.ssh.feature_4.3.0.201806112243/" plugin-identifier="org.eclipse.tm.terminal.ssh">
+		</feature>
+		<feature id="org.eclipse.xtext.xbase" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.xbase_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.apache.derby.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.apache.derby.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.sybase">
+		</feature>
+		<feature id="org.eclipse.wst.xml.xpath2.processor.feature" version="2.0.301.v201805182044" url="features/org.eclipse.wst.xml.xpath2.processor.feature_2.0.301.v201805182044/" plugin-identifier="org.eclipse.wst.xml.xpath2">
+		</feature>
+		<feature id="com.sap.adt.conn" version="1.26.0" url="features/com.sap.adt.conn_1.26.0/">
+		</feature>
+		<feature id="org.eclipse.jst.web_ui.feature" version="3.9.0.v201802222200" url="features/org.eclipse.jst.web_ui.feature_3.9.0.v201802222200/">
+		</feature>
+		<feature id="com.sap.cloud.tools.eclipse.prefs.feature" version="1.3.0" url="features/com.sap.cloud.tools.eclipse.prefs.feature_1.3.0/" plugin-identifier="com.sap.cloud.tools.eclipse.prefs">
+		</feature>
+		<feature id="org.eclipse.datatools.modelbase.feature" version="1.14.100.201802022135" url="features/org.eclipse.datatools.modelbase.feature_1.14.100.201802022135/" plugin-identifier="org.eclipse.datatools.modelbase.sql">
+		</feature>
+		<feature id="com.sap.core.expression.editor.feature" version="1.12.0" url="features/com.sap.core.expression.editor.feature_1.12.0/">
+		</feature>
+		<feature id="org.eclipse.xtext.xbase.lib" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.xbase.lib_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.fhsolution.eclipse.feature.csvedit" version="1.2.0" url="features/org.fhsolution.eclipse.feature.csvedit_1.2.0/" plugin-identifier="org.fhsolution.eclipse.plugins.csvedit">
+		</feature>
+		<feature id="com.sap.adt.tools.debug" version="2.94.1" url="features/com.sap.adt.tools.debug_2.94.1/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.cft.server.core.feature" version="1.2.3.v201805291812" url="features/org.eclipse.cft.server.core.feature_1.2.3.v201805291812/" plugin-identifier="org.eclipse.cft.server.branding.core">
+		</feature>
+		<feature id="com.sap.ndb.studio.devsupport.feature" version="2.3.39" url="features/com.sap.ndb.studio.devsupport.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.wst.xsl.feature" version="1.3.500.v201805022145" url="features/org.eclipse.wst.xsl.feature_1.3.500.v201805022145/" plugin-identifier="org.eclipse.wst.xsl">
+		</feature>
+		<feature id="org.eclipse.datatools.sqldevtools.schemaobjecteditor.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.sqldevtools.schemaobjecteditor.feature_1.14.100.201801242337/">
+		</feature>
+		<feature id="com.sap.it.ide.commons.base.feature" version="2.42.0" url="features/com.sap.it.ide.commons.base.feature_2.42.0/">
+		</feature>
+		<feature id="com.sap.bw.feature.trfn.devedition" version="1.18.23" url="features/com.sap.bw.feature.trfn.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.pde" version="3.13.100.v20180611-0826" url="features/org.eclipse.pde_3.13.100.v20180611-0826/">
+		</feature>
+		<feature id="org.eclipse.xtend.typesystem.emf" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.typesystem.emf_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.wst.xml_userdoc.feature" version="3.10.0.v201804190136" url="features/org.eclipse.wst.xml_userdoc.feature_3.10.0.v201804190136/">
+		</feature>
+		<feature id="org.eclipse.xtend.ui" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.ui_2.2.0.v201605260315/">
+		</feature>
+		<feature id="com.sap.core.tools.eclipse.help.feature" version="1.116.0" url="features/com.sap.core.tools.eclipse.help.feature_1.116.0/" plugin-identifier="com.sap.core.tools.eclipse.help">
+		</feature>
+		<feature id="org.eclipse.wst.common_ui.feature" version="3.9.2.v201803040536" url="features/org.eclipse.wst.common_ui.feature_3.9.2.v201803040536/">
+		</feature>
+		<feature id="org.eclipse.jst.ws.jaxws.dom.feature" version="1.0.302.v201802222200" url="features/org.eclipse.jst.ws.jaxws.dom.feature_1.0.302.v201802222200/">
+		</feature>
+		<feature id="org.eclipse.emf.common" version="2.14.0.v20180527-1134" url="features/org.eclipse.emf.common_2.14.0.v20180527-1134/">
+		</feature>
+		<feature id="org.eclipse.mylyn.java_feature" version="3.24.0.v20170629-2230" url="features/org.eclipse.mylyn.java_feature_3.24.0.v20170629-2230/" plugin-identifier="org.eclipse.mylyn.context.core">
+		</feature>
+		<feature id="com.sap.adt.tools.hana.devedition" version="2.94.0" url="features/com.sap.adt.tools.hana.devedition_2.94.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.bw.feature.apco.devedition" version="1.18.23" url="features/com.sap.bw.feature.apco.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.emf.codegen.ui" version="2.9.0.v20180125-1130" url="features/org.eclipse.emf.codegen.ui_2.9.0.v20180125-1130/">
+		</feature>
+		<feature id="org.eclipse.datatools.sqldevtools.results.feature" version="1.14.100.201802212225" url="features/org.eclipse.datatools.sqldevtools.results.feature_1.14.100.201802212225/">
+		</feature>
+		<feature id="com.sap.ide.support.feature" version="1.14.1" url="features/com.sap.ide.support.feature_1.14.1/">
+		</feature>
+		<feature id="com.sap.ndb.studio.dbdev.feature" version="2.3.39" url="features/com.sap.ndb.studio.dbdev.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.adt.pitools" version="1.87.0" url="features/com.sap.adt.pitools_1.87.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.rse.core" version="3.7.2.201610260947" url="features/org.eclipse.rse.core_3.7.2.201610260947/">
+		</feature>
+		<feature id="org.eclipse.m2e.wtp.feature" version="1.4.0.20180606-2005" url="features/org.eclipse.m2e.wtp.feature_1.4.0.20180606-2005/" plugin-identifier="org.eclipse.m2e.wtp">
+		</feature>
+		<feature id="com.sap.ndb.studio.dwb.dt.roles.feature" version="2.3.39" url="features/com.sap.ndb.studio.dwb.dt.roles.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.datatools.sqltools.doc.user" version="1.14.100.201802022135" url="features/org.eclipse.datatools.sqltools.doc.user_1.14.100.201802022135/">
+		</feature>
+		<feature id="org.eclipse.jst.server_userdoc.feature" version="3.3.300.v201802152148" url="features/org.eclipse.jst.server_userdoc.feature_3.3.300.v201802152148/">
+		</feature>
+		<feature id="org.eclipse.emf.mapping" version="2.10.0.v20180125-1130" url="features/org.eclipse.emf.mapping_2.10.0.v20180125-1130/">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.feature" version="3.14.0.v20180306-0429" url="features/org.eclipse.ecf.filetransfer.feature_3.14.0.v20180306-0429/">
+		</feature>
+		<feature id="org.eclipse.jst.enterprise_core.feature" version="3.10.0.v201803082036" url="features/org.eclipse.jst.enterprise_core.feature_3.10.0.v201803082036/">
+		</feature>
+		<feature id="org.eclipse.epp.logging.aeri.feature" version="2.0.7.v20170906-1327" url="features/org.eclipse.epp.logging.aeri.feature_2.0.7.v20170906-1327/">
+		</feature>
+		<feature id="org.eclipse.wst.json_core.feature" version="1.1.2.v201804162113" url="features/org.eclipse.wst.json_core.feature_1.1.2.v201804162113/">
+		</feature>
+		<feature id="com.sap.bw.feature.alvl" version="1.18.23" url="features/com.sap.bw.feature.alvl_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.jst.server_core.feature" version="3.4.300.v201802202048" url="features/org.eclipse.jst.server_core.feature_3.4.300.v201802202048/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.user.ui" version="2.4.0.v20180515-1348" url="features/org.eclipse.equinox.p2.user.ui_2.4.0.v20180515-1348/">
+		</feature>
+		<feature id="org.eclipse.mylyn.monitor" version="3.24.0.v20170629-1728" url="features/org.eclipse.mylyn.monitor_3.24.0.v20170629-1728/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="org.eclipse.userstorage" version="1.1.0.v20170526-1605" url="features/org.eclipse.userstorage_1.1.0.v20170526-1605/">
+		</feature>
+		<feature id="com.sap.bw.feature.dmod" version="1.18.23" url="features/com.sap.bw.feature.dmod_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.ibm.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.ibm.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.ibm">
+		</feature>
+		<feature id="com.sap.ndb.studio.federation.feature" version="2.3.39" url="features/com.sap.ndb.studio.federation.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.wst.web_core.feature" version="3.10.0.v201805022129" url="features/org.eclipse.wst.web_core.feature_3.10.0.v201805022129/">
+		</feature>
+		<feature id="com.sap.ui5.uilib.feature" version="1.56.0" url="features/com.sap.ui5.uilib.feature_1.56.0/" plugin-identifier="com.sap.ui5.branding">
+		</feature>
+		<feature id="de.jcup.egradle.eclipse.feature" version="2.5.0" url="features/de.jcup.egradle.eclipse.feature_2.5.0/" plugin-identifier="de.jcup.egradle.eclipse.plugin.branding">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.oda.feature" version="1.14.100.201802061455" url="features/org.eclipse.datatools.enablement.oda.feature_1.14.100.201802061455/" plugin-identifier="org.eclipse.datatools.enablement.oda.xml">
+		</feature>
+		<feature id="org.eclipse.datatools.common.doc.user" version="1.14.100.201802022135" url="features/org.eclipse.datatools.common.doc.user_1.14.100.201802022135/">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.httpclient4.feature" version="3.14.0.v20180301-0132" url="features/org.eclipse.ecf.filetransfer.httpclient4.feature_3.14.0.v20180301-0132/">
+		</feature>
+		<feature id="org.eclipse.jst.webpageeditor.feature" version="2.9.0.v201803271721" url="features/org.eclipse.jst.webpageeditor.feature_2.9.0.v201803271721/">
+		</feature>
+		<feature id="com.sap.it.ide.commons.api.feature" version="2.42.0" url="features/com.sap.it.ide.commons.api.feature_2.42.0/">
+		</feature>
+		<feature id="com.sap.ide.ui5.app.feature.external" version="1.56.1" url="features/com.sap.ide.ui5.app.feature.external_1.56.1/" plugin-identifier="com.sap.ide.ui5.app.plugin">
+		</feature>
+		<feature id="org.eclipse.libra.facet.feature" version="0.3.1.201609011955" url="features/org.eclipse.libra.facet.feature_0.3.1.201609011955/">
+		</feature>
+		<feature id="org.eclipse.emf.codegen" version="2.13.0.v20180319-0813" url="features/org.eclipse.emf.codegen_2.13.0.v20180319-0813/">
+		</feature>
+		<feature id="com.sap.idm.dev-ui-feature" version="8.6.12" url="features/com.sap.idm.dev-ui-feature_8.6.12/">
+		</feature>
+		<feature id="org.eclipse.jpt.common.feature" version="1.5.100.v201803012210" url="features/org.eclipse.jpt.common.feature_1.5.100.v201803012210/" plugin-identifier="org.eclipse.jpt.common.branding">
+		</feature>
+		<feature id="com.sap.ndb.studio.sdk.feature" version="2.3.39" url="features/com.sap.ndb.studio.sdk.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="com.sap.ndb.studio.mrjobs.editor.feature" version="2.3.39" url="features/com.sap.ndb.studio.mrjobs.editor.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.ecf.core.ssl.feature" version="1.1.100.v20180301-0201" url="features/org.eclipse.ecf.core.ssl.feature_1.1.100.v20180301-0201/">
+		</feature>
+		<feature id="org.eclipse.buildship" version="2.2.1.v20180125-1441" url="features/org.eclipse.buildship_2.2.1.v20180125-1441/" plugin-identifier="org.eclipse.buildship.branding">
+		</feature>
+		<feature id="com.sap.bw.feature.hcpr" version="1.18.23" url="features/com.sap.bw.feature.hcpr_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.adt.core" version="2.94.7" url="features/com.sap.adt.core_2.94.7/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="de.jcup.egradle.eclipse.feature.junit" version="2.5.0" url="features/de.jcup.egradle.eclipse.feature.junit_2.5.0/" plugin-identifier="de.jcup.egradle.eclipse.plugin.branding">
+		</feature>
+		<feature id="org.eclipse.datatools.sqldevtools.ddl.feature" version="1.14.100.201801250000" url="features/org.eclipse.datatools.sqldevtools.ddl.feature_1.14.100.201801250000/">
+		</feature>
+		<feature id="org.eclipse.jst.ws.jaxws.feature" version="1.2.400.v201806042237" url="features/org.eclipse.jst.ws.jaxws.feature_1.2.400.v201806042237/" plugin-identifier="org.eclipse.jst.ws.jaxws.core">
+		</feature>
+		<feature id="org.eclipse.mylyn.commons.repositories" version="1.16.0.v20170629-1728" url="features/org.eclipse.mylyn.commons.repositories_1.16.0.v20170629-1728/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="org.eclipse.recommenders.rcp.feature" version="2.5.3.v20180609-1554" url="features/org.eclipse.recommenders.rcp.feature_2.5.3.v20180609-1554/" plugin-identifier="org.eclipse.recommenders.rcp">
+		</feature>
+		<feature id="com.sap.adt.tools.cds.modeler" version="2.94.0" url="features/com.sap.adt.tools.cds.modeler_2.94.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.adt.tools.ddic" version="2.94.0" url="features/com.sap.adt.tools.ddic_2.94.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.ide.opendocument.feature" version="2.90.0" url="features/com.sap.ide.opendocument.feature_2.90.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.wst.web_userdoc.feature" version="3.10.0.v201804190136" url="features/org.eclipse.wst.web_userdoc.feature_3.10.0.v201804190136/">
+		</feature>
+		<feature id="com.sap.adt.datatools" version="1.87.0" url="features/com.sap.adt.datatools_1.87.0/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="org.eclipse.help" version="2.2.200.v20180611-0500" url="features/org.eclipse.help_2.2.200.v20180611-0500/" plugin-identifier="org.eclipse.help.base">
+		</feature>
+		<feature id="org.eclipse.platform" version="4.8.0.v20180611-0656" url="features/org.eclipse.platform_4.8.0.v20180611-0656/">
+		</feature>
+		<feature id="org.eclipse.rcp" version="4.8.0.v20180611-0656" url="features/org.eclipse.rcp_4.8.0.v20180611-0656/">
+		</feature>
+		<feature id="org.eclipse.wst.xml_ui.feature" version="3.10.0.v201804210200" url="features/org.eclipse.wst.xml_ui.feature_3.10.0.v201804210200/" plugin-identifier="org.eclipse.wst.xml.ui">
+		</feature>
+		<feature id="org.eclipse.m2e.wtp.jpa.feature" version="1.4.0.20180606-2005" url="features/org.eclipse.m2e.wtp.jpa.feature_1.4.0.20180606-2005/" plugin-identifier="org.eclipse.m2e.wtp.jpa">
+		</feature>
+		<feature id="org.eclipse.jst.common.fproj.enablement.jdt" version="3.10.0.v201803201710" url="features/org.eclipse.jst.common.fproj.enablement.jdt_3.10.0.v201803201710/" plugin-identifier="org.eclipse.jst.common.project.facet.core">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.msft.feature" version="1.14.100.201801242337" url="features/org.eclipse.datatools.enablement.msft.feature_1.14.100.201801242337/" plugin-identifier="org.eclipse.datatools.enablement.finfo">
+		</feature>
+		<feature id="org.eclipse.wst.jsdt.feature" version="2.1.1.v201804042202" url="features/org.eclipse.wst.jsdt.feature_2.1.1.v201804042202/" plugin-identifier="org.eclipse.wst.jsdt.ui">
+		</feature>
+		<feature id="com.sap.bw.feature.dmod.devedition" version="1.18.23" url="features/com.sap.bw.feature.dmod.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.it.op.cockpit.ui.feature" version="2.42.0" url="features/com.sap.it.op.cockpit.ui.feature_2.42.0/" plugin-identifier="com.sap.it.op.cockpit.ui">
+		</feature>
+		<feature id="com.sap.bw.feature.infoarea.devedition" version="1.18.23" url="features/com.sap.bw.feature.infoarea.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.xtext.ui" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.ui_2.10.0.v201605250459/">
+		</feature>
+		<feature id="com.sap.bw.feature.hana" version="1.18.23" url="features/com.sap.bw.feature.hana_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="com.sap.bw.feature.adso.devedition" version="1.18.23" url="features/com.sap.bw.feature.adso.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.datatools.enablement.sdk.feature" version="1.14.100.201802061819" url="features/org.eclipse.datatools.enablement.sdk.feature_1.14.100.201802061819/" plugin-identifier="org.eclipse.datatools.enablement.finfo">
+		</feature>
+		<feature id="com.sap.adt.tools" version="2.94.4" url="features/com.sap.adt.tools_2.94.4/" plugin-identifier="com.sap.adt.branding">
+		</feature>
+		<feature id="com.sap.ui5.runtime.feature" version="1.56.0" url="features/com.sap.ui5.runtime.feature_1.56.0/" plugin-identifier="com.sap.ui5.branding">
+		</feature>
+		<feature id="org.eclipse.wst.server_adapters.feature" version="3.2.700.v201805181538" url="features/org.eclipse.wst.server_adapters.feature_3.2.700.v201805181538/">
+		</feature>
+		<feature id="com.sap.ndb.studio.dbdev.feature.devedition" version="2.3.39" url="features/com.sap.ndb.studio.dbdev.feature.devedition_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+		<feature id="org.eclipse.datatools.connectivity.feature" version="1.14.100.201802212225" url="features/org.eclipse.datatools.connectivity.feature_1.14.100.201802212225/" plugin-identifier="org.eclipse.datatools.connectivity">
+		</feature>
+		<feature id="org.eclipse.rse.local" version="3.7.0.201610260947" url="features/org.eclipse.rse.local_3.7.0.201610260947/" plugin-identifier="org.eclipse.rse.services.local">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.edit" version="2.10.0.v20180421-0731" url="features/org.eclipse.emf.ecore.edit_2.10.0.v20180421-0731/">
+		</feature>
+		<feature id="com.sap.bw.feature.dtpa" version="1.18.23" url="features/com.sap.bw.feature.dtpa_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.emf.ecore" version="2.14.0.v20180529-1144" url="features/org.eclipse.emf.ecore_2.14.0.v20180529-1144/">
+		</feature>
+		<feature id="org.eclipse.mylyn.bugzilla_feature" version="3.24.0.v20180221-1812" url="features/org.eclipse.mylyn.bugzilla_feature_3.24.0.v20180221-1812/" plugin-identifier="org.eclipse.mylyn.tasks.core">
+		</feature>
+		<feature id="org.eclipse.oomph.setup" version="1.11.0.v20181107-0652" url="features/org.eclipse.oomph.setup_1.11.0.v20181107-0652/">
+		</feature>
+		<feature id="org.eclipse.wst.common_core.feature" version="3.9.1.v201803151712" url="features/org.eclipse.wst.common_core.feature_3.9.1.v201803151712/">
+		</feature>
+		<feature id="com.sap.cloud.tools.eclipse.hana.feature" version="1.35.0" url="features/com.sap.cloud.tools.eclipse.hana.feature_1.35.0/">
+		</feature>
+		<feature id="org.sonatype.m2e.mavenarchiver.feature" version="0.17.2.201606141937-signed-20160830073346" url="features/org.sonatype.m2e.mavenarchiver.feature_0.17.2.201606141937-signed-20160830073346/" plugin-identifier="org.sonatype.m2e.mavenarchiver">
+		</feature>
+		<feature id="com.sap.it.op.base.feature" version="2.42.0" url="features/com.sap.it.op.base.feature_2.42.0/">
+		</feature>
+		<feature id="com.sap.bw.feature.charrel.devedition" version="1.18.23" url="features/com.sap.bw.feature.charrel.devedition_1.18.23/" plugin-identifier="com.sap.bw.branding">
+		</feature>
+		<feature id="org.eclipse.jst.enterprise_userdoc.feature" version="3.6.0.v201802141513" url="features/org.eclipse.jst.enterprise_userdoc.feature_3.6.0.v201802141513/">
+		</feature>
+		<feature id="com.sap.ndb.studio.hampton.feature" version="2.3.39" url="features/com.sap.ndb.studio.hampton.feature_2.3.39/" plugin-identifier="com.sap.ndb.studio">
+		</feature>
+	</site>
+</config>

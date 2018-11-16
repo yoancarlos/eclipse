@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Decoder/version::1.0.1" ComponentName="sap:Decoder" UIElementType="Flowstep" IsExtension="false" IsFinal="true" IsPreserves="false">
+    <Variant VariantId="ctype::FlowstepVariant/cname::GZIP Decompress/version::1.0.1" VariantDisplayName="GZIP Decompress" VariantName="GZIP Decompress" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>GZip</ContentType>
+                <Schema />
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema />
+            </Content>
+        </OutputContent>
+        <AllowedHeaders />
+        <ReferencedComponents />
+    </Variant>
+</ComponentMetadata>

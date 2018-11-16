@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=9762563502788961"/>
+<title>Cloning Initial Branches of Git Repository into Eclipse Workspace</title>
+</head>
+<body class="" id="loioeaa01ea74c7f49c5a7db62f8f4a19717">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Cloning Initial Branches of Git Repository into Eclipse Workspace</h1>
+<div class="body taskbody"><p class="shortdesc"/>
+<div class="section context" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div> You perform this task to clone the
+			&lt;TenantID&gt;_Dev / &lt;TenantID&gt;_Test branch of the Git Repository in the local
+			Eclipse workspace so that you can start developing the integration content. The SaaS
+			Admin may either give you url of the project portal or Git Repository link that looks
+			like ssh://&lt;I/D user&gt;@git.wdf.sap.corp:29418/&lt;project&gt;.git</div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N1001F_N1001C_N10011_N10001"><span class="ph cmd">If the SaaS Admin has provided you with the URL of the project for the Git Repository,
+					perform the steps below:</span> This URL is the web link to the SAP Project Portal page which contains the
+					details of the new Git Repository. <ol type="a" class="ol substeps" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__substeps_mkw_ccq_1j"><li class="li substep substepexpand"><span class="ph cmd">Click on the web URL to open the SAP Project Poral page in the web
+							browser.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">In the <span class="keyword uilabel">SAP Project</span> portal, under the <span class="keyword uilabel">Development
+								Information</span> section, copy the Git Repository link to
+							clipboard by clicking on <img class="image" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__image_qk2_d2y_mj" src="84903c54e87f493e8c18d211c6cb5441.image" alt="CopytoClipboard_FSN" title="CopytoClipboard_FSN"/>(<em class="ph i">Copy to Clipboard</em> icon) at the end of the URI.</span> 
+							<div class="note note" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__note_N10047_N10044_N10029_N10019_N10011_N10001"><span class="notetitle">Note</span> Example of an
+								URI: <em class="ph i">ssh://&lt;I/D
+									user&gt;@git.wdf.sap.corp:29418/&lt;project&gt;</em>.git</div>
+
+						</li>
+</ol>
+</li>
+<li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N10025_N10019_N10011_N10001"><span class="ph cmd">If the SaaS Admin has provided you directly the URI of the Git Repository that
+					looks like <em class="ph i">ssh://&lt;I/D user&gt;@git.wdf.sap.corp:29418/&lt;project&gt;</em>,
+					copy it to your clipboard.</span></li>
+<li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N1004D_N10019_N10011_N10001"><span class="ph cmd"> Switch back to Eclipse IDE. </span></li>
+<li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N10056_N10019_N10011_N10001"><span class="ph cmd">In the main toolbar, choose <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Window </span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Open Perspective </span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Others...</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span></li>
+<li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N1006F_N10019_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Open Perspective</span> dialog, select <span class="keyword uilabel">Git
+						Repository Exploring</span>.</span></li>
+<li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N10080_N10019_N10011_N10001"><span class="ph cmd"> From the toolbar of the <span class="keyword uilabel">Git Repositories</span> view, choose <img class="image" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__image_wjb_32y_mj" src="691976e9da79469386bf806b548792ba.image" alt="CloneGitRepo" title="CloneGitRepo"/>( <em class="ph i">Clone a Git Repository and add the clone to this
+						view</em> icon).</span></li>
+<li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N100B6_N10019_N10011_N10001"><span class="ph cmd">Choose <span class="ph uicontrol">Next</span>.</span></li>
+<li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N100C3_N10019_N10011_N10001"><span class="ph cmd">In the <span class="ph uicontrol">Local Destination</span> page of the wizard, select the
+					initial branch to work with.</span></li>
+<li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N10098_N10019_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Clone Git Repository</span> dialog, select the
+						<em class="ph i">&lt;TenantID&gt;_Dev</em>/ <em class="ph i">&lt;TenantID&gt;_Test </em>branch from the Git
+					Repository to the cloned repository in your workspace and choose
+						<span class="ph uicontrol">Next</span>. </span></li>
+<li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N100B1_N10019_N10011_N10001"><span class="ph cmd">Check if the location points to &lt;HOME&gt; (your user directory, for example,
+					C:\Users\&lt;SAP_ALL ID&gt;\...\). </span></li>
+<li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N100BA_N10019_N10011_N10001"><span class="ph cmd">Select the <span class="keyword uilabel">Initial Branch</span> as the <em class="ph i">&lt;TenantID&gt;_Dev /
+						&lt;TenantID&gt;_Test</em> branch to work with.</span></li>
+<li class="li step stepexpand" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__step_N100CD_N10019_N10011_N10001"><span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span></li>
+</ol>
+<div class="section result" id="loioeaa01ea74c7f49c5a7db62f8f4a19717__result_N100D2_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div> In the <span class="keyword uilabel">Git Repositories</span> view, you can expand your cloned
+			repository and view that the <em class="ph i">&lt;TenantID&gt;_Dev / &lt;TenantID&gt;_Test</em> branch of the
+			Git Repository is cloned in your workspace.</div></div>
+<div class="related-links"> </div>
+</div></div>
+</body>
+</html>

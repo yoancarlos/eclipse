@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=2813063500311862"/>
+<title>Verifying the XML Digital Signature</title>
+</head>
+<body id="loioe3e2cd3523814d9db4344b9d252b1788">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Verifying the XML Digital Signature</h1>
+<div class="body taskbody"><p class="shortdesc"/>
+<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><div class="p">The XML digital signature verifier validates the XML signature contained in the
+				incoming message body and returns the content that was signed in the outgoing
+				message body. <div class="note note"><span class="notetitle">Note</span> The incoming message body must contain only one XML
+					signature.</div>
+</div>
+<div class="sectiondiv"><strong class="ph b">Working of XML Signature Verifier</strong><p class="p">In
+					the validation process, a public key is required and it is fetched from the
+					worker node keystore. On receiving the XML message, the verifier canonicalizes
+					the data identified by the 'Reference' element and then digests it to give a
+					digest value. The digest value is compared against the digest value available
+					under the 'Reference' element of the incoming message. This helps to ensure that
+					the target elements were not tampered with. </p>
+<p class="p">Then, the digest value of the
+					canonicalized 'SignedInfo' is calculated. The resulting bytes are verified with
+					the signature on the 'SignedInfo' element, using the sender's public key. If
+					both the signature on the 'SignedInfo' element and each of the 'Reference'
+					digest values verify correctly, then the XML signature is valid.</p>
+<div class="note note"><span class="notetitle">Note</span> XML
+					signature verifier supports both enveloping and enveloped
+						signatures.</div>
+<div class="p"><strong class="ph b">Verifying Enveloping Signature</strong>: If the incoming
+					message has enveloping signature <ul class="ul" id="loioe3e2cd3523814d9db4344b9d252b1788__ul_d3w_chw_vk"><li class="li">An optional 'Reference' to the optional 'KeyInfo' element via ID is
+							supported</li>
+<li class="li">'References' can have one optional transform whose algorithm must be a
+							canonicalization method</li>
+</ul>
+So it implies, an enveloping XML signature with only the following
+					structure is supported ("?" denotes zero or one occurrence, the brackets []
+					denotes variables whose values can vary). </div>
+<div class="p">
+					<pre class="pre codeblock">&lt;Signature&gt;
+      &lt;SignedInfo&gt;
+             &lt;CanonicalizationMethod&gt;
+             &lt;SignatureMethod&gt;
+             &lt;Reference URI="#[object_id]"&gt;
+                    (&lt;Transform Algorithm=[canonicalization method]/&gt;)?
+                   &lt;DigestMethod&gt;
+                   &lt;DigestValue&gt;
+             &lt;/Reference&gt;
+             (&lt;Reference URI="#[keyinfo_id]"&gt;
+                   (&lt;Transform Algorithm=[canonicalization method]/&gt;)?
+                   &lt;DigestMethod&gt;
+                   &lt;DigestValue&gt;
+             &lt;/Reference&gt;)?
+      &lt;/SignedInfo&gt;
+      &lt;SignatureValue&gt;
+      (&lt;KeyInfo (Id="[keyinfo_id]")?&gt;)?
+      &lt;Object Id="[object_id]"/&gt;
+&lt;/Signature&gt;
+</pre>
+
+				</div>
+<div class="p"><strong class="ph b">Verifying Enveloped Signature</strong>: If the incoming message has enveloped
+					signature <ul class="ul" id="loioe3e2cd3523814d9db4344b9d252b1788__ul_tcd_g3w_vk"><li class="li">One reference with empty URI and an optional reference to the KeyInfo
+							element via its ID is allowed</li>
+<li class="li">An additional transform containing a canonicalization method is
+							supported, beside the transform with algorithm
+							"http://www.w3.org/2000/09/xmldsig#enveloped-signature". </li>
+</ul>
+So it implies, an enveloped XML signature with only the following structure
+					is supported ("?" denotes zero or one occurrence, the brackets [] denotes
+					variables whose values can vary).
+					<pre class="pre codeblock">&lt;[parent]&gt;
+       &lt;Signature&gt;
+           &lt;SignedInfo&gt;
+             &lt;CanonicalizationMethod&gt;
+             &lt;SignatureMethod&gt;
+             &lt;Reference URI=""&gt;
+                    &lt;Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/&gt;
+                    (&lt;Transform Algorithm="[canonicalization method]"/&gt;)?
+                   &lt;DigestMethod&gt;
+                   &lt;DigestValue&gt;
+             &lt;/Reference&gt;
+             (&lt;Reference URI="#[keyinfo_id]"&gt;
+                   (&lt;Transform Algorithm="[canonicalization method]"/&gt;)?
+                   &lt;DigestMethod&gt;
+                   &lt;DigestValue&gt;
+             &lt;/Reference&gt;)?
+           &lt;/SignedInfo&gt;
+           &lt;SignatureValue&gt;
+           (&lt;KeyInfo (Id="[keyinfo_id]")?&gt;)?
+       &lt;/Signature&gt;
+&lt;/[parent]&gt;
+</pre>
+</div>
+</div></div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loioe3e2cd3523814d9db4344b9d252b1788__steps_cjt_5rs_vk"><li class="li step"><span class="ph cmd"> In the <span class="keyword uilabel">Model Configuration</span> editor, select
+						<span class="keyword uilabel">Verifier</span> element and from the context menu, select
+						<span class="keyword uilabel">Switch to XML Signature Verifier</span> option.</span></li>
+<li class="li step"><span class="ph cmd">In the <span class="keyword uilabel">XML Signature Verifier</span> tab page, enter the parameters
+					to verify XML digital signature for the incoming message.</span></li>
+<li class="li step"><span class="ph cmd">Save the changes.</span></li>
+</ol>
+</div>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="Examples and Special Cases of JSON Message without Root Element Tag"/>
+<meta name="description" content="Examples and Special Cases of JSON Message without Root Element Tag"/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Example: Transformation to a JSON Message without Root Element Tag</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioe8e0fff0280c4ddb8359e198a2c20c8c">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Example: Transformation to a JSON Message without Root Element Tag</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc">Examples and Special Cases of JSON Message without Root Element Tag</p>
+
+		<p class="p">The following examples apply to XML-to-JSON conversion:</p>
+
+		<div class="example"><h2 class="exampletitle">Example</h2>
+			<p class="p">The following example shows the transformation from <span class="ph uicontrol">XML to
+					JSON</span> (option <span class="ph uicontrol">Suppress JSON Root Element</span> is
+				selected). </p>
+
+			<p class="p">Input XML Message</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;root&gt;
+			&lt;A&gt;a&lt;/A&gt;
+			&lt;B&gt;b&lt;/B&gt;
+			&lt;C&gt;c&lt;/C&gt;
+			&lt;D&gt;d&lt;/D&gt;
+	&lt;/root&gt;</pre></div>
+
+			<p class="p">Output JSON Message</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">
+{              
+
+   "A": "a",
+
+   "B": "b",
+
+   "C": "c",
+
+   "D": "d"               
+
+}
+
+</pre></div>
+
+			<p class="p"><span class="ph emphasis emphasis">Special Cases</span></p>
+
+			<p class="p">Input XML Message: Root Element with Simple Value</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;root&gt;v&lt;/root&gt;
+			</pre></div>
+
+			<p class="p">Output JSON Message</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">"v"
+			</pre></div>
+
+			<p class="p">Input XML Message: Root Element with no Value</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;root&gt;&lt;/root&gt;
+			</pre></div>
+
+			<p class="p">Output JSON Message</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">""
+			</pre></div>
+
+			<p class="p">Input XML Message: Root Element with Simple Value (options <span class="ph uicontrol">Suppress JSON Root
+					Element, Steaming All</span> are selected)</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;root&gt;&lt;A&gt;a&lt;A&gt;&lt;B&gt;&lt;C&gt;c&lt;/C&gt;&lt;/B&gt;&lt;/root&gt;
+			</pre></div>
+
+			<p class="p">Output JSON Message</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">
+{"A":["a"],"B":[{"C":["c"]}]}
+
+with dropRootElement=false
+
+{"root":{["A":["a"],"B":[{"C":["c"]}]]}}
+			</pre></div>
+
+		</div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

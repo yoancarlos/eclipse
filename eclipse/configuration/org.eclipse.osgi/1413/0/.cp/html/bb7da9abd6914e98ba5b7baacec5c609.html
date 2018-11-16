@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Assigning Mapping</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiobb7da9abd6914e98ba5b7baacec5c609">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Assigning Mapping</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p" id="loiobb7da9abd6914e98ba5b7baacec5c609__prereq_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<ul class="ul" id="loiobb7da9abd6914e98ba5b7baacec5c609__ul_irf_c1n_gj">
+				<li class="li">
+					<p class="p">You have configured the connections to an On-Premise repository if you have
+						to import mapping from that repository into the workspace.</p>
+
+					<div class="note note" id="loiobb7da9abd6914e98ba5b7baacec5c609__note_N10023_N1001C_N10018_N10014_N10011_N10001"><span class="notetitle">Note</span> 
+						<p class="p">For more information on setting the connections to the repository, see
+							the task 'Setting the Connections to the External Repository' in <a class="xref" href="a924f6ee11704baab9a14fc70f49642b.html" title="You can make specific settings for SAP Cloud Platform Integration in the Eclipse Preferences.">Configuring the Tool
+								Settings</a>. You can import message mappings (.mmap) from ES
+							Repository with server version 7.1 onwards, and operation mapping from
+							ES Repository with server version 7.3 EHP1 SP3 .</p>
+
+					</div>
+
+				</li>
+
+				<li class="li">You have imported the mappings to your local workspace from the On-Premise
+					repository. <div class="note note" id="loiobb7da9abd6914e98ba5b7baacec5c609__note_N10035_N10032_N10018_N10014_N10011_N10001"><span class="notetitle">Note</span> 
+						<p class="p">For more information about how to import mappings from the ES Repository,
+							see <a class="xref" href="3389dbded8324a6d80221045da9be218.html">Importing SAP
+								NetWeaver PI Objects from On-Premise Repository</a>.</p>
+
+					</div>
+</li>
+
+			</ul>
+
+		</div>
+
+		<div class="section context" id="loiobb7da9abd6914e98ba5b7baacec5c609__context_N10046_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You perform this task to assign a mapping that is available in your local
+				workspace.</p>
+
+			<p class="p">Your local workspace can contain mappings that are already imported from an external
+				repository, such as the ES Repository, or you have obtained them from some other
+				integration project.</p>
+
+			
+			<div class="note caution" id="loiobb7da9abd6914e98ba5b7baacec5c609__note_N1004C_N10046_N10011_N10001"><span class="cautiontitle">Caution</span> You have to be cautious in
+				distributing the mappings imported from ES Repository if they contain any sensitive
+				data. Although you securely import mappings from the repository by providing the
+				user credentials, copying the imported mappings from one Integration Project to
+				another does not require any authorization.</div>
+
+			<p class="p">In an integration flow project, the <span class="ph filepath">src.main.resources.mapping</span>
+				package can contain message mapping (.mmap), operation mapping (.opmap), XSL mapping
+				and XSLT mapping.</p>
+
+			
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loiobb7da9abd6914e98ba5b7baacec5c609__step_N1002D_N1002A_N10011_N10001">
+				<span class="ph cmd">To add a mapping element to an integration flow model, perform the steps below: </span>
+				<ol type="a" class="ol substeps" id="loiobb7da9abd6914e98ba5b7baacec5c609__substeps_qsp_f3m_b3">
+					<li class="li substep">
+						<span class="ph cmd">In the <span class="keyword uilabel">Model Configuration</span> editor, select the sequence flow within the
+							pool.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">From the context menu of the sequence flow, choose <span class="ph uicontrol">Add Message
+								Transformers</span> and then select
+								<span class="ph uicontrol">Mapping</span>. </span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand" id="loiobb7da9abd6914e98ba5b7baacec5c609__step_N10058_N1002A_N10011_N10001">
+				<span class="ph cmd">Select the mapping in the integration flow.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">From the context menu, you can choose one of the mapping options:
+						<span class="ph uicontrol">Assign Mapping</span>, <span class="ph uicontrol">New Message
+						Mapping</span>, <span class="ph uicontrol">Switch to XSLT Mapping</span> or
+						<span class="ph uicontrol">Switch to Operation Mapping</span></span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Open the <span class="keyword uilabel">Properties</span> view. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to assign mapping then execute the following substeps:</span>
+				<ol type="a" class="ol substeps" id="loiobb7da9abd6914e98ba5b7baacec5c609__substeps_uvj_xpw_g5">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">To select a mapping for the integration flow, choose
+								<span class="ph uicontrol">Browse…</span>.</span>
+						<div class="itemgroup info">
+							<div class="note note"><span class="notetitle">Note</span> You can assign an operation mapping only if the sender and
+								receiver channel is configured with SOAP adapters.</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="keyword uilabel">Choose Mapping</span> dialog, choose the dropdown
+							icon and select <span class="keyword uilabel">Local</span> to obtain the mapping.</span>
+						<div class="itemgroup info">
+							<div class="note note" id="loiobb7da9abd6914e98ba5b7baacec5c609__note_N100BA_N100B7_N100A3_N1004A_N10011_N10001"><span class="notetitle">Note</span> <strong class="ph b">Local</strong>
+								option shows mapping of different types, such as message mapping
+								(.mmap), operation mapping (.opmap), XSL mapping and XSLT mapping,
+								available within the current project.</div>
+
+							
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Select a mapping. </span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <span class="ph uicontrol">OK</span>.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<div class="note note"><span class="notetitle">Note</span>  XSLT Mapping version 1.1 supports functions to set header, exchange
+					properties and access partner directory. You can set header and property as
+					shown in the example below.</div>
+
+				<div class="note sap-samplecodeblock samplecode"><span class="samplecodetitle">Sample Code</span> 
+					<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet version="2.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:hci="http://sap.com/it/"
+    exclude-result-prefixes="hci"&gt;
+ 
+    &lt;xsl:param name="exchange"/&gt;
+ 
+    &lt;xsl:output method="xml" encoding="UTF-8" indent="no" /&gt;
+ 
+    &lt;xsl:template match="/"&gt;
+        &lt;xsl:value-of select="hci:setHeader($exchange, 'myname', 'myvalue')"/&gt;
+        &lt;xsl:value-of select="hci:setProperty($exchange, 'myname', 'myvalue')"/&gt;
+        &lt;Test1/&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</pre></div>
+
+					<p class="p">Here the header/property name is <span class="ph uicontrol">myname</span> and value is
+							<span class="ph uicontrol">myvalue</span>.</p>
+
+				</div>
+
+				<span class="ph cmd">Execute the following substeps for XSLT mapping version 1.1:</span>
+				<ol type="a" class="ol substeps" id="loiobb7da9abd6914e98ba5b7baacec5c609__substeps_eb4_yqw_g5">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">From the context menu, choose <span class="ph uicontrol">Switch to XSLT
+								Mapping</span>.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Properties</span> view, select either
+								<span class="ph uicontrol">Integration Flow</span> or
+								<span class="ph uicontrol">Header</span> as source for the mapping.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you select header as source, then enter name for the header in the
+								<span class="ph uicontrol">Header Name</span> field. </span>
+						<div class="itemgroup info">
+							<div class="p">
+								<div class="note note"><span class="notetitle">Note</span> To assign xslt mapping for partner directory, the valid format
+									for value of header name is <kbd class="ph userinput">pd:&lt;Partner
+										ID&gt;:&lt;Parameter ID&gt;:&lt;Parameter
+										Type&gt;</kbd>, where the parameter type is either
+									binary or string. For example, the correct header name is
+										<span class="ph emphasis emphasis">pd:SenderABC:SenderXSD:Binary</span>.</div>
+
+							</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <span class="ph uicontrol">OK</span>.</span>
+					</li>
+
+				</ol>
+
+				<div class="itemgroup info">
+					<div class="note note" id="loiobb7da9abd6914e98ba5b7baacec5c609__note_N100DE_N100DC_N100D1_N1004A_N10011_N10001"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loiobb7da9abd6914e98ba5b7baacec5c609__ul_ag4_v2g_35">
+							<li class="li">To view or modify the definition of message mapping in the mapping
+								editor, click <span class="keyword uilabel">Name</span> in the
+									<span class="keyword uilabel">Properties</span> view. If you have assigned an
+								operation mapping, the navigation to the mapping editor is not
+								supported.</li>
+
+							<li class="li">For XSLT mapping, you can select the output format of the message to
+								be either string or bytes from the <span class="ph uicontrol">Output
+									Format</span> field.</li>
+
+						</ul>
+
+					</div>
+
+					
+				</div>
+				<div class="itemgroup info">
+					<div class="note restriction" id="loiobb7da9abd6914e98ba5b7baacec5c609__note_N1012B_N10128_N1010C_N10054_N10011_N10001"><span class="restrictiontitle">Restriction</span> Message mapping does not work if the integration flow project contains
+						whitespaces.</div>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

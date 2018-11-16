@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="To ensure a successful conversion of you data, you should make yourself familiar with the conversion rules."/>
+<meta name="description" content="To ensure a successful conversion of you data, you should make yourself familiar with the conversion rules."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Conversion Rules for JSON to XML Conversion</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio232a9cf5194d40189a3672a0ef1567c1">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Conversion Rules for JSON to XML Conversion</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc">To ensure a successful conversion of you data, you should make yourself familiar with
+		the conversion rules.</p>
+
+		<div class="p">The conversion from JSON format to XML format follows the following rules:<ul class="ul">
+				<li class="li">
+                    <p class="p">The value of a complex element (having attributes for example) is represented
+                        by a separate member <samp class="ph codeph">"$":"value"</samp>.</p>
+
+                </li>
+
+				<li class="li">
+                    <p class="p">An element with multiple child elements of the same name is represented by an
+                        array. This also holds if between the children with the same name other
+                        children with another name reside. </p>
+
+                    <p class="p">Example:
+                            <samp class="ph codeph">&lt;root&gt;&lt;childA&gt;A1&lt;/childA&gt;&lt;childB&gt;B&lt;/childB&gt;&lt;childA&gt;A2&lt;/childA&gt;&lt;/root&gt;</samp>
+                        is transformed in the non-streaming case to
+                            <samp class="ph codeph">{"root":{"childA":["A1","A2"],"childB":"B"}}</samp>, which
+                        means that the order of the children is not preserved.</p>
+
+                    <p class="p">In the streaming case, the result is:
+                            <samp class="ph codeph">{"root":{"childA":["A1"],"childB":"B","childA":["A2"]"}}</samp>,
+                        which means that a non-valid JSON document is created because the member
+                            <samp class="ph codeph">"childA" </samp>appears twice. </p>
+
+                </li>
+
+				<li class="li">
+                    <p class="p">An element with no characters or child elements is represented by
+                            <samp class="ph codeph">"element" : ""</samp>
+                    </p>
+
+                </li>
+
+				<li class="li">
+                    <p class="p">An attribute is represented as JSON member whose name is the concatenation of
+                            <samp class="ph codeph">'@'</samp> , the JSON prefix corresponding to the XML
+                        namespace, JSON delimiter, and the attribute name. If the attribute has no
+                        namespace, no prefix and JSON delimiter are added to the JSON name. </p>
+
+                </li>
+
+				<li class="li">
+                    <p class="p">An element is represented as JSON member whose name is the concatenation of
+                        JSON prefix corresponding to the XML namespace, JSON delimiter, and the
+                        element name. If the element has no namespace, no prefix and JSON delimiter
+                        is added to the JSON name.</p>
+
+                </li>
+
+				<li class="li">
+					<p class="p">A member with JSON null value is transformed to empty element; example:
+							<samp class="ph codeph">"C":null</samp> is converted to <samp class="ph codeph">&lt;C/&gt;</samp>.
+					</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">Conversion of <samp class="ph codeph">"@attr":null</samp> to XML is not supported (you get
+						a NullPointerException, since cluster version 1.21 you get a
+						JsonXmlException). </p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">The result XML document is encoded in UTF-8 and gets the XML header
+							<samp class="ph codeph">"&lt;?xml version='1.0' encoding='UTF-8'?&gt;"</samp>. </p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">The content of the XML-Namespace-to-JSON-Prefix map is transformed to
+						namespace prefix declarations on the root element. </p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">If for a JSON prefix no XML Namespace is defined, then the full member name
+						with the prefix and JSON delimiter is set as element name:
+							<samp class="ph codeph">"p.A"</samp> leads to <samp class="ph codeph">&lt;p.A&gt;</samp>.</p>
+
+				</li>
+
+			</ul>
+</div>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="5a7c0cd2a3e8497c89ffcda41787477f.html" title="The JSON to XML converter enables you to transform messages in JSON format to XML format.">Define JSON to XML Converter</a></div>
+<div><a class="link" href="778aed733e3140cea0435f4615d53812.html" title="To ensure a successful conversion from XML format to JSON format, you should make yourself familiar with the conversion rules.">Conversion Rules for XML to JSON Conversion</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

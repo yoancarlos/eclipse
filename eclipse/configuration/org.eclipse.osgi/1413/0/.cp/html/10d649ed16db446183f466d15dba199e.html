@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>MIME Multipart Messages</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio10d649ed16db446183f466d15dba199e">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">MIME Multipart Messages</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc"/>
+
+		<p class="p"/>
+
+		<div class="section"><p class="p">A Multipurpose Internet Mail Extensions (MIME)
+                multipart message allows you to combine different kinds of content in one message
+                (for example, plain text and attachments). </p>
+<p class="p">To mention a use case, if you want
+                to send a message with attachments, but the protocol (for example, HTTP or SFTP)
+                does not support attachments, you can send the message as a MIME multipart
+                instead.</p>
+<div class="sectiondiv">
+                <p class="p">With a multipart subtype you can specify how the different content types are
+                    combined as MIME multipart message. The property <span class="ph uicontrol">Multipart
+                        Subtype</span> in the <span class="ph uicontrol">Encoder</span> step allows you to
+                    specify the Content-Type property of the MIME message. For more information on
+                    the different options for <span class="ph uicontrol">Multipart Subtype</span>, refer to the
+                    general definition of the Multipart Content-Type.</p>
+
+                <p class="p">An input message for the MIME Multipart <span class="ph uicontrol">Encoder</span> step
+                    doesn’t have to be composed in a specific way. </p>
+
+                <p class="p">An inbound message for a MIME Multipart <span class="ph uicontrol">Decoder</span> step has
+                    to be a MIME multipart message. Hereby, the multipart headers can either be
+                    stored as Camel headers or as part of the message body.</p>
+
+            </div><div class="sectiondiv"> </div></div>
+
+		<div class="section"><div class="section_title">Usage of Dynamic Headers</div><div type="Usage of Dynamic Headers"><p class="p">You have the option to dynamically (based on the content of the
+                processed message) add custom headers to a MIME multipart message. Do enable this
+                option, you have to activate <span class="ph uicontrol">Add Multipart Header Inline</span>. In
+                that case, the option <span class="ph uicontrol">Include Headers</span> is displayed.</p>
+<p class="p">You
+                can now enter regular expressions for the headers which are to be added dynamically.
+                With such regular expressions (regex), you can define placeholders for the custom
+                headers:</p>
+<div class="note tip"><span class="tiptitle">Tip</span> 
+                <p class="p">Example:</p>
+
+                <p class="p">When you enter for <span class="ph uicontrol">Include Headers</span> the string
+                        <kbd class="ph userinput">(x-.*|myAdditionalHeader)</kbd>, all headers that start
+                    with <kbd class="ph userinput">x-</kbd> and the header
+                        <kbd class="ph userinput">myAdditionalHeader</kbd> are added dynamically.</p>
+
+            </div>
+<div class="sectiondiv">
+                <p class="p"><span class="ph emphasis emphasis">MIME Multipart Encoder</span></p>
+
+                <p class="p">The following table summarizes how the <span class="ph uicontrol">Encoder</span> step
+                    transforms the message depending on whether you select or deselect the option
+                        <span class="ph uicontrol">Add Multipart Header Inline</span>. </p>
+
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loio10d649ed16db446183f466d15dba199e__d475e95" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Encoder: Add Multipart Header Inline Option</span></caption>
+<colgroup><col width="25.510204081632654%"/><col width="74.48979591836735%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="25.510204081632654%" id="d166920e114">
+                                    <p class="p">Add Multipart Header Inline</p>
+
+                                </th>
+
+                                <th class="entry" valign="top" width="74.48979591836735%" id="d166920e120">
+                                    <p class="p">Description</p>
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="25.510204081632654%" headers="d166920e114 ">
+                                    <p class="p">Selected</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="74.48979591836735%" headers="d166920e120 ">
+                                    <p class="p">The Encoder transforms the inbound message into a new message
+                                        where the message body (of the resulting message) is a MIME
+                                        multipart message with headers. </p>
+
+                                    <p class="p">Body and attachments (if available) of the inbound message
+                                        will be added as separate parts of the multipart message.
+                                        The attachments are removed from the resulting message. </p>
+
+                                    <p class="p">Note that the message will also always be transformed into a
+                                        MIME multipart message, regardless whether it contains
+                                        attachments or not.</p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="25.510204081632654%" headers="d166920e114 ">
+                                    <p class="p">Deselected</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="74.48979591836735%" headers="d166920e120 ">
+                                    <p class="p">The following cases can occur:</p>
+
+                                    <ul class="ul" id="loio10d649ed16db446183f466d15dba199e__d475e160">
+                                        <li class="li">
+                                            <p class="p">The inbound message has attachments: Encoder
+                                                transforms message body and attachments of the
+                                                inbound message into a MIME multipart message. The
+                                                headers of the multipart message will be added as
+                                                Camel headers. The message body will be replaced by
+                                                the rest of the message. </p>
+
+                                        </li>
+
+                                        <li class="li">
+                                            <p class="p">The inbound message has no attachments: Encoder does
+                                                not change the inbound message.</p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+                <p class="p">The following figures illustrate how the property <span class="ph uicontrol">Add Multipart Header
+                        Inline</span> influences the processing of the message.</p>
+
+                <div class="fig fignone" id="loio10d649ed16db446183f466d15dba199e__d475e186"><div class="figcontainer">
+                    
+                    <img class="image" id="loio10d649ed16db446183f466d15dba199e__d475e193" src="loio5da7b8ca04fe4e30bbdf559dd76392e4_LowRes.png"/>
+                <div class="figcap">Figure 1: <span class="ph uicontrol">Add Multipart Header Inline</span> selected</div></div></div>
+
+                <div class="fig fignone" id="loio10d649ed16db446183f466d15dba199e__d475e197"><div class="figcontainer">
+                    
+                    <img class="image" id="loio10d649ed16db446183f466d15dba199e__d475e204" src="loiod2417ef1b0b1449791ec05e19c2b1ec4_LowRes.png"/>
+                <div class="figcap">Figure 2: <span class="ph uicontrol">Add Multipart Header Inline</span> deselected</div></div></div>
+
+            </div><div class="sectiondiv">
+                <p class="p"><span class="ph emphasis emphasis">MIME Multipart Decoder</span></p>
+
+                <p class="p">The following table summarizes how the <span class="ph uicontrol">Decoder</span> step
+                    transforms the message depending on whether you select or deselect the option
+                        <span class="ph uicontrol">Multipart Headers Inline</span>.</p>
+
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loio10d649ed16db446183f466d15dba199e__d475e222" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Decoder: Multipart Headers Inline Option</span></caption>
+<colgroup><col width="25.510204081632654%"/><col width="74.48979591836735%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="25.510204081632654%" id="d166920e241">
+                                    <p class="p">Multipart Headers Inline</p>
+
+                                </th>
+
+                                <th class="entry" valign="top" width="74.48979591836735%" id="d166920e247">
+                                    <p class="p">Description</p>
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="25.510204081632654%" headers="d166920e241 ">
+                                    <p class="p">Selected</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="74.48979591836735%" headers="d166920e247 ">
+                                    <p class="p">The Decoder transforms the first part of the multipart
+                                        message into the message body of the resulting message and
+                                        the following parts (if available) will be transformed into
+                                        attachments of the resulting message. </p>
+
+                                    <p class="p">In case the inbound message is, other than expected, no MIME
+                                        multipart message with inline headers, the complete message
+                                        body is interpreted as a preamble of the MIME multipart, and
+                                        the resulting message is empty. </p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="25.510204081632654%" headers="d166920e241 ">
+                                    <p class="p">Deselected</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="74.48979591836735%" headers="d166920e247 ">
+                                    <p class="p">The following cases can occur:</p>
+
+                                    <ul class="ul" id="loio10d649ed16db446183f466d15dba199e__d475e284">
+                                        <li class="li">
+                                            <p class="p">The inbound message either doesn’t contain the
+                                                multipart header as Camel header or the Content-Type
+                                                is no multipart, the Decoder step doesn’t change the
+                                                inbound message. </p>
+
+                                        </li>
+
+                                        <li class="li">
+                                            <p class="p">In all other cases, the header of the inbound message
+                                                will be used as header of the multipart message (and
+                                                deleted). The message body of the resulting message
+                                                will be built up out of those parts which are
+                                                contained in the message body (and, if available,
+                                                out of the attachments).</p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div></div></div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

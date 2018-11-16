@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:SuccessFactors/version::1.6.1" ComponentName="sap:SuccessFactors" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" MetadataVersion="2.0">
+	<Variant VariantId="ctype::AdapterVariant/cname::SuccessFactors/tp::HTTP/mp::OData V2/direction::Receiver/version::1.6.1" VariantName="SFSF Odata Receiver" MetadataVersion="2.0">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema/>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema/>
+			</Content>
+		</OutputContent>
+		<Tab id="tabGeneral">
+			<GuiLabels>
+				<Label language="EN">Adapter Specific</Label>
+			</GuiLabels>
+			<AttributeGroup id="channelDetails">
+				<GuiLabels>
+					<Label language="EN">Connection Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>sfsfODataReceiverDataCenterUrl</ReferenceName>
+					<description>SuccessFactors DataCentre using which request is sent to the server</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>address</ReferenceName>
+					<description>Address</description>
+					<Restriction>^(http(s)*://){1}(.)+</Restriction>
+					<ErrorMessage>Enter a valid address. E.g. http(s)://example</ErrorMessage>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>urlSuffixSfOData</ReferenceName>
+					<description>Address Suffix for OData V2 protocol</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>proxyType</ReferenceName>
+					<description>Proxy service using which request is sent to the server</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>proxyHost</ReferenceName>
+					<EditCondition>
+						<AttributeName>proxyType</AttributeName>
+						<AttributeValue>manual</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>proxyPort</ReferenceName>
+					<EditCondition>
+						<AttributeName>proxyType</AttributeName>
+						<AttributeValue>manual</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>alias</ReferenceName>
+					<description>Enter the Credential Name to connect to the SuccessFactors system as deployed in the tenant using Operations Wizard
+					</description>
+				</AttributeReference>
+			</AttributeGroup>
+			<AttributeGroup id="processingDetails">
+				<GuiLabels>
+					<Label language="EN">Processing Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>operation</ReferenceName>
+					<description>Choose Model Operation to specify the Entity,Operation Type, Field List and Generate the XSD</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>resourcePath</ReferenceName>
+					<description>Enter the resource path to connect to the SuccessFactors system as deployed in the tenant using Operations Wizard</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>fields</ReferenceName>
+					<description>Enter fields from Entity to be read</description>
+					<OrCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Create(POST)</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Upsert(UPSERT)</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Update(PUT)</AttributeValue>
+						</EditCondition>
+					</OrCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>queryOptions</ReferenceName>
+					<description>Enter query options, each query options are prefixed with &#39;$&#39; character and separated by &#39;&amp;&#39;</description>
+					<OrCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Query(GET)</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Read(GET)</AttributeValue>
+						</EditCondition>
+					</OrCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>customQueryOptions</ReferenceName>
+					<description>Enter custom query options in the format &lt;option&gt;=&lt;value&gt; separated by '&amp;'; for example, apiOptionProfileID=option001</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>contentType</ReferenceName>
+					<description>Format in which request is sent to the server</description>
+					<OrCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Create(POST)</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Update(PUT)</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Upsert(UPSERT)</AttributeValue>
+						</EditCondition>
+					</OrCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>characterEncoding</ReferenceName>
+					<description>Character encoding parameter to be used for encoding content</description>
+					<OrCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Create(POST)</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Update(PUT)</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Upsert(UPSERT)</AttributeValue>
+						</EditCondition>
+					</OrCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>odatapagesize</ReferenceName>
+					<description>Number of records to be fetched in one cycle</description>
+					<OrCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Query(GET)</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>operation</AttributeName>
+							<AttributeValue>Read(GET)</AttributeValue>
+						</EditCondition>
+					</OrCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>pagination</ReferenceName>
+					<description>Message is processed in batches of size specified in Page Size. Select only while using with Looping Process Call. 
+					</description>
+					<EditCondition>
+						<AttributeName>operation</AttributeName>
+						<AttributeValue>Query(GET)</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>receiveTimeOut</ReferenceName>
+					<Restriction>[0-9]+</Restriction>
+					<ErrorMessage>Enter a valid number (digits only)</ErrorMessage>
+					<description>Maximum time system waits before operation is terminated</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<AllowedHeaders/>
+		<ReferencedComponents/>
+	</Variant>
+	<AttributeMetadata>
+		<Name>address</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Length/>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Address</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>urlSuffixSfOData</Name>
+		<DataType>xsd:string</DataType>
+		<Default>/odata/v2</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Address Suffix</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>alias</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Credential Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+		<Name>sfsfODataReceiverDataCenterUrl</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>Other</Default>
+		<Length/>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">SFSF Data Center</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>USA_Sales_Demo_Std</Value>
+				<GuiLabels>
+					<Label language="EN">USA Sales Demo Standard (AZ)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>USA_Prod_Std</Value>
+				<GuiLabels>
+					<Label language="EN">USA Production Standard (AZ)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>USA_Sales_Demo_Premium</Value>
+				<GuiLabels>
+					<Label language="EN">USA Sales Demo Premium (Ashburn)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>USA_Prod_Premium</Value>
+				<GuiLabels>
+					<Label language="EN">USA Production Premium (Ashburn)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>EMEA_Prod_Std</Value>
+				<GuiLabels>
+					<Label language="EN">EMEA Production Standard (Amsterdam ASM-5)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>EMEA_Prod_Premium</Value>
+				<GuiLabels>
+					<Label language="EN">EMEA Production Premium (Amsterdam ASM-2)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>EMEA_Sales_demo</Value>
+				<GuiLabels>
+					<Label language="EN">EMEA Sales Demo (Amsterdam ASM-2)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>EMEA_Prod_Std_Rot</Value>
+				<GuiLabels>
+					<Label language="EN">EMEA Production Standard (Rot)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>APJ_Prod_Premium</Value>
+				<GuiLabels>
+					<Label language="EN">APJ Production Premium (Sydney)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Other</Value>
+				<GuiLabels>
+					<Label language="EN">Other</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+		<Name>proxyType</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>default</Default>
+		<Length/>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Proxy Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>default</Value>
+				<GuiLabels>
+					<Label language="EN">Internet</Label>
+				</GuiLabels>
+			</FixedValue>
+			<NotCondition>
+				<EditCondition>
+					<AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)
+					</AttributeName>
+					<AttributeValue>true</AttributeValue>
+				</EditCondition>
+			</NotCondition>
+		</FixedValues>
+		<FixedValues>
+			<FixedValue>
+				<Value>default</Value>
+				<GuiLabels>
+					<Label language="EN">Internet</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>manual</Value>
+				<GuiLabels>
+					<Label language="EN">Manual</Label>
+				</GuiLabels>
+			</FixedValue>
+			<EditCondition>
+				<AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)
+				</AttributeName>
+				<AttributeValue>true</AttributeValue>
+			</EditCondition>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>proxyHost</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Length/>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Proxy Host</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>proxyPort</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:integer</DataType>
+		<Length/>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Proxy Port</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>operation</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>Query(GET)</Default>
+		<Length/>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Operation Details</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>Create(POST)</Value>
+				<GuiLabels>
+					<Label language="EN">Create(POST)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Update(PUT)</Value>
+				<GuiLabels>
+					<Label language="EN">Update(PUT)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Query(GET)</Value>
+				<GuiLabels>
+					<Label language="EN">Query(GET)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Read(GET)</Value>
+				<GuiLabels>
+					<Label language="EN">Read(GET)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Upsert(UPSERT)</Value>
+				<GuiLabels>
+					<Label language="EN">Upsert(UPSERT)</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>contentType</Name>
+		<DataType>xsd:string</DataType>
+		<Default>application/atom+xml</Default>
+		<GuiLabels>
+			<Label language="EN">Content Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>application/atom+xml</Value>
+				<GuiLabels>
+					<Label language="EN">Atom</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>application/json</Value>
+				<GuiLabels>
+					<Label language="EN">JSON</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>characterEncoding</Name>
+		<DataType>xsd:string</DataType>
+		<Default>none</Default>
+		<GuiLabels>
+			<Label language="EN">Content Type Encoding</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>none</Value>
+				<GuiLabels>
+					<Label language="EN">None</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>utf8</Value>
+				<GuiLabels>
+					<Label language="EN">UTF-8</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>odatapagesize</Name>
+		<DataType>xsd:integer</DataType>
+		<Default>200</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Page Size</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>pagination</Name>
+		<DataType>xsd:boolean</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Process in Pages</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>resourcePath</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>false</isparameterized>
+		<HelpService>
+			<HelpServiceName>sfsfOdataqueryEditorF4Help</HelpServiceName>
+			<HelpServiceQueryAttributes>
+				<HelpServiceQueryAttribute>
+					<Name>ServiceName</Name>
+					<Value>Model</Value>
+				</HelpServiceQueryAttribute>
+			</HelpServiceQueryAttributes>
+		</HelpService>
+		<GuiLabels>
+			<Label language="EN">Resource Path</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>fields</Name>
+		<DataType>xsd:string</DataType>
+		<MultiLine>true</MultiLine>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Fields</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>queryOptions</Name>
+		<DataType>xsd:string</DataType>
+		<MultiLine>true</MultiLine>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Query Options</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>receiveTimeOut</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>1</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Timeout (in min)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>customQueryOptions</Name>
+		<Usage>optional</Usage>
+		<DataType>xsd:string</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Custom Query Options</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+</ComponentMetadata>

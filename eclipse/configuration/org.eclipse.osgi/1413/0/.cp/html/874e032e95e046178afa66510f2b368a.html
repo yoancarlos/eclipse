@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="XML Advanced Electronic Signature (XAdES) allows you to create digital signatures based on XML Digital Signature that include additional qualifying properties."/>
+<meta name="description" content="XML Advanced Electronic Signature (XAdES) allows you to create digital signatures based on XML Digital Signature that include additional qualifying properties."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Signing the Message Content with XML Advanced Electronic Signature</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio874e032e95e046178afa66510f2b368a">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Signing the Message Content with XML Advanced Electronic Signature</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">XML Advanced Electronic Signature (XAdES) allows you to create digital signatures based
+		on XML Digital Signature that include additional qualifying properties. </p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">The additional properties allow you to create signatures that are compliant with the
+				European Directive (<a class="extlink" href="http://help.sap.com/disclaimer?site=http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2000:013:0012:0020:EN:PDF" target="_blank" alt="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2000:013:0012:0020:EN:PDF" title="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2000:013:0012:0020:EN:PDF">http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2000:013:0012:0020:EN:PDF<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>).</p>
+
+			<p class="p"><span class="ph emphasis emphasis">XAdES</span> is an industry standard based on <cite class="cite">XML Signature</cite> and
+				issued by the <span class="ph emphasis emphasis">European Telecommunications Standards Institute</span>
+					(<span class="ph emphasis emphasis">ETSI</span>). It allows you to enhance the digital signature with
+				additional data, for example, timestamps to provide evidence that the signature key
+				was valid at the time the signature was created. </p>
+
+			<p class="p">The following XAdES forms are supported: </p>
+
+			
+<div class="table-wrapper tablenoborder"><table summary="" id="loio874e032e95e046178afa66510f2b368a__table_c5g_2bw_3q" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: XAdES Forms</span></caption>
+<colgroup><col width="34.013605442176875%"/><col width="65.98639455782313%"/></colgroup>
+
+					
+					
+					<thead class="thead" align="left">
+						<tr class="row">
+							<th class="entry" valign="top" width="34.01360544217687%" id="d1684007e57">Form</th>
+
+							<th class="entry" valign="top" width="65.98639455782312%" id="d1684007e60">Allows you to ...</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr class="row">
+							<td class="entry" valign="top" width="34.01360544217687%" headers="d1684007e57 "><span class="ph uicontrol">XAdES-BES</span> (<span class="ph uicontrol">XAdES-BES (1)</span> and
+									<span class="ph uicontrol">XAdES-BES (2)</span>)<p class="p">(XAdES Basic Electronic
+									Signature)</p>
+</td>
+
+							<td class="entry" valign="top" width="65.98639455782312%" headers="d1684007e60 ">
+								<p class="p">Create an electronic signature based on <cite class="cite">XML Digital Signature</cite> that includes
+									additional properties to further qualify the signature. </p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="34.01360544217687%" headers="d1684007e57 "><span class="ph uicontrol">XAdES-EPES</span><p class="p">(XAdES Explicit Policy based
+									Electronic Signature)</p>
+</td>
+
+							<td class="entry" valign="top" width="65.98639455782312%" headers="d1684007e60 ">
+								<p class="p">Create an electronic signature based on <cite class="cite">XML Digital Signature</cite> that
+									unambiguously refers to a signature policy agreed between signer
+									and verifier. An electronic signature built in this way enforces
+									the usage of the signature policy for signature validation and
+									thus increases the security level of the usage of the digital
+									signature. </p>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+</div>
+
+			<div class="note note"><span class="notetitle">Note</span> 
+				<p class="p">There are additional XAdES forms defined by the specification. SAP currently only supports
+					XAdES-BES and XAdES-EPES.</p>
+
+			</div>
+
+			<p class="p">For more information, see <a class="extlink" href="http://help.sap.com/disclaimer?site=http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf" target="_blank" download="" alt="http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf" title="http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf">http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>. </p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><div class="li step p">
+				<span class="ph cmd"/><br/>
+			</div>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="9aac1e2f25ba45a985453ba0cb1765f7.html" title="This option allows you to add timestamps (for the signing time), a reference to the signer's key certificate, and other information that further qualifies the signature.">Signing the Message Content with XAdES-BES (1)</a></div>
+<div><a class="link" href="2c569fce9f844bb5b9752d3c6b457605.html" title="This option allows you to add further contextual information to the signature, like, for example, the place where the signature has been created, or the type of commitment assured by the signer when creating the signature.">Signing the Message Content with XAdES-BES (2)</a></div>
+<div><a class="link" href="5976731ce4d74cb0938511220c942f17.html" title="This option allows you to create a digital signature based on XML Digital Signature that unambiguously refers to a signature policy agreed between signer and verifier. An electronic signature created this way enforces the usage of the signature policy for signature validation and thus increases the security level of the digital signature.">Signing the Message Content with XAdES-EPES</a></div>
+<div><a class="link" href="e26ab8cdc6c94a929b3884782f2886da.html" title="For certain message headers you can define specific elements in the XAdES form.">Message Headers</a></div>
+<div><a class="link" href="08d4522ca0f54bd1bbd22d4d2449a1f3.html" title="SAP currently only supports XAdES-BES and XAdES-EPES. There are a number of additional limitations.">Limitations</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

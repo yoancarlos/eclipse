@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            description="%product.description_xgrp"
+            name="%product.name_xgrp">
+
+         <property
+               name="appName"
+               value="hdbstudio">
+         </property>
+         <property
+               name="aboutImage"
+               value="images/about.png">
+         </property>
+         <property
+               name="windowImages"
+               value="images/studio16.png,images/studio32.png,images/studio128.png,images/studio256.png">
+         </property>
+         <property name="preferenceCustomization" value="plugin_customization.ini" />
+         <property name="startupForegroundColor" value="6F6F6F"/>
+         <property name="startupMessageRect"  value="26,150,360,20"/>
+         <property name="startupProgressRect" value="26,170,360,8"/>
+         <property name="copyrightMessageRect"  value="90,216,300,25"/>
+         <property name="copyrightMessage"  value="%copyright.splash_xmsg"/>
+
+         <property name="introTitle" value="SAP HANA Studio" />
+         <property name="introBrandingImage" value="product:intro-eclipse.png" />
+         <property name="introBrandingImageText" value="SAP HANA Studio" />
+         <property name="introDescription-overview" value="SAP HANA Studio" />
+         <property name="introDescription-tutorials" value="SAP HANA Studio" />
+         <property name="introDescription-whatsnew" value="SAP HANA Studio" />
+
+         <property name="aboutText" value="%about.text_xtxt" />
+
+         <!-- for Eclipse 4 -->
+         <property name="cssTheme" value="org.eclipse.e4.ui.css.theme.e4_default" />
+         <property name="applicationCSSResources" value="platform:/plugin/org.eclipse.platform/images/" />
+
+	 </product>
+   </extension>
+
+   <extension point="org.eclipse.ui.intro">
+      <introProductBinding introId="org.eclipse.ui.intro.universal" productId="com.sap.ndb.studio.product"/>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="$nl$/intro/overviewExtensionContent1.xml"/>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="$nl$/intro/overviewExtensionContent2.xml"/>
+   </extension>
+   <extension
+         point="com.sap.ide.support.supportInformationProviders">
+      <informationProvider
+            class="com.sap.ndb.studio.internal.supportinfo.StudioSupportInfoProvider"
+            id="com.sap.ndb.studio.supportInformationProvider"
+            internal="false">
+         <data
+               category="com.sap.ndb.studio"
+               description="%supportInfo.data.manifest_xlst"
+               filename="manifest"
+               id="com.sap.ndb.studio.manifest"
+               optional="false">
+         </data>
+      </informationProvider>
+   </extension>
+   <extension
+         point="org.eclipse.ui.trace.traceComponents">
+      <component
+            id="com.sap.ndb.studio.component"
+            label="%traceComponent.label.studio_xmit">
+         <bundle
+               consumed="true"
+               name="com.sap.ndb.studio">
+         </bundle>
+      </component>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.sap.ndb.studio.StudioStartup">
+      </startup>
+   </extension>
+   <extension
+         point="org.eclipse.ui.splashHandlers">
+      <splashHandler
+            class="com.sap.ndb.studio.internal.splash.StudioSplashHandler"
+            id="com.sap.ndb.studio.splashHandler">
+      </splashHandler>
+      <splashHandlerProductBinding
+            productId="com.sap.ndb.studio.product"
+            splashId="com.sap.ndb.studio.splashHandler">
+      </splashHandlerProductBinding>
+   </extension>
+
+</plugin>

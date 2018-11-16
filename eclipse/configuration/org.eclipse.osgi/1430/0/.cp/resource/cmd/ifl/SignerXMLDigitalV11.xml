@@ -1,0 +1,1558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Signer/version::1.1.0" ComponentName="sap:Signer" UIElementType="Flowstep">
+
+    <Variant VariantId="ctype::FlowstepVariant/cname::XMLDigitalSignMessage/version::1.1.0" VariantDisplayName="XML Signer" VariantName="XML Digital Signer" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Xml</ContentType>
+                <Schema />
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Xml</ContentType>
+                <Schema />
+            </Content>
+        </OutputContent>
+
+        <!-- General TAB XML Digital Signer -->
+        <Tab id="iflow.advance.xml.sign.tab">
+            <GuiLabels>
+                <Label language="EN">General</Label>
+            </GuiLabels>
+            <AttributeGroup id="generalDetails_for_signer">
+                <AttributeReference>
+                    <ReferenceName>Activity_Name</ReferenceName>
+                    <Restriction>^[a-zA-Z][a-zA-Z0-9_]{3,30}$</Restriction>
+                    <ErrorMessage>Name should begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30</ErrorMessage>
+                    <description>Enter a name for the XML Digital Signer step. Begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>privateKeyAlias</ReferenceName>
+                     <description>Enter an alias for selecting a private key from keystore. You also can enter ${header.headername} to dynamically read the name from a header. With ${property.propertyname} you can dynamically read the name from a property of the exchange.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>signatureAlgorithm</ReferenceName>
+                    <description>Select a signature algorithm for the RSA or DSA private key type. Using the private key, the sender encrypts the digest.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>digestAlgorithm</ReferenceName>
+                    <description>Select the digest algorithm that is used to calculate a digest from the canonicalized XML document. Note that if the digest algorithm is not specified, the digest algorithm of the signature algorithm is used by default.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>signatureType</ReferenceName>
+                    <Restriction></Restriction>
+                    <ErrorMessage></ErrorMessage>
+                    <description>Select the signature type to sign a specific part or the whole of the XML message. Enveloped signature: The signature is inserted into the content, which is signed. Enveloping signature: The signature itself contains the data to be signed. Detached signatures: The signatures are siblings of the signed elements.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>parentNodeSpecification</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>signatureType</AttributeName>
+                        <AttributeValue>Enveloped XML signature</AttributeValue>
+                    </EditCondition>
+                    <description></description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>parentLocalName</ReferenceName>
+                    <AndCondition>
+                        <EditCondition>
+                            <AttributeName>signatureType</AttributeName>
+                            <AttributeValue>Enveloped XML signature</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>parentNodeSpecification</AttributeName>
+                            <AttributeValue>Specified by Name and Namespace</AttributeValue>
+                        </EditCondition>
+                    </AndCondition>
+                    <description>For enveloped signature, enter the parent element name within which the signature is inserted</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>parentNamespace</ReferenceName>
+                    <AndCondition>
+                        <EditCondition>
+                            <AttributeName>signatureType</AttributeName>
+                            <AttributeValue>Enveloped XML signature</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>parentNodeSpecification</AttributeName>
+                            <AttributeValue>Specified by Name and Namespace</AttributeValue>
+                        </EditCondition>
+                    </AndCondition>
+                    <description>For enveloped signature, enter the namespace of parent element of the signature</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xpathExpression</ReferenceName>
+                    <AndCondition>
+                        <EditCondition>
+                            <AttributeName>signatureType</AttributeName>
+                            <AttributeValue>Enveloped XML signature</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>parentNodeSpecification</AttributeName>
+                            <AttributeValue>Specified by XPath expression</AttributeValue>
+                        </EditCondition>
+                    </AndCondition>
+                    <description>Specify the parent node for including the signature via XPath expression.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>schemaResourceUri</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>signatureType</AttributeName>
+                        <AttributeValue>Detached XML signatures</AttributeValue>
+                    </EditCondition>
+                    <description>Select the XML schema in the XSD folder. If the folder is empty, insert the XML schema file.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xpathToIdAttribute</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>signatureType</AttributeName>
+                        <AttributeValue>Detached XML signatures</AttributeValue>
+                    </EditCondition>
+                    <description>Enter the XPath to the attribute of type ID, in order to identify the element to be signed. Example: /nsx:Document/SubDocument/@Id. Namespace prefixes must be defined in Namespace Mapping of the Runtime Configuration.</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="keyinfo.content">
+                <GuiLabels>
+                    <Label language="EN">Key Info Content</Label>
+                </GuiLabels>
+                <!-- make it an embedded group to increase indent -->
+                <AttributeGroup id="keyinfo.content.options">
+                   <AttributeReference>
+                       <ReferenceName>keyInfoHasX509CertChain</ReferenceName>
+                       <description>Select this option to add the X.509 certificate chain of the signer key to the Key Info</description>
+                   </AttributeReference>
+                   <AttributeReference>
+                       <ReferenceName>keyInfoHasX509Certificate</ReferenceName>
+                       <description>Select this option to add the X.509 certificate of the signer key to the Key Info</description>
+                   </AttributeReference>
+                   <AttributeReference>
+                       <ReferenceName>keyInfoHasIssuerName</ReferenceName>
+                       <description>Select this option to add the issuer distinguished name and the serial number of the signer X.509 certificate to the Key Info</description>
+                   </AttributeReference>
+                   <AttributeReference>
+                       <ReferenceName>keyInfoHasKeyValue</ReferenceName>
+                       <description>Select this option to add the key value (exponent and modulus) of the signer key to the Key Info</description>
+                   </AttributeReference>
+               </AttributeGroup>
+            </AttributeGroup>
+            <AttributeGroup id="keyinfo.content.add.keyinfo">
+                <AttributeReference>
+                    <ReferenceName>addKeyInfoReference</ReferenceName>
+                    <description>Select this option to include the Key Info into the signing process</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+
+        <!-- ADVANCED TAB -->
+        <Tab id="iflow.advance.xml.sign.additional.tab">
+            <GuiLabels>
+                <Label language="EN">Advanced</Label>
+            </GuiLabels>
+            <AttributeGroup id="Transformation">
+                <GuiLabels>
+                    <Label language="EN">Transformation Parameters</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>canonicalizationMethod</ReferenceName>
+                    <description>Select a method to canonicalize the SignedInfo element of the XML signature</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>transformMethod</ReferenceName>
+                    <description>Select a method to transform the input message body before it is signed</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="XML_Document_Parameters">
+                <GuiLabels>
+                    <Label language="EN">XML document parameters</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>contentReferenceType</ReferenceName>
+                    <description>Reference Type helps in the processing the referenced data, where Reference represents the object to be signed. For example, if the Reference is an Object, use the Reference Type as "http://www.w3.org/2000/09/xmldsig#Object"</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>prefixForXmlSignatureNamespace</ReferenceName>
+                    <description>Enter a namespace prefix for the XML signature elements</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>signatureId</ReferenceName>
+                    <description>If required specify a Signature Id. Otherwise no Signature Id attribute will be generated.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>outputEncoding</ReferenceName>
+                    <description>Select encoding from the list</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>omitXmlDeclaration</ReferenceName>
+                    <description>Select this option to exclude the XML declaration header in the outgoing XML message. For example, &lt;?xml version="1.0" encoding="UTF-8"?&gt; will be excluded.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>disallowDoctypeDecl</ReferenceName>
+                    <description>Select this option to disallow DTD DOCTYPE declaration in the incoming XML message</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+
+        <!-- XAdES-BES(1) TAB  -->
+        <Tab id="iflow.advance.xml.sign.xades.bes.basic.tab">
+            <GuiLabels>
+                <Label language="EN">XAdES-BES(1)</Label>
+            </GuiLabels>
+            <AttributeGroup id="signingtime">
+                <GuiLabels>
+                    <Label language="EN">Add Signing Time and Certificate</Label>
+                </GuiLabels>
+                <!-- add signing Time and Certificate -->
+                <AttributeReference>
+                    <ReferenceName>xadesAddSigningTime</ReferenceName>
+                    <description>Select this option to add the signing time</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesAddSigningCertificate</ReferenceName>
+                    <description>Select whether you want to add the signing certificate or the certificate chain of the signing key</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesSigningCertificateDigestAlgorithm</ReferenceName>
+                    <OrCondition>
+                        <EditCondition>
+                            <AttributeName>xadesAddSigningCertificate</AttributeName>
+                            <AttributeValue>CertificateOnly</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>xadesAddSigningCertificate</AttributeName>
+                            <AttributeValue>CertificateChain</AttributeValue>
+                        </EditCondition>
+                    </OrCondition>
+                    <description>Select an algorithm to generate a digest value of the signing certificate</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesCertificateUri</ReferenceName>
+                    <OrCondition>
+                        <EditCondition>
+                            <AttributeName>xadesAddSigningCertificate</AttributeName>
+                            <AttributeValue>CertificateOnly</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>xadesAddSigningCertificate</AttributeName>
+                            <AttributeValue>CertificateChain</AttributeValue>
+                        </EditCondition>
+                    </OrCondition>
+                    <description>Enter the location of the referenced certificate(s)</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="signerrole">
+                <GuiLabels>
+                    <Label language="EN">Signer Role</Label>
+                </GuiLabels>
+                <!-- Signer Role -->
+                <AttributeReference>
+                    <ReferenceName>xadesSignerRoleClaimedRoles</ReferenceName>
+                    <description>Enter the roles of the signer that do not have certificates to corroborate this claim. It can be either text or an XML fragment with the root element "ClaimedRole"</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesSignerRoleCertifiedRoles</ReferenceName>
+                    <description>Enter the roles with attribute certificates for the signer</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="dataobjectformat">
+                <GuiLabels>
+                    <Label language="EN">Data Object Format</Label>
+                </GuiLabels>
+                <!-- Data Object Format -->
+                <AttributeReference>
+                    <ReferenceName>xadesDataObjectFormatDescription</ReferenceName>
+                    <description>Enter a description of the format of the data to be signed</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesDataObjectFormatMimeType</ReferenceName>
+                    <description>Enter the MIME type of the format of the data to be signed</description>
+                </AttributeReference>
+
+                <AttributeGroup id="Identifier">
+                    <GuiLabels>
+                        <Label language="EN">Identifier</Label>
+                    </GuiLabels>
+                    <AttributeReference>
+                        <ReferenceName>xadesIdentifierName</ReferenceName>
+                        <description>Enter an identifier indicating the format of the data to be signed (URI or OID)</description>
+                    </AttributeReference>
+                    <AttributeReference>
+                        <ReferenceName>xadesIdentifierQualifier</ReferenceName>
+                        <description>The qualifier must not be specified if you are using a Uniform Resource Identifier (URI) as identifier. If an ASN.1 Object Identifier (OID) is used as identifier then you have to specify whether the OID is encoded as Uniform Resource Name (URN) or as Uniform Resource Identifier (URI).</description>
+                    </AttributeReference>
+                    <AttributeReference>
+                        <ReferenceName>xadesIdentifierDescription</ReferenceName>
+                        <description>Enter a description of the identifier</description>
+                    </AttributeReference>
+                    <AttributeReference>
+                        <ReferenceName>xadesIdentifierDocumentationReference</ReferenceName>
+                        <description>Enter references (URIs) pointing to further explanatory documentation of the identifier</description>
+                    </AttributeReference>
+                </AttributeGroup>
+            </AttributeGroup>
+        </Tab>
+
+        <!-- XAdES-BES(2) TAB -->
+        <Tab id="iflow.advance.xml.sign.xades.bes.basic2.tab">
+            <GuiLabels>
+                <Label language="EN">XAdES-BES(2)</Label>
+            </GuiLabels>
+            <!-- Production Place -->
+            <AttributeGroup id="XAdES-BES-2.1">
+                <GuiLabels>
+                    <Label language="EN">Production Place</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>signatureProductionPlaceCity</ReferenceName>
+                    <description>Enter the city of the signer</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>signatureProductionPlaceState</ReferenceName>
+                    <description>Enter the state or province of the signer</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>signatureProductionPlacePostalCode</ReferenceName>
+                    <description>Enter the postal code of the signer</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>signatureProductionPlaceCountry</ReferenceName>
+                    <description>Enter the country of the signer</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <!-- Commitment Type -->
+            <AttributeGroup id="XAdES-BES-2.2">
+                <GuiLabels>
+                    <Label language="EN">Commitment Type</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>signatureCommitment</ReferenceName>
+                    <description>Enter the commitment of the signer</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>signatureCommitmentDescription</ReferenceName>
+                    <NotCondition>
+                        <EditCondition>
+                            <AttributeName>signatureCommitment</AttributeName>
+                            <AttributeValue></AttributeValue>
+                        </EditCondition>
+                    </NotCondition>
+                    <description>Enter a description of the commitment</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>commitmentDocumentationReferenceTable</ReferenceName>
+                    <NotCondition>
+                        <EditCondition>
+                            <AttributeName>signatureCommitment</AttributeName>
+                            <AttributeValue></AttributeValue>
+                        </EditCondition>
+                    </NotCondition>
+                    <description>Enter references (URIs) pointing to further explanatory documentation of the commitment</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>commitmentQualifierTable</ReferenceName>
+                    <NotCondition>
+                        <EditCondition>
+                            <AttributeName>signatureCommitment</AttributeName>
+                            <AttributeValue></AttributeValue>
+                        </EditCondition>
+                    </NotCondition>
+                    <description>Enter additional information qualifying the commitment. It can be either a text or a XML Fragment with the root element 'CommitmentTypeQualifier'.</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <!-- XML Document Parameters -->
+            <AttributeGroup id="XAdES-BES-2.3">
+                <GuiLabels>
+                    <Label language="EN">XML Document Parameters</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>signatureXMLNamespace</ReferenceName>
+                    <description>Select the namespace of the used XAdES version</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>signatureXMLNamespacePrefix</ReferenceName>
+                    <description>Enter a prefix of the XAdES namespace</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+
+        <!-- XAdES-EPES TAB -->
+        <Tab id="iflow.advance.xml.sign.xades.epes.tab">
+            <GuiLabels>
+                <Label language="EN">XAdES-EPES</Label>
+            </GuiLabels>
+            <AttributeGroup id="XAdES-EPES">
+                <AttributeReference>
+                    <ReferenceName>xadesEpesSignaturePolicy</ReferenceName>
+                    <description>Select whether you want to add the signature policy properties. Implied: The "SignaturePolicyImplied" element will be added. Explicit ID: The "SigPolicyId" element will be added.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesEpesIdentifier</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>xadesEpesSignaturePolicy</AttributeName>
+                        <AttributeValue>ExplicitId</AttributeValue>
+                    </EditCondition>
+                    <description>Enter an identifier that uniquely identifies a specific version of the signature policy (URI or OID)</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesEpesIdentifierQualifier</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>xadesEpesSignaturePolicy</AttributeName>
+                        <AttributeValue>ExplicitId</AttributeValue>
+                    </EditCondition>
+                    <description>The qualifier must not be specified if you are using a Uniform Resource Identifier (URI) as identifier. If an ASN.1 Object Identifier (OID) is used as identifier then you have to specify whether the OID is encoded as Uniform Resource Name (URN) or as Uniform Resource Identifier (URI).</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesEpesDescription</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>xadesEpesSignaturePolicy</AttributeName>
+                        <AttributeValue>ExplicitId</AttributeValue>
+                    </EditCondition>
+                    <description>Enter a description of the signature policy</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesDocumentationReferenceTab</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>xadesEpesSignaturePolicy</AttributeName>
+                        <AttributeValue>ExplicitId</AttributeValue>
+                    </EditCondition>
+                    <description>Enter references (URIs) pointing to further explanatory documentation of the signature policy version</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesEpesDigestAlgorithm</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>xadesEpesSignaturePolicy</AttributeName>
+                        <AttributeValue>ExplicitId</AttributeValue>
+                    </EditCondition>
+                    <description>Select the algorithm with which the digest value of the signature policy was calculated</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesEpesDigestValue</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>xadesEpesSignaturePolicy</AttributeName>
+                        <AttributeValue>ExplicitId</AttributeValue>
+                    </EditCondition>
+                    <description>Enter the base64 encoded digest value of the signature policy document</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>xadesPolicyQualifierTab</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>xadesEpesSignaturePolicy</AttributeName>
+                        <AttributeValue>ExplicitId</AttributeValue>
+                    </EditCondition>
+                    <description>Enter additional information qualifying the signature policy. It can be either a text or a XML Fragment with the root element 'SigPolicyQualifier'.</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+    </Variant>
+
+
+    <!-- ============================================================================ //-->
+    <!-- General TAB XML Digital Signer -->
+    <AttributeMetadata>
+        <Name>Activity_Name</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <AutoGenerate>
+            <Prefix>XMLSigner</Prefix>
+        </AutoGenerate>
+        <Default>XMLSigner</Default><!-- until AutoGenerate works use default -->
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>privateKeyAlias</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Private Key Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signatureAlgorithm</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>SHA1/RSA</Default>
+        <GuiLabels>
+            <Label language="EN">Signature Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>SHA1/DSA</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA1/DSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA1/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA1/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA256/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA256/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA384/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA384/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA512/RSA</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA512/RSA</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>digestAlgorithm</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Digest Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value></Value>
+                <GuiLabels>
+                    <Label language="EN">From Signature Algorithm</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA1</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA1</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA256</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA256</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA384</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA384</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA512</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA512</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signatureType</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Enveloping XML signature</Default>
+        <GuiLabels>
+            <Label language="EN">Signature Type</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>Enveloping XML signature</Value>
+                <GuiLabels>
+                    <Label language="EN">Enveloping XML signature</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Enveloped XML signature</Value>
+                <GuiLabels>
+                    <Label language="EN">Enveloped XML signature</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Detached XML signatures</Value>
+                <GuiLabels>
+                    <Label language="EN">Detached XML signatures</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>parentNodeSpecification</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Specified by Name and Namespace</Default>
+        <GuiLabels>
+            <Label language="EN">Parent Node</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>Specified by Name and Namespace</Value>
+                <GuiLabels>
+                    <Label language="EN">Specified by Name and Namespace</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Specified by XPath expression</Value>
+                <GuiLabels>
+                    <Label language="EN">Specified by XPath expression</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>parentLocalName</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>parentNamespace</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Namespace</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+
+    <!-- WORKAROUND: 4 Checkboxes, all writing into keyInfoContent with 16 values, but Model is Combobox -->
+    <AttributeMetadata>
+        <Name>keyInfoContent</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>X509CertificateChain</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Key Info Content</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>NoKeyInfoContent</Value>
+                <GuiLabels>
+                    <Label language="EN"></Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509CertificateChain</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate Chain</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509Certificate</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509IssuerSerial</Value>
+                <GuiLabels>
+                    <Label language="EN">Issuer Distinguished Name and Serial Number</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>KeyValue</Value>
+                <GuiLabels>
+                    <Label language="EN">Key Value</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509CertificateChainAndX509Certificate</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate Chain / X.509 Certificate</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509CertificateChainAndIssuerSerial</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate Chain / Issuer Distinguished Name and Serial Number</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509CertificateChainAndKeyValue</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate Chain / Key Value</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509CertificateAndIssuerSerial</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate / Issuer Distinguished Name and Serial Number</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509CertificateAndKeyValue</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate / Key Value</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>IssuerSerialAndKeyValue</Value>
+                <GuiLabels>
+                    <Label language="EN">Issuer Distinguished Name and Serial Number / Key Value</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509CertificateChainAndAndIssuerSerialAndKeyValue</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate Chain / Issuer Distinguished Name and Serial Number / Key Value</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509CertificateChainAndX509CertificateAndIssuerSerial</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate Chain / X.509 Certificate / Issuer Distinguished Name and Serial Number</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509CertificateChainAndX509CertificateAndKeyValue</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate Chain / X.509 Certificate / Key Value</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509CertificateAndIssuerSerialAndKeyValue</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate / Issuer Distinguished Name and Serial Number / Key Value</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>X509CertificateChainAndX509CertificateAndIssuerSerialAndKeyValue</Value>
+                <GuiLabels>
+                    <Label language="EN">X.509 Certificate Chain / X.509 Certificate / Issuer Distinguished Name and Serial Number / Key Value</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>addKeyInfoReference</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Sign Key Info</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+
+    <!-- back to four boolean values representing the key info -->
+    <AttributeMetadata>
+        <Name>keyInfoHasX509CertChain</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <GuiLabels>
+            <Label language="EN">X.509 Certificate Chain</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>keyInfoHasX509Certificate</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <GuiLabels>
+            <Label language="EN">X.509 Certificate</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>keyInfoHasIssuerName</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <GuiLabels>
+            <Label language="EN">Issuer Distinguished Name and Serial Number</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>keyInfoHasKeyValue</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <GuiLabels>
+            <Label language="EN">Key Value</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+
+
+    <AttributeMetadata>
+        <Name>xpathExpression</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">XPath Expression</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>schemaResourceUri</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <HelpService>
+            <HelpServiceName>resourceLookupService</HelpServiceName>
+            <HelpServiceQueryAttributes>
+                <HelpServiceQueryAttribute>
+                    <Name>Type</Name>
+                    <Value>XSD</Value>
+                </HelpServiceQueryAttribute>
+                <HelpServiceQueryAttribute>
+                    <Name>ResourceLocation</Name>
+                    <Value>xsd</Value>
+                </HelpServiceQueryAttribute>
+                <HelpServiceQueryAttribute>
+                    <Name>ContentType</Name>
+                    <Value>application/xsd+xml</Value>
+                </HelpServiceQueryAttribute>
+            </HelpServiceQueryAttributes>
+        </HelpService>
+        <GuiLabels>
+            <Label language="EN">XML Schema File Path</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>xpathToIdAttribute</Name>
+        <Usage>required</Usage>
+        <GuiLabels>
+            <Label language="EN">Signatures for Elements</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>xpathToIdField</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>xpathToIdField</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Xpath to ID Attribute</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+
+    <!-- ============================================================================ //-->
+    <!-- Advanced TAB XML Digital Signer -->
+    <AttributeMetadata>
+        <Name>canonicalizationMethod</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Inclusive XML Canonicalization</Default>
+        <GuiLabels>
+            <Label language="EN">Canonicalization Method for SignedInfo</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>Inclusive XML Canonicalization</Value>
+                <GuiLabels>
+                    <Label language="EN">Canonical XML Version 1.0</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Inclusive XML Canonicalization with Comments</Value>
+                <GuiLabels>
+                    <Label language="EN">Canonicalization XML with Comments Version 1.0</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Exclusive XML Canonicalization</Value>
+                <GuiLabels>
+                    <Label language="EN">Exclusive XML Canonicalization Version 1.0</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Exclusive XML Canonicalization with Comments</Value>
+                <GuiLabels>
+                    <Label language="EN">Exclusive XML Canonicalization with Comments Version 1.0</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>transformMethod</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Inclusive XML Canonicalization</Default>
+        <GuiLabels>
+            <Label language="EN">Transform Method for Payload</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>Inclusive XML Canonicalization</Value>
+                <GuiLabels>
+                    <Label language="EN">Canonical XML Version 1.0</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Inclusive XML Canonicalization with Comments</Value>
+                <GuiLabels>
+                    <Label language="EN">Canonicalization XML with Comments Version 1.0</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Exclusive XML Canonicalization</Value>
+                <GuiLabels>
+                    <Label language="EN">Exclusive XML Canonicalization Version 1.0</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Exclusive XML Canonicalization with Comments</Value>
+                <GuiLabels>
+                    <Label language="EN">Exclusive XML Canonicalization with Comments Version 1.0</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>contentReferenceType</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Reference Type</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>prefixForXmlSignatureNamespace</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>ds</Default>
+        <GuiLabels>
+            <Label language="EN">Namespace Prefix</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signatureId</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Signature ID</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>outputEncoding</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>UTF-8</Default>
+        <HelpService>
+            <HelpServiceName>customListSelectionSearch</HelpServiceName>
+        </HelpService>
+        <GuiLabels>
+            <Label language="EN">Output Encoding</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>omitXmlDeclaration</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Exclude XML Declaration</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>disallowDoctypeDecl</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Disallow DOCTYPE Declaration</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+
+    <!-- ============================================================================ //-->
+    <!-- XAdES-BES(1) TAB  -->
+    <AttributeMetadata>
+        <Name>xadesAddSigningTime</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Time</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesAddSigningCertificate</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>None</Default>
+        <GuiLabels>
+            <Label language="EN">Certificate</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>None</Value>
+                <GuiLabels>
+                    <Label language="EN">None</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>CertificateOnly</Value>
+                <GuiLabels>
+                    <Label language="EN">Certificate Only</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>CertificateChain</Value>
+                <GuiLabels>
+                    <Label language="EN">Certificate Chain</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesSigningCertificateDigestAlgorithm</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>SHA-256</Default>
+        <GuiLabels>
+            <Label language="EN">Digest Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>SHA-1</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA1</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA-256</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA256</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA-384</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA384</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA-512</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA512</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>xadesCertificateUri</Name>
+        <Usage>optional</Usage>
+        <GuiLabels>
+            <Label language="EN"></Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>xadesCertUriField</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>xadesCertUriField</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Certificate URI</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>xadesSignerRoleClaimedRoles</Name>
+        <Usage>optional</Usage>
+        <GuiLabels>
+            <Label language="EN"></Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>xadesSignerRoleClaimedRoleField</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>xadesSignerRoleClaimedRoleField</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Claimed Role</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>xadesSignerRoleCertifiedRoles</Name>
+        <Usage>optional</Usage>
+        <GuiLabels>
+            <Label language="EN">Certified Roles</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>xadesSignerRoleAttr</ReferenceName>
+        </AttributeReference>
+        <AttributeReference>
+            <ReferenceName>xadesSignerRoleEncoding</ReferenceName>
+        </AttributeReference>
+        <AttributeReference>
+            <ReferenceName>xadesSignerRoleID</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>xadesSignerRoleAttr</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Attribute Certificate (Base64 Encoded)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesSignerRoleEncoding</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Encoding</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesSignerRoleID</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">ID</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesDataObjectFormatDescription</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Description</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesDataObjectFormatMimeType</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">MIME Type</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesIdentifierName</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesIdentifierQualifier</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Qualifier</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value></Value>
+                <GuiLabels>
+                    <Label language="EN"></Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>OIDAsURI</Value>
+                <GuiLabels>
+                    <Label language="EN">OIDAsURI</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>OIDAsURN</Value>
+                <GuiLabels>
+                    <Label language="EN">OIDAsURN</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesIdentifierDescription</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Description</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>xadesIdentifierDocumentationReference</Name>
+        <Usage>optional</Usage>
+        <GuiLabels>
+            <Label language="EN"></Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>xadesIdentifierDocumentationRefField</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>xadesIdentifierDocumentationRefField</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Documentation Reference</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+
+    <!-- ============================================================================ //-->
+    <!-- XAdES-BES(2) TAB  -->
+    <AttributeMetadata>
+        <Name>signatureProductionPlaceCity</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">City</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signatureProductionPlaceState</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">State/Province</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signatureProductionPlacePostalCode</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Postal Code</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signatureProductionPlaceCountry</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Country</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signatureCommitment</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Commitment</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value></Value>
+                <GuiLabels>
+                    <Label language="EN"></Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>http://uri.etsi.org/01903/v1.2.2#ProofOfOrigin</Value>
+                <GuiLabels>
+                    <Label language="EN">Proof of Origin</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>http://uri.etsi.org/01903/v1.2.2#ProofOfReceipt</Value>
+                <GuiLabels>
+                    <Label language="EN">Proof of Receipt</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>http://uri.etsi.org/01903/v1.2.2#ProofOfDelivery</Value>
+                <GuiLabels>
+                    <Label language="EN">Proof of Delivery</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>http://uri.etsi.org/01903/v1.2.2#ProofOfSender</Value>
+                <GuiLabels>
+                    <Label language="EN">Proof of Sender</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>http://uri.etsi.org/01903/v1.2.2#ProofOfApproval</Value>
+                <GuiLabels>
+                    <Label language="EN">Proof of Approval</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>http://uri.etsi.org/01903/v1.2.2#ProofOfCreation</Value>
+                <GuiLabels>
+                    <Label language="EN">Proof of Creation</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signatureCommitmentDescription</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Description</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>commitmentQualifierTable</Name>
+        <Usage>optional</Usage>
+        <GuiLabels>
+            <Label language="EN"></Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>commitmentQualifierField</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>commitmentQualifierField</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Commitment Qualifier</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>commitmentDocumentationReferenceTable</Name>
+        <Usage>optional</Usage>
+        <GuiLabels>
+            <Label language="EN"></Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>commitmentDocumentationReferenceField</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>commitmentDocumentationReferenceField</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Documentation Reference</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signatureXMLNamespace</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Namespace</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value></Value>
+                <GuiLabels>
+                    <Label language="EN"></Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>http://uri.etsi.org/01903/v1.1.1#</Value>
+                <GuiLabels>
+                    <Label language="EN">http://uri.etsi.org/01903/v1.1.1#</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>http://uri.etsi.org/01903/v1.2.2#</Value>
+                <GuiLabels>
+                    <Label language="EN">http://uri.etsi.org/01903/v1.2.2#</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>http://uri.etsi.org/01903/v1.3.2#</Value>
+                <GuiLabels>
+                    <Label language="EN">http://uri.etsi.org/01903/v1.3.2#</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signatureXMLNamespacePrefix</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>etsi</Default>
+        <GuiLabels>
+            <Label language="EN">Namespace Prefix</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+
+    <!-- ============================================================================ //-->
+    <!-- XAdES-EPES TAB  -->
+    <AttributeMetadata>
+        <Name>xadesEpesSignaturePolicy</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>None</Default>
+        <GuiLabels>
+            <Label language="EN">Signature Policy</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>None</Value>
+                <GuiLabels>
+                    <Label language="EN">None</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Implied</Value>
+                <GuiLabels>
+                    <Label language="EN">Implied</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>ExplicitId</Value>
+                <GuiLabels>
+                    <Label language="EN">Explicit ID</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesEpesIdentifier</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Identifier</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesEpesIdentifierQualifier</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Identifier Qualifier</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value></Value>
+                <GuiLabels>
+                    <Label language="EN"></Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>OIDAsURI</Value>
+                <GuiLabels>
+                    <Label language="EN">OIDAsURI</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>OIDAsURN</Value>
+                <GuiLabels>
+                    <Label language="EN">OIDAsURN</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesEpesDescription</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Description</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>xadesDocumentationReferenceTab</Name>
+        <Usage>optional</Usage>
+        <GuiLabels>
+            <Label language="EN"></Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>xadesDocumentationReferenceField</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>xadesDocumentationReferenceField</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Documentation Reference</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesEpesDigestAlgorithm</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>SHA-256</Default>
+        <GuiLabels>
+            <Label language="EN">Digest Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>SHA-1</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA1</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA-256</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA256</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA-384</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA384</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA-512</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA512</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xadesEpesDigestValue</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <HelpService>
+            <HelpServiceName>calculateDigestService</HelpServiceName>
+        </HelpService>
+        <GuiLabels>
+            <Label language="EN">Digest Value</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>xadesPolicyQualifierTab</Name>
+        <Usage>optional</Usage>
+        <GuiLabels>
+            <Label language="EN"></Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>xadesPolicyQualifierField</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>xadesPolicyQualifierField</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Policy Qualifier</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

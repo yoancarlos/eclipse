@@ -1,0 +1,34 @@
+<contexts>
+<context id="piconfig" title="Project Configurations">
+   <description>This view is useful when you need to quickly manage the externalized parameters, ensure that all the projects are consistent and then deploy them without opening the associated integration flow projects.</description>
+</context>
+<context id="intcontent" title="Integration Content Explorer">
+   <description>This view displays different content repositories and their content. User can perform merge , export and diff operations on content</description>
+</context>
+<context id="testing" title="Test Integrations">
+   <description>This view allows you to validate the integration flow configurations at the development phase. 
+You can perform testing using the following actions available in its toolbar:
+
+&lt;b&gt;Generate Input&lt;/b&gt;: Generates an XML based on the integration flow configurations which can be used as an input XML for the test. Make sure you have assigned sender interface and saved the integration flow
+
+&lt;b&gt;Browse Input Payload&lt;/b&gt;: Allows you to select an existing input XML from your local workspace
+
+&lt;b&gt;Load Test Configuration&lt;/b&gt;: Loads an existing test configuration when you have to test integration flows with similar configurations
+
+&lt;b&gt;Change Testing Preferences&lt;/b&gt;: Allows you to change the Preference settings to control the technical behavior of testing functionality
+
+&lt;b&gt;Configure Runtime&lt;/b&gt;: Allows you to set runtime target platforms and common testing libraries. If you do not add any details or if no content is found in the specified update site, the runtime target platforms and common testing libraries are downloaded from default update site.
+
+&lt;b&gt;Set Testing Configurations&lt;/b&gt;: Allows you to pass additional information during test execution. 
+•	You can pass additional header and configurations
+•	You can pass additional bundles, for example value mapping bundles, to be considered during test execution
+•	You can emulate synchronous calls by mocking the response or fault messages
+
+&lt;b&gt;Save as Test Configuration&lt;/b&gt;: Saves the configurations as a test method to a test case
+
+&lt;b&gt;Execute Test&lt;/b&gt;: Runs the test and results to an output XML
+
+&lt;b&gt;Sync with Editor&lt;/b&gt;: Associates the Test view with the integration flow opened in the Model Configuration editor</description>
+</context>
+</contexts>
+

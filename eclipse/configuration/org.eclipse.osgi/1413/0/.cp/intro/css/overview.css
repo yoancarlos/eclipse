@@ -1,0 +1,15 @@
+a#pi-overview img {
+	background-image: url(../../images/topiclabel/ov_pi48.gif);
+}
+
+a#pi-overview:hover img {
+	background-image: url(../../images/topiclabel/ov_pi48_hov.gif);
+}
+
+a#pi-legend img {
+	background-image: url(../../images/topiclabel/ov_pi48.gif);
+}
+
+a#pi-legend:hover img {
+	background-image: url(../../images/topiclabel/ov_pi48_hov.gif);
+}

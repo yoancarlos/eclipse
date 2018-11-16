@@ -1,0 +1,31 @@
+!SESSION 2018-11-13 18:36:39.141 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.sap.it.ds.intrsp.md.api 4 0 2018-11-13 18:37:16.053
+!MESSAGE [com.sap.it.ds.intrsp.md.api(85)] unbind method [unindEdmxConnectionFactory] not found; Component will fail
+
+!ENTRY com.sap.it.ds.intrsp.md.api 4 0 2018-11-13 18:37:16.266
+!MESSAGE [com.sap.it.ds.intrsp.md.api(85)] unbind method [unindEdmxConnectionFactory] not found
+
+!ENTRY com.sap.it.ds.intrsp.md.api 4 0 2018-11-13 18:37:16.336
+!MESSAGE [com.sap.it.ds.intrsp.md.api(85)] unbind method [unbindEdmxProvider] not found; Component will fail
+
+!ENTRY com.sap.it.ds.intrsp.md.api 4 0 2018-11-13 18:37:16.428
+!MESSAGE [com.sap.it.ds.intrsp.md.api(85)] unbind method [unbindEdmxProvider] not found
+
+!ENTRY com.sap.it.ds.intrsp.md.api 4 0 2018-11-13 18:37:16.467
+!MESSAGE [com.sap.it.ds.intrsp.md.api(85)] unbind method [unbindODataMetadataService] not found; Component will fail
+
+!ENTRY com.sap.it.ds.intrsp.md.api 4 0 2018-11-13 18:37:16.533
+!MESSAGE [com.sap.it.ds.intrsp.md.api(85)] unbind method [unbindODataMetadataService] not found
+
+!ENTRY com.sap.it.ds.intrsp.md.api 4 0 2018-11-13 18:37:16.563
+!MESSAGE [com.sap.it.ds.intrsp.md.api(85)] unbind method [unbindEdmxXSDGenerator] not found; Component will fail
+
+!ENTRY com.sap.it.ds.intrsp.md.api 4 0 2018-11-13 18:37:16.588
+!MESSAGE [com.sap.it.ds.intrsp.md.api(85)] unbind method [unbindEdmxXSDGenerator] not found

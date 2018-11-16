@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Define PGP Encryptor</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio7a07766899c84ed2bb38897e3a332032">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Define PGP Encryptor</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loio7a07766899c84ed2bb38897e3a332032__ul_snk_z4x_jr">
+					<li class="li">
+						<p class="p">You have logged into your customer workspace in SAP HCI web application. </p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You are editing the integration flow in the editor.</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use the PGP Encryptor to encrypt or sign and encrypt the payload using OpenPGP
+				standard.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loio7a07766899c84ed2bb38897e3a332032__image_oqv_t5x_jr" src="loioccb09c1e8d904b42966cd321c4008329_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Encryptor</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">PGP Encryptor</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Place <span class="ph uicontrol">PGP Encryptor</span> in integration process and define
+					the message path.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Name</span> field, provide a name for the element.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to sign the payload with a signature, in
+						<span class="ph uicontrol">Signatures</span> field, choose
+						<span class="ph uicontrol">Including</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Encryption</span> section, provide values in fields based on
+					description in table.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio7a07766899c84ed2bb38897e3a332032__d5590e15" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d2735078e116">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d2735078e122">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2735078e116 ">
+                                <p class="p">Content Encryption Algorithm</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2735078e122 ">
+                                <p class="p">In the dropdown list, select the algorithm you want to use to
+                                    encrypt the payload.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2735078e116 ">
+                                <p class="p">Secret Key Length</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2735078e122 ">
+                                <p class="p">Enter the secret key length.</p>
+
+                                <div class="p">
+                                    <div class="note note"><span class="notetitle">Note</span> 
+                                        <p class="p">The length of the secret key depends on the encryption
+                                            algorithm that you choose.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2735078e116 ">
+                                <p class="p">Compression Algorithm</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2735078e122 ">
+                                <p class="p">Select the algorithm you want to use to compress the payload.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2735078e116 ">
+                                <p class="p">Armored</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2735078e122 ">
+                                <p class="p">Select if you want the output to be radix 64 (base64) encoded
+                                    with additional header.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2735078e116 ">
+                                <p class="p">Integrity protected Data Packet</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2735078e122 ">
+                                <p class="p">Select if you want to create an Encrypted Integrity Protected
+                                    Data Packet. This is a specific format where an additional hash
+                                    value is calculated (using SHA-1 algorithm) and added to the
+                                    message.</p>
+
+                                <p class="p">This increases the message security level.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2735078e116 ">
+                                <p class="p">Encryption User ID of Key(s) from Public Keyring</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2735078e122 ">
+                                <p class="p">You can specify the encryption key user IDs (or parts of them).
+                                    Based on this, system look for the public key in PGP public
+                                    keyring.</p>
+
+                                <p class="p">You can specify multiple user IDs.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the configuration.</span>
+				
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

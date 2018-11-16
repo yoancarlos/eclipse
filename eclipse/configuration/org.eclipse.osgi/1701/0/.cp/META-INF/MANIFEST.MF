@@ -1,0 +1,197 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.sap.ndb.studio.sqlscript.procedure;singleton:
+ =true
+Archiver-Version: Plexus Archiver
+Built-By: ppurple
+Require-Bundle: org.eclipse.ui,org.eclipse.ui.editors,org.eclipse.ui.f
+ orms;bundle-version="3.6.0",org.eclipse.ui.workbench.texteditor,org.e
+ clipse.ui.navigator,org.eclipse.jface.text,org.eclipse.ui.ide,org.ecl
+ ipse.core.runtime,org.eclipse.core.filesystem,org.eclipse.core.resour
+ ces,org.eclipse.debug.core;bundle-version="3.8.0",com.sap.rnd.rndrt;b
+ undle-version="1.8.1",com.sap.ndb.studio.parser.rnd,com.sap.ndb.studi
+ o.sql.parser,com.sap.ndb.studio.modeler.base,com.sap.ndb.studio.datam
+ odel,com.sap.ndb.studio.tools.common,com.sap.ndb.studio.editor,com.sa
+ p.ndb.studio.sql.editor
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %Bundle-Vendor
+Export-Package: com.sap.ndb.studio.sqlscript.procedure,com.sap.ndb.stu
+ dio.sqlscript.procedure.catalog.action,com.sap.ndb.studio.sqlscript.p
+ rocedure.catalog.viewers,com.sap.ndb.studio.sqlscript.procedure.hdb.e
+ ditors,com.sap.ndb.studio.sqlscript.procedure.help,com.sap.ndb.studio
+ .sqlscript.procedure.xml.editors,com.sap.ndb.studio.sqlscript.procedu
+ re.xmlhandlers
+Bundle-Name: %Bundle-Name
+Bundle-Version: 2.3.39
+Bundle-Activator: com.sap.ndb.studio.sqlscript.procedure.ProcedurePlug
+ in
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_66
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/ProcedureXmlP
+ arser.class
+SHA-256-Digest: HttpnX0FCC+2rSO8rPYd6/Id4fToAf2OmuM2pUzTpug=
+
+Name: plugin.xml
+SHA-256-Digest: TMpBgIfknDf3Rc18c9XPZbNXJ6qNF52bmf69I1JbWfg=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.sqlscript.p
+ rocedure/pom.properties
+SHA-256-Digest: qpHto0tnn1+ettYlOXTuKFjdxsm5eX0gZX/V+bPGzqk=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/LocalTypeDocu
+ mentProvider.class
+SHA-256-Digest: OggE8gLnLKtxzlQTFU5VBgi0v9/JTVRAjFENFgVzmxA=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/XmlProcedureP
+ arameters.class
+SHA-256-Digest: i3FG/O0nFmVer21XiZqCUtk0K3ekfKrF/Ys7LEdInWs=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/ProcedureXmlB
+ uilder.class
+SHA-256-Digest: 3hMPenvDb/ITBo+zSXqI28TCFQ6+RGVmnfeJZfAt8Kk=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/LocalTypeEdit
+ orInput$1.class
+SHA-256-Digest: 5/Wl3sfQhSDYseZOoHoWYc/chus84qjTnL6Vg2B1PFc=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xml/properties/ProcedureX
+ mlGeneralProperties.class
+SHA-256-Digest: 6f3qq/39sByUvx7Cq3+sxvEN6SiPKX/NzFHxo6Ah/Ps=
+
+Name: icons/HDBProcedure.gif
+SHA-256-Digest: bJIVAiih5ArlkYfdG9nG4CYISk2s0er5AiF9oPuyvPg=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/catalog/viewers/CatalogPa
+ geViewer.class
+SHA-256-Digest: tct/V4IBsqGpex179mHFapE5IECQzAUox3z1OiuuMG8=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/catalog/action/OpenCatalo
+ gViewerActionProvider.class
+SHA-256-Digest: dSUulKcOfRwZAe644blk2hbifm87Yij2TxJom8wZ/mg=
+
+Name: .options
+SHA-256-Digest: sFShcgKQHQU163U5RdQI3vOJWMoCo3W0aBC3byBbCzY=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.sqlscript.p
+ rocedure/pom.xml
+SHA-256-Digest: oblkeHzxz6QhGeyjlz10pB6WJghzpd4tgkInHB+NgTo=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/catalog/action/OpenCatalo
+ gViewerActionProvider$OpenProcedureEditorJob.class
+SHA-256-Digest: iZDFgyvI74owUtj5lk+cCJtYG17zQiQDKr7b49KO5aI=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/catalog/action/OpenCatalo
+ gViewerActionProvider$OpenProcedureEditorAction.class
+SHA-256-Digest: nrWOrON98ayB2YVeipiT9XlZlJlZ24W/5vMM6fCHifM=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/ProcedureVali
+ dator$TableDefChanged.class
+SHA-256-Digest: 5K9/UDgUt6bo+M0EvtlQCLfRPew1aJr5VaGA9CguV58=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/LocalTypeEdit
+ orInput.class
+SHA-256-Digest: ROSZRqN0STqUv7i1SMpzOggyN5N82dKW0G56NIR/mNk=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xml/properties/ProcedureX
+ mlFilter.class
+SHA-256-Digest: AgfKtyV8FD63IiHA6m6s2sfxbMYD0s786p7mv+v66z0=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/hdb/editors/ProcedurePage
+ Editor.class
+SHA-256-Digest: D4jR6vizufdOloAYPLgEA/zCqCmcsImDKm+q6SAbs80=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/ProcedureVali
+ dator.class
+SHA-256-Digest: ServSLALhRtwXGUZbC+xTgSMnbfgbEhbS3X4lggYRvc=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/catalog/viewers/CatalogPa
+ geViewer$1.class
+SHA-256-Digest: /LaOw9I1xKJ94a+IO+Va9gecsZJ8mnCqwsBpvKkay8E=
+
+Name: icons/SqlScript.gif
+SHA-256-Digest: EPr8Kl0XQZcGP8B0XnechivwutX/UhcwRIp3gAd5prE=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/hdb/editors/ProcedureMult
+ iPageEditor.class
+SHA-256-Digest: 4b4QCZStMbO0F5+cngjk6ttrsinxlK9eNNwNbptJLWM=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/catalog/action/OpenCatalo
+ gViewerActionProvider$OpenProcedureEditorJob$1.class
+SHA-256-Digest: iwBzKP8BwNTiyTokbHLjSQyYMTajlyonpjty03ZTG6k=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/catalog/viewers/CatalogMu
+ ltiPageViewer.class
+SHA-256-Digest: zlQz9h26LD6H7+QzfNO8StQ6uF9qFjld0IMSySRAMnc=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xml/properties/ProcedureX
+ mlEditorProperties.class
+SHA-256-Digest: VqcMvgCRQ9zGi2LwzUA+UFy+5FFe7I5SefdbhcmWt60=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/ProcedureCont
+ entDescriber.class
+SHA-256-Digest: FF5FgVv9+5rxS6/NzFl8WF0dgvwC6TsTWA+X++bLuuk=
+
+Name: icons/procedure.gif
+SHA-256-Digest: cATa9RodXjGZsyw0NPU0IHUzfvn1aKcFQHJow9XG/CA=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/ProcedureVali
+ dator$HeaderParameter.class
+SHA-256-Digest: Esd00H0AZqY80dI/2Nt5sBOg599dfTy5g9IqdgZf18A=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/ProcedureXmlP
+ arser$ProcedureHeaderParameters.class
+SHA-256-Digest: 2IDOgBb8ovb34PfdsfQKh+2XZVKSaacgSHxPVs8wKmI=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/XMLLocalTable
+ TypeParser.class
+SHA-256-Digest: 2lSwAKNTF7boC6Jr5I2nt2SqH/p0tllkdQ8xtrQbLhA=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/i18n/Messages.class
+SHA-256-Digest: NL+vTH4aSPnpSx5G7klEseLLT94hQukPaU2JevWngYY=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/catalog/action/OpenCatalo
+ gViewerActionProvider$OpenProcedureEditorJob$2.class
+SHA-256-Digest: +Uj2stbEDOQt5klJOYJaNA2/6bVEWsf4pnWfAXVjWGs=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/VersionConfig.class
+SHA-256-Digest: HjDYOTYVfKAN2S5P11Ii/PNYPM3cxTZpWcDmZFgWg+w=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/help/ISqlProcHelpContextI
+ ds.class
+SHA-256-Digest: 4rqtzUoocap39qU1qlgJxsLaeUaXsiP+QjsoKtjSX+Q=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/i18n/messages.properties
+SHA-256-Digest: 2DzlwLtb7k222e1QT0OeNnRrijfk12XiVuq5WUh/i4c=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/ProcedurePlugin.class
+SHA-256-Digest: kRTzjCcGE8FinM85JACF3zqJGoUk9jTyMxYY3RY1ZL0=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/tools/ProcedureConstants.
+ class
+SHA-256-Digest: ElRIKsIp+U5z0aQX3oNO4F2UFYjSVUavSe6yLDcSrg4=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xml/editors/ProcedureXmlP
+ ageEditor.class
+SHA-256-Digest: Lytpiq3Zfq05AUHfAXimRZI/705wZQThpxJ3v/xm/U8=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/tools/ProcedureUtility.cl
+ ass
+SHA-256-Digest: lYfFPLjN59TZ/wjVCQfmnpwDQKgiXgMXBCCVK7th7dQ=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xml/editors/ProcedureLoca
+ lTablePageEditor.class
+SHA-256-Digest: K+9e709EwimXpjcn/Bct9CMP7+Dz1RW+6dQjdxxAh/0=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xml/editors/ProcedureXmlM
+ ultiPageEditor.class
+SHA-256-Digest: PJENUxJfDXrKfXNMU4REesINz1X1HNgiXgTta25VV9k=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: ItoXb//M/ZEBoDgRvsP8p4nRVLmS3EkG8SB4jFDVaoc=
+
+Name: com/sap/ndb/studio/sqlscript/procedure/xmlhandlers/XMLLocalTable
+ TypeBuilder.class
+SHA-256-Digest: 6HcPBSeEYERaK8Yq+wZuWXrVhMgZJ1qNkdlIbvtkFXI=
+

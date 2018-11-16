@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="Whether you select the option Use Namespace Mapping or not, leads to different transformation results."/>
+<meta name="description" content="Whether you select the option Use Namespace Mapping or not, leads to different transformation results."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Example: Transformations from XML format to JSON format with and without Namespace Mapping</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="copy1262e1cf84ef441e8f1b9cf55afc5348">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Example: Transformations from XML format to JSON format with and without Namespace
+		Mapping</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc">Whether you select  the option <span class="ph uicontrol">Use Namespace Mapping</span> or not,
+		leads to different transformation results.</p>
+
+		<div class="section" id="copy1262e1cf84ef441e8f1b9cf55afc5348__section_dsh_pwt_cz"><div class="section_title">Using Namespace Mapping</div><div type="Using Namespace Mapping">
+			
+		</div></div>
+
+		<div class="example"><h2 class="exampletitle">Example</h2>
+			<div class="p">For this example we look at the following <span class="ph emphasis emphasis">XML
+				document</span>:<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">
+					&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+					&lt;n1:A xmlns:n1="http://com.sap/abc" xmlns:n2="http://com.sap/xyz"&gt;
+					&lt;n2:B n2:attr1="1" attr2="2"&gt;valueB&lt;/n2:B&gt;
+					&lt;C&gt;valueC1&lt;/C&gt;
+					&lt;C&gt;valueC2&lt;/C&gt;
+					&lt;D/&gt;
+					&lt;E&gt;valueE&lt;E&gt;
+					&lt;/n1:A&gt;
+				</pre></div>
+</div>
+
+			<div class="p">For the transformation of this document we choose the following settings:<ul class="ul" id="copy1262e1cf84ef441e8f1b9cf55afc5348__ul_nzp_tst_cz">
+					<li class="li">
+						<p class="p">The character ':' is used as the JSON prefix separator. </p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">The option <span class="ph uicontrol">Use Namespace Mapping</span> is selected.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">The XML-namespace-to-JSON-prefix mapping is as follows:</p>
+
+						<div class="p">
+							
+<div class="table-wrapper tablenoborder"><table summary="" id="copy1262e1cf84ef441e8f1b9cf55afc5348__table_ifb_r3j_vp" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+									
+									
+									<thead class="thead" align="left">
+										<tr class="row">
+											<th class="entry" valign="top" width="50%" id="d209782e73">XML Namespace</th>
+
+											<th class="entry" valign="top" width="50%" id="d209782e76">JSON Prefix</th>
+
+										</tr>
+
+									</thead>
+
+									<tbody class="tbody">
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d209782e73 ">http://com.sap/abc</td>
+
+											<td class="entry" valign="top" width="50%" headers="d209782e76 ">abc</td>
+
+										</tr>
+
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d209782e73 ">http://com.sap/xyz</td>
+
+											<td class="entry" valign="top" width="50%" headers="d209782e76 ">xyz</td>
+
+										</tr>
+
+									</tbody>
+
+								</table>
+</div>
+
+						</div>
+
+					</li>
+
+				</ul>
+</div>
+
+			<div class="p">We get the following <span class="ph emphasis emphasis">JSON
+				document</span>:<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">{"abc:A":{"xyz:B":{"@xyz:attr1":"1","@attr2":"2","$":"valueB"},"C":["valueC1","valueC2"],"D":"","E":"valueE"}}</pre></div>
+</div>
+
+			<div class="note note"><span class="notetitle">Note</span> Line breaks and spaces between the elements are ignored.</div>
+
+		</div>
+
+		<div class="section" id="copy1262e1cf84ef441e8f1b9cf55afc5348__section_lcl_nxt_cz"><div class="section_title">No Namespace Mapping</div><div type="No Namespace Mapping">
+			
+		</div></div>
+
+		<div class="example"><h2 class="exampletitle">Example</h2>
+			<div class="p">For this example we look at the following <span class="ph emphasis emphasis">XML
+				document</span>:<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">
+							&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+							&lt;abc:A xmlns:abc="http://com.sap/abc" xmlns:xyz="http://com.sap/xyz"&gt;&lt;xyz:B xyz:attr1="1" attr2="2"&gt;valueB&lt;/xyz:B&gt;&lt;C&gt;valueC1&lt;/C&gt;&lt;C&gt;valueC2&lt;/C&gt;&lt;D/&gt;&lt;E&gt;valueE&lt;/E&gt;&lt;/abc:A&gt;
+						</pre></div>
+</div>
+
+			<div class="p">For the transformation we choose the following settings:<ul class="ul" id="copy1262e1cf84ef441e8f1b9cf55afc5348__ul_dpp_nvt_cz">
+					<li class="li">
+						<p class="p">The character ':' is used as the JSON prefix separator. </p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">The option <span class="ph uicontrol">Use Namespace Mapping</span> is
+								<span class="ph emphasis emphasis">not</span> selected.</p>
+
+					</li>
+
+				</ul>
+</div>
+
+			<div class="p">We get the following <span class="ph emphasis emphasis">JSON
+				Document</span>:<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">{"A":{"B":{"@attr1":"1","@attr2":"2","$":"valueB"},"C":["valueC1","valueC2"],"D":"","E":"valueE"}}</pre></div>
+</div>
+
+		</div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

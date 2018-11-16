@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Searching for ABAP Development Objects">
+   <intro>
+      <description>
+         Imagine you want to use the functionality of a global ABAP class. However, you do not know the exact name of the class nor do you have any documentation for it. In such cases, simply use the global search and where-used functions in ABAP Development Tools.  
+<br/>
+<br/>
+This cheat sheet shows you how to carry out a <b>global search</b> for any development object <b>in an ABAP system</b>.  
+<br/>
+<br/>
+By the end of this tutorial, you will be able to:
+<br/>
+&gt; Perform a system-wide search for ABAP development objects 
+<br/>
+&gt; Get the Where-Used-List for ABAP classes
+<br/>
+&gt; Get the Where-Used-List for their subobjects, such as methods
+<br/>
+&gt; Restrict the scope of your search.
+      </description>
+   </intro>
+   <item
+         title="Open the Search Dialog">
+      <description>
+         <br/>
+1. To bring up the search dialog, choose <b>Open ABAP Development Object</b> icon in the toolbar, or press the shortcut <b>Ctrl + Shift + A</b>, or simply choose &quot;Click to perform&quot; below. 
+<br/>
+<br/>
+2. In the search dialog, select the relevant ABAP project – if you have not yet already done so.  
+<br/>
+<br/>
+3. In the name field, enter <b>cl_*browser</b> to search for classes in the ABAP system that contain the suffix <b>browser</b> in their name.
+<br/>
+<br/>
+4). Select <b>cl_abap_browser</b> in the result list below and choose <b>OK</b> to open this class in the source editor. 
+<br/>
+      </description>
+      <command
+            required="false"
+            serialization="com.sap.adt.ris.search.ui.callSimpleSearch"/>
+   </item>
+   <item
+         title="Get Where-Used List for an ABAP Class">
+      <description>
+         Now, you may possibly find out where the class <b>cl_abap_browser</b> is used in the ABAP system. In this case, simply use the popular where-used list function.   
+<br/>
+<br/>
+Continue as follows: 
+<br/>
+<br/>
+1. In the source code editor, position the cursor on the class name <b>cl_abap_browser</b> and then choose the <b>Get Where-Used List… </b> icon in the toolbar, or press the shortcut <b>Ctrl + Shift + G</b>. 
+<br/>
+<br/>
+2. Select the object type <b>Programs</b> to restrict the scope of your search. 
+<br/>
+<br/>
+3. Start searching with <b>OK</b>.
+      </description>
+   </item>
+   <item
+         skip="true"
+         title="Check the Search Results">
+      <description>
+         The hit list is then displayed in the <b>Search</b> view, showing all programs where the class <b>cl_abap_browser</b> is used.
+<br/>
+<br/>
+Expand the node of the demo program <b>demo_html_browser</b> listed there and double-click a code line you are interested in. 
+<br/>
+<br/>
+With this step, you are automatically navigated to the corresponding source code of the program.
+      </description>
+   </item>
+   <item
+         title="Get Where-Used List for a Sub Object (method)">
+         <description>
+         It is possible that, in the end, you only want to know if and how you would like to use a particular method of the <b>cl_abap_browser class</b>. 
+<br/>
+<br/>
+Continue as follows:  
+<br/>
+<br/>
+Repeat the last step for the class method <b>show_xml</b> or any other method of <b>cl_abap_browser</b> class.
+      </description>
+   </item>
+</cheatsheet>

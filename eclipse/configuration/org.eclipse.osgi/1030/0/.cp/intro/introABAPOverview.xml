@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<introContent>
+
+
+<!-- Overview Page - (1 group) -->
+
+  	<extensionContent id="com.sap.adt.intro.basics" style="css/sample.css" name="Intro to ABAP Development Tools" path="overview/@">
+
+       		       	
+       	<group label="ABAP Development" style-id="content-group" id="content-group">
+       	
+       	   <link label="Quick Launch"
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/4ec26f816e391014adc9fffe4e204223.html"
+					id="abapstandard_doc" style-id="content-link">
+				<text>	 
+ 					 This Quick Launch provides you with the compact knowledge you may need when working with ABAP Development Tools for the first time.
+				</text>
+			</link>	 
+			
+			  <link label="FAQs for SE80 Experts Using ADT"
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/bd5c5b75eeab4b7892eff1e1abce7485.html"
+					id="abapstandard_doc" style-id="content-link">
+				<text>	 
+ 					 The FAQ guide provides how to information about SAP GUI-based functionality and its integration within the Eclipse-based IDE.
+				</text>
+			</link>	       	
+			
+			<link label="Fundamental Tasks"
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/4ec7a39d6e391014adc9fffe4e204223.html"
+					id="abapproject_doc" style-id="content-link">
+				<text>
+					Get familiar with elementary activities in the area of ABAP projects, and with those functions and utilities you will use 
+					when creating, editing, navigating, or searching for development objects in your projects.    
+				</text>	
+			</link>       		
+			
+			<link label="Ensuring Quality of ABAP Code"
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/4ec7641e6e391014adc9fffe4e204223.html"
+					id="abapstandard_doc" style-id="content-link">
+				<text>
+					Learn how to check the quality of your ABAP code using the ABAP Test Cockpit (ATC) and how to run ABAP Unit tests. 
+				</text>	
+			</link>   
+			
+			<link label="Using Troubleshooting Tools"
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/4ecc7d3a6e391014adc9fffe4e204223.html"
+					id="abapstandard_doc" style-id="content-link">
+				<text>
+					Follow the steps for debugging ABAP code, for identifying performance hot spots, or for viewing ABAP runtime errors and short dumps.   
+				</text>	
+			</link> 
+			
+			          		
+       	</group>       	
+       	
+  	</extensionContent>
+
+</introContent>

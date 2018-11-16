@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compositeCheatsheet name="Adding Development Objects to ABAP Project">
+   <taskGroup kind="set" name="Adding New Development Objects to ABAP Project" skip="false">
+      <intro>
+         This tutorial demonstrates step by step how to add new development objects to your project using the <b>ABAP Development Tools</b>. 
+<br/>
+You will also discover that this procedure is a bit different, depending on the object type to be created. Currently, you can create certain development objects such as DDIC tables, structures, or data elements, solely by means of GUI-based tools. <br/>
+<br/>   
+By the end of this tutorial, you will be able to: 
+<br/>
+&gt; Create regular and exception ABAP classes
+<br/>
+&gt; Create ABAP programs 
+<br/>
+&gt; Assign a transport request
+<br/>
+&gt; Create further development objects such as ABAP Dictionary data elements 
+<br/>
+&gt; Understand the interplay between Eclipse-based and GUI-based tools.
+      </intro>
+      <onCompletion>
+         Congratulations, you have successfully completed the sequence of steps required to add new development objects to your ABAP project!
+      </onCompletion>
+      <task kind="cheatsheet" name="Creating Global ABAP Classes" skip="false">
+         <intro>
+            In this unit, you will become familiar with the steps required for creating gobal ABAP classes.
+         </intro>
+         <onCompletion>
+            When you create classes, you specify their basic data only. This definition produces an entry in the global class library of the AS ABAP system.
+         </onCompletion>
+         <param name="path" value="createABAPclasses.xml">
+         </param>
+      </task>
+      <task kind="cheatsheet" name="Creating ABAP Programs" skip="false">
+         <intro>
+            This unit shows you how to add new ABAP programs in the specified package.
+         </intro>
+         <onCompletion>
+            You have created an executable ABAP program.
+         </onCompletion>
+         <param name="path" value="createABAPprograms.xml">
+         </param>
+      </task>
+      <task kind="cheatsheet" name="Creating ABAP Dictionary Data Elements" skip="false">
+         <intro>
+            This unit shows you how to create a data element in the <b>ABAP Dictionary</b>, starting with your ABAP project, followed by the ABAP Development Object creation wizard, and finally completed with the GUI-based Dictionary tool.
+         </intro>
+         <onCompletion>
+            You have created a data element for your ABAP project.
+         </onCompletion>
+         <param name="path" value="createDDICdataelements.xml">
+         </param>
+      </task>
+   </taskGroup>
+</compositeCheatsheet>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="With the Content Modifier you can specify additional header fields that can be used for end-to-end tracing. You can also set certain exchange properties."/>
+<meta name="description" content="With the Content Modifier you can specify additional header fields that can be used for end-to-end tracing. You can also set certain exchange properties."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Message Headers and Exchange Properties</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="copyd7664ff598f844fe947a778f2d5ef59d">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Message Headers and Exchange Properties</h1>
+<div class="body conbody"><p class="shortdesc">With the Content Modifier you can specify additional header fields that can be used for
+		end-to-end tracing. You can also set certain exchange properties.</p>
+<div class="section"><div class="section_title">Message Header</div><div type="Message Header">
+			
+			<p class="p">You can specify one of the following headers (under <span class="ph uicontrol">Message
+					Header</span> in the <span class="ph uicontrol">Name</span> field): </p>
+
+			<ul class="ul" id="copyd7664ff598f844fe947a778f2d5ef59d__ul_ofy_f4m_h5"><li class="li">
+					<p class="p"><kbd class="ph userinput">SAP_ApplicationID</kbd></p>
+
+					<p class="p">When you monitor the messages at runtime, you can then search for all
+						messages whose such defined <kbd class="ph userinput">SAP_ApplicationID</kbd> have a
+						specific value (shows up as <span class="ph uicontrol">MessageID</span> attribute in
+						the Message Monitoring editor). </p>
+
+					<p class="p">As <span class="ph uicontrol">Type</span>, select the XPath expression that points to
+						the message element which is to be used as application ID.</p>
+
+				</li>
+<li class="li">
+					<p class="p"><kbd class="ph userinput">SAP_Sender</kbd></p>
+
+				</li>
+<li class="li">
+					<p class="p"><kbd class="ph userinput">SAP_Receiver</kbd></p>
+
+				</li>
+<li class="li">
+					<p class="p"><kbd class="ph userinput">SAP_MessageType</kbd></p>
+
+					<p class="p">You can use this property to categorize messages. </p>
+
+				</li>
+<li class="li">
+					<p class="p"><kbd class="ph userinput">SAP_MessageProcessingLogID</kbd></p>
+
+					<p class="p">You can use this property to read the ID of the message processing log (no write access
+						supported). </p>
+
+				</li>
+</ul>
+
+			<p class="p">When you have specified <kbd class="ph userinput">SAP_Sender</kbd> or
+					<kbd class="ph userinput">SAP_Receiver</kbd>, the corresponding values are displayed in
+				the Message Processing Log.  If you change the <kbd class="ph userinput">SAP_Receiver</kbd>
+				value during message processing, all values are added to the receiver field in the
+				Message Processing Log as a comma-separated list. If you don’t like this behavior
+				you can specify the Exchange Property <samp class="ph codeph">SAP_ReceiverOverwrite</samp> (see
+				below).</p>
+
+		</div></div>
+<div class="section"><div class="section_title">Exchange Properties</div><div type="Exchange Properties">
+			
+			<p class="p">You can specify one of the following exchange properties (under <span class="ph uicontrol">Exchange
+					Property</span> in the <span class="ph uicontrol">Name</span> field): </p>
+
+			<ul class="ul" id="copyd7664ff598f844fe947a778f2d5ef59d__ul_rtr_qz5_tw"><li class="li">
+					<p class="p"><samp class="ph codeph">SAP_ReceiverOverwrite</samp></p>
+
+					<p class="p">Headers that are added to a message using the <samp class="ph codeph">SAP_Receiver</samp>
+						header element during message processing are appended to the message
+						processing log (MPL). </p>
+
+					<p class="p">This behaviour is reasonable for scenarios like, for example, the multicast
+						pattern where a message is sent to several receivers and all receivers are
+						to be collected in the MPL (not just the last added header). </p>
+
+					<p class="p">By setting the <samp class="ph codeph">SAP_ReceiverOverwrite</samp> exchange property to
+							<samp class="ph codeph">true</samp>, you can change this behaviour in such a way that
+						only the last added header is shown in the MPL. </p>
+
+					<div class="note note"><span class="notetitle">Note</span> 
+						<p class="p">Example configuration:</p>
+
+						<p class="p"><span class="ph uicontrol">Name</span>:
+							<kbd class="ph userinput">SAP_ReceiverOverwrite</kbd></p>
+
+						<p class="p"><span class="ph uicontrol">Type</span>: <kbd class="ph userinput">Constant</kbd></p>
+
+						<p class="p"><span class="ph uicontrol">Value</span>: <kbd class="ph userinput">True</kbd></p>
+
+					</div>
+
+				</li>
+</ul>
+
+		</div></div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.help.toc">
+      <tocIcon id="SAPid" openIcon="images/sap_toc_open.gif"
+               closedIcon="images/sap_toc_closed.gif"/>
+      <toc file="toc.xml" primary="true"/>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts/ifl_contexts.xml">
+      </contexts>
+      <contexts
+            file="contexts/view_contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/overviewExtensionContent.xml">
+      </configExtension>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/tutorialsExtensionContent.xml">
+      </configExtension>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/whatsnewExtensionContent.xml">
+      </configExtension>
+   </extension>
+     <!-- <extension
+         id="com.sap.ide.xpi.cheatsheets"
+         name="Iflow CheatSheets"
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <category
+            id="com.sap.ide.xpi.cheatsheets.iflow"
+            name="SAP Process Integration Designer">
+      </category>
+      <cheatsheet
+            category="com.sap.ide.xpi.cheatsheets.iflow"
+            composite="false"
+            contentFile="cheatsheets/createIflow.xml"
+            id="com.sap.ide.xpi.help.cheatsheet1140731553"
+            name="Create an Integration Flow based on an Enterprise Integration Pattern">
+         <description>
+            Creating an Integration Flow
+         </description>
+      </cheatsheet>
+   </extension>-->
+   
+   <extension
+         id="com.sap.ide.xpi.cheatsheets"
+         name="Iflow CheatSheets"
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <category
+            id="com.sap.ide.xpi.cheatsheets.iflow"
+            name="SAP Cloud Platform Integration">
+      </category>
+      <cheatsheet
+            category="com.sap.ide.xpi.cheatsheets.iflow"
+            composite="false"
+            contentFile="cheatsheets/IFlowfromSAPTemplate.xml"
+            id="com.sap.ide.help.CreateIflowfromSAPTemplate"
+            name="Working with integration flow template">
+         <description>
+            Integration Flow from SAP Template and configuring values to externalized parameters.
+         </description>
+      </cheatsheet>
+   </extension>
+   
+   <extension
+         id="com.sap.ide.xpi.cheatsheets"
+         name="Iflow CheatSheets"
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <category
+            id="com.sap.ide.xpi.cheatsheets.iflow"
+            name="SAP Cloud Platform Integration">
+      </category>
+      <cheatsheet
+            category="com.sap.ide.xpi.cheatsheets.iflow"
+            composite="false"
+            contentFile="cheatsheets/CreateNEditIFlow.xml"
+            id="com.sap.ide.help.CreateandEditIflow"
+            name="Working with new integration project">
+         <description>
+            Integration Flow from SAP Template and configuring values to externalized parameters.
+         </description>
+      </cheatsheet>
+   </extension>
+   
+   
+</plugin>

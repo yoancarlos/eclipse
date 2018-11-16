@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:s0="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	targetNamespace="urn:sap-com:document:sap:rfc:functions">
+	<types>
+		<xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions">
+			<xsd:element name="_-SWDC_-API_FOR_HANA_DET_DWNLOAD">
+				<xsd:complexType>
+					<xsd:all>
+						<xsd:element name="IT_SCV_INPUT">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="item" minOccurs="0" maxOccurs="unbounded"
+										type="s0:_-SWDC_-API_FOR_HANA_S_SCV_INPUT"></xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="IV_SYSNR">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:maxLength value="18"></xsd:maxLength>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="IV_USERID">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:maxLength value="12"></xsd:maxLength>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+					</xsd:all>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="_-SWDC_-API_FOR_HANA_DET_DWNLOAD.Response">
+				<xsd:complexType>
+					<xsd:all>
+						<xsd:element name="ET_SCV_ERROR">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="item" minOccurs="0" maxOccurs="unbounded"
+										type="s0:_-SWDC_-API_FOR_HANA_S_SCV_ERROR"></xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="ET_SCV_RESULT">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="item" minOccurs="0" maxOccurs="unbounded"
+										type="s0:_-SWDC_-API_FOR_HANA_S_SCV_RESLT"></xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:all>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:complexType name="_-SWDC_-API_FOR_HANA_S_SCV_ERROR">
+				<xsd:sequence>
+					<xsd:element name="CVNR" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="20"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="PAKKTXT" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="30"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="ALETXT" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="20"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="VENDOR" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="30"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="SP_LEVEL" minOccurs="0" type="xsd:int"></xsd:element>
+					<xsd:element name="PECGRSC" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="10"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="SP_LEVEL_IS" minOccurs="0" type="xsd:int"></xsd:element>
+					<xsd:element name="PATCHLEVEL_IS" minOccurs="0" type="xsd:int"></xsd:element>
+					<xsd:element name="PECGRSC_IS" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="10"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="PCATGUID_IS" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="8"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="ERROR_CODE" minOccurs="0" type="xsd:byte"></xsd:element>
+					<xsd:element name="ERROR_REASON" minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="_-SWDC_-API_FOR_HANA_S_SCV_INPUT">
+				<xsd:sequence>
+					<xsd:element name="CVNR" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="20"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="PAKKTXT" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="30"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="ALETXT" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="20"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="VENDOR" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="30"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="SP_LEVEL" minOccurs="0" type="xsd:int"></xsd:element>
+					<xsd:element name="PECGRSC" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="10"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="_-SWDC_-API_FOR_HANA_S_SCV_RESLT">
+				<xsd:sequence>
+					<xsd:element name="CVNR" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="20"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="PAKKTXT" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="30"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="ALETXT" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="20"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="VENDOR" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="30"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="SP_LEVEL" minOccurs="0" type="xsd:int"></xsd:element>
+					<xsd:element name="PECGRSC" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="10"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="FASTKEY" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="25"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="SP_LEVEL_IS" minOccurs="0" type="xsd:int"></xsd:element>
+					<xsd:element name="PATCHLEVEL_IS" minOccurs="0" type="xsd:int"></xsd:element>
+					<xsd:element name="PECGRSC_IS" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="10"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="PCATGUID_IS" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="8"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="FILENAME" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="50"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="FILESIZE" minOccurs="0" type="xsd:int"></xsd:element>
+					<xsd:element name="FILESIZE_UNIT" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="10"></xsd:maxLength>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="CHANGED_ON" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:decimal">
+								<xsd:totalDigits value="15"></xsd:totalDigits>
+								<xsd:fractionDigits value="0"></xsd:fractionDigits>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="DL_URL" minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</types>
+	<message name="_-SWDC_-API_FOR_HANA_DET_DWNLOADInput">
+		<part name="parameters" element="s0:_-SWDC_-API_FOR_HANA_DET_DWNLOAD"></part>
+	</message>
+	<message name="_-SWDC_-API_FOR_HANA_DET_DWNLOADOutput">
+		<part name="parameters" element="s0:_-SWDC_-API_FOR_HANA_DET_DWNLOAD.Response"></part>
+	</message>
+	<portType name="_-SWDC_-API_FOR_HANA_DET_DWNLOADPortType">
+		<operation name="_-SWDC_-API_FOR_HANA_DET_DWNLOAD">
+			<input message="s0:_-SWDC_-API_FOR_HANA_DET_DWNLOADInput"></input>
+			<output message="s0:_-SWDC_-API_FOR_HANA_DET_DWNLOADOutput"></output>
+		</operation>
+	</portType>
+	<binding name="_-SWDC_-API_FOR_HANA_DET_DWNLOADBinding" type="s0:_-SWDC_-API_FOR_HANA_DET_DWNLOADPortType">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+		<operation name="_-SWDC_-API_FOR_HANA_DET_DWNLOAD">
+			<soap:operation soapAction="http://www.sap.com/_-SWDC_-API_FOR_HANA_DET_DWNLOAD"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+	</binding>
+	<service name="_-SWDC_-API_FOR_HANA_DET_DWNLOADService">
+		<documentation>SAP Service _-SWDC_-API_FOR_HANA_DET_DWNLOAD via SOAP
+		</documentation>
+		<port name="_-SWDC_-API_FOR_HANA_DET_DWNLOADPortType" binding="s0:_-SWDC_-API_FOR_HANA_DET_DWNLOADBinding">
+			<soap:address location="http://cidmain.wdf.sap.corp:1080/sap/bc/soap/rfc"></soap:address>
+		</port>
+	</service>
+</definitions>

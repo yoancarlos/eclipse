@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=2639661183082711"/>
+<title>Generating SSH Key for Authentication</title>
+</head>
+<body class="" id="loio9cc447cf364442d0aad61b1bc725bbf3">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Generating SSH Key for Authentication</h1>
+<div class="body taskbody"><p class="shortdesc"/>
+<div class="section context" id="loio9cc447cf364442d0aad61b1bc725bbf3__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div> You perform the tasks below to authenticate your
+			identity in Gerrit and to be permitted to commit changes into the Git Repository. <div class="note note" id="loio9cc447cf364442d0aad61b1bc725bbf3__note_N10018_N10014_N10011_N10001"><span class="notetitle">Note</span> 
+				<p class="p">This is a single-time activity for a user who needs to clone Git Repository
+					irrespective of tenants and customers.</p>
+
+			</div>
+</div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><p class="li stepsection"><strong class="ph b">Verify your identity in Gerrit</strong></p><ol><li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10029_N10020_N10011_N10001"><span class="ph cmd">Click https://git.wdf.sap.corp:8080 to open Gerrit in your web browser.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10032_N10020_N10011_N10001"><span class="ph cmd">Select the <span class="ph uicontrol">Sign In</span> option on the top-right corner of the
+					page and enter your SAP_ALL username and password.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N1003F_N10020_N10011_N10001"><span class="ph cmd">Select the <span class="ph uicontrol">Settings</span> option on the top-right corner of
+					the page. </span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N1004C_N10020_N10011_N10001"><span class="ph cmd">From the left pane, choose <span class="ph uicontrol">Identities</span>.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10059_N10020_N10011_N10001"><span class="ph cmd">Check if the e-mail address and user name is displayed here.</span></li>
+</ol><p class="li stepsection"><strong class="ph b">Create new entries in the Eclipse Preferences for a GIT user</strong>
+			</p><ol start="6"><li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10069_N10020_N10011_N10001"><span class="ph cmd">Launch the Eclipse IDE.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10072_N10020_N10011_N10001"><span class="ph cmd">Choose <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Window</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Preferences</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10087_N10020_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Preferences</span> dialog, select <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Team </span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Git </span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Configuration</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> from the left pane.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N100A4_N10020_N10011_N10001"><span class="ph cmd">On the <span class="keyword uilabel">Configuration</span> page, select the <span class="ph uicontrol">User
+						Settings</span> tab.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N100B5_N10020_N10011_N10001"><span class="ph cmd">In the <em class="ph i">Location</em> field, check if the location appears as
+						<em class="ph i">&lt;HOME&gt;/.gitconfig</em>.</span> 
+					<div class="note note" id="loio9cc447cf364442d0aad61b1bc725bbf3__note_N100C9_N100C6_N100B6_N10021_N10011_N10001"><span class="notetitle">Note</span> 
+						<p class="p">By default, &lt;HOME&gt; is configured to C:\Users\&lt;SAP_ALL ID. Use
+							this default location. In case, your HOME is set to a different location
+							change the environment variables as mentioned in the task Setting the
+							Environment Variables.</p>
+
+					</div>
+
+				</li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N100D2_N10020_N10011_N10001"><span class="ph cmd">Choose <span class="ph uicontrol">New Entry...</span>.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N100DF_N10020_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Add a configuration entry</span> dialog, specify
+						<kbd class="ph userinput">user.name</kbd> as the <span class="keyword uilabel">Key</span> and your full
+					name as the <span class="keyword uilabel">Value</span>.</span> 
+					<div class="note note" id="loio9cc447cf364442d0aad61b1bc725bbf3__note_N100FC_N100F9_N100E1_N10021_N10011_N10001"><span class="notetitle">Note</span> The full name should
+						be the same as you checked in the task Verify your identity in Gerrit. Git
+						stores your full name on every push action. </div>
+
+				</li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10104_N10021_N10011_N10001"><span class="ph cmd">Choose <span class="ph uicontrol">Apply</span> and then choose
+					<span class="ph uicontrol">OK</span>.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10100_N10020_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Add a configuration entry</span> dialog, specify
+						<kbd class="ph userinput">user.email</kbd> as the <span class="keyword uilabel">Key</span> and your SAP
+					e-mail address as the <span class="keyword uilabel">Value</span>.</span> 
+					<div class="note note" id="loio9cc447cf364442d0aad61b1bc725bbf3__note_N1011A_N10117_N10103_N10021_N10011_N10001"><span class="notetitle">Note</span> 
+						<p class="p">Git stores your e-mail address on every push action.</p>
+
+					</div>
+
+				</li>
+</ol><p class="li stepsection"><strong class="ph b">Setting the Environment Variables</strong>
+			</p><ol start="15"><li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10124_N10020_N10011_N10001"><span class="ph cmd">Right-click <span class="ph uicontrol">My Computer</span>, and select
+						<span class="ph uicontrol">Properties</span>.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10135_N10020_N10011_N10001"><span class="ph cmd">Choose the <span class="ph uicontrol">Advanced system settings</span> option from the left
+					pane.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10142_N10020_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Environment Variables</span> dialog, select the <span class="keyword uilabel">$HOME</span>
+					variable in the <span class="keyword uilabel">User variables &lt;SAP_ALL ID&gt;</span> section, and
+					choose <span class="ph uicontrol">Edit…</span>.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10157_N10020_N10011_N10001"><span class="ph cmd">Enter the location path to be set as your HOME. For example, enter
+					C:\Users\&lt;SAP_ALL ID.</span></li>
+</ol><p class="li stepsection"><strong class="ph b">Configure the location of SSH keys</strong></p><ol start="19"><li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10166_N10020_N10011_N10001"><span class="ph cmd">In the Eclipse IDE, choose <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Window</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Preferences</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>. </span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N1017B_N10020_N10011_N10001"><span class="ph cmd">In the <span class="ph uicontrol">Preferences</span> dialog, <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">General</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Network Connections</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol"> SSH2</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> from the left pane.</span> 
+					<div class="note note" id="loio9cc447cf364442d0aad61b1bc725bbf3__note_N101A2_N1019F_N10183_N10021_N10011_N10001"><span class="notetitle">Note</span> In the <span class="keyword uilabel">General</span>
+						tab, check the SSH2 home value. Make sure it points to &lt;HOME&gt;\.ssh
+						folder. </div>
+
+				</li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N10198_N10020_N10011_N10001"><span class="ph cmd"> Select the <span class="keyword uilabel">Key Management</span> tab, and choose
+						<span class="ph uicontrol">Generate RSA key... </span>.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N101A9_N10020_N10011_N10001"><span class="ph cmd">If you want to protect your SSH key, enter a passphrase.</span> 
+					<div class="note note" id="loio9cc447cf364442d0aad61b1bc725bbf3__note_N101E2_N101DF_N101D7_N10021_N10011_N10001"><span class="notetitle">Note</span> If you choose to use a passphrase, you need to enter it for every
+						interaction with GIT Repository.</div>
+
+				</li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N101EA_N10021_N10011_N10001"><span class="ph cmd">Choose <span class="ph uicontrol">Apply</span> and then choose
+					<span class="ph uicontrol">OK</span>.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N101BB_N10020_N10011_N10001"><span class="ph cmd">Choose <span class="ph uicontrol">Save Private Key...</span> to save the generated
+					private/public keys. By default, Eclipse offers the id_rsa as the key name. Use
+					this default name</span></li>
+</ol><p class="li stepsection">
+				<strong class="ph b">Upload your SSH public key to Gerrit </strong></p><ol start="25"><li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N101CF_N10020_N10011_N10001"><span class="ph cmd">Go to <em class="ph i">&lt;HOME&gt;/.ssh/ folder </em> and open the id_rsa.pub in a
+					notepad.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N101DC_N10020_N10011_N10001"><span class="ph cmd">Copy content to clipboard, which is the public key, from the notepad</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N101E5_N10020_N10011_N10001"><span class="ph cmd">Log on to Gerrit and select the <span class="ph uicontrol">Settings</span> option on the
+					top-right corner of the page.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N101F2_N10020_N10011_N10001"><span class="ph cmd">From the left pane, choose <span class="ph uicontrol">SSH Public Keys</span>.</span></li>
+<li class="li step stepexpand" id="loio9cc447cf364442d0aad61b1bc725bbf3__step_N101FF_N10020_N10011_N10001"><span class="ph cmd">If you are logging on for the first time, paste the content in the <span class="keyword uilabel">Add
+						SSH Public Key</span> text area and choose <span class="ph uicontrol">Add</span>.
+					For subsequent addition of keys, choose <span class="ph uicontrol">Add Key...</span>, then
+					paste the content in the <span class="keyword uilabel">Add SSH Public Key</span> text area and
+					choose <span class="ph uicontrol">Add</span>. </span></li>
+</ol></div>
+<div class="related-links"> </div>
+</div></div>
+</body>
+</html>

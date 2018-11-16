@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure Communication Channel with SOAP (1.x) Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioefff064fdb9140adbc4e195fdf906e3e">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure Communication Channel with SOAP (1.x) Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loioefff064fdb9140adbc4e195fdf906e3e__ul_qqm_y3p_gr">
+					<li class="li">
+						<p class="p">You have logged into your customer workspace in <span class="ph pname">SAP Cloud Platform
+                        Integration</span> web
+							application.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You have assigned SOAP adapter to the communication channel.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You have specified SOAP 1.x as the message protocol.</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this procedure to configure a communication channel with the SOAP (1.x) adapter. </p>
+
+			<p class="p">You have the option to set SOAP headers using Groovy script (for example, using the
+				Script step).</p>
+
+			<p class="p">Supported Header (Sender Adapter):</p>
+
+			<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioefff064fdb9140adbc4e195fdf906e3e__d3350e1147" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: </span></caption>
+<colgroup><col width="20%"/><col width="80%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="20%" id="d5004257e72">
+                                <p class="p">Header</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="80%" id="d5004257e78">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="20%" headers="d5004257e72 ">
+                                <p class="p">SapAuthenticatedUserName </p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="80%" headers="d5004257e78 ">
+                                <p class="p">Contains the user name of the client that calls the integration
+                                    flow.</p>
+
+                                <p class="p">In case the sender channel is configured in such a way that
+                                    client certificate authentication is used, no such header is set
+                                    (as it is not available in that case). </p>
+
+                                <p class="p">To retain this header for further processing, make sure that you
+                                    enter it as <span class="ph uicontrol">Allowed Header(s)</span> under
+                                        <span class="ph uicontrol">Runtime Configuration</span>.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Select the integration flow you want to configure and choose
+					<span class="ph uicontrol">Edit</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the communication channel with SOAP (1.x) adapter you want to configure.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">General</span> tab page, provide channel name and description in the
+					relevant fields if required. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Adapter Specific</span> tab page. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you are configuring the SOAP 1.x adapter in sender channel, perform the
+					following substeps. </span>
+				<ol type="a" class="ol substeps" id="loioefff064fdb9140adbc4e195fdf906e3e__substeps_r2w_fjp_gr">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose the <span class="ph uicontrol">General</span> tab page and specify name and
+							description for the channel if required.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose the <span class="ph uicontrol">Adapter Specific</span> tab page and provide
+							values in fields based on description in table. </span>
+						<div class="itemgroup info">
+							<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioefff064fdb9140adbc4e195fdf906e3e__d5982e15" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Parameters and Values of Sender SOAP (SOAP 1.x) Adapter/Connection
+                    Settings</span></caption>
+<colgroup><col width="15.673981191222571%"/><col width="22.884012539184955%"/><col width="61.442006269592476%"/></colgroup>
+
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="15.673981191222571%" id="d5004257e200">Section</th>
+
+                            <th class="entry" valign="top" width="22.884012539184955%" id="d5004257e203">Parameters</th>
+
+                            <th class="entry" valign="top" width="61.442006269592476%" id="d5004257e206">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        
+                        
+                        
+                        
+                        
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.673981191222571%" headers="d5004257e200 "><p class="p"><span class="ph uicontrol">Authorization</span></p>
+<div class="note note"><span class="notetitle">Note</span> 
+            <div class="p">In the following cases this new feature might not be available for your current
+                integration flow:<ul class="ul" id="loioefff064fdb9140adbc4e195fdf906e3e__d705e167">
+                    <li class="li">
+                        <p class="p">You created the corresponding integration flow shape (adapter or step)
+                            before this feature was released</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">You are using a product profile other than the one expected.</p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="p">More information: <a class="xref" href="1f9e87975f03433b9855bf9e760b1060.html">Adapter and Integration Flow Step Versions</a></p>
+
+        </div>
+</td>
+
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5004257e203 ">
+            <p class="p">Specifies the authorization option for the sender. </p>
+
+            <p class="p">You can select one of the following options:  </p>
+
+            <ul class="ul" id="loioefff064fdb9140adbc4e195fdf906e3e__d6097e586">
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">Client Certificate</span>: Sender authorization is checked on
+                        the tenant by evaluating the subject/issuer distinguished name (DN) of the
+                        certificate (sent together with the inbound request). You can use this
+                        option together with the following authentication option:
+                            <cite class="cite">Client-certificate authentication (without certificate-to-user
+                            mapping)</cite>.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">User Role</span>: Sender authorization is checked based on
+                        roles defined on the tenant for the user associated with the inbound
+                        request. You can use this option together with the following authentication
+                        options: </p>
+
+                    <ul class="ul" id="loioefff064fdb9140adbc4e195fdf906e3e__d6097e606">
+                        <li class="li">
+                            <p class="p"><cite class="cite">Basic authentication</cite> (using the credentials of the
+                                user)</p>
+
+                            <p class="p">For the user, the authorizations are checked based on user-to-role
+                                assignments defined on the tenant.</p>
+
+                        </li>
+
+                        <li class="li">
+                            <p class="p"><cite class="cite">Client-certificate authentication and certificate-to-user
+                                    mapping</cite></p>
+
+                            <p class="p">For the user derived from the certificate-to-user mapping, the
+                                authorizations are checked based on user-to-role assignments defined
+                                on the tenant. </p>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+            <p class="p">Depending on your choice, you can also specify one of the following properties:</p>
+
+            <ul class="ul" id="loioefff064fdb9140adbc4e195fdf906e3e__d6097e635">
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">Client Certificate Authorization</span></p>
+
+                    <p class="p">Allows you to select one or more client certificates (based on which inbound
+                        authorization is to be checked).</p>
+
+                    <p class="p">Choose <span class="ph uicontrol">Add</span> to add a new certificate for inbound
+                        authorization for the selected adapter. You can then select a certificate
+                        stored locally on your computer. You can also delete certificates from the
+                        list.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">User Role</span></p>
+
+                    <p class="p">Allows you to enter a role based on which inbound authorization is to be
+                        checked. </p>
+
+                    <p class="p">Default value is <span class="ph uicontrol">ESBMessaging.send</span>. This role
+                        authorizes a sender system to process messages on a tenant.</p>
+
+                </li>
+
+            </ul>
+
+        </td>
+
+                        </tr>
+
+                      </tbody>
+
+                </table>
+</div>
+
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioefff064fdb9140adbc4e195fdf906e3e__d5982e59" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 3: Parameters and Values of Sender SOAP (SOAP 1.x) Adapter/WS-Security
+                    Settings</span></caption>
+<colgroup><col width="15.673981191222571%"/><col width="22.884012539184955%"/><col width="61.442006269592476%"/></colgroup>
+
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="15.673981191222571%" id="d5004257e362">Section</th>
+
+                            <th class="entry" valign="top" width="22.884012539184955%" id="d5004257e365">Parameters</th>
+
+                            <th class="entry" valign="top" width="61.442006269592476%" id="d5004257e368">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="10" valign="top" width="15.673981191222571%" headers="d5004257e362 ">
+                                <span class="ph uicontrol">WS-Security</span> (Web Services Security)</td>
+
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5004257e365 "><span class="ph uicontrol">WS-Security Configuration</span>
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5004257e368 ">Specifies the way how WS-Security settings are to be
+                                    configured.<ul class="ul" id="loioefff064fdb9140adbc4e195fdf906e3e__d5982e104">
+                                    <li class="li"><span class="ph uicontrol">Via Manual Configuration in
+                                            Channel</span><p class="p">The security settings are manually
+                                            to be configured (see below listed attributes).</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">None</span><p class="p">No WS-Security is applied for
+                                            message exchange.</p>
+<p class="p">If you select this option, no
+                                            further WS-Security-relevant settings can be
+                                            applied.</p>
+</li>
+
+                                </ul>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5004257e365 "><span class="ph uicontrol">WS-Security Type</span></td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5004257e368 ">Specifies the combination of message protection methods that are
+                                to be applied. There are the following options:<ul class="ul" id="loioefff064fdb9140adbc4e195fdf906e3e__d5982e130">
+                                    <li class="li"><span class="ph uicontrol">Verify Message</span><p class="p">A signed payload is
+                                            expected by the tenant, and the signature has to be
+                                            verified.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">Verify and Decrypt Message</span><p class="p">A signed
+                                            and encrypted payload is expected by the tenant. The
+                                            signature has to be verified and the payload has to be
+                                            decrypted.</p>
+</li>
+
+                                </ul>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5004257e365 "><span class="ph uicontrol">Save Incoming Signed Message</span></td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5004257e368 ">Select this option if the incoming signed (and encrypted) message
+                                is to be stored.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5004257e365 "><span class="ph uicontrol">Check Time Stamp</span></td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5004257e368 ">Select this option, if the sender (WS consumer) sends a time
+                                stamp along with the message. <p class="p">In case a request-response pattern
+                                    is configured, a time stamp is added to the response
+                                    message.</p>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5004257e365 "><span class="ph uicontrol">Sender is Basic Security Profile
+                                Compliant</span></td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5004257e368 ">As default setting, select this option.<p class="p">This option should be
+                                    selected in case the sender system supports a dedicated security
+                                    level which is described by the Basic Security Profile (as
+                                    assumed to be the case for most systems). Only in case the
+                                    sender system does not support this security profile, de-select
+                                    this option. </p>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5004257e365 "><span class="ph uicontrol">Private Key Alias for Response
+                                Signing</span></td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5004257e368 ">Specify an alias for the private key that is to be used to sign
+                                the response message.<p class="p">The tenant private key is used to sign the
+                                    response message (that is sent to the WS consumer). The tenant
+                                    private key has to be part of the tenant keystore. </p>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5004257e365 "><span class="ph uicontrol">Public Key Alias for Response
+                                    Encryption</span><p class="p">(only in case <span class="ph uicontrol">Verify and
+                                        Decrypt Message</span> is selected for
+                                        <span class="ph uicontrol">WS-Security Type</span>)</p>
+</td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5004257e368 ">Specify an alias for the public key that is to be used to encrypt
+                                the response message.<p class="p">The sender (WS consumer) public key is used
+                                    to sign the response message (that is sent to the WS consumer).
+                                    This key has to be part of the tenant keystore. </p>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5004257e365 "><span class="ph uicontrol">Initiator Token</span></td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5004257e368 ">
+                                <ul class="ul" id="loioefff064fdb9140adbc4e195fdf906e3e__d5982e221">
+                                    <li class="li"><span class="ph uicontrol">Include Strategy</span><p class="p">Pre-set value
+                                                <span class="ph uicontrol">Always to Recipient</span> ensures
+                                            that the WS consumer sends the certificate along with
+                                            the message.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">X509 Token Assertion</span><p class="p">Defines the
+                                            format of the certificate being sent by the WS consumer
+                                            along with the message.</p>
+</li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5004257e365 "><span class="ph uicontrol">Recipient Token</span></td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5004257e368 ">
+                                <p class="p"><span class="ph uicontrol">Include Strategy</span></p>
+
+                                <p class="p">Value <span class="ph uicontrol">Always to Initiator</span> adds the
+                                    certificate to the response message.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5004257e365 "><span class="ph uicontrol">Algorithm Suite Assertion</span></td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5004257e368 ">Specifies which algorithms are to be used by the WS
+                                consumer.</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you are configuring the SOAP 1.x adapter in receiver channel, perform the
+					following substeps.</span>
+				<ol type="a" class="ol substeps" id="loioefff064fdb9140adbc4e195fdf906e3e__substeps_fxq_pkp_gr">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <span class="ph uicontrol">General</span> tab page and specify name and
+							description for the channel if required.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose the <span class="ph uicontrol">Adapter Specific</span> tab page and provide
+							values in fields based on description in table. </span>
+						<div class="itemgroup info">
+							<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioefff064fdb9140adbc4e195fdf906e3e__d5982e277" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 4: Parameters and Values of Receiver SOAP (SOAP 1.x) Adapter - Connection
+                    Details</span></caption>
+<colgroup><col width="26.806083650190114%"/><col width="73.19391634980988%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="26.806083650190114%" id="d5004257e609">Parameters</th>
+
+                            <th class="entry" valign="top" width="73.1939163498099%" id="d5004257e612">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the changes.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> In the case of integration flows in OData service artifacts, you can save
+						the integration flow and deploy the OData service.</div>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="8a2827d030b345f998199774266b9810.html">Setting SOAP Headers</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

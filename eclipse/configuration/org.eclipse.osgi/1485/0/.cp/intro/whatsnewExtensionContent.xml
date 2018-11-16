@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<introContent>
+  <!-- Extension to the SDK What's New Page. -->
+  <extensionContent id="com.sap.jvm.profiling" name="SAP JVM Profiler" alt-style="css/whatsnew.properties" style="css/whatsnew.css" path="whatsnew/@">
+     <group id="content-group" style-id="content-group">
+    	<link label="SAP JVM Profiler" url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.jvm.profiling.ui.help/whatsNew/whatsnew-2.2.html" id="profiler-noteworthy" style-id="content-link">
+           <text>Find out about significant changes made to the SAP JVM Profiler</text>
+        </link>
+     </group>
+  </extensionContent>
+</introContent>

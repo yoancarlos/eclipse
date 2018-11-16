@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="The HTTP adapter allows you to configure an outbound HTTP connection from SAP Cloud Platform Integration to a receiver."/>
+<meta name="description" content="The HTTP adapter allows you to configure an outbound HTTP connection from SAP Cloud Platform Integration to a receiver."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring a Channel with HTTP Receiver Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio5e77b59f09e04088b0a01abb1fe4d191">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring a Channel with HTTP Receiver Adapter</h1>
+
+	
+	
+	<div class="body taskbody"><p class="shortdesc">The HTTP adapter allows you to configure an outbound HTTP connection from <span class="ph pname">SAP Cloud Platform
+                        Integration</span> to a
+		receiver.</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p"/>
+
+			<p class="p">The HTTP adapter supports only HTTP 1.1. This means that the
+            target system must support chunked transfer encoding and may not rely on the existence
+            of the HTTP Content-Length header. </p>
+
+			<p class="p">You can configure a channel with the HTTP adapter type for outbound calls (from the tenant toIf you want to dynamically override the configuration of the adapter, you can set the
+				following headers before calling the HTTP adapter:</p>
+
+			<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio5e77b59f09e04088b0a01abb1fe4d191__d2566e15" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Headers</span></caption>
+<colgroup><col width="15.503875968992247%"/><col width="84.49612403100775%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="15.503875968992247%" id="d1174603e50">Header</th>
+
+                            <th class="entry" valign="top" width="84.49612403100775%" id="d1174603e53">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d1174603e50 ">
+                                    <p class="p">CamelHttpUri</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d1174603e53 ">Overrides the existing URI set directly in the endpoint.
+                                        <p class="p">This header can be used to dynamically change the URI to
+                                        be called. </p>
+</td>
+
+                            </tr>
+
+                        <tr class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d1174603e50 ">
+                                    <p class="p">CamelHttpQuery</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d1174603e53 ">Refers to the query string that is contained in the request
+                                        URL.<p class="p">In the context of a receiver adapter, this header can
+                                        be used to dynamically change the URI to be called.
+                                        </p>
+<p class="p">For example,
+                                            <samp class="ph codeph">CamelHttpQuery=abcd=1234</samp>.</p>
+</td>
+
+                            </tr>
+
+                        <tr class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d1174603e50 ">
+                                    <p class="p">Content-Type</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d1174603e53 ">
+                                    <p class="p">HTTP content type that fits to the body of the request</p>
+
+                                    <p class="p">The content type is composed of two parts, a type and a
+                                        subtype, for example, <samp class="ph codeph">image/jpeg</samp> (where
+                                            <samp class="ph codeph">image</samp> is the type and
+                                            <samp class="ph codeph">jpeg</samp> is the subtype). </p>
+
+                                    <p class="p">Examples:</p>
+
+                                    <ul class="ul" id="loio5e77b59f09e04088b0a01abb1fe4d191__d1944e652">
+                                        <li class="li">
+                                            <p class="p"><samp class="ph codeph">text/plain</samp> for unformatted text</p>
+
+                                        </li>
+
+                                        <li class="li">
+                                            <p class="p"><samp class="ph codeph">text/html</samp> for text formatted with
+                                                HTML syntax</p>
+
+                                        </li>
+
+                                        <li class="li">
+                                            <p class="p"><samp class="ph codeph">image/jpeg</samp> for a jpeg image file
+                                            </p>
+
+                                        </li>
+
+                                        <li class="li">
+                                            <p class="p"><samp class="ph codeph">application/json</samp> for data in JSON
+                                                format to be processed by an application that
+                                                requires this format</p>
+
+                                        </li>
+
+                                    </ul>
+
+                                    <p class="p">More information on the available types: <a class="extlink" href="http://help.sap.com/disclaimer?site=https://www.w3.org/Protocols/rfc1341/4_Content-Type.html" target="_blank" alt="https://www.w3.org/Protocols/rfc1341/4_Content-Type.html" title="https://www.w3.org/Protocols/rfc1341/4_Content-Type.html">https://www.w3.org/Protocols/rfc1341/4_Content-Type.html<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+
+                                    <p class="p">The list of available content-types is maintained by the
+                                        Internet Assigned Numbers Authority (IANA). For more
+                                        information, see: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" alt="http://www.iana.org/assignments/media-types/media-types.xhtml" title="http://www.iana.org/assignments/media-types/media-types.xhtml">http://www.iana.org/assignments/media-types/media-types.xhtml<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>.</p>
+
+                                    <div class="note note"><span class="notetitle">Note</span> 
+                                        <p class="p">For the transfer of <samp class="ph codeph">text/*</samp> content types
+                                            you can also specify the character encoding in the HTTP
+                                            header using the <samp class="ph codeph">charset</samp> parameter. </p>
+
+                                        <p class="p">Example for such a header:</p>
+
+                                        <p class="p"><samp class="ph codeph">Content-Type: text/html;
+                                            charset=utf-8</samp></p>
+
+                                        <p class="p">The default character encoding which will be applied for
+                                                <samp class="ph codeph">text/*</samp> content types depends on the
+                                            HTTP version: <samp class="ph codeph">us-ascii</samp> for HTTP 1.0 and
+                                                <samp class="ph codeph">iso-8859-1</samp> for HTTP 1.1. </p>
+
+                                        <p class="p">Text data in string format is converted by default using
+                                            UTF-8 during message processing. If you like to override
+                                            this behaviour, you can use the Content Modifier step
+                                            and specify the <samp class="ph codeph">CamelCharsetName</samp>
+                                            Exchange property. To avoid encoding issues when using
+                                            this feature together with the HTTP adapter, consider
+                                            the following example configuration:</p>
+
+                                        <p class="p">If you use a Content Modifier step and you like to
+                                            finally send <samp class="ph codeph">iso-8859-1</samp>-encoded data to
+                                            a receiver, make sure that you specify the the
+                                                <samp class="ph codeph">CamelCharsetName</samp> Exchange property
+                                            (either header or property) as
+                                                <samp class="ph codeph">iso-8859-1</samp>. As Content-Type HTTP
+                                            header, use: <samp class="ph codeph">text/plain;
+                                                charset=iso-8859-1</samp>.  </p>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        <tr class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d1174603e50 ">
+                                    <p class="p">Content-Encoding</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d1174603e53 ">HTTP content encoding that indicates the encoding used during
+                                    message transport (for example, <samp class="ph codeph">gzip</samp> for GZIP
+                                    file compression)<p class="p">This information is used by the receiver to
+                                        retrieve the media type that is referenced by the
+                                            <samp class="ph codeph">content-type</samp> header. </p>
+<p class="p">If this
+                                        header is not specified, the default value
+                                            <samp class="ph codeph">identity</samp> (no compression) is
+                                        used.</p>
+<p class="p">More information: <a class="extlink" href="http://help.sap.com/disclaimer?site=https://tools.ietf.org/html/rfc2616" target="_blank" alt="https://tools.ietf.org/html/rfc2616" title="https://tools.ietf.org/html/rfc2616">https://tools.ietf.org/html/rfc2616<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a> (section
+                                        14.11)</p>
+<p class="p">The list of available content-types is
+                                        maintained by the Internet Assigned Numbers Authority
+                                        (IANA). For more information, see: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding" target="_blank" alt="http://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding" title="http://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding">http://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+</td>
+
+                            </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><p class="li stepsection">
+				<div class="note note"><span class="notetitle">Note</span> 
+					<p class="p"/>
+
+				</div>
+
+			</p><ol class="ol steps"><li class="li step stepexpand" id="loio5e77b59f09e04088b0a01abb1fe4d191__step_N10054_N1001D_N10011_N10001">
+				<span class="ph cmd">Choose the <span class="keyword uilabel">General</span> tab page.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd"> Select <em class="ph i">HTTP</em> from the <span class="ph uicontrol">Adapter Type</span> dropdown
+					list.You can configure a channel with the HTTP adapter type for outbound calls (from the tenant to
+				a receiver system).</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the <span class="keyword uilabel">Adapter Specific</span> tab page and enter the values for the
+					available parameters. The table below gives a description of the fields and the
+					possible values you can enter: </span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio5e77b59f09e04088b0a01abb1fe4d191__d2566e69" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Field Name and Description for HTTP Adapter</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d1174603e324">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d1174603e330">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1174603e324 ">
+                                <p class="p"><span class="ph uicontrol">Address</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1174603e330 ">
+                                <p class="p">URL of the target system that you are connecting to, for example,
+                                        <kbd class="ph userinput">https://mysystem.com</kbd></p>
+
+                                <p class="p">Note that the authentication method <kbd class="ph userinput">Client
+                                        Certificate</kbd> requires the HTTPS protocol. For
+                                        <kbd class="ph userinput">Basic authentication</kbd> it is strongly
+                                    recommended that you use the HTTPS protocol.</p>
+
+                                <p class="p">If you have selected one of these authentication methods, you
+                                    therefore have to enter an <kbd class="ph userinput">https</kbd> URL.</p>
+
+                                <p class="p">You can also specify HTTP parameters in the URL. However, if you
+                                    select the HTTP method <kbd class="ph userinput">POST</kbd>, parameters
+                                    are usually sent in the body. You therefore get a warning
+                                    message if you configure this parameter-value combination. </p>
+
+                                <p class="p">The following URL parameters are currently not allowed for
+                                    technical reasons: </p>
+
+                                <ul class="ul" id="loio5e77b59f09e04088b0a01abb1fe4d191__d2566e141">
+                                    <li class="li">throwExceptionOnFailure </li>
+
+                                    <li class="li">bridgeEndpoint </li>
+
+                                    <li class="li">transferException </li>
+
+                                    <li class="li">client </li>
+
+                                    <li class="li">clientConfig </li>
+
+                                    <li class="li">binding </li>
+
+                                    <li class="li">sslContextParameters </li>
+
+                                    <li class="li">bufferSize</li>
+
+                                </ul>
+
+                                <p class="p">You can dynamically configure the <span class="ph uicontrol">Address</span>
+                                    field of the HTTP adapter. </p>
+
+                                <p class="p">When you specify the <span class="ph uicontrol">Address</span> field of the
+                                    HTTP adapter as <samp class="ph codeph">${header.a}</samp>, at runtime the
+                                    value of header <samp class="ph codeph">a</samp> (as contained in the incoming
+                                    message) will be written into the Camel header
+                                        <samp class="ph codeph">CamelHttpUri</samp>. </p>
+
+                                <p class="p">Also in case the <samp class="ph codeph">CamelHttpUri</samp> header has been
+                                    set by another process step (for example, a Content Modifier),
+                                    its value will be overwritten. </p>
+
+                                <p class="p">The endpoint URL that has actually been used at runtime is
+            displayed in the message processing log (MPL) in the message monitoring application (MPL
+            property <samp class="ph codeph">RealDestinationUrl</samp>). Note that you can manually configure the
+            endpoint URL using the <span class="ph uicontrol">Address</span> attribute of the adapter. However,
+            there are several ways to dynamically override the value of this attribute (for example,
+            by using the Camel header <samp class="ph codeph">CamelHttpUri</samp>). </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1174603e324 ">
+                                <p class="p"><span class="ph uicontrol">Query</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1174603e330 ">
+                                <p class="p">Query string that you want to send with the HTTP request</p>
+
+                                <p class="p">Query strings must not be entered in the
+                                        <span class="ph uicontrol">Address</span> field. </p>
+
+                                <p class="p">This parameter can be externalized.</p>
+
+                                <p class="p">You can dynamically configure the <span class="ph uicontrol">Query</span>
+                                    field of the HTTP adapter. </p>
+
+                                <p class="p">When you specify the <span class="ph uicontrol">Query</span> field of the
+                                    HTTP adapter as <samp class="ph codeph">${header.a}</samp>, at runtime the
+                                    value of header <samp class="ph codeph">a</samp> (as contained in the incoming
+                                    message) will be written into the Camel header
+                                        <samp class="ph codeph">CamelHttpQuery</samp>. </p>
+<div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">If you want to send parameters in the query string of the
+                                        HTTP adapter, these parameters must be coded in a
+                                        URL-compatible way. Individual parameter-value pairs must be
+                                        separated with an ”&amp;” and there must be an “=” between
+                                        the name of a parameter and its value. </p>
+
+                                    <p class="p">Example 1)</p>
+<p class="p">parameter1=123, parameter2=abc</p>
+<p class="p">You
+                                        must specify the following in the query field:
+                                        parameter1=123&amp;parameter2=abc </p>
+<p class="p">Example
+                                        2)</p>
+<p class="p">Manufacturer = Mars Inc. Product = M&amp;M
+                                        </p>
+<p class="p">You must specify the following in the query field:
+                                        Manufacturer =Mars+Inc.&amp;Product=M%26M </p>
+</div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1174603e324 ">
+                                <p class="p"><span class="ph uicontrol">Proxy Type</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1174603e330 ">
+                                <div class="p">The type of proxy that you are using to connect to the target system:<ul class="ul" id="loio5e77b59f09e04088b0a01abb1fe4d191__d274e61">
+                <li class="li">
+                    <p class="p">Select <span class="ph uicontrol">Internet</span> if you are connecting to a cloud
+                        system.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">Select <span class="ph uicontrol">On-Premise</span> if you are connecting to an
+                        on-premise system.</p>
+
+                    <div class="note note"><span class="notetitle">Note</span> 
+                        <div class="p">If you select the <span class="ph uicontrol">On-Premise</span> option, the following
+                            restrictions apply to other parameter values:<ul class="ul" id="loio5e77b59f09e04088b0a01abb1fe4d191__d274e87">
+                                <li class="li">
+                                    <p class="p">Do not use an HTTPS address for
+                                            <span class="ph uicontrol">Address</span>, as it leads to errors
+                                        when performing consistency checks or during deployment.</p>
+
+                                </li>
+
+                                <li class="li">
+                                    <p class="p">Do not use <span class="ph uicontrol">Certificate-Based
+                                            Authentication</span> as the
+                                            <span class="ph uicontrol">Authentication Type</span>, as it leads
+                                        to errors when performing consistency checks or during
+                                        deployment</p>
+
+                                </li>
+
+                            </ul>
+</div>
+
+                    </div>
+
+                    <div class="note note"><span class="notetitle">Note</span> If you select the <span class="ph uicontrol">On-Premise</span> option and use the SAP
+                        Cloud Connector to connect to your on-premise system, the
+                            <span class="ph uicontrol">Address</span> field of the adapter refers a virtual
+                        address which has to be configured in the SAP Cloud Connector
+                        settings.</div>
+
+                </li>
+
+                
+            </ul>
+</div>
+
+                            </td>
+
+                        </tr>
+
+                        
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1174603e324 ">
+                                <p class="p"><span class="ph uicontrol">Method</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1174603e330 ">
+                                <p class="p">Action that the HTTP request should perform</p>
+
+                                <ul class="ul" id="loio5e77b59f09e04088b0a01abb1fe4d191__d2566e292">
+                                    <li class="li"><span class="ph uicontrol">POST</span><p class="p">Requests that the receiver
+                                            accepts the data enclosed in the request body.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">CONNECT</span><p class="p">Sends a CONNECT request
+                                            that urges your proxy to establish an HTTP tunnel to the
+                                            remote end-point.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">Delete</span><p class="p">Requests that the
+                                            origin server delete the resource identified by the
+                                            Request-URl </p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">Dynamic</span><p class="p">The method is determined
+                                            dynamically by reading a value from a message header or
+                                            property such as ${header.abc} or ${property.abc} during
+                                            runtime.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">GET</span><p class="p">Sends a GET request to the
+                                            receiver.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">HEAD</span><p class="p">Sends a HEAD request which is
+                                            similar to a GET request but does not return a message
+                                            body.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">PUT</span><p class="p">Updates or creates the
+                                            enclosed data on the receiver side.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">TRACE</span><p class="p">Sends a TRACE request to the
+                                            receiver that sends back the message to the
+                                        caller.</p>
+</li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1174603e324 ">
+                                <p class="p"><span class="ph uicontrol">Expression</span></p>
+
+                                <p class="p"> This field is enabled only if you select for
+                                        <span class="ph uicontrol">Method</span>  the option
+                                        <span class="ph uicontrol">Dynamic</span>.</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1174603e330 ">
+                                <p class="p">The expression field allows you to enter a simple expression that
+                                    specifies the HTTP method for the HTTP call . For example, you
+                                    can define that the method is determined dynamically by reading
+                                    a value from a message header or property such as ${header.abc}
+                                    or ${property.abc}. If the header or property does not exist or
+                                    its value is empty, the POST method is used by default.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1174603e324 ">
+                                <p class="p"><span class="ph uicontrol">Authentication</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1174603e330 ">
+                                <p class="p">Defines how the tenant (as the HTTP client) will authenticate
+                                    itself against the receiver. </p>
+
+                                <p class="p">You can select one of the following authentication methods:</p>
+
+                                <ul class="ul" id="loio5e77b59f09e04088b0a01abb1fe4d191__d2566e389">
+                                    <li class="li"><span class="ph uicontrol">None</span></li>
+
+                                    <li class="li"><span class="ph uicontrol">Basic</span><p class="p">The tenant authenticates
+                                            itself against the receiver using user credentials (user
+                                            name and password).</p>
+<p class="p">It is a prerequisite that user
+                                            credentials are specified in a Basic Authentication
+                                            artifact and deployed on the related tenant.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">Client Certificate</span><p class="p">The tenant
+                                            authenticates itself against the receiver using a client
+                                            certificate. </p>
+<p class="p">It is a prerequisite that the
+                                            required key pair is installed and added to a keystore.
+                                            This keystore has to be deployed on the related tenant.
+                                            The receiver side has to be configured appropriately.
+                                        </p>
+</li>
+
+                                </ul>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+            <p class="p">You can externalize all attributes related to the configuration of the authentication
+                option. This includes the attributes with which you specify the authentication
+                option as such (if you either intend to use basic authentication , certificate-based
+                authentication or no authentication), as well as all attributes with which you
+                specify further security artifacts that are required for any configurable
+                authentication option (<span class="ph uicontrol">Private Key Alias</span> or
+                    <span class="ph uicontrol">Credential Name</span>).  </p>
+
+            <p class="p">Apply <span class="ph emphasis emphasis">one</span> of the following two recommendations when
+                externalizing such attributes.</p>
+
+            <ul class="ul" id="loio5e77b59f09e04088b0a01abb1fe4d191__d274e140">
+                <li class="li">
+                    <p class="p">Externalize <span class="ph emphasis emphasis">all attributes</span> related to the configuration
+                        of all options (for example, <span class="ph uicontrol">Authentication Option</span>,
+                            <span class="ph uicontrol">Credential Name</span> and <span class="ph uicontrol">Private Key
+                            Alias</span>). </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">Externalize only one of the following attributes: <span class="ph uicontrol">Private Key
+                            Alias</span>
+                        <span class="ph emphasis emphasis">or</span>
+                        <span class="ph uicontrol">Credential Name</span>.</p>
+
+                </li>
+
+            </ul>
+
+            <p class="p"><span class="ph emphasis emphasis">Avoid incomplete externalization</span> such that, for example, you
+                externalize only the attribute for the <span class="ph uicontrol">Authentication Option</span>
+                but not the related <span class="ph uicontrol">Credential Name</span>. In such cases, the
+                integration flow configuration (based on the externalized parameters) cannot work
+                properly. </p>
+
+            <p class="p">The reason for this is the following: When you have externalized the
+                    <span class="ph uicontrol">Authentication Option</span> attribute and only the
+                    <span class="ph uicontrol">Private Key Alias</span> (but no <span class="ph uicontrol">Credential
+                    Name</span>), in the integration flow configuration dialog all
+                authentication options (<span class="ph uicontrol">Basic</span>,
+                    <span class="ph uicontrol">Certificate-Based</span> and <span class="ph uicontrol">None</span>) are
+                selectable in a drop-down list. However, when you now select <span class="ph uicontrol">Basic
+                    Authentication</span> from the drop-down list, no <span class="ph uicontrol">Credential
+                    Name</span> can be configured. </p>
+
+        </div>
+
+                                <div class="p">
+                                    <ul class="ul" id="loio5e77b59f09e04088b0a01abb1fe4d191__d2566e416">
+                                        <li class="li"><span class="ph uicontrol">Principal Propagation</span>
+                                            <p class="p">The tenant authenticates itself against the receiver
+                                                by forwarding the principal of the inbound user to
+                                                the cloud connector, and from there to the back end
+                                                of the relevant on-premise system</p>
+<div class="note note"><span class="notetitle">Note</span> This
+                                                authentication method can only be used with the
+                                                following sender adapters: HTTP, SOAP, IDOC</div>
+<div class="note note"><span class="notetitle">Note</span> 
+            <div class="p">In the following cases this new feature might not be available for your current
+                integration flow:<ul class="ul" id="loio5e77b59f09e04088b0a01abb1fe4d191__d288e167">
+                    <li class="li">
+                        <p class="p">You created the corresponding integration flow shape (adapter or step)
+                            before this feature was released</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">You are using a product profile other than the one expected.</p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="p">More information: </p>
+
+        </div>
+</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1174603e324 ">
+                                <p class="p"><span class="ph uicontrol">Credential Name</span></p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">This field is enabled only if you select for
+                                            <span class="ph uicontrol">Authentication</span> the option
+                                            <span class="ph uicontrol">Basic</span>. </p>
+
+                                </div>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1174603e330 ">
+                                <p class="p">Identifies the <span class="ph uicontrol">User Credential</span> artifact
+                                    that contains the credentials (user name and password). </p>
+
+                                <p class="p">You can dynamically configure the <span class="ph uicontrol">Credential
+                                        Name</span> property by specifying either a header or a
+                                    parameter name in one of the following ways:
+                                        <kbd class="ph userinput">${header.headername}</kbd> or
+                                        <kbd class="ph userinput">${parameter.parametername}</kbd>. As an
+                                    example, you can use a <span class="ph uicontrol">Script</span> step before
+                                    the adapter where you look-up the <span class="ph uicontrol">User
+                                        Credentials</span> and enter the base64-encoded values
+                                    for user and password into the header
+                                        <samp class="ph codeph">Authorization</samp>. The HTTP adapter will then
+                                    use this header in the HTTP request.</p>
+
+                                <p class="p">Although you can configure this feature, it is not supported
+            when using the corresponding integration content with the SAP Process Orchestration (SAP
+            PO) runtime in releases lower than SAP PO 7.5 SP5. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1174603e324 ">
+                                <p class="p"><span class="ph uicontrol">Private Key Alias</span>
+                                </p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">This option is enabled only if you select client certificate
+                                        authentication. </p>
+
+                                </div>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1174603e330 ">
+                                <p class="p">Enter the private key alias that enables the system to fetch the
+                                    private key from keystore for authentication.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1174603e324 ">
+                                <p class="p"><span class="ph uicontrol">Timeout (in ms)</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1174603e330 ">
+                                <p class="p">Maximum time that the tenant waits for a response before
+                                    terminating message processing</p>
+
+                                <p class="p">The default value is 60000 milliseconds (1 minute).</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the configuration in the receiver channel editor.</span>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="5705f2b41cca422e967511e3deb1beb4.html">Dynamic Parameters</a></div>
+<div><a class="link" href="a443efe1d5d2403fb95ee9def1a672d4.html" title="Script example to identify any exceptions that arise when sending messages using the HTTP receiver.">Script Example for Exception Handling in HTTP Receiver</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

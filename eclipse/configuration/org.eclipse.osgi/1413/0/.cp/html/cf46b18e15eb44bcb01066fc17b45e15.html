@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css?x=5412950364460952"/>
+<title>Tenant and Integration Flow Tracing</title>
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"> </script>
+</head>
+<body class="" id="loiocf46b18e15eb44bcb01066fc17b45e15">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Tenant and Integration Flow Tracing</h1>
+<div class="body conbody"><p class="shortdesc"/>
+<p class="p">Tracing helps to track the message flow of processed messages and view relevant message payload
+			at different points of message flow. It also helps to know if there is any error in the
+			message execution. </p>
+<div class="p">To retrieve and view trace the following roles are needed. 
+<div class="tablenoborder"><table summary="" id="loiocf46b18e15eb44bcb01066fc17b45e15__table_mz1_p55_zn" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1:
+						</span></caption><thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="50.495049504950494%" id="d433176e22">Operations</th>
+<th class="entry" valign="top" width="49.504950495049506%" id="d433176e24">Roles</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="50.495049504950494%" headers="d433176e22 ">View Message Trace</td>
+<td class="entry" valign="top" width="49.504950495049506%" headers="d433176e24 ">IntegrationOperationServer.read</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50.495049504950494%" headers="d433176e22 ">View Message Payload/Header </td>
+<td class="entry" valign="top" width="49.504950495049506%" headers="d433176e24 ">esbmessagestorage.read</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50.495049504950494%" headers="d433176e22 ">Export MPL </td>
+<td class="entry" valign="top" width="49.504950495049506%" headers="d433176e24 ">
+								<p class="p">IntegrationOperationServer.read</p>
+
+								<p class="p">esbmessagestorage.read</p>
+
+								<p class="p">NodeManager.read</p>
+
+							</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="p">To enable tracing for integration flow, user needs to switch on tracing at tenant and
+			integration flow levels. Tracing will work only for newly deployed integration flows
+			from runtime version 1.11. <ol class="ol" id="loiocf46b18e15eb44bcb01066fc17b45e15__ol_i2d_44b_14"><li class="li">The ‘Tenant Configuration’ tab helps to enable tracing at tenant level. The
+					following two properties enable tracing on corresponding worker node(s) for the
+					specific tenant.<ol class="ol" type="a" id="loiocf46b18e15eb44bcb01066fc17b45e15__ol_lrn_z4b_14"><li class="li">String WN_IFL_TRACING_ENABLE = "wn.ifl.tracing.enable"- when set to
+							true, enables tracing for worker node of type IFL. The default value is
+							false.</li>
+<li class="li">String WN_IFLMAP_TRACING_ENABLE = "wn.iflmap.tracing.enable”- when set
+							to true, enables tracing for worker node(s) of type IFLMAP. The default
+							value is false.</li>
+<li class="li">For more details on configuring tenant configuration, please check
+							operations guide.</li>
+</ol>
+</li>
+<li class="li"> ‘Trace Configuration’ enables tracing at integration flow level also. </li>
+</ol>
+</div>
+<p class="p"><strong class="ph b">Procedure</strong></p>
+<ol class="ol" id="loiocf46b18e15eb44bcb01066fc17b45e15__ol_vrv_ypb_14"><li class="li"> In the Model Configuration editor page, select the graphical area outside the
+				integration flow pool.</li>
+<li class="li"> In the Properties view, choose the Trace Configuration tab.</li>
+<li class="li"> User can select trace level ‘none’,’ body &amp; header’, ‘header’ from the dropdown
+				menu of trace log, appearing in property sheet. </li>
+</ol>
+<div class="note note"><span class="notetitle">Note</span> Post message processing, the trace data is deleted after 24 hours.</div>
+<p class="p"><strong class="ph b">View Message Processing Log</strong></p>
+<p class="p">In the Message Monitoring editor, for a completed or failed message, the Properties view
+			displays the message processing log (MPL) for this message. The MPL provides information
+			on the steps during the processing of a particular message and the View MPL button opens
+			the particular integration flow with the message trace, displaying path of message flow.
+			If the particular project does not exist in workspace then the project is automatically
+			imported.</p>
+<p class="p">If the current project state is found to be different from deployed state then tracing of
+			message flow occurs till the point, sequence of elements match.</p>
+<p class="p">On clicking the message icon in the message trace, payload and header tabs appear in
+			property sheet. In case splitter is used, there are multiple message payloads and the
+			icon has multiple message symbols. In such a scenario, the message heading is displayed
+			between dashed lines and below the heading, payload content appears as shown below.</p>
+<div><pre class="pre codeblock">-------------------------
+Message 1
+------------------------
+&lt;ns0:BSNMessage xmlns:ns0="https://bsnschemas.netweaver.neo.com/bsnflow"&gt;
+&lt;SenderId&gt;Token&lt;/SenderId&gt;
+&lt;ReceiverId&gt;&lt;/ReceiverId&gt;
+&lt;MessageType&gt;&lt;/MessageType&gt;
+&lt;FileName&gt;&lt;/FileName&gt;
+&lt;NumberOfRecords&gt;&lt;/NumberOfRecords&gt;
+&lt;MessageId&gt;&lt;/MessageId&gt;
+&lt;MessageContent&gt;&lt;/MessageContent&gt;
+&lt;/ns0:BSNMessage&gt;</pre></div>
+<p class="p">One path can be traversed by multiple sequences. This information is displayed in the
+			property sheet. For example, “Displaying content for message 1 (out of 3)”. Here, ‘3’
+			denotes number of times the particular path has been traversed. Clicking on the text
+			enables user to switch to a different sequence.</p>
+<p class="p">In case of huge payload, the whole information will not be visible. In such a scenario,
+			we can use ‘Export Payload’ button to view content using external tool/application.</p>
+<p class="p"/>
+<p class="p"><strong class="ph b">Export Message Processing Log</strong></p>
+<p class="p"> Selecting a processed message in Message Monitoring editor, enables the Export MPL
+			button. On clicking the same, Message Processing Log dialog box opens. User can select
+			one of the following from the dialog box:</p>
+<ul class="ul" id="loiocf46b18e15eb44bcb01066fc17b45e15__ul_ky5_tmb_14"><li class="li"> Export Log – Message flow sequence only</li>
+<li class="li"> Export Log with Trace – Message flow sequence, message payload and headers at
+				different trace points</li>
+<li class="li"> Export Log with Trace and Integration Project</li>
+</ul>
+<div class="note note"><span class="notetitle">Note</span> View MPL and Export MPL works for one message only. Hence, even if more than one
+			message is selected, View MPL and Export MPL will be valid for the first selected
+			message.</div>
+<p class="p"><strong class="ph b">Import Trace</strong></p>
+<p class="p">To import the content, right click on the project explorer; select ‘Import’, select
+			Message Processing Log Archive and click on ‘Next’. In the dialog box, select the
+			archived file where the content is saved. The Integration Flow opens, decorated with the
+			message trace.</p>
+<div class="note note"><span class="notetitle">Note</span> Only content with trace can be imported.</div>
+</div>
+<div class="related-links"> 
+
+<div class="familylinks">
+</div>
+</div>
+</div></div>
+</body>
+</html>

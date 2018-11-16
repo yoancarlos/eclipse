@@ -1,0 +1,98 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: Ov7ahiHgB89/oZedrRsaSYc+spkHH
+ HIoY4f01tJeD+U=
+SHA-256-Digest-Manifest: Az4SpoqsAREfJrTUmXCwgxcYBl2RpG5VVTO9xJqQBac=
+Created-By: 1.8.0_121 (Oracle Corporation)
+
+Name: plugin.xml
+SHA-256-Digest: Zt95OOufP+WPRYCvr0Nzr2N8T0XqyjoaJxrRw7Y6Xa0=
+
+Name: com/sap/ndb/studio/jdbc/JDBCExceptionConstants.class
+SHA-256-Digest: GOisn4dKqfoplnLsxv4Vnlh3fnCF2vVmowPSKHoeaCc=
+
+Name: com/sap/ndb/studio/jdbc/JDBCConnection.class
+SHA-256-Digest: 9KvXVGQcDfWKNkYm21uE3+c2Ebc6jBRpD2woYym9y4o=
+
+Name: com/sap/ndb/studio/jdbc/i18n/Messages.class
+SHA-256-Digest: HdawVuaRa7y9TCzJX82mf5BMmjf4Jd8SznmYTz9CAVQ=
+
+Name: com/sap/ndb/studio/jdbc/util/SQLPreparer.class
+SHA-256-Digest: 4Y2LiNP0iQtxO9CvCyek2X8p5NpeVD0kLb15WYzvih0=
+
+Name: com/sap/ndb/studio/jdbc/JDBCPlugin$1.class
+SHA-256-Digest: ihk8aMl3BFeLYcHucyR0mImIR+RZOcx1/Rpr3tyQZ7g=
+
+Name: com/sap/ndb/studio/jdbc/JDBCDefaultDriver.class
+SHA-256-Digest: DgtAccLTqd3XBp/nf0P5T0fjEVeOoc491cTMbH3W8EE=
+
+Name: .options
+SHA-256-Digest: rsS4Tsr7NhGsLOI1YG6vLDa9UCR99vxu5EDXlwtB5LM=
+
+Name: lib/ngdbc.jar
+SHA-256-Digest: Hvj1hxDQEkZnrkyFYK74ZyJ9h1p1pFnpYeaPvJg9M1A=
+
+Name: com/sap/ndb/studio/jdbc/properties/JDBCConnectionProps.class
+SHA-256-Digest: 46E84SUm+soKCO6fuXSsETCCrUzPuHcFBgko2WtV2Vs=
+
+Name: com/sap/ndb/studio/jdbc/util/SQLExecutor.class
+SHA-256-Digest: wfIhrgDkOLcChKemrItDQXk4NjbfZc1IIGaqtzZmS+c=
+
+Name: com/sap/ndb/studio/jdbc/util/SQLPreparer$1.class
+SHA-256-Digest: LiMeOX5noeWgW1S2nKpWfrK7PX1z0kLPrgkK+HyXUfE=
+
+Name: com/sap/ndb/studio/jdbc/JDBCPlugin.class
+SHA-256-Digest: ub6h1xgWmddN1cBMTUTh1sEpVxI0QlcvZYiISXuqa8U=
+
+Name: com/sap/ndb/studio/jdbc/properties/JDBCConnectionProps$P.class
+SHA-256-Digest: k3AiQkzUc+lCe3Z3/oFALI83GyTmsj9NQr4C9z497pA=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.jdbc/pom.pr
+ operties
+SHA-256-Digest: HkHDuoG67WjyXFy1Vh/Urb2ev9bRVFzCS2oknxuCe9E=
+
+Name: com/sap/ndb/studio/jdbc/debug/Debug.class
+SHA-256-Digest: h5rMSkRC4JWv0J5AEZbchW2awA6yRz+7/0apuRcWOxE=
+
+Name: com/sap/ndb/studio/jdbc/JDBCConnection$1.class
+SHA-256-Digest: cXqse1xFnYKsBp7RBGJOLeSO/YpYbZ3X28161HhpeWM=
+
+Name: com/sap/ndb/studio/jdbc/JDBCPlugin$2.class
+SHA-256-Digest: mOI6Spkt+5E0k3Q4ErPH/hQFSqo3W6X0nhxVzG6nmbE=
+
+Name: com/sap/ndb/studio/jdbc/JDBCMementoHandler.class
+SHA-256-Digest: RNppS4xxXTGEpLZ6VuczuoRtDFd5a334qgA5qkNMfCk=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.jdbc/pom.xm
+ l
+SHA-256-Digest: Zcz2nWOsEwlTSPtl7hi0uxHyuq7fCag/Rn7PrB1t9F8=
+
+Name: com/sap/ndb/studio/jdbc/NoDriverException.class
+SHA-256-Digest: LHQM/qu1cc71NRio6VFG5WRdkbbwB6xAGus+LTC4mjo=
+
+Name: com/sap/ndb/studio/jdbc/util/SQLExecutor$1.class
+SHA-256-Digest: uxFKloK3N4Ty/gq72SjefVA/4xYYwYW9xtRa3HWFKEs=
+
+Name: com/sap/ndb/studio/jdbc/SQLConnectionAttributes.class
+SHA-256-Digest: tCQVWTCRt9Ni+bpllybL47/3M2EyGxA2I3YKrMIGxj4=
+
+Name: com/sap/ndb/studio/jdbc/IJDBCConnectionProps.class
+SHA-256-Digest: y8twWo/MRSf0AE8aiSu8WM99N+LGgWC4mdIm0O7j7OM=
+
+Name: com/sap/ndb/studio/jdbc/JDBCAdapterFactory.class
+SHA-256-Digest: uRM2os5nOmuMeZvZ/46+yPGs+6PMJNn8EN4UYt3fMSg=
+
+Name: com/sap/ndb/studio/jdbc/IJDBCDriverAdapter.class
+SHA-256-Digest: PUt2Nm5JSzlb/+zbTAs3/VSoFpkfkLy3wGUSvNA2AGc=
+
+Name: com/sap/ndb/studio/jdbc/JDBCConnectionStatus.class
+SHA-256-Digest: +/4cwy3g9t1BT1jFPbpHJxGULXF40qtGImDUAkhwBVg=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: zOUVCANOSuzv1gr5taa70MTG8WQTN8flQt4ux6SWdyc=
+
+Name: com/sap/ndb/studio/jdbc/i18n/messages.properties
+SHA-256-Digest: +rmAbliB50nVoGdKPln8DyPSR+wrm7WKXrTbxvOQgjU=
+
+Name: com/sap/ndb/studio/jdbc/JDBCExceptionHandler.class
+SHA-256-Digest: ywIrUN0bPdoXfk0uZxCYtmjO8a/tdeqMXMeE6mNukko=
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Persist/version::1.0.2" ComponentName="sap:Persist" UIElementType="Flowstep" MetadataVersion="2.0">
+    <Variant VariantId="ctype::FlowstepVariant/cname::Persist/version::1.0.2" VariantDisplayName="Persist Message" VariantName="Perist" Preserves="true" MetadataVersion="2.0" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </OutputContent>
+        <Tab id="iflow.advance.persist">
+            <GuiLabels>
+                <Label language="EN">Processing</Label>
+            </GuiLabels>
+            <AttributeGroup id="iflow.advance.persist.generalDetails">
+                <AttributeReference>
+                    <ReferenceName>stepid</ReferenceName>
+                    <Restriction>Constraint.isValidRegex([a-zA-Z0-9]+)</Restriction>
+                    <ErrorMessage>StepID should use only characters (aA-zZ, 0-9) without any whitespaces</ErrorMessage>
+                    <description>Enter a unique ID for the process step at which message payload is stored</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>enableEncrypt</ReferenceName>
+                    <description>Encrypt the stored message payload</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+        <!-- additional information -->
+        <AllowedHeaders></AllowedHeaders>
+        <ReferencedComponents></ReferencedComponents>
+    </Variant>
+    <AttributeMetadata>
+        <Name>stepid</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <AutoGenerate>
+            <Prefix>Persist</Prefix>
+        </AutoGenerate>
+        <GuiLabels>
+            <Label language="EN">Step ID</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>enableEncrypt</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <GuiLabels>
+            <Label language="EN">Encrypt Stored Message</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

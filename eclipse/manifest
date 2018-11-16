@@ -1,0 +1,13 @@
+compversion-id: 73554900100200000585
+comptype: HDB_STUDIO
+keyname: HDB_STUDIO
+keycaption: SAP HANA STUDIO
+keyvendor: sap.com
+release: 2
+rev-number: 3
+rev-patchlevel: 39
+sp-number: 3
+sp-patchlevel: 39
+fullversion: 2.3.39
+rev-changelist: 000000
+platform: NTamd64

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Mapping/version::1.0.1"
+	ComponentName="sap:Mapping" UIElementType="Flowstep" MetadataVersion="2.0">
+	<Variant VariantId="ctype::FlowstepVariant/cname::FSNMapping/version::1.0.1"
+		VariantName="FSN Mapping" AttachmentBehavior="Preserve"
+		VariantDisplayName="FSN Mapping">
+		<InputContent Cardinality="1" Scope="insidepool"
+			MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="insidepool"
+			MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema />
+			</Content>
+		</OutputContent>
+		<Tab id="fsnmapping_advance_tab">
+			<GuiLabels>
+				<Label language="EN">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id="General Details">
+				<AttributeReference>
+					<ReferenceName>mappingname</ReferenceName>
+					<description>FSN Mapping Name</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>mappinguri</ReferenceName>
+					<description>FSN Mapping uri value</description>
+					<EditCondition>
+						<AttributeName>mappinguri</AttributeName>
+						<AttributeValue>false</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>mappingpath</ReferenceName>
+					<description>FSN Mapping resource path</description>
+					<EditCondition>
+						<AttributeName>mappingpath</AttributeName>
+						<AttributeValue>false</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>bundle-name</ReferenceName>
+					<description>FSN Mapping project name</description>
+					<EditCondition>
+						<AttributeName>bundle-name</AttributeName>
+						<AttributeValue>false</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+	</Variant>
+	<AttributeMetadata>
+		<Name>mappingname</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<ReadOnly>true</ReadOnly>
+		<HelpService>
+			<HelpServiceName>fsnMappingLookupService</HelpServiceName>
+		</HelpService>
+		<GuiLabels>
+			<Label language="EN">Resource</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>mappinguri</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<ReadOnly>true</ReadOnly>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>mappingpath</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<ReadOnly>true</ReadOnly>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>bundle-name</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<ReadOnly>true</ReadOnly>
+	</AttributeMetadata>
+</ComponentMetadata>

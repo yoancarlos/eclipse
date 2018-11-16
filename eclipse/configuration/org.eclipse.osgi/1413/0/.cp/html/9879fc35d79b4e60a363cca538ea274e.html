@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="Simple Signer makes it easy to sign messages to ensure authenticity and data integrity when sending a message to participants on the cloud."/>
+<meta name="description" content="Simple Signer makes it easy to sign messages to ensure authenticity and data integrity when sending a message to participants on the cloud."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Sign the Message Content with Simple Signer</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio9879fc35d79b4e60a363cca538ea274e">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Sign the Message Content with Simple Signer</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">Simple Signer makes it easy to sign messages to ensure authenticity and data integrity
+		when sending a message to participants on the cloud.</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You work with the Simple Signer to make the identity of the sender known to the
+				receiver(s) and thus ensure the authenticity of the messages. This task guarantees
+				the identity of the sender by signing the messages with a private key using a
+				signature algorithm. </p>
+
+			<p class="p">The following prerequisites must be met:</p>
+
+			<ul class="ul" id="loio9879fc35d79b4e60a363cca538ea274e__ul_znm_n1v_ds">
+				<li class="li">You have logged into your customer workspace in HCI web tooling.</li>
+
+				<li class="li">You are editing the integration flow in the editor.</li>
+
+			</ul>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step">
+				<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loio9879fc35d79b4e60a363cca538ea274e__image_oqv_t5x_jr" src="loioccb09c1e8d904b42966cd321c4008329_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Signer</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Simple Signer</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Place <span class="ph uicontrol">Simple Signer</span> in integration process and define the message
+					path.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">In <span class="ph uicontrol">Name</span> field, provide a name for the element.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">In the <span class="ph uicontrol">Properties</span> view, enter the details to sign the
+					incoming message with one or more signatures.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio9879fc35d79b4e60a363cca538ea274e__choicetable_vyd_pyr_h4">
+<thead><tr><th id="d3373754e80-option" valign="bottom" align="left">Option</th>
+<th id="d3373754e80-desc" valign="bottom" align="left">Description</th></tr></thead>
+<tbody>
+					<tr class="strow chrow">
+						<td valign="top" headers="d3373754e80-option" id="d3373754e84" class="stentry choption"><strong><span class="ph uicontrol">Name</span></strong></td>
+
+						<td valign="top" headers="d3373754e80-desc d3373754e84" class="stentry chdesc">Enter a name for the signer. It must consist of alphanumeric ASCII
+							characters or underscores and start with a letter. The minimum length is
+							3, the maximum length is 30.</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d3373754e80-option" id="d3373754e94" class="stentry choption"><strong><span class="ph uicontrol">Private Key Alias</span></strong></td>
+
+						<td valign="top" headers="d3373754e80-desc d3373754e94" class="stentry chdesc">Enter an alias to select the private key from the keystore.<p class="p">You
+								can also specify that the alias is read dynamically from a message
+								header; for example, if you specify ${header.abc} then the alias
+								value is read from the header with the name "abc“.</p>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d3373754e80-option" id="d3373754e106" class="stentry choption"><strong><span class="ph uicontrol">Signature Algorithm</span></strong></td>
+
+						<td valign="top" headers="d3373754e80-desc d3373754e106" class="stentry chdesc">Select a signature algorithm for the RSA or DSA private key
+							type.</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d3373754e80-option" id="d3373754e116" class="stentry choption"><strong><span class="ph uicontrol">Signature Header Name</span></strong></td>
+
+						<td valign="top" headers="d3373754e80-desc d3373754e116" class="stentry chdesc">Enter the name of the message header where the signature value in
+							Base64 format is stored.</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

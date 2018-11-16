@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css"/>
+<title>Understanding the Integration Content Types</title>
+</head>
+<body id="loioba4bf9312368409594047795226e0073">
+
+<h1 class="title topictitle1">Understanding the Integration Content Types</h1>
+<div class="body conbody"><p class="shortdesc"/>
+<p class="p">SAP HANA Cloud Integration offers Eclipse-based tooling that provides features to
+			model integration flows, configure with attributes and deploy them to the runtime. </p>
+<p class="p">The Integration tooling works in the local development mode in which you create an Integration
+			Project in your local Eclipse workspace and start developing integration content using
+			the features available in the Integration Designer perspective. Once the content is
+			ready, you deploy the project to the runtime. </p>
+<div class="section" id="loioba4bf9312368409594047795226e0073__section_N1001D_N10012_N10001"><strong class="ph b">Types of Integration Projects</strong><p class="p">The tooling
+				offers you different project types on the basis of objects involved, one is the
+				integration flow project and the other is the value mapping project. </p>
+<div class="sectiondiv">
+				<strong class="ph b">Integration Flow Project Type</strong>
+				<p class="p">The integration project types contain the integration flow configurations. You
+					can deploy the integration projects either to an IFL or an IFLMAP runtime
+					node.</p>
+<em class="ph i"><strong class="ph b">Integration Project Structure</strong></em>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="loioba4bf9312368409594047795226e0073__table_hhp_4ds_rh" class="table" frame="border" border="1" rules="all"><thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="50%" id="d1781e36">Elements in Project Structure</th>
+<th class="entry" valign="top" width="50%" id="d1781e38">Description</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="50%" headers="d1781e36 ">src.main.resources.mapping</td>
+<td class="entry" valign="top" width="50%" headers="d1781e38 ">Folder for mappings to be used in scenario</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d1781e36 ">src.main.resources.scenarioflows.integrationflow</td>
+<td class="entry" valign="top" width="50%" headers="d1781e38 ">Folder for BPMN integration flow</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d1781e36 ">src.main.resources.wsdl</td>
+<td class="entry" valign="top" width="50%" headers="d1781e38 ">Folder for interfaces like IDOC , WSDL used in
+									scenario</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d1781e36 ">MANIFEST.MF </td>
+<td class="entry" valign="top" width="50%" headers="d1781e38 ">File contains dependencies to runtime components</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note note" id="loioba4bf9312368409594047795226e0073__note_N1015B_N10025_N1001C_N10011_N10001"><span class="notetitle">Note</span> Additional files that you
+					can add to the integration project are:
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="loioba4bf9312368409594047795226e0073__table_hmb_cds_rh" class="table" frame="border" border="1" rules="all"><thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="50%" id="d1781e69">Additional Elements in Project Structure</th>
+<th class="entry" valign="top" width="50%" id="d1781e71">Description</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="50%" headers="d1781e69 ">
+										<strong class="ph b">parameters.prop</strong>
+									</td>
+<td class="entry" valign="top" width="50%" headers="d1781e71 ">File contains externalized attributes representing a
+										variable like landscape data</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d1781e69 ">
+										<strong class="ph b">parameters.propdef </strong>
+									</td>
+<td class="entry" valign="top" width="50%" headers="d1781e71 ">File contains metadata such as value type of the
+										parameterized attribute, its description and whether the
+										attribute should be configured mandatorily.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+			</div><div class="sectiondiv"><strong class="ph b">Value Mapping Project Type</strong>
+				<p class="p">The Value Mapping project type is used for scenarios that require you to map
+					different representations of an object to each other. Each value mapping project
+					contains one or more value mapping group that is a set of values of the
+					object.You can deploy the value mapping projects either to an IFL or an IFLMAP
+					runtime node.</p>
+<em class="ph i"><strong class="ph b">Value Mapping Project Structure</strong></em>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="loioba4bf9312368409594047795226e0073__table_mdj_dfs_rh" class="table" frame="border" border="1" rules="all"><thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="50%" id="d1781e106">Elements in Project Structure</th>
+<th class="entry" valign="top" width="50%" id="d1781e108">Description</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="50%" headers="d1781e106 ">MANIFEST.MF </td>
+<td class="entry" valign="top" width="50%" headers="d1781e108 ">File contains dependencies to runtime components</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d1781e106 ">value_mapping.XML</td>
+<td class="entry" valign="top" width="50%" headers="d1781e108 ">File contains value mapping groups that hold the objects and
+									their corresponding representations</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+			</div><div class="sectiondiv"><strong class="ph b">FSN Mapping Project Type</strong>
+				<p class="p">The FSN Mapping project type is used to implement scenarios that require mapping
+					belonging to the Financial Services Network. The project mainly contains a
+					mapping package in which you can place one or more mapping files. The mapping
+					files have extension .vpjzip and contains one or more message transformation
+					definitions. You have to deploy the FSN Mapping project type on an IFL runtime
+					node.</p>
+<em class="ph i"><strong class="ph b">FSN Mapping Project Structure</strong></em>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="loioba4bf9312368409594047795226e0073__table_y2x_3rt_2j" class="table" frame="border" border="1" rules="all"><thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="50%" id="d1781e137">Elements in Project Structure</th>
+<th class="entry" valign="top" width="50%" id="d1781e139">Description</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="50%" headers="d1781e137 ">src.main.resources.mapping</td>
+<td class="entry" valign="top" width="50%" headers="d1781e139 ">Folder contains mapping to be used for an FSN scenario.</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d1781e137 ">MANIFEST.MF</td>
+<td class="entry" valign="top" width="50%" headers="d1781e139 ">File contains dependencies to runtime components. </td>
+</tr>
+</tbody>
+</table>
+</div>
+
+			</div></div>
+</div>
+
+</body>
+</html>

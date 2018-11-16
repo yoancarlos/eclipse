@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Splitter/version::1.1.0" ComponentName="sap:Splitter" UIElementType="Flowstep">
+	<Variant VariantId="ctype::FlowstepVariant/cname::IDoc/version::1.1.0" VariantName="IDoc" AttachmentBehavior="Drop">
+		<!-- allowed input content type -->
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema/>
+			</Content>
+		</InputContent>	
+		
+		<!-- allowed output content type -->
+		<OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema/>
+			</Content>
+		</OutputContent>	
+		<!-- Attribute Groupings and Restriction -->
+		<!-- Cannot have AttributeGroup with no AttributeReference -->
+<!-- 		<Tab id="Splitter"> -->
+<!-- 			<GuiLabels> -->
+<!-- 				<Label language="EN">Splitter</Label> -->
+<!-- 			</GuiLabels> -->
+<!-- 			<AttributeGroup id="General Details"> -->
+<!-- 				<GuiLabels> -->
+<!-- 					<Label language="EN">Define a splitter to break down composite message into series of messages</Label> -->
+<!-- 				</GuiLabels> -->
+<!-- 			</AttributeGroup> -->
+<!-- 		</Tab> -->
+
+		<!-- additional information -->	
+		<AllowedHeaders/>
+		<ReferencedComponents/>
+	</Variant>
+	
+	
+	<Variant VariantId="ctype::FlowstepVariant/cname::PKCS#7/CMS Signature-Content Splitter/version::1.1.0" VariantDisplayName="PKCS#7/CMS Splitter" VariantName="PKCS#7/CMS Signature-Content Splitter" AttachmentBehavior="Preserve">
+		<!-- allowed input content type -->
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Binary</ContentType>
+				<Schema/>
+			</Content>
+		</InputContent>	
+		
+		<!-- allowed output content type -->
+		<OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Binary</ContentType>
+				<Schema/>
+			</Content>
+		</OutputContent>	
+		<!-- Attribute Groupings and Restriction -->
+		<Tab id="iflow.advance.PKCS_Splitter.tab">
+			<GuiLabels>
+				<Label language="EN">Splitter</Label>
+			</GuiLabels>
+			<AttributeGroup id="General Details">
+				<AttributeReference>
+					<ReferenceName>tokenValue</ReferenceName>
+					<description>Enter a name for the file that would contain the payload after the split process. E.g. payload_file_name</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>tokenValue2</ReferenceName>
+					<description>Enter a name with extension .sig for the file that would contain the signature after the split process. E.g. payload_file_name.SIG .</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>PK7_WrapContent</ReferenceName>
+					<description>Select this option to wrap the PKCS#7 Signed Data containing the signature into a PKCS#7 content.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>PK7_Payload</ReferenceName>
+					<description>Select this option if the payload should be the first returned message.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>PK7_Base64_Payload</ReferenceName>
+					<description>Select this option to encode the payload with Base64 encoding scheme after the split.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>PK7_Base64_SIG</ReferenceName>
+					<description>Select this option to encode the signature with Base64 encoding scheme after the split.</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+
+		<!-- additional information -->	
+		<AllowedHeaders/>
+		<ReferencedComponents/>
+	</Variant>
+	
+	<AttributeMetadata>
+		<Name>splitExprValue</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">XPath Expression</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>splitExprValueXpath</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">XPath Expression</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>splitExprValueToken</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Token</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>grouping</Name>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Grouping</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>timeOut</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Timeout(in s)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>Streaming</Name>
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<GuiLabels>
+			<Label language="EN">Streaming</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ParallelProcessing</Name>
+		<DataType>xsd:boolean</DataType>
+		<GuiLabels>
+			<Label language="EN">Parallel Processing</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>StopOnExecution</Name>
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<GuiLabels>
+			<Label language="EN">Stop on Exception</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+		<Name>tokenValue</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Payload File Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>tokenValue2</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Signature File Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>PK7_WrapContent</Name>
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<GuiLabels>
+			<Label language="EN">Wrap by Content Info</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>PK7_Payload</Name>
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<GuiLabels>
+			<Label language="EN">Payload First</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>PK7_Base64_Payload</Name>
+		<DataType>xsd:boolean</DataType>
+		<GuiLabels>
+			<Label language="EN">Base64 Payload</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>PK7_Base64_SIG</Name>
+		<DataType>xsd:boolean</DataType>
+		<GuiLabels>
+			<Label language="EN">Base64 Signature</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>exprType</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>XPath</Default>
+		<GuiLabels>
+			<Label language="EN">Expression Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>XPath</Value>
+				<GuiLabels>
+					<Label language="EN">XPath</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Token</Value>
+				<GuiLabels>
+					<Label language="EN">Token</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+</ComponentMetadata>

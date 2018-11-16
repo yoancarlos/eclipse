@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::AS2/version::1.1.2" ComponentName="AS2" UIElementType="Adapter" IsExtension="false" 
+																		IsFinal="true" IsPreserves="true" IsRequestResponse="true" gen:RuntimeComponentBaseUri="sap-as2" 
+																		xmlns:gen="http://www.w3.org/2001/XMLSchema-instance" MetadataVersion="2.0">
+																		
+	<Variant VariantName="AS2 MDN Sender" VariantId="ctype::AdapterVariant/cname::AS2/tp::HTTP/mp::AS2 MDN/direction::Sender/version::1.1.2" MetadataVersion="2.0" AttachmentBehavior="Modify" gen:RuntimeComponentBaseUri="sap-as2" gen:FirstUriPart="AS2 MDN">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</OutputContent>
+		<ManifestEntries>
+			<ManifestEntry>
+				<Name>SAP-PreDeployment</Name>
+				<Value>/META-INF/deployment/queueDefinitions.json</Value>
+			</ManifestEntry>
+		</ManifestEntries>	
+		<Metadata>
+			<AdditionalMetadata>
+				<Name>tp</Name>
+				<GuiLabels guid="e7fa4f1d-ec6a-4248-9752-920ea9616bc9">
+					<Label language="EN">HTTPS</Label>
+					<Label language="DE">HTTPS</Label>
+				</GuiLabels>
+			</AdditionalMetadata>
+		</Metadata>	
+		<Tab id="MDN">
+			<GuiLabels guid="8060bcbb-484c-47cb-a92c-eabe06b0c0e4">
+				<Label language="EN">MDN</Label>
+				<Label language="DE">MDN</Label>
+			</GuiLabels>
+			<AttributeGroup id="ExpectedMDN">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Expected MDN</Name>
+				<GuiLabels guid="f3d4b193-40d7-462b-9bd4-9a0b864a470f">
+					<Label language="EN">Expected MDN</Label>
+					<Label language="DE">Expected MDN</Label>
+				</GuiLabels>				
+				<AttributeReference>
+					<ReferenceName>partnerAS2Name</ReferenceName>
+					<description>Specify partner's AS2 ID. Regular expression or '.*' is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ownAS2Name</ReferenceName>
+					<description>Specify own AS2 ID. Regular expression or '.*' is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+                    <ReferenceName>numberConcurrentProcesses</ReferenceName>
+					<Restriction>Constraint.isValidRegex(^0*([1-9][0-9]?)$)</Restriction>
+					<ErrorMessage>Enter a value between 1 and 99.</ErrorMessage>
+                    <description>Enter the number of processes running in parallel for each worker node.</description>
+                </AttributeReference>
+				<AttributeReference>
+    				<ReferenceName>senderAuthType</ReferenceName>
+    				<description>Select authorization type.</description>
+				</AttributeReference>				
+				<AttributeReference>
+    				<ReferenceName>clientCertificates</ReferenceName>
+					<EditCondition>
+						<AttributeName>senderAuthType</AttributeName>
+						<AttributeValue>ClientCertificate</AttributeValue>
+					</EditCondition>
+    				<description>Add partner certificates for authorizations.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>verifyMDNSignature</ReferenceName>					
+					<description>Enable this option to verify AS2 MDN signature.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>publicKeyAliasForMDNVerification</ReferenceName>
+					<EditCondition>
+						<AttributeName>verifyMDNSignature</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Specify public key alias to verify AS2 MDN signature.</description>
+				</AttributeReference>				
+				<AttributeReference>
+					<ReferenceName>verifyMIC</ReferenceName>
+					<description>Enable this option to verify Message Integrity Check(MIC) from AS2 MDN.</description>
+				</AttributeReference>		
+			</AttributeGroup>			
+		</Tab>
+		<AllowedHeaders>AS2PartnerID,AS2OwnID,AS2MessageSubject,AS2Filename,AS2MessageID,AS2PartnerEmail,AS2MessageContentType,AS2OriginalMessageID</AllowedHeaders>
+		<ReferencedComponents>
+			<ReferencedComponent>HciRetryHandling</ReferencedComponent>
+		</ReferencedComponents>
+	</Variant>
+	<AttributeMetadata>
+		<Name>partnerAS2Name</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="dd11e867-6623-44bd-a423-8f27fe3a3117">
+			<Label language="EN">Partner AS2 ID</Label>
+			<Label language="DE">Partner AS2 ID</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ownAS2Name</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="22c72625-89f9-41ac-9547-ddba6d5b6a2b">
+			<Label language="EN">Own AS2 ID</Label>
+			<Label language="DE">Own AS2 ID</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+        <Name>senderAuthType</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>RoleBased</Default>
+        <Length></Length>
+        <GuiLabels guid="b7b5924e-bce6-4b6b-b206-b5f7ea57ad07">
+            <Label language="EN">Authorization</Label>
+            <Label language="DE">Authorization</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>RoleBased</Value>
+                <GuiLabels guid="6db9b216-fb34-46ba-8dcb-f9e8caca9f99">
+                    <Label language="EN">User Role</Label>
+                    <Label language="DE">User Role</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>ClientCertificate</Value>
+                <GuiLabels guid="1b0ff5f1-7604-49e7-9f10-e16f6a7e67b2">
+                    <Label language="EN">Client Certificate</Label>
+                    <Label language="DE">Client Certificate</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>	
+	<AttributeTableMetadata>
+	    <Name>clientCertificates</Name>
+	    <Usage>true</Usage>
+	    <HelpService>
+			<HelpServiceName>certificateLookupService</HelpServiceName>
+		</HelpService>
+	    <GuiLabels guid="01c2bd59-8dd1-4efb-b795-869851eb979b">
+	        <Label language="EN">Client Certificate Authorization</Label>
+	        <Label language="DE">Client Certificate Authorization</Label>
+	    </GuiLabels>
+	    <AttributeReference>
+	        <ReferenceName>clientCertificate.subjectDN</ReferenceName>
+	    </AttributeReference>
+	    <AttributeReference>
+	        <ReferenceName>clientCertificate.issuerDN</ReferenceName>
+	    </AttributeReference>
+	</AttributeTableMetadata>
+	<AttributeMetadata>
+    	<Name>clientCertificate.subjectDN</Name>
+    	<Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+    	<GuiLabels guid="0b7dc876-3ec2-4175-bb43-76a8d3d1d82d">
+        	<Label language="EN">Subject DN</Label>
+        	<Label language="DE">Subject DN</Label>
+    	</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+    	<Name>clientCertificate.issuerDN</Name>
+    	<Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+    	<GuiLabels guid="9a39abed-a80c-4bf8-a48d-cb6a32d5d767">
+        	<Label language="EN">Issuer DN</Label>
+        	<Label language="DE">Issuer DN</Label>
+    	</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>verifyMDNSignature</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="7078eded-d694-4003-a51c-3b592dbb2c73">
+			<Label language="EN">Verify Signature</Label>
+			<Label language="DE">Verify Signature</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>publicKeyAliasForMDNVerification</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="19927bc3-acb6-4018-a433-8c314b93a3e7">
+			<Label language="EN">Public Key Alias</Label>
+			<Label language="DE">Public Key Alias</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>verifyMIC</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="83a004af-59ed-40be-8caf-5f3df17baf27">
+			<Label language="EN">Verify MIC</Label>
+			<Label language="DE">Verify MIC</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+        <Name>numberConcurrentProcesses</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>1</Default>
+        <GuiLabels>
+            <Label language="EN">Number of Concurrent Processes</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

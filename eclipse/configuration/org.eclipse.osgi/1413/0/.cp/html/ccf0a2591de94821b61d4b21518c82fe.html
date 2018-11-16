@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="The XML to EDI converter transforms a message in XML format to EDI format. You can convert only into EDIFACT format."/>
+<meta name="description" content="The XML to EDI converter transforms a message in XML format to EDI format. You can convert only into EDIFACT format."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining XML to EDI Converter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioccf0a2591de94821b61d4b21518c82fe">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">
+Defining XML to EDI Converter</h1>
+<div class="body taskbody"><p class="shortdesc">The XML to EDI converter transforms a message in XML format to EDI format. You can
+		convert only into EDIFACT format.</p>
+<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p"/>
+
+		</div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loioccf0a2591de94821b61d4b21518c82fe__steps_blm_tnn_35"><li class="li step stepexpand"><span class="ph cmd">Open the integration flow in the <span class="ph uicontrol">Model Configuration</span>
+					editor.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Choose  <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Add Message Transformers</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Converter</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> from the context menu of a connection within the pool.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Choose <span class="ph uicontrol">Switch to XML to EDI Converter</span>, from the context
+					menu,.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">On the <span class="ph uicontrol">XML to EDI Converter</span> properties tab page, define
+					the following parameters to convert the XML data format to EDI data
+					format.</span><div class="itemgroup info">
+					
+<div class="tablenoborder"><table summary="" id="loioccf0a2591de94821b61d4b21518c82fe__table_mzp_mw4_np" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+<thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="50%" id="d3002358e52">Field</th>
+<th class="entry" valign="top" width="50%" id="d3002358e54">Description</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="50%" headers="d3002358e52 ">Name</td>
+<td class="entry" valign="top" width="50%" headers="d3002358e54 ">Enter the name of the converter.</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d3002358e52 ">Source Encoding </td>
+<td class="entry" valign="top" width="50%" headers="d3002358e54 ">Select encoding format for the incoming payload.</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d3002358e52 ">EDI Schema Definition</td>
+<td class="entry" valign="top" width="50%" headers="d3002358e54 ">Select the source of schema definition.</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d3002358e52 ">Schemas</td>
+<td class="entry" valign="top" width="50%" headers="d3002358e54 ">If you select <kbd class="ph userinput">Integration Flow</kbd> as <span class="ph uicontrol">EDI Schema
+											Definition</span>, then you can see the table
+											<span class="ph uicontrol">Schemas</span>, in
+											<span class="ph uicontrol">Properties</span> view. Select the valid
+										schemas against which the conversion will take place.<div class="note note"><span class="notetitle">Note</span> 
+											<ul class="ul" id="loioccf0a2591de94821b61d4b21518c82fe__ul_yhg_3bw_35"><li class="li">
+												<p class="p">You can add XSD files to the integration flow. For more details, please refer to the
+												topic   <span class="ph emphasis emphasis">Validating Message Payload
+												against XML Schema</span>, in developer's
+												guide.</p>
+
+												</li>
+<li class="li">
+												<p class="p">The file name of the xml schema should have the
+												following format:</p>
+
+												<p class="p"><kbd class="ph userinput">UN-EDIFACT_ORDERS_D96A.xsd</kbd></p>
+
+												</li>
+<li class="li">
+												<div class="p">The file name comprises of  following three
+												parts separated by '_':<ul class="ul" id="loioccf0a2591de94821b61d4b21518c82fe__ul_y5m_q1w_35"><li class="li">First part "UN-EDIFACT" refers to the EDI
+												standard with organization name. This value is
+												fixed and cannot be customised.</li>
+<li class="li">Second part "ORDERS" refers to the message
+												type.</li>
+<li class="li">Third part "D96A" refers to the version .
+												</li>
+</ul>
+</div>
+
+												</li>
+<li class="li">
+												<p class="p">The above mentioned values should match with schema content.</p>
+
+												</li>
+</ul>
+
+										</div>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d3002358e52 ">HeaderName</td>
+<td class="entry" valign="top" width="50%" headers="d3002358e54 ">If you select <kbd class="ph userinput">Header</kbd> as
+											<span class="ph uicontrol">EDI Schema Definition</span>, then you
+										can see the field <span class="ph uicontrol">HeaderName</span>, in
+											<span class="ph uicontrol">Properties</span> view. Enter a valid
+										header name for the field.<div class="note note"><span class="notetitle">Note</span> 
+											<p class="p">This header name is fetched from camel header. The
+												header is added in script element. This script
+												element is added before converter element. You can
+												add value for this header in the script element. For
+												example, you can add the value,
+												<kbd class="ph userinput">/xsd/UN-EDIFACT_ORDERS_D96A.xsd</kbd>.</p>
+
+										</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+				</div></li>
+<li class="li step stepexpand"><span class="ph cmd">Save the changes.</span></li>
+</ol>
+<div class="example"><h2 class="exampletitle">Example</h2>
+			<p class="p">The following example shows the transformation from <span class="ph uicontrol">XML to EDI</span>
+				format. </p>
+
+			<p class="p">Input sample XML Message </p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint ">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Interchange&gt;
+    &lt;S_UNA&gt;:+.? '&lt;/S_UNA&gt;
+    &lt;S_UNB&gt;
+        &lt;C_S001&gt;
+            &lt;D_0001&gt;UNOC&lt;/D_0001&gt;
+            &lt;D_0002&gt;3&lt;/D_0002&gt;
+        &lt;/C_S001&gt;
+        &lt;C_S002&gt;
+            &lt;D_0004&gt;SENDERABC&lt;/D_0004&gt;
+            &lt;D_0007&gt;14&lt;/D_0007&gt;
+            &lt;D_0008&gt;XXXX&lt;/D_0008&gt;
+        &lt;/C_S002&gt;
+        &lt;C_S003&gt;
+            &lt;D_0010&gt;ReceiverXYZ&lt;/D_0010&gt;
+            &lt;D_0007&gt;14&lt;/D_0007&gt;
+            &lt;D_0014&gt;YYYYY&lt;/D_0014&gt;
+        &lt;/C_S003&gt;
+        &lt;C_S004&gt;
+            &lt;D_0017&gt;150831&lt;/D_0017&gt;
+            &lt;D_0019&gt;1530&lt;/D_0019&gt;
+        &lt;/C_S004&gt;
+        &lt;D_0020&gt;1&lt;/D_0020&gt;
+        &lt;C_S005&gt;
+            &lt;D_0022&gt;HELLO WORLD&lt;/D_0022&gt;
+        &lt;/C_S005&gt;
+        &lt;D_0029&gt;A&lt;/D_0029&gt;
+        &lt;D_0035&gt;1&lt;/D_0035&gt;
+    &lt;/S_UNB&gt;
+    &lt;M_ORDERS&gt;
+        &lt;S_UNH&gt;
+            &lt;D_0062&gt;1&lt;/D_0062&gt;
+            &lt;C_S009&gt;
+                &lt;D_0065&gt;ORDERS&lt;/D_0065&gt;
+                &lt;D_0052&gt;D&lt;/D_0052&gt;
+                &lt;D_0054&gt;96A&lt;/D_0054&gt;
+                &lt;D_0051&gt;UN&lt;/D_0051&gt;
+            &lt;/C_S009&gt;
+            &lt;C_S010&gt;
+                &lt;D_0070&gt;2&lt;/D_0070&gt;
+            &lt;/C_S010&gt;
+        &lt;/S_UNH&gt;
+        &lt;S_BGM&gt;
+            &lt;C_C002&gt;
+                &lt;D_1001&gt;220&lt;/D_1001&gt;
+            &lt;/C_C002&gt;
+            &lt;D_1004&gt;MY_ID&lt;/D_1004&gt;
+            &lt;D_1225&gt;9&lt;/D_1225&gt;
+            &lt;D_4343&gt;NA&lt;/D_4343&gt;
+        &lt;/S_BGM&gt;
+        &lt;S_DTM&gt;
+            &lt;C_C507&gt;
+                &lt;D_2005&gt;137&lt;/D_2005&gt;
+                &lt;D_2380&gt;201507311500&lt;/D_2380&gt;
+                &lt;D_2379&gt;203&lt;/D_2379&gt;
+            &lt;/C_C507&gt;
+        &lt;/S_DTM&gt;
+        &lt;S_DTM&gt;
+            &lt;C_C507&gt;
+                &lt;D_2005&gt;2&lt;/D_2005&gt;
+                &lt;D_2380&gt;201508010930&lt;/D_2380&gt;
+                &lt;D_2379&gt;203&lt;/D_2379&gt;
+            &lt;/C_C507&gt;
+        &lt;/S_DTM&gt;
+        &lt;S_CNT&gt;
+            &lt;C_C270&gt;
+                &lt;D_6069&gt;16&lt;/D_6069&gt;
+                &lt;D_6066&gt;10&lt;/D_6066&gt;
+            &lt;/C_C270&gt;
+        &lt;/S_CNT&gt;
+        &lt;S_UNT&gt;
+            &lt;D_0074&gt;5&lt;/D_0074&gt;
+            &lt;D_0062&gt;1&lt;/D_0062&gt;
+        &lt;/S_UNT&gt;
+    &lt;/M_ORDERS&gt;
+    &lt;S_UNZ&gt;
+        &lt;D_0036&gt;1&lt;/D_0036&gt;
+        &lt;D_0020&gt;1&lt;/D_0020&gt;
+    &lt;/S_UNZ&gt;
+&lt;/Interchange&gt;
+
+</pre></div>
+
+			<p class="p">Output sample EDI Message </p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint ">
+UNA:+.? '
+UNB+UNOC:3+SENDERABC:14:XXXX+ReceiverXYZ:14:YYYYY+150831:1530+1+HELLO WORLD++A+++1'
+UNH+1+ORDERS:D:96A:UN++2'
+BGM+220+MY_ID+9+NA'
+DTM+137:201507311500:203'
+DTM+2:201508010930:203'
+CNT+16:10'
+UNT+5+1'
+UNZ+1+1'
+</pre></div>
+
+		</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+	<extensionContent id="com.sap.ndb.studio.left" name="SAP HANA Studio" style="css/overview.css"
+		path="overview/@">
+		<group style-id="content-group" id="content-group">
+			<link style-id="content-link"
+				label="Open Lifecycle Management"
+				url="http://org.eclipse.ui.intro/runAction?pluginId=com.sap.ndb.studio.ui&amp;class=com.sap.ndb.studio.ui.actions.OpenPerspective&amp;perspective=com.sap.ndb.studio.perspective.lcm"
+				id="lcm">
+				<text>to update SAP HANA appliance software</text>
+			</link>
+		</group>
+	</extensionContent>
+</introContent>

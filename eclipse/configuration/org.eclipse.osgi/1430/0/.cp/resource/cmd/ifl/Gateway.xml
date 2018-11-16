@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Gateway/version::1.0.3" ComponentName="sap:Gateway" UIElementType="Flowstep">
+	<Variant VariantId="ctype::FlowstepVariant/cname::ExclusiveGateway/version::1.0.3"	VariantName="ExclusiveGateway" Preserves="true" VariantDisplayName="Router">
+		<Tab id="Gateway">
+			<GuiLabels>
+				<Label language="EN">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id = "errorHandling">
+				<GuiLabels>
+					<Label language="EN">Error Handling</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>throwException</ReferenceName>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>raiseAlert</ReferenceName>
+				</AttributeReference>
+			</AttributeGroup>
+			<AttributeGroup id = "exclusiveRouting">
+				<GuiLabels>
+					<Label language="EN">Routing Condition</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>conditionTable</ReferenceName>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+	</Variant>
+	<AttributeTableMetadata modifiable = "false" selectionMode = "single">
+		<Name>conditionTable</Name>
+		<AttributeReference>
+			<ReferenceName>order</ReferenceName>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>conditionName</ReferenceName>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>conditionValue</ReferenceName>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>defaultBranch</ReferenceName>
+		</AttributeReference>
+	</AttributeTableMetadata>
+	<AttributeMetadata>
+		<Name>order</Name>
+		<DataType>xsd:integer</DataType>
+		<ReadOnly>true</ReadOnly>
+		<Length />
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Order</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>conditionName</Name>
+		<DataType>xsd:string</DataType>
+		<ReadOnly>true</ReadOnly>
+		<Length />
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Route Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>defaultBranch</Name>
+		<DataType>xsd:boolean</DataType>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Default Route</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>conditionValue</Name>
+		<DataType>xsd:string</DataType>
+		<ReadOnly>true</ReadOnly>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Condition Expression</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>throwException</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Default>false</Default>
+		<GuiLabels>
+			<Label language="EN">Throw Exception</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>raiseAlert</Name>
+		<DataType>xsd:boolean</DataType>
+		<Default>false</Default>
+		<GuiLabels>
+			<Label language="EN">Raise Alert</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+</ComponentMetadata>

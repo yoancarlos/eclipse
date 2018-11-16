@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:RFC/version::1.0.0"
+	ComponentName="sap:RFC" UIElementType="Adapter" IsExtension="false"
+	IsFinal="true" IsPreserves="true" IsDefaultGenerator="true"
+	ComponentDisplayName="RFC" xmlns:sec="http://cxf.apache.org/configuration/security"
+	xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf" xmlns:gen="http://www.sap.hci.adk.com/gen"
+	xmlns:http-conf="http://cxf.apache.org/transports/http/configuration"
+	xmlns:camel="http://camel.apache.org/schema/blueprint" xmlns:cxfcore="http://cxf.apache.org/blueprint/core"
+	xmlns:osgibp="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:bp="http://www.adk.gen/xmlns/blueprint">
+
+	
+	<Variant VariantName="SAP RFC Receiver"
+		VariantId="ctype::AdapterVariant/cname::sap:RFC/tp::RFC/mp::Synchronous RFC/direction::Receiver/version::1.0.0"
+		IsRequestResponse="true" MetadataVersion="2.0"
+		gen:RuntimeComponentBaseUri="sap-rfc" AttachmentBehavior="Preserve">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </OutputContent>
+        <Tab id="connection">
+         <GuiLabels guid="5d1352c3-6568-4538-80b3-05722bec8ded">
+                <Label language="EN">Connection</Label>
+                <Label language="DE">Connection</Label>
+            </GuiLabels>
+            
+            <AttributeGroup id="RfcConnection">
+                <GuiLabels guid="7ae078ad-56f1-48ca-aeda-df571000eb80">
+                    <Label language="EN">Connection Details</Label>
+                    <Label language="DE">Connection Details</Label>
+                </GuiLabels>
+               <AttributeReference>
+					<ReferenceName>destination</ReferenceName>
+					<description>Enter the RFC destination configured in SAP Cloud Platform for your application. Also, you can use expressions. For example ${header.address}</description> 
+<!-- 					<Restriction>Constraint.isValidRegex(^(([$][{]([a-zA-Z])+[.](.*))|([a-zA-Z0-9_\-]*))$)</Restriction> -->
+<!-- 					<ErrorMessage>Destination name must contain only alphabets 'Aa-Zz', digits '0-9', underscore '_' and hyphen '-'. Maximum length allowed is 200 characters.</ErrorMessage> -->
+				</AttributeReference>
+            </AttributeGroup>
+        </Tab>
+    </Variant>
+     <AttributeMetadata>
+        <Name>destination</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Length>200</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="4857535f-2c59-45dc-8947-56310f4c538f">
+            <Label language="EN">Destination</Label>
+            <Label language="DE">Destination</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

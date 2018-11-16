@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Gateway/version::1.1.1" ComponentName="sap:Gateway" UIElementType="Flowstep">
+	
+	<!-- CMD Layout for Parallel Multicast	-->
+	<!-- Variant Name : Multicast -->
+	<!-- Version : 1.1.0 -->
+	<!-- Type : Gateway-->
+	<!-- Flavor : parallel -->
+	<!-- parentFlavor : Multicast -->
+	<!-- iType : PARALLEL_GATEWAY-->
+	<Variant VariantId="ctype::FlowstepVariant/cname::Multicast/version::1.1.1" VariantName="Parallel Multicast" VariantDisplayName="Parallel Multicast">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="1" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="n" Scope="insidepool" MessageCardinality="n" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+			<Schema />
+		</Content>
+		</OutputContent>		
+	</Variant>		
+
+	<!-- CMD Layout for Parallel Multicast	-->
+	<!-- Variant Name : Multicast -->
+	<!-- Version : 1.0.0 -->
+	<!-- Type : Gateway-->
+	<!-- Flavor : parallel -->
+	<!-- parentFlavor : Multicast -->
+	<!-- iType : PARALLEL_GATEWAY-->
+	<Variant VariantId="ctype::FlowstepVariant/cname::Multicast/version::1.0.1" VariantName="Parallel Multicast" VariantDisplayName="Parallel Multicast">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="1" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="n" Scope="insidepool" MessageCardinality="n" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+			<Schema />
+		</Content>
+		</OutputContent>		
+	</Variant>		
+</ComponentMetadata>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:IDOC/version::1.0.9" ComponentName="sap:IDOC" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" MetadataVersion="2.0">
+	<Variant VariantId="ctype::AdapterVariant/cname::IDOC/tp::HTTP/mp::IDoc SOAP/direction::Sender/version::1.0.9" VariantName="IDOC Sender" MetadataVersion="2.0">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema></Schema>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema></Schema>
+			</Content>
+			<Content>
+				<ContentType>None</ContentType>
+				<Schema></Schema>
+			</Content>
+		</OutputContent>
+		<Metadata>
+			<AdditionalMetadata>
+				<Name>tp</Name>
+				<GuiLabels guid="e7fa4f1d-ec6a-4248-9752-920ea9616bc9">
+					<Label language="EN">HTTPS</Label>
+					<Label language="DE">HTTPS</Label>
+				</GuiLabels>
+			</AdditionalMetadata>
+		</Metadata>
+		<Tab id="connection">
+			<GuiLabels>
+				<Label language="EN">Connection</Label>
+			</GuiLabels>
+			<AttributeGroup id="connection.details">
+				<GuiLabels>
+					<Label language="EN">Connection Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>address</ReferenceName>
+					<Restriction>(/\w+.*_*)+</Restriction>
+					<ErrorMessage>Enter a valid address. E.g. /file/test</ErrorMessage>
+					<description>Relative endpoint address on which the ESB Bus listens to the incoming request, for example "/FSN/payment"</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>wsdlURL</ReferenceName>
+					<Restriction>^$|(/?)(wsdl/){1}([A-Za-z0-9_.]+)(.(?i)wsdl)$
+					</Restriction>
+					<ErrorMessage>Enter a valid URL. E.g. /wsdl/sample.wsdl; wsdl/sample.wsdl</ErrorMessage>
+                    <description>URL to the WSDL defining the WS provider endpoint.&#10;URL format: wsdl/&lt;InterfaceName&gt;.wsdl, where the WSDL is available in src.main.resources.wsdl</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+        <AllowedHeaders>SapMessageId,SapMessageIdEx,SapIDocSoapNamespace,SapIDocType,SapIDocTransferId</AllowedHeaders>
+        <ReferencedComponents/>
+    </Variant>
+    <Variant VariantId="ctype::AdapterVariant/cname::IDOC/tp::HTTP/mp::IDoc SOAP/direction::Receiver/version::1.0.5" VariantName="IDOC Receiver" MetadataVersion="2.0">
+        <InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Xml</ContentType>
+                <Schema></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Xml</ContentType>
+                <Schema></Schema>
+            </Content>
+        </OutputContent>
+        <Metadata>
+            <AdditionalMetadata>
+                <Name>tp</Name>
+                <GuiLabels>
+                    <Label language="EN">HTTP/HTTPS</Label>
+                </GuiLabels>
+            </AdditionalMetadata>
+        </Metadata>
+		<Tab id="connection">
+			<GuiLabels>
+				<Label language="EN">Connection</Label>
+			</GuiLabels>
+			<AttributeGroup id="connection.details">
+				<GuiLabels>
+					<Label language="EN">Connection Details</Label>
+				</GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>address</ReferenceName>
+                    <Restriction>^(http(s)*://){1}(.)++</Restriction>
+                    <ErrorMessage>Enter a valid address. E.g. https://servername:port/sap/bc/srt/idoc?sap-client=number</ErrorMessage>
+                    <description>Endpoint address on which the ESB Bus posts the outgoing message, for example "https://servername:port/sap/bc/srt/idoc?sap-client=number"</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>proxyType</ReferenceName>
+                    <description>Specify the proxy type to be used.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>proxyHost</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>proxyType</AttributeName>
+                        <AttributeValue>manual</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>proxyPort</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>proxyType</AttributeName>
+                        <AttributeValue>manual</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>wsdlURL</ReferenceName>
+                    <ErrorMessage>Enter a valid URL. E.g. /wsdl/sample.wsdl; wsdl/sample.wsdl</ErrorMessage>
+                    <description>URL to the WSDL defining the WS provider endpoint.&#10;URL format: wsdl/&lt;InterfaceName&gt;.wsdl, where the WSDL is available in src.main.resources.wsdl</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>IDocContentType</ReferenceName>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>requestTimeout</ReferenceName>
+                    <Restriction>[0-9]*</Restriction>
+                    <ErrorMessage>Enter a valid number of milliseconds (digits only)</ErrorMessage>
+                    <description>Specifies the amount of time, in milliseconds, that the client will wait for a response before it times out: 0 specifies that the client will wait indefinitely</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>CompressMessage</ReferenceName>
+                    <description>Enable this WS endpoint to:&#10;Accept the compressed request messages&#10;Compress the response messages if the WS Consumer can handle them</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>allowChunking</ReferenceName>
+                    <description>Select this option to allow HTTP Chunking of data while sending messages</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>enableBasicAuthentication</ReferenceName>
+                    <description>Select this option to allow the ESB bus to connect to the receiver system using the deployed basic authentication credentials</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>credentialName</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>enableBasicAuthentication</AttributeName>
+                        <AttributeValue>1</AttributeValue>
+                    </EditCondition>
+                    <description>Enter the credential name of the username-password pair specified during the deployment of basic authentication credentials on the tenant</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>privateKeyAlias</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>enableBasicAuthentication</AttributeName>
+                        <AttributeValue>0</AttributeValue>
+                    </EditCondition>
+                    <description>Enter an alias to identify the private key to communicate with a receiver using HTTPs protocol.</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+        <AllowedHeaders></AllowedHeaders>
+        <ReferencedComponents></ReferencedComponents>
+    </Variant>
+    <AttributeMetadata>
+        <Name>address</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length/>
+        <IsParameterized>true</IsParameterized>
+        <GuiLabels>
+            <Label language="EN">Address</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <!--unused attribute 'gatewayhost'-->
+    <!--unused attribute 'gatewayservice'-->
+    <!--unused attribute 'programId'-->
+    <!--unused attribute 'targethost'-->
+    <!--unused attribute 'client'-->
+    <!--unused attribute 'systemnumber'-->
+    <!--unused attribute 'username'-->
+    <!--unused attribute 'password'-->
+    <AttributeMetadata>
+        <Name>wsdlURL</Name>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <HelpService>
+            <HelpServiceName>resourceLookupService</HelpServiceName>
+            <HelpServiceQueryAttributes>
+                <HelpServiceQueryAttribute>
+                    <Name>Type</Name>
+                    <Value>WSDL</Value>
+                </HelpServiceQueryAttribute>
+                <HelpServiceQueryAttribute>
+                    <Name>ResourceLocation</Name>
+                    <Value>wsdl</Value>
+                </HelpServiceQueryAttribute>
+            </HelpServiceQueryAttributes>
+        </HelpService>
+        <GuiLabels>
+            <Label language="EN">URL to WSDL</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>allowChunking</Name>
+        <Usage/>
+        <DataType>xsd:boolean</DataType>
+        <Default>1</Default>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Allow Chunking</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>enableBasicAuthentication</Name>
+        <Usage/>
+        <DataType>xsd:boolean</DataType>
+        <Default>0</Default>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Basic Authentication</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>privateKeyAlias</Name>
+        <DataType>xsd:string</DataType>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Private Key Alias</Label>
+        </GuiLabels>
+        <ContentBindingService>
+            <ContentBindingServiceName>GenericContentBindingService</ContentBindingServiceName>
+            <BindingServiceAttributes>
+                <BindingServiceAttribute>
+                    <Name>srcAttributePath</Name>
+                    <Value>/bpmn2:definitions/bpmn2:collaboration</Value>
+                </BindingServiceAttribute>
+                <BindingServiceAttribute>
+                    <Name>srcAttributeId</Name>
+                    <Value>privateKeyAlias</Value>
+                </BindingServiceAttribute>
+            </BindingServiceAttributes>
+        </ContentBindingService>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>credentialName</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Credential Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>CompressMessage</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default/>
+        <Length/>
+        <GuiLabels>
+            <Label language="EN">Compress Message</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>requestTimeout</Name>
+        <DataType>xsd:string</DataType>
+        <Default>60000</Default>
+        <Length/>
+        <GuiLabels>
+            <Label language="EN">Timeout (in ms)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>IDocContentType</Name>
+        <DataType>xsd:string</DataType>
+        <Default>application/x-sap.idoc</Default>
+        <GuiLabels>
+            <Label language="EN">IDoc Content Type</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>application/x-sap.idoc</Value>
+                <GuiLabels>
+                    <Label language="EN">Application/x-sap.idoc</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>text/xml</Value>
+                <GuiLabels>
+                    <Label language="EN">Text/XML</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>proxyType</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>default</Default>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Proxy Type</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>default</Value>
+                <GuiLabels>
+                    <Label language="EN">Internet</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>sapcc</Value>
+                <GuiLabels>
+                    <Label language="EN">On-Premise</Label>
+                </GuiLabels>
+            </FixedValue>
+            <NotCondition>
+                <EditCondition>
+                    <AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+                    <AttributeValue>true</AttributeValue>
+                </EditCondition>
+            </NotCondition>
+        </FixedValues>
+        <FixedValues>
+            <FixedValue>
+                <Value>default</Value>
+                <GuiLabels>
+                    <Label language="EN">Internet</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>manual</Value>
+                <GuiLabels>
+                    <Label language="EN">Manual</Label>
+                </GuiLabels>
+            </FixedValue>
+            <EditCondition>
+                <AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+                <AttributeValue>true</AttributeValue>
+            </EditCondition>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>proxyHost</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Proxy Host</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>proxyPort</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Proxy Port</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

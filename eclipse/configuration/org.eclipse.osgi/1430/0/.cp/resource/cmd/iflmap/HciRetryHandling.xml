@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata
+	ComponentId="ctype::Extension/cname::sap:RetryHandling/version::1.0.1" ComponentName="RetryHandling" UIElementType="Extension" ComponentDisplayName="Retry Handling">
+	<Variant VariantName="RetryHandling" VariantId="ctype::ExtensionVariant/cname::sap:RetryHandling/version::1.0.1" VariantDisplayName= "Retry Handling">
+		<Tab id="Retry">
+			<GuiLabels>
+				<Label language="EN">Retry</Label>
+				<Label language="DE">Retry</Label>
+			</GuiLabels>
+			<AttributeGroup id="Retry Handling">
+				<Name>RetryHandling</Name>
+				<GuiLabels>
+					<Label language="EN">Retry Handling</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>RetryInterval</ReferenceName>
+					<ErrorMessage>Enter a valid interval (in min).</ErrorMessage>
+					<description>Enter the retry interval</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ExponentialBackoff</ReferenceName>
+					<description>If selected, the retry interval is doubled after each unsuccessful retry.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>MaxRetryInterval</ReferenceName>
+					<ErrorMessage>Enter a valid interval (in min).</ErrorMessage>
+					<description>Enter a limit to avoid an endless increase of the retry interval caused by the exponential backoff setting.</description>
+					<EditCondition>
+						<AttributeName>ExponentialBackoff</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+	</Variant>
+	<AttributeMetadata>
+		<Name>RetryInterval</Name>
+		<Usage>required</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Retry Interval (in min)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ExponentialBackoff</Name>
+		<DataType>xsd:boolean</DataType>
+		<Default>0</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Exponential Backoff</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>MaxRetryInterval</Name>
+		<Usage>required</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>60</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Maximum Retry Interval (in min)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+</ComponentMetadata>

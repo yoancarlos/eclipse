@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:ContentModifier/version::1.0.4" ComponentName="sap:ContentModifier" UIElementType="Flowstep" IsExtension="false" IsFinal="true" >
+	<Variant VariantId="ctype::FlowstepVariant/cname::Enricher/version::1.0.4" VariantName="Content Modifier" VariantDisplayName="Content Modifier" AttachmentBehavior="Preserve">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality = "" isStreaming="">
+		 	<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+		 	<Content>
+				<ContentType>None</ContentType>
+				<Schema/>
+			</Content>
+		</InputContent>		
+		<OutputContent Cardinality="1" Scope="insidepool" MessageCardinality = "" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+		</OutputContent>		
+		<Tab id="header">
+			<GuiLabels>
+				<Label language="EN">Message Header</Label>
+			</GuiLabels>
+			<AttributeGroup id = "header">
+				<AttributeReference>
+					<ReferenceName>headerTable</ReferenceName>
+				</AttributeReference>
+			</AttributeGroup>
+			<description>Define additional headers or set values of existing headers</description>
+		</Tab>
+		<Tab id="property">
+			<GuiLabels>
+				<Label language="EN">Exchange Property</Label>
+			</GuiLabels>
+			<AttributeGroup id = "property">
+				<AttributeReference>
+					<ReferenceName>propertyTable</ReferenceName>
+				</AttributeReference>
+			</AttributeGroup>
+			<description>Define additional properties or set values of existing properties</description>
+		</Tab>
+		<Tab id="body">
+			<GuiLabels>
+				<Label language="EN">Message Body</Label>
+			</GuiLabels>
+			<AttributeGroup id = "body">
+				<AttributeReference>
+					<ReferenceName>wrapContent</ReferenceName>
+					<description>Enter an expression to form new message body</description>
+				</AttributeReference>
+			</AttributeGroup>
+			<description>Enter an expression to form a new message body</description>
+		</Tab>
+		<AllowedHeaders/>
+		<ReferencedComponents/>
+	</Variant>
+    <AttributeMetadata>
+        <Name>wrapContent</Name>
+        <Usage />
+        <DataType>xsd:string</DataType>
+        <MultiLine>true</MultiLine>
+        <Default />
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Body</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+
+	<AttributeTableMetadata>
+		<Name>headerTable</Name>
+		<!-- <Usage>optional</Usage> -->
+		<GuiLabels>
+			<Label language="EN">Headers</Label>
+		</GuiLabels>
+		<AttributeReference>
+			<ReferenceName>Name</ReferenceName>
+			<description>Enter a name to define this header</description>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>Type</ReferenceName>
+			<description>Select a type from dropdown for the value</description>
+			<NotCondition>
+					<EditCondition>
+		                <AttributeName>Type</AttributeName>
+		                <AttributeValue>external parameter</AttributeValue>
+					</EditCondition>
+				</NotCondition>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>Datatype</ReferenceName>
+			<EditCondition>
+                <AttributeName>Type</AttributeName>
+                <AttributeValue>xpath</AttributeValue>
+            </EditCondition>
+			<description>Enter a valid Java type for an Xpath value type.&#10;E.g. java.lang.String</description>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>Value</ReferenceName>
+			<description>Define a value for a header based on the selected value type</description>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>Default</ReferenceName>
+			<OrCondition>
+			<EditCondition>
+                <AttributeName>Type</AttributeName>
+                <AttributeValue>persisted variables</AttributeValue>
+            </EditCondition>
+            <EditCondition>
+                <AttributeName>Type</AttributeName>
+                <AttributeValue>global persisted variables</AttributeValue>
+            </EditCondition>
+            </OrCondition>
+			<description>Variable is not defined; please enter default value</description>
+		</AttributeReference>
+	</AttributeTableMetadata>
+
+	<AttributeTableMetadata>
+		<Name>propertyTable</Name>
+		<!-- <Usage>optional</Usage> -->
+		<GuiLabels>
+			<Label language="EN">Properties</Label>
+		</GuiLabels>
+		<AttributeReference>
+			<ReferenceName>Name</ReferenceName>
+			<description>Enter a name to define this property</description>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>Type</ReferenceName>
+			<description>Select a type from dropdown for the value</description>
+			<NotCondition>
+					<EditCondition>
+		                <AttributeName>Type</AttributeName>
+		                <AttributeValue>external parameter</AttributeValue>
+					</EditCondition>
+				</NotCondition>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>Datatype</ReferenceName>
+			<EditCondition>
+                <AttributeName>Type</AttributeName>
+                <AttributeValue>xpath</AttributeValue>
+            </EditCondition>
+			<description>Enter a valid Java type for an Xpath value type.&#10;E.g. java.lang.String</description>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>Value</ReferenceName>
+			<description>Define a value for a property based on the selected value type</description>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>Default</ReferenceName>
+		    <OrCondition>
+			<EditCondition>
+                <AttributeName>Type</AttributeName>
+                <AttributeValue>persisted variables</AttributeValue>
+            </EditCondition>
+            <EditCondition>
+                <AttributeName>Type</AttributeName>
+                <AttributeValue>global persisted variables</AttributeValue>
+            </EditCondition>
+            </OrCondition>
+			<description>Variable is not defined; please enter default value</description>
+		</AttributeReference>
+	</AttributeTableMetadata>
+
+
+    <AttributeMetadata>
+        <Name>Name</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>Type</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Type</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>constant</Value>
+                <GuiLabels>
+                    <Label language="EN">Constant</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>header</Value>
+                <GuiLabels>
+                    <Label language="EN">Header</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>xpath</Value>
+                <GuiLabels>
+                    <Label language="EN">XPath</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>expression</Value>
+                <GuiLabels>
+                    <Label language="EN">Expression</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>property</Value>
+                <GuiLabels>
+                    <Label language="EN">Property</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>persisted variables</Value>
+                <GuiLabels>
+                    <Label language="EN">Local Variable</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>global persisted variables</Value>
+                <GuiLabels>
+                    <Label language="EN">Global Variable</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+        <FixedValues>
+		 	<FixedValue>
+                	<Value>external parameter</Value>
+                	<GuiLabels>
+                    	<Label language="EN">External Parameter</Label>
+                	</GuiLabels>
+          	</FixedValue>
+		  	<EditCondition>
+		      <AttributeName>Type</AttributeName>
+		      <AttributeValue>external parameter</AttributeValue>
+		 	</EditCondition>
+	    </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>Datatype</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Data Type</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>Value</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <HelpService>
+        <HelpServiceName>ContentModifierValueHelpService</HelpServiceName>
+			<EditCondition>
+				<AttributeName>Type</AttributeName>
+				<AttributeValue>header</AttributeValue>
+			</EditCondition>
+		</HelpService>
+        <GuiLabels>
+            <Label language="EN">Value</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+      <AttributeMetadata>
+        <Name>Default</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Default</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

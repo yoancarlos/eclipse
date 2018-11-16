@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure Communication Channel with IDoc Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio9597227a3a044904988fb9dca54aaceb">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure Communication Channel with IDoc Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__ul_qbf_bgq_gr">
+					<li class="li">
+						<p class="p">You have logged into your customer workspace in <span class="ph pname">SAP Cloud Platform
+                        Integration</span> web
+							tooling.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You have assigned the IDoc adapter to the communication channel.</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use the IDoc adapter to communicate IDoc messages with other systems that support
+				communication via SOAP web services. </p>
+
+			<p class="p">Supported Header (Sender Adapter):</p>
+
+			<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio9597227a3a044904988fb9dca54aaceb__d3350e1147" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: </span></caption>
+<colgroup><col width="20%"/><col width="80%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="20%" id="d3239386e63">
+                                <p class="p">Header</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="80%" id="d3239386e69">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="20%" headers="d3239386e63 ">
+                                <p class="p">SapAuthenticatedUserName </p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="80%" headers="d3239386e69 ">
+                                <p class="p">Contains the user name of the client that calls the integration
+                                    flow.</p>
+
+                                <p class="p">In case the sender channel is configured in such a way that
+                                    client certificate authentication is used, no such header is set
+                                    (as it is not available in that case). </p>
+
+                                <p class="p">To retain this header for further processing, make sure that you
+                                    enter it as <span class="ph uicontrol">Allowed Header(s)</span> under
+                                        <span class="ph uicontrol">Runtime Configuration</span>.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Select the integration flow you want to configure and choose
+					<span class="ph uicontrol">Edit</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the communication channel you want to configure. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">General</span> tab page, provide channel name and
+					description in the relevant fields if required. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Adapter Specific</span> tab page and provide values in
+					fields based on description in table.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio9597227a3a044904988fb9dca54aaceb__d676e15" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Parameters and Values of Sender IDoc (IDoc SOAP) Adapter (Connection
+                    Details)</span></caption>
+<colgroup><col width="27.272727272727273%"/><col width="72.72727272727273%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="27.27272727272727%" id="d3239386e164">Parameters</th>
+
+                            <th class="entry" valign="top" width="72.72727272727273%" id="d3239386e167">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="27.27272727272727%" headers="d3239386e164 "><span class="ph uicontrol">Address </span></td>
+
+                            <td class="entry" valign="top" width="72.72727272727273%" headers="d3239386e167 "> Relative endpoint address on which ESB Bus listens to the
+                                incoming requests, for example,
+                                    <span class="ph filepath">/HCM/GetEmployeeDetails</span>. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="27.27272727272727%" headers="d3239386e164 ">
+                                <span class="ph uicontrol">URL to WSDL</span></td>
+
+                            <td class="entry" valign="top" width="72.72727272727273%" headers="d3239386e167 ">
+                                <p class="p">Specifies the URL to the WSDL that defines the WS provider endpoint
+            (of the tenant as the receiver of messages). The WSDL can be downloaded using the
+            Integration Operations user interface (in the <span class="ph uicontrol">Properties</span> view,
+                <span class="ph uicontrol">Services</span> tab, under the integration flow-specific endpoint).
+            For newly deployed integration flows, the WSDL that is generated by the download
+            corresponds to the endpoint configuration in the integration flow.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="27.27272727272727%" headers="d3239386e164 ">
+                                <p class="p"><span class="ph uicontrol">Authorization</span></p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+            <div class="p">In the following cases this new feature might not be available for your current
+                integration flow:<ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__d705e167">
+                    <li class="li">
+                        <p class="p">You created the corresponding integration flow shape (adapter or step)
+                            before this feature was released</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">You are using a product profile other than the one expected.</p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="p">More information: <a class="xref" href="1f9e87975f03433b9855bf9e760b1060.html">Adapter and Integration Flow Step Versions</a></p>
+
+        </div>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="72.72727272727273%" headers="d3239386e167 ">
+            <p class="p">Specifies the authorization option for the sender. </p>
+
+            <p class="p">You can select one of the following options:  </p>
+
+            <ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__d6097e586">
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">Client Certificate</span>: Sender authorization is checked on
+                        the tenant by evaluating the subject/issuer distinguished name (DN) of the
+                        certificate (sent together with the inbound request). You can use this
+                        option together with the following authentication option:
+                            <cite class="cite">Client-certificate authentication (without certificate-to-user
+                            mapping)</cite>.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">User Role</span>: Sender authorization is checked based on
+                        roles defined on the tenant for the user associated with the inbound
+                        request. You can use this option together with the following authentication
+                        options: </p>
+
+                    <ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__d6097e606">
+                        <li class="li">
+                            <p class="p"><cite class="cite">Basic authentication</cite> (using the credentials of the
+                                user)</p>
+
+                            <p class="p">For the user, the authorizations are checked based on user-to-role
+                                assignments defined on the tenant.</p>
+
+                        </li>
+
+                        <li class="li">
+                            <p class="p"><cite class="cite">Client-certificate authentication and certificate-to-user
+                                    mapping</cite></p>
+
+                            <p class="p">For the user derived from the certificate-to-user mapping, the
+                                authorizations are checked based on user-to-role assignments defined
+                                on the tenant. </p>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+            <p class="p">Depending on your choice, you can also specify one of the following properties:</p>
+
+            <ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__d6097e635">
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">Client Certificate Authorization</span></p>
+
+                    <p class="p">Allows you to select one or more client certificates (based on which inbound
+                        authorization is to be checked).</p>
+
+                    <p class="p">Choose <span class="ph uicontrol">Add</span> to add a new certificate for inbound
+                        authorization for the selected adapter. You can then select a certificate
+                        stored locally on your computer. You can also delete certificates from the
+                        list.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">User Role</span></p>
+
+                    <p class="p">Allows you to enter a role based on which inbound authorization is to be
+                        checked. </p>
+
+                    <p class="p">Default value is <span class="ph uicontrol">ESBMessaging.send</span>. This role
+                        authorizes a sender system to process messages on a tenant.</p>
+
+                </li>
+
+            </ul>
+
+        </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio9597227a3a044904988fb9dca54aaceb__d676e86" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 3: Parameters and Values of Receiver IDoc (IDoc SOAP) Adapter (Connection
+                    Details)</span></caption>
+<colgroup><col width="49.75124378109453%"/><col width="50.24875621890548%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="49.75124378109454%" id="d3239386e360">Parameters</th>
+
+                            <th class="entry" valign="top" width="50.24875621890548%" id="d3239386e363">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="49.75124378109454%" headers="d3239386e360 "><span class="ph uicontrol">Address </span></td>
+
+                            <td class="entry" valign="top" width="50.24875621890548%" headers="d3239386e363 "> Endpoint address on which the ESB Bus posts the outgoing
+                                message, for example http://&lt;host&gt;:&lt;port&gt;/payment. <p class="p">The endpoint URL that has actually been used at runtime is
+            displayed in the message processing log (MPL) in the message monitoring application (MPL
+            property <samp class="ph codeph">RealDestinationUrl</samp>). Note that you can manually configure the
+            endpoint URL using the <span class="ph uicontrol">Address</span> attribute of the adapter. However,
+            there are several ways to dynamically override the value of this attribute (for example,
+            by using the Camel header <samp class="ph codeph">CamelHttpUri</samp>). </p>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="49.75124378109454%" headers="d3239386e360 ">
+                                <p class="p"><span class="ph uicontrol">Proxy Type</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50.24875621890548%" headers="d3239386e363 ">
+                                <div class="p">The type of proxy that you are using to connect to the target system:<ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__d691e61">
+                <li class="li">
+                    <p class="p">Select <span class="ph uicontrol">Internet</span> if you are connecting to a cloud
+                        system.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">Select <span class="ph uicontrol">On-Premise</span> if you are connecting to an
+                        on-premise system.</p>
+
+                    <div class="note note"><span class="notetitle">Note</span> 
+                        <div class="p">If you select the <span class="ph uicontrol">On-Premise</span> option, the following
+                            restrictions apply to other parameter values:<ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__d691e87">
+                                <li class="li">
+                                    <p class="p">Do not use an HTTPS address for
+                                            <span class="ph uicontrol">Address</span>, as it leads to errors
+                                        when performing consistency checks or during deployment.</p>
+
+                                </li>
+
+                                <li class="li">
+                                    <p class="p">Do not use <span class="ph uicontrol">Certificate-Based
+                                            Authentication</span> as the
+                                            <span class="ph uicontrol">Authentication Type</span>, as it leads
+                                        to errors when performing consistency checks or during
+                                        deployment</p>
+
+                                </li>
+
+                            </ul>
+</div>
+
+                    </div>
+
+                    <div class="note note"><span class="notetitle">Note</span> If you select the <span class="ph uicontrol">On-Premise</span> option and use the SAP
+                        Cloud Connector to connect to your on-premise system, the
+                            <span class="ph uicontrol">Address</span> field of the adapter refers a virtual
+                        address which has to be configured in the SAP Cloud Connector
+                        settings.</div>
+
+                </li>
+
+                
+            </ul>
+</div>
+
+                            </td>
+
+                        </tr>
+
+                        
+                        <tr class="row">
+                            <td class="entry" valign="top" width="49.75124378109454%" headers="d3239386e360 "><span class="ph uicontrol">URL to WSDL</span></td>
+
+                            <td class="entry" valign="top" width="50.24875621890548%" headers="d3239386e363 ">URL to the WSDL defining the WS provider endpoint (of the
+                                receiver). You can provide the WSDL by:<ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__d676e145">
+                                    <li class="li">Directly entering /wsdl/&lt;interfacename&gt;.wsdl where the
+                                        WSDL is available in src.main.resources.wsdl.</li>
+
+                                    <li class="li">Selecting a source to browse for a WSDL, either from an
+                                        On-Premise ES Repository or your local workspace.</li>
+
+                                </ul>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="49.75124378109454%" headers="d3239386e360 "><span class="ph uicontrol">IDoc Content Type</span></td>
+
+                            <td class="entry" valign="top" width="50.24875621890548%" headers="d3239386e363 "><span class="ph uicontrol">Application/x-sap.doc</span><ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__d676e164">
+                                    <li class="li">Allows only single IDoc record for each request</li>
+
+                                    <li class="li">Enables Exactly-Once processing</li>
+
+                                    <li class="li">Enables message sequencing</li>
+
+                                </ul>
+<span class="ph uicontrol">Text/XML</span><ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__d676e177">
+                                    <li class="li">Allows multiple IDoc records for each request</li>
+
+                                </ul>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="49.75124378109454%" headers="d3239386e360 "><span class="ph uicontrol">Request Timeout</span></td>
+
+                            <td class="entry" valign="top" width="50.24875621890548%" headers="d3239386e363 ">Specifies the time (in milliseconds) that the client will wait
+                                for a response before the connection is being interrupted.<p class="p">The
+                                    default value is 60000 milliseconds (1 minute).</p>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="49.75124378109454%" headers="d3239386e360 "><span class="ph uicontrol">Compress Message</span></td>
+
+                            <td class="entry" valign="top" width="50.24875621890548%" headers="d3239386e363 ">Enables the WS endpoint to send compressed request messages to
+                                the WS Provider and to indicate the WS Provider that it can handle
+                                compressed response messages.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="49.75124378109454%" headers="d3239386e360 "><span class="ph uicontrol">Allow Chunking</span></td>
+
+                            <td class="entry" valign="top" width="50.24875621890548%" headers="d3239386e363 ">Used for enabling HTTP chunking of data while sending
+                                messages.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="49.75124378109454%" headers="d3239386e360 "><span class="ph uicontrol">Clean up Request Headers</span></td>
+
+                            <td class="entry" valign="top" width="50.24875621890548%" headers="d3239386e363 ">Select this option to clean up the adapter specific- headers
+                                after the receiver call.</td>
+
+                        </tr>
+
+                        
+                        <tr class="row">
+                            <td class="entry" valign="top" width="49.75124378109454%" headers="d3239386e360 "><span class="ph uicontrol">Private Key Alias</span></td>
+
+                            <td class="entry" valign="top" width="50.24875621890548%" headers="d3239386e363 ">Allows you to enter the private key alias name that gets the
+                                private key from the keystore and authenticates you to the receiver
+                                in an HTTPs communication.<p class="p">If you have selected the option of
+                                        <span class="ph uicontrol">Connect using Basic Authentication</span>,
+                                    this field is not visible.</p>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="49.75124378109454%" headers="d3239386e360 "><span class="ph uicontrol">Authentication</span></td>
+
+                            <td class="entry" valign="top" width="50.24875621890548%" headers="d3239386e363 ">
+                                <p class="p">You can select one of the following authentication methods:</p>
+
+                                <ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__d676e253">
+                                    <li class="li"><span class="ph uicontrol">Basic</span><p class="p"> The tenant authenticates
+                                            itself against the receiver using user credentials (user
+                                            name and password). </p>
+<p class="p">It is a prerequisite that
+                                            user credentials are specified in a Basic Authentication
+                                            artifact and deployed on the related tenant.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">Client Certificate</span><p class="p">The tenant
+                                            authenticates itself against the receiver using a client
+                                            certificate. </p>
+<p class="p">It is a prerequisite that the
+                                            required key pair is installed and added to a keystore.
+                                            This keystore has to be deployed on the related tenant.
+                                            The receiver side has to be configured appropriately.
+                                        </p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">None</span></li>
+
+                                    <li class="li"><span class="ph uicontrol">Principal Propagation </span><div class="p">The tenant
+                                            authenticates itself against the receiver by forwarding
+                                            the principal of the inbound user to the cloud
+                                            connector, and from there to the back end of the
+                                            relevant on-premise system <div class="note note"><span class="notetitle">Note</span> This authentication
+                                                method can only be used with the following sender
+                                                adapters: HTTP, AS2, SOAP, IDOC</div>
+<div class="note note"><span class="notetitle">Note</span> 
+            <div class="p">In the following cases this new feature might not be available for your current
+                integration flow:<ul class="ul" id="loio9597227a3a044904988fb9dca54aaceb__d705e167">
+                    <li class="li">
+                        <p class="p">You created the corresponding integration flow shape (adapter or step)
+                            before this feature was released</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">You are using a product profile other than the one expected.</p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="p">More information: <a class="xref" href="1f9e87975f03433b9855bf9e760b1060.html">Adapter and Integration Flow Step Versions</a></p>
+
+        </div>
+</div>
+</li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the integration flow.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

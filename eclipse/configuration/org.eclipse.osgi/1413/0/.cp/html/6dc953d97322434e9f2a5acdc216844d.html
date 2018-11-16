@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring a Channel with Twitter Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio6dc953d97322434e9f2a5acdc216844d">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring a Channel with Twitter Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><p class="p">You can only select the Twitter adapter type when you
+            have connected your client (which runs Eclipse) to a suitable version of a cluster.
+            After connecting to the newest version of the cluster, choose <span class="ph uicontrol">Update client
+                with latest components from server</span> (see the following figure).</p>
+<img class="image" id="loio6dc953d97322434e9f2a5acdc216844d__image_ydz_z5y_st" src="f7ac703863144b37a7ac6c4a0ad004f1.image"/></div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><p class="p">You can use the Twitter receiver adapter to extract information
+            from the Twitter platform (which is the receiver platform) based on certain criteria
+            such as keywords, user data, for example. As one example, you can use this feature to
+            send, search for and receive Twitter feeds. </p>
+<div class="p">The connection works that way that the tenant logs on to
+            Twitter based on an OAuth authentication mechnism and searches for information based on
+            criteria as configured in the adapter at design time. OAuth allows the tenant to access
+            someone else’s resources (of a specific Twitter user) on behalf of the tenant. As
+            illustrated in the figure, the tenant (through the Twitter receiver adapter) calls the
+            Twitter API to access resources of a specific Twitter user. Currently, the Twitter
+            adapter can only be used as receiver adapter. For more information on the Twitter API,
+            go to: <a class="extlink" href="http://help.sap.com/disclaimer?site=https://dev.twitter.com/" target="_blank" alt="https://dev.twitter.com/" title="https://dev.twitter.com/">https://dev.twitter.com/<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>.<div class="note note" id="loio6dc953d97322434e9f2a5acdc216844d__d3428e21"><span class="notetitle">Note</span> 
+                <p class="p">Note that externalization is supported only for string fields of the adapter
+                        (<span class="ph uicontrol">User</span>, <span class="ph uicontrol">Keywords</span>,
+                        <span class="ph uicontrol">User Name</span>, and OAuth settings). </p>
+
+                <p class="p">Do not externalize other properties. Although the user interface allows this, the
+                    integration flow check will be erroneous.</p>
+
+            </div>
+</div>
+<img class="image" id="loio6dc953d97322434e9f2a5acdc216844d__image_yds_ytl_jt" src="loiod23ff1fdb2a84ce083210b5283b25d3f_LowRes.png"/></div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Double-click the channel that you want to configure on the <span class="ph uicontrol">Model
+						Configuration</span> tab page.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">On the <span class="ph uicontrol">General</span> tab page, choose
+						<span class="ph uicontrol">Browse</span> in the <span class="ph uicontrol">Adapter Type</span>
+					screen area.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select <span class="ph uicontrol">Twitter</span> in the <span class="ph uicontrol">Choose
+						Adapter</span> window and choose <span class="ph uicontrol">OK</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the <span class="keyword uilabel">Adapter-Specific</span> tab page and enter the details
+					as shown in the table below: </span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio6dc953d97322434e9f2a5acdc216844d__d3428e47" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Attributes of the Twitter Receiver Adapter (Twitter Components) </span></caption>
+<colgroup><col width="15.503875968992247%"/><col width="84.49612403100775%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="15.503875968992247%" id="d1438488e119">Field</th>
+
+                            <th class="entry" valign="top" width="84.49612403100775%" id="d1438488e122">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1438488e119 ">
+                                <p class="p"><span class="ph uicontrol">Endpoint</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1438488e122 ">
+                                <p class="p">To access Twitter content, you can choose among the following
+                                    general options.</p>
+
+                                <ul class="ul" id="loio6dc953d97322434e9f2a5acdc216844d__d3428e86">
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Send Tweet</span></p>
+
+                                        <p class="p">Allows you to send content to a specific user
+                                            timeline.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Search</span></p>
+
+                                        <p class="p">Allows you to do a search on Twitter content by
+                                            specifying keywords.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Send Direct Message</span></p>
+
+                                        <p class="p">Allows you to send messages to Twitter (write access,
+                                            direct message).</p>
+
+                                    </li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1438488e119 ">
+                                <p class="p"><span class="ph uicontrol">User</span></p>
+
+                                <p class="p">(only in case as <span class="ph uicontrol">Endpoint</span> you have
+                                    selected <span class="ph uicontrol">Send Direct Message</span>)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1438488e122 ">
+                                <p class="p">Specifies the Twitter user from which account the information is
+                                    to be extracted. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1438488e119 ">
+                                <p class="p"><span class="ph uicontrol">Page Size</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1438488e122 ">
+                                <p class="p">Specifies the maximum number of results (tweets) per page.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1438488e119 ">
+                                <p class="p"><span class="ph uicontrol">Number Of Pages</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1438488e122 ">
+                                <p class="p">Specifies the number of pages which you want the tenant to
+                                    consume.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio6dc953d97322434e9f2a5acdc216844d__d3428e184" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Attributes of the Twitter Receiver Adapter (Filter Settings)</span></caption>
+<colgroup><col width="15.503875968992247%"/><col width="84.49612403100775%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="15.503875968992247%" id="d1438488e256">Field</th>
+
+                            <th class="entry" valign="top" width="84.49612403100775%" id="d1438488e259">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1438488e256 ">
+                                <p class="p"><span class="ph uicontrol">Keywords</span></p>
+
+                                <p class="p">(only in case as <span class="ph uicontrol">Endpoint</span> you have
+                                    selected <span class="ph uicontrol">Search</span>)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1438488e259 ">
+                                <p class="p">Specifies the keywords used to filter the results. </p>
+
+                                <p class="p">Use commas to separate different keywords or a valid Twitter
+                                    Search API query (for more information, go to <a class="extlink" href="http://help.sap.com/disclaimer?site=https://dev.twitter.com/rest/public/search" target="_blank" alt="https://dev.twitter.com/rest/public/search" title="https://dev.twitter.com/rest/public/search">https://dev.twitter.com/rest/public/search<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1438488e256 ">
+                                <p class="p"><span class="ph uicontrol">Language</span></p>
+
+                                <p class="p">(only in case as <span class="ph uicontrol">Endpoint</span> you have
+                                    selected <span class="ph uicontrol">Search</span>)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1438488e259 ">
+                                <p class="p">Specifies the search language.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio6dc953d97322434e9f2a5acdc216844d__d3428e272" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 3: Attributes of the Twitter Receiver Adapter (OAuth Settings)</span></caption>
+<colgroup><col width="15.503875968992247%"/><col width="84.49612403100775%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="15.503875968992247%" id="d1438488e344">Field</th>
+
+                            <th class="entry" valign="top" width="84.49612403100775%" id="d1438488e347">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1438488e344 ">
+                                <p class="p"><span class="ph uicontrol">Consumer Key</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1438488e347 ">
+                                <p class="p">An alias by which the consumer (tenant) that requests Twitter
+                                    resources  is identified</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1438488e344 ">
+                                <p class="p"><span class="ph uicontrol">Consumer Secret</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1438488e347 ">
+                                <p class="p">An alias by which the shared secret is identified (that is used
+                                    to to define the token of the consumer (tenant)) </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1438488e344 ">
+                                <p class="p"><span class="ph uicontrol">Access Token</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1438488e347 ">
+                                <p class="p">An alias by which the access token for the Twitter user is
+                                    identified</p>
+
+                                <p class="p">In order to make authorized calls to the TwitterAPI, your
+                                    application must first obtain an OAuth access token on behalf of
+                                    a Twitter user </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1438488e344 ">
+                                <p class="p"><span class="ph uicontrol">Access Token Secret</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1438488e347 ">
+                                <p class="p">An alias by which shared secret is identified that is used to
+                                    define the token of the Twitter user</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+					<p class="p">The authorization is based on shared secret technology.
+            This method relies on the fact that all parties of a communication share a piece of data
+            that is known only to the parties involved. Using OAuth in the context of this adapter,
+            the Consumer (that calls the API of the receiver platform on behalf of a specific user
+            of this platform) identifies itself using its <span class="ph emphasis emphasis">Consumer Key</span> and
+                <span class="ph emphasis emphasis">Consumer Secret</span>, while the context to the user itself is
+            defined by an <span class="ph emphasis emphasis">Access Token</span> and an <span class="ph emphasis emphasis">Access Token
+                Secret</span>. These artifacts are to be generated for the receiver platform app
+            (consumer) and should be configured that way that they will never expire. This adapter
+            only supports consumer key/secret and access token key/secret artifacts that do not
+            expire.</p>
+
+					<p class="p">To finish the configuration of a scenario using this
+            adapter, the generated consumer key/secret and access token key/secret artifacts are to
+            be deployed as Secure Parameter artifact on the related tenant. To do this, use the
+            Integration Operations feature, position the cursor on the tenant and chosen
+                <span class="ph uicontrol">Deploy Artifact ...</span>. As artifact type, choose
+                <span class="ph uicontrol">Secure Parameter</span>.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the configuration of the channel editor.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

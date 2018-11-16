@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="com.sap.ndb.studio.dwb.team.ui.internal.providers.TeamFileSynchronizationUiServiceProvider">
+   <implementation class="com.sap.ndb.studio.dwb.team.ui.internal.providers.TeamFileSynchronizationUiServiceProvider"/>
+   <service>
+      <provide interface="com.sap.ndb.studio.dwb.tools.ui.internal.providers.IFileSynchronizationUiService"/>
+   </service>
+</scr:component>

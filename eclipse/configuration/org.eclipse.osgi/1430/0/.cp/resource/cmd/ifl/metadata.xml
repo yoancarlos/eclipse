@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata
+	ComponentId="ctype::Adapter/cname::ProcessDirect/vendor::SAP/version::1.0.0"
+	ComponentName="ProcessDirect" UIElementType="Adapter" IsExtension="false"
+	IsFinal="true" IsPreserves="true" IsRequestResponse="true"
+	IsDefaultGenerator="true" ComponentDisplayName="ProcessDirect"
+	xmlns:gen="http://www.sap.hci.adk.com/gen" xmlns:bp="http://www.adk.gen/xmlns/blueprint">
+	<Variant VariantName="Process Direct Sender"
+		VariantId="ctype::AdapterVariant/cname::ProcessDirect/vendor::SAP/tp::Not Applicable/mp::Not Applicable/direction::Sender"
+		MetadataVersion="2.0" gen:RuntimeComponentBaseUri="sap-processdirect"
+		AttachmentBehavior="Preserve">
+		<InputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</OutputContent>
+		<Tab id="connection">
+			<GuiLabels guid="b4c970da-a1f8-443c-b063-046773f93135">
+				<Label language="EN">Connection</Label>
+				<Label language="DE">Connection</Label>
+			</GuiLabels>
+			<AttributeGroup id="connectionDetails">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">URI Setting</Name>
+				<GuiLabels guid="041a3129-aedb-4e5b-a351-dc8d82ae7fbc">
+					<Label language="EN">Connection Details</Label>
+					<Label language="DE">Connection Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>address</ReferenceName>
+					<Restriction>Constraint.isValidRegex(^(/?[0-9A-Za-z]+((-?[0-9A-Za-z]+/?)*(_?[0-9A-Za-z]+/?)*)*)$)</Restriction>
+					<ErrorMessage>The address can contain only alphanumeric values, and special characters ('_', '-' and '/').</ErrorMessage>
+					<description>The address can contain only alphanumeric values, and special characters ('_', '-' and '/').</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+	</Variant>
+	<Variant VariantName="Process Direct Receiver"
+		VariantId="ctype::AdapterVariant/cname::ProcessDirect/vendor::SAP/tp::Not Applicable/mp::Not Applicable/direction::Receiver"
+		IsRequestResponse="true" MetadataVersion="2.0"
+		gen:RuntimeComponentBaseUri="sap-processdirect" AttachmentBehavior="Preserve">
+		<InputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</OutputContent>
+		<Tab id="connection">
+			<GuiLabels guid="484b8319-7d64-49f9-bef9-d47a419b6446">
+				<Label language="EN">Connection</Label>
+				<Label language="DE">Connection</Label>
+			</GuiLabels>
+			<AttributeGroup id="connectionDetails">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">URI Setting</Name>
+				<GuiLabels guid="55e2764d-9161-43a1-ad8d-28f198d3fdf1">
+					<Label language="EN">Connection Details</Label>
+					<Label language="DE">Connection Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>address</ReferenceName>
+					<description>The address can contain only alphanumeric values, and special characters ('_', '-' and '/'). Also, you can use expressions. For example ${header.address}</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+	</Variant>
+	<AttributeMetadata>
+		<Name>address</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="876e40b9-c0a3-4d85-8b23-f1b509982b18">
+			<Label language="EN">Address</Label>
+			<Label language="DE">Address</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+</ComponentMetadata>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<systabs version="1.0">
+	<systemtables>
+		<systemtable name="Connection Statistics">
+			<description>Shows connection statistics including network I/O</description>
+			<sql>select * from sys.m_connection_statistics where connection_id > 0</sql>
+		</systemtable>
+		<systemtable name="Connections">
+			<description>Shows a list of connections</description>
+			<sql>select c.*, p.statement_string from sys.m_connections c left outer join  m_active_statements p on c.current_statement_id = p.statement_id where c.connection_id > 0</sql>
+		</systemtable>
+		<systemtable name="Transactions">
+			<description>Shows a list of transactions</description>
+			<sql><![CDATA[select * from sys.m_transactions where transaction_status <> 'INACTIVE']]></sql>			
+		</systemtable>
+		<systemtable name="Blocked Transactions">
+			<description>Shows a list of transactions waiting for a record lock
+			</description>
+			<sql>SELECT 
+ b.host,
+ b.port,
+ b.blocked_transaction_id AS blocked_transaction_id,
+ t.connection_id AS lock_owner_connection_id,
+ b.lock_owner_transaction_id AS lock_owner_transaction_id,
+ b.blocked_time AS blocked_time,
+ b.waiting_record_id AS waiting_record_id,
+ b.waiting_schema_name AS waiting_schema_name,
+ b.waiting_table_name AS waiting_table_name,
+ b.lock_type AS lock_type,
+ b.lock_mode AS lock_mode,
+ c.client_host AS lock_owner_host,
+ c.client_pid AS lock_owner_pid,
+ c.user_name AS lock_owner_user_name,
+ c.last_action AS lock_owner_last_action,
+ p.statement_string AS blocked_statement_string
+ FROM sys.m_blocked_transactions b, sys.m_transactions t, sys.m_connections c, sys.m_transactions tb, sys.m_connections cb LEFT OUTER JOIN sys.m_active_statements p ON cb.current_statement_id = p.statement_id
+ WHERE  b.lock_owner_transaction_id = t.transaction_id AND t.connection_id = c.connection_id AND b.blocked_transaction_id = tb.transaction_id AND tb.connection_id = cb.connection_id</sql>
+		</systemtable>
+		<systemtable name="Lock Waiting History">
+			<description>Shows summary information of lock waits occurred</description>
+			<sql>select * from sys.m_lock_waits_statistics</sql>
+		</systemtable>
+		<systemtable name="Database Information">
+			<description>Basic configuration of database</description>
+			<sql>select * from sys.m_database</sql>
+		</systemtable>
+		<systemtable name="Open Transactions">
+			<description>Shows a list of open transactions</description>
+			<sql>select * from sys.m_transactions where transaction_status = 'ACTIVE'</sql>
+		</systemtable>		
+		<systemtable name="Overall Workload">
+			<description>Shows current workload</description>
+			<sql>select * from sys.m_workload</sql>
+		</systemtable>
+		<systemtable name="Caches">
+			<description>Shows caches</description>
+			<sql>select * from sys.m_caches</sql>
+		</systemtable>
+		<systemtable name="Session Context">
+			<description>Shows session context</description>
+			<sql>select * from sys.m_session_context</sql>
+		</systemtable>
+		<systemtable name="Used Memory by Tables ">
+			<description>Shows memory consumption of all tables</description>
+			<sql>select C as "Column Tables MB Used", R AS "Row Tables MB Used" from ( SELECT ROUND(SUM(MEMORY_SIZE_IN_TOTAL)/1024/1024) as "C" from SYS.M_CS_TABLES), ( SELECT ROUND(SUM(USED_FIXED_PART_SIZE + USED_VARIABLE_PART_SIZE)/1024/1024) as "R" from SYS.M_RS_TABLES)</sql>
+		</systemtable>
+		<systemtable name="Tables Locks">
+			<description>Shows tables locks</description>
+			<sql>select * from sys.m_table_locks</sql>
+		</systemtable>
+		<systemtable name="Record Locks">
+			<description>Shows record locks</description>
+			<sql>select * from sys.m_record_locks</sql>
+		</systemtable>
+		<systemtable name="Merge Statistics">
+			<description>Shows merge statistics</description>
+			<sql>select * from sys.m_delta_merge_statistics order by start_time desc</sql>
+		</systemtable>		
+		<systemtable name="Service memory usage">
+		<description>Shows memory consumption service components</description>
+		<sql>select SERVICE_NAME,M_SERVICE_COMPONENT_MEMORY.* from SYS.M_SERVICE_COMPONENT_MEMORY, SYS.M_SERVICES where M_SERVICE_COMPONENT_MEMORY.PORT=M_SERVICES.PORT</sql>
+		</systemtable>
+		<systemtable name="Backup Catalog">
+			<description>Backup Catalog - Shows most recent backups and recoveries</description>
+			<sql>select * from sys.m_backup_catalog order by entry_id desc</sql>
+		</systemtable>
+		<systemtable name="Size of tables on disk">
+			<description>Shows size of tables on disk in bytes</description>
+			<sql>select schema_name,table_name,disk_size from PUBLIC.M_TABLE_PERSISTENCE_STATISTICS order by disk_size desc</sql>
+		</systemtable>
+		<systemtable name="Schema Size (MB) for loaded tables">
+			<description>Shows memory consumption of schemas (loaded tables) </description>
+			<sql><![CDATA[select schema_name "Schema Name",round(sum (table_size)/1024/1024,2) "Schema Size (MB) for loaded tables" from sys.m_tables where (IS_COLUMN_TABLE = 'FALSE') or (IS_COLUMN_TABLE = 'TRUE' and (schema_name,table_name) in (select distinct schema_name,table_name from m_cs_tables where loaded <> 'NO' )) group by schema_name order by schema_name]]></sql>
+		</systemtable>
+		<systemtable name="Connection attempts and status">
+			<description>Shows connection attempts and status</description>
+			<sql>(SELECT 'CURRENT_STATUS' as STATUS, USER_NAME, LAST_SUCCESSFUL_CONNECT, LAST_INVALID_CONNECT_ATTEMPT, INVALID_CONNECT_ATTEMPTS FROM SYS.USERS
+				  where user_name not like '_SYS%' and user_name != 'SYS'
+				  union
+				  (SELECT 'HISTORIC_CONNECT_ATTEMPTS' as STATUS, USER_NAME, SUCCESSFUL_CONNECT_TIME as LAST_SUCCESSFUL_CONNECT, NULL, INVALID_CONNECT_ATTEMPTS FROM SYS.INVALID_CONNECT_ATTEMPTS
+				   where user_name not like '_SYS%' and user_name != 'SYS'))
+				   order by user_name, status
+				</sql>
+		</systemtable>
+	</systemtables>
+</systabs>

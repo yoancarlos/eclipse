@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=32827441427794646"/>
+<title>Setting the Runtime Platform and Libraries for Testing</title>
+</head>
+<body class="" id="loio6f78cecc107141559e94bd6d768499c2">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Setting the Runtime Platform and Libraries for Testing</h1>
+<div class="body taskbody"><p class="shortdesc"/>
+<div class="section context" id="loio6f78cecc107141559e94bd6d768499c2__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>You perform the task to allow the runtime target
+			platform and common testing libraries to be available during the testing of integration
+			flow configuration.</div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio6f78cecc107141559e94bd6d768499c2__steps_bj3_5kg_13"><li class="li step stepexpand" id="loio6f78cecc107141559e94bd6d768499c2__step_N10020_N1001C_N10011_N10001"><span class="ph cmd">Defining Runtime Platforms</span><ol type="a" class="ol substeps" id="loio6f78cecc107141559e94bd6d768499c2__substeps_pgh_xnp_rh"><li class="li substep substepexpand"><span class="ph cmd">In the main menu, select <span class="ph uicontrol">Window &gt; Preferences &gt; SAP HANA Cloud
+								Integration &gt; Testing Configuration &gt; Runtime
+								Platform</span>.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">In the <span class="keyword uilabel">Runtime Platform</span> page, choose
+								<span class="ph uicontrol">Add...</span>.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">In the <span class="keyword uilabel">Add Location</span> dialog, enter the URL of the update site for
+							runtime jars.</span> 
+							<div class="note note" id="loio6f78cecc107141559e94bd6d768499c2__note_N10052_N1004F_N10044_N10024_N1001C_N10018_N10011_N10001"><span class="notetitle">Note</span> <ul class="ul" id="loio6f78cecc107141559e94bd6d768499c2__ul_ng4_rpp_yj"><li class="li">If you add multiple runtime platform update sites, then make
+										sure that at least one update site is always selected.</li>
+<li class="li">If you have not specified any runtime platform update site,
+										a default update site maintained by SAP is automatically
+										triggered.</li>
+<li class="li">If the currently set runtime update site is invalid, a
+										default update site maintained by SAP is automatically
+										triggered.</li>
+</ul>
+ The selected update site is considered by default during test
+								execution.</div>
+
+						</li>
+<li class="li substep substepexpand"><span class="ph cmd">If the runtime update site has recently been changed, choose
+								<span class="ph uicontrol">Reload</span>.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">Choose <span class="ph uicontrol">Apply</span> and then <span class="ph uicontrol">OK</span>.</span></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="loio6f78cecc107141559e94bd6d768499c2__step_N10077_N1001C_N10011_N10001"><span class="ph cmd">(optional) Defining the Testing Libraries </span> 
+					<div class="note note" id="loio6f78cecc107141559e94bd6d768499c2__note_N10093_N10090_N10088_N10019_N10011_N10001"><span class="notetitle">Note</span> You perform this step only if you want to add a specific common testing
+						library.</div>
+
+				<ol type="a" class="ol substeps" id="loio6f78cecc107141559e94bd6d768499c2__substeps_g3f_yqp_rh"><li class="li substep substepexpand"><span class="ph cmd">In the main menu, select <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Window</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Preferences</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol"> SAP HANA Cloud Integration</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Testing Configuration</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Testing Libraries</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd"> In the <span class="keyword uilabel">Testing Libraries</span> page, choose <span class="ph uicontrol">Add…</span> to
+							enter the URL of the update site of libraries that are associated with
+							the runtime platform but are not available with the framework. </span> 
+							<div class="note note" id="loio6f78cecc107141559e94bd6d768499c2__note_N100B5_N100B2_N100A3_N1007F_N10077_N10018_N10011_N10001"><span class="notetitle">Note</span> If you add multiple testing libraries update sites , then make
+								sure that at least one update site is always selected as default. If
+								you execute a test configuration without specifying any update site,
+								a default update site for testing libraries is used during execution
+								and it is automatically added to this page .</div>
+
+						</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="related-links"> </div>
+</div></div>
+</body>
+</html>

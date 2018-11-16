@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:System/version::1.0" ComponentName="sap:System" UIElementType="Flowstep">
+	<Variant VariantId="ctype::FlowstepVariant/cname::Receiver" VariantName="Receiver">
+	<Tab id="system">
+			<GuiLabels>
+				<Label language="EN">System</Label>
+			</GuiLabels>
+			<AttributeGroup id="generalDetails">
+				<AttributeReference>
+					<ReferenceName>name</ReferenceName>
+					<description>Enter a name to represent the participant</description>
+				</AttributeReference>
+			</AttributeGroup>
+	</Tab>
+	</Variant>
+	<Variant VariantId="ctype::FlowstepVariant/cname::Sender" VariantName="Sender">
+	<Tab id="system">
+			<GuiLabels>
+				<Label language="EN">System</Label>
+			</GuiLabels>
+			<AttributeGroup id="generalDetails">
+				<AttributeReference>
+					<ReferenceName>name</ReferenceName>
+					<description>Enter a name to represent the participant</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>enableBasicAuthentication</ReferenceName>
+					<description>Select this option to authenticate the sender system to connect to the ESB bus.&#10;The system is authenticated using the SDN username and password.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>auth.certificates</ReferenceName>
+					<EditCondition>
+                       <AttributeName>enableBasicAuthentication</AttributeName>
+                       <AttributeValue>0</AttributeValue>
+                    </EditCondition>
+				</AttributeReference>
+			</AttributeGroup>
+	</Tab>
+	</Variant>
+	<AttributeMetadata>
+		<Name>name</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>subjectDN</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Subject DN</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>issuerDN</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Issuer DN</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>enableBasicAuthentication</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:boolean</DataType>
+		<GuiLabels>
+			<Label language="EN">Basic Authentication</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeTableMetadata>
+      <Name>auth.certificates</Name>
+      <Usage>true</Usage>
+      <GuiLabels>
+         <Label language="EN">Certificates</Label>
+      </GuiLabels>
+      <AttributeReference>
+         <ReferenceName>subjectDN</ReferenceName>
+         <description>Add certificate here to authorize the system to send messages</description>
+      </AttributeReference>
+      <AttributeReference>
+         <ReferenceName>issuerDN</ReferenceName>
+         <description>Add certificate here to authorize the system to send messages</description>
+      </AttributeReference>
+   </AttributeTableMetadata>
+		
+	
+</ComponentMetadata>

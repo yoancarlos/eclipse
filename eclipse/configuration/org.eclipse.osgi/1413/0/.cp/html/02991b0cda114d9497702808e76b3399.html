@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining Channels</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio02991b0cda114d9497702808e76b3399">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining Channels</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p" id="loio02991b0cda114d9497702808e76b3399__prereq_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<ul class="ul" id="loio02991b0cda114d9497702808e76b3399__ul_djj_f2m_b3">
+				<li class="li">You have configured connections to an On-Premise repository if you have to obtain interface
+					WSDL from the repository into this project. <div class="note note" id="loio02991b0cda114d9497702808e76b3399__note_N1001C_N10019_N10015_N10011_N1000E_N10001"><span class="notetitle">Note</span> 
+						<p class="p">You can import service interfaces from ES Repository with server version
+							7.1 onwards. The imported service interface WSDLs get added to
+								<span class="ph filepath">src.main.resources.wsdl</span>.</p>
+
+					</div>
+<p class="p">For more information on setting the connections to the repository, see
+							<cite class="cite">Setting the Connections to On-Premise Repository</cite> under
+							<a class="xref" href="a924f6ee11704baab9a14fc70f49642b.html" title="You can make specific settings for SAP Cloud Platform Integration in the Eclipse Preferences.">Configuring the Tool
+							Settings</a>.</p>
+</li>
+
+				<li class="li">
+					<p class="p">If you want to use a WSDL available in your local file system, you have copied the file
+						under <span class="ph filepath">src.main.resources.wsdl</span> in your project.</p>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+		<div class="section context" id="loio02991b0cda114d9497702808e76b3399__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You perform this task to enable communication between the sender and receiver participants by
+				defining connectors for the sender and receiver channels of the integration flow. </p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loio02991b0cda114d9497702808e76b3399__step_N100EE_N100EB_N10011_N10001">
+				<span class="ph cmd">In the <span class="ph uicontrol">Model Configuration</span> editor page, select the sender or receiver
+					channel (dotted lines at sender and receiver side).</span>
+			</li>
+<li class="li step stepexpand" id="loio02991b0cda114d9497702808e76b3399__step_N1005B_N1004B_N10011_N10001">
+				<span class="ph cmd">To configure the channel with a saved configuration that is available as a template, choose
+						<span class="ph uicontrol">Load Channel Template</span> from the context menu of the
+					channel.</span>
+			</li>
+<li class="li step stepexpand" id="loio02991b0cda114d9497702808e76b3399__step_N100FB_N100EB_N10011_N10001">
+				<span class="ph cmd">To specify new configurations, follow the instructions mentioned in the
+					adjacent topic for the required connector.</span>
+				<div class="itemgroup info">
+					<div class="note tip"><span class="tiptitle">Tip</span> If you want to reuse the connector configurations for channels
+						that are within or across integration flows, then select the
+							<span class="ph uicontrol">Copy</span> and <span class="ph uicontrol">Paste</span> option from the
+						context menu of the channel.</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loio02991b0cda114d9497702808e76b3399__step_N100CC_N1004B_N10011_N10001">
+				<span class="ph cmd">To save the configurations of the channel as a template, choose <span class="ph uicontrol">Save
+						as Template</span> from the context menu of the channel.</span>
+				<div class="itemgroup info">
+					<div class="note note" id="loio02991b0cda114d9497702808e76b3399__note_N100D7_N100D4_N100C9_N1004B_N10011_N10001"><span class="notetitle">Note</span> When you save the configuration of the channel as a template:<ul class="ul" id="loio02991b0cda114d9497702808e76b3399__ul_obk_1v4_4k">
+							<li class="li">The tool stores the template in the workspace as
+									<span class="ph filepath">&lt;ElementTemplateName&gt;.fst</span>.</li>
+
+							<li class="li">The tool saves the parameter key of the externalized parameters and
+								not the values.</li>
+
+						</ul>
+</div>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+<div class="related-links"> 
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

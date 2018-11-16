@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You activate tracing to track the message flow of processed messages, view the relevant message payload at various points of message flow, and identify if there is any error in the message execution."/>
+<meta name="description" content="You activate tracing to track the message flow of processed messages, view the relevant message payload at various points of message flow, and identify if there is any error in the message execution."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Activating Tenant and Integration Flow Tracing</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio866b6a94a074487384a21377ec9f2eb2">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Activating Tenant and Integration Flow Tracing</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You activate tracing to track the message flow of processed messages, view the relevant
+		message payload at various points of message flow, and identify if there is any error in the
+		message execution.</p>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="note caution"><span class="cautiontitle">Caution</span> 
+				<p class="p">Do <span class="ph emphasis emphasis">not</span> switch on integration flow tracing for productive scenarios. This
+					feature was designed for support use cases and testing purposes. It can result
+					in problems in particular when you expect a high message load.</p>
+
+			</div>
+
+			<ol class="ol" id="loio866b6a94a074487384a21377ec9f2eb2__ol_fbc_ly3_vq">
+				<li class="li">You have obtained the following roles to retrieve and view traces.
+<div class="table-wrapper tablenoborder"><table summary="" id="loio866b6a94a074487384a21377ec9f2eb2__table_mz1_p55_zn" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: </span></caption>
+<colgroup><col width="50.495049504950494%"/><col width="49.504950495049506%"/></colgroup>
+
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="50.495049504950494%" id="d1666187e45">Operations</th>
+
+									<th class="entry" valign="top" width="49.504950495049506%" id="d1666187e48">Roles</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="50.495049504950494%" headers="d1666187e45 ">View Message Trace</td>
+
+									<td class="entry" valign="top" width="49.504950495049506%" headers="d1666187e48 ">IntegrationOperationServer.read</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50.495049504950494%" headers="d1666187e45 ">View Message Payload/Header </td>
+
+									<td class="entry" valign="top" width="49.504950495049506%" headers="d1666187e48 ">esbmessagestorage.read</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50.495049504950494%" headers="d1666187e45 ">Export MPL </td>
+
+									<td class="entry" valign="top" width="49.504950495049506%" headers="d1666187e48 ">
+										<p class="p">IntegrationOperationServer.read</p>
+
+										<p class="p">esbmessagestorage.read</p>
+
+										<p class="p">NodeManager.read</p>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+</li>
+
+				<li class="li">You have verified that tracing is enabled for newly deployed integration
+					flows.</li>
+
+			</ol>
+
+		</div>
+
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><div class="li step p">
+				<span class="ph cmd">If you want to enable tracing at the integration flow level, perform the
+					following substeps:</span>
+				<ol type="a" class="ol substeps" id="loio866b6a94a074487384a21377ec9f2eb2__substeps_kdx_fgj_vq">
+					<li class="li substep">
+						<span class="ph cmd">In the In the <span class="ph uicontrol">Model Configuration</span> editor page, select the
+							graphical area outside the integration flow pool.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">In the <span class="ph uicontrol">Properties</span> view, choose the <span class="ph uicontrol">Trace
+								Configuration</span> tab.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">In the <span class="ph uicontrol">Property</span> sheet, select trace level
+								<span class="ph uicontrol">None</span>, <span class="ph uicontrol">Message Body and
+								Header</span>, <span class="ph uicontrol">Header</span> from the dropdown
+							menu of trace log.</span>
+					</li>
+
+				</ol>
+
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio866b6a94a074487384a21377ec9f2eb2__ul_cdk_lxr_1r">
+							<li class="li">You can retrieve tracing content if connection to the tenant
+								management node exists.</li>
+
+							<li class="li">Post message processing, the trace data is deleted after 60  minutes.</li>
+
+							<li class="li">If you add a content modifier without header, body and property then you cannot trace the
+								element.</li>
+
+							<li class="li">Cluster type <span class="ph emphasis emphasis">Lite</span> version supports tracing only when total payload
+								size spread across the entire integration flow is approximately
+								50MB. </li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</div>
+
+	</div>
+
+<div class="related-links"> 
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

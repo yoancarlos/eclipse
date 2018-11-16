@@ -1,0 +1,7 @@
+a#xpi-noteworthy img {
+	background-image: url(../../images/topiclabel/wn.gif);
+}
+
+a#xpi-noteworthy:hover img {
+	background-image: url(../../images/topiclabel/wn48_hov.gif);
+}

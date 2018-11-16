@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="This option allows you to add further contextual information to the signature, like, for example, the place where the signature has been created, or the type of commitment assured by the signer when creating the signature."/>
+<meta name="description" content="This option allows you to add further contextual information to the signature, like, for example, the place where the signature has been created, or the type of commitment assured by the signer when creating the signature."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Signing the Message Content with XAdES-BES (2)</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio2c569fce9f844bb5b9752d3c6b457605">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Signing the Message Content with XAdES-BES (2)</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">This option allows you to add further contextual information to the signature, like, for
+		example, the place where the signature has been created, or the type of commitment assured
+		by the signer when creating the signature. </p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">For more information, see <a class="extlink" href="http://help.sap.com/disclaimer?site=http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf" target="_blank" download="" alt="http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf" title="http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf">http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>. </p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd"> In the <span class="keyword uilabel">Model Configuration</span> editor, select the
+						<span class="keyword uilabel">Signer</span> element and, from the context menu, select the
+						<span class="keyword uilabel">Switch to XAdES-BES (2)</span> option.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Under <span class="ph uicontrol">Production Place</span> enter information on the purported place
+					where the signer claims to have produced the signature (City, State/Province,
+					Postal Code, and Country Name).</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify the commitment to be undertaken by the signer (for example, proof of origin, proof
+					of receipt, proof of creation). </span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio2c569fce9f844bb5b9752d3c6b457605__choicetable_sng_kbp_3q">
+<thead><tr><th id="d519977e57-option" valign="bottom" align="left">Option</th>
+<th id="d519977e57-desc" valign="bottom" align="left">Description</th></tr></thead>
+<tbody>
+					<tr class="strow chrow">
+						<td valign="top" headers="d519977e57-option" id="d519977e61" class="stentry choption"><strong><span class="ph uicontrol">Commitment</span>
+						</strong></td>
+
+						<td valign="top" headers="d519977e57-desc d519977e61" class="stentry chdesc">Specify the commitment. You can select one of the following values:
+								<ul class="ul" id="loio2c569fce9f844bb5b9752d3c6b457605__ul_mng_mbp_3q">
+								<li class="li"><kbd class="ph userinput">Proof of origin</kbd>
+									<p class="p">Indicates that the signer recognizes to have created,
+										approved and sent the signed data object. </p>
+<p class="p">The URI for
+										this commitment is: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://uri.etsi.org/01903/v1.2.2#ProofOfOrigin" target="_blank" alt="http://uri.etsi.org/01903/v1.2.2#ProofOfOrigin" title="http://uri.etsi.org/01903/v1.2.2#ProofOfOrigin">http://uri.etsi.org/01903/v1.2.2#ProofOfOrigin<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>.</p>
+</li>
+
+								<li class="li"><kbd class="ph userinput">Proof of receipt</kbd>
+									<p class="p">Indicates that signer recognizes to have received the content
+										of the signed data object. </p>
+<p class="p">The URI for this
+										commitment is: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://uri.etsi.org/01903/v1.2.2#ProofOfReceipt" target="_blank" alt="http://uri.etsi.org/01903/v1.2.2#ProofOfReceipt" title="http://uri.etsi.org/01903/v1.2.2#ProofOfReceipt">http://uri.etsi.org/01903/v1.2.2#ProofOfReceipt<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>.</p>
+
+								</li>
+
+								<li class="li"><kbd class="ph userinput">Proof of delivery</kbd>
+									<p class="p">Indicates that the trusted service provider (TSP) providing
+										that indication has delivered a signed data object in a
+										local store accessible to the recipient of the signed data
+										object. </p>
+<p class="p">The URI for this commitment is: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://uri.etsi.org/01903/v1.2.2#ProofOfDelivery" target="_blank" alt="http://uri.etsi.org/01903/v1.2.2#ProofOfDelivery" title="http://uri.etsi.org/01903/v1.2.2#ProofOfDelivery">http://uri.etsi.org/01903/v1.2.2#ProofOfDelivery<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>.
+									</p>
+</li>
+
+								<li class="li"><kbd class="ph userinput">Proof of sender</kbd>
+									<p class="p">Indicates that the entity providing that indication has sent
+										the signed data object (but not necessarily created it).
+										</p>
+<p class="p">The URI for this commitment is: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://uri.etsi.org/01903/v1.2.2#ProofOfSender" target="_blank" alt="http://uri.etsi.org/01903/v1.2.2#ProofOfSender" title="http://uri.etsi.org/01903/v1.2.2#ProofOfSender">http://uri.etsi.org/01903/v1.2.2#ProofOfSender<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>.</p>
+</li>
+
+								<li class="li"><kbd class="ph userinput">Proof of approval</kbd>
+									<p class="p">Indicates that the signer has approved the content of the
+										signed data object. </p>
+<p class="p">The URI for this commitment is:
+											<a class="extlink" href="http://help.sap.com/disclaimer?site=http://uri.etsi.org/01903/v1.2.2#ProofOfApproval" target="_blank" alt="http://uri.etsi.org/01903/v1.2.2#ProofOfApproval" title="http://uri.etsi.org/01903/v1.2.2#ProofOfApproval">http://uri.etsi.org/01903/v1.2.2#ProofOfApproval<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>.</p>
+</li>
+
+								<li class="li"><kbd class="ph userinput">Proof of creation</kbd>
+									<p class="p">Indicates that the signer has created the signed data object
+										(but not necessarily approved, nor sent it). </p>
+<p class="p">The URI
+										for this commitment is: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://uri.etsi.org/01903/v1.2.2#ProofOfCreation" target="_blank" alt="http://uri.etsi.org/01903/v1.2.2#ProofOfCreation" title="http://uri.etsi.org/01903/v1.2.2#ProofOfCreation">http://uri.etsi.org/01903/v1.2.2#ProofOfCreation<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>.</p>
+</li>
+
+							</ul>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d519977e57-option" id="d519977e154" class="stentry choption"><strong><span class="ph uicontrol">Description</span></strong></td>
+
+						<td valign="top" headers="d519977e57-desc d519977e154" class="stentry chdesc">Enter a free text description of the commitment.</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d519977e57-option" id="d519977e164" class="stentry choption"><strong><span class="ph uicontrol">Documentation Reference</span></strong></td>
+
+						<td valign="top" headers="d519977e57-desc d519977e164" class="stentry chdesc">Enter references (URIs) to one or more documents where the
+							commitment is described.</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d519977e57-option" id="d519977e174" class="stentry choption"><strong><span class="ph uicontrol">Commitment Qualifier</span></strong></td>
+
+						<td valign="top" headers="d519977e57-desc d519977e174" class="stentry chdesc">Enter additional qualifying information on the commitment made by the signer.<p class="p">Enter
+								a text or an XML fragment with the root element
+									<cite class="cite">CommitmentTypeQualifier</cite>.</p>
+</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+				<div class="itemgroup info">
+					<p class="p">Adding these properties helps to avoid legal disputes as the commitment undertaken by the
+						signer can be compared with the commitment made in the context of an applied
+						signature policy.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Under <span class="ph uicontrol">XML Document Parameters</span>, select the namespace of
+					the XAdES version and enter a namespace prefix.  </span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1544 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::AS2/version::1.0.1" ComponentName="AS2" UIElementType="Adapter" IsExtension="false" 
+																		IsFinal="true" IsPreserves="true" IsRequestResponse="true" gen:RuntimeComponentBaseUri="sap-as2" 
+																		xmlns:gen="http://www.w3.org/2001/XMLSchema-instance" MetadataVersion="2.0">
+																		
+	<Variant VariantName="AS2 Sender" VariantId="ctype::AdapterVariant/cname::AS2/tp::HTTP/mp::AS2/direction::Sender/version::1.0.1" MetadataVersion="2.0" AttachmentBehavior="Modify" gen:RuntimeComponentBaseUri="sap-as2" gen:FirstUriPart="AS2">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</OutputContent>
+		<ManifestEntries>
+			<ManifestEntry>
+				<Name>SAP-PreDeployment</Name>
+				<Value>/META-INF/deployment/queueDefinitions.json</Value>
+			</ManifestEntry>
+		</ManifestEntries>
+		<Metadata>
+			<AdditionalMetadata>
+				<Name>tp</Name>
+				<GuiLabels guid="e7fa4f1d-ec6a-4248-9752-920ea9616bc9">
+					<Label language="EN">HTTPS</Label>
+					<Label language="DE">HTTPS</Label>
+				</GuiLabels>
+			</AdditionalMetadata>
+		</Metadata>
+		<Tab id="Processing">
+			<GuiLabels guid="c4e391f5-d8ff-452c-b8ba-2d587f9d6605">
+				<Label language="EN">Processing</Label>
+				<Label language="DE">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id="ExpectedMessages">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Expected Messages</Name>
+				<GuiLabels guid="f8e5f533-d8f7-4176-b51e-fa3291a91cbc">
+					<Label language="EN">Expected Messages</Label>
+					<Label language="DE">Expected Messages</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>expectedMessageIDLeft</ReferenceName>
+					<description>Specify left side of AS2 message ID. Regular expression or '.*' is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>expectedMessageIDRight</ReferenceName>
+					<description>Specify right side of AS2 message ID. Regular expression or '.*' is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>partnerAS2Name</ReferenceName>
+					<description>Specify partner's AS2 ID. Regular expression or '.*' is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ownAS2Name</ReferenceName>
+					<description>Specify own AS2 ID. Regular expression or '.*' is allowed.</description>
+				</AttributeReference>			
+				<AttributeReference>
+					<ReferenceName>messageSubject</ReferenceName>
+					<description>Specify AS2 message subject. Regular expression or '.*' is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+    				<ReferenceName>senderAuthType</ReferenceName>
+    				<description>Select client authentication type.</description>
+				</AttributeReference>				
+				<AttributeReference>
+    				<ReferenceName>clientCertificates</ReferenceName>
+					<EditCondition>
+						<AttributeName>senderAuthType</AttributeName>
+						<AttributeValue>ClientCertificate</AttributeValue>
+					</EditCondition>
+    				<description>Add partner certificates for authorizations.</description>
+				</AttributeReference>
+			</AttributeGroup>
+			<AttributeGroup id="AS2InboundInformation">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Message Settings</Name>
+				<GuiLabels guid="64232555-1820-4116-ad6e-479d3fd9e39d">
+					<Label language="EN">Message Settings</Label>
+					<Label language="DE">Message Settings</Label>
+				</GuiLabels>
+				<AttributeReference>
+                    <ReferenceName>fileNameMandatoryCheck</ReferenceName>
+                    <description>Enable this option to mandatorily check the filename.</description>
+                </AttributeReference>
+				<AttributeReference>
+                    <ReferenceName>as2MsgIdDupCheck</ReferenceName>
+					<description>Enable this option to ensure that the AS2 message with the same Message ID is not being processed more than once.</description>
+                </AttributeReference>
+				<AttributeReference>
+                    <ReferenceName>as2MsgIdPersistDuration</ReferenceName>
+					<Restriction>Constraint.isValidRegex(^([1-9][0-9]*)$)</Restriction>
+					<ErrorMessage>Enter a valid positive integer greater than 0.</ErrorMessage>                    
+                    <EditCondition>
+						<AttributeName>as2MsgIdDupCheck</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Specify the time(in minutes), for which the Message ID will be stored for duplicate check.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>as2MsgIdDupCheckResponse</ReferenceName>
+                    <EditCondition>
+						<AttributeName>as2MsgIdDupCheck</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Select the response you want to send back, if a message with a duplicate Message ID is encountered.</description>
+                </AttributeReference>
+				<AttributeReference>
+                    <ReferenceName>fileNameDupCheck</ReferenceName>
+					<description>Enable this option to ensure that the AS2 message with the same filename is not being processed more than once.</description>
+                </AttributeReference>
+				<AttributeReference>
+                    <ReferenceName>fileNamePersistDuration</ReferenceName>
+					<Restriction>Constraint.isValidRegex(^([1-9][0-9]*)$)</Restriction>
+					<ErrorMessage>Enter a valid positive integer greater than 0.</ErrorMessage>                    
+                    <EditCondition>
+						<AttributeName>fileNameDupCheck</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Specify the time(in minutes), for which the filename will be stored for duplicate check.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>fileNameDupCheckResponse</ReferenceName>
+                    <EditCondition>
+						<AttributeName>fileNameDupCheck</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Select the response you want to send back, if a message with a duplicate filename is encountered.</description>
+                </AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<Tab id="Security">
+			<GuiLabels guid="c98af632-223d-4343-9090-578e63ffbeea">
+				<Label language="EN">Security</Label>
+				<Label language="DE">Security</Label>
+			</GuiLabels>
+			<AttributeGroup id="MessageSecurity">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Message Security</Name>
+				<GuiLabels guid="b633dbff-b9b4-4a91-9aaa-0151f73b40d9">
+					<Label language="EN">Message Security</Label>
+					<Label language="DE">Message Security</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>doDecryption</ReferenceName>
+					<description>Enable this option to decrypt AS2 Message.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>privateKeyAliasForDecryption</ReferenceName>
+					<EditCondition>
+						<AttributeName>doDecryption</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Specify private key alias to decrypt AS2 Message.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>doVerification</ReferenceName>
+					<description>Enable this option to verify AS2 Message signature.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>publicKeyAliasForVerification</ReferenceName>
+					<EditCondition>
+						<AttributeName>doVerification</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Specify public key alias to verify AS2 Message signature.</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<Tab id="MDN">
+			<GuiLabels guid="b2e8a152-01c4-4e00-b75d-5634cac37529">
+				<Label language="EN">MDN</Label>
+				<Label language="DE">MDN</Label>
+			</GuiLabels>
+			<AttributeGroup id="ResponseMDN">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Response MDN</Name>
+				<GuiLabels guid="a563fe3a-3bdb-430b-8997-9e1ce3805fbf">
+					<Label language="EN">Response MDN</Label>
+					<Label language="DE">Response MDN</Label>
+				</GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>privateKeyAliasForMDNSigning</ReferenceName>
+					<description>Specify private key alias to sign the MDN on partner's request.</description>
+                </AttributeReference>
+                <AttributeReference>
+					<ReferenceName>signatureEncoding</ReferenceName>
+					<description>Select MDN signature encoding type.</description>
+				</AttributeReference>
+				<AttributeReference>
+                    <ReferenceName>mdnAuthenticationType</ReferenceName>
+					<description>Select authentication type for asynchronous MDN.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>mdnUserCredentialAlias</ReferenceName>
+					<EditCondition>
+						<AttributeName>mdnAuthenticationType</AttributeName>
+						<AttributeValue>BasicAuthentication</AttributeValue>
+					</EditCondition>
+					<description>Specify deployed user credential alias for basic authentication for asynchronous MDN.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>mdnPrivateKeyAlias</ReferenceName>
+					<EditCondition>
+						<AttributeName>mdnAuthenticationType</AttributeName>
+						<AttributeValue>ClientCertificate</AttributeValue>
+					</EditCondition>
+					<description>Specify private key alias for client certificate authentication for asynchronous MDN.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>mdnTimeout</ReferenceName>
+					<Restriction>Constraint.isValidRegex(^(0|[1-9][0-9]*)$)</Restriction>
+					<ErrorMessage>Enter a valid positive integer.</ErrorMessage>
+					<description>Specify the time in milliseconds during which client has to accept asynchronous MDN, before the timeout occurs. Enter the value '0' if you want the client to wait indefinitely.</description>
+                </AttributeReference>                
+			</AttributeGroup>
+		</Tab>	
+		<AllowedHeaders>AS2PartnerID,AS2OwnID,AS2MessageSubject,AS2Filename,AS2MessageID,AS2PartnerEmail,AS2MessageContentType,AS2OriginalMessageID</AllowedHeaders>
+		<ReferencedComponents>
+			<ReferencedComponent>HciRetryHandling</ReferencedComponent>
+		</ReferencedComponents>
+	</Variant>
+	<Variant VariantName="AS2 MDN Sender" VariantId="ctype::AdapterVariant/cname::AS2/tp::HTTP/mp::AS2 MDN/direction::Sender/version::1.0.1" MetadataVersion="2.0" AttachmentBehavior="Modify" gen:RuntimeComponentBaseUri="sap-as2" gen:FirstUriPart="AS2 MDN">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</OutputContent>
+		<ManifestEntries>
+			<ManifestEntry>
+				<Name>SAP-PreDeployment</Name>
+				<Value>/META-INF/deployment/queueDefinitions.json</Value>
+			</ManifestEntry>
+		</ManifestEntries>	
+		<Metadata>
+			<AdditionalMetadata>
+				<Name>tp</Name>
+				<GuiLabels guid="e7fa4f1d-ec6a-4248-9752-920ea9616bc9">
+					<Label language="EN">HTTPS</Label>
+					<Label language="DE">HTTPS</Label>
+				</GuiLabels>
+			</AdditionalMetadata>
+		</Metadata>	
+		<Tab id="MDN">
+			<GuiLabels guid="8060bcbb-484c-47cb-a92c-eabe06b0c0e4">
+				<Label language="EN">MDN</Label>
+				<Label language="DE">MDN</Label>
+			</GuiLabels>
+			<AttributeGroup id="ExpectedMDN">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Expected MDN</Name>
+				<GuiLabels guid="f3d4b193-40d7-462b-9bd4-9a0b864a470f">
+					<Label language="EN">Expected MDN</Label>
+					<Label language="DE">Expected MDN</Label>
+				</GuiLabels>				
+				<AttributeReference>
+					<ReferenceName>partnerAS2Name</ReferenceName>
+					<description>Specify partner's AS2 ID. Regular expression or '.*' is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ownAS2Name</ReferenceName>
+					<description>Specify own AS2 ID. Regular expression or '.*' is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+    				<ReferenceName>senderAuthType</ReferenceName>
+    				<description>Select client authentication type.</description>
+				</AttributeReference>				
+				<AttributeReference>
+    				<ReferenceName>clientCertificates</ReferenceName>
+					<EditCondition>
+						<AttributeName>senderAuthType</AttributeName>
+						<AttributeValue>ClientCertificate</AttributeValue>
+					</EditCondition>
+    				<description>Add partner certificates for authorizations.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>verifyMDNSignature</ReferenceName>					
+					<description>Enable this option to verify AS2 MDN signature.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>publicKeyAliasForMDNVerification</ReferenceName>
+					<EditCondition>
+						<AttributeName>verifyMDNSignature</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Specify public key alias to verify AS2 MDN signature.</description>
+				</AttributeReference>				
+				<AttributeReference>
+					<ReferenceName>verifyMIC</ReferenceName>
+					<description>Enable this option to verify Message Integrity Check(MIC) from AS2 MDN.</description>
+				</AttributeReference>		
+			</AttributeGroup>			
+		</Tab>
+		<AllowedHeaders>AS2PartnerID,AS2OwnID,AS2MessageSubject,AS2Filename,AS2MessageID,AS2PartnerEmail,AS2MessageContentType,AS2OriginalMessageID</AllowedHeaders>
+		<ReferencedComponents>
+			<ReferencedComponent>HciRetryHandling</ReferencedComponent>
+		</ReferencedComponents>
+		
+	</Variant>
+	<Variant VariantName="AS2 Receiver" VariantId="ctype::AdapterVariant/cname::AS2/tp::HTTP/mp::AS2/direction::Receiver" MetadataVersion="2.0" AttachmentBehavior="Modify" gen:RuntimeComponentBaseUri="sap-as2">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</OutputContent>
+		<Metadata>
+			<AdditionalMetadata>
+				<Name>tp</Name>
+				<GuiLabels guid="e7fa4f1d-ec6a-4248-9752-920ea9616bc9">
+					<Label language="EN">HTTPS</Label>
+					<Label language="DE">HTTPS</Label>
+				</GuiLabels>
+			</AdditionalMetadata>
+		</Metadata>
+		<Tab id="Connection">
+			<GuiLabels guid="a01c3915-0c3e-4ee4-a118-703ee6de8c3d">
+				<Label language="EN">Connection</Label>
+				<Label language="DE">Connection</Label>
+			</GuiLabels>
+			<AttributeGroup id="ReceipientInformation">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Receipient Information</Name>
+				<GuiLabels guid="5f0b4820-99fd-4a9a-a8f1-6c4b61d75135">
+					<Label language="EN">Receipient Information</Label>
+					<Label language="DE">Receipient Information</Label>
+				</GuiLabels>		
+				<AttributeReference>
+					<ReferenceName>receipientURL</ReferenceName>
+					<Restriction>Constraint.isValidRegex((^(https://)[^\s]+)|(^(http://)[^\s]+)|(^(\$\{((header\.)|(property\.))).+}$))</Restriction>
+					<ErrorMessage>Enter a valid address or header expression or property expression. E.g. https://example or http://example or ${header.url} or ${property.url}</ErrorMessage>
+					<description>Specify partner's AS2 URL. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>urlParametersPattern</ReferenceName>
+					<description>Specify regular expression to pick camel headers and add them as URL parameters.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>authenticationType</ReferenceName>
+					<description>Select authentication type for AS2 Message.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>userCredentialAlias</ReferenceName>
+					<EditCondition>
+						<AttributeName>authenticationType</AttributeName>
+						<AttributeValue>BasicAuthentication</AttributeValue>
+					</EditCondition>
+					<description>Specify deployed user credential alias for basic authentication for AS2 Message. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>privateKeyAlias</ReferenceName>
+					<EditCondition>
+						<AttributeName>authenticationType</AttributeName>
+						<AttributeValue>ClientCertificate</AttributeValue>
+					</EditCondition>
+					<description>Specify private key alias for client certificate authentication for AS2 Message. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>timeout</ReferenceName>
+					<Restriction>Constraint.isValidRegex(^(0|[1-9][0-9]*)$)</Restriction>
+					<ErrorMessage>Enter a valid positive integer.</ErrorMessage>
+					<description>Specify the time in milliseconds during which client has to accept AS2 Message, before the timeout occurs. Enter the value '0' if you want the client to wait indefinitely.</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<Tab id="Processing">
+			<GuiLabels guid="a01c3915-0c3e-4ee4-a118-703ee6de8c3d">
+				<Label language="EN">Processing</Label>
+				<Label language="DE">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id="MessageInformation">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Message Information</Name>
+				<GuiLabels guid="6f960644-ce8e-4a96-b8e4-34a620a6dc19">
+					<Label language="EN">Message Information</Label>
+					<Label language="DE">Message Information</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>fileName</ReferenceName>
+					<description>Specify AS2 filename. If no filename is specified, default filename will be set to &lt;Own AS2 ID&gt;_File. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>messageIDLeft</ReferenceName>
+					<description>Specify left side of AS2 Message ID. Format of AS2 message ID is {&lt;Left side&gt;@&lt;Right side&gt;}. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>messageIDRight</ReferenceName>
+					<description>Specify right side of AS2 Message ID. Format of AS2 message ID is {&lt;Left side&gt;@&lt;Right side&gt;}. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ownAS2Name</ReferenceName>
+					<description>Specify own AS2 ID. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>partnerAS2Name</ReferenceName>
+					<description>Specify partner's AS2 ID. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>messageSubject</ReferenceName>
+					<description>Specify AS2 Message subject. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ownEmailAddress</ReferenceName>
+					<description>Specify own email ID. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>contentType</ReferenceName>
+					<description>Specify content type of the outgoing message. For e.g. application/edi-x12. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>customHeadersPattern</ReferenceName>
+					<description>Specify regular expression to pick camel headers and add them as AS2 custom headers.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>messageEncoding</ReferenceName>
+					<description>Select AS2 Message encoding type.</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<Tab id="Security">
+			<GuiLabels guid="c290ad8b-d5b9-4c6c-a753-d315a9c9d92b">
+				<Label language="EN">Security</Label>
+				<Label language="DE">Security</Label>
+			</GuiLabels>
+			<AttributeGroup id="MessageSecurity">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Message Security</Name>
+				<GuiLabels guid="827a6bcd-81ea-4bd2-bb00-e9a4e008d229">
+					<Label language="EN">Message Security</Label>
+					<Label language="DE">Message Security</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>doCompression</ReferenceName>
+					<description>Enable this option to compress AS2 Message.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>doSigning</ReferenceName>
+					<description>Enable this option to sign AS2 Message.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>signingAlgorithm</ReferenceName>
+					<EditCondition>
+						<AttributeName>doSigning</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Select AS2 Message signing algorithm.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>privateKeyAliasForSigning</ReferenceName>
+					<EditCondition>
+						<AttributeName>doSigning</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Specify private key alias to Sign AS2 Message. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>doEncryption</ReferenceName>
+					<description>Enable this option to encrypt AS2 Message</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>encryptionAlgorithm</ReferenceName>
+					<EditCondition>
+						<AttributeName>doEncryption</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Select AS2 Message encryption algorithm.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>publicKeyAliasForEncryption</ReferenceName>
+					<EditCondition>
+						<AttributeName>doEncryption</AttributeName>
+						<AttributeValue>1</AttributeValue>
+					</EditCondition>
+					<description>Specify public key alias to encrypt AS2 Message. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>keyLength</ReferenceName>
+					<Restriction>Constraint.isValidRegex(^(0|[1-9][0-9]*)$)</Restriction>
+					<ErrorMessage>Enter a valid positive integer.</ErrorMessage>
+					<AndCondition>
+						<EditCondition>
+							<AttributeName>doEncryption</AttributeName>
+							<AttributeValue>1</AttributeValue>
+						</EditCondition>
+						<OrCondition>
+							<EditCondition>
+								<AttributeName>encryptionAlgorithm</AttributeName>
+								<AttributeValue>RC2</AttributeValue>
+							</EditCondition>
+						</OrCondition>
+					</AndCondition>
+					<description>Specify public Key length.</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<Tab id="MDN">
+			<GuiLabels guid="d7f46abd-a10a-46d4-af30-c143b09eec53">
+				<Label language="EN">MDN</Label>
+				<Label language="DE">MDN</Label>
+			</GuiLabels>
+			<AttributeGroup id="MDNRequestConfiguration">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">MDN Request Configuration</Name>
+				<GuiLabels guid="2a16e1a0-cb78-48c7-a4ad-10b52ae38748">
+					<Label language="EN">MDN Request Configuration</Label>
+					<Label language="DE">MDN Request Configuration</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>mdnType</ReferenceName>
+					<description>Select MDN type which has to be requested from partner in outgoing AS2 Message.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>mdnTargetURL</ReferenceName>
+					<Restriction>Constraint.isValidRegex((^(https://)[^\s]+)|(^(http://)[^\s]+)|(^(\$\{((header\.)|(property\.))).+}$))</Restriction>
+					<ErrorMessage>Enter a valid address or header expression or property expression. E.g. https://example or http://example or ${header.url} or ${property.url}</ErrorMessage>				
+					<EditCondition>
+						<AttributeName>mdnType</AttributeName>
+						<AttributeValue>Asynchronous</AttributeValue>
+					</EditCondition>
+					<description>Specify URL on which AS2 MDN will be received from partner. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>requestMDNSigning</ReferenceName>
+					<OrCondition>
+						<EditCondition>
+							<AttributeName>mdnType</AttributeName>
+							<AttributeValue>Asynchronous</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>mdnType</AttributeName>
+							<AttributeValue>Synchronous</AttributeValue>
+						</EditCondition>
+					</OrCondition>
+					<description>Enable this option to request partner to sign AS2 MDN.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>requestMDNSigningAlgorithm</ReferenceName>
+					<AndCondition>
+						<EditCondition>
+							<AttributeName>requestMDNSigning</AttributeName>
+							<AttributeValue>1</AttributeValue>
+						</EditCondition>
+						<OrCondition>
+							<EditCondition>
+								<AttributeName>mdnType</AttributeName>
+								<AttributeValue>Asynchronous</AttributeValue>
+							</EditCondition>
+							<EditCondition>
+								<AttributeName>mdnType</AttributeName>
+								<AttributeValue>Synchronous</AttributeValue>
+							</EditCondition>
+						</OrCondition>
+					</AndCondition>
+					<description>Select signing algorithm for the requested signed AS2 MDN.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>verifyMDNSignature</ReferenceName>
+					<AndCondition>
+						<EditCondition>
+							<AttributeName>requestMDNSigning</AttributeName>
+							<AttributeValue>1</AttributeValue>
+						</EditCondition>
+						<OrCondition>
+							<EditCondition>
+								<AttributeName>mdnType</AttributeName>
+								<AttributeValue>Synchronous</AttributeValue>
+							</EditCondition>
+						</OrCondition>
+					</AndCondition>
+					<description>Enable this option to verify AS2 MDN signature.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>publicKeyAliasForMDNVerification</ReferenceName>
+					<AndCondition>
+						<EditCondition>
+							<AttributeName>verifyMDNSignature</AttributeName>
+							<AttributeValue>1</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>requestMDNSigning</AttributeName>
+							<AttributeValue>1</AttributeValue>
+						</EditCondition>
+						<OrCondition>
+							<EditCondition>
+								<AttributeName>mdnType</AttributeName>
+								<AttributeValue>Synchronous</AttributeValue>
+							</EditCondition>
+						</OrCondition>
+					</AndCondition>
+					<description>Specify public key alias to verify AS2 MDN signature. Use of simple expression, ${header.&lt;header-name&gt;} or ${property.&lt;property-name&gt;}, is allowed.</description>
+				</AttributeReference>				
+				<AttributeReference>
+					<ReferenceName>requestMIC</ReferenceName>
+					<AndCondition>
+						<EditCondition>
+							<AttributeName>requestMDNSigning</AttributeName>
+							<AttributeValue>0</AttributeValue>
+						</EditCondition>
+						<OrCondition>
+							<EditCondition>
+								<AttributeName>mdnType</AttributeName>
+								<AttributeValue>Asynchronous</AttributeValue>
+							</EditCondition>
+							<EditCondition>
+								<AttributeName>mdnType</AttributeName>
+								<AttributeValue>Synchronous</AttributeValue>
+							</EditCondition>
+						</OrCondition>
+					</AndCondition>
+					<description>Enable this option to request partner to send Message Integrity Check(MIC) in AS2 MDN.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>verifyMIC</ReferenceName>
+					<AndCondition>
+						<OrCondition>
+							<EditCondition>
+								<AttributeName>mdnType</AttributeName>
+								<AttributeValue>Synchronous</AttributeValue>
+							</EditCondition>
+						</OrCondition>
+						<OrCondition>
+							<EditCondition>
+								<AttributeName>requestMIC</AttributeName>
+								<AttributeValue>1</AttributeValue>
+							</EditCondition>
+							<EditCondition>
+								<AttributeName>requestMDNSigning</AttributeName>
+								<AttributeValue>1</AttributeValue>
+							</EditCondition>
+						</OrCondition>
+					</AndCondition>
+					<description>Enable this option to verify Message Integrity Check(MIC) from AS2 MDN.</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+	</Variant>
+	<AttributeMetadata>
+		<Name>messageSubject</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="33a649da-7a3a-4739-9952-8d8bc2b1bac0">
+			<Label language="EN">Message Subject</Label>
+			<Label language="DE">Message Subject</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>partnerAS2Name</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="dd11e867-6623-44bd-a423-8f27fe3a3117">
+			<Label language="EN">Partner AS2 ID</Label>
+			<Label language="DE">Partner AS2 ID</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ownAS2Name</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="22c72625-89f9-41ac-9547-ddba6d5b6a2b">
+			<Label language="EN">Own AS2 ID</Label>
+			<Label language="DE">Own AS2 ID</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>messageIDLeft</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="927d3199-590f-4e83-bb45-aa74e9dee26d">
+			<Label language="EN">Message ID Left Part</Label>
+			<Label language="DE">Message ID Left Part</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>expectedMessageIDLeft</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>		
+		<Length></Length>
+		<GuiLabels guid="cd9654e3-b124-4faf-ae58-a1ac305331cc">
+			<Label language="EN">Message ID Left Part</Label>
+			<Label language="DE">Message ID Left Part</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>fileName</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="8acbac5b-8f1c-4a67-b386-784ad899411c">
+			<Label language="EN">File Name</Label>
+			<Label language="DE">File Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ownEmailAddress</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="c00f9deb-ce95-4ce0-abaf-2f9a9333f1aa">
+			<Label language="EN">Own E-mail address</Label>
+			<Label language="DE">Own E-mail address</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>contentType</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="1d644ecc-431b-46d9-b86d-bf4a853bc686">
+			<Label language="EN">Content-Type</Label>
+			<Label language="DE">Content-Type</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>messageIDRight</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="26400b14-f955-4018-8099-f8c8dc4667f9">
+			<Label language="EN">Message ID Right Part</Label>
+			<Label language="DE">Message ID Right Part</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>expectedMessageIDRight</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="2783ec28-75bf-4acc-a3e4-4d246e8f5f07">
+			<Label language="EN">Message ID Right Part</Label>
+			<Label language="DE">Message ID Right Part</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>doSigning</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="97053737-13f8-4c4b-940f-5818c834552e">
+			<Label language="EN">Sign Message</Label>
+			<Label language="DE">Sign Message</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>publicKeyAliasForEncryption</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="833496b7-7d37-46ff-86ba-5104e232e0e8">
+			<Label language="EN">Public Key Alias</Label>
+			<Label language="DE">Public Key Alias</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>signingAlgorithm</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>SHA1</Default>
+		<Length></Length>
+		<GuiLabels guid="9026e070-9bb2-48ec-ace3-91e74e68ff83">
+			<Label language="EN">Algorithm</Label>
+			<Label language="DE">Algorithm</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>SHA1</Value>
+				<GuiLabels guid="4776e620-29e0-47ff-af3d-129cb2502f7a">
+					<Label language="EN">SHA1</Label>
+					<Label language="DE">SHA1</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>SHA224</Value>
+				<GuiLabels guid="568b2d05-2718-4c4f-9d79-000b95dd53e5">
+					<Label language="EN">SHA224</Label>
+					<Label language="DE">SHA224</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>SHA256</Value>
+				<GuiLabels guid="47890098-bb8a-4a32-970f-9b1d4b325eab">
+					<Label language="EN">SHA256</Label>
+					<Label language="DE">SHA256</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>SHA384</Value>
+				<GuiLabels guid="b99aa4ea-793b-4ffe-9d86-547df214a14d">
+					<Label language="EN">SHA384</Label>
+					<Label language="DE">SHA384</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>SHA512</Value>
+				<GuiLabels guid="cf4016d8-bb69-49f8-823a-ed0072e3f948">
+					<Label language="EN">SHA512</Label>
+					<Label language="DE">SHA512</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>MD5</Value>
+				<GuiLabels guid="34e81a2c-a96c-4753-89d4-1344f2a245f9">
+					<Label language="EN">MD5</Label>
+					<Label language="DE">MD5</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>encryptionAlgorithm</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>DES3</Default>
+		<Length></Length>
+		<GuiLabels guid="17228cb1-cb38-486d-8178-fe550708bed6">
+			<Label language="EN">Algorithm</Label>
+			<Label language="DE">Algorithm</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>AES128</Value>
+				<GuiLabels guid="1dbeaedc-623b-4803-917a-565d9e2194ee">
+					<Label language="EN">AES128</Label>
+					<Label language="DE">AES128</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>AES192</Value>
+				<GuiLabels guid="848b960c-8502-4d89-bd65-1c68b9215106">
+					<Label language="EN">AES192</Label>
+					<Label language="DE">AES192</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>AES256</Value>
+				<GuiLabels guid="3f0960ee-87a2-4394-91be-bcca816f4c2b">
+					<Label language="EN">AES256</Label>
+					<Label language="DE">AES256</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>DES3</Value>
+				<GuiLabels guid="33ef79c8-0722-4c07-ac30-a76ab3c950e9">
+					<Label language="EN">3DES</Label>
+					<Label language="DE">3DES</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>RC2</Value>
+				<GuiLabels guid="88fcc2bb-17c6-455f-8450-7ee72f710d95">
+					<Label language="EN">RC2</Label>
+					<Label language="DE">RC2</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>doCompression</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="d17efb5e-03ac-4df2-8ec6-9b3301258cf1">
+			<Label language="EN">Compress Message</Label>
+			<Label language="DE">Compress Message</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>doEncryption</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="2c7422d1-b744-48dc-b45d-3e7b09439140">
+			<Label language="EN">Encrypt Message</Label>
+			<Label language="DE">Encrypt Message</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>keyLength</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>128</Default>
+		<Length></Length>
+		<GuiLabels guid="f1bfd3df-6acd-4591-ae46-4f2db09b0a67">
+			<Label language="EN">Key Length</Label>
+			<Label language="DE">Key Length</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>privateKeyAliasForSigning</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="86148ee0-458b-4be5-b66e-c643baff439b">
+			<Label language="EN">Private Key Alias</Label>
+			<Label language="DE">Private Key Alias</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>verifyMDNSignature</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="7078eded-d694-4003-a51c-3b592dbb2c73">
+			<Label language="EN">Verify Signature</Label>
+			<Label language="DE">Verify Signature</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>verifyMIC</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="83a004af-59ed-40be-8caf-5f3df17baf27">
+			<Label language="EN">Verify MIC</Label>
+			<Label language="DE">Verify MIC</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>requestMIC</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="52f47c64-7730-45f6-b5ff-3a259a94ee59">
+			<Label language="EN">Request MIC</Label>
+			<Label language="DE">Request MIC</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>requestMDNSigning</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="342c9963-b289-444b-b445-e37d363b6b12">
+			<Label language="EN">Request Signing</Label>
+			<Label language="DE">Request Signing</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>mdnTargetURL</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="145a862b-f761-43b7-a3ea-1b1cf7e59949">
+			<Label language="EN">Target URL</Label>
+			<Label language="DE">Target URL</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>requestMDNSigningAlgorithm</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>SHA1</Default>
+		<Length></Length>
+		<GuiLabels guid="a9e62cdc-fc59-4799-8bbc-d5a9d4ae169c">
+			<Label language="EN">Algorithm</Label>
+			<Label language="DE">Algorithm</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>SHA1</Value>
+				<GuiLabels guid="ef0366f5-3f91-4c32-8f63-debfde6ccfbb">
+					<Label language="EN">SHA1</Label>
+					<Label language="DE">SHA1</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>SHA224</Value>
+				<GuiLabels guid="e6af3e6d-ceb9-4bfd-bc87-2c38cce4a69d">
+					<Label language="EN">SHA224</Label>
+					<Label language="DE">SHA224</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>SHA256</Value>
+				<GuiLabels guid="120e6f9e-89b2-4d3d-8f4f-7dfd00b03a66">
+					<Label language="EN">SHA256</Label>
+					<Label language="DE">SHA256</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>SHA384</Value>
+				<GuiLabels guid="72a3b1f1-c3a4-45ac-8380-848122f30db6">
+					<Label language="EN">SHA384</Label>
+					<Label language="DE">SHA384</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>SHA512</Value>
+				<GuiLabels guid="90a42c19-389d-44df-84b4-f991ea95c2ab">
+					<Label language="EN">SHA512</Label>
+					<Label language="DE">SHA512</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>MD5</Value>
+				<GuiLabels guid="f4f16fd9-1741-4c92-8cd6-6be70c6eafcd">
+					<Label language="EN">MD5</Label>
+					<Label language="DE">MD5</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>publicKeyAliasForMDNVerification</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="19927bc3-acb6-4018-a433-8c314b93a3e7">
+			<Label language="EN">Public Key Alias</Label>
+			<Label language="DE">Public Key Alias</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>mdnType</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>None</Default>
+		<Length></Length>
+		<GuiLabels guid="4fc492d5-78cf-4fcc-8b7f-27556fd1f4d5">
+			<Label language="EN">Type</Label>
+			<Label language="DE">Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>None</Value>
+				<GuiLabels guid="9aa955f8-1fbc-4dd2-ac9e-0cd42f755de9">
+					<Label language="EN">None</Label>
+					<Label language="DE">None</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Asynchronous</Value>
+				<GuiLabels guid="7af62146-92cb-4dd2-9cfd-9fb984696a8d">
+					<Label language="EN">Asynchronous</Label>
+					<Label language="DE">Asynchronous</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Synchronous</Value>
+				<GuiLabels guid="103a5683-93ae-478d-b025-7b6d962e2974">
+					<Label language="EN">Synchronous</Label>
+					<Label language="DE">Synchronous</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>privateKeyAlias</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="ce03a047-5ef9-40ab-b47e-c1ce4909beab">
+			<Label language="EN">Private Key Alias</Label>
+			<Label language="DE">Private Key Alias</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>receipientURL</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="7238a90a-19ce-4cae-8fd9-b7cee2907df1">
+			<Label language="EN">Receipient URL</Label>
+			<Label language="DE">Receipient URL</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>userCredentialAlias</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<GuiLabels guid="152733ed-ad59-486f-8b72-c7e30ef9335d">
+			<Label language="EN">Credential Name</Label>
+			<Label language="DE">Credential Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>authenticationType</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>None</Default>
+		<Length></Length>
+		<GuiLabels guid="54448ddc-dd73-481b-a9d0-21b690ef569d">
+			<Label language="EN">Authentication Type</Label>
+			<Label language="DE">Authentication Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>None</Value>
+				<GuiLabels guid="3a76ae12-6e78-4d2a-8f1c-c452e02f4c7d">
+					<Label language="EN">None</Label>
+					<Label language="DE">None</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>BasicAuthentication</Value>
+				<GuiLabels guid="4c264dc3-94d0-4e27-a350-637b6c17485d">
+					<Label language="EN">Basic Authentication</Label>
+					<Label language="DE">Basic Authentication</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>ClientCertificate</Value>
+				<GuiLabels guid="ebf229e5-da8c-44ee-aadf-99d64e6a1cec">
+					<Label language="EN">Client Certificate</Label>
+					<Label language="DE">Client Certificate</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>timeout</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>300000</Default>
+		<Length></Length>
+		<GuiLabels guid="29cd8582-2998-48c7-8a8d-6ab6484ff21c">
+			<Label language="EN">Timeout (in ms)</Label>
+			<Label language="DE">Timeout (in ms)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	    <AttributeMetadata>
+        <Name>fileNameDupCheck</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default></Default>
+        <Length></Length>
+        <GuiLabels guid="f4ba1f29-210b-47cb-ae4a-4fe17aa04ba3">
+            <Label language="EN">Duplicate File Name</Label>
+            <Label language="DE">Duplicate File Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>as2MsgIdDupCheck</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default></Default>
+        <Length></Length>
+        <GuiLabels guid="b3801e57-2a18-4af1-8b18-b7b77bf1bdaa">
+            <Label language="EN">Duplicate Message ID</Label>
+            <Label language="DE">Duplicate Message ID</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	<AttributeMetadata>
+        <Name>doDecryption</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default></Default>
+        <Length></Length>
+        <GuiLabels guid="301f6091-56f1-4bd4-b40e-02aefa9e978b">
+            <Label language="EN">Decrypt Message</Label>
+            <Label language="DE">Decrypt Message</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	<AttributeMetadata>
+        <Name>doVerification</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default></Default>
+        <Length></Length>
+        <GuiLabels guid="b7c89437-96c8-46e7-98d2-05e6bdb4a264">
+            <Label language="EN">Verify Signature</Label>
+            <Label language="DE">Verify Signature</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	<AttributeMetadata>
+        <Name>publicKeyAliasForVerification</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="4fe57805-c946-49ce-88d0-d9a982c3a464">
+            <Label language="EN">Public Key Alias</Label>
+            <Label language="DE">Public Key Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	<AttributeMetadata>
+        <Name>privateKeyAliasForDecryption</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <GuiLabels guid="ccc76792-a497-4155-a53b-1ebd8277d328">
+            <Label language="EN">Private Key Alias</Label>
+            <Label language="DE">Private Key Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	<AttributeMetadata>
+        <Name>mdnPrivateKeyAlias</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <GuiLabels guid="899931ca-2d50-40aa-83af-ecd7c65a298f">
+            <Label language="EN">Private Key Alias</Label>
+            <Label language="DE">Private Key Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	<AttributeMetadata>
+        <Name>mdnUserCredentialAlias</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <GuiLabels guid="bbaec450-e9dc-4d5d-b4b2-8e1ee583cd36">
+            <Label language="EN">Credential Name</Label>
+            <Label language="DE">Credential Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>privateKeyAliasForMDNSigning</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <GuiLabels guid="35784976-9002-47b3-81c2-bd37a6c7f6d4">
+            <Label language="EN">Private Key Alias for Signature</Label>
+            <Label language="DE">Private Key Alias for Signature</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>mdnTimeout</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>300000</Default>
+        <Length></Length>
+        <GuiLabels guid="fc647125-746e-44dc-a7a6-dda8eeb44684">
+            <Label language="EN">Timeout (in ms)</Label>
+            <Label language="DE">Timeout (in ms)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	<AttributeMetadata>
+        <Name>mdnAuthenticationType</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>None</Default>
+        <Length></Length>
+        <GuiLabels guid="04ac3240-d92a-493a-815e-9609e664f197">
+            <Label language="EN">Authentication for Asynchronous MDN</Label>
+            <Label language="DE">Authentication for Asynchronous MDN</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>None</Value>
+                <GuiLabels guid="8d81ac2a-0db6-4a60-ad3e-e9744b275f8b">
+                    <Label language="EN">None</Label>
+                    <Label language="DE">None</Label>
+                </GuiLabels>
+            </FixedValue>            
+			<FixedValue>
+                <Value>BasicAuthentication</Value>
+                <GuiLabels guid="c42b90b5-2f80-4a4a-8ec2-3a5e7f24c432">
+                    <Label language="EN">Basic Authentication</Label>
+                    <Label language="DE">Basic Authentication</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>ClientCertificate</Value>
+                <GuiLabels guid="ff7a61e1-d18a-4b83-885b-4a06689a58a0">
+                    <Label language="EN">Client Certificate</Label>
+                    <Label language="DE">Client Certificate</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+	<AttributeMetadata>
+        <Name>fileNameMandatoryCheck</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <Length></Length>
+        <GuiLabels guid="20e1dab2-f04b-4fc6-9dd8-f6fcd7d2ff62">
+            <Label language="EN">Mandatory File Name</Label>
+            <Label language="DE">Mandatory File Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>as2MsgIdPersistDuration</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>1440</Default>
+        <Length></Length>
+        <GuiLabels guid="79539aab-3c49-4016-8c2c-1d11f609c779">
+            <Label language="EN">Persist Duration(in min)</Label>
+            <Label language="DE">Persist Duration(in min)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>fileNamePersistDuration</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>1440</Default>
+        <Length></Length>
+        <GuiLabels guid="6990a0ae-035d-4a58-9127-32f53efdbf82">
+            <Label language="EN">Persist Duration(in min)</Label>
+            <Label language="DE">Persist Duration(in min)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>as2MsgIdDupCheckResponse</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>ErrorMDN</Default>
+        <Length></Length>
+        <GuiLabels guid="3323a0f0-7e4c-4970-bc4b-b34db252d940">
+            <Label language="EN">MDN Response</Label>
+            <Label language="DE">MDN Response</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>WarningMDN</Value>
+                <GuiLabels guid="62597d77-7ca8-4e8b-b6de-3b49a0b7ad00">
+                    <Label language="EN">Warning</Label>
+                    <Label language="DE">Warning</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>ErrorMDN</Value>
+                <GuiLabels guid="15893be2-630e-4341-98e5-4794ba381e63">
+                    <Label language="EN">Error</Label>
+                    <Label language="DE">Error</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>fileNameDupCheckResponse</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>ErrorMDN</Default>
+        <Length></Length>
+        <GuiLabels guid="cf3b3ad0-7983-4bbc-8505-1d66f0d6a65a">
+            <Label language="EN">MDN Response</Label>
+            <Label language="DE">MDN Response</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>WarningMDN</Value>
+                <GuiLabels guid="91a23676-5aae-4e10-a26b-d1fe0a409e07">
+                    <Label language="EN">Warning</Label>
+                    <Label language="DE">Warning</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>ErrorMDN</Value>
+                <GuiLabels guid="a4d8c82a-8d6f-4dbf-82bd-551b5a78839b">
+                    <Label language="EN">Error</Label>
+                    <Label language="DE">Error</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+	<AttributeTableMetadata>
+	    <Name>clientCertificates</Name>
+	    <Usage>true</Usage>
+	    <HelpService>
+			<HelpServiceName>certificateLookupService</HelpServiceName>
+		</HelpService>
+	    <GuiLabels guid="01c2bd59-8dd1-4efb-b795-869851eb979b">
+	        <Label language="EN">Client Certificate Authorization</Label>
+	        <Label language="DE">Client Certificate Authorization</Label>
+	    </GuiLabels>
+	    <AttributeReference>
+	        <ReferenceName>clientCertificate.subjectDN</ReferenceName>
+	    </AttributeReference>
+	    <AttributeReference>
+	        <ReferenceName>clientCertificate.issuerDN</ReferenceName>
+	    </AttributeReference>
+	</AttributeTableMetadata>
+	<AttributeMetadata>
+    	<Name>clientCertificate.subjectDN</Name>
+    	<Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+    	<GuiLabels guid="0b7dc876-3ec2-4175-bb43-76a8d3d1d82d">
+        	<Label language="EN">Subject DN</Label>
+        	<Label language="DE">Subject DN</Label>
+    	</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+    	<Name>clientCertificate.issuerDN</Name>
+    	<Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+    	<GuiLabels guid="9a39abed-a80c-4bf8-a48d-cb6a32d5d767">
+        	<Label language="EN">Issuer DN</Label>
+        	<Label language="DE">Issuer DN</Label>
+    	</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+        <Name>urlParametersPattern</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <GuiLabels guid="16b658ea-c2c6-45a1-b167-e7dc521a233d">
+            <Label language="EN">URL Parameters Pattern</Label>
+            <Label language="DE">URL Parameters Pattern</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>customHeadersPattern</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <GuiLabels guid="c2b1ebb0-919e-44f6-be4b-66c285c6f023">
+            <Label language="EN">Custom Headers Pattern</Label>
+            <Label language="DE">Custom Headers Pattern</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>signatureEncoding</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>binary</Default>
+        <Length></Length>
+        <GuiLabels guid="b87b0370-25d8-493a-8faf-343d3a54c8a4">
+            <Label language="EN">Signature Encoding</Label>
+            <Label language="DE">Signature Encoding</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>binary</Value>
+                <GuiLabels guid="e27a7e00-5e5d-47e9-bc56-f532e455a0f1">
+                    <Label language="EN">binary</Label>
+                    <Label language="DE">binary</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>base64</Value>
+                <GuiLabels guid="c5e71201-68ea-40ab-91d7-6017146ad414">
+                    <Label language="EN">base64</Label>
+                    <Label language="DE">base64</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>messageEncoding</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>binary</Default>
+        <Length></Length>
+        <GuiLabels guid="5405f2a0-abae-407d-ba83-e58f71378e8e">
+            <Label language="EN">Content Transfer Encoding</Label>
+            <Label language="DE">Content Transfer Encoding</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>binary</Value>
+                <GuiLabels guid="fe8d2ff5-2bb0-4db5-88fc-24e0662ad3bf">
+                    <Label language="EN">binary</Label>
+                    <Label language="DE">binary</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>base64</Value>
+                <GuiLabels guid="8c54e60f-b287-474b-8aa3-75fe6a31cb04">
+                    <Label language="EN">base64</Label>
+                    <Label language="DE">base64</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+	<AttributeMetadata>
+        <Name>senderAuthType</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>RoleBased</Default>
+        <Length></Length>
+        <GuiLabels guid="b7b5924e-bce6-4b6b-b206-b5f7ea57ad07">
+            <Label language="EN">Authorization</Label>
+            <Label language="DE">Authorization</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>RoleBased</Value>
+                <GuiLabels guid="6db9b216-fb34-46ba-8dcb-f9e8caca9f99">
+                    <Label language="EN">User Role</Label>
+                    <Label language="DE">User Role</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>ClientCertificate</Value>
+                <GuiLabels guid="1b0ff5f1-7604-49e7-9f10-e16f6a7e67b2">
+                    <Label language="EN">Client Certificate</Label>
+                    <Label language="DE">Client Certificate</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+</ComponentMetadata>

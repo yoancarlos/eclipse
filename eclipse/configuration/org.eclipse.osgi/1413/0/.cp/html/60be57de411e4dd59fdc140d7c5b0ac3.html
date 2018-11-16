@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=1594363191011985"/>
+<title>Signing the Message Content with XML Digital Signature</title>
+</head>
+<body id="loio60be57de411e4dd59fdc140d7c5b0ac3">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Signing the Message Content with XML Digital Signature</h1>
+<div class="body taskbody"><p class="shortdesc"/>
+<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>You sign with an XML digital signature to ensure authenticity and data integrity
+			while sending an XML resource to the participants on cloud. The two types of XML digital
+			signatures that we support are mentioned below: <ul class="ul" id="loio60be57de411e4dd59fdc140d7c5b0ac3__ul_n55_lxr_vk"><li class="li"><strong class="ph b">Enveloping Signature</strong>: In enveloping signature, the input message body is
+					signed and embedded within the signature. This means the message body is wrapped
+					by the 'Object' element, where 'Object' is a child element of the 'Signature'
+					element. <div class="note sap-example example"><span class="exampletitle">Example</span> A template of the enveloping signature shown below
+						describes the structure that XML Signature implementation supports. ("?"
+						denotes zero or one occurrence, the brackets [] denotes variables whose
+						values can
+						vary).<pre class="pre codeblock">&lt;Signature Id="[signature_id]"&gt;
+     &lt;SignedInfo&gt;
+            &lt;CanonicalizationMethod&gt;
+            &lt;SignatureMethod&gt;
+            &lt;Reference URI="#[object_id]" type="[optional_type_value]"&gt;
+                  &lt;Transform Algorithm="canonicalization method"&gt;
+                  &lt;DigestMethod&gt;
+                  &lt;DigestValue&gt;
+            &lt;/Reference&gt;
+            (&lt;Reference URI="#[keyinfo_id]"&gt;
+                  &lt;Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/&gt;
+                  &lt;DigestMethod&gt;
+                  &lt;DigestValue&gt;
+            &lt;/Reference&gt;)?
+     &lt;/SignedInfo&gt;
+     &lt;SignatureValue&gt;
+     (&lt;KeyInfo Id="[keyinfo_id]"&gt;)?
+     &lt;Object Id="[object_id]"/&gt;
+&lt;/Signature&gt;
+</pre>
+</div>
+<div class="note note"><span class="notetitle">Note</span> The
+						optional KeyInfo element contains the X.509 certificate chain corresponding
+						to the public key.</div>
+</li>
+<li class="li"><strong class="ph b">Enveloped Signature</strong>: In enveloped signature, the digital signature is
+					embedded within the XML message to be signed. This means, the XML message
+					contains the 'Signature' element as one of its child element. The 'Signature'
+					element contains information such as:<ul class="ul" id="loio60be57de411e4dd59fdc140d7c5b0ac3__ul_epq_kk1_wk"><li class="li">Algorithms to be used to obtain digest value</li>
+<li class="li">Reference with empty URI, which means the entire XML resource</li>
+<li class="li">Optional reference to the KeyInfo element</li>
+</ul>
+<div class="note sap-example example"><span class="exampletitle">Example</span> A template of the enveloped signature shown below describes
+						the structure that XML Signature implementation supports. ("?" denotes zero
+						or one occurrence, the brackets [] denotes variables whose values can
+						vary):</div>
+<pre class="pre codeblock">&lt;[parent element]&gt;
+      ...
+      &lt;Signature Id="[signature_id]"&gt;
+          &lt;SignedInfo&gt;
+                &lt;CanonicalizationMethod&gt;
+                &lt;SignatureMethod&gt;
+                &lt;Reference URI="" type="[optional_type_value]"&gt;
+                      &lt;Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/&gt;
+                      &lt;Transform Algorithm=[canonicalization method]/&gt;
+                      &lt;DigestMethod&gt;
+                      &lt;DigestValue&gt;
+                &lt;/Reference&gt;
+                (&lt;Reference URI="#[keyinfo_Id]"&gt;
+                      &lt;Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/&gt;
+                      &lt;DigestMethod&gt;
+                      &lt;DigestValue&gt;
+                &lt;/Reference&gt;)?
+         &lt;/SignedInfo&gt;
+         &lt;SignatureValue&gt;
+         (&lt;KeyInfo Id="[keyinfo_id]"&gt;)?
+     &lt;/Signature&gt;
+&lt;/[parent element]&gt;
+</pre>
+</li>
+</ul>
+<div class="sectiondiv"><strong class="ph b">Working of XML Digital Signer</strong><div class="p">The sender canonicalizes the XML
+					resource to be signed, based on the specified transform algorithm. Using a
+					digest algorithm on the canonicalized XML resource, a digest value is obtained.
+					This digest value is included within the 'Reference' element of the 'SignedInfo'
+					block. Then, a digest algorithm, as specified in signature algorithm, is used on
+					the canonicalized SignedInfo. The obtained digest value is encrypted using the
+					sender's private key. <div class="note note"><span class="notetitle">Note</span> Canonicalization transforms the XML document to a
+						standardized format, for example, canonicalization removes whitespace within
+						tags, uses particular character encoding, sorts namespace references and
+						eliminates redundant ones, removes XML and DOCTYPE declarations, and
+						transforms relative URIs into absolute URIs. The representation of the XML
+						data is used to determine if two XML documents are identical. Even a slight
+						variation in white spaces results in a different digest for an XML
+						document.</div>
+</div>
+</div></div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio60be57de411e4dd59fdc140d7c5b0ac3__steps_qhz_drp_vk"><li class="li step stepexpand"><span class="ph cmd"> In the <span class="keyword uilabel">Model Configuration</span> editor, select
+						<span class="keyword uilabel">Signer</span> element and from the context menu, select
+						<span class="keyword uilabel">Switch to XML Digital Signer</span> option.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">To configure the signer with a saved configuration that is available as a
+					template, choose <span class="ph uicontrol">Load Element Template</span> from the context
+					menu of the <span class="keyword uilabel">Signer</span> element.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">In the <span class="keyword uilabel">XML Digital Signer</span> tab page and
+						<span class="keyword uilabel">Advanced</span> tab page, enter the parameters to create XML
+					digital signature for the incoming message.</span> 
+					<div class="note note"><span class="notetitle">Note</span> If you want to work with PKCS7/CMS Signer, then choose <span class="keyword uilabel">Switch to
+							PKCS7/CMS Signer</span> option from the context menu.</div>
+
+				</li>
+<li class="li step stepexpand"><span class="ph cmd">Save the changes.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">To save the configurations of the signer as a template, choose <span class="keyword uilabel">Save as
+						Template</span> from the context menu of the <span class="keyword uilabel">Signer</span>
+					element.</span> 
+					<div class="note note"><span class="notetitle">Note</span> When you save the configuration of the <span class="keyword uilabel">Signer</span> element
+						as a template, the tool stores the template in the workspace as
+						&lt;ElementTemplate&gt;.fst. </div>
+
+				</li>
+</ol>
+</div>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring Message Storage at a Process Step</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio9247e59fd76c441592da5724dc890f65">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring Message Storage at a Process Step</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loio9247e59fd76c441592da5724dc890f65__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>You use this task to configure a process step to store
+			a message payload so that you can access the stored message and analyze it at a later
+			point in time. <p class="p">In the integration flow, you mark a process step for persistence by
+				specifying a unique step ID, which can be a descriptive name or a step number. For
+				example, a step ID configured after a mapping step could be
+					<em class="ph i">MessageStoredAfterMapping</em>. </p>
+<p class="p">At runtime, the runtime node of the
+				cluster stores information, such as GUID, MPL GUID, tenant ID, timestamp, or
+				payload, for the messages at the process steps that have been marked for
+				persistence. </p>
+<p class="p">The message storage feature is useful for the following
+				cases</p>
+<ul class="ul" id="loio9247e59fd76c441592da5724dc890f65__ul_e2p_dqf_l3">
+				<li class="li"><strong class="ph b">Auditing</strong>: The SaaS Admin can use this feature to analyze messages that
+					have been processed.<div class="note note" id="loio9247e59fd76c441592da5724dc890f65__note_N1002F_N10029_N10025_N10014_N10011_N10001"><span class="notetitle">Note</span> Messages can be stored in the runtime node for 90 days, after which the
+						messages are automatically deleted.</div>
+</li>
+
+				<li class="li">
+					<strong class="ph b">Providing access to data owned by the customer </strong>: Since messages are
+					processed on behalf of the customer, you might need to access the customer-owned
+					data after the messages have been processed to provide it to the customer.</li>
+
+			</ul>
+</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loio9247e59fd76c441592da5724dc890f65__step_N1001C_N10019_N10011_N10001">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw on the <span class="keyword uilabel">Model Configuration</span> editor
+					page.</span>
+			</li>
+<li class="li step stepexpand" id="loio9247e59fd76c441592da5724dc890f65__step_N10029_N10019_N10011_N10001">
+				<span class="ph cmd">Determine if you want to store the message payload before or after a process
+					step.</span>
+				<div class="itemgroup info">For example, you can store the message payload before and after a mapping step, so you add
+					Persist Message at the two points.</div>
+			</li>
+<li class="li step stepexpand" id="loio9247e59fd76c441592da5724dc890f65__step_N10032_N10019_N10011_N10001">
+				<span class="ph cmd">In the <span class="keyword uilabel">Model Configuration</span> editor, right-click the connection at the
+					determined point within the pool and choose the <span class="ph uicontrol">Add Persist
+						Message</span> option.</span>
+			</li>
+<li class="li step stepexpand" id="loio9247e59fd76c441592da5724dc890f65__step_N10043_N10019_N10011_N10001">
+				<span class="ph cmd">In the <span class="keyword uilabel">Model Configuration</span> editor, select the Persist Message
+					element.</span>
+			</li>
+<li class="li step stepexpand" id="loio9247e59fd76c441592da5724dc890f65__step_N10050_N10019_N10011_N10001">
+				<span class="ph cmd">In the <span class="keyword uilabel">Properties</span> view, retain the auto-generated step ID for the
+					process step, or edit it if required.</span>
+			</li>
+<li class="li step stepexpand" id="loio9247e59fd76c441592da5724dc890f65__step_N10085_N1003D_N10011_N10001x">
+				<span class="ph cmd">If you want to encrypt the message payload that is stored at the step ID,
+					choose <span class="keyword uilabel">Encrypt the stored message payload</span>.</span>
+				
+			</li>
+<li class="li step stepexpand" id="loio9247e59fd76c441592da5724dc890f65__step_N10085_N1003D_N10011_N10001">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

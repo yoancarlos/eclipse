@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Gateway/version::1.1.0" ComponentName="sap:Gateway" UIElementType="Flowstep">
+	
+	<Variant VariantId="ctype::FlowstepVariant/cname::SequentialMulticast/version::1.1.0" VariantName="SequentialMulticast" VariantDisplayName="Sequential Multicast">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="1" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="n" Scope="insidepool" MessageCardinality="n" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+			<Schema />
+		</Content>
+		</OutputContent>
+		<Tab id="SequentialGateway">
+			<GuiLabels>
+				<Label language="EN">Routing Sequence</Label>
+			</GuiLabels>
+			<AttributeReference>
+					<ReferenceName>routingSequenceTable</ReferenceName>
+			</AttributeReference>
+		</Tab>
+	</Variant>
+	
+	<Variant VariantId="ctype::FlowstepVariant/cname::SequentialMulticast/version::1.0.0" VariantName="SequentialMulticast" VariantDisplayName="Sequential Multicast">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="1" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="n" Scope="insidepool" MessageCardinality="n" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+			<Schema />
+		</Content>
+		</OutputContent>
+		<Tab id="SequentialGateway">
+			<GuiLabels>
+				<Label language="EN">Routing Sequence</Label>
+			</GuiLabels>
+			<AttributeReference>
+					<ReferenceName>routingSequenceTable</ReferenceName>
+			</AttributeReference>
+		</Tab>
+	</Variant>
+	
+	<AttributeMetadata>
+		<Name>branchName</Name>
+		<Usage>required</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Sequence Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	
+	
+	<AttributeTableMetadata modifiable = "false" reorderable = "true" selectionMode = "single">
+	<Name>routingSequenceTable</Name>
+		<GuiLabels>
+			<Label language="EN">Specify the sequence of execution of branches</Label>
+		</GuiLabels>
+		<AttributeReference>
+			<ReferenceName>branchName</ReferenceName>
+		</AttributeReference>		
+	</AttributeTableMetadata>
+		
+</ComponentMetadata>

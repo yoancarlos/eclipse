@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You use this design time test to validate correctness of mappings with the given test inputs."/>
+<meta name="description" content="You use this design time test to validate correctness of mappings with the given test inputs."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Test Message Mapping</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio271810669c5a4c5e87e535055cc34434">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Test Message Mapping</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You use this design time test to validate correctness of mappings with the given test
+		inputs.</p>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<p class="p">You have ensured that your message mapping is complete, that is, your sources are
+				mapped to your targets.</p>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">When you create message mappings, you need to check whether or not they function as expected.
+				By simulating a mapping, you can verify the correctness and functioning of them.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd"> Launch <span class="ph pname">SAP HANA Cloud Integration Web application</span> by accessing the URL
+					provided by SAP.</span>
+				<div class="itemgroup info">
+					<div class="p">
+						<div class="note note"><span class="notetitle">Note</span> 
+							<p class="p">Browsers that support the application are Internet Explorer 10, Google Chrome, and
+								Safari.</p>
+
+						</div>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd"> Choose <img class="image" id="loio271810669c5a4c5e87e535055cc34434__image_nhs_rck_y4" src="loio6c58f8ed6fd046d2b6091877b6577925_LowRes.png"/>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Design</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Integration Package</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> tab page.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the <span class="ph uicontrol">Integration Flow</span>.</span>
+				<div class="itemgroup stepresult">
+					<p class="p">The <span class="ph uicontrol">Integration Flow</span> page opens in Read-only mode.</p>
+
+					<div class="note note"><span class="notetitle">Note</span> 
+						<p class="p">You can edit the integration flow only if you choose <strong class="ph b">Edit</strong>.</p>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd"> If you want to edit the mapping, select <span class="ph uicontrol">Edit</span>.</span>
+				<div class="itemgroup stepresult">
+					<p class="p">The <span class="ph uicontrol">Integration Flow</span> page opens in edit mode.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd"> In the <span class="ph uicontrol">Integration Flow</span> page, select the mapping that you want to
+					test.</span>
+				<div class="itemgroup stepresult">
+					<p class="p">The name of the mapping is displayed under the <strong class="ph b">Mapping </strong>section.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to test the mapping, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Simulate</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Upload Input</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd"> Select the input XML file that you want to test from the file system, and choose
+						<span class="ph uicontrol">Open</span>.</span>
+				<div class="itemgroup stepresult">
+					<p class="p">The input XML file data is displayed on the source message table.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd"> Choose <span class="ph uicontrol">Test</span>.</span>
+				<div class="itemgroup stepresult">
+					<p class="p">The output XML file data is displayed on the target message table.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to download the output test XML, choose
+						<span class="ph uicontrol">Download</span>.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio271810669c5a4c5e87e535055cc34434__ul_pnn_2yv_2r">
+							<li class="li">
+								<p class="p">You do not have to save the mapping to perform simulation.</p>
+
+							</li>
+
+							<li class="li">
+								<p class="p">You can also a test a message mapping with scripts.</p>
+
+							</li>
+
+							<li class="li">You can also modify any of the following operations in the graphical editor:<ul class="ul" id="loio271810669c5a4c5e87e535055cc34434__ul_qnn_2yv_2r">
+									<li class="li">
+										<p class="p">New function</p>
+
+									</li>
+
+									<li class="li">
+										<p class="p">Properties</p>
+
+									</li>
+
+								</ul>
+Then, you can revalidate if the mapping is working
+								correctly.</li>
+
+							<li class="li">If you test an incomplete mapping, then you get a validation
+								error.</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

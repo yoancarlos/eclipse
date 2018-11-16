@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=17457658912726948"/>
+<title>Verifying the PKCS7/CMS Signature</title>
+</head>
+<body id="loiocf6053e9d9854b3fafbb7e7807e059da">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Verifying the PKCS7/CMS Signature</h1>
+<div class="body taskbody"><p class="shortdesc"/>
+<div class="section context" id="loiocf6053e9d9854b3fafbb7e7807e059da__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><p class="p">You perform this task to ensure that the
+				signed message received over the cloud is authentic.</p>
+<div class="sectiondiv"><strong class="ph b">Working of
+					PKCS7/CMS Verifier</strong><div class="p">In the integration flow model, you configure the
+						<span class="keyword uilabel">Verifier</span> by providing information about the public key
+					alias, and whether the message header or body is Base64 encoded depending on
+					where the Signed Data is placed. For example, consider the two cases:<ol class="ol" id="loiocf6053e9d9854b3fafbb7e7807e059da__ol_n5s_g14_wk"><li class="li">If the Signed Data contains the original content, then in the Verifier,
+							you provide the Signed Data in the message body.</li>
+<li class="li">If the Signed Data does not contain the original content, then in the
+							Verifier, you provide the Signed Data in the header
+								<kbd class="ph userinput">SapCmsSignedData</kbd> and the original content in
+							the message body.</li>
+</ol>
+</div>
+<p class="p"> The Verifier uses the public key alias to obtain the public keys of
+					type DSA or RSA, used to to decrypt the message digest. In this way the
+					authenticity of the participant, who signed the message, is verified. If the
+					verification is not successful, the verifier informs by raising
+				exceptions.</p>
+</div><div class="note note" id="loiocf6053e9d9854b3fafbb7e7807e059da__note_N1001C_N10014_N10011_N10001"><span class="notetitle">Note</span> Exceptions
+				that occur during runtime are displayed in the <span class="keyword uilabel">Message Processing
+					Log</span> view of the <span class="keyword uilabel">Operations for SAP HANA Cloud
+					Integration</span> perspective.</div>
+</div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loiocf6053e9d9854b3fafbb7e7807e059da__steps_lzm_3qs_vk"><li class="li step stepexpand" id="loiocf6053e9d9854b3fafbb7e7807e059da__step_N1002D_N1002A_N10011_N10001"><span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="keyword uilabel">Model
+						Configuration</span> editor. </span></li>
+<li class="li step stepexpand" id="loiocf6053e9d9854b3fafbb7e7807e059da__step_N1003A_N1002A_N10011_N10001"><span class="ph cmd">Right-click on a connection within the pool and choose<span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Add Security Element</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Signature Verifier</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span></li>
+<li class="li step stepexpand" id="loiocf6053e9d9854b3fafbb7e7807e059da__step_N1004F_N1002A_N10011_N10001"><span class="ph cmd"> In the <span class="keyword uilabel">Model Configuration</span> editor, select
+						<span class="keyword uilabel">Verifier</span>.</span> 
+					<div class="note note"><span class="notetitle">Note</span> By default, the <span class="keyword uilabel">Verifier</span> is of type PKCS7/CMS. If you
+						want to work with XML Signature Verifier, then choose <span class="keyword uilabel">Switch to XML
+							Signer Verifier</span> option from the context menu.</div>
+
+				</li>
+<li class="li step stepexpand" id="loiocf6053e9d9854b3fafbb7e7807e059da__step_N10060_N1002A_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Properties</span> view, enter the details to verify the
+					signatures of the incoming message.</span></li>
+<li class="li step stepexpand" id="loiocf6053e9d9854b3fafbb7e7807e059da__step_N1006D_N1002A_N10011_N10001"><span class="ph cmd">Save the changes.</span></li>
+</ol>
+</div>
+</div></div>
+</body>
+</html>

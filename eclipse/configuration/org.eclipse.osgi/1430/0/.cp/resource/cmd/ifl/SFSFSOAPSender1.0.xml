@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata
+	ComponentId="ctype::Adapter/cname::sap:SuccessFactors/version::1.0"
+	ComponentName="sap:SuccessFactors" UIElementType="Adapter" IsExtension="false"
+	IsFinal="true" IsPreserves="true" MetadataVersion="2.0">
+	<!-- Version 1.1 CMD variants version starts -->
+	<Variant
+		VariantId="ctype::AdapterVariant/cname::SuccessFactors/tp::HTTP/mp::SOAP/direction::Sender/version::1.0.1"
+		VariantName="SFSF Soap Sender" supportsPolling="true" MetadataVersion="2.0" useDefaultScheduler="true">
+		<InputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>None</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema />
+			</Content>
+		</OutputContent>
+		<Tab id="tabProcessing">
+			<GuiLabels>
+				<Label language="EN">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id="connectionDetails">
+				<GuiLabels>
+					<Label language="EN">Connection Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>sfsfSOAPSenderDataCenterUrl</ReferenceName>
+					<description>SuccessFactors DataCentre using which request is sent to the server</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>address</ReferenceName>
+					<description>Address</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>urlSuffixSOAP</ReferenceName>
+					<description>Address Suffix for SOAP protocol</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>alias</ReferenceName>
+					<description>Enter the Credential Name to connect to the
+						SuccessFactors system as deployed in the tenant using Operations
+						Wizard</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>proxyType</ReferenceName>
+					<description>Proxy service using which request is sent to the
+						server</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>proxyHost</ReferenceName>
+					<EditCondition>
+						<AttributeName>proxyType</AttributeName>
+						<AttributeValue>manual</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>proxyPort</ReferenceName>
+					<EditCondition>
+						<AttributeName>proxyType</AttributeName>
+						<AttributeValue>manual</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+			</AttributeGroup>
+			<AttributeGroup id="processingDetails">
+				<GuiLabels>
+					<Label language="EN">Processing Details</Label>
+				</GuiLabels>
+
+				<AttributeReference>
+					<ReferenceName>queryType</ReferenceName>
+					<description>Type of SuccessFactors query</description>
+				</AttributeReference>
+
+				<AttributeReference>
+					<ReferenceName>action</ReferenceName>
+					<description>Choose Model Operation to specify the Entity,
+						Operation Type and Field List and Generate the XSD</description>
+				</AttributeReference>
+
+				<AttributeReference>
+					<ReferenceName>sfsfSoapAPIParams</ReferenceName>
+					<description>Enter parameter key and value in the format key=value
+						separated by semicolon; for example
+						externalKeyMapping=costCenter;processInactiveEmployees=true
+					</description>
+					<EditCondition>
+						<AttributeName>queryType</AttributeName>
+						<AttributeValue>querySync</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+
+				<AttributeReference>
+					<ReferenceName>pagesize</ReferenceName>
+					<description>Number of records to be fetched in one cycle.
+					</description>
+				</AttributeReference>
+
+				<AttributeReference>
+					<ReferenceName>timeOut</ReferenceName>
+					<description>Number of minutes system waits for Operation to
+						complete</description>
+					<EditCondition>
+						<AttributeName>queryType</AttributeName>
+						<AttributeValue>queryAsync</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+
+				<!-- <AttributeReference> <ReferenceName>scheduleKey</ReferenceName> 
+					<EditCondition> <AttributeName>dummy</AttributeName> <AttributeValue>213</AttributeValue> 
+					</EditCondition> </AttributeReference> -->
+				<AttributeReference>
+					<ReferenceName>senderReference</ReferenceName>
+					<EditCondition>
+						<AttributeName>dummy</AttributeName>
+						<AttributeValue>1234</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<AllowedHeaders />
+		<ReferencedComponents />
+	</Variant>
+	<AttributeMetadata>
+		<Name>address</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Address</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>urlSuffixSOAP</Name>
+		<DataType>xsd:string</DataType>
+		<Default>/sfapi/v1/soap</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Address Suffix</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>alias</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Credential Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>proxyType</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>default</Default>
+		<Length />
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Proxy Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>default</Value>
+				<GuiLabels>
+					<Label language="EN">Internet</Label>
+				</GuiLabels>
+			</FixedValue>
+			<NotCondition>
+				<EditCondition>
+					<AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual
+						Proxy Connectivity)</AttributeName>
+					<AttributeValue>true</AttributeValue>
+				</EditCondition>
+			</NotCondition>
+		</FixedValues>
+		<FixedValues>
+			<FixedValue>
+				<Value>default</Value>
+				<GuiLabels>
+					<Label language="EN">Internet</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>manual</Value>
+				<GuiLabels>
+					<Label language="EN">Manual</Label>
+				</GuiLabels>
+			</FixedValue>
+			<EditCondition>
+				<AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual
+					Proxy Connectivity)</AttributeName>
+				<AttributeValue>true</AttributeValue>
+			</EditCondition>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>proxyHost</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Length />
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Proxy Host</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>proxyPort</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:integer</DataType>
+		<Length />
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Proxy Port</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<!-- Query Type -->
+	<AttributeMetadata>
+		<Name>queryType</Name>
+		<Usage />
+		<DataType>xsd:string</DataType>
+		<Default>querySync</Default>
+		<Length />
+
+		<GuiLabels>
+			<Label language="EN">Call Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>querySync</Value>
+				<GuiLabels>
+					<Label language="EN">Synchronous</Label>
+				</GuiLabels>
+			</FixedValue>
+
+			<FixedValue>
+				<Value>queryAsync</Value>
+				<GuiLabels>
+					<Label language="EN">Asynchronous</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+		<Name>sfsfSOAPSenderDataCenterUrl</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>Other</Default>
+		<Length/>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">SFSF Data Center</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>USA_Sales_Demo_Std</Value>
+				<GuiLabels>
+					<Label language="EN">USA Sales Demo Standard (AZ)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>USA_Prod_Std</Value>
+				<GuiLabels>
+					<Label language="EN">USA Production Standard (AZ)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>USA_Sales_Demo_Premium</Value>
+				<GuiLabels>
+					<Label language="EN">USA Sales Demo Premium (Ashburn)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>USA_Prod_Premium</Value>
+				<GuiLabels>
+					<Label language="EN">USA Production Premium (Ashburn)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>EMEA_Prod_Std</Value>
+				<GuiLabels>
+					<Label language="EN">EMEA Production Standard (Amsterdam ASM-5)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>EMEA_Prod_Premium</Value>
+				<GuiLabels>
+					<Label language="EN">EMEA Production Premium (Amsterdam ASM-2)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>EMEA_Sales_demo</Value>
+				<GuiLabels>
+					<Label language="EN">EMEA Sales Demo (Amsterdam ASM-2)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>EMEA_Prod_Std_Rot</Value>
+				<GuiLabels>
+					<Label language="EN">EMEA Production Standard (Rot)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>APJ_Prod_Premium</Value>
+				<GuiLabels>
+					<Label language="EN">APJ Production Premium (Sydney)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Other</Value>
+				<GuiLabels>
+					<Label language="EN">Other</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+
+	<AttributeMetadata>
+		<Name>action</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<MultiLine>true</MultiLine>
+		<Default>Entity:&#10;Operation:&#10;Query:</Default>
+		<isparameterized>false</isparameterized>
+
+		<HelpService>
+			<HelpServiceName>queryEditorF4Help</HelpServiceName>
+			<HelpServiceQueryAttributes>
+				<HelpServiceQueryAttribute>
+					<Name>ServiceName</Name>
+					<Value>Model Operation...</Value>
+				</HelpServiceQueryAttribute>
+			</HelpServiceQueryAttributes>
+		</HelpService>
+
+		<GuiLabels>
+			<Label language="EN">Operation Details</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+
+	<AttributeMetadata>
+		<Name>sfsfSoapAPIParams</Name>
+		<DataType>xsd:string</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Parameters</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>pagesize</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>200</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Page Size</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>batchProcess</Name>
+		<DataType>xsd:boolean</DataType>
+		<Default>0</Default>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Process in batches</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>timeOut</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>1</Default>
+		<GuiLabels>
+			<Label language="EN">Timeout (in min)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>scheduleKey</Name>
+		<Usage>required</Usage>
+		<DataType>custom:schedule</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Schedule</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>senderReference</Name>
+		<DataType>xsd:string</DataType>
+		<Default>isSender</Default>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">senderRef</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+</ComponentMetadata>

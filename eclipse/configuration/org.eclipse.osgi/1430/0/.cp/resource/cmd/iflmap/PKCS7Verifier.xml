@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::VerifySign/version::1.0.5" ComponentName="sap:VerifySign" UIElementType="Flowstep">
+    <Variant VariantId="ctype::FlowstepVariant/cname::VerifySign/version::1.0.5" VariantDisplayName="PKCS7 Signature Verifier" VariantName="PKCS7Verifier" AttachmentBehavior="Preserve">
+        <!-- allowed input content type -->
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality = "" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema/>
+            </Content>
+        </InputContent>
+        <!-- allowed output content type -->
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality = "" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema/>
+            </Content>
+        </OutputContent>
+        <!-- Attribute Groupings and Restriction -->
+        <Tab id="iflow.verify.sign.tab">
+            <GuiLabels>
+                <Label language="EN">General</Label>
+            </GuiLabels>
+            <AttributeGroup id="General_Details">
+                <AttributeReference>
+                    <ReferenceName>Activity_Name</ReferenceName>
+                    <Restriction>^[a-zA-Z][a-zA-Z0-9_ ]{3,30}$</Restriction>
+                    <description>Enter a name for the Verifier step. Begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30.</description>
+                    <ErrorMessage>Name not specified for Verifier step</ErrorMessage>
+                    <ErrorMessage>Name should begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30</ErrorMessage>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>isHeaderBase64Encoded</ReferenceName>
+                    <description>Select this option to verify if the Signed Data encoded in Base 64 is included in the header</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>isBodyBase64Encoded</ReferenceName>
+                    <description>Select this option to verify if the Signed Data encoded in Base 64 is included in the message body</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>publicKeyAliases</ReferenceName>
+                    <description>Enter an alias name to select a public key and corresponding certificate from the keystore</description>
+                    <ErrorMessage>Public Key Alias not specified for Verifier step</ErrorMessage>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+
+        <!-- additional information -->
+        <AllowedHeaders/>
+        <ReferencedComponents/>
+    </Variant>
+
+    <AttributeMetadata>
+        <Name>Activity_Name</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <AutoGenerate>
+            <Prefix>PKCS7 Signature Verifier</Prefix>
+        </AutoGenerate>
+        <Default>PKCS7 Signature Verifier</Default><!-- until AutoGenerate works use default -->
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>isHeaderBase64Encoded</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <GuiLabels>
+            <Label language="EN">Header is Base64 Encoded</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>isBodyBase64Encoded</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <GuiLabels>
+            <Label language="EN">Body is Base64 Encoded</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>publicKeyAlias</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>publicKeyAliases</Name>
+        <Usage>required</Usage>
+        <GuiLabels>
+            <Label language="EN">Public Key Aliases</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>publicKeyAlias</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    
+</ComponentMetadata>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure a Channel with LDAP Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio06a753f90fd64272af1692603cdd3b9e">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure a Channel with LDAP Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loio06a753f90fd64272af1692603cdd3b9e__ul_gl4_2kx_sx">
+					<li class="li">
+						<p class="p">• You have assigned the LDAP adapter to the receiver channel in an
+							integration flow. For more information, see <a class="xref" href="871498c12fe94b5395526bd5b55a9ca9.html">Assign Adapter to Communication Channel</a></p>
+
+					</li>
+
+					<li class="li">You are editing the integration flow.</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">The LDAP adapter enables you to communicate with systems that expose data through LDAP
+				service. </p>
+
+			<p class="p">In case you have input messages in different formats, you need to use a mapping step
+				to create a target payload that can be recognized by the LDAP adapter. You can use
+				this schema as a template for the target in mapping step.</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;schema xmlns="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;element name="Schema"&gt;
+        &lt;complexType&gt;
+            &lt;sequence&gt;
+            &lt;element name="DistinguishedName" maxOccurs="1" minOccurs="1" type="string"/&gt;
+            &lt;element name="ObjectClass" maxOccurs="1" minOccurs="0" type="string"/&gt;
+                &lt;element name="Attributes" maxOccurs="1" minOccurs="1"&gt;
+                    &lt;complexType&gt;
+                        &lt;sequence&gt;
+                            &lt;element name="cn" type="string" maxOccurs="1" minOccurs="0"&gt;&lt;/element&gt;
+                            &lt;element name="sAMAccountName" type="string" maxOccurs="1" minOccurs="1"&gt;&lt;/element&gt;
+                            &lt;element name="sn" type="string" maxOccurs="1" minOccurs="0"&gt;&lt;/element&gt;
+                            &lt;element name="givenName" type="string" maxOccurs="1" minOccurs="0"&gt;&lt;/element&gt;
+                            &lt;element name="displayName" type="string" maxOccurs="1" minOccurs="0"&gt;&lt;/element&gt;
+                            &lt;element name="name" type="string" maxOccurs="1" minOccurs="0"&gt;&lt;/element&gt;
+                        &lt;/sequence&gt;
+                    &lt;/complexType&gt;
+                &lt;/element&gt;
+            &lt;/sequence&gt;
+        &lt;/complexType&gt;
+    &lt;/element&gt;
+&lt;/schema&gt;
+</pre></div>
+
+			<p class="p">The LDAP adapter is available only in the receiver channel.</p>
+
+			<div class="note note"><span class="notetitle">Note</span> You cannot update multiple records in a single processing cycle. You
+				can only perform a given operation on one record at a time.</div>
+
+			<div class="note remember"><span class="remembertitle">Remember</span> 
+				<p class="p">You must use <span class="ph uicontrol">SAP Cloud Connector</span> for connecting to an LDAP
+					service using the LDAP adapter. LDAP adapter supports version 2.9 or higher
+					versions of the cloud connector.</p>
+
+				<p class="p">For more information on using the <span class="ph uicontrol">SAP Cloud Connector</span>, see <a class="xref" href="https://help.hana.ondemand.com/help/frameset.htm?e6c7616abb5710148cfcf3e75d96d596.html" target="_blank" alt="https://help.hana.ondemand.com/help/frameset.htm?e6c7616abb5710148cfcf3e75d96d596.html" title="https://help.hana.ondemand.com/help/frameset.htm?e6c7616abb5710148cfcf3e75d96d596.html"><span class="ph pname">SAP Cloud Connector</span></a>.</p>
+
+			</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step">
+				<span class="ph cmd">Choose the receiver channel in the integration flow.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">In <span class="ph uicontrol">General</span> tab, enter name and description in the
+					relevant fields, if required. </span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">MULTIDRAGChoose <span class="ph uicontrol">Processing</span>.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Provide values in fields based on description in table.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio06a753f90fd64272af1692603cdd3b9e__choicetable_vz3_ykx_sx">
+<thead><tr><th valign="bottom" align="left" id="d76356e108-option">
+							<p class="p">Field</p>
+
+						</th>
+<th valign="bottom" align="left" id="d76356e108-desc">
+							<p class="p">Description</p>
+
+						</th></tr></thead>
+<tbody>
+					
+					<tr class="strow chrow">
+						<td valign="top" headers="d76356e108-option" id="d76356e127" class="stentry choption" width="50%"><strong>
+							<p class="p">Address</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d76356e108-desc d76356e127" class="stentry chdesc" width="50%">
+							<p class="p">Enter the URL of the LDAP directory service that you are connecting
+								to</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d76356e108-option" id="d76356e142" class="stentry choption" width="50%"><strong>
+							<p class="p">Proxy Type</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d76356e108-desc d76356e142" class="stentry chdesc" width="50%">
+							<p class="p">Select the proxy type that you want to use. Currently, only On
+								Premise is supported. </p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d76356e108-option" id="d76356e157" class="stentry choption" width="50%"><strong>
+							<p class="p">Authentication</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d76356e108-desc d76356e157" class="stentry chdesc" width="50%">
+							<p class="p">Select the authentication type that you want to use. Currently, only
+								Simple is supported. </p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d76356e108-option" id="d76356e172" class="stentry choption" width="50%"><strong>
+							<p class="p">Credential Name</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d76356e108-desc d76356e172" class="stentry chdesc" width="50%">
+							<p class="p">Enter the credential name that you have deployed in the tenant</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d76356e108-option" id="d76356e188" class="stentry choption" width="50%"><strong>
+							<p class="p">Operation</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d76356e108-desc d76356e188" class="stentry chdesc" width="50%">
+							<p class="p">Select the operation that you want to perform. Currently, only
+									<span class="ph uicontrol">Insert</span> and <span class="ph uicontrol">Modify</span>
+								operations are supported. </p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d76356e108-option" id="d76356e209" class="stentry choption" width="50%"><strong>
+							<p class="p">Input Type</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d76356e108-desc d76356e209" class="stentry chdesc" width="50%">
+							<p class="p">Select the type of input that you are providing (Applicable only for
+								Insert operation)</p>
+
+						</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">Save or deploy the integration flow.</span>
+			</li>
+</ol>
+
+	</div>
+
+<div class="related-links"> 
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

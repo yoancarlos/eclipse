@@ -1,0 +1,765 @@
+.pagebreakbefore {
+	PAGE-BREAK-BEFORE: always
+}
+.SAPXDPBodyLatinChar {
+	FONT-FAMILY: Arial, sans-serif; B1-font-family: Georgia, "Times New Roman", Palatino, Times, Utopia, serif; DU-font-family: Tahoma, serif
+}
+.SAPXDPBodyLatinChar .serif {
+	FONT-FAMILY: Arial, sans-serif; B1-font-family: Georgia, "Times New Roman", Palatino, Times, Utopia, serif; DU-font-family: Tahoma, serif
+}
+.SAPXDPBodyGreekChar {
+	FONT-FAMILY: Arial, sans-serif; B1-font-family: Georgia, "Times New Roman", Palatino, Times, Utopia, serif
+}
+.SAPXDPBodyGreekChar .serif {
+	FONT-FAMILY: Arial, sans-serif; B1-font-family: Georgia, "Times New Roman", Palatino, Times, Utopia, serif
+}
+.SAPXDPBodyCyrillicChar {
+	FONT-FAMILY: Arial, sans-serif; B1-font-family: Georgia, "Times New Roman", Palatino, Times, Utopia, serif
+}
+.SAPXDPBodyCyrillicChar .serif {
+	FONT-FAMILY: Arial, sans-serif; B1-font-family: Georgia, "Times New Roman", Palatino, Times, Utopia, serif
+}
+.SAPXDPBodyKoreanChar {
+	FONT-FAMILY: Gulim, sans-serif
+}
+.SAPXDPBodyKoreanChar .serif {
+	FONT-FAMILY: Gulim, sans-serif
+}
+.SAPXDPBodyJapaneseIdeograms {
+	FONT-FAMILY: "MS PGothic", Osaka, sans-serif; LETTER-SPACING: 1px; B1-font-family: "MS PMincho", Osaka, serif; DU-font-family: "MS Gothic", sans-serif; DU-letter-spacing: 0px
+}
+.SAPXDPBodyJapaneseIdeograms .serif {
+	FONT-FAMILY: "MS PGothic", Osaka, sans-serif; LETTER-SPACING: 1px; B1-font-family: "MS PMincho", Osaka, serif; DU-font-family: "MS Gothic", sans-serif; DU-letter-spacing: 0px
+}
+.SAPXDPBodyChineseIdeograms {
+	FONT-FAMILY: SimHei, sans-serif; B1-font-family: "Simsun (Founder Extended)", SimSun, serif; B1-font-size: 1.1em; B1-line-height: 1.4em
+}
+.SAPXDPBodyChineseIdeograms .serif {
+	FONT-FAMILY: SimHei, sans-serif; B1-font-family: "Simsun (Founder Extended)", SimSun, serif; B1-font-size: 1.1em; B1-line-height: 1.4em
+}
+.SAPXDPBodyBrowserDefault {
+	FONT-FAMILY: sans-serif
+}
+.SAPXDPBodyBrowserDefault .serif {
+	FONT-FAMILY: sans-serif
+}
+.SAPXDPBodyLatinChar .sansserif {
+	FONT-FAMILY: Arial, sans-serif; B1-font-family: Tahoma, Verdana, Charcoal, Helvetica, sans-serif; DU-font-family: Tahoma, Verdana, Charcoal, Helvetica, sans-serif
+}
+.SAPXDPBodyGreekChar .sansserif {
+	FONT-FAMILY: Arial, sans-serif; B1-font-family: Tahoma, Verdana, Charcoal, Helvetica, sans-serif; DU-font-family: Tahoma, Verdana, Charcoal, Helvetica, sans-serif
+}
+.SAPXDPBodyCyrillicChar .sansserif {
+	FONT-FAMILY: Arial, sans-serif; B1-font-family: Tahoma, Verdana, Charcoal, Helvetica, sans-serif; DU-font-family: Tahoma, Verdana, Charcoal, Helvetica, sans-serif
+}
+.SAPXDPBodyKoreanChar .sansserif {
+	FONT-FAMILY: Gulim, sans-serif
+}
+.SAPXDPBodyJapaneseIdeograms .sansserif {
+	FONT-FAMILY: "MS PGothic", Osaka, sans-serif; DU-font-family: "MS Gothic", sans-serif
+}
+.SAPXDPBodyChineseIdeograms .sansserif {
+	FONT-FAMILY: SimHei, sans-serif
+}
+.SAPXDPBodyBrowserDefault .sansserif {
+	FONT-FAMILY: sans-serif
+}
+.SAPXDPBodyLatinChar .monospace {
+	FONT-FAMILY: "Courier New", Courier, monospace; B1-font-family: "Arial Monospaced for SAP", "Lucida Console", "Courier New", Courier, monospace; DU-font-family: "Courier New", Courier, monospace
+}
+.SAPXDPBodyGreekChar .monospace {
+	FONT-FAMILY: "Courier New", monospace
+}
+.SAPXDPBodyCyrillicChar .monospace {
+	FONT-FAMILY: "Courier New", monospace
+}
+.SAPXDPBodyKoreanChar .monospace {
+	FONT-FAMILY: GungsuhChe, monospace
+}
+.SAPXDPBodyJapaneseIdeograms .monospace {
+	FONT-FAMILY: "MS Gothic", monospace; DU-font-family: "Courier New", Courier, monospace
+}
+.SAPXDPBodyChineseIdeograms .monospace {
+	FONT-FAMILY: SimSun, monospace
+}
+.SAPXDPBodyBrowserDefault .monospace {
+	FONT-FAMILY: monospace
+}
+.SAPXDPBodyDefault A {
+	COLOR: blue; TEXT-DECORATION: underline; B1-color: #3A6B8E; DU-color: blue; B1-text-decoration: none; DU-text-decoration: underline
+}
+A.SAPXDPGlossarylink {
+	COLOR: blue; TEXT-DECORATION: underline; B1-color: #3A6B8E; DU-color: blue; B1-text-decoration: none; DU-text-decoration: underline
+}
+.SAPXDPBodyDefault DT A {
+	B1-color: #FFFFFF
+}
+A.SAPXDPLinkInTitle {
+	B1-color: inherit; B1-text-decoration: none; B1-background-color: inherit
+}
+A.SAPXDPInactiveURL {
+	B1-font-size: 0.9em; B1-color: #333333; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #AAAAAA; B1-font-style: normal; B1-font-weight: normal; B1-padding-bottom: 1px
+}
+.SAPXDPSourceCodeLine A {
+	B1-color: #3A6B8E; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #3A6B8E; B1-padding-bottom: 1px
+}
+.SAPXDPTechnicalName A {
+	B1-color: #3A6B8E; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #3A6B8E; B1-padding-bottom: 1px
+}
+.SAPXDPvar A {
+	B1-color: #3A6B8E; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #3A6B8E; B1-padding-bottom: 1px
+}
+.SAPXDPBodyDefault A:visited {
+	COLOR: purple; B1-color: #777777; DU-color: purple
+}
+A.SAPXDPGlossarylink:visited {
+	COLOR: purple; B1-color: #777777; DU-color: purple
+}
+.SAPXDPBodyDefault DT A:visited {
+	B1-color: #FFFFFF
+}
+A.SAPXDPLinkInTitle:visited {
+	B1-color: #003366; B1-background-color: inherit
+}
+A.SAPXDPInactiveURL:visited {
+	B1-color: #777777; B1-background-color: inherit
+}
+.SAPXDPSourceCodeLine A:visited {
+	B1-color: #777777; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #777777
+}
+.SAPXDPTechnicalName A:visited {
+	B1-color: #777777; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #777777
+}
+.SAPXDPvar A:visited {
+	B1-color: #777777; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #777777
+}
+.SAPXDPBodyDefault A:hover {
+	B1-color: #003366; DU-color: inherit; B1-background-color: inherit; B1-border-bottom: 1px solid; B1-padding-bottom: 1px; DU-border-bottom: none; DU-padding-bottom: 0px
+}
+A.SAPXDPGlossarylink:hover {
+	B1-color: #003366; DU-color: inherit; B1-background-color: inherit; B1-border-bottom: 1px solid; B1-padding-bottom: 1px; DU-border-bottom: none; DU-padding-bottom: 0px
+}
+A.SAPXDPGlossarylink:hover {
+	B1-border-bottom: 1px dotted
+}
+.SAPXDPBodyDefault DT A:hover {
+	B1-color: #FFFFFF
+}
+A.SAPXDPLinkInTitle:hover {
+	B1-color: inherit; B1-background-color: inherit; B1-border-bottom: 1px solid; B1-padding-bottom: 1px
+}
+A.SAPXDPInactiveURL:hover {
+	B1-color: #000000; B1-background-color: inherit; B1-border-bottom: 1px solid #333333; B1-padding-bottom: 1px
+}
+.SAPXDPSourceCodeLine A:hover {
+	B1-color: #003366; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #003366
+}
+.SAPXDPTechnicalName A:hover {
+	B1-color: #003366; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #003366
+}
+.SAPXDPvar A:hover {
+	B1-color: #003366; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #003366
+}
+.SAPXDPBodyDefault A:active {
+	B1-color: #003366; DU-color: inherit; B1-background-color: inherit; B1-border-bottom: 1px solid; B1-padding-bottom: 1px; DU-border-bottom: none; DU-padding-bottom: 0px
+}
+A.SAPXDPGlossarylink:active {
+	B1-color: #003366; DU-color: inherit; B1-background-color: inherit; B1-border-bottom: 1px solid; B1-padding-bottom: 1px; DU-border-bottom: none; DU-padding-bottom: 0px
+}
+A.SAPXDPGlossarylink:active {
+	B1-border-bottom: 1px dotted
+}
+.SAPXDPBodyDefault DT A:active {
+	B1-color: #FFFFFF
+}
+A.SAPXDPLinkInTitle:active {
+	B1-color: inherit; B1-background-color: inherit; B1-border-bottom: 1px solid; B1-padding-bottom: 1px
+}
+A.SAPXDPInactiveURL:active {
+	B1-color: #000000; B1-background-color: inherit; B1-border-bottom: 1px solid #333333; B1-padding-bottom: 1px
+}
+.SAPXDPSourceCodeLine A:active {
+	B1-color: #003366; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #003366
+}
+.SAPXDPTechnicalName A:active {
+	B1-color: #003366; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #003366
+}
+.SAPXDPvar A:active {
+	B1-color: #003366; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #003366
+}
+.SAPXDPBodyDefault A:unknown {
+	B1-color: #003366; DU-color: inherit; B1-background-color: inherit; B1-border-bottom: 1px solid; B1-padding-bottom: 1px; DU-border-bottom: none; DU-padding-bottom: 0px
+}
+A.SAPXDPGlossarylink:unknown {
+	B1-color: #003366; DU-color: inherit; B1-background-color: inherit; B1-border-bottom: 1px solid; B1-padding-bottom: 1px; DU-border-bottom: none; DU-padding-bottom: 0px
+}
+A.SAPXDPGlossarylink:unknown {
+	B1-border-bottom: 1px dotted
+}
+.SAPXDPBodyDefault DT A:unknown {
+	B1-color: #FFFFFF
+}
+A.SAPXDPLinkInTitle:unknown {
+	B1-color: inherit; B1-background-color: inherit; B1-border-bottom: 1px solid; B1-padding-bottom: 1px
+}
+A.SAPXDPInactiveURL:unknown {
+	B1-color: #000000; B1-background-color: inherit; B1-border-bottom: 1px solid #333333; B1-padding-bottom: 1px
+}
+.SAPXDPSourceCodeLine A:unknown {
+	B1-color: #003366; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #003366
+}
+.SAPXDPTechnicalName A:unknown {
+	B1-color: #003366; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #003366
+}
+.SAPXDPvar A:unknown {
+	B1-color: #003366; B1-text-decoration: none; B1-background-color: inherit; B1-border-bottom: 1px solid #003366
+}
+BODY {
+	
+}
+
+@media Print    
+{
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; WIDTH: 100%; PADDING-TOP: 0px
+}
+    }
+DIV.SAPXDPBodyrtl {
+	PADDING-RIGHT: 18px; PADDING-LEFT: 18px; PADDING-BOTTOM: 13px; PADDING-TOP: 13px
+}
+DIV.SAPXDPBodyDefault {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 0px; FONT-SIZE: 10pt; BACKGROUND-IMAGE: none; PADDING-BOTTOM: 0px; COLOR: #000000; PADDING-TOP: 11px; BACKGROUND-COLOR: #ffffff; B1-font-size: 0.9em; B1-line-height: 1.5em; DU-font-size: 8.0pt; DU-line-height: 10pt; B1-padding: 13px 18px 13px 18px; DU-padding: 0px; B1-word-spacing: 0.1em
+}
+DIV.SAPXDPBodyJapaneseIdeograms {
+	DU-font-size: 9pt
+}
+DIV.SAPXDPBodyChineseIdeograms {
+	DU-font-size: 9pt
+}
+.SAPXDPBodyDefault CAPTION {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; PADDING-BOTTOM: 6pt; PADDING-TOP: 6pt; TEXT-ALIGN: left; B1-line-height: 1.5em; B1-color: #333333; B1-background-color: #D6D7D6; B1-padding: 5px; DU-padding: inherit; B1-background-image: none; page-break-inside: avoid
+}
+DIV.SAPXDPICObject CAPTION {
+	B1-color: #5385B1; B1-background-color: #FFFFFF; B1-border-bottom: 3px dotted #5385B1
+}
+.SAPXDPBodyrtl CAPTION {
+	TEXT-ALIGN: right
+}
+.SAPXDPBodyDefault CODE {
+	B1-font-size: 0.9em; B1-word-spacing: 0em; B1-cursor: default
+}
+.SAPXDPBodyDefault DD {
+	MARGIN-LEFT: 0px
+}
+.SAPXDPBodyDefault DEL {
+	B1-color: #CE3000; B1-background-color: #FFBEAD; B1-background-image: none; B1-cursor: default
+}
+DIV.SAPXDPA11Y-furtherInfo {
+	DISPLAY: none
+}
+DIV.SAPXDPFAQAnswer {
+	B1-padding: 0px 4px 0px 5px; page-break-inside: avoid; B1-border: 1px solid #D6D7D6; B1-margin-bottom: 2em
+}
+DIV.SAPXDPColltype {
+	FONT-WEIGHT: bold; MARGIN-LEFT: 0px; B1-font-size: 0.8em; B1-line-height: 19px; B1-text-decoration: none
+}
+DIV.SAPXDPLegalInformation {
+	PAGE-BREAK-BEFORE: always; B1-font-size: 0.75em; B1-line-height: 1.6em; B1-padding-top: 10em
+}
+DIV.SAPXDPProfile-end {
+	BORDER-RIGHT: #99bb99 1px solid; BORDER-TOP: #99bb99 1px solid; BORDER-LEFT: #99bb99 1px solid; COLOR: #557755! important; BORDER-BOTTOM: #99bb99 1px solid; B1-font-size: 0.75em; B1-line-height: 1.5em; B1-background-color: inherit; B1-padding: 1px 3px 1px 3px; page-break-inside: avoid
+}
+DIV.SAPXDPProfile-start {
+	BORDER-RIGHT: #99bb99 1px solid; BORDER-TOP: #99bb99 1px solid; BORDER-LEFT: #99bb99 1px solid; COLOR: #557755! important; BORDER-BOTTOM: #99bb99 1px solid; B1-font-size: 0.75em; B1-line-height: 1.5em; B1-background-color: inherit; B1-padding: 1px 3px 1px 3px; page-break-inside: avoid
+}
+DIV.SAPXDPProfile-end {
+	BORDER-TOP-STYLE: none! important; B1-margin: 0.1em -3px 0.6em -3px
+}
+DIV.SAPXDPProfile-start {
+	BORDER-BOTTOM-STYLE: none! important; B1-margin: 0.6em -3px 0.1em -3px
+}
+DIV.SAPXDPFAQQuestion {
+	B1-color: #333333; B1-background-color: #D6D7D6; B1-padding: 1px 4px 1px 5px; B1-background-image: none; page-break-inside: avoid; B1-margin-top: 1em
+}
+DIV.SAPXDPSkb {
+	MARGIN-LEFT: 59.05pt; B1-color: inherit; B1-background-color: #EEEEFF; B1-padding: 4px 5px 5px 8px; DU-padding: 0px; B1-background-image: none; page-break-inside: avoid; B1-border: 1px solid #336699; B1-margin-bottom: 1em; B1-margin-top: 1em; DU-background-color: inherit; DU-border: none; DU-margin-bottom: 12pt; DU-margin-top: 12pt; B1-margin-left: 0; DU-margin-left: 0
+}
+
+@media Print    
+{
+DIV.SAPXDPSkb {
+	B1-background-color: #FFFFFF
+}
+    }
+DIV.SAPXDPGraphicBlock {
+	B1-border-bottom: 4px solid #D6D7D6; B1-margin-bottom: 3em
+}
+DIV.SAPXDPHeader {
+	MARGIN: 0px; TEXT-ALIGN: right; B1-font-size: 0.8em; B1-line-height: 1.4em; B1-display: none; DU-display: none
+}
+.SAPXDPBodyrtl DIV.SAPXDPHeader {
+	TEXT-ALIGN: left
+}
+
+@media Print    
+{
+DIV.SAPXDPHeader {
+	DISPLAY: none
+}
+    }
+DIV.SAPXDPFooter {
+	MARGIN: 120px 0px 0px; B1-font-size: 0.8em; B1-line-height: 1.4em
+}
+
+@media Print    
+{
+DIV.SAPXDPFooter {
+	DISPLAY: none
+}
+    }
+DIV.SAPXDPMatrixTypographicalConventions {
+	PAGE-BREAK-BEFORE: always
+}
+DIV.SAPXDPTOC {
+	PAGE-BREAK-BEFORE: always
+}
+DIV.SAPXDPGlossaryLinklist {
+	B1-border-bottom: 2px solid gray; B1-padding: 0em 0em 2em 0em; B1-margin: 0em 0em 2em 0em
+}
+
+@media Print    
+{
+DIV.SAPXDPGlossaryLinklist {
+	B1-padding-bottom: 0em; B1-margin-bottom: 0em; B1-display: none
+}
+    }
+DIV.table {
+	MARGIN: 1em 0em; DU-margin: 0em
+}
+.SAPXDPBodyDefault DT {
+	BACKGROUND-IMAGE: none; B1-color: #FFFFFF; B1-background-color: #5385B1; B1-font-weight: bold; B1-padding: 1px 4px 1px 5px; B1-margin-top: 2em
+}
+
+@media Print    
+{
+.SAPXDPBodyDefault DT {
+	B1-padding: 0px
+}
+    }
+.SAPXDPBodyDefault EM {
+	FONT-WEIGHT: bold; FONT-STYLE: normal; B1-color: #003366
+}
+.SAPXDPBodyJapaneseIdeograms EM {
+	FONT-WEIGHT: normal
+}
+.SAPXDPBodyChineseIdeograms EM {
+	FONT-WEIGHT: normal
+}
+.SAPXDPBodyDefault H1 {
+	FONT-WEIGHT: bold; page-break-inside: avoid
+}
+H1.SAPXDPSubtitle {
+	FONT-WEIGHT: bold; page-break-inside: avoid
+}
+.SAPXDPBodyDefault H2 {
+	FONT-WEIGHT: bold; page-break-inside: avoid
+}
+.SAPXDPBodyDefault H3 {
+	FONT-WEIGHT: bold; page-break-inside: avoid
+}
+.SAPXDPBodyDefault H4 {
+	FONT-WEIGHT: bold; page-break-inside: avoid
+}
+.SAPXDPBodyDefault H5 {
+	FONT-WEIGHT: bold; page-break-inside: avoid
+}
+H5.SAPXDPSecurityLevel {
+	FONT-WEIGHT: bold; page-break-inside: avoid
+}
+H5.SAPXDPSubSection {
+	FONT-WEIGHT: bold; page-break-inside: avoid
+}
+.SAPXDPBodyDefault H6 {
+	FONT-WEIGHT: bold; page-break-inside: avoid
+}
+.SAPXDPBodyDefault H1 {
+	MARGIN-TOP: 2em; FONT-SIZE: 1.7em; COLOR: #ff9900; LINE-HEIGHT: 1.2em; TEXT-DECORATION: underline
+}
+H1.SAPXDPSubtitle {
+	MARGIN-TOP: 2em; FONT-SIZE: 1.7em; COLOR: #ff9900; LINE-HEIGHT: 1.2em; TEXT-DECORATION: underline
+}
+H1.SAPXDPSubtitle {
+	FONT-SIZE: 0.9em; TEXT-DECORATION: none
+}
+.SAPXDPBodyDefault H2 {
+	FONT-SIZE: 1.5em; COLOR: #003366; LINE-HEIGHT: 1.3em
+}
+.SAPXDPBodyDefault H3 {
+	MARGIN-TOP: 12pt; FONT-SIZE: 16pt; MARGIN-BOTTOM: 3pt; COLOR: navy; B1-font-size: 1.5em; B1-line-height: 1.3em; B1-color: #FFFFFF; DU-color: #000000; B1-background-color: #5385B1; DU-font-size: 12pt; DU-line-height: 16pt; B1-padding: 0.5em; B1-margin: 0; DU-margin: 0
+}
+.SAPXDPBodyDefault H4 {
+	FONT-SIZE: 14pt; MARGIN: 6pt 0px 3pt; COLOR: navy; B1-font-size: 1.3em; B1-color: #AAAAAA; B1-margin: 20px 0em 0em -0.1em; DU-display: none
+}
+.SAPXDPBodyLatinChar H4 {
+	B1-font-style: italic; B1-font-weight: normal
+}
+.SAPXDPBodyGreekChar H4 {
+	B1-font-style: italic; B1-font-weight: normal
+}
+.SAPXDPBodyCyrillicChar H4 {
+	B1-font-style: italic; B1-font-weight: normal
+}
+.SAPXDPBodyBrowserDefault H4 {
+	B1-font-style: italic; B1-font-weight: normal
+}
+
+@media Print    
+{
+.SAPXDPBodyDefault H4 {
+	B1-color: #000000
+}
+    }
+.SAPXDPBodyDefault H5 {
+	FONT-SIZE: 12pt; MARGIN: 6pt 0px 3pt; COLOR: navy; B1-font-size: 1.2em; B1-color: #777777; DU-color: blue; DU-font-size: 8pt; B1-margin: 20px 0em 0em 0em; DU-margin: 24pt 0pt 0pt 0pt
+}
+.SAPXDPKeyblockSeeAlso H5 {
+	DU-color: #000000
+}
+H5.SAPXDPSecurityLevel {
+	MARGIN-LEFT: 0px
+}
+H5.SAPXDPSubSection {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0px 3pt; COLOR: navy; B1-font-size: 1em; B1-color: #777777; B1-margin: 20px 0em 0em 0em
+}
+.SAPXDPBodyJapaneseIdeograms H5.SAPXDPSubSection {
+	B1-font-size: 0.9em
+}
+.SAPXDPBodyChineseIdeograms H5.SAPXDPSubSection {
+	B1-font-size: 1.0em
+}
+.SAPXDPBodyDefault H6 {
+	FONT-SIZE: 10pt; MARGIN: 3pt 0px 0px; COLOR: navy; B1-font-size: 0.85em; B1-line-height: 1.5em; B1-color: #999999; B1-margin: 20px 0em 0em 0em
+}
+.SAPXDPBodyJapaneseIdeograms H6 {
+	B1-font-size: 0.9em
+}
+.SAPXDPBodyChineseIdeograms H6 {
+	B1-font-size: 1.0em
+}
+.SAPXDPBodyChineseIdeograms I {
+	FONT-STYLE: normal
+}
+.SAPXDPBodyJapaneseIdeograms I {
+	FONT-STYLE: normal
+}
+.SAPXDPBodyKoreanChar I {
+	FONT-STYLE: normal
+}
+I.SAPXDPQuickInfo {
+	B1-cursor: default; DU-cursor: default; DU-font-weight: bold; DU-font-style: normal
+}
+I.SAPXDPScreenElement {
+	B1-cursor: default; DU-cursor: default; DU-font-weight: bold; DU-font-style: normal
+}
+.SAPXDPBodyJapaneseIdeograms I.SAPXDPScreenElement {
+	DU-font-weight: normal
+}
+.SAPXDPBodyDefault IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+IMG.SAPXDPSkb {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+IMG.SAPXDPIcon {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+IMG.SAPXDPIcon {
+	B1-left: 0px; B1-top: 2px; B1-position: relative
+}
+.SAPXDPHeader IMG {
+	MARGIN: 0px 5px 0px 30px
+}
+.SAPXDPBodyrtl .SAPXDPHeader IMG {
+	MARGIN: 0px 30px 0px 5px
+}
+.SAPXDPBodyDefault A IMG {
+	COLOR: white
+}
+
+@media All    
+{
+.SAPXDPBodyDefault A IMG {
+	
+}
+    }
+.SAPXDPBodyDefault INS {
+	B1-color: #316531; B1-background-color: #B5DBB5; B1-background-image: none; B1-cursor: default
+}
+.SAPXDPBodyDefault KBD {
+	FONT-WEIGHT: bold; BACKGROUND-IMAGE: none; WHITE-SPACE: nowrap; B1-color: #FFFFFF; B1-background-color: #999999; B1-border-bottom: 1px solid #000000; B1-padding: 0px 2px 0px 3px; B1-cursor: default; B1-border-top: 1px solid #EEEEEE; B1-border-left: 1px solid #EEEEEE; B1-border-right: 1px solid #000000; B1-letter-spacing: 0.1em
+}
+.SAPXDPBodyDefault UL LI {
+	B1-margin: 0em 0em 0em 1.2em; DU-margin: 0em 0em 0em 10pt
+}
+.SAPXDPBodyrtl UL LI {
+	MARGIN: 0em 0.4em 0em 0em
+}
+.SAPXDPBodyDefault OL LI {
+	B1-margin: 0em 0em 0em 2em; DU-margin: 0em 0em 0em 10pt
+}
+.SAPXDPBodyrtl OL LI {
+	MARGIN: 0em 0.8em 0em 0em
+}
+LI.SAPXDPSourceCodeLine {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; B1-color: #333333; B1-background-color: #FAFAFA
+}
+.SAPXDPBodyrtl LI.SAPXDPSourceCodeLine {
+	
+}
+.SAPXDPBodyDefault OL {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; LIST-STYLE-POSITION: outside; PADDING-BOTTOM: 0em; MARGIN: 3pt 0em 3pt 2.3em; PADDING-TOP: 0em; B1-color: #003366; DU-color: #000000; B1-background-color: inherit; B1-margin: 0em; DU-margin-left: 15pt; DU-margin: 0em
+}
+.SAPXDPBodyDefault UL {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; LIST-STYLE-POSITION: outside; PADDING-BOTTOM: 0em; MARGIN: 3pt 0em 3pt 2.3em; PADDING-TOP: 0em; B1-color: #003366; DU-color: #000000; B1-background-color: inherit; B1-margin: 0em; DU-margin-left: 15pt; DU-margin: 0em
+}
+.SAPXDPBodyrtl OL {
+	MARGIN: 0em 1.3em 0em 0em
+}
+.SAPXDPBodyrtl UL {
+	MARGIN: 0em 1em 0em 0em
+}
+.SAPXDPBodyDefault OL {
+	LIST-STYLE-TYPE: decimal
+}
+.SAPXDPBodyDefault LI OL {
+	DU-list-style-type: lower-alpha
+}
+.SAPXDPBodyDefault UL {
+	LIST-STYLE-TYPE: square; DU-list-style-type: disc
+}
+.SAPXDPBodyDefault LI UL {
+	DU-list-style-type: circle
+}
+OL.SAPXDPSourceCodeBlock {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; PADDING-BOTTOM: 0em; MARGIN: 0.5em 0em 0em; PADDING-TOP: 0em; LIST-STYLE-TYPE: none; B1-color: inherit; B1-background-color: #FAFAFA
+}
+.SAPXDPBodyrtl OL.SAPXDPSourceCodeBlock {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 2em; PADDING-BOTTOM: 0em; MARGIN: 0.5em 0em 0em; PADDING-TOP: 0em
+}
+.SAPXDPBodyDefault P {
+	MARGIN: 3pt 0px; COLOR: #000000; B1-margin: 7px 0em; DU-margin: 3pt 0; orphans: 2; widows: 2
+}
+.SAPXDPBodyDefault TH P {
+	FONT-WEIGHT: bold; COLOR: #000000; B1-color: #FFFFFF
+}
+.SAPXDPBodyDefault DIV.SAPXDPLegalInformation P {
+	B1-color: #555555; B1-background-color: inherit
+}
+P.SAPXDPCaption {
+	FONT-WEIGHT: bold; B1-font-size: 0.8em; B1-color: #333333; B1-background-color: #D6D7D6; B1-padding: 1px 4px 1px 5px; B1-background-image: none; page-break-inside: avoid; B1-margin: 2em 0em 0.2em 0em
+}
+P.SAPXDPSkbtitle {
+	TEXT-TRANSFORM: uppercase; COLOR: #000000; B1-font-size: 0.8em; B1-font-weight: bold; B1-margin: 0.5em 2em 0em 0em; DU-display: none; B1-letter-spacing: 0.2em
+}
+.SAPXDPBodyrtl P.SAPXDPSkbtitle {
+	MARGIN: 0.5em 0em 0em 2em
+}
+.SAPXDPLang-el P.SAPXDPSkbtitle {
+	TEXT-TRANSFORM: none
+}
+.SAPXDPBodyDefault PRE {
+	MARGIN: 0px; B1-font-size: 0.9em; B1-word-spacing: 0em; B1-cursor: default
+}
+SPAN.SAPXDPA11Y-furtherInfo {
+	DISPLAY: none
+}
+SPAN.SAPXDPMarginalia {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: -10px 0px 0px; PADDING-TOP: 0px; TEXT-ALIGN: right; B1-display: none; DU-display: none
+}
+.SAPXDPBodyrtl SPAN.SAPXDPMarginalia {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+SPAN.SAPXDPCodeComment {
+	B1-color: #999999; B1-background-color: transparent
+}
+SPAN.SAPXDPCodeBracket {
+	B1-color: #CC3300; B1-background-color: transparent
+}
+SPAN.SAPXDPCodeString {
+	B1-color: #336666; B1-background-color: transparent
+}
+SPAN.SAPXDPCodeIdentifier {
+	B1-color: #333300; B1-background-color: transparent
+}
+SPAN.SAPXDPCodeConstant {
+	B1-color: #669966; B1-background-color: transparent
+}
+SPAN.SAPXDPCodeSymbol {
+	B1-color: #003333; B1-background-color: transparent
+}
+SPAN.SAPXDPCodeKeyword1 {
+	B1-color: #336699; B1-background-color: transparent; B1-font-weight: bold
+}
+SPAN.SAPXDPCodeKeyword2 {
+	B1-color: #993333; B1-background-color: transparent; B1-font-weight: bold
+}
+SPAN.SAPXDPCodeKeyword3 {
+	B1-color: #003333; B1-background-color: transparent; B1-font-weight: bold
+}
+SPAN.SAPXDPCodeKeyword4 {
+	B1-color: #333366; B1-background-color: transparent; B1-font-weight: bold
+}
+SPAN.SAPXDPCodeKeyword5 {
+	B1-color: #996699; B1-background-color: transparent; B1-font-weight: bold
+}
+SPAN.SAPXDPCodeKeyword6 {
+	B1-color: #663366; B1-background-color: transparent; B1-font-weight: bold
+}
+SPAN.SAPXDPNavigationPath {
+	B1-cursor: default
+}
+SPAN.SAPXDPZeroSpace:unknown {
+	content: "?"
+}
+.SAPXDPBodyDefault SUB {
+	B1-font-size: 0.75em
+}
+.SAPXDPBodyDefault SUP {
+	B1-font-size: 0.75em
+}
+.SAPXDPBodyDefault TABLE {
+	BORDER-COLLAPSE: collapse; B1-font-size: 1em; B1-line-height: 1.5em; B1-color: inherit; B1-background-color: #FAFAFA; border-spacing: 0px
+}
+TABLE.SAPXDPDocumentFrontPage {
+	BORDER-COLLAPSE: collapse; B1-font-size: 1em; B1-line-height: 1.5em; B1-color: inherit; B1-background-color: #FAFAFA; border-spacing: 0px
+}
+.SAPXDPBodyDefault TABLE {
+	WIDTH: 100%; B1-margin: 18px 0em 0em 0em
+}
+TABLE.SAPXDPDocumentFrontPage {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 250px; WIDTH: 606px; PADDING-TOP: 0px
+}
+
+@media Print    
+{
+TABLE.SAPXDPDocumentFrontPage {
+	MARGIN: 0px -50px -50px -130px; WIDTH: 100%; max-width: 606px
+}
+    }
+.SAPXDPBodyDefault TD {
+	BORDER-RIGHT: #000000 1px solid; PADDING-RIGHT: 3pt; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 3pt; FONT-SIZE: 10pt; PADDING-BOTTOM: 3pt; VERTICAL-ALIGN: top; BORDER-LEFT: #000000 1px solid; PADDING-TOP: 3pt; BORDER-BOTTOM: #000000 1px solid; B1-font-size: 0.9em; B1-line-height: 1.5em; DU-font-size: 8.0pt; B1-padding: 1px 4px 1px 5px; B1-border: 1px solid #D6D7D6
+}
+
+@media Print    
+{
+.SAPXDPBodyDefault TD {
+	B1-color: inherit; B1-background-color: #FFFFFF
+}
+    }
+DIV.SAPXDPICObject TD {
+	B1-background-color: #FFFFFF; B1-border: none
+}
+TABLE.SAPXDPDocumentFrontPage TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.SAPXDPBodyDefault TH {
+	BORDER-RIGHT: #000000 1px solid; PADDING-RIGHT: 3pt; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 3pt; FONT-WEIGHT: bold; FONT-SIZE: 10pt; BACKGROUND-IMAGE: none; PADDING-BOTTOM: 3pt; VERTICAL-ALIGN: top; BORDER-LEFT: #000000 1px solid; PADDING-TOP: 3pt; BORDER-BOTTOM: #000000 1px solid; TEXT-ALIGN: left; B1-font-size: 0.8em; B1-line-height: 1.5em; B1-color: inherit; B1-background-color: #5385B1; DU-font-size: 8.0pt; B1-padding: 1px 4px 1px 5px; B1-border: 1px solid #CCCCCC; B1-vertical-align: bottom
+}
+.SAPXDPBodyrtl TH {
+	TEXT-ALIGN: right
+}
+TH.SAPXDPRowHeader {
+	B1-vertical-align: top
+}
+.SAPXDPBodyDefault TR {
+	B1-color: inherit; B1-background-color: #FAFAFA; page-break-inside: avoid
+}
+.SAPXDPBodyDefault TR:hover {
+	B1-color: inherit; B1-background-color: #F5F5F5
+}
+.SAPXDPDocumentFrontPage TR:hover {
+	B1-color: inherit; B1-background-color: inherit
+}
+.SAPXDPBodyDefault TT {
+	B1-font-size: 0.9em; B1-font-style: normal; B1-font-weight: normal; B1-cursor: default
+}
+TT.SAPXDPAlias {
+	B1-font-size: 0.9em; B1-font-style: normal; B1-font-weight: normal; B1-cursor: default
+}
+TT.SAPXDPAlias {
+	B1-text-transform: lowercase
+}
+TT.SAPXDPUserEntry {
+	FONT-WEIGHT: bold; COLOR: #000000; BACKGROUND-COLOR: transparent; B1-color: #0000CC
+}
+.SAPXDPBodyDefault VAR {
+	FONT-STYLE: normal; B1-cursor: default
+}
+.SAPXDPBodyLatinChar I VAR {
+	B1-font-style: italic
+}
+.SAPXDPBodyGreekChar I VAR {
+	B1-font-style: italic
+}
+.SAPXDPBodyCyrillicChar I VAR {
+	B1-font-style: italic
+}
+.SAPXDPBodyBrowserDefaultChar I VAR {
+	B1-font-style: italic
+}
+
+@media Unknown, Aural    
+{
+.SAPXDPBodyDefault H1 {
+	pause: 20% 20%; richness: 90; speech-rate: slower; stress: 20; volume: loud; xv-voice-volume: loud
+}
+.SAPXDPBodyDefault H2 {
+	pause: 20% 20%; richness: 90; speech-rate: slower; stress: 20; volume: loud; xv-voice-volume: loud
+}
+.SAPXDPBodyDefault H3 {
+	pause: 20% 20%; richness: 90; speech-rate: slower; stress: 20; volume: loud; xv-voice-volume: loud
+}
+.SAPXDPBodyDefault H4 {
+	pause: 20% 20%; richness: 90; speech-rate: slower; stress: 20; volume: loud; xv-voice-volume: loud
+}
+.SAPXDPBodyDefault H5 {
+	pause: 20% 20%; richness: 90; speech-rate: slower; stress: 20; volume: loud; xv-voice-volume: loud
+}
+.SAPXDPBodyDefault H6 {
+	pause: 20% 20%; richness: 90; speech-rate: slower; stress: 20; volume: loud; xv-voice-volume: loud
+}
+.SAPXDPBodyDefault CAPTION {
+	pause: 20% 20%; richness: 90; speech-rate: slower; stress: 20; volume: loud; xv-voice-volume: loud
+}
+P.SAPXDPCaption {
+	pause: 20% 20%; richness: 90; speech-rate: slower; stress: 20; volume: loud; xv-voice-volume: loud
+}
+.SAPXDPBodyDefault CODE {
+	speak-numeral: digits; speak-punctuation: code
+}
+.SAPXDPBodyDefault KBD {
+	speak-numeral: digits; speak-punctuation: code
+}
+.SAPXDPBodyDefault PRE {
+	speak-numeral: digits; speak-punctuation: code
+}
+.SAPXDPBodyDefault TT {
+	speak-numeral: digits; speak-punctuation: code
+}
+.SAPXDPBodyDefault EM {
+	stress: 20
+}
+.SAPXDPBodyDefault P {
+	pause: 10%
+}
+.SAPXDPDaySpecificDate {
+	speak-numeral: continuous; speak-punctuation: code
+}
+.SAPXDPInactiveURL {
+	speak-numeral: digits; speak-punctuation: code; speak: spell-out
+}
+SPAN.SAPXDPA11Y-furtherInfo {
+	DISPLAY: inline; speak: normal
+}
+
+}

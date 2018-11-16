@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+    <!-- Declaration of profiling launch mode -->
+   
+
+    <extension point="org.eclipse.debug.ui.launchGroups">         
+	    <launchGroup
+           bannerImage="icons/profilingWiz.gif"
+           id="com.sap.jvm.profiling.ui.launchGroup.profiling"
+           image="icons/profiling_exc.gif"
+           label="%ProfilingGroup_label"
+           mode="profile"
+           title="%ProfilingGroup_name">
+		</launchGroup>         
+    </extension>
+    <extension
+          point="org.eclipse.debug.core.launchDelegates">
+       <launchDelegate
+             delegate="com.sap.jvm.profiling.ui.launching.configuration.ProfilingLaunchConfigurationDelegate"
+             id="com.sap.jvm.profiling.ui.launching.ProfilingLaunchDelegate"
+             modes="profile"
+             name="%ProfilingLauncher"
+             sourceLocatorId="org.eclipse.jdt.launching.sourceLocator.JavaSourceLookupDirector"
+             sourcePathComputerId="org.eclipse.jdt.launching.sourceLookup.javaSourcePathComputer"
+             type="org.eclipse.jdt.launching.localJavaApplication"/>
+       <launchDelegate
+             delegate="com.sap.jvm.profiling.ui.launching.configuration.ProfilingPDELaunchConfigurationDelegate"
+             id="com.sap.jvm.profiling.ui.launching.ProfilingPDELaunchDelegate"
+             modes="profile"
+             name="PDEProfiling"
+             sourceLocatorId="org.eclipse.pde.ui.launcher.PDESourceLookupDirector"
+             sourcePathComputerId="org.eclipse.jdt.launching.sourceLookup.javaSourcePathComputer"
+             type="org.eclipse.pde.ui.RuntimeWorkbench">
+       </launchDelegate>
+       <launchDelegate
+             delegate="com.sap.jvm.profiling.ui.launching.configuration.ProfilingJUnitLaunchConfigurationDelegate"
+             id="com.sap.jvm.profiling.ui.launching.ProfilingJUnitLaunchDelegate"
+             modes="profile"
+             name="JUnitProfiling"
+             sourceLocatorId="org.eclipse.jdt.launching.sourceLocator.JavaSourceLookupDirector"
+             sourcePathComputerId="org.eclipse.jdt.launching.sourceLookup.javaSourcePathComputer"
+             type="org.eclipse.jdt.junit.launchconfig">
+       </launchDelegate>
+       <launchDelegate
+             delegate="com.sap.jvm.profiling.ui.launching.configuration.ProfilingPDEJUnitLaunchConfigurationDelegate"
+             id="com.sap.jvm.profiling.ui.launching.ProfilingPDEJUnitLaunchDelegate"
+             modes="profile"
+             name="PDEJUnitProfiling"
+             sourceLocatorId="org.eclipse.pde.ui.launcher.PDESourceLookupDirector"
+             sourcePathComputerId="org.eclipse.jdt.launching.sourceLookup.javaSourcePathComputer"
+             type="org.eclipse.pde.ui.JunitLaunchConfig">
+       </launchDelegate>
+       <launchDelegate
+             delegate="com.sap.jvm.profiling.ui.launching.configuration.ProfilingOSGiLaunchConfigurationDelegate"
+             id="com.sap.jvm.profiling.ui.launching.ProfilingEquinoxLaunchDelegate"
+             modes="profile"
+             name="OSGiProfiling"
+             sourceLocatorId="org.eclipse.pde.ui.launcher.PDESourceLookupDirector"
+             sourcePathComputerId="org.eclipse.jdt.launching.sourceLookup.javaSourcePathComputer"
+             type="org.eclipse.pde.ui.EquinoxLauncher">
+       </launchDelegate>
+       
+    </extension>
+
+    <extension point="org.eclipse.debug.core.launchConfigurationTypes">
+        <launchConfigurationType
+              delegate="com.sap.jvm.profiling.ui.launching.configuration.OnlineProfilingLaunchConfigurationDelegate"
+              id="com.sap.jvm.profiling.ui.launching.OnlineProfilingLaunchConfigurationType"
+              modes="profile"
+              name="%ProfilingOnlineConfiguration_name"
+              sourceLocatorId="org.eclipse.jdt.launching.sourceLocator.JavaSourceLookupDirector"
+              sourcePathComputerId="org.eclipse.jdt.launching.sourceLookup.javaSourcePathComputer"/>         
+        <launchConfigurationType
+              delegate="com.sap.jvm.profiling.ui.launching.configuration.OfflineProfilingLaunchConfigurationDelegate"
+              id="com.sap.jvm.profiling.ui.launching.OfflineAnalysisLaunchConfigurationType"
+              modes="profile"
+              name="%ProfilingOfflineConfiguration_name"
+              sourceLocatorId="org.eclipse.jdt.launching.sourceLocator.JavaSourceLookupDirector"
+              sourcePathComputerId="org.eclipse.jdt.launching.sourceLookup.javaSourcePathComputer"/>
+        <launchConfigurationType
+              delegate="com.sap.jvm.profiling.ui.launching.configuration.CloudProfilingDelegate"
+              id="com.sap.jvm.profiling.ui.launching.CloudProfilingLaunchConfigurationType"
+              modes="profile"
+              name="SAP HANA Cloud Profiler"
+              public="true"
+              sourceLocatorId="org.eclipse.jdt.launching.sourceLocator.JavaSourceLookupDirector"
+              sourcePathComputerId="org.eclipse.jdt.launching.sourceLookup.javaSourcePathComputer"/>
+    </extension>
+
+	<extension point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+        <launchConfigurationTabGroup
+              class="com.sap.jvm.profiling.ui.launching.configuration.ProfilingLaunchConfigurationTabGroup"
+              id="com.sap.jvm.profiling.ui.launching.ProfilingTabGroup"
+              type="org.eclipse.jdt.launching.localJavaApplication">
+        </launchConfigurationTabGroup>         
+              
+        <launchConfigurationTabGroup
+	          id="com.sap.jvm.profiling.ui.launching.OfflineAnalysisTabGroup"
+              type="com.sap.jvm.profiling.ui.launching.OfflineAnalysisLaunchConfigurationType"
+	          class="com.sap.jvm.profiling.ui.launching.configuration.OfflineProfilingLaunchConfigurationTabGroup"/>
+	          
+		<launchConfigurationTabGroup
+        class="com.sap.jvm.profiling.ui.launching.configuration.OnlineProfilingLaunchConfigurationTabGroup"
+        id="com.sap.jvm.profiling.ui.launching.OnlineProfilingTabGroup"
+        type="com.sap.jvm.profiling.ui.launching.OnlineProfilingLaunchConfigurationType">
+  </launchConfigurationTabGroup>
+  <launchConfigurationTabGroup
+        class="com.sap.jvm.profiling.ui.launching.configuration.ProfilingPDELaunchConfigurationTabGroup"
+        id="com.sap.jvm.profiling.ui.launching.ProfilingPDETabGroup"
+        type="org.eclipse.pde.ui.RuntimeWorkbench">
+  </launchConfigurationTabGroup>
+  <launchConfigurationTabGroup
+        class="com.sap.jvm.profiling.ui.launching.configuration.ProfilingJUnitLaunchConfigurationTabGroup"
+        id="com.sap.jvm.profiling.ui.launching.ProfilingJUnitTabGroup"
+        type="org.eclipse.jdt.junit.launchconfig">
+  </launchConfigurationTabGroup>
+  <launchConfigurationTabGroup
+        class="com.sap.jvm.profiling.ui.launching.configuration.ProfilingPDEJUnitLaunchConfigurationTabGroup"
+        id="com.sap.jvm.profiling.ui.launching.ProfilingPDEJUnitTabGroup"
+        type="org.eclipse.pde.ui.JunitLaunchConfig">
+  </launchConfigurationTabGroup>
+  <launchConfigurationTabGroup
+        class="com.sap.jvm.profiling.ui.launching.configuration.ProfilingOSGiLaunchConfigurationTabGroup"
+        id="com.sap.jvm.profiling.ui.launching.ProfilingOSGiTabGroup"
+        type="org.eclipse.pde.ui.EquinoxLauncher">
+  </launchConfigurationTabGroup>
+  <launchConfigurationTabGroup
+        class="com.sap.jvm.profiling.ui.launching.configuration.ProfilingOSGiLaunchConfigurationTabGroup"
+        id="com.sap.jvm.profiling.ui.launching.ProfilingNwCloudTabGroup"
+        type="com.sap.core.tools.eclipse.server.local.launch">
+  </launchConfigurationTabGroup>	          
+        <launchConfigurationTabGroup
+              class="com.sap.jvm.profiling.ui.launching.configuration.CloudProfilingTabGroup"
+              id="com.sap.jvm.profiling.ui.launching.configuration.CloudProfilingTabGroup"
+              type="com.sap.jvm.profiling.ui.launching.CloudProfilingLaunchConfigurationType">
+        </launchConfigurationTabGroup>
+    </extension>
+   
+    <extension point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+              
+        <launchConfigurationTypeImage
+	          id="com.sap.jvm.profiling.ui.launching.OnlineProfilingLaunchConfigurationTypeImage"
+              configTypeID="com.sap.jvm.profiling.ui.launching.OnlineProfilingLaunchConfigurationType"
+              icon="icons/online_prof_app.gif"/>
+              
+        <launchConfigurationTypeImage
+	    	id="com.sap.jvm.profiling.ui.launching.OfflineAnalysisLaunchConfigurationTypeImage"
+            configTypeID="com.sap.jvm.profiling.ui.launching.OfflineAnalysisLaunchConfigurationType"
+            icon="icons/offline_prof_app.gif"/>
+        <launchConfigurationTypeImage
+              configTypeID="com.sap.jvm.profiling.ui.launching.CloudProfilingLaunchConfigurationType"
+              icon="icons/neo.gif"
+              id="com.sap.jvm.profiling.ui.launching.CloudProfilingLaunchConfigurationTypeImage"/>
+    </extension>
+   
+    <extension point="org.eclipse.debug.ui.launchShortcuts">
+        <shortcut
+            class="com.sap.jvm.profiling.ui.launching.shortcuts.AllocationHotspotAnalysisShortcut"
+            icon="icons/allocation_analysis.gif"
+            id="com.sap.jvm.profiling.ui.launching.AllocationHotspotShortcut"
+            label="%ProfilingShortcutAllocationHotspotAnalysis_name"
+            modes="sap_profiling, profile">
+            <contextualLaunch>
+                <enablement>
+                    <with variable="selection">
+                        <count value="1"/>
+                        <iterate>
+                            <or>
+                   	            <test property="org.eclipse.jdt.launching.hasMain"/>
+                 	            <and>
+                	                <test property="org.eclipse.jdt.launching.isContainer"/>
+                                    <test property="org.eclipse.jdt.launching.hasProjectNature" args="org.eclipse.jdt.core.javanature"/>
+                    	        </and>
+                	        </or>
+                        </iterate>
+                    </with>
+                </enablement>
+  	        </contextualLaunch>
+        </shortcut>  
+              
+        <shortcut
+              class="com.sap.jvm.profiling.ui.launching.shortcuts.PerformanceHotspotAnalysisShortcut"
+              icon="icons/performance_analysis.gif"
+              id="com.sap.jvm.profiling.ui.launching.PerformanceHotspotShortcut"
+              label="%ProfilingShortcutPerformanceHotspotAnalysis_name"
+              modes="sap_profiling, profile">
+           <contextualLaunch>
+              <enablement>
+                 <with
+                       variable="selection">
+                    <count
+                          value="1">
+                    </count>
+                    <iterate>
+                       <or>
+                          <test
+                                property="org.eclipse.jdt.launching.hasMain">
+                          </test>
+                          <and>
+                             <test
+                                   property="org.eclipse.jdt.launching.isContainer">
+                             </test>
+                             <test
+                                   args="org.eclipse.jdt.core.javanature"
+                                   property="org.eclipse.jdt.launching.hasProjectNature">
+                             </test>
+                          </and>
+                       </or>
+                    </iterate>
+                 </with>
+              </enablement>
+           </contextualLaunch>
+        </shortcut>
+        <shortcut
+              class="com.sap.jvm.profiling.ui.launching.shortcuts.IOAnalysisShortcut"
+              icon="icons/io_analysis.gif"
+              id="com.sap.jvm.profiling.ui.launching.IOShortcut"
+              label="%ProfilingShortcutIOAnalysis_name"
+              modes="sap_profiling, profile">
+           <contextualLaunch>
+              <enablement>
+                 <with
+                       variable="selection">
+                    <count
+                          value="1">
+                    </count>
+                    <iterate>
+                       <or>
+                          <test
+                                property="org.eclipse.jdt.launching.hasMain">
+                          </test>
+                          <and>
+                             <test
+                                   property="org.eclipse.jdt.launching.isContainer">
+                             </test>
+                             <test
+                                   args="org.eclipse.jdt.core.javanature"
+                                   property="org.eclipse.jdt.launching.hasProjectNature">
+                             </test>
+                          </and>
+                       </or>
+                    </iterate>
+                 </with>
+              </enablement>
+           </contextualLaunch>
+        </shortcut>
+        <shortcut
+              class="com.sap.jvm.profiling.ui.launching.shortcuts.SynchronizationAnalysisShortcut"
+              icon="icons/synchronization_analysis.png"
+              id="com.sap.jvm.profiling.ui.launching.SynchronizationShortcut"
+              label="%ProfilingShortcutSynchronizationAnalysis_name"
+              modes="sap_profiling, profile">
+           <contextualLaunch>
+              <enablement>
+                 <with
+                       variable="selection">
+                    <count
+                          value="1">
+                    </count>
+                    <iterate>
+                       <or>
+                          <test
+                                property="org.eclipse.jdt.launching.hasMain">
+                          </test>
+                          <and>
+                             <test
+                                   property="org.eclipse.jdt.launching.isContainer">
+                             </test>
+                             <test
+                                   args="org.eclipse.jdt.core.javanature"
+                                   property="org.eclipse.jdt.launching.hasProjectNature">
+                             </test>
+                          </and>
+                       </or>
+                    </iterate>
+                 </with>
+              </enablement>
+           </contextualLaunch>
+        </shortcut>        
+        <shortcut
+              class="com.sap.jvm.profiling.ui.launching.shortcuts.NetworkAnalysisShortcut"
+              icon="icons/net_analysis.gif"
+              id="com.sap.jvm.profiling.ui.launching.NetworkShortcut"
+              label="%ProfilingShortcutNetworkAnalysis_name"
+              modes="sap_profiling, profile">
+           <contextualLaunch>
+              <enablement>
+                 <with
+                       variable="selection">
+                    <count
+                          value="1">
+                    </count>
+                    <iterate>
+                       <or>
+                          <test
+                                property="org.eclipse.jdt.launching.hasMain">
+                          </test>
+                          <and>
+                             <test
+                                   property="org.eclipse.jdt.launching.isContainer">
+                             </test>
+                             <test
+                                   args="org.eclipse.jdt.core.javanature"
+                                   property="org.eclipse.jdt.launching.hasProjectNature">
+                             </test>
+                          </and>
+                       </or>
+                    </iterate>
+                 </with>
+              </enablement>
+           </contextualLaunch>
+        </shortcut>
+
+    </extension>
+
+    
+    <!-- Declaration of configuration view -->   
+    <extension point="org.eclipse.ui.views">	
+        <view
+            allowMultiple="false"
+            category="com.sap.jvm.profiling.ui.workbench.ProfilingCategory"
+            class="com.sap.jvm.profiling.ui.views.ProfilingConfigurationView"
+            icon="icons/profiling_exc.gif"
+            id="com.sap.jvm.profiling.ui.ConfigurationView"
+            name="%ProfilingConfigurationView_name"/>	        
+    </extension>
+
+    <!-- Declaration of a profiling perspective -->    
+    <extension point="org.eclipse.ui.perspectives">
+        <perspective 
+            id="com.sap.jvm.profiling.ui.perspective.profilingPerspective" 
+            name="%ProfilingPerspective_name" 
+            class="com.sap.jvm.profiling.ui.perspective.ProfilingPerspective" 
+            icon="icons/profiler.gif"> 
+        </perspective> 	 
+    </extension>
+
+    <extension point="org.eclipse.ui.perspectiveExtensions">
+        <perspectiveExtension targetID="com.sap.jvm.profiling.ui.perspective.profilingPerspective">
+            <actionSet id="org.eclipse.debug.ui.debugActionSet"/>
+            <actionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+            <actionSet id="com.sap.jvm.profiling.ui.actionSet"/>
+            <actionSet id="org.eclipse.debug.ui.launchActionSet"/>
+            <perspectiveShortcut id="org.eclipse.jdt.ui.JavaPerspective"/>
+            <perspectiveShortcut id="org.eclipse.debug.ui.DebugPerspective"/>
+            <perspectiveShortcut
+                  id="org.eclipse.pde.ui.PDEPerspective">
+            </perspectiveShortcut>
+        </perspectiveExtension>
+        
+        <perspectiveExtension targetID="org.eclipse.jdt.ui.JavaPerspective">
+            <actionSet id="com.sap.jvm.profiling.ui.actionSet"/>
+            <viewShortcut
+                  id="com.sap.jvm.profiling.ui.ConfigurationView">
+            </viewShortcut>
+            <perspectiveShortcut id="com.sap.jvm.profiling.ui.perspective.profilingPerspective"/>
+            <view
+                closeable="true"
+                id="com.sap.jvm.profiling.ui.ConfigurationView"
+                moveable="true"
+                relationship="stack"
+                relative="org.eclipse.jdt.ui.PackageExplorer"
+                showTitle="true"
+                visible="false"/>
+        </perspectiveExtension>
+        <perspectiveExtension targetID="org.eclipse.debug.ui.DebugPerspective">
+           <actionSet id="com.sap.jvm.profiling.ui.actionSet"/>
+           <perspectiveShortcut id="com.sap.jvm.profiling.ui.perspective.profilingPerspective"/>
+           <viewShortcut id="com.sap.jvm.profiling.ui.ConfigurationView"/>
+           <view
+                 closeable="true"
+                 id="com.sap.jvm.profiling.ui.ConfigurationView"
+                 moveable="true"
+                 relationship="stack"
+                 relative="org.eclipse.debug.ui.DebugView"
+                 showTitle="true"
+                 visible="false"/>
+        </perspectiveExtension>
+        <perspectiveExtension targetID="org.eclipse.pde.ui.PDEPerspective">
+           <actionSet id="com.sap.jvm.profiling.ui.actionSet"/>
+           <perspectiveShortcut id="com.sap.jvm.profiling.ui.perspective.profilingPerspective"/>
+           <viewShortcut id="com.sap.jvm.profiling.ui.ConfigurationView"/>
+           <view
+                 closeable="true"
+                 id="com.sap.jvm.profiling.ui.ConfigurationView"
+                 moveable="true"
+                 relationship="stack"
+                 relative="org.eclipse.jdt.ui.PackageExplorer"
+                 showTitle="true"
+                 visible="false"/>
+        </perspectiveExtension>
+    </extension>
+
+    <!-- Declaration of toolbar button for starting a profiling session -->
+	<extension point="org.eclipse.ui.actionSets">
+        <actionSet
+            label="%ProfilingActionSet_name"
+            visible="true"
+            id="com.sap.jvm.profiling.ui.actionSet">     
+	        <action
+                class="com.sap.jvm.profiling.ui.actions.ProfilingToolbarAction"
+                hoverIcon="icons/profiling_exc.gif"
+                icon="icons/profiling_exc.gif"
+                id="com.sap.jvm.profiling.ui.actions.ProfilingDropDownAction"
+                label="%ProfileAction_name"
+                style="pulldown"
+                toolbarPath="org.eclipse.debug.ui.launchActionSet/debug"
+                tooltip="%ProfileAction_tooltip"/>
+    	</actionSet>
+        <actionSet
+              id="com.sap.jvm.profiling.ui.actionSetRun"
+              label="%ProfilingActionSetRun_name"
+              visible="true">
+           <action
+                 class="com.sap.jvm.profiling.ui.actions.VmExplorerAction"
+                 disabledIcon="icons/vm_monitor_disabled.gif"
+                 icon="icons/vm_explorer.gif"
+                 id="com.sap.jvm.profiling.ui.actions.ConnectToVm"
+                 label="%StartRemoteProfilingAction_name"
+                 menubarPath="org.eclipse.ui.run/emptyLaunchGroup"
+                 style="push"/>
+         	<action
+                class="com.sap.jvm.profiling.ui.actions.OpenProfileConfigurations"
+                id="com.sap.jvm.profiling.ui.actions.ProfilingProfile"
+                label="%ProfileAction_name"
+                menubarPath="org.eclipse.ui.run/emptyLaunchGroup"
+                tooltip="%ProfileAction_tooltip"/>         
+	        <action
+                class="com.sap.jvm.profiling.ui.actions.ProfileAsAction"
+                id="com.sap.jvm.profiling.ui.actions.ProfileAsAction"
+                label="%ProfileAsAction_name"
+                menubarPath="org.eclipse.ui.run/emptyLaunchGroup"
+                style="pulldown"
+                tooltip="%ProfileAsAction_tooltip"/>
+           <action
+                class="com.sap.jvm.profiling.ui.actions.ProfileHistoryMenuAction"
+                id="com.sap.jvm.profiling.ui.actions.ProfilingHistory"
+                label="%ProfileHistoryAction_name"
+                menubarPath="org.eclipse.ui.run/emptyLaunchGroup"
+                style="pulldown"
+                tooltip="%ProfileHistoryAction_tooltip"/>
+           <action
+                 class="com.sap.jvm.profiling.ui.actions.ProfilingToolbarAction"
+                 disabledIcon="icons/profileLast_disabled.gif"
+                 icon="icons/profileLast.gif"
+                 id="com.sap.jvm.profiling.ui.actions.ProfilingLastLaunched"
+                 label="%ProfileLastAction_name"
+                 menubarPath="org.eclipse.ui.run/relaunchGroup"/>
+        </actionSet>
+    </extension>
+    
+    <extension point="org.eclipse.ui.actionSetPartAssociations">
+        <actionSetPartAssociation targetID="com.sap.jvm.profiling.ui.actionSet">
+            <part id="com.sap.jvm.profiling.ui.ConfigurationView"/>
+        </actionSetPartAssociation>
+ 	</extension>
+
+    <extension point="org.eclipse.ui.popupMenus">
+        <objectContribution
+            id="com.sap.jvm.profiling.ui.contextualLaunch.profile"
+            objectClass="java.lang.Object">
+            <action
+                  class="com.sap.jvm.profiling.ui.actions.ProfileContextualLaunchAction"
+                  enablesFor="+"
+                  id="com.sap.jvm.profiling.ui.contextualLaunch.profile.submenu"
+                  label="%ProfileAsSAPJVMAction_name"
+                  menubarPath="additions"
+                  style="pulldown">
+            </action>
+            <enablement>
+                <test property="org.eclipse.debug.ui.launchable" value="sap_profiling"/>
+            </enablement>            
+        </objectContribution>
+    </extension>
+    
+    <extension point="org.eclipse.ui.preferencePages">
+        <page
+            category="com.sap.jvm.profiling.ui.workbench.preferences.Profiling"
+            class="com.sap.jvm.profiling.ui.perspective.PerspectivePreferencePage"
+            id="com.sap.jvm.profiling.ui.preferences.Perspectives"
+            name="%ProfilingPreferencesPerspectives_name"/>
+    </extension>
+    <extension
+          point="org.eclipse.ui.intro.configExtension">
+       <configExtension
+             configId="org.eclipse.ui.intro.universalConfig"
+             content="intro/overviewExtensionContent.xml"/>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/whatsnewExtensionContent.xml"/>
+    </extension>
+    <extension
+          point="org.eclipse.ui.editors">
+       <editor
+             id="com.sap.jvm.profiling.ui.editor"
+             launcher="com.sap.jvm.profiling.ui.actions.ProfilingOfflineLauncher"
+             name="%ProfilingEditorLauncher">
+          <contentTypeBinding contentTypeId="com.sap.jvm.profiling.ui.contenttype"/>
+       </editor>
+    </extension>
+    <extension
+          point="org.eclipse.ui.perspectiveExtensions">
+       <perspectiveExtension
+             targetID="com.sap.jvm.profiling.ui.perspective.profilingPerspective">
+          <actionSet
+                id="org.eclipse.jdt.ui.JavaActionSet">
+          </actionSet>
+          <viewShortcut
+                id="org.eclipse.debug.ui.DebugView">
+          </viewShortcut>
+          <viewShortcut
+                id="org.eclipse.debug.ui.BreakpointView">
+          </viewShortcut>
+          <viewShortcut
+                id="org.eclipse.debug.ui.VariableView">
+          </viewShortcut>
+          <viewShortcut
+                id="org.eclipse.debug.ui.ExpressionView">
+          </viewShortcut>
+       </perspectiveExtension>
+    </extension>
+    <extension
+          point="org.eclipse.ui.popupMenus">
+          <viewerContribution
+             id="com.sap.jvm.profiling.ui.JavaEditorContribution"
+             targetID="#CompilationUnitEditorContext">
+          <action
+                class="com.sap.jvm.profiling.ui.actions.ProfilingMPTAction"
+                icon="icons/parameter.gif"
+                id="com.sap.jvm.profiling.ui.actions.ProfilingMPTAction"
+                label="%CreateMPTParam"
+                menubarPath="additions">
+          </action>
+       </viewerContribution>
+       <viewerContribution
+             id="com.sap.jvm.profiling.ui.JavaEditorContribution"
+             targetID="#ClassFileEditorContext">
+          <action
+                class="com.sap.jvm.profiling.ui.actions.ProfilingMPTAction"
+                icon="icons/parameter.gif"
+                id="com.sap.jvm.profiling.ui.actions.ProfilingMPTAction"
+                menubarPath="additions"
+                label="%CreateMPTParam">
+          </action>
+       </viewerContribution>                
+    </extension>
+    <extension
+          point="org.eclipse.ui.startup">
+       <startup
+             class="com.sap.jvm.profiling.ui.startup.ProfilingPluginStartup">
+       </startup>
+    </extension>
+    <extension
+          point="org.eclipse.core.contenttype.contentTypes">
+       <content-type
+             file-extensions="prf, snp, b00, b01, b02, b03, b04, b05, b06, b07, b08, b09"
+             id="com.sap.jvm.profiling.ui.contenttype"
+             name="%ProfilingContentType"
+             priority="high">
+       </content-type>
+    </extension>
+    
+</plugin>

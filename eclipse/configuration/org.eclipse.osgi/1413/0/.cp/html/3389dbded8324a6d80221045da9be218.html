@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Importing SAP NetWeaver PI Objects from On-Premise Repository</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio3389dbded8324a6d80221045da9be218">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Importing SAP NetWeaver PI Objects from On-Premise Repository</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loio3389dbded8324a6d80221045da9be218__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>You perform this task to import interfaces and mappings
+			from an On-Premise repository, such as the ES Repository, into the integration project.
+			In case of mappings, you can import message mappings (.mmap) and operation mappings
+			(.opmap). <div class="note restriction" id="loio3389dbded8324a6d80221045da9be218__note_N10018_N10014_N10011_N10001"><span class="restrictiontitle">Restriction</span> See the table
+				below to know about the list of unsupported functionalities of the mappings being
+				imported: 
+<div class="table-wrapper tablenoborder"><table summary="" id="loio3389dbded8324a6d80221045da9be218__table_nqd_tqn_qk" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Unsupported functionalities of imported mappings</span></caption>
+<colgroup><col width="45.04504504504505%"/><col width="54.954954954954964%"/></colgroup>
+
+						
+						
+						<thead class="thead" align="left">
+							<tr class="row">
+								<th class="entry" valign="top" width="45.04504504504505%" id="d614248e34">Type of Mappings</th>
+
+								<th class="entry" valign="top" width="54.95495495495496%" id="d614248e37">Limitations</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+							<tr class="row">
+								<td class="entry" rowspan="6" valign="top" width="45.04504504504505%" headers="d614248e34 ">Message Mapping</td>
+
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">User Defined Functions with Channel type parameter</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">RFC and JDBC lookups used in Mappings</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">Parameters declared through <span class="ph uicontrol">Parameter</span> section of mapping
+									editor  (in ES Repository Builder )</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">Used Imported Archives</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">Used Function Libraries</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">Containing schema from .xml or .zip files</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" rowspan="8" valign="top" width="45.04504504504505%" headers="d614248e34 ">Operation Mapping</td>
+
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">Operations (source or target) with cardinality '0..unbonded' are not
+									supported</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">Operation mappings with cardinality 0..1 are not
+									supported</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">Operation mapping containing multiple operations are not
+									supported</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">Since parameters are not supported in Message Mapping, so
+									operation mappings with binding are also not supported</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">Operation Mappings with Java Mappings (Imported Archives,
+									Java programs) and external programs are not supported</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">Operation Mappings, with Do Not Resolve XOP Includes, Read
+									Attachments are not supported</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">
+									<p class="p">Only synchronous operation mappings with at least one mapping program present- either
+										request, response or fault, is supported. </p>
+
+								</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="54.95495495495496%" headers="d614248e37 ">If the WSDL is already present, WSDLs are not
+									overwritten</td>
+
+							</tr>
+
+						</tbody>
+
+					</table>
+</div>
+</div>
+</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loio3389dbded8324a6d80221045da9be218__step_N10044_N10041_N10011_N10001">
+				<span class="ph cmd">In the <span class="ph uicontrol">Project Explorer</span>, right-click on an integration project and from
+					the context menu choose <span class="ph uicontrol">Import PI Object</span>. </span>
+			</li>
+<li class="li step stepexpand" id="loio3389dbded8324a6d80221045da9be218__step_N10055_N10041_N10011_N10001">
+				<span class="ph cmd">In the <span class="ph uicontrol">Import PI Object</span> dialog, select <span class="ph uicontrol">ES Repository</span>
+					below the object type you want to import.</span>
+				<div class="itemgroup info">For example, if you want to import operation mappings, select <span class="ph uicontrol">ES
+						Repository</span> below <span class="ph uicontrol">Operation Mapping</span> object
+					type.</div>
+			</li>
+<li class="li step stepexpand" id="loio3389dbded8324a6d80221045da9be218__step_N10072_N10041_N10011_N10001">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Next</span>.</span>
+			</li>
+<li class="li step stepexpand" id="loio3389dbded8324a6d80221045da9be218__step_N1007F_N10041_N10011_N10001">
+				<span class="ph cmd">In the <span class="ph uicontrol">Import Mappings from ES Repository</span> dialog, select one or more
+					objects and choose <span class="ph uicontrol">Finish</span>.</span>
+			</li>
+</ol>
+
+		<div class="section result" id="loio3389dbded8324a6d80221045da9be218__result_N10089_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div>The imported objects are placed under their respective
+				<span class="ph filepath">src.main.resources.&lt;object&gt;</span> folder. For example, check
+			the imported mapping under <span class="ph filepath">src.main.resources.mapping</span> and imported
+			interface under <span class="ph filepath">src.main.resources.wsdl</span>. <p class="p">WSDLs/XSDs
+				corresponding to Message Types and Fault Message Types are placed under
+					<span class="ph filepath">src.main.resources.mapping</span> folder, other interfaces get
+				placed under <span class="ph filepath">src.main.resources.wsdl</span>. </p>
+<div class="p">The imported
+				operation mapping has the following features:<ul class="ul" id="loio3389dbded8324a6d80221045da9be218__ul_t3f_mh3_t3">
+					<li class="li"> If operation mapping contains message mapping, then the message mapping is
+						downloaded as a jar under src.main.resources.mapping package.</li>
+
+					<li class="li">If the operation mapping contains XSLTs, then the files are downloaded as
+							<span class="ph filepath">.xsl</span> under
+							<span class="ph filepath">src.main.resources.mapping</span>.</li>
+
+					<li class="li">Imported source or target WSDLs are not supported in integration flows.</li>
+
+				</ul>
+</div>
+</div>
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

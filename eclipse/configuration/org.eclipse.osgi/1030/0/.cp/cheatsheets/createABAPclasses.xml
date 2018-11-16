@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Creating Global ABAP Classes">
+   
+   <intro>
+      <description>
+         In this unit, you learn how to create a global ABAP class in the specified package of your development system. 
+<br/>
+<br/>
+NOTE:
+<br/> 
+You can use an analogous procedure to add new ABAP interfaces to your project.
+      </description>
+   </intro>
+   <item
+         skip="true"
+         title="Select the ABAP Project">
+      <description>
+         The subsequent steps require that an <b>APAP project</b> exists for the relevant backend system 
+<br/>
+Otherwise, choose “Click to perform” to launch the appropriate cheat sheet.
+      </description>
+      
+            <command
+            required="false"
+            serialization="org.eclipse.ui.cheatsheets.openCheatSheet(cheatSheetId=com.sap.adt.cheatsheet.create.abap.project)"/>
+      
+      
+   </item>
+   
+   <item
+         skip="true"
+         title="Add Relevant Package to Your Favorites">
+      <description>
+         Specify the package in which the class is going to be created. 
+<br/>
+If you have not yet already done so, add this package to the <b>favorites</b> of your ABAP project.   
+<br/>
+
+         
+      </description>
+   </item>
+   
+   <item
+         title="Select the Class Type">
+      <description>
+         Select the type of the global ABAP class (Regular Class or Exception Class) to be created.
+      </description>
+      <command returns = "result"
+           required="false"
+           serialization="org.eclipse.ui.dialogs.openMessageDialog(title=Type Selection,message=Select the Type of ABAP Class ,buttonLabel0=Regular Class,buttonLabel1=Exception Class,cancelReturns=cancel)"/>
+      <onCompletion> You have selected the <b>${result}</b>. </onCompletion>  
+   </item>
+   
+   <item 
+       title="Create an ABAP Class" dialog="true">
+      <description>
+         To create a new class, select the relevant package node in the <b>Project Explorer</b> and continue the procedure as follows: 
+         <br/>
+      </description>
+   
+      <subitem
+            label="Choose &quot;New&quot; in the context menu and then select &quot;Class&quot;, or choose &quot;Click to perform&quot;">
+          <command
+            required="false"
+            serialization="org.eclipse.ui.newWizard(newWizardId=com.sap.adt.oo.ui.newWizards.NewClassWizard)"/>
+      </subitem>
+      
+      <conditional-subitem condition="${result}">
+         <subitem when="Regular Class" label="In addition to the project and package, enter the name and description for the class to be created. Use CL_ prefix for regular classes.">
+         </subitem>
+         <subitem when="Exception Class" label="In addition to the project and package, enter the name and description for the class to be created. Use CX_ prefix for exception classes.">
+         </subitem>
+      </conditional-subitem>
+
+      <conditional-subitem condition="${result}">
+         <subitem when="Regular Class" label="Leave the &apos;Superclass&apos; field empty and choose &apos;Next&apos;.">
+         </subitem>
+         <subitem when="Exception Class" label="In the &apos;Superclass&apos; field, enter CX_STATIC_CHECK. Then choose &apos;Next&apos;.">
+         </subitem>
+      </conditional-subitem>
+      
+      <subitem
+            label="Assign a transport request (not required for $TMP packages) and choose &apos;Finish&apos;.">
+      </subitem>
+   </item>
+   
+   <item
+         skip="false"
+         title="Check Results">
+      <description>
+         You have created an ABAP class in the specified package. The backend system creates a class pool for the new class and displays the initially generated source code in the class editor.
+<br/>
+<br/>
+Keep in mind that the class editor exposes different tabs: 
+<br/>
+<br/>
+<b>&gt; Global Class</b> – class that is stored in the class library of the central Repository of the ABAP system. 
+<br/>
+<b>&gt;Class-Relevant Local Types</b> – contains local definitions that are referenced by the global class  
+<br/>
+<b>&gt; Local Types</b> – contains local definitions that are NOT referenced by the global class 
+<br/>
+<b>&gt; Test Classes</b> – contains ABAP Unit test classes that enable automated tests during the development phase
+<br/>
+<b>&gt; Macros</b> – allows you to add macro definitions for the given global class. 
+<br/>
+NOTE
+<br/>
+Macros are regarded as obsolete technology and should no longer be used in ABAP classes!
+      </description>
+   </item>
+   
+</cheatsheet>

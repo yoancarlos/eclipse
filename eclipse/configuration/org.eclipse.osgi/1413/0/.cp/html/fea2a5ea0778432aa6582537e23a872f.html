@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=058439888834261544"/>
+<title>Understanding the Development Infrastructure</title>
+</head>
+<body class="" id="loiofea2a5ea0778432aa6582537e23a872f">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Understanding the Development Infrastructure</h1>
+<div class="body conbody"><p class="shortdesc"/>
+<p class="p">This section shows how you can manage the developed integration content using a source control
+			repository. You can perform this task after the SaaS Admin has set up the development
+			infrastucture. Any development infrastructure ensures setting up of basic requirements
+			for controlling the versions of development content that developers create. The SaaS
+			Admin typically creates and maintains an infrastructure as shown in the diagram below:  </p>
+<p class="p"><img class="image" id="loiofea2a5ea0778432aa6582537e23a872f__image_lbt_vdy_mj" src="9c231968e2944928ae81c320543c833d.image" alt="DevelopemntInfra_FSN" title="DevelopemntInfra_FSN"/></p>
+<p class="p">As a developer, you obtain the details of the repository and initial branch to start
+			developing content. Also, you might have the responsibility of pushing and merging the
+			developed content from one branch to another.</p>
+<p class="p">For example, referring to the diagram shown above, if you are developing content for the
+			customer, you work in the Dev branch of the Customer Project repository. Then merge the
+			content from the Dev branch to Test branch and push the content to make it available in
+			the central repository. Thus, the central repository is up-to-date with developed
+			content.</p>
+<div class="note note" id="loiofea2a5ea0778432aa6582537e23a872f__note_N10026_N10011_N10001"><span class="notetitle">Note</span> 
+			<p class="p">The SaaS Admin usually takes the responsibility of moving the content from one
+				repository to another and often to release the developed content.</p>
+
+		</div>
+<p class="p">Examples of source control repositories are CVS, Git, Perforce etc. To use a particular
+			source control repository in Eclipse, you have to install its plugins on top of Eclipse.
+			For example, if you are using Git, you have to download the EGit plug-in from <a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.eclipse.org/egit/" target="_blank">http://www.eclipse.org/egit/<img src="images/3rd_link.png" class="link-sap" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a> and install it on Eclipse.</p>
+<p class="p">The topics in this section specifically take the example of Git/Gerrit Repository. </p>
+</div>
+<div class="related-links"> </div>
+</div></div>
+</body>
+</html>

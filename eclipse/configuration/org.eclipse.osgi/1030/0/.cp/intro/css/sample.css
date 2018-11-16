@@ -1,0 +1,43 @@
+
+a#sample-introLink img { background-image : url(graphics/picto/sample.gif); }
+a#sample-introLink:hover img { background-image : url(graphics/picto/sample_hov.gif); }
+
+a#update-introLink img { background-image : url(graphics/picto/wn_updates48.gif); }
+a#update-introLink:hover img { background-image : url(graphics/picto/wn_updates48_hov.gif); }
+
+a#note img { background-image : url(graphics/picto/notebook.gif); }
+a#overview img { background-image : url(graphics/picto/overview.gif); }
+a#whatsnew2 img { background-image : url(graphics/picto/newspaper.gif); }
+a#people img { background-image : url(graphics/picto/3_people.gif); }
+a#feedback img { background-image : url(graphics/picto/PersDocMagnifiCircuArrow.gif); }
+a#send_feedback img { background-image : url(graphics/picto/SendFeedback.gif); }
+
+
+a#abapsamples img { background-image : url(graphics/picto/abap_samples48.gif); }
+a#abapsamples:hover img { background-image : url(graphics/picto/abap_samples48_hov.gif); }
+
+a#abapstandard img { background-image : url(graphics/picto/abap_standard.png); }
+
+a#abapstandard_vid img { background-image : url(graphics/picto/abap_standard_video.png); }
+
+a#abapstandard_doc img { background-image : url(graphics/picto/abap_standard_doc.png); }
+
+a#abapstandard_cod img { background-image : url(graphics/picto/abap_standard_code.png); }
+
+a#abapstandard_exe img { background-image : url(graphics/picto/abap_standard_cs.png); }
+
+a#abapproject img { background-image : url(graphics/picto/abap_project.png); }
+
+a#abapproject_doc img { background-image : url(graphics/picto/abap_project_doc.png); }
+
+a#abapproject_vid img { background-image : url(graphics/picto/abap_project_video.png); }
+
+a#abapproject_exe img { background-image : url(graphics/picto/abap_project_cs.png); }
+
+a#abapsearch img { background-image : url(graphics/picto/abap_search.png); }
+
+a#abapsearch_doc img { background-image : url(graphics/picto/abap_search_doc.png); }
+
+a#abapsearch_vid img { background-image : url(graphics/picto/abap_search_video.png); }
+
+a#abapsearch_exe img { background-image : url(graphics/picto/abap_search_cs.png); }

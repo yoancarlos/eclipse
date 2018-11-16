@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="This option allows you to create a digital signature based on XML Digital Signature that unambiguously refers to a signature policy agreed between signer and verifier. An electronic signature created this way enforces the usage of the signature policy for signature validation and thus increases the security level of the digital signature."/>
+<meta name="description" content="This option allows you to create a digital signature based on XML Digital Signature that unambiguously refers to a signature policy agreed between signer and verifier. An electronic signature created this way enforces the usage of the signature policy for signature validation and thus increases the security level of the digital signature."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Signing the Message Content with XAdES-EPES</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio5976731ce4d74cb0938511220c942f17">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Signing the Message Content with XAdES-EPES</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">This option allows you to create a digital signature based on XML Digital Signature that
+		unambiguously refers to a signature policy agreed between signer and verifier. An electronic
+		signature created this way enforces the usage of the signature policy for signature
+		validation and thus increases the security level of the digital signature. </p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">A signature policy is a set of rules for the creation and validation of a digital signature. </p>
+
+			<p class="p">For more information, see <a class="extlink" href="http://help.sap.com/disclaimer?site=http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf" target="_blank" download="" alt="http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf" title="http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf">http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>. </p>
+
+			<p class="p"/>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step">
+				<span class="ph cmd"> In the <span class="keyword uilabel">Model Configuration</span> editor, select the
+						<span class="keyword uilabel">Signer</span> element and, from the context menu, select the
+						<span class="keyword uilabel">Switch to XAdES-EPES</span> option.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Specify the properties of the signature.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio5976731ce4d74cb0938511220c942f17__choicetable_kr3_rfp_3q">
+<thead><tr><th id="d1150209e53-option" valign="bottom" align="left">Option</th>
+<th id="d1150209e53-desc" valign="bottom" align="left">Description</th></tr></thead>
+<tbody>
+					<tr class="strow chrow">
+						<td valign="top" headers="d1150209e53-option" id="d1150209e57" class="stentry choption"><strong><span class="ph uicontrol">Signature Policy</span></strong></td>
+
+						<td valign="top" headers="d1150209e53-desc d1150209e57" class="stentry chdesc">Specify whether a signature policy is to be added, and, if yes, in which form this
+							should be done.<ul class="ul" id="loio5976731ce4d74cb0938511220c942f17__ul_jsm_5fp_3q">
+								<li class="li"><kbd class="ph userinput">None</kbd></li>
+
+								<li class="li"><kbd class="ph userinput">Implied</kbd><p class="p">The signature policy can be
+										unambiguously derived from the semantics of the type of data
+										object(s) being signed, and some other information.
+										</p>
+<p class="p">Using this option, the
+											<cite class="cite">SignaturePolicyImplied</cite> element will be part
+										of the signature.</p>
+</li>
+
+								<li class="li"><kbd class="ph userinput">Explicit ID</kbd><p class="p">The signature contains an
+										identifier of a signature policy together with a hash value
+										of the signature policy that allows verification that the
+										policy selected by the signer is the one being used by the
+										verifier. </p>
+</li>
+
+							</ul>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1150209e53-option" id="d1150209e90" class="stentry choption"><strong><span class="ph uicontrol">Identifier</span> (only if  the value <kbd class="ph userinput">Explicit
+								ID</kbd> has been selected for <span class="ph uicontrol">Signature
+								Policy</span>)</strong></td>
+
+						<td valign="top" headers="d1150209e53-desc d1150209e90" class="stentry chdesc">Specify an identifier that uniquely identifies a specific version of
+							the signature policy. <p class="p">You can specify the identifier by one of the
+								following options: </p>
+<ul class="ul" id="loio5976731ce4d74cb0938511220c942f17__ul_g2q_j54_3q">
+								<li class="li">By means of a Uniform Resource Identifier (URI) (preferred option when dealing with XML
+									documents) <p class="p">In this case, the Name of the Identifier consists
+										of the identifying URI. In this case, the property Qualifier
+										must not be specified (empty string). </p>
+</li>
+
+								<li class="li">By means of an Object Identifier when using ASN.1 (Abstract Syntax Notation One) <p class="p">To
+										support an OID, the content of Identifier consists of an
+										OID, either encoded as a Uniform Resource Name (URN) or as a
+										Uniform Resource Identifier (URI). The optional Qualifier
+										attribute can be used to provide information about the
+										applied encoding (values OIDAsURN or OIDAsURI).</p>
+</li>
+
+							</ul>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1150209e53-option" id="d1150209e121" class="stentry choption"><strong><span class="ph uicontrol">Identifier Qualifier</span> (only if the value
+								<kbd class="ph userinput">Explicit ID</kbd> has been selected for
+								<span class="ph uicontrol">Signature Policy</span>)</strong></td>
+
+						<td valign="top" headers="d1150209e53-desc d1150209e121" class="stentry chdesc">Qualify how the identifier is defined in case Abstract Syntax
+							Notation One (ASN 1) is used. <p class="p">You can select one of the following
+								values: </p>
+<ul class="ul" id="loio5976731ce4d74cb0938511220c942f17__ul_n5t_gc3_zq">
+								<li class="li"><span class="keyword parmname">Empty string</span>
+								</li>
+
+								<li class="li"><kbd class="ph userinput">OIDAsURI</kbd> – uses Uniform Resource Name. </li>
+
+								<li class="li"><kbd class="ph userinput">OIDAsURN</kbd> – uses Uniform Resource
+									Name.</li>
+
+							</ul>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1150209e53-option" id="d1150209e158" class="stentry choption"><strong><span class="ph uicontrol">Description</span> (only if the value <kbd class="ph userinput">Explicit
+								ID</kbd> has been selected for <span class="ph uicontrol">Signature
+								Policy</span>)</strong></td>
+
+						<td valign="top" headers="d1150209e53-desc d1150209e158" class="stentry chdesc">Enter a description of the signature policy.</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1150209e53-option" id="d1150209e175" class="stentry choption"><strong><span class="ph uicontrol">Documentation Reference</span> (only if the value
+								<kbd class="ph userinput">Explicit ID</kbd> has been selected for
+								<span class="ph uicontrol">Signature Policy</span>)</strong></td>
+
+						<td valign="top" headers="d1150209e53-desc d1150209e175" class="stentry chdesc">Provide a reference to further documentation of the signature
+							policy.</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1150209e53-option" id="d1150209e193" class="stentry choption"><strong><span class="ph uicontrol">Digest Algorithm</span> (only if the value <kbd class="ph userinput">Explicit
+								ID</kbd> has been selected for <span class="ph uicontrol">Signature
+								Policy</span>)</strong></td>
+
+						<td valign="top" headers="d1150209e53-desc d1150209e193" class="stentry chdesc">Specify the digest algorithm used to calculate the digest value of the signature
+							policy document.<p class="p">As default, SHA256 is used.</p>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1150209e53-option" id="d1150209e212" class="stentry choption"><strong><span class="ph uicontrol">Digest Value</span> (only if the value <kbd class="ph userinput">Explicit
+								ID</kbd> has been selected for <span class="ph uicontrol">Signature
+								Policy</span>)</strong></td>
+
+						<td valign="top" headers="d1150209e53-desc d1150209e212" class="stentry chdesc">Specify the digest value of the signature policy document (base 64-encoded).<p class="p">You can
+								either enter the digest value manually or calculate it.</p>
+<p class="p">To
+								calculate the digest value, you have the following options: </p>
+<ul class="ul" id="loio5976731ce4d74cb0938511220c942f17__ul_shj_zd3_zq">
+								<li class="li"><span class="ph uicontrol">Calculate from Identifier</span><p class="p">Calculates
+										the digest value from the value of the
+											<span class="ph uicontrol">Identifier</span> provided above. Note
+										that the Identifier must be a valid URL and start with
+											<kbd class="ph userinput">http://</kbd> or
+											<kbd class="ph userinput">https://</kbd>.</p>
+</li>
+
+								<li class="li"><span class="ph uicontrol">Browse to local File</span><p class="p">Calculates the
+										digest value from the content of a file. </p>
+</li>
+
+							</ul>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1150209e53-option" id="d1150209e256" class="stentry choption"><strong><span class="ph uicontrol">Policy Qualifier</span> (only if the value
+								<kbd class="ph userinput">Explicit ID</kbd> has been selected for
+								<span class="ph uicontrol">Signature Policy</span>)</strong></td>
+
+						<td valign="top" headers="d1150209e53-desc d1150209e256" class="stentry chdesc">Enter additional information qualifying the signature policy. To do
+							this, enter text or an XML fragment with the root element
+								<samp class="ph codeph">SigPolicyQualifier</samp>. </td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

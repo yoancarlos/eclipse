@@ -1,0 +1,36 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+            http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
+
+    <bean id="{BundleSymbolicName}.AdapterMonitor" class="com.sap.it.op.component.check.GenericMonitor" init-method="activate"
+        destroy-method="deactivate" activation="eager">
+        <property name="bundleContext" ref="blueprintBundleContext" />
+        <property name="scrService" ref="scrServiceRef" />
+        <property name="mandatoryBundles">
+            <list>
+                {DependentBundles}
+            </list>
+        </property>
+        <property name="primaryBundle" value="{CamelComponentSymbolicName}" />
+        <property name="componentName" value="{AdapterName}" />
+        <property name="version" value="{AdapterVersion}" />
+        <property name="subsystemPart">
+            <!-- <bean class="com.sap.it.op.agent.logging.api.AgentLogMessageCategory" factory-method="valueOf"> <argument value="ERROR"/> -->
+            <bean class="com.sap.esb.monitoring.messages.adapter.AdapterSubystemPart" factory-method="valueOf">
+                <argument value="GENERIC" />
+            </bean>
+        </property>
+    </bean>
+
+    <reference id="scrServiceRef" interface="org.apache.felix.scr.ScrService" />
+
+    <service id="{BundleSymbolicName}.MonitorService" ref="{BundleSymbolicName}.AdapterMonitor">
+        <interfaces>
+            <value>org.osgi.service.blueprint.container.BlueprintListener</value>
+            <value>com.sap.it.nm.component.ComponentMonitor</value>
+        </interfaces>
+        <service-properties>
+            <entry key="monitor.name" value="{AdapterName}" />
+        </service-properties>
+    </service>
+</blueprint>

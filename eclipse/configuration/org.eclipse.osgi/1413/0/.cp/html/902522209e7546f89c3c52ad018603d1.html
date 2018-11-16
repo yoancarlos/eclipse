@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure XML to CSV Converter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio902522209e7546f89c3c52ad018603d1">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure XML to CSV Converter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loio902522209e7546f89c3c52ad018603d1__ul_q1v_tqq_gr">
+					<li class="li">
+						<p class="p">You have logged into your customer workspace.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You are editing the integration flow in the editor.</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">The XML to CSV converter converts content in XML  format into CSV format. </p>
+
+			<p class="p">You use this procedure to configure XML to CSV converter.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio902522209e7546f89c3c52ad018603d1__steps_hcr_bnx_jr"><li class="li step stepexpand">
+				<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loio902522209e7546f89c3c52ad018603d1__image_r1g_wqq_gr" src="loioa34d7d66133d4635a991cbecabebe074_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Converter</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">XML to CSV Converter</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Place the <span class="ph uicontrol">XML to CSV converter</span> in the integration
+					process and define the message path.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">XML to CSV Converter</span> and provide values in fields
+					based on description in table.</span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loio902522209e7546f89c3c52ad018603d1__table_tdy_mnx_jr" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="50%" id="d3045026e96">
+										<p class="p">Field</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="50%" id="d3045026e102">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3045026e96 ">
+										<p class="p">Path to Source Element in XSD</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3045026e102 ">
+										<p class="p">Path to the source element in the XSD file</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3045026e96 ">
+										<p class="p">Field Separator in CSV</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3045026e102 ">
+										<p class="p">Select the character that you want to use as the field
+											separator in CSV file from dropdown list</p>
+
+										<div class="note tip"><span class="tiptitle">Tip</span> If you want to use a field separator that
+											is not available in the dropdown list, manually enter
+											the character.</div>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3045026e96 ">
+										<p class="p">Include Field Name as Headers</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3045026e102 ">
+										<p class="p">Select this checkbox if you want to use the field names
+											as the headers in CSV file</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3045026e96 ">
+										<p class="p">Include Parent Element</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3045026e102 ">
+										<p class="p">Select this checkbox if you want to include the parent
+											element of the XML file in CSV file </p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3045026e96 ">
+										<p class="p">Include Attribute Values</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3045026e102 ">
+										<p class="p">Select this checkbox if you want to include attribute
+											values in the CSV file</p>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the configuration. </span>
+				
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+	<extensionContent id="com.sap.ndb.studio.left" name="SAP HANA Studio" style="css/overview.css"
+		path="overview/@">
+		<group style-id="content-group" id="content-group">
+			<link style-id="content-link"
+				label="Open Modeler"
+				url="http://org.eclipse.ui.intro/runAction?pluginId=com.sap.ndb.studio&amp;class=com.sap.ndb.studio.actions.OpenPerspective&amp;perspective=com.sap.ndb.studio.modeling.perspective"
+				id="modeler">
+				<text>to create new or modify existing models of data</text>
+			</link>
+		</group>
+	</extensionContent>
+</introContent>

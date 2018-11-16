@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining Converter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio430ce2c914794c67ac3a2805eb406a68">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining Converter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">The converter element enables you to transform an input message in one format to another. You
+				can also specify some conditions that are used as reference to transform the
+				message.</p>
+
+			<p class="p">The CSV to XML converter transforms a message in CSV format to XML format.
+				Conversely, the XML to CSV converter transforms a message in XML format to CSV
+				format.</p>
+
+			<div class="note restriction"><span class="restrictiontitle">Restriction</span> You cannot use XML to CSV converter to convert complex XML
+				files to CSV format.</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><p class="li stepsection">You use this procedure to define a converter element in an integration
+				process.</p><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Open the integration flow in the <span class="ph uicontrol">Model Configuration</span> editor.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Access the palette and choose <span class="ph uicontrol">Message Transformers</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Drag <img class="image" id="loio430ce2c914794c67ac3a2805eb406a68__image_hl5_qv4_np" src="loio300b7180426b4f0693f0c3b66167553e_LowRes.png"/> from
+					palette to the integration process and define the message path.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> Alternatively, you can also add the converter from context menu. Choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Message Transformers</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Converter</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span></div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to use <span class="ph uicontrol">CSV to XML Converter</span>, perform the
+					following substeps.</span>
+				<ol type="a" class="ol substeps" id="loio430ce2c914794c67ac3a2805eb406a68__substeps_fw5_1w4_np">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Select the <span class="ph uicontrol">Converter</span> element and access
+								<span class="ph uicontrol">Properties</span> tab page.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Provide values in fields based on description in table.</span>
+						<div class="itemgroup info">
+							
+<div class="table-wrapper tablenoborder"><table summary="" id="loio430ce2c914794c67ac3a2805eb406a68__table_mzp_mw4_np" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+									
+									
+									<thead class="thead" align="left">
+										<tr class="row">
+											<th class="entry" valign="top" width="50%" id="d931799e113">Field</th>
+
+											<th class="entry" valign="top" width="50%" id="d931799e116">Description</th>
+
+										</tr>
+
+									</thead>
+
+									<tbody class="tbody">
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d931799e113 ">Name</td>
+
+											<td class="entry" valign="top" width="50%" headers="d931799e116 ">Provide a name for the converter step. This field
+												is optional.</td>
+
+										</tr>
+
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d931799e113 ">XML Schema</td>
+
+											<td class="entry" valign="top" width="50%" headers="d931799e116 ">Choose <span class="ph uicontrol">Browse</span> and select
+												the file path to the XML schema file that is used as
+												the basis for message transformation. The XML file
+												schema format is used as the basis for creation of
+												the payload. This file has to be in the package
+												source.main.resources.xsd </td>
+
+										</tr>
+
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d931799e113 ">Path to Target Element in XSD </td>
+
+											<td class="entry" valign="top" width="50%" headers="d931799e116 ">XPath in the XML Schema File where the content
+												from CSV has to be placed.</td>
+
+										</tr>
+
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d931799e113 ">Record Marker in CSV</td>
+
+											<td class="entry" valign="top" width="50%" headers="d931799e116 ">The corresponding record in the CSV file that has
+												to be considered for conversion. This entry is the
+												first text in every new record of the CSV. <div class="note note"><span class="notetitle">Note</span> If
+												this value is not specified then all the records
+												would be considered for conversion.</div>
+</td>
+
+										</tr>
+
+									</tbody>
+
+								</table>
+</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Field Separator in CSV</span> field, choose the
+							character that you want to use as the field separator in CSV file from
+							the dropdown list.</span>
+						<div class="itemgroup info">
+							<div class="note note"><span class="notetitle">Note</span> If you want to use a field separator that is not available in the
+								dropdown list, manually enter the character in <span class="ph uicontrol">Field
+									Separator in CSV</span> field.</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want to exclude headers in the first line of CSV file for
+							conversion, select <span class="ph uicontrol">Exclude First Line Header</span>
+							checkbox.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Save changes.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to use <span class="ph uicontrol">XML to CSV Converter</span>, right-click on the
+						<span class="ph uicontrol">CSV to XML Converter</span> and choose <span class="ph uicontrol">Switch to
+						XML to CSV Converter</span>. Perform the following substeps:</span>
+				<ol type="a" class="ol substeps" id="loio430ce2c914794c67ac3a2805eb406a68__substeps_zm3_nx4_np">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the context menu of <span class="ph uicontrol">Converter</span>, choose
+								<span class="ph uicontrol">Switch to XML to CSV Converter</span>.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Access the <span class="ph uicontrol">Properties</span> tab page.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Path to Source Element</span> field, enter the
+							path of the source element in XML file.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Field Separator in CSV</span> field, select the
+							field separator from the dropdown list.</span>
+						<div class="itemgroup info">
+							<div class="note note"><span class="notetitle">Note</span> If you want to use a field separator that is not available in the
+								dropdown list, manually enter the character in <span class="ph uicontrol">Field
+									Separator in CSV</span> field.</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want to use the field names in the XML file as headers in CSV file, select the
+								<span class="ph uicontrol">Field Names as Headers in CSV</span> checkbox.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want to include the parent element of the XML file in the CSV
+							file, in the <span class="ph uicontrol">Advanced</span> tab page select
+								<span class="ph uicontrol">Include Parent Element</span> checkbox.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want to include the attribute values of the XML file in the CSV
+							file, in the <span class="ph uicontrol">Advanced</span> tab page select
+								<span class="ph uicontrol">Include Attribute Values</span> checkbox.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Save changes.</span>
+					</li>
+
+				</ol>
+
+			</li>
+</ol>
+
+		<div class="example"><h2 class="exampletitle">Example</h2>
+			<p class="p">Consider a CSV file that is in the following format:</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">COMPETENCY,
+Role Specific,
+Computer Skills,
+"Skilled in the use of computers, adapts to new technology, keeps abreast of changes, learns new programs quickly, uses computers to improve productivity."
+</pre></div>
+
+			<p class="p">Consider the Schema XML File in the following format:</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;CompetencyList&gt;
+&lt;Competency&gt;
+&lt;id&gt;&lt;/id&gt;
+&lt;name&gt;&lt;/name&gt;
+&lt;description&gt;&lt;/description&gt;
+&lt;/Competency&gt;
+&lt;/CompetencyList&gt;
+</pre></div>
+
+			<p class="p">Value for the field <span class="ph uicontrol">XPath of Record Identifier in XSD</span> is given
+				as <span class="ph emphasis emphasis">CompetencyList\Competency</span>.</p>
+
+			<p class="p">After it is processed by the CSV to XML converter, the XML output appears in the
+				following format:</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;CompetencyList&gt;
+&lt;Competency&gt;
+&lt;id&gt;Role Specific&lt;/id&gt;
+&lt;name&gt;Computer Skills&lt;/name&gt;
+&lt;description&gt;Skilled in the use of computers, adapts to new technology, keeps abreast of changes, learns new programs quickly, uses computers to improve productivity.&lt;/description&gt;
+&lt;/Competency&gt;
+&lt;/CompetencyList&gt;
+</pre></div>
+
+		</div>
+
+	</div>
+
+<div class="related-links"> 
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

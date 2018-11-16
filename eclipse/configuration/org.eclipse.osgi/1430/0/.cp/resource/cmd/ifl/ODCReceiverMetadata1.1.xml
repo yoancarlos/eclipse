@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata
+	ComponentId="ctype::Adapter/cname::sap:ODC/version::1.1.4"
+	ComponentName="sap:ODC" UIElementType="Adapter" IsExtension="false"
+	IsFinal="true" IsPreserves="true" IsDefaultGenerator="true" ComponentDisplayName="ODC"
+	MetadataVersion="2.0" xmlns:gen="http://www.sap.hci.adk.com/gen">
+	<Variant VariantName="ODC"
+		gen:RuntimeComponentBaseUri="hci-odc"
+		VariantId="ctype::AdapterVariant/cname::sap:ODC/tp::HTTPS/mp::Not Applicable/direction::Receiver/version::1.1.4"
+		IsRequestResponse="true" MetadataVersion="2.0" AttachmentBehavior="Preserve">
+		<InputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>None</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</OutputContent>
+		<Metadata>
+			<AdditionalMetadata>
+				<Name>IntegrationFlowServices</Name>
+				<Value>httpSessionCookieHandler</Value>
+				<GuiLabels guid="d78b26a9-11c0-4929-8088-a8188cbb7d45">
+					<Label language="EN">Integration Flow Services</Label>
+					<Label language="DE">Integration Flow Services</Label>
+				</GuiLabels>
+			</AdditionalMetadata>
+		</Metadata>  
+		<Tab id="connection">
+			<GuiLabels guid="ac347874-97a4-4776-b44b-1c841595ae44">
+				<Label language="EN">Connection</Label>
+				<Label language="DE">Connection</Label>
+			</GuiLabels>
+			<AttributeGroup id="connectionDetails">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Config</Name>
+				<GuiLabels guid="3fad9473-3f5d-4c65-81c5-400a45e32407">
+					<Label language="EN">Connection Details</Label>
+					<Label language="DE">Connection Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>address</ReferenceName>
+					<description>URL of the service that you are accessing</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>client</ReferenceName>
+					<description>Backend system client that you want to connect to</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>nameSpace</ReferenceName>
+					<description>Namespace of the service that you are accessing</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>firstUriPart</ReferenceName>
+					<description>Name of the service that you are connecting </description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>version</ReferenceName>
+					<description>Version of the service that you are connecting to</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>proxyType</ReferenceName>
+					<description>Configure Proxy Type</description>
+					<EditCondition>
+					<!-- 
+					The version value is hardcoded to an impossible value, 
+					so that the this attribute does not show up on ui 
+					 -->
+						<AttributeName>version</AttributeName>
+						<AttributeValue>abcdefg123456</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>authenticationMethod</ReferenceName>
+					<description>Configure authentication method</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>alias</ReferenceName>
+					<description>Alias that you used while deploying basic authentication credentials</description>
+					<EditCondition>
+						<AttributeName>authenticationMethod</AttributeName>
+						<AttributeValue>Basic</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>scc_location_id</ReferenceName>
+					<description>To connect to a cloud connector instance associated with your account, enter the location ID that you defined for this instance in the destination configuration on the cloud side. You can also enter ${header.headername} to dynamically read the value from a header.</description>
+					<Restriction>Constraint.isValidRegex(^((?!\\|\\r|\\n|\\r\\n).)*$)</Restriction>
+					<ErrorMessage>Location ID contains characters that are not allowed. Characters that are not allowed: '\', '/', '\r\n', '\r', '\n'.
+					</ErrorMessage>
+				</AttributeReference>
+			</AttributeGroup>
+			</Tab>
+		<Tab id="tabProcessing">
+			<GuiLabels>
+				<Label language="EN">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id="processingDetails">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Config</Name>
+				<GuiLabels guid="3fad9473-3f5d-4c65-81c5-400a45e32407">
+					<Label language="EN">Processing Details</Label>
+					<Label language="DE">Processing Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>operation</ReferenceName>
+					<description>Operation that you want to perform</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>resourcePath</ReferenceName>
+					<description>Path to the resource that you want to perform the operation on</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>pathToEdmx</ReferenceName>
+					<description>Path to EDMX</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+	</Variant>
+	<AttributeMetadata>
+		<Name>resourcePath</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="8f57e549-19f0-427b-bea2-0ba39d561b18">
+			<Label language="EN">Resource Path</Label>
+			<Label language="DE">Resource Path</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>operation</Name>
+		<DataType>xsd:string</DataType>
+		<Default>GET_FEED</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="a9e7b1d2-23d0-475f-ac49-24fae44d29e8">
+			<Label language="EN">Operation</Label>
+			<Label language="DE">Operation</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>CREATE_ENTRY</Value>
+				<GuiLabels>
+					<Label language="EN">Create(POST)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>DELETE_ENTRY</Value>
+				<GuiLabels>
+					<Label language="EN">Delete(DELETE)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>MERGE_ENTRY</Value>
+				<GuiLabels>
+					<Label language="EN">Merge(MERGE)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>GET_FEED</Value>
+				<GuiLabels>
+					<Label language="EN">Query(GET)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>GET_ENTRY</Value>
+				<GuiLabels>
+					<Label language="EN">Read(GET)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>UPDATE_ENTRY</Value>
+				<GuiLabels>
+					<Label language="EN">Update(PUT)</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>client</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="7205f3bd-46c1-4e32-89aa-9c156d01c370">
+			<Label language="EN">Client</Label>
+			<Label language="DE">Client</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>address</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="0255ebf2-1a95-4a3c-8d9e-670000af740f">
+			<Label language="EN">Address</Label>
+			<Label language="DE">Address</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>scc_location_id</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">Location ID</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>authenticationMethod</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>Basic</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="9f869b6e-4028-40b7-b61d-6ac39d38f556">
+			<Label language="EN">Authentication</Label>
+			<Label language="DE">Authentication</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>Basic</Value>
+				<GuiLabels>
+					<Label language="EN">Basic</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>SAP_PP</Value>
+				<GuiLabels>
+					<Label language="EN">Principal Propagation</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>proxyType</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>sapcc</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="9f0238c0-70f1-415d-aef7-4012d643e329">
+			<Label language="EN">Proxy Type</Label>
+			<Label language="DE">Proxy Type</Label>
+		</GuiLabels>
+		<FixedValues> 
+			<FixedValue>
+				<Value>default</Value>
+				<GuiLabels>
+					<Label language="EN">Internet</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>sapcc</Value>
+				<GuiLabels>
+					<Label language="EN">On-Premise</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>nameSpace</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>true</isparameterized>		
+		<GuiLabels guid="b68e1a76-c77a-41d8-ba6b-03849a3289ae">
+			<Label language="EN">Namespace</Label>
+			<Label language="DE">Namespace</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>firstUriPart</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="db8ef073-1dda-498d-9544-3301c0fb02b1">
+			<Label language="EN">Service Name</Label>
+			<Label language="DE">Service Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>alias</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Credential Name</Label>
+			<Label language="DE">Credential Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>pathToEdmx</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>false</isparameterized>
+		<HelpService>
+			<HelpServiceName>odcqueryEditorF4Help</HelpServiceName>
+			<HelpServiceQueryAttributes>
+				<HelpServiceQueryAttribute>
+					<Name>ServiceName</Name>
+					<Value>Select</Value>
+				</HelpServiceQueryAttribute>
+			</HelpServiceQueryAttributes>
+		</HelpService>
+		<GuiLabels>
+			<Label language="EN">EDMX</Label>
+			<Label language="DE">EDMX</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<!-- <AttributeMetadata>
+		<Name>username</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Username</Label>
+			<Label language="DE">Username</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>password</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Password</Label>
+			<Label language="DE">Password</Label>
+		</GuiLabels>
+	</AttributeMetadata> -->
+	<AttributeMetadata>
+		<Name>version</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:integer</DataType>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Version</Label>
+			<Label language="DE">Version</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+</ComponentMetadata>

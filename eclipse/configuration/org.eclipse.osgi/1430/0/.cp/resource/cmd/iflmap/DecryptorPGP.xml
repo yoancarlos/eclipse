@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Decrypt/version::1.0.2" ComponentName="sap:Decryptor" UIElementType="Flowstep">
+    <Variant VariantId="ctype::FlowstepVariant/cname::PgpDecrypt/version::1.0.2" VariantName="PgpDecryptor" VariantDisplayName="PGP Decryptor" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Binary</ContentType>
+                <Schema></Schema>
+            </Content>
+        </InputContent>
+        <!-- allowed output content type -->
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </OutputContent>
+        <Tab id="iflow.advance.PGPDecryptor">
+            <AttributeGroup id="generalDetails">
+                <GuiLabels>
+                    <Label language="EN">General Details</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>Activity_Name</ReferenceName>
+                    <Restriction>[A-Za-z]+[A-Za-z0-9_]*</Restriction>
+                    <description>Enter a name for the Decryptor step. Begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PgpDecryptionSignatureOption</ReferenceName>
+                    <description>Select if signatures are expected in the received PGP message</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PgpDecryptionSignerUserIDs</ReferenceName>
+                    <OrCondition>
+                        <EditCondition>
+                            <AttributeName>PgpDecryptionSignatureOption</AttributeName>
+                            <AttributeValue>optional</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>PgpDecryptionSignatureOption</AttributeName>
+                            <AttributeValue>required</AttributeValue>
+                        </EditCondition>
+                    </OrCondition>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+        <!-- additional information -->
+        <AllowedHeaders></AllowedHeaders>
+        <ReferencedComponents></ReferencedComponents>
+    </Variant>
+    
+    <AttributeMetadata>
+        <Name>Activity_Name</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <AutoGenerate>
+            <Prefix>PGPDecryptor</Prefix>
+        </AutoGenerate>
+        <Default>PGPDecryptor</Default><!-- until AutoGenerate works use default -->
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PgpDecryptionSignatureOption</Name>
+        <DataType>xsd:string</DataType>
+        <Default>no_signature_allowed</Default>
+        <GuiLabels>
+            <Label language="EN">Signatures</Label>
+        </GuiLabels>
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>no_signature_allowed</Value>
+                <GuiLabels>
+                    <Label language="EN">None Expected</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>optional</Value>
+                <GuiLabels>
+                    <Label language="EN">Optional</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>required</Value>
+                <GuiLabels>
+                    <Label language="EN">Required</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>PgpDecryptionSignerUserIDs</Name>
+        <Usage>required</Usage>
+        <GuiLabels>
+            <Label language="EN">Signer Key User IDs</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>userId</ReferenceName>
+            <description>Enter the public key User IDs of all expected senders. The public keys are used to verify the signature(s).</description>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>userId</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <GuiLabels>
+            <Label language="EN">Signer User ID of Key(s) from Public Keyring</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

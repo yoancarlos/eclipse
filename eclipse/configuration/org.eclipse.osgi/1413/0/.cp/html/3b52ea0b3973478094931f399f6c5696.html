@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring a Channel with OData Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio3b52ea0b3973478094931f399f6c5696">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring a Channel with OData Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<p class="p">You have created an integration project and an integration flow.</p>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">OData adapter allows you to communicate using OData protocol in either ATOM or JSON format. In
+				the sender channel, the OData adapter listens for incoming requests in either ATOM
+				or JSON format. In the receiver channel, the OData adapter sends the OData request
+				in the format you choose (ATOM or JSON) to the OData service provider.</p>
+
+			<p class="p">OData adapters only support synchronous communication. In other words, every request must have
+				a response. </p>
+
+			<div class="note tip"><span class="tiptitle">Tip</span> If your input payload contains nodes without data, the output also
+				contains empty strings. If you want to avoid empty strings in the output, ensure
+				that the input payload does not contain any empty nodes.</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><p class="li stepsection">You use this procedure to configure OData adapter assigned to a communication
+				channel.</p><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Double-click the communication channel in the <span class="ph uicontrol">Model Configuration</span>
+					tab page. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Browse</span> in the <span class="ph uicontrol">Adapter Type</span>
+					screen area.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">OData</span> in the <span class="ph uicontrol">Choose
+						Adapter</span> window and choose <span class="ph uicontrol">OK</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the <span class="ph uicontrol">Adapter Specific</span> tab page and enter details in fields
+					based on the description given in the following table.</span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loio3b52ea0b3973478094931f399f6c5696__table_mqn_pbm_y5" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="28.52173913043478%"/><col width="17.391304347826086%"/><col width="54.08695652173913%"/></colgroup>
+
+							
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="28.52173913043478%" id="d711454e98">
+										<p class="p">Field</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="17.391304347826086%" id="d711454e104">
+										<p class="p">Channel</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="54.086956521739125%" id="d711454e110">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Authorization</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Sender only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">Select <span class="ph uicontrol">User Role</span> if you want to authorize a user to send OData
+											requests based on the ESBMessaging.send</p>
+
+										<p class="p">Select <span class="ph uicontrol">Client Certificate</span> if you want to authorize a user to
+											send OData requests based on a certificate. If you
+											select this option, you have to choose
+												<span class="ph uicontrol">Add</span> and enter the
+												<span class="ph uicontrol">Subject DN</span> (information used
+											to authorize the sender) and <span class="ph uicontrol">Issuer
+												DN</span> (information about the Certificate
+											Authority who issues the certificate).</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">EDMX</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Sender only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">Select the EDMX file that contains the OData service
+											definition.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Operation</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Sender only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">Select an operation to perform on the entity.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Entity Set</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Sender only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">Enter name of the entity set in the OData model.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Address</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Receiver only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">Enter URL of the OData service provider you want to
+											connect to.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Proxy Type</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Receiver only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<div class="p">The type of proxy that you are using to connect to the target system:<ul class="ul" id="loio3b52ea0b3973478094931f399f6c5696__d274e61">
+                <li class="li">
+                    <p class="p">Select <span class="ph uicontrol">Internet</span> if you are connecting to a cloud
+                        system.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">Select <span class="ph uicontrol">On-Premise</span> if you are connecting to an
+                        on-premise system.</p>
+
+                    <div class="note note"><span class="notetitle">Note</span> 
+                        <div class="p">If you select the <span class="ph uicontrol">On-Premise</span> option, the following
+                            restrictions apply to other parameter values:<ul class="ul" id="loio3b52ea0b3973478094931f399f6c5696__d274e87">
+                                <li class="li">
+                                    <p class="p">Do not use an HTTPS address for
+                                            <span class="ph uicontrol">Address</span>, as it leads to errors
+                                        when performing consistency checks or during deployment.</p>
+
+                                </li>
+
+                                <li class="li">
+                                    <p class="p">Do not use <span class="ph uicontrol">Certificate-Based
+                                            Authentication</span> as the
+                                            <span class="ph uicontrol">Authentication Type</span>, as it leads
+                                        to errors when performing consistency checks or during
+                                        deployment</p>
+
+                                </li>
+
+                            </ul>
+</div>
+
+                    </div>
+
+                    <div class="note note"><span class="notetitle">Note</span> If you select the <span class="ph uicontrol">On-Premise</span> option and use the SAP
+                        Cloud Connector to connect to your on-premise system, the
+                            <span class="ph uicontrol">Address</span> field of the adapter refers a virtual
+                        address which has to be configured in the SAP Cloud Connector
+                        settings.</div>
+
+                </li>
+
+                
+            </ul>
+</div>
+
+										<p class="p">For more information, see .</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Authentication</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Receiver only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">Select <span class="ph uicontrol">Basic</span> from the dropdown
+											list if you want to use basic authentication to connect
+											to the OData service provider</p>
+
+										<div class="p">Select <span class="ph uicontrol">Client Certificate</span> from the
+											dropdown list if you want to use a certificate for
+											authentication while connecting to the OData service
+												provider.<div class="note restriction"><span class="restrictiontitle">Restriction</span> You cannot use
+												client certificate for connecting to the OData
+												service provider while modeling operations using
+												operations modeler.</div>
+</div>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Operation Details</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Receiver only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">This contains details to the operation including Query
+											(GET), Update (PUT), Insert (POST), Read (GET), Create
+											(POST) and Merge (MERGE).</p>
+
+										<p class="p"><span class="ph uicontrol">ResourcePath:</span> This is the URI that
+											is appended to the OData service endpoint when
+											connecting to the service provider.</p>
+
+										<p class="p">For more information, see Modeling Operations for OData
+											Adapter</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Query Options</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Receiver Only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">Enter any query options that you would like to send to the OData service.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Custom Query Options</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Receiver only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">Enter additional query options other than the ones
+											configured using operations modeler. For example,
+											sap-client=100 is a custom query option that you can
+											specify.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Content Type</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Receiver only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">Select format of the request payload. You can select
+												<span class="ph uicontrol">Atom</span> or
+												<span class="ph uicontrol">JSON</span>.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Content Type Encoding</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Receiver only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">Select encoding standard used to encode the request
+											payload content.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="28.52173913043478%" headers="d711454e98 ">
+										<p class="p">Page Size</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="17.391304347826086%" headers="d711454e104 ">
+										<p class="p">Receiver only</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="54.086956521739125%" headers="d711454e110 ">
+										<p class="p">Enter total number of records in one page of response
+											from OData service provider.</p>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+
+					<div class="note note"><span class="notetitle">Note</span> For more information on authentication and authorization types, see  and .</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want the system to fetch records in pages of size specified in the
+						<span class="ph uicontrol">Page Size</span> field, select <span class="ph uicontrol">Process in
+						Batches</span> checkbox.</span>
+				<div class="itemgroup info"><span class="ph uicontrol">Process in Batches</span> option is available only for
+						<span class="ph uicontrol">Query (GET)</span> operation.</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the configuration.</span>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="topic task nested1" id="task_uvm_qyb_c4">
+		<h2 class="title topictitle2">Modeling Operations for OData Adapter</h2>
+
+		<div class="body taskbody">
+			<div class="section prereq p"><div class="tasklabel"><h3 class="sectiontitle tasklabel">Prerequisites</h3></div>You have configured OData adapter assigned to the receiver channel.</div>
+
+			<div class="section context"><div class="tasklabel"><h3 class="sectiontitle tasklabel">Context</h3></div>You use the <span class="ph uicontrol">Model Operation</span> feature in the OData adapter to model
+				an operation [Query (GET), Update (PUT), Create (POST), Read (GET) and Merge
+				(MERGE)]. You also select the <span class="ph uicontrol">ResourcePath</span>, the URI using
+				which you transact with the OData service provider.<div class="p">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<p class="p">If you are connecting to a system that supports
+								<span class="ph sap-technical-name sap-technical-name">https</span> communication, you
+							must ensure the following:</p>
+
+						<div class="p">
+							<ul class="ul" id="task_uvm_qyb_c4__ul_lqm_qhm_kq">
+								<li class="li">Java development kit is installed on your system</li>
+
+								<li class="li">You have referred JDK in the Eclipse configuration file<div class="note note"><span class="notetitle">Note</span> For
+										information on referring JDK in Eclipse configuration file,
+										refer to Eclipse documentation.</div>
+</li>
+
+								<li class="li">You have imported the security certificate of the system you are
+									connecting to your JDK keystore<div class="note note"><span class="notetitle">Note</span> For information on
+										importing certificate to JDK keystore, refer to JDK
+										documentation.</div>
+
+								</li>
+
+							</ul>
+
+						</div>
+
+					</div>
+
+				</div>
+</div>
+			<div class="ol steps tasklabel"><h3 class="sectiontitle tasklabel">Procedure</h3></div><p class="li stepsection">You use this procedure to model an operation with the OData adapter.</p><ol class="ol steps" id="task_uvm_qyb_c4__steps_qnl_yyb_c4"><li class="li step stepexpand">
+					<span class="ph cmd">Double-click the OData receiver channel of the integration flow in the
+							<span class="ph uicontrol">Model Configuration</span> tab page. </span>
+				</li>
+<li class="li step stepexpand">
+					<span class="ph cmd">Choose the <span class="ph uicontrol">Adapter Specific</span> tab page.</span>
+				</li>
+<li class="li step stepexpand">
+					<span class="ph cmd">Choose <span class="ph uicontrol">Model Operation</span>.</span>
+				</li>
+<li class="li step stepexpand">
+					<span class="ph cmd">If you want to use a local EDMX file to connect to the OData service
+						provider, perform the following substeps:</span>
+					<div class="itemgroup info">
+						<div class="note remember"><span class="remembertitle">Remember</span> If you have used client certificate for connecting to the OData service
+							provider, you need to download the EDMX file from the OData service
+							provider and import it to the <span class="ph uicontrol">src.main.resources.edmx
+							</span> folder. It enables you to use local EDMX file to connect to
+							the system.</div>
+
+					</div>
+					<ol type="a" class="ol substeps" id="task_uvm_qyb_c4__substeps_bj2_hzb_c4">
+						<li class="li substep">
+							<span class="ph cmd">Select the <span class="ph uicontrol">Local EDMX File</span> checkbox.</span>
+						</li>
+
+						<li class="li substep">
+							<span class="ph cmd">Choose <span class="ph uicontrol">Browse</span>.</span>
+						</li>
+
+						<li class="li substep">
+							<span class="ph cmd">Select an EDMX file in the <span class="ph uicontrol">EDMX Selection</span>
+								window and choose <span class="ph uicontrol">OK</span>.</span>
+						</li>
+
+					</ol>
+
+				</li>
+<li class="li step stepexpand">
+					<span class="ph cmd">If you want to enter connection details manually, enter values in fields
+						based on the description given in the table.</span>
+					
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="task_uvm_qyb_c4__choicetable_cpz_qzb_c4">
+<thead><tr><th valign="bottom" align="left" id="d711454e681-option">Field</th>
+<th valign="bottom" align="left" id="d711454e681-desc">Description</th></tr></thead>
+<tbody>
+						
+						<tr class="strow chrow">
+							<td valign="top" headers="d711454e681-option" id="d711454e694" class="stentry choption" width="50%"><strong>Address</strong></td>
+
+							<td valign="top" headers="d711454e681-desc d711454e694" class="stentry chdesc" width="50%">URL of OData service provider you are connecting to</td>
+
+						</tr>
+
+						<tr class="strow chrow">
+							<td valign="top" headers="d711454e681-option" id="d711454e703" class="stentry choption" width="50%"><strong>Username</strong></td>
+
+							<td valign="top" headers="d711454e681-desc d711454e703" class="stentry chdesc" width="50%">Username you are using for authentication</td>
+
+						</tr>
+
+						<tr class="strow chrow">
+							<td valign="top" headers="d711454e681-option" id="d711454e712" class="stentry choption" width="50%"><strong>Password</strong></td>
+
+							<td valign="top" headers="d711454e681-desc d711454e712" class="stentry chdesc" width="50%">Password you are using for authentication</td>
+
+						</tr>
+
+					</tbody></table></div>
+
+					<div class="itemgroup info">
+						<div class="note note"><span class="notetitle">Note</span> You cannot use this option if you have selected client certificate as
+							the authentication method while configuring the channel.</div>
+
+					</div>
+				</li>
+<li class="li step stepexpand">
+					<span class="ph cmd">Select the entity in <span class="ph uicontrol">Select Entity for an Operation</span>
+						window and choose <span class="ph uicontrol">Next</span>.</span>
+				</li>
+<li class="li step stepexpand">
+					<span class="ph cmd">Choose the <span class="ph uicontrol">Operation</span> from the dropdown list based on
+						the description given in the table.</span>
+					
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="task_uvm_qyb_c4__choicetable_tn5_f1c_c4">
+<thead><tr><th valign="bottom" align="left" id="d711454e747-option">Operation</th>
+<th valign="bottom" align="left" id="d711454e747-desc">Description</th></tr></thead>
+<tbody>
+						
+						<tr class="strow chrow">
+							<td valign="top" headers="d711454e747-option" id="d711454e760" class="stentry choption" width="50%"><strong>Query (GET)</strong></td>
+
+							<td valign="top" headers="d711454e747-desc d711454e760" class="stentry chdesc" width="50%">Used to fetch data from the OData service</td>
+
+						</tr>
+
+						<tr class="strow chrow">
+							<td valign="top" headers="d711454e747-option" id="d711454e769" class="stentry choption" width="50%"><strong>Create (POST)</strong></td>
+
+							<td valign="top" headers="d711454e747-desc d711454e769" class="stentry chdesc" width="50%">Used to insert data to an OData service</td>
+
+						</tr>
+
+						<tr class="strow chrow">
+							<td valign="top" headers="d711454e747-option" id="d711454e778" class="stentry choption" width="50%"><strong>Update (PUT)</strong></td>
+
+							<td valign="top" headers="d711454e747-desc d711454e778" class="stentry chdesc" width="50%">Used to update data to an OData service<div class="p">
+									<div class="note restriction"><span class="restrictiontitle">Restriction</span> This operation is not supported for
+										associated entities</div>
+
+								</div>
+</td>
+
+						</tr>
+
+						<tr class="strow chrow">
+							<td valign="top" headers="d711454e747-option" id="d711454e792" class="stentry choption" width="50%"><strong>Merge (MERGE)</strong></td>
+
+							<td valign="top" headers="d711454e747-desc d711454e792" class="stentry chdesc" width="50%">Used to merge data with existing data in OData service<div class="p">
+									<div class="note restriction"><span class="restrictiontitle">Restriction</span> This operation is not supported for
+										associated entities</div>
+
+								</div>
+</td>
+
+						</tr>
+
+						<tr class="strow chrow">
+							<td valign="top" headers="d711454e747-option" id="d711454e807" class="stentry choption" width="50%"><strong>Read (GET)</strong></td>
+
+							<td valign="top" headers="d711454e747-desc d711454e807" class="stentry chdesc" width="50%">Used to fetch a unique entity from the OData Service. <p class="p">Passes
+									the key fields along with the Entity in the
+										URI.</p>
+<p class="p"><span class="ph emphasis emphasis">Format:</span> &lt;Entity&gt;(keyfield
+									1, keyfield x,..)</p>
+</td>
+
+						</tr>
+
+					</tbody></table></div>
+
+				</li>
+<li class="li step stepexpand">
+					<span class="ph cmd">Select the required fields for the operation form the
+							<span class="ph uicontrol">Fields</span> screen area.</span>
+					<div class="itemgroup info">
+						<div class="note note"><span class="notetitle">Note</span> IN the case of Update (PUT) or Insert (POST) operation, this would be
+							the last step. Choose <span class="ph uicontrol">Finish</span>.</div>
+
+					</div>
+				</li>
+<li class="li step stepexpand">
+					<span class="ph cmd">If you have chosen the operation as <span class="ph uicontrol">Query (GET)</span>,
+						enter values in <span class="ph uicontrol">Top</span> and <span class="ph uicontrol">Skip</span>
+						fields based on the description given in table.</span>
+					
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="task_uvm_qyb_c4__choicetable_dv2_x1c_c4">
+<thead><tr><th valign="bottom" align="left" id="d711454e854-option">Field</th>
+<th valign="bottom" align="left" id="d711454e854-desc">Description</th></tr></thead>
+<tbody>
+						
+						<tr class="strow chrow">
+							<td valign="top" headers="d711454e854-option" id="d711454e867" class="stentry choption" width="50%"><strong>Top</strong></td>
+
+							<td valign="top" headers="d711454e854-desc d711454e867" class="stentry chdesc" width="50%">If you enter a value 'x', the system fetches the top x records
+								form the OData service provider</td>
+
+						</tr>
+
+						<tr class="strow chrow">
+							<td valign="top" headers="d711454e854-option" id="d711454e876" class="stentry choption" width="50%"><strong>Skip</strong></td>
+
+							<td valign="top" headers="d711454e854-desc d711454e876" class="stentry chdesc" width="50%">If you enter a value 'x', the system skips x records from top
+								and fetches the remaining records from the OData service
+								provider</td>
+
+						</tr>
+
+					</tbody></table></div>
+
+				</li>
+<li class="li step stepexpand">
+					<span class="ph cmd">Choose <span class="ph uicontrol">Next</span>.</span>
+				</li>
+<li class="li step stepexpand">
+					<span class="ph cmd">If you want to add filter conditions to the operation, enter values in
+						fields based on the description given in table.</span>
+					<div class="itemgroup info">
+						
+<div class="table-wrapper tablenoborder"><table summary="" id="task_uvm_qyb_c4__table_qjx_bgl_tq" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+								
+								
+								<thead class="thead" align="left">
+									<tr class="row">
+										<th class="entry" valign="top" width="50%" id="d711454e914">Field</th>
+
+										<th class="entry" valign="top" width="50%" id="d711454e917">Description</th>
+
+									</tr>
+
+								</thead>
+
+								<tbody class="tbody">
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d711454e914 ">Filter Field</td>
+
+										<td class="entry" valign="top" width="50%" headers="d711454e917 ">Field that is used in the ‘WHERE’ clause for
+												filtering.<div class="note note"><span class="notetitle">Note</span> Field set contains the set of
+												filterable fields returned from the OData service
+												provider that you can use in the Filter
+												Condition</div>
+</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d711454e914 ">Operation</td>
+
+										<td class="entry" valign="top" width="50%" headers="d711454e917 ">Operator to be used in the WHERE condition Example
+											&lt; , &gt; </td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d711454e914 ">Type</td>
+
+										<td class="entry" valign="top" width="50%" headers="d711454e917 ">Value that the filter filed has to be compared against. <p class="p">When the Type is
+												<span class="ph uicontrol">Text</span> then specify the exact
+												value</p>
+<p class="p">When the Type is
+												<span class="ph uicontrol">XPath</span> specify the entire
+												XPath value. In case the previous Integration flow
+												step is a content enricher, the XPath must be
+												specified as a relative path, starting with
+												double-slash ‘\\’.</p>
+ When the Type is
+												<span class="ph uicontrol">Property</span>, the system reads
+											value from the property you have defined in the
+											integration flow element. </td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d711454e914 ">Value</td>
+
+										<td class="entry" valign="top" width="50%" headers="d711454e917 ">Value that the filter filed has to be compared against. <p class="p">When the Type is
+												<span class="ph uicontrol">Text</span> then specify the exact
+												value</p>
+<p class="p">When the Type is
+												<span class="ph uicontrol">XPath</span> specify the entire
+												XPath value. In case the previous Integration flow
+												step is a content enricher, the XPath must be
+												specified as a relative path, starting with
+												double-slash ‘\\’. </p>
+</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d711454e914 ">Condition</td>
+
+										<td class="entry" valign="top" width="50%" headers="d711454e917 ">‘AND’ or ‘OR’ condition that needs to be used in the
+											Query WHERE clause filter condition.</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d711454e914 ">Add</td>
+
+										<td class="entry" valign="top" width="50%" headers="d711454e917 ">The condition will be added to the generated
+											SuccessFactors Query<div class="note note"><span class="notetitle">Note</span> Multiple conditions can be
+												added if required</div>
+</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d711454e914 ">Remove</td>
+
+										<td class="entry" valign="top" width="50%" headers="d711454e917 ">Any condition that is already added to the list can
+											be selected and removed from the final Query </td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+</div>
+
+					</div>
+				</li>
+<li class="li step stepexpand">
+					<span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span>
+				</li>
+</ol>
+
+			<div class="section result"><div class="tasklabel"><h3 class="sectiontitle tasklabel">Results</h3></div>
+				<p class="p">Choosing the <span class="ph uicontrol">Finish</span> button generates an XSD and EDMX
+					files. </p>
+
+				<p class="p">The XSD is the format in which data is processed in the <span class="ph pname">Cloud Integration</span> esb. You
+					use this xsd file in the mapping step for data transformation.</p>
+
+				<p class="p">The EDMX file contains the OData Entity specification form the provider. This can
+					be used when you model operation again by choosing ‘Local EDMX’ file.</p>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div class="topic task nested1" id="task_wjp_b55_l4">
+		<h2 class="title topictitle2">Defining Mapping for OData Batch Processing</h2>
+
+		<div class="body taskbody">
+			<div class="section prereq p"><div class="tasklabel"><h3 class="sectiontitle tasklabel">Prerequisites</h3></div>
+				<ul class="ul" id="task_wjp_b55_l4__ul_a2p_d55_l4">
+					<li class="li">You have created an integration project and integration flow</li>
+
+					<li class="li">You have configured the OData adapter receiver channel</li>
+
+					<li class="li">You have modeled PUT or POST operation using the OData adapter</li>
+
+					<li class="li">You have imported the input payload XML format into the eclipse project</li>
+
+				</ul>
+
+			</div>
+
+			<div class="section context"><div class="tasklabel"><h3 class="sectiontitle tasklabel">Context</h3></div>
+				<p class="p">When you choose batch processing for PUT and POST operations for the OData
+					adapter, the payload format that is sent to the OData service must be in the
+					recommended structure. You can use the input XSD that is generated when you
+					model the operation with a mapping step to transform the payload into the
+					recommended XSD structure. You can alternatively use XSLT or content modifier to
+					do this. </p>
+
+			</div>
+			<div class="ol steps tasklabel"><h3 class="sectiontitle tasklabel">Procedure</h3></div><p class="li stepsection">
+					<p class="p">This procedure enables you to transform the input payload XML into the
+						recommended batch processing structure. </p>
+
+				</p><ol class="ol steps" id="task_wjp_b55_l4__steps_tv1_k55_l4"><li class="li step">
+					<span class="ph cmd">Choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">File</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">New</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Other</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+				</li>
+<li class="li step">
+					<span class="ph cmd">In the <span class="ph uicontrol">New</span> wizard, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">SAP Cloud Platform
+                            Integration</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Message Mapping</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> and choose <span class="ph uicontrol">Next</span>. </span>
+				</li>
+<li class="li step">
+					<span class="ph cmd">In the <span class="ph uicontrol">General Details</span> section of the <span class="ph uicontrol">New
+							Message Mapping</span> window, enter <span class="ph uicontrol">Name</span>
+						and <span class="ph uicontrol">Description</span>.</span>
+				</li>
+<li class="li step">
+					<span class="ph cmd">In the <span class="ph uicontrol">Location Details</span> section of the
+							<span class="ph uicontrol">New Message Mapping</span> window, choose
+							<span class="ph uicontrol">Browse</span> and select the project that you are
+						working in. Choose <span class="ph uicontrol">Ok</span>.</span>
+				</li>
+<li class="li step">
+					<span class="ph cmd">In the <span class="ph uicontrol">New Message Mapping</span> window, choose
+							<span class="ph uicontrol">Finish</span>. </span>
+				</li>
+<li class="li step">
+					<span class="ph cmd">In the <span class="ph uicontrol">Source Element</span> section, choose
+							<span class="ph uicontrol">Add</span>. </span>
+				</li>
+<li class="li step">
+					<span class="ph cmd">In the Sel<span class="ph uicontrol">ect a XSD or WSDL file</span> window, select the
+						input payload format XML and choose <span class="ph uicontrol">OK</span>.</span>
+				</li>
+<li class="li step">
+					<span class="ph cmd">In the <span class="ph uicontrol">Target Element</span> section, choose
+							<span class="ph uicontrol">Add</span>. </span>
+				</li>
+<li class="li step">
+					<span class="ph cmd">In the <span class="ph uicontrol">Select a XSD or WSDL file</span> window, select the
+						XSD file that was generated when you modeled the operation and choose
+							<span class="ph uicontrol">OK</span>.</span>
+				</li>
+<li class="li step">
+					<span class="ph cmd">Choose the <span class="ph uicontrol">Definition</span> tab page and perform the
+						following substeps to map the elements in the payload XML to the target
+						XSD.</span>
+					<ol type="a" class="ol substeps" id="task_wjp_b55_l4__substeps_xr1_gw5_l4">
+						<li class="li substep substepexpand">
+							<span class="ph cmd">Map the <span class="ph uicontrol">Entity Type</span> element in the left pane
+								to the <span class="ph uicontrol">batchChangeSet</span> on the right
+								pane.</span>
+						</li>
+
+						<li class="li substep substepexpand">
+							<span class="ph cmd">Map the fields in the left pane to the appropriate fields on the right pane.</span>
+						</li>
+
+						<li class="li substep substepexpand">
+							<span class="ph cmd">Map the <span class="ph uicontrol">batchChangeSet</span>, <span class="ph uicontrol">Entity
+									Set</span> and <span class="ph uicontrol">Entity Type</span> elements
+								on the right pane except the headers to a constant. The value of the
+								constant can be a dummy example value.</span>
+						</li>
+
+						<li class="li substep substepexpand">
+							<span class="ph cmd">Choose the method element and double-click
+									<span class="ph uicontrol">Constant</span> element in the properties view.
+							</span>
+						</li>
+
+						<li class="li substep substepexpand">
+							<span class="ph cmd">In the <span class="ph uicontrol">Constant Parameters</span> window, enter the
+								operation (PUT/POST) in the <span class="ph uicontrol">Value</span> field and
+								choose <span class="ph uicontrol">OK</span>.</span>
+							<div class="itemgroup info">This is the same operation that you have chosen while modeling the
+								OData operation.<div class="note note"><span class="notetitle">Note</span> Refer to <a href="http://help.sap.com/disclaimer?site=https://launchpad.support.sap.com/#/notes/2031746" target="_blank">2031746 <img src="../images/sap_link.png" class="link-sap" alt="Information published on SAP site" title="Information published on SAP site" border="0"/></a> for more
+									details on the structure of request and response
+								XSD.</div>
+</div>
+						</li>
+
+					</ol>
+
+				</li>
+</ol>
+
+		</div>
+
+	</div>
+
+	<div class="topic concept nested1" id="concept_ikr_2wk_dq">
+		<h2 class="title topictitle2">Mapping Definition for Reference Insert</h2>
+
+		<div class="body conbody">
+			<p class="p">When you are performing the Insert (POST) operation, in addition to inserting an entity, you
+				can add a reference to an associated entity. To do this, you have to map the
+				appropriate field from the payload to the key field of associated entity in
+				&lt;link&gt; tag. </p>
+
+			<p class="p">You can use a mapping step to do this. Consider the following example.</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Categories xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CategoriesEntityPOST0.xsd"&gt;
+  &lt;Category&gt;
+    &lt;ID&gt;0&lt;/ID&gt;
+    &lt;Products&gt;
+      &lt;Product&gt;
+        &lt;Description&gt;Description&lt;/Description&gt;
+        &lt;Name&gt;Name&lt;/Name&gt;
+        &lt;ID&gt;0&lt;/ID&gt;
+      &lt;/Product&gt;
+    &lt;/Products&gt;
+    &lt;link&gt;
+      &lt;Products&gt;
+        &lt;Product&gt;
+          &lt;ID&gt;0&lt;/ID&gt;
+        &lt;/Product&gt;
+      &lt;/Products&gt;
+    &lt;/link&gt;
+  &lt;/Category&gt;
+&lt;/Categories&gt;</pre></div>
+
+			<p class="p">The primary key is <samp class="ph codeph">&lt;ID&gt;</samp>. You need to map the key element to your reference
+				to <samp class="ph codeph">&lt;ID&gt;</samp> for successfully executing reference insert
+				operation.</p>
+
+		</div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

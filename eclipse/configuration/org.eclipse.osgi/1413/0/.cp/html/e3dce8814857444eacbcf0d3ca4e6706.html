@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure Communication Channel with SFTP Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioe3dce8814857444eacbcf0d3ca4e6706">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure Communication Channel with SFTP Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loioe3dce8814857444eacbcf0d3ca4e6706__ul_w3l_pgp_gr">
+					<li class="li">
+						<p class="p">You have logged into your customer workspace in <span class="ph pname">SAP Cloud Platform
+                        Integration</span> web
+							tooling. </p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You have assigned SFTP adapter to the communication channel.</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">SFTP adapter uses a certificate and keystore to authenticate the file transfer unlike the
+				standard FTP. The SFTP adapter achieves secure transfer by encrypting sensitive
+				information before transmitting it on the network. It uses SSH protocol to transfer
+				files.</p>
+
+			<div class="p">If you want to dynamically override the
+            configuration of the adapter, you can set the following header before calling the SFTP
+            adapter: 
+<div class="table-wrapper tablenoborder"><table summary="" id="loioe3dce8814857444eacbcf0d3ca4e6706__d925e55" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Headers</span></caption>
+<colgroup><col width="15.503875968992247%"/><col width="84.49612403100775%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="15.503875968992247%" id="d4846175e61">Header</th>
+
+                            <th class="entry" valign="top" width="84.49612403100775%" id="d4846175e64">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d4846175e61 ">
+                                    <p class="p">CamelFileName</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d4846175e64 ">Overrides the existing file and directory name that is set
+                                    directly in the endpoint. <p class="p">This header can be used to
+                                        dynamically change the name of the file and directory to be
+                                        called.</p>
+</td>
+
+                            </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+</div>
+
+			<div class="p">The following examples show the header
+            CamelFileName, read via XPath from the payload, or set using an expression: 
+<div class="table-wrapper tablenoborder"><table summary="" id="loioe3dce8814857444eacbcf0d3ca4e6706__d925e89" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Example of Header</span></caption>
+<colgroup><col width="25%"/><col width="25%"/><col width="25%"/><col width="25%"/></colgroup>
+
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="25%" id="d4846175e109">Name</th>
+
+                            <th class="entry" valign="top" width="25%" id="d4846175e112">Type</th>
+
+                            <th class="entry" valign="top" width="25%" id="d4846175e115">Data Type</th>
+
+                            <th class="entry" valign="top" width="25%" id="d4846175e118">Value</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="25%" headers="d4846175e109 ">
+                                <p class="p">CamelFileName</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="25%" headers="d4846175e112 ">xpath</td>
+
+                            <td class="entry" valign="top" width="25%" headers="d4846175e115 ">java.lang.String</td>
+
+                            <td class="entry" valign="top" width="25%" headers="d4846175e118 ">/p:&lt;XYZ&gt;MessageBulk/&lt;XYZ&gt;Message/FileName/text()</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="25%" headers="d4846175e109 ">
+                                <p class="p">CamelFileName</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">Be aware of the following behavior if you have configured the
+                                        file name dynamically: If you have selected the
+                                            <span class="ph uicontrol">Append Timestamp</span> option, the
+                                        timestamp overrides the file name defined dynamically via
+                                        the header (<samp class="ph codeph">CamelFileName</samp>).</p>
+
+                                </div>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="25%" headers="d4846175e112 ">expression</td>
+
+                            <td class="entry" valign="top" width="25%" headers="d4846175e115 ">java.lang.String</td>
+
+                            <td class="entry" valign="top" width="25%" headers="d4846175e118 ">&lt;myapplication&gt;/template/out/output${date:now:yyyyMMddHHmmss}.xml</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+</div>
+
+			<p class="p">CI-PI currently supports the following ciphers for SSH (SFTP) communication:
+				blowfish-cbc,3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-ctr,aes192-ctr,aes256-ctr,3des-ctr,arcfour,arcfour128,arcfour256.</p>
+
+			<div class="p">
+				<div class="note caution"><span class="cautiontitle">Caution</span> The ciphers listed above can change in the future. New ciphers
+					can be added and existing ones can be removed in case of security weaknesses. In
+					such cases, you will have to change the ciphers on the SFTP server and
+					reconfigure the integration flows that contain SFTP adapter. SAP will inform
+					customers, if necessary.</div>
+
+			</div>
+
+			<div class="note caution"><span class="cautiontitle">Caution</span> 
+				<p class="p">If you select <span class="ph uicontrol">Run Once</span> option in the
+						<span class="ph uicontrol">Scheduler</span>, you see messages triggered from all the
+					integration flows with this setting after a software update. After the latest
+					software is installed on a cluster, it is restarted.</p>
+
+				<p class="p">This results in the integration flows getting deployed again and you see messages
+					from these integration flows with <span class="ph uicontrol">Run Once</span> setting.</p>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="2de9ee58737247969eb7dc9e68b1b121.html">Configure Communication Channel with SFTP Sender Adapter</a></div>
+<div><a class="link" href="4ef52cf6c89b44219ab7c23ef8a1df31.html">Configure Communication Channel with SFTP Receiver Adapter</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

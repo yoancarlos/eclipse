@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:JMS/version::1.1.0" ComponentName="sap:JMS" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" ns_1:noNamespaceSchemaLocation="ComponentMetadata.xsd" MetadataVersion="2.0" xmlns:ns_1="http://www.w3.org/2001/XMLSchema-instance">
+    <Variant VariantId="ctype::AdapterVariant/cname::JMS/tp::Not Applicable/mp::Not Applicable/direction::Receiver/version::1.1.0" VariantDisplayName="JMS Receiver" VariantName="JMS Receiver" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </OutputContent>
+        <ManifestEntries>
+            <ManifestEntry>
+                <Name>SAP-PreDeployment</Name>
+                <Value>/META-INF/deployment/queueDefinitions.json</Value>
+            </ManifestEntry>
+        </ManifestEntries>
+        <Tab id="tabProcessing">
+            <GuiLabels>
+                <Label language="EN">Processing</Label>
+            </GuiLabels>
+            <AttributeGroup id="processingDetails">
+                <GuiLabels>
+                    <Label language="EN">Processing Details</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>QueueName_outbound</ReferenceName>
+                    <Restriction>Constraint.isValidRegex(^([a-zA-Z0-9_])*$)</Restriction>
+                    <description>Enter a queue name having maximum 20 characters. The name should use characters (aA-zZ, 0-9, _) without any whitespaces.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>RetentionThresholdAlerting</ReferenceName>
+                    <description>Enter a time period (in days). If messages are not fetched within this period, an alert is raised. The default value is 2.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>ExpirationPeriod</ReferenceName>
+                    <description>Enter a time period (in days). The stored message is automatically deleted from the queue after this period. The default value is 90 days.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>EncryptMessage</ReferenceName>
+                    <description>Select this option to encrypt the message in the queue.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>TransferExchangeProperties</ReferenceName>
+                    <description>Select this option to also transfer the exchange properties to the JMS queue.</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+        <AllowedHeaders></AllowedHeaders>
+        <ReferencedComponents></ReferencedComponents>
+    </Variant>
+    <!-- inbound parameters -->
+    <AttributeMetadata>
+        <Name>QueueName_outbound</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length>20</Length>
+        <GuiLabels>
+            <Label language="EN">Queue Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>RetentionThresholdAlerting</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>2</Default>
+        <GuiLabels>
+            <Label language="EN">Retention Threshold for Alerting (in d)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>ExpirationPeriod</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>90</Default>
+        <GuiLabels>
+            <Label language="EN">Expiration Period (in d)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>EncryptMessage</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>1</Default>
+        <GuiLabels>
+            <Label language="EN">Encrypt Stored Message</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>TransferExchangeProperties</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>0</Default>
+        <GuiLabels>
+            <Label language="EN">Transfer Exchange Properties</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

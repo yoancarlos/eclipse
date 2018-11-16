@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Headers and Exchange Properties</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiod0fcb0988f034e889f611c6e36d43ad5">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Headers and Exchange Properties</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc"/>
+
+		<div class="section">
+            <p class="p">The integration framework provides options to evaluate certain parameters at runtime
+                and, that way, allows you to define sophisticated ways to control message
+                processing. There are two different kinds of such parameters: </p>
+
+            <ul class="ul" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e18">
+                <li class="li">
+                    <p class="p">Message header </p>
+
+                    <p class="p">Is transferred as part of the message header. </p>
+
+                    <p class="p">When you use a HTTP-based receiver adapter, these parameters are converted
+                        into an HTTP header and that way transferred to the receiver. </p>
+
+                    <div class="note note"><span class="notetitle">Note</span> 
+                        <p class="p">Note that data written to the message
+            header during a processing step (for example, in a Content Modifier or Script step) will
+            also be part of the outbound message addressed to a receiver system. Because of this, it
+            is important to consider the following header size restriction if you are using an
+            HTTP-based receiver adapter: If the message header exceeds a certain value, the receiver
+            may not be able to accept the inbound call (this applies to all HTTP-based receiver
+            adapters). The limiting value depends on the characteristics of the receiver system, but
+            typically ranges between 4 and 16 KB. To overcome this issue, you can use a subsequent
+            Content Modifier step to delete all headers that are not supposed to be part of the
+            outbound message.</p>
+
+                    </div>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">Exchange property </p>
+
+                    <p class="p">As long as a message is being processed, a data container (referred to
+            as <cite class="cite">Exchange</cite>) is available. This container is used to store additional data
+            besides the message to be processed. An Exchange can be seen as an abstraction of a
+            message exchange process as it is executed by the Camel framework. An Exchange is
+            identified uniquely by an Exchange ID. In the <span class="ph uicontrol">Properties</span> area of
+            the Exchange, additional data can be stored temporarily during message processing. This
+            data is available for the runtime during the whole duration of the message exchange.</p>
+
+                    <p class="p">When you use a HTTP-based receiver adapter, Exchange properties are
+                            <span class="ph emphasis emphasis">not</span> converted to an HTTP header and that way
+                        transferred to the receiver. </p>
+
+                </li>
+
+            </ul>
+
+            <p class="p">You can use the Content Modifier to modify the content of the message header and the
+                Exchange property (as well as of the message body) at one or more steps during
+                message processing. </p>
+
+            <p class="p">You can use the message header and the Exchange property to configure various
+                sophisticated ways ways to control message processing.  </p>
+
+            <p class="p">One option is the usage of dynamic parameters:</p>
+
+            <p class="p">When configuring an integration flow using the modelling user interface, you can
+                define placeholders for attributes of certain adapters or step types. The value to
+                be used actually for message processing will dynamically be set based on the content
+                of the message. You can use a certain message header or Exchange property to
+                dynamically set a specific integration flow property. </p>
+
+            <p class="p">Another option to derive such data from a message at runtime is to access a certain
+                element in the message payload. </p>
+
+            <p class="p">The following tables list the headers and exchange properties supported by the
+                integration framework.</p>
+
+            <div class="note note"><span class="notetitle">Note</span> 
+                <p class="p">A sub set of these parameters are provided by the associated open source
+                    components such like Apache Camel. </p>
+
+            </div>
+
+        </div>
+
+		<div class="section">
+            <div class="p" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e232">
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e234" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Headers Relevant for Signing with XML Digital Signature</span></caption>
+<colgroup><col width="17.513134851138354%"/><col width="82.48686514886165%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="17.513134851138354%" id="d4543054e107">
+                                    <p class="p">Header</p>
+
+                                </th>
+
+                                <th class="entry" valign="top" width="82.48686514886164%" id="d4543054e113">
+                                    <p class="p">Description</p>
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d4543054e107 ">
+                                    <p class="p">CamelXmlSignatureTransformMethods </p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d4543054e113 "><p class="p">Specifies transformation methods in a comma-separated
+                                        list. </p>
+You can use this header to specify transformation
+                                    methods in a comma-separated list. This header will overwrite
+                                    the value of the Option <span class="ph uicontrol">Transform Method for
+                                        Payload</span>.<div class="note sap-example example"><span class="exampletitle">Example</span> </div>
+<div class="note sap-samplecodeblock samplecode"><span class="samplecodetitle">Sample Code</span> Example
+                                        of this use case: The XML signature verifier of the
+                                        receiving system expects an XML signature as shown in the
+                                        following code snippet.<p class="p">The signature is a detached
+                                            signature, because the signature element is a sibling of
+                                            the signed element B. However, the receiving system
+                                            requires the enveloped-signature transform method to be
+                                            specified in the Transforms list. To ensure this, you
+                                            have to configure a detached signature in the XML Signer
+                                            step, then add a Content Modifier step before the XML
+                                            Signer step, where you specify the header
+                                            "CamelXmlSignatureTransformMethods" with the constant
+                                            value
+                                            “http://www.w3.org/2000/09/xmldsig#enveloped-signature,http://www.w3.org/TR/2001/REC-xml-c14n-20010315".</p>
+<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+
+&lt;root&gt; 
+
+            &lt;B ID="IDforB"&gt;
+
+                ...
+
+            &lt;/B&gt;
+
+            &lt;ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+
+                Id="_6bf13099-0568-4d76-8649-faf5dcb313c0"&gt;
+
+                &lt;ds:SignedInfo&gt;
+
+                    ...
+
+                    &lt;ds:Reference URI="#IDforB"&gt;
+
+                        &lt;ds:Transforms&gt;
+
+                            &lt;ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /&gt;
+
+                            &lt;ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /&gt;
+
+                        &lt;/ds:Transforms&gt;
+
+                        ...
+
+                    &lt;/ds:Reference&gt;
+
+                &lt;/ds:SignedInfo&gt;
+
+                &lt;ds:SignatureValue&gt;aUDFmiG71&lt;/ds:SignatureValue&gt;
+
+            &lt;/ds:Signature&gt;
+
+&lt;root&gt;
+</pre></div>
+</div>
+</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+            <div class="p" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e293">
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e295" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Headers Relevant for Message Signing with XML Advanced Electronic
+                        Signature</span></caption>
+<colgroup><col width="28.011204481792717%"/><col width="71.98879551820728%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="28.011204481792717%" id="d4543054e168">Message Header</th>
+
+                                <th class="entry" valign="top" width="71.98879551820728%" id="d4543054e171">Description</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="28.011204481792717%" headers="d4543054e168 ">
+                                    <p class="p">CamelXmlSignatureXAdESQualifyingPropertiesId</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="71.98879551820728%" headers="d4543054e171 ">Specifies the <samp class="ph codeph">Id</samp> attribute value of the
+                                    QualifyingProperties element. </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="28.011204481792717%" headers="d4543054e168 ">
+                                    <p class="p">CamelXmlSignatureXAdESSignedDataObjectPropertiesId</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="71.98879551820728%" headers="d4543054e171 ">Specifies the <samp class="ph codeph">Id</samp> attribute value of the
+                                    SignedDataObjectProperties element.</td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="28.011204481792717%" headers="d4543054e168 ">
+                                    <p class="p">CamelXmlSignatureXAdESSignedSignaturePropertiesId</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="71.98879551820728%" headers="d4543054e171 ">Specifies the <samp class="ph codeph">Id</samp> attribute value of the
+                                    SignedSignatureProperties element.</td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="28.011204481792717%" headers="d4543054e168 ">
+                                    <p class="p">CamelXmlSignatureXAdESDataObjectFormatEncoding</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="71.98879551820728%" headers="d4543054e171 ">Specifies the value of the <samp class="ph codeph">Encoding</samp> element
+                                    of the DataObjectFormat element. </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="28.011204481792717%" headers="d4543054e168 ">
+                                    <p class="p">CamelXmlSignatureXAdESNamespace</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="71.98879551820728%" headers="d4543054e171 ">Overwrites the <samp class="ph codeph">namespace</samp> parameter value.
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="28.011204481792717%" headers="d4543054e168 ">
+                                    <p class="p">CamelXmlSignatureXAdESPrefix</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="71.98879551820728%" headers="d4543054e171 ">Overwrites the <samp class="ph codeph">prefix</samp> parameter
+                                    value.</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+            <div class="p" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e415">
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e417" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 3: Headers Relevant for Message Splitting</span></caption>
+<colgroup><col width="17.513134851138354%"/><col width="82.48686514886165%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="17.513134851138354%" id="d4543054e290">
+                                    <p class="p">Header</p>
+
+                                </th>
+
+                                <th class="entry" valign="top" width="82.48686514886164%" id="d4543054e296">
+                                    <p class="p">Description</p>
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d4543054e290 ">
+                                    <p class="p">CamelSplitIndex </p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d4543054e296 ">
+                                    <p class="p">Provides a counter of split items that increases for each
+                                        Exchange that is split (starts from 0). </p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d4543054e290 ">
+                                    <p class="p">CamelSplitSize</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d4543054e296 ">
+                                    <p class="p">Provides the total number of split items (if you are using
+                                        stream-based splitting, this header is only provided for the
+                                        last item, in other words, for the completed Exchange). </p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d4543054e290 ">
+                                    <p class="p">CamelSplitComplete</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d4543054e296 ">
+                                    <p class="p">Indicates whether an Exchange is the last split. </p>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+            <div class="p" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e497">
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e499" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 4: Headers Relevant for Content Encoding</span></caption>
+<colgroup><col width="17.513134851138354%"/><col width="82.48686514886165%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="17.513134851138354%" id="d4543054e372">
+                                    <p class="p">Header</p>
+
+                                </th>
+
+                                <th class="entry" valign="top" width="82.48686514886164%" id="d4543054e378">
+                                    <p class="p">Description</p>
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d4543054e372 ">
+                                    <p class="p">CamelCharsetName </p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d4543054e378 ">
+                                    <p class="p">Specifies the character encoding to be applied for message
+                                        processing. </p>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+            <div class="p">
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e551" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 5: Headers Relevant for the HTTP and HTTPS Adapter</span></caption>
+<colgroup><col width="15.503875968992247%"/><col width="84.49612403100775%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="15.503875968992247%" id="d4543054e424">Header</th>
+
+                                <th class="entry" valign="top" width="84.49612403100775%" id="d4543054e427">Description</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e576" class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d4543054e424 ">
+                                    <p class="p">CamelHttpUri</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d4543054e427 ">Overrides the existing URI set directly in the endpoint.
+                                        <p class="p">This header can be used to dynamically change the URI to
+                                        be called. </p>
+</td>
+
+                            </tr>
+
+                            <tr id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e590" class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d4543054e424 "><p class="p">CamelHttpUrl</p>
+</td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d4543054e427 ">Refers to the complete URL called, without query
+                                        parameters.<p class="p">For example,
+                                            <samp class="ph codeph">CamelHttpUrl=https://test.bsn.neo.ondemand.com/http/hello</samp>.
+                                    </p>
+</td>
+
+                            </tr>
+
+                            <tr id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e605" class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d4543054e424 ">
+                                    <p class="p">CamelHttpQuery</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d4543054e427 ">Refers to the query string that is contained in the request
+                                        URL.<p class="p">In the context of a receiver adapter, this header can
+                                        be used to dynamically change the URI to be called.
+                                        </p>
+<p class="p">For example,
+                                            <samp class="ph codeph">CamelHttpQuery=abcd=1234</samp>.</p>
+</td>
+
+                            </tr>
+
+                            <tr id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e624" class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d4543054e424 ">
+                                    <p class="p">Content-Type</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d4543054e427 ">
+                                    <p class="p">HTTP content type that fits to the body of the request</p>
+
+                                    <p class="p">The content type is composed of two parts, a type and a
+                                        subtype, for example, <samp class="ph codeph">image/jpeg</samp> (where
+                                            <samp class="ph codeph">image</samp> is the type and
+                                            <samp class="ph codeph">jpeg</samp> is the subtype). </p>
+
+                                    <p class="p">Examples:</p>
+
+                                    <ul class="ul" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e652">
+                                        <li class="li">
+                                            <p class="p"><samp class="ph codeph">text/plain</samp> for unformatted text</p>
+
+                                        </li>
+
+                                        <li class="li">
+                                            <p class="p"><samp class="ph codeph">text/html</samp> for text formatted with
+                                                HTML syntax</p>
+
+                                        </li>
+
+                                        <li class="li">
+                                            <p class="p"><samp class="ph codeph">image/jpeg</samp> for a jpeg image file
+                                            </p>
+
+                                        </li>
+
+                                        <li class="li">
+                                            <p class="p"><samp class="ph codeph">application/json</samp> for data in JSON
+                                                format to be processed by an application that
+                                                requires this format</p>
+
+                                        </li>
+
+                                    </ul>
+
+                                    <p class="p">More information on the available types: <a class="extlink" href="http://help.sap.com/disclaimer?site=https://www.w3.org/Protocols/rfc1341/4_Content-Type.html" target="_blank" alt="https://www.w3.org/Protocols/rfc1341/4_Content-Type.html" title="https://www.w3.org/Protocols/rfc1341/4_Content-Type.html">https://www.w3.org/Protocols/rfc1341/4_Content-Type.html<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+
+                                    <p class="p">The list of available content-types is maintained by the
+                                        Internet Assigned Numbers Authority (IANA). For more
+                                        information, see: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" alt="http://www.iana.org/assignments/media-types/media-types.xhtml" title="http://www.iana.org/assignments/media-types/media-types.xhtml">http://www.iana.org/assignments/media-types/media-types.xhtml<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>.</p>
+
+                                    <div class="note note"><span class="notetitle">Note</span> 
+                                        <p class="p">For the transfer of <samp class="ph codeph">text/*</samp> content types
+                                            you can also specify the character encoding in the HTTP
+                                            header using the <samp class="ph codeph">charset</samp> parameter. </p>
+
+                                        <p class="p">Example for such a header:</p>
+
+                                        <p class="p"><samp class="ph codeph">Content-Type: text/html;
+                                            charset=utf-8</samp></p>
+
+                                        <p class="p">The default character encoding which will be applied for
+                                                <samp class="ph codeph">text/*</samp> content types depends on the
+                                            HTTP version: <samp class="ph codeph">us-ascii</samp> for HTTP 1.0 and
+                                                <samp class="ph codeph">iso-8859-1</samp> for HTTP 1.1. </p>
+
+                                        <p class="p">Text data in string format is converted by default using
+                                            UTF-8 during message processing. If you like to override
+                                            this behaviour, you can use the Content Modifier step
+                                            and specify the <samp class="ph codeph">CamelCharsetName</samp>
+                                            Exchange property. To avoid encoding issues when using
+                                            this feature together with the HTTP adapter, consider
+                                            the following example configuration:</p>
+
+                                        <p class="p">If you use a Content Modifier step and you like to
+                                            finally send <samp class="ph codeph">iso-8859-1</samp>-encoded data to
+                                            a receiver, make sure that you specify the the
+                                                <samp class="ph codeph">CamelCharsetName</samp> Exchange property
+                                            (either header or property) as
+                                                <samp class="ph codeph">iso-8859-1</samp>. As Content-Type HTTP
+                                            header, use: <samp class="ph codeph">text/plain;
+                                                charset=iso-8859-1</samp>.  </p>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                            <tr id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e754" class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d4543054e424 ">
+                                    <p class="p">Content-Encoding</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d4543054e427 ">HTTP content encoding that indicates the encoding used during
+                                    message transport (for example, <samp class="ph codeph">gzip</samp> for GZIP
+                                    file compression)<p class="p">This information is used by the receiver to
+                                        retrieve the media type that is referenced by the
+                                            <samp class="ph codeph">content-type</samp> header. </p>
+<p class="p">If this
+                                        header is not specified, the default value
+                                            <samp class="ph codeph">identity</samp> (no compression) is
+                                        used.</p>
+<p class="p">More information: <a class="extlink" href="http://help.sap.com/disclaimer?site=https://tools.ietf.org/html/rfc2616" target="_blank" alt="https://tools.ietf.org/html/rfc2616" title="https://tools.ietf.org/html/rfc2616">https://tools.ietf.org/html/rfc2616<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a> (section
+                                        14.11)</p>
+<p class="p">The list of available content-types is
+                                        maintained by the Internet Assigned Numbers Authority
+                                        (IANA). For more information, see: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding" target="_blank" alt="http://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding" title="http://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding">http://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+</td>
+
+                            </tr>
+
+                            <tr id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e789" class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d4543054e424 "><p class="p">CamelHttpMethod</p>
+</td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d4543054e427 "><p class="p">Refers to the incoming method names used to make the request. These methods are
+                                            <span class="ph uicontrol">GET</span>, <span class="ph uicontrol">POST</span>,
+                                            <span class="ph uicontrol">PUT</span>,
+                                            <span class="ph uicontrol">DELETE</span>, and so on.</p>
+</td>
+
+                            </tr>
+
+                            <tr id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e812" class="row">
+                                <td class="entry" valign="top" width="15.503875968992247%" headers="d4543054e424 "><p class="p">CamelServletContextPath</p>
+</td>
+
+                                <td class="entry" valign="top" width="84.49612403100775%" headers="d4543054e427 "><p class="p">Refers to the path specified in the address field of the channel.</p>
+<p class="p">For example, if the address in the channel is<span class="ph uicontrol"> /abcd/1234</span>, then
+                                            <span class="ph uicontrol">CamelServletContextPath</span> is
+                                            <span class="ph uicontrol">/abcd/1234</span>.</p>
+</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+            <div class="p" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e839">
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e841" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 6: Headers Relevant for the SFTP Adapter</span></caption>
+<colgroup><col width="17.513134851138354%"/><col width="82.48686514886165%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="17.513134851138354%" id="d4543054e718">
+                                    <p class="p">Header</p>
+
+                                </th>
+
+                                <th class="entry" valign="top" width="82.48686514886164%" id="d4543054e724">
+                                    <p class="p">Description</p>
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e872" class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d4543054e718 ">
+                                    <p class="p">CamelFileName</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d4543054e724 ">Overrides the existing file and directory name that is set
+                                    directly in the endpoint. <p class="p">This header can be used to
+                                        dynamically change the name of the file and directory to be
+                                        called.</p>
+</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+            <div class="p">
+                <div class="note note"><span class="notetitle">Note</span> 
+                    <p class="p"><span class="ph emphasis emphasis">Headers for Mail Adapter</span></p>
+
+                    <p class="p">The mail adapter supports all possible headers that a mail server or mail
+                        client sets. It depends on the mail server and the mail client which headers
+                        are set or not set. The headers listed in the table below are examples of
+                        commonly used headers. </p>
+
+                </div>
+
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e902" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 7: Headers relevant for Mail Adapter</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="50%" id="d4543054e779"><p class="p">Header</p>
+</th>
+
+                                <th class="entry" valign="top" width="50%" id="d4543054e783"><p class="p">Description</p>
+</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="50%" headers="d4543054e779 "><p class="p">Subject</p>
+</td>
+
+                                <td class="entry" valign="top" width="50%" headers="d4543054e783 "><p class="p">Specifies the subject of the e-mail message.</p>
+</td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="50%" headers="d4543054e779 "><p class="p">To</p>
+</td>
+
+                                <td class="entry" valign="top" width="50%" headers="d4543054e783 "><p class="p">Specifies the e-mail address that the message is sent
+                                        to.</p>
+</td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="50%" headers="d4543054e779 "><p class="p">Cc</p>
+</td>
+
+                                <td class="entry" valign="top" width="50%" headers="d4543054e783 "><p class="p">Specifies the additional e-mail address that the message
+                                        is sent to.</p>
+</td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="50%" headers="d4543054e779 "><p class="p">From</p>
+</td>
+
+                                <td class="entry" valign="top" width="50%" headers="d4543054e783 "><p class="p">Specifies the e-mail address that the message comes
+                                        from.</p>
+</td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="50%" headers="d4543054e779 ">
+                                    <p class="p">Date</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="50%" headers="d4543054e783 ">
+                                    <p class="p">Specifies the date and time when the e-mail was sent.</p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="50%" headers="d4543054e779 ">
+                                    <p class="p">Content-Type</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="50%" headers="d4543054e783 ">
+                                    <p class="p">Specifies the format of the e-mail (html or plaintext)</p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="50%" headers="d4543054e779 ">
+                                    <p class="p">Message-ID</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="50%" headers="d4543054e783 ">
+                                    <p class="p">Specifies the ID that the mail system assigned to the e-mail
+                                        when it was first created.</p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="50%" headers="d4543054e779 ">
+                                    <p class="p">Reply-to</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="50%" headers="d4543054e783 ">
+                                    <p class="p">Specifies the message ID of the message that this e-mail is a
+                                        reply to. </p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="50%" headers="d4543054e779 ">
+                                    <p class="p">Sender</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="50%" headers="d4543054e783 ">
+                                    <p class="p">Specifies the actual sender (acting on behalf of the e-mail
+                                        address stated in the From header).</p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="50%" headers="d4543054e779 ">
+                                    <p class="p">Archived-At</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="50%" headers="d4543054e783 ">
+                                    <p class="p">Specifies a link to the archived form of an e-mail.</p>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+            <div class="p" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e1068">
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e1070" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 8: Headers Relevant for Message Aggregation</span></caption>
+<colgroup><col width="17.513134851138354%"/><col width="82.48686514886165%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="17.513134851138354%" id="d4543054e947">
+                                    <p class="p">Header</p>
+
+                                </th>
+
+                                <th class="entry" valign="top" width="82.48686514886164%" id="d4543054e953">
+                                    <p class="p">Description</p>
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d4543054e947 ">
+                                    <p class="p">CamelAggregatedCompletedBy</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d4543054e953 ">
+                                    <p class="p">This header is relevant for use cases with message
+                                        aggregation. </p>
+
+                                    <p class="p">The header attribute can only have one of the following
+                                        values: </p>
+
+                                    <ul class="ul" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e1117">
+                                        <li class="li">
+                                            <p class="p">timeout </p>
+
+                                            <p class="p">Processing of the aggregate has been stopped because
+                                                the configured Completion Timeout has been reached. </p>
+
+                                        </li>
+
+                                        <li class="li">
+                                            <p class="p">predicate </p>
+
+                                            <p class="p">Processing of the aggregate has finished because the
+                                                Completion Condition has been met. </p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+            
+        </div>
+
+		<div class="section"><div class="section_title">Additional Message Header</div><div type="Additional Message Header">
+            
+            <p class="p">You can specify one of the following headers (under <span class="ph uicontrol">Message
+                    Header</span> in the <span class="ph uicontrol">Name</span> field): </p>
+
+            <ul class="ul" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e1223">
+                <li class="li">
+                    <p class="p"><kbd class="ph userinput">SAP_ApplicationID</kbd></p>
+
+                    <p class="p">When you monitor the messages at runtime, you can then search for all
+                        messages whose such defined <kbd class="ph userinput">SAP_ApplicationID</kbd> have a
+                        specific value (shows up as <span class="ph uicontrol">MessageID</span> attribute in
+                        the Message Monitoring editor). </p>
+
+                    <p class="p">As <span class="ph uicontrol">Type</span>, select the XPath expression that points to
+                        the message element which is to be used as application ID.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><kbd class="ph userinput">SAP_Sender</kbd></p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><kbd class="ph userinput">SAP_Receiver</kbd></p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><kbd class="ph userinput">SAP_MessageType</kbd></p>
+
+                    <p class="p">You can use this property to categorize messages. </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><kbd class="ph userinput">SAP_MessageProcessingLogID</kbd></p>
+
+                    <p class="p">You can use this property to read the ID of the message processing log (no
+                        write access supported). </p>
+
+                </li>
+
+            </ul>
+
+            <p class="p">When you have specified <kbd class="ph userinput">SAP_Sender</kbd> or
+                    <kbd class="ph userinput">SAP_Receiver</kbd>, the corresponding values are displayed in
+                the Message Processing Log. If you change the <kbd class="ph userinput">SAP_Receiver</kbd>
+                value during message processing, all values are added to the receiver field in the
+                Message Processing Log as a comma-separated list. If you don’t like this behavior
+                you can specify the Exchange Property <samp class="ph codeph">SAP_ReceiverOverwrite</samp> (see
+                below).</p>
+
+        </div></div>
+
+		<div class="section"><div class="section_title">Exchange Properties</div><div type="Exchange Properties">
+            
+            <p class="p">You can specify one of the following exchange properties (under <span class="ph uicontrol">Exchange
+                    Property</span> in the <span class="ph uicontrol">Name</span> field): </p>
+
+            <ul class="ul" id="loiod0fcb0988f034e889f611c6e36d43ad5__d3350e1312">
+                
+                <li class="li">
+                    <p class="p"><samp class="ph codeph">SAP_ReceiverOverwrite</samp></p>
+
+                    <p class="p">Headers that are added to a message using the <samp class="ph codeph">SAP_Receiver</samp>
+                        header element during message processing are appended to the message
+                        processing log (MPL). </p>
+
+                    <p class="p">This behaviour is reasonable for scenarios like, for example, the multicast
+                        pattern where a message is sent to several receivers and all receivers are
+                        to be collected in the MPL (not just the last added header). </p>
+
+                    <p class="p">By setting the <samp class="ph codeph">SAP_ReceiverOverwrite</samp> exchange property to
+                            <samp class="ph codeph">true</samp>, you can change this behaviour in such a way that
+                        only the last added header is shown in the MPL. </p>
+
+                    <div class="note note"><span class="notetitle">Note</span> 
+                        <p class="p">Example configuration:</p>
+
+                        <p class="p"><span class="ph uicontrol">Name</span>:
+                            <kbd class="ph userinput">SAP_ReceiverOverwrite</kbd></p>
+
+                        <p class="p"><span class="ph uicontrol">Type</span>: <kbd class="ph userinput">Constant</kbd></p>
+
+                        <p class="p"><span class="ph uicontrol">Value</span>: <kbd class="ph userinput">True</kbd></p>
+
+                    </div>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><samp class="ph codeph">SAP_ErrorModelStepID</samp></p>
+
+                    <p class="p">You can use this property to set a Model Step ID for an integration flow
+                        step. This identifier is required to relate to an integration flow step in
+                        error handling.</p>
+
+                </li>
+
+                
+                
+                
+            </ul>
+
+        </div></div>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="5705f2b41cca422e967511e3deb1beb4.html">Dynamic Parameters</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

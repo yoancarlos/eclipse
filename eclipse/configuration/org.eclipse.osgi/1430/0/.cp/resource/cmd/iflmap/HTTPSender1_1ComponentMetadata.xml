@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:HTTPS/version::1.1" ComponentName="sap:HTTPS" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" IsDefaultGenerator="true" gen:RuntimeComponentBaseUri="sap-http" xmlns:gen="http://www.w3.org/2001/XMLSchema-instance" MetadataVersion="2.0">
+    <Variant VariantName="Http Sender Component" VariantId="ctype::AdapterVariant/cname::HTTPS/tp::HTTPS/mp::None/direction::Sender/version::1.1" gen:RuntimeComponentBaseUri="sap-http" MetadataVersion="2.0">
+        <InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </OutputContent>
+        <Metadata>
+            <AdditionalMetadata>
+                <Name>SupportPrincipalPropagation</Name>
+                <Value>true</Value>
+                <GuiLabels>
+                    <Label language="en"></Label>
+                </GuiLabels>
+            </AdditionalMetadata>
+        </Metadata>
+        <Tab id="connection">
+            <GuiLabels guid="fb9543d2-e146-4460-b17f-7926d3ef2b95">
+                <Label language="EN">Connection</Label>
+                <Label language="DE">Connection</Label>
+            </GuiLabels>
+            <AttributeGroup id="RequestProcessing">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Request Processing</Name>
+                <GuiLabels guid="e2a7dc26-d0a6-4298-9f0b-92856cba8047">
+                    <Label language="EN">Request Processing</Label>
+                    <Label language="DE">Request Processing</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>urlPath</ReferenceName>
+<!--                     <Restriction>Constraint.isValidRegex(/(\$)?\w+(((\.)?\w+)*((-)?\w+)*)*(/(\$)?\w+(((\.)?\w+(~)?\w+)*((-)?\w+)*)*)*(/\*)?)</Restriction> -->
+<!--                     <ErrorMessage>The address field should start with '/' and can contain alphanumeric values, '_','.','-','$','~','*' and '/'. E.g. '/test/123' or '/test/*'</ErrorMessage> -->
+                    <description>The address field must begin with '/' and can include alphanumeric values, and other special characters such as '_','.','-','$','~','*' and '/'. For example, '/test/123' or '/test/*'.</description>
+                 </AttributeReference>
+                  <AttributeReference>
+    				<ReferenceName>senderAuthType</ReferenceName>
+    				<description>Select client authentication type</description>
+		         </AttributeReference>
+                 <AttributeReference>
+    				<ReferenceName>userRole</ReferenceName>
+					<EditCondition>
+						<AttributeName>senderAuthType</AttributeName>
+						<AttributeValue>RoleBased</AttributeValue>
+					</EditCondition>
+    				<description>Add user role for authorization</description>
+		</AttributeReference>				
+		<AttributeReference>
+    				<ReferenceName>clientCertificates</ReferenceName>
+					<EditCondition>
+						<AttributeName>senderAuthType</AttributeName>
+						<AttributeValue>ClientCertificate</AttributeValue>
+					</EditCondition>
+    				<description>Add partner certificates for authorizations.</description>
+		</AttributeReference>
+            </AttributeGroup>
+       </Tab>
+       <AllowedHeaders>CamelHttpMethod,CamelServletContextPath,CamelAuthentication,CamelHttpQuery,CamelHttpUrl,CamelHttpPath</AllowedHeaders>
+    </Variant>
+    <AttributeMetadata>
+        <Name>urlPath</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <GuiLabels guid="0967164f-5c3f-406a-9faf-8414c9872916">
+            <Label language="EN">Address</Label>
+            <Label language="DE">Address</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>senderAuthType</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>RoleBased</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="b7b5924e-bce6-4b6b-b206-b5f7ea57ad07">
+            <Label language="EN">Authorization</Label>
+            <Label language="DE">Authorization</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>RoleBased</Value>
+                <GuiLabels guid="6db9b216-fb34-46ba-8dcb-f9e8caca9f99">
+                    <Label language="EN">User Role</Label>
+                    <Label language="DE">User Role</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>ClientCertificate</Value>
+                <GuiLabels guid="1b0ff5f1-7604-49e7-9f10-e16f6a7e67b2">
+                    <Label language="EN">Client Certificate</Label>
+                    <Label language="DE">Client Certificate</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata> 
+    <AttributeMetadata>
+    	<Name>userRole</Name>
+    	<Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>ESBMessaging.send</Default>
+        <Length></Length>
+		<isparameterized>true</isparameterized>
+        <GuiLabels guid="0967164f-5c3f-406a-9faf-8414c9872910">
+            <Label language="EN">User Role</Label>
+            <Label language="DE">User Role</Label>
+        </GuiLabels>
+   </AttributeMetadata>
+   <AttributeTableMetadata>
+	    <Name>clientCertificates</Name>
+	    <Usage>true</Usage>
+		<HelpService>
+			<HelpServiceName>certificateLookupService</HelpServiceName>
+		</HelpService>
+	    <GuiLabels guid="01c2bd59-8dd1-4efb-b795-869851eb979b">
+	        <Label language="EN">Client Certificate Authorization</Label>
+	        <Label language="DE">Client Certificate Authorization</Label>
+	    </GuiLabels>
+	    <AttributeReference>
+	        <ReferenceName>clientCertificate.subjectDN</ReferenceName>
+	    </AttributeReference>
+	    <AttributeReference>
+	        <ReferenceName>clientCertificate.issuerDN</ReferenceName>
+	    </AttributeReference>
+	</AttributeTableMetadata>
+	<AttributeMetadata>
+    	<Name>clientCertificate.subjectDN</Name>
+    	<Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+		<isparameterized>true</isparameterized>
+    	<GuiLabels guid="0b7dc876-3ec2-4175-bb43-76a8d3d1d82d">
+        	<Label language="EN">Subject DN</Label>
+        	<Label language="DE">Subject DN</Label>
+    	</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+    	<Name>clientCertificate.issuerDN</Name>
+    	<Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+		<isparameterized>true</isparameterized>
+    	<GuiLabels guid="9a39abed-a80c-4bf8-a48d-cb6a32d5d767">
+        	<Label language="EN">Issuer DN</Label>
+        	<Label language="DE">Issuer DN</Label>
+    	</GuiLabels>
+	</AttributeMetadata>
+</ComponentMetadata>

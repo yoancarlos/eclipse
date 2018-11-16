@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You sign a message with an XML digital signature to ensure authenticity and data integrity while sending an XML resource to the participants on the cloud."/>
+<meta name="description" content="You sign a message with an XML digital signature to ensure authenticity and data integrity while sending an XML resource to the participants on the cloud."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Sign the Message Content with XML Digital Signature</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio9a013dba51dc45429b0103a866b0e484">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Sign the Message Content with XML Digital Signature</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You sign a message with an XML digital signature to ensure authenticity and data
+		integrity while sending an XML resource to the participants on the cloud. </p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p"/>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio9a013dba51dc45429b0103a866b0e484__steps_qhz_drp_vk"><li class="li step stepexpand">
+				<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loio9a013dba51dc45429b0103a866b0e484__image_oqv_t5x_jr" src="loioccb09c1e8d904b42966cd321c4008329_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Signer</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">XML Digital Signer</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Place <span class="ph uicontrol">XML Digital Signer</span> in integration process and
+					define the message path.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Enter the parameters to create an XML digital signature for the incoming message.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio9a013dba51dc45429b0103a866b0e484__d2352e109" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: </span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d3432540e73">
+                                <p class="p">Parameter</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d3432540e79">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">Private Key Alias</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <p class="p">Alias to select the private key from the keystore</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">Signature Algorithm</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <p class="p">Signature algorithm for the RSA or DSA private key type </p>
+
+                                <p class="p">Using the private key, the sender encrypts the digest. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">Digest Algorithm</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <p class="p">Digest algorithm that is used to calculate a digest from the
+                                    canonicalized XML document </p>
+
+                                <p class="p">Note that if the digest algorithm is not specified, the digest
+                                    algorithm of the signature algorithm is used by default.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">Signature Type</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <ul class="ul" id="loio9a013dba51dc45429b0103a866b0e484__d2352e204">
+                                    <li class="li"><span class="ph uicontrol">Enveloping XML Signature</span>
+                                        <p class="p">The input message body is signed and embedded in the
+                                            signature. This means that the message body is wrapped
+                                            by the <span class="keyword parmname">Object</span> element, where
+                                                <span class="keyword parmname">Object</span> is a child element of
+                                            the <span class="keyword parmname">Signature</span> element.</p>
+
+                                    </li>
+
+                                    <li class="li"><span class="ph uicontrol">Enveloped XML Signature</span><p class="p">The digital
+                                            signature is embedded in the XML message to be signed.
+                                            This means that the XML message contains the
+                                                <span class="keyword parmname">Signature</span> element as one of its
+                                            child elements. </p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">Detached XML Signature</span><p class="p">The digital
+                                            signature is a sibling of the signed element. There can
+                                            be several XML signatures in one XML document.</p>
+</li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">XML Schema file path</span> (only if the option
+                                        <span class="ph uicontrol">Detached XML Signatures</span> is
+                                    selected)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <p class="p">Choose <span class="ph uicontrol">Browse</span> and select the file path to
+                                    the XML schema file that is used to validate the incoming XML
+                                    document. This file has to be in the package
+                                    source.main.resources.xsd</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">Signatures for Elements</span> (only if the
+                                    option <span class="ph uicontrol">Detached XML Signatures</span> is
+                                    selected)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <p class="p">Choose <span class="ph uicontrol">Add</span> to enter the XPath to the
+                                    attribute of type ID, in order to identify the element to be
+                                    signed. Example:
+                                        <span class="ph filepath">/nsx:Document/SubDocument/@Id</span></p>
+
+                                <p class="p">Namespaces prefixes must be defined in the namespaces mapping of
+                                    the runtime configuration.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">Parent Node</span> (only if the option
+                                        <span class="ph uicontrol">Enveloped XML Signature</span> is selected
+                                    for the attribute <span class="ph uicontrol">Signature Type</span>)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <p class="p">Specify how the parent element of the Signature element is to be
+                                    specified. You have the following options:</p>
+
+                                <ul class="ul" id="loio9a013dba51dc45429b0103a866b0e484__d2352e314">
+                                    <li class="li"><span class="ph uicontrol">Specified by Name and Namespace</span>
+                                        (using local name and namespace)</li>
+
+                                    <li class="li"><span class="ph uicontrol">Specified by XPath expression</span> (using
+                                        an <cite class="cite">XML Path Language</cite> (<cite class="cite">XPath</cite>))</li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">Parent Node Name</span> (only if the option
+                                        <span class="ph uicontrol">Enveloped XML Signature</span> is selected
+                                    for the attribute <span class="ph uicontrol">Signature Type</span> and
+                                        <span class="ph uicontrol">Specified by Name and Namespace</span> is
+                                    selected for <span class="ph uicontrol">Parent Node</span>)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <p class="p">A local name of the parent element of the Signature element </p>
+
+                                <p class="p">This attribute is only relevant for Enveloped XML Signature case.
+                                    The Signature element is added at the end of the children of the
+                                    parent. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">Parent Node Namespace</span> (only if the option
+                                        <span class="ph uicontrol">Enveloped XML Signature</span> is selected
+                                    for the attribute <span class="ph uicontrol">Signature Type</span> and
+                                        <span class="ph uicontrol">Specified by Name and Namespace</span> is
+                                    selected for <span class="ph uicontrol">Parent Node</span>)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <p class="p">Namespace of the parent element of the Signature element</p>
+
+                                <p class="p">This attribute is only relevant for Enveloped XML Signature case.
+                                    In the Enveloped XML Signature case, a null value is also
+                                    allowed to support no namespaces. An empty value is not allowed.
+                                </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">XPath Expression</span> (only if the option
+                                        <span class="ph uicontrol">Enveloped XML Signature</span> is selected
+                                    for the attribute <span class="ph uicontrol">Signature Type</span> and
+                                        <span class="ph uicontrol">Specified by XPath expression</span> is
+                                    selected for <span class="ph uicontrol">Parent Node</span>)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <p class="p">Enter an XPath expression for the parent node to be
+                                    specified.</p>
+
+                                <p class="p">This attribute is only relevant for Enveloped XML Signature case.
+                                </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">Key Info Content</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <p class="p">Specifies which signing key information will be included in the
+                                    KeyInfo element of the XML signature. You can select a
+                                    combination of the following attribute values:</p>
+
+                                <ul class="ul" id="loio9a013dba51dc45429b0103a866b0e484__d2352e445">
+                                    <li class="li"><span class="ph uicontrol">X.509 Certificate
+                                            Chain</span><p class="p">X509Certificate elements
+                                            representing the certificate chain of the signer key</p>
+<div class="p">
+                                            <div class="note note"><span class="notetitle">Note</span> The KeyInfo element might not contain the whole
+                                                certificate chain, but only the certificate chain
+                                                that is assigned to the key pair entry.</div>
+
+                                        </div>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">X.509 Certificate</span>
+                                        <p class="p">X509Certificate element containing the X.509 certificate
+                                            of the signer key</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">Issuer Distinguished Name and Serial
+                                            Number</span><p class="p">X509IssuerSerial element containing
+                                            the issuer distinguished name and the serial number of
+                                            the X.509 certificate of the signer key </p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">Key Value</span><p class="p">Key Value element
+                                            containing the modulus and exponent of the public
+                                            key</p>
+<div class="p">
+                                            <div class="note note"><span class="notetitle">Note</span> You can use any combination of these four
+                                                attribute values.</div>
+
+                                        </div>
+</li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e73 ">
+                                <p class="p"><span class="ph uicontrol">Sign Key Info</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e79 ">
+                                <p class="p">With this attribute you can specify a reference to the KeyInfo
+                                    element.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+				<div class="itemgroup info">For more information about the various attributes, see the following:<p class="p"><a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/TR/xmldsig-core/" target="_blank" alt="http://www.w3.org/TR/xmldsig-core/" title="http://www.w3.org/TR/xmldsig-core/">http://www.w3.org/TR/xmldsig-core/<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">On the <span class="keyword uilabel">Advanced</span> tab page, under
+						<span class="ph uicontrol">Transformation</span>, specify the following
+					parameters.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio9a013dba51dc45429b0103a866b0e484__d2352e508" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: </span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d3432540e494">
+                                <p class="p">Property</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d3432540e500">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e494 ">
+                                <p class="p"><span class="ph uicontrol">Canonicalization Method for SignedInfo</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e500 ">
+                                <p class="p">Specify the canonicalization method to be used to transform the
+                                    SignedInfo element that contains the digest (from the
+                                    canonicalized XML document).</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e494 ">
+                                <p class="p"><span class="ph uicontrol">Transform Method for Payload</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e500 ">
+                                <p class="p">Specify the transform method to be used to transform the inbound
+                                    message body before it is signed.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+				<div class="itemgroup info">
+					<div class="p">
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loio9a013dba51dc45429b0103a866b0e484__d3350e234" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 3: Headers Relevant for Signing with XML Digital Signature</span></caption>
+<colgroup><col width="17.513134851138354%"/><col width="82.48686514886165%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="17.513134851138354%" id="d3432540e566">
+                                    <p class="p">Header</p>
+
+                                </th>
+
+                                <th class="entry" valign="top" width="82.48686514886164%" id="d3432540e572">
+                                    <p class="p">Description</p>
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d3432540e566 ">
+                                    <p class="p">CamelXmlSignatureTransformMethods </p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d3432540e572 "><p class="p">Specifies transformation methods in a comma-separated
+                                        list. </p>
+You can use this header to specify transformation
+                                    methods in a comma-separated list. This header will overwrite
+                                    the value of the Option <span class="ph uicontrol">Transform Method for
+                                        Payload</span>.<div class="note sap-example example"><span class="exampletitle">Example</span> </div>
+<div class="note sap-samplecodeblock samplecode"><span class="samplecodetitle">Sample Code</span> Example
+                                        of this use case: The XML signature verifier of the
+                                        receiving system expects an XML signature as shown in the
+                                        following code snippet.<p class="p">The signature is a detached
+                                            signature, because the signature element is a sibling of
+                                            the signed element B. However, the receiving system
+                                            requires the enveloped-signature transform method to be
+                                            specified in the Transforms list. To ensure this, you
+                                            have to configure a detached signature in the XML Signer
+                                            step, then add a Content Modifier step before the XML
+                                            Signer step, where you specify the header
+                                            "CamelXmlSignatureTransformMethods" with the constant
+                                            value
+                                            “http://www.w3.org/2000/09/xmldsig#enveloped-signature,http://www.w3.org/TR/2001/REC-xml-c14n-20010315".</p>
+<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+
+&lt;root&gt; 
+
+            &lt;B ID="IDforB"&gt;
+
+                ...
+
+            &lt;/B&gt;
+
+            &lt;ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+
+                Id="_6bf13099-0568-4d76-8649-faf5dcb313c0"&gt;
+
+                &lt;ds:SignedInfo&gt;
+
+                    ...
+
+                    &lt;ds:Reference URI="#IDforB"&gt;
+
+                        &lt;ds:Transforms&gt;
+
+                            &lt;ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /&gt;
+
+                            &lt;ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /&gt;
+
+                        &lt;/ds:Transforms&gt;
+
+                        ...
+
+                    &lt;/ds:Reference&gt;
+
+                &lt;/ds:SignedInfo&gt;
+
+                &lt;ds:SignatureValue&gt;aUDFmiG71&lt;/ds:SignatureValue&gt;
+
+            &lt;/ds:Signature&gt;
+
+&lt;root&gt;
+</pre></div>
+</div>
+</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+				</div>
+				<div class="itemgroup info">
+            <p class="p">For more information about the various methods, see the following:</p>
+
+            <p class="p"><a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/2000/09/xmldsig#enveloped-signature,http://www.w3.org/TR/2001/REC-xml-c14n-20010315" target="_blank" alt="http://www.w3.org/2000/09/xmldsig#enveloped-signature,http://www.w3.org/TR/2001/REC-xml-c14n-20010315" title="http://www.w3.org/2000/09/xmldsig#enveloped-signature,http://www.w3.org/TR/2001/REC-xml-c14n-20010315">http://www.w3.org/2000/09/xmldsig#enveloped-signature,http://www.w3.org/TR/2001/REC-xml-c14n-20010315<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+
+            <p class="p"><a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/2000/09/xmldsig#enveloped-signature" target="_blank" alt="http://www.w3.org/2000/09/xmldsig#enveloped-signature" title="http://www.w3.org/2000/09/xmldsig#enveloped-signature">http://www.w3.org/2000/09/xmldsig#enveloped-signature<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+
+            <p class="p"><a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/TR/2001/REC-xml-c14n-20010315" target="_blank" alt="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" title="http://www.w3.org/TR/2001/REC-xml-c14n-20010315">http://www.w3.org/TR/2001/REC-xml-c14n-20010315<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>
+            </p>
+
+            <p class="p"><a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments" target="_blank" alt="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments" title="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments">http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>
+            </p>
+
+            <p class="p"><a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/2001/10/xml-exc-c14n" target="_blank" alt="http://www.w3.org/2001/10/xml-exc-c14n" title="http://www.w3.org/2001/10/xml-exc-c14n">http://www.w3.org/2001/10/xml-exc-c14n#<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>
+            </p>
+
+            <p class="p"><a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/2001/10/xml-exc-c14n#WithComments" target="_blank" alt="http://www.w3.org/2001/10/xml-exc-c14n#WithComments" title="http://www.w3.org/2001/10/xml-exc-c14n#WithComments">http://www.w3.org/2001/10/xml-exc-c14n#WithComments<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+
+        </div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">On the <span class="keyword uilabel">Advanced</span> tab page, under <span class="ph uicontrol">XML Document
+						Parameters</span>, specify the following parameters.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio9a013dba51dc45429b0103a866b0e484__d2352e576" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 4: </span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d3432540e681">
+                                <p class="p">Property</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d3432540e687">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e681 ">
+                                <p class="p"><span class="ph uicontrol">Reference Type </span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e687 ">
+                                <p class="p">Enter the value of the type attribute of the content reference. </p>
+
+                                <p class="p">If you enter null or empty, no reference type is created. </p>
+
+                                <p class="p">More information: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/2000/09/xmldsig#Object" target="_blank" alt="http://www.w3.org/2000/09/xmldsig#Object" title="http://www.w3.org/2000/09/xmldsig#Object">http://www.w3.org/2000/09/xmldsig#Object<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e681 ">
+                                <p class="p"><span class="ph uicontrol">Namespace Prefix</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e687 ">
+                                <p class="p">Enter a prefix for the XML signature namespace.</p>
+
+                                <p class="p">Default value is <span class="ph uicontrol">ds</span>.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e681 ">
+                                <p class="p"><span class="ph uicontrol">Signature Id</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e687 ">
+                                <p class="p">Specifies the value of the Id attribute of the Signature element. </p>
+
+                                <p class="p">If you specify no value, no Id attribute is added to the
+                                    Signature element. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e681 ">
+                                <p class="p"><span class="ph uicontrol">Output Encoding</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e687 ">
+                                <p class="p">Select an encoding scheme for the output XML document.</p>
+
+                                <p class="p">The encoded output document will be written into the message
+                                    header. If no encoding scheme is specified, the output will be
+                                        <cite class="cite">UTF-8</cite>-encoded.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e681 ">
+                                <p class="p"><span class="ph uicontrol">Exclude XML Declaration</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e687 ">
+                                <p class="p">Specify whether the XML declaration header shall be omitted in
+                                    the output XML message.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d3432540e681 ">
+                                <p class="p"><span class="ph uicontrol">Disallow DOCTYPE Declaration </span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d3432540e687 ">
+                                <p class="p">Specify whether DTD DOCTYPE declarations shall be disallowed in
+                                    the incoming XML message.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+					<p class="p"/>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">To save the configurations of the signer as a template, choose <span class="keyword uilabel">Save as
+						Template</span> from the context menu of the <span class="keyword uilabel">Signer</span>
+					element.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> When you save the configuration of the <span class="keyword uilabel">Signer</span> element
+						as a template, the tool stores the template in the workspace as
+							<span class="ph filepath">&lt;ElementTemplate&gt;.fst</span>.</div>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="ed4a66365eef448ea8cdb9441e856639.html">XML Digital Signature</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

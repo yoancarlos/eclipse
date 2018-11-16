@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="Script example to identify any exceptions that arise when sending messages using the HTTP receiver."/>
+<meta name="description" content="Script example to identify any exceptions that arise when sending messages using the HTTP receiver."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Script Example for Exception Handling in HTTP Receiver</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioa443efe1d5d2403fb95ee9def1a672d4">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Script Example for Exception Handling in HTTP Receiver</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc">Script example  to identify any exceptions that arise when sending messages using the
+		HTTP receiver.</p>
+
+		<p class="p">You can use Groovy programming language (Groovy script) to identify any exceptions that arise
+			when sending messages using the HTTP receiver.</p>
+
+		<p class="p">The Groovy script provides examples how to do following:</p>
+
+		<div class="p">
+			<ul class="ul" id="loioa443efe1d5d2403fb95ee9def1a672d4__ul_pdp_52b_wy">
+				<li class="li">Save the value of http response as a message attachment</li>
+
+			</ul>
+
+			<ul class="ul" id="loioa443efe1d5d2403fb95ee9def1a672d4__ul_fkk_y2b_wy">
+				<li class="li">Copy the value of the http error to a ‘http.ResponseBody’ property</li>
+
+			</ul>
+
+			<ul class="ul" id="loioa443efe1d5d2403fb95ee9def1a672d4__ul_if1_z2b_wy">
+				<li class="li">Copy the value of the http error to the message body</li>
+
+			</ul>
+
+			<ul class="ul" id="loioa443efe1d5d2403fb95ee9def1a672d4__ul_txg_fqb_wy">
+				<li class="li">Copy http error text and error code to properties</li>
+
+			</ul>
+
+		</div>
+
+		<ol class="ol" id="loioa443efe1d5d2403fb95ee9def1a672d4__ol_lf4_lqb_wy">
+			<li class="li">
+				<p class="p">Copy the following script to the script flow step.</p>
+
+				<div class="p">
+					<div class="note sap-samplecodeblock samplecode"><span class="samplecodetitle">Sample Code</span> 
+						<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">import com.sap.gateway.ip.core.customdev.util.Message;
+
+def Message processData(Message message) {
+                
+                // get a map of iflow properties
+                def map = message.getProperties();
+                
+                // get an exception java class instance
+                def ex = map.get("CamelExceptionCaught");
+                if (ex!=null) {
+                                
+                                // an http adapter throws an instance of org.apache.camel.component.ahc.AhcOperationFailedException
+                                if (ex.getClass().getCanonicalName().equals("org.apache.camel.component.ahc.AhcOperationFailedException")) {
+                                                
+                                                // save the http error response as a message attachment 
+                                                def messageLog = messageLogFactory.getMessageLog(message);
+                                                messageLog.addAttachmentAsString("http.ResponseBody", ex.getResponseBody(), "text/plain");
+
+                                                // copy the http error response to an iflow's property
+                                                message.setProperty("http.ResponseBody",ex.getResponseBody());
+
+                                                // copy the http error response to the message body
+                                                message.setBody(ex.getResponseBody());
+
+                                                // copy the value of http error code (i.e. 500) to a property
+                                                message.setProperty("http.StatusCode",ex.getStatusCode());
+
+                                                // copy the value of http error text (i.e. "Internal Server Error") to a property
+                                                message.setProperty("http.StatusText",ex.getStatusText());
+                                                
+                                }
+                }
+
+                return message;
+}</pre></div>
+
+					</div>
+
+				</div>
+
+			</li>
+
+			<li class="li">
+				<p class="p">Call the script flow step in an exception subprocess.</p>
+
+			</li>
+
+		</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

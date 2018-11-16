@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::SAP:Facebook/version::1.0.0" ComponentName="SAP:Facebook" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" IsDefaultGenerator="true" MetadataVersion="2.0" xmlns:gen="http://www.sap.hci.adk.com/gen">
+    <Variant VariantName="Facebook Component Receiver" gen:RuntimeComponentBaseUri="facebook" VariantId="ctype::AdapterVariant/cname::SAP:Facebook/tp::HTTP/mp::Not Applicable/direction::Receiver" IsRequestResponse="true" MetadataVersion="2.0" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+            <Content>
+                <ContentType>None</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>NonXml</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </OutputContent>
+        <Metadata>
+            <AdditionalMetadata>
+                <Name>tp</Name>
+                <GuiLabels guid="0e09c94c-30f7-4dc8-8ef5-d1b034a3703e">
+                    <Label language="EN">HTTPS</Label>
+                    <Label language="DE">HTTPS</Label>
+                </GuiLabels>
+            </AdditionalMetadata>
+        </Metadata>
+        <Tab id="connection">
+            <GuiLabels guid="79898c27-b537-494e-8769-b702086f65a6">
+                <Label language="EN">Connection</Label>
+                <Label language="DE">Connection</Label>
+            </GuiLabels>
+            <AttributeGroup id="FacebookAttributes">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Facebook Attributes</Name>
+                <GuiLabels guid="54add691-bbad-46ef-bbcb-4dad05c77f16">
+                    <Label language="EN">Facebook Attributes</Label>
+                    <Label language="DE">Facebook Attributes</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>firstUriPart</ReferenceName>
+                    <description>Endpoint of Facebook API to be called.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>userId</ReferenceName>
+                    <NotCondition>
+                        <EditCondition>
+                            <AttributeName>firstUriPart</AttributeName>
+                            <AttributeValue>postComments</AttributeValue>
+                        </EditCondition>
+                    </NotCondition>
+                    <description>The Facebook user or page ID used for the API call.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>postId</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>firstUriPart</AttributeName>
+                        <AttributeValue>postComments</AttributeValue>
+                    </EditCondition>
+                    <description>Configure Post Id</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>httpConnectionTimeout</ReferenceName>
+                    <description>HTTP connection timeout in milliseconds.</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="OAuthSettings">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">OAuth Settings</Name>
+                <GuiLabels guid="3ddfe17a-2c67-4ec0-9d5c-2756f8f2c0b6">
+                    <Label language="EN">OAuth Settings</Label>
+                    <Label language="DE">OAuth Settings</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>oAuthAppId</ReferenceName>
+                    <description>An alias for the application id.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>oAuthAppSecret</ReferenceName>
+                    <description>An alias for the application token secret.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>oAuthAccessToken</ReferenceName>
+                    <description>An alias for the access token.</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="ProxySettings">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Proxy Settings</Name>
+                <GuiLabels guid="33d03b41-a442-4d75-92a0-7f80119b830d">
+                    <Label language="EN">Proxy Settings</Label>
+                    <Label language="DE">Proxy Settings</Label>
+                </GuiLabels>
+		<AttributeReference>
+                  <ReferenceName>proxyType</ReferenceName>
+                  <description>Specify the proxy type to be used.</description>
+                </AttributeReference>
+                <AttributeReference>
+                  <ReferenceName>httpProxyHost</ReferenceName>
+                  <EditCondition>
+                    <AttributeName>proxyType</AttributeName>
+                    <AttributeValue>manual</AttributeValue>
+                  </EditCondition>
+                </AttributeReference>
+                <AttributeReference>
+                  <ReferenceName>httpProxyPort</ReferenceName>
+                  <EditCondition>
+                    <AttributeName>proxyType</AttributeName>
+                    <AttributeValue>manual</AttributeValue>
+                  </EditCondition>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+    </Variant>
+    <AttributeMetadata>
+        <Name>sendEmptyMessageWhenIdle</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="d5579f72-fb80-414e-8ce2-e50550fdefa7">
+            <Label language="EN">Send Empty Message When Idle</Label>
+            <Label language="DE">Send Empty Message When Idle</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>initialDelay</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:long</DataType>
+        <Default>1000</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="a73f9329-3c77-46df-aac6-f6c2ec140e09">
+            <Label language="EN">Initial Delay</Label>
+            <Label language="DE">Initial Delay</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>greedy</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="4578ae1b-f7af-416a-a40e-f4dd7ae1d172">
+            <Label language="EN">Greedy</Label>
+            <Label language="DE">Greedy</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>startScheduler</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="103978a5-ad0e-4d54-9f09-451d0dd0a568">
+            <Label language="EN">Start Scheduler</Label>
+            <Label language="DE">Start Scheduler</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>backoffErrorThreshold</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="3aefeee4-3738-41f8-a401-7ccdd0e4d5eb">
+            <Label language="EN">Backoff Error Threshold</Label>
+            <Label language="DE">Backoff Error Threshold</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>timeUnit</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>MILLISECONDS</Default>
+        <Length></Length>
+        <isparameterized>false</isparameterized>
+        <GuiLabels guid="14ec5ce0-f0f0-45c3-87fe-9a1584d414ea">
+            <Label language="EN">Time Unit</Label>
+            <Label language="DE">Time Unit</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>MILLISECONDS</Value>
+                <GuiLabels guid="c26b5b4a-6078-48de-b641-2609470b00c3">
+                    <Label language="EN">MILLISECONDS</Label>
+                    <Label language="DE">MILLISECONDS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>MINUTES</Value>
+                <GuiLabels guid="341f817b-e917-45a0-9dc1-9146bfcef653">
+                    <Label language="EN">MINUTES</Label>
+                    <Label language="DE">MINUTES</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>DAYS</Value>
+                <GuiLabels guid="e42376fa-21a6-4a04-a9e2-a216b8115cd2">
+                    <Label language="EN">DAYS</Label>
+                    <Label language="DE">DAYS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SECONDS</Value>
+                <GuiLabels guid="6afb7ace-e19b-4eab-aeb0-3fea44512143">
+                    <Label language="EN">SECONDS</Label>
+                    <Label language="DE">SECONDS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>MICROSECONDS</Value>
+                <GuiLabels guid="5c671a6f-91e8-4f3a-a69f-5260745456af">
+                    <Label language="EN">MICROSECONDS</Label>
+                    <Label language="DE">MICROSECONDS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>NANOSECONDS</Value>
+                <GuiLabels guid="caaf0f8b-af3d-4285-adca-ba1e226e0ebf">
+                    <Label language="EN">NANOSECONDS</Label>
+                    <Label language="DE">NANOSECONDS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>HOURS</Value>
+                <GuiLabels guid="79206234-799e-457f-b3d5-afe2c1e3cd10">
+                    <Label language="EN">HOURS</Label>
+                    <Label language="DE">HOURS</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>useFixedDelay</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="e6024a0e-135d-4b98-a03a-b3a651783082">
+            <Label language="EN">Use Fixed Delay</Label>
+            <Label language="DE">Use Fixed Delay</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>delay</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:long</DataType>
+        <Default>500</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="94ff80b0-ec8b-42b7-b3fb-97a759ad55d4">
+            <Label language="EN">Delay</Label>
+            <Label language="DE">Delay</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>backoffMultiplier</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="0d46ec68-cf17-4dd3-b4e4-b40251f6beb1">
+            <Label language="EN">Backoff Multiplier</Label>
+            <Label language="DE">Backoff Multiplier</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>runLoggingLevel</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>TRACE</Default>
+        <Length></Length>
+        <isparameterized>false</isparameterized>
+        <GuiLabels guid="0c4c919d-6a50-4faf-bd03-921b49791573">
+            <Label language="EN">Run Logging Level</Label>
+            <Label language="DE">Run Logging Level</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>ERROR</Value>
+                <GuiLabels guid="4fbae724-edee-453b-825e-426002d6e7b5">
+                    <Label language="EN">ERROR</Label>
+                    <Label language="DE">ERROR</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>OFF</Value>
+                <GuiLabels guid="53224576-0cfc-4f1e-b58e-cae23db12ba9">
+                    <Label language="EN">OFF</Label>
+                    <Label language="DE">OFF</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>INFO</Value>
+                <GuiLabels guid="6e4a1ab6-5457-49be-a39c-fa9d4cb5e45d">
+                    <Label language="EN">INFO</Label>
+                    <Label language="DE">INFO</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>WARN</Value>
+                <GuiLabels guid="b7aaf554-bba7-4996-b24d-273b79761fe9">
+                    <Label language="EN">WARN</Label>
+                    <Label language="DE">WARN</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>DEBUG</Value>
+                <GuiLabels guid="e1b5b02e-9e04-4940-8586-4c1a07f10725">
+                    <Label language="EN">DEBUG</Label>
+                    <Label language="DE">DEBUG</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>TRACE</Value>
+                <GuiLabels guid="f7f42622-e89d-43b7-8e31-56a22ff23230">
+                    <Label language="EN">TRACE</Label>
+                    <Label language="DE">TRACE</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>backoffIdleThreshold</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="42c9bae1-b555-4d98-8e31-7540728d2468">
+            <Label language="EN">Backoff Idle Threshold</Label>
+            <Label language="DE">Backoff Idle Threshold</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>sinceTime</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="e151c9fc-01e4-4565-b47d-fa8082068b9d">
+            <Label language="EN">Since Time</Label>
+            <Label language="DE">Since Time</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>untilTime</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="5a80df69-cac8-4837-85e6-b13593292712">
+            <Label language="EN">Until Time</Label>
+            <Label language="DE">Until Time</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>firstUriPart</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>posts</Default>
+        <Length></Length>
+        <isparameterized>false</isparameterized>
+        <GuiLabels guid="ee1f387f-73cd-471b-8b56-1395368540e7">
+            <Label language="EN">Endpoint</Label>
+            <Label language="DE">Endpoint</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>posts</Value>
+                <GuiLabels guid="700b9fee-8e35-4202-a49c-a1d8046db27b">
+                    <Label language="EN">Get Posts</Label>
+                    <Label language="DE">Get Posts</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>postComments</Value>
+                <GuiLabels guid="252a8d94-1227-4f52-bbc9-15cd7064a67a">
+                    <Label language="EN">Get Post Comments</Label>
+                    <Label language="DE">Get Post Comments</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>user</Value>
+                <GuiLabels guid="7097c3da-11df-4437-b17e-b805729425fb">
+                    <Label language="EN">Get User</Label>
+                    <Label language="DE">Get User</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>userId</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="4c17c875-888f-4dc7-8c32-87a50ab8b2b6">
+            <Label language="EN">User/Page ID</Label>
+            <Label language="DE">User/Page ID</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>postId</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="904d4f06-0298-4bcf-b57b-09addce0311e">
+            <Label language="EN">Post ID</Label>
+            <Label language="DE">Post ID</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>httpConnectionTimeout</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>60000</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="cf8b7667-9245-4f38-be5e-1e777a94615e">
+            <Label language="EN">Timeout (in ms)</Label>
+            <Label language="DE">Timeout (in ms)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>oAuthAppId</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <AttributeBehavior>SecureAlias</AttributeBehavior>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="5a1b0760-f1e3-4863-badf-08933cf80511">
+            <Label language="EN">Application ID Alias</Label>
+            <Label language="DE">Application ID Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>oAuthAppSecret</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <AttributeBehavior>SecureAlias</AttributeBehavior>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="0dcf710f-7877-4da1-8a89-41f5cc3930c0">
+            <Label language="EN">Application Secret Alias</Label>
+            <Label language="DE">Application Secret Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>oAuthAccessToken</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <AttributeBehavior>SecureAlias</AttributeBehavior>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="7a20af65-b3d1-486e-a4ef-814450b7db15">
+            <Label language="EN">Access Token Alias</Label>
+            <Label language="DE">Access Token Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>proxyType</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Internet</Default>
+        <Length></Length>
+        <AttributeBehavior>DisplayOnly</AttributeBehavior>
+       <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Proxy Type</Label>
+        </GuiLabels>
+        <!-- FixedValues>
+          <FixedValue>
+            <Value>Internet</Value>
+            <GuiLabels>
+              <Label language="EN">Internet</Label>
+            </GuiLabels>
+          </FixedValue>
+          <NotCondition>
+            <EditCondition>
+              <AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+              <AttributeValue>true</AttributeValue>
+            </EditCondition>
+          </NotCondition>
+        </FixedValues -->
+        <FixedValues>
+          <FixedValue>
+            <Value>Internet</Value>
+            <GuiLabels>
+              <Label language="EN">Internet</Label>
+            </GuiLabels>
+          </FixedValue>
+          <FixedValue>
+            <Value>manual</Value>
+            <GuiLabels>
+              <Label language="EN">Manual</Label>
+            </GuiLabels>
+          </FixedValue>
+          <!-- EditCondition>
+            <AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+            <AttributeValue>true</AttributeValue>
+          </EditCondition -->
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+      <Name>httpProxyHost</Name>
+      <Usage>true</Usage>
+      <DataType>xsd:string</DataType>
+      <Length />
+      <isparameterized>true</isparameterized>
+      <GuiLabels>
+        <Label language="EN">Proxy Host</Label>
+      </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+      <Name>httpProxyPort</Name>
+      <Usage>true</Usage>
+      <DataType>xsd:integer</DataType>
+      <Length />
+      <isparameterized>true</isparameterized>
+      <GuiLabels>
+        <Label language="EN">Proxy Port</Label>
+      </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You use this task to display message trace for a particular integration flow."/>
+<meta name="description" content="You use this task to display message trace for a particular integration flow."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>View MPL</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioa63657108d1840fc9f75bbdd19b9547c">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">View MPL</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc">You use this task to display message trace for a particular integration
+		flow.</p>
+
+		<p class="p">In the Message Monitoring editor, for a completed or failed message, the Properties view
+			displays the message processing log (MPL) for this message. The MPL provides information
+			on the steps during processing of a particular message and the View MPL button opens the
+			particular integration flow with the message trace, displaying path of message flow. If
+			the particular project does not exist in workspace then it automatically imports
+			project.</p>
+
+		<p class="p">If the current project state is different from deployed state then tracing of message
+			flow occurs till the point, sequence of elements match.</p>
+
+		<p class="p">View Trace  imports trace content in project with name same as bundle id. If existing
+			project name is not same as that of bundle id, then view trace creates a new project in
+			the workspace with same bundle-id.</p>
+
+		<p class="p">Payload and header tabs appear in property sheet, on clicking the message icon in the
+			message trace. If in any case splitter is used, then there are multiple message payloads
+			and the icon has multiple message symbols. In such a scenario, the message heading is
+			displayed between dashed lines and below the heading, payload content appears. The same
+			is shown below.</p>
+
+		<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">-------------------------
+Message 1
+------------------------
+&lt;ns0:BSNMessage xmlns:ns0="https://bsnschemas.netweaver.neo.com/bsnflow"&gt;
+&lt;SenderId&gt;Token&lt;/SenderId&gt;
+&lt;ReceiverId&gt;&lt;/ReceiverId&gt;
+&lt;MessageType&gt;&lt;/MessageType&gt;
+&lt;FileName&gt;&lt;/FileName&gt;
+&lt;NumberOfRecords&gt;&lt;/NumberOfRecords&gt;
+&lt;MessageId&gt;&lt;/MessageId&gt;
+&lt;MessageContent&gt;&lt;/MessageContent&gt;
+&lt;/ns0:BSNMessage&gt;</pre></div>
+
+		<p class="p">There are multiple sequences which traverse one path. The property sheet displays this
+			information. For example, “<em class="ph i">Displaying content for message 1 (out of 3)</em>”. Here,
+			‘3’ denotes number of times the sequence traverses a particular path. Clicking on the
+			text enables user to switch to a different sequence.</p>
+
+		<p class="p">In case of huge payload, the whole information is not visible. In such a scenario, we can
+			use ‘Export Payload’ button to view content using external tool/application.</p>
+
+		<div class="note note"><span class="notetitle">Note</span> 
+			<ul class="ul" id="loioa63657108d1840fc9f75bbdd19b9547c__ul_lzd_lds_vv">
+				<li class="li">
+					<p class="p">You cannot trace a configure-only integration flow. </p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">You cannot view trace for multiple messages. Please select one message
+						only.</p>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

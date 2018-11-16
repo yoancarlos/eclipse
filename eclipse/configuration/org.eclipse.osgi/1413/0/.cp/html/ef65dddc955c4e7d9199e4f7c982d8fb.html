@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Create Message Mapping</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioef65dddc955c4e7d9199e4f7c982d8fb">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Create Message Mapping</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<ul class="ul" id="loioef65dddc955c4e7d9199e4f7c982d8fb__ul_gf4_v51_zx">
+				<li class="li">You have accessed the workspace (Design tab page).</li>
+
+				<li class="li">You are editing the integration flow. </li>
+
+			</ul>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<div class="p">When you create a message mapping step, you have the option of creating a mapping definition
+				resource or reuse one of the existing mapping definition resources. Your integration
+				flow contains such a resource in the following cases:<ul class="ul" id="loioef65dddc955c4e7d9199e4f7c982d8fb__ul_kcf_z51_zx">
+					<li class="li">If you have imported pre-packaged content from the catalog containing
+						message mapping step with a mapping definition resource</li>
+
+					<li class="li">If you have added a message mapping step and created a mapping definition
+						resource</li>
+
+				</ul>
+<img class="image" id="loioef65dddc955c4e7d9199e4f7c982d8fb__image_kdv_5bb_zx" src="loioe325c76f773146d4a4914d6c32f0b567_LowRes.png"/></div>
+
+			<div class="note remember"><span class="remembertitle">Remember</span> You cannot reuse mapping definition resources across integration
+				flows.</div>
+
+			<div class="note caution"><span class="cautiontitle">Caution</span> If you delete a message mapping step and the mapping definition
+				resource associated with it is not used in any other message mapping step, then the
+				resource also gets deleted. </div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step">
+				<span class="ph cmd">In the palette, choose <span class="SAPiconsV3-6"></span>&gt; <span class="ph uicontrol">Message Mapping</span>.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Place the message mapping step in the integration flow and define the message
+					path.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">If you want to create a new mapping definition resource, perform the following
+					substeps:</span>
+				<ol type="a" class="ol substeps" id="loioef65dddc955c4e7d9199e4f7c982d8fb__substeps_zzn_cz1_zx">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <span class="SAPiconsV3-6"></span></span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Add source and target messages by choosing <span class="ph uicontrol">Add Source
+								Message</span> and <span class="ph uicontrol">Add Target Message</span>
+							respectively. Select the source or target message.</span>
+						<div class="itemgroup info">If you do not see the resource you want to use as the source message,
+								choose<span class="ph uicontrol"> Upload from File System</span> and upload the
+							file. </div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Create a definition by dragging a node from the source structure to the
+							required node in the target structure. </span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want to test the mapping, choose
+							<span class="ph uicontrol">Simulate</span>.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <span class="ph uicontrol">Ok</span> to save the mapping definition
+							resource. </span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">If you want to reuse a mapping definition resource, perform the following
+					substeps:</span>
+				<ol type="a" class="ol substeps" id="loioef65dddc955c4e7d9199e4f7c982d8fb__substeps_xzv_tz1_zx">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <span class="SAPiconsV3-6"></span></span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Message Mapping File</span> prompt, choose the
+							resource that you want to assign. </span>
+						<div class="itemgroup info">You do not see any entries in the <span class="ph uicontrol">Message Mapping
+								File</span> prompt if you have not created a definition or
+							imported content from the catalog containing a mapping definition
+							resource. </div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">Save or deploy the integration flow.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

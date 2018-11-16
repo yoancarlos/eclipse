@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You can configure an integration flow to automatically start and run on a particular schedule."/>
+<meta name="description" content="You can configure an integration flow to automatically start and run on a particular schedule."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring Timer Start</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio27f4f030b2cc432f93869f9692f5f5c2">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring Timer Start</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You can configure an integration flow to automatically start and run on a particular
+		schedule.</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">If you want to configure a process to automatically start and
+            run on a particular schedule, you can use this procedure to set the date and time on
+            which the process should run once or repetitively. The day and time combinations allow
+            you to configure the schedule the process requires. For example, you can set the trigger
+            just once on a specific date or repetitively on that date, or you can periodically
+            trigger the timer every day, specific days in a week or specific days in a month along
+            with the options of specific or repetitive time.</p>
+
+			<div class="p">A Timer Start event and a Start Message event (sender
+            channel) must not be modelled in the same integration flow. This would result in an
+            error <samp class="ph msgph">ERROR: Multiple 'Start Events' not allowed within an Integration Process
+                pool</samp>.<div class="note note"><span class="notetitle">Note</span> 
+                <p class="p">When you use timer with <span class="ph uicontrol">Run Once</span> option enabled, the
+                    message is triggered only when the integration flow is deployed. If you want to
+                    trigger the message with an integration flow that you have already deployed, you
+                    have to <span class="ph uicontrol">Undeploy</span> the integration flow and
+                        <span class="ph uicontrol">Deploy</span> it again. If you restart the integration flow
+                    bundle, message will not be triggered.</p>
+
+                <p class="p">When you delploy or undeploy an integration flow with
+                        <span class="ph uicontrol">Timer</span>-<span class="ph uicontrol">Scheduler</span>, the system
+                    automatically releases all the scheduler locks.</p>
+
+            </div>
+</div>
+
+			<div class="note note"><span class="notetitle">Note</span> 
+				<p class="p">You cannot externalize the timer element in older integration flows. If you want to
+					externalize the timer in existing integration flows, reconfigure the timer and
+					save the integration flow. Extract parameters for the timer properties to appear
+					in <span class="ph uicontrol">Externalized Parameters</span> tab page.</p>
+
+				<p class="p">When you deploy small integration flows with <span class="ph uicontrol">Timer Start</span>
+					(for example, an integration flow with timer, content modifier and mail
+					adapter), due to extremely fast processing times, multiple schedules are
+					triggered.</p>
+
+			</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="keyword uilabel">Model Configuration</span>
+					editor.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">From the <span class="keyword uilabel">Palette</span>, expand the <span class="keyword uilabel">Event</span>
+					category.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select the <span class="keyword uilabel">Timer Start</span> notation and drop it within the<span class="keyword uilabel">
+						Integration Process</span> pool wherever required.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">From the speed button of the <span class="keyword uilabel">Timer Start</span>, select the
+					sequence flow and connect to the following element within the
+						<span class="keyword uilabel">Integration Process</span> pool of the integration flow.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select the <span class="keyword uilabel">Timer Start</span> and in the <span class="keyword uilabel">Properties</span> view,
+					provide values in fields based on description in table.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio27f4f030b2cc432f93869f9692f5f5c2__d1497e47" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Parameters &amp; Values of Timer</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d484909e143">Field</th>
+
+                            <th class="entry" valign="top" width="50%" id="d484909e146">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d484909e143 ">Run once</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d484909e146 ">Runs a data polling process immediately after deploying the
+                                project</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d484909e143 ">On Date</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d484909e146 ">Specific date on which the data polling process has to be
+                                initiated to fetch data from the SuccessFactors system</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d484909e143 ">Daily</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d484909e146 ">Run message polling every day to fetch data from the
+                                SuccessFactors system</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d484909e143 ">Weekly</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d484909e146 ">Run the message polling every week on specified days of the week
+                                to fetch data from the SuccessFactors system.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d484909e143 ">Monthly on Day</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d484909e146 ">Execute the message polling every month on the specified date to
+                                fetch data from the SuccessFactors server. <div class="note note"><span class="notetitle">Note</span> If the specified
+                                    date is not applicable to a month, the data polling is not
+                                    executed in that specific month. For example, if 30th day is
+                                    selected in the month of February, polling is not executed as
+                                    30th is not a valid day for February.</div>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d484909e143 ">Time</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d484909e146 ">The time at which the data polling cycle has to be initiated. For
+                                example, if you want the data polling to be started at 4.1PM, enter
+                                16:10. Note that the time must be entered in 24-hour format.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d484909e143 ">Every <kbd class="ph userinput">xx</kbd> minutes between
+                                    <kbd class="ph userinput">HH</kbd> hours and <kbd class="ph userinput">HH</kbd>
+                                hours</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d484909e146 ">The connector fetches data from the SuccessFactors system, every
+                                ‘xx’ minutes between HH hours and HH hours.<div class="note note"><span class="notetitle">Note</span> If you want the
+                                    polling to run for the entire day, enter 1 and
+                                59.</div>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d484909e143 ">Time Zone</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d484909e146 ">Select the Time Zone that you want to use as reference for
+                                scheduling the data polling cycle.</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="The XML-to-JSON converter enables you to transform messages in XML format to JSON format."/>
+<meta name="description" content="The XML-to-JSON converter enables you to transform messages in XML format to JSON format."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining the XML-to-JSON Converter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioa5ef737d7a7e41ba80245109ff39b917">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining the XML-to-JSON Converter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">The XML-to-JSON converter enables you to transform messages in XML format to JSON
+		format.</p>
+
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><p class="li stepsection">You use this procedure to define a converter element in an integration
+				process.</p><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Open the integration flow in the <span class="ph uicontrol">Model Configuration</span>
+					editor.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Access the palette and choose <span class="ph uicontrol">Message
+					Transformers</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Drag <span class="ph uicontrol">Converter</span> from the palette to the integration process.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">From the context menu, choose <span class="ph uicontrol">Switch to XML to JSON Converter</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">On the <span class="ph uicontrol">XML to JSON Converter</span> properties tab page, define the
+					parameters to convert the XML data format to JSON data format.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioa5ef737d7a7e41ba80245109ff39b917__d3006e15" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d2120756e82">
+                                <p class="p">Option</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d2120756e88">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2120756e82 ">
+                                <p class="p">Name</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2120756e88 ">
+                                <p class="p">Enter the name of the converter.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2120756e82 ">
+                                <p class="p">JSON Output Encoding</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2120756e88 ">
+                                <p class="p">Enter the JSON output encoding. The default value is
+                                        <span class="ph uicontrol">from header or property</span>.</p>
+
+                                <p class="p">If you select <span class="ph uicontrol">from header or property</span>, the
+                                    converter tries to read the encoding from the message header or
+                                    exchange property <samp class="ph codeph">CamelCharsetName</samp>. If there is
+                                    no value defined, UTF-8 is used.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2120756e82 ">
+                                <p class="p">XML Namespace (only if the option <span class="ph uicontrol">Namespace
+                                        Mapping</span> is selected)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2120756e88 ">
+                                <p class="p">If you select from header or property, the converter tries to
+                                    read the encoding from the message header or exchange property
+                                    CamelCharsetName. If there is no value defined, UTF-8 is
+                                    used.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2120756e82 ">
+                                <p class="p">JSON Prefix Separator (only if the option <span class="ph uicontrol">Namespace
+                                        Mapping</span> is selected)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2120756e88 ">
+                                <p class="p">Enter the JSON prefix separator to be used to separate the JSON
+                                    prefix from the local part. The value used must not be used in
+                                    the JSON prefix or local name.</p>
+
+                                <p class="p">The following characters are allowed: colon(:), comma(,), dot(.),
+                                    pipe(|), semicolon(;), and space.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2120756e82 ">
+                                <p class="p">Suppress JSON Root Element</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2120756e88 ">
+                                <p class="p">Choose this option to create the JSON message without the root
+                                    element tag.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify whether to enable <span class="ph uicontrol">Streaming</span> or not.</span>
+				<div class="itemgroup info">
+					<p class="p">You can specify whether the whole XML document or only specified XML elements are to be
+						presented by JSON arrays.</p>
+
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioa5ef737d7a7e41ba80245109ff39b917__d3006e145" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%">
+                                <p class="p">All</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%">
+                                <p class="p">All elements are presented as JSON arrays.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%">
+                                <p class="p">Specific Ones</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%">
+                                <p class="p">Only the specified elements will be represented as JSON arrays,
+                                    the others as JSON objects.</p>
+
+                                <div class="p">
+                                    <div class="note note"><span class="notetitle">Note</span> 
+                                        <p class="p">A JSON object is an unordered set of name/value pairs
+                                            that begins with <samp class="ph codeph">{</samp> and ends with
+                                                <samp class="ph codeph">}</samp>. Each name is followed by
+                                                <samp class="ph codeph">:</samp> and the name/value pairs are
+                                            separated by <samp class="ph codeph">,</samp>. </p>
+
+                                        <p class="p">A JSON array is an ordered collection of values. An array
+                                            begins with <samp class="ph codeph">[</samp> and ends with
+                                                <samp class="ph codeph">]</samp>. Values are separated by<samp class="ph codeph">
+                                                ,</samp>.</p>
+
+                                    </div>
+
+                                </div>
+
+                                <p class="p">Enter the absolute paths to the XML elements to be converted to
+                                    JSON arrays. Specify all elements with a multiplicity larger
+                                    than one. Otherwise, it cannot be ensured that streaming will
+                                    result in a valid JSON document.</p>
+
+                                <p class="p">Familiarize yourself with streaming in the XML-to-JSON converter,
+                                    as documented in a separate topic.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="a5b4641c393f406bb544987497c90a72.html" title="To ensure a successful conversion form XML to JSON format you have to know the limitations for this conversion.">Limitations for XML-to-JSON Conversion</a></div>
+<div><a class="link" href="4e05044231654134a7d19f4dded517e6.html" title="During streaming the XML document is processed in parts or segments:">How Streaming in the XML-to-JSON Converter Works</a></div>
+<div><a class="link" href="778aed733e3140cea0435f4615d53812.html" title="To ensure a successful conversion from XML format to JSON format, you should make yourself familiar with the conversion rules.">Conversion Rules for XML to JSON Conversion</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

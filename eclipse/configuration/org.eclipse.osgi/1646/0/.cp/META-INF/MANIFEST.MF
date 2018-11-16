@@ -1,0 +1,1810 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.sap.ndb.studio.lcm.upd.ui;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: ppurple
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.expressions,
+ org.eclipse.ui,org.eclipse.ui.intro,org.eclipse.ui.forms,com.sap.ndb.
+ studio.ui,com.sap.ndb.studio.datamodel,com.sap.ndb.studio.navigator
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %Bundle-Vendor
+Import-Package: com.sap.lm.hana.updateui.util.ensure,com.sap.lm.hana.u
+ pdateui.util.misc,com.sap.lm.hana.updateui.util.types,com.sap.ndb.stu
+ dio.lcm.upd.util.error,com.sap.ndb.studio.lcm.upd.util.properties,com
+ .sap.ndb.studio.lcm.upd.util.ui,com.sap.ndb.studio.lcm.upd.ws,com.sap
+ .ndb.studio.lcm.upd.ws.types,com.sap.ndb.studio.lcm.upd.ws.types.fact
+ ories,com.sap.ui.controls.swt.composites.panels,org.eclipse.core.net.
+ proxy,org.eclipse.equinox.internal.p2.core.helpers,org.eclipse.equino
+ x.internal.p2.director.app,org.eclipse.equinox.internal.provisional.c
+ onfigurator,org.eclipse.equinox.p2.core,org.eclipse.equinox.p2.engine
+ ,org.eclipse.equinox.p2.metadata,org.eclipse.equinox.p2.operations,or
+ g.eclipse.equinox.p2.planner,org.eclipse.equinox.p2.query,org.eclipse
+ .equinox.p2.repository.metadata,org.eclipse.equinox.p2.ui,org.eclipse
+ .equinox.security.storage
+Export-Package: com.sap.ndb.studio.lcm.upd.ui.internal;x-friends:="com
+ .sap.ndb.studio.lcm.upd.ui.mock,com.sap.ndb.studio.lcm.upd.ui.test.ju
+ nit,com.sap.ndb.studio.lcm.upd.ui.junit",com.sap.ndb.studio.lcm.upd.u
+ i.internal.control;x-friends:="com.sap.ndb.studio.lcm.upd.ui.mock,com
+ .sap.ndb.studio.lcm.upd.ui.test.junit,com.sap.ndb.studio.lcm.upd.ui.j
+ unit",com.sap.ndb.studio.lcm.upd.ui.internal.editors.update;x-friends
+ :="com.sap.ndb.studio.lcm.upd.ui.mock,com.sap.ndb.studio.lcm.upd.ui.t
+ est.junit,com.sap.ndb.studio.lcm.upd.ui.junit",com.sap.ndb.studio.lcm
+ .upd.ui.internal.editors.web;x-friends:="com.sap.ndb.studio.lcm.upd.u
+ i.junit",com.sap.ndb.studio.lcm.upd.ui.internal.editors.web.comp;x-fr
+ iends:="com.sap.ndb.studio.lcm.upd.ui.mock,com.sap.ndb.studio.lcm.upd
+ .ui.test.junit,com.sap.ndb.studio.lcm.upd.ui.junit",com.sap.ndb.studi
+ o.lcm.upd.ui.internal.editors.web.connectiontest;x-friends:="com.sap.
+ ndb.studio.lcm.upd.ui.test,com.sap.ndb.studio.lcm.upd.ui.junit",com.s
+ ap.ndb.studio.lcm.upd.ui.internal.i18n;x-friends:="com.sap.ndb.studio
+ .lcm.upd.ui.test.junit,com.sap.ndb.studio.lcm.upd.ui.test,com.sap.ndb
+ .studio.lcm.upd.ui.junit",com.sap.ndb.studio.lcm.upd.ui.internal.pref
+ erences;x-friends:="com.sap.ndb.studio.lcm.upd.test.misc,com.sap.ndb.
+ studio.lcm.upd.ui.test,com.sap.ndb.studio.lcm.upd.ui.test.junit,com.s
+ ap.ndb.studio.lcm.upd.ui.junit",com.sap.ndb.studio.lcm.upd.ui.interna
+ l.preferences.credentials;x-friends:="com.sap.ndb.studio.lcm.upd.ui.m
+ ock,com.sap.ndb.studio.lcm.upd.ui.test.junit,com.sap.ndb.studio.lcm.u
+ pd.ui.junit",com.sap.ndb.studio.lcm.upd.ui.internal.types;x-friends:=
+ "com.sap.ndb.studio.lcm.upd.ui.test.junit,com.sap.ndb.studio.lcm.upd.
+ ui.mock,com.sap.ndb.studio.lcm.upd.ui.junit"
+Bundle-Name: %Bundle-Name
+Bundle-Version: 2.3.39
+Bundle-Activator: com.sap.ndb.studio.lcm.upd.ui.internal.LCMPlugin
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_66
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMStartResul
+ t.class
+SHA-256-Digest: aN3mzVBSppqgFdvh4sVz+kDoXsfWeg56EE/Gq0hSDpY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/Database.class
+SHA-256-Digest: mM6HiacBPifB4yok3uz+fY9I3TVWBVVTbgUP5D7CoF0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SapHostControlHostName
+ Verifier.class
+SHA-256-Digest: obu5ikq8XRZpN3lO1em+LJYh/rOwduEfP1DEDNS84Oc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ServiceType.cl
+ ass
+SHA-256-Digest: im9/4aV0JQo3GlvilTobjUcwl5vkIXdD/2h/Cz9+Su4=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.lcm.upd.ui/
+ pom.properties
+SHA-256-Digest: /YZ+Blna6x/I2saJS75faHJYobex9ETUyAyV/JBYqCY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/Undefined
+ MD5SumException.class
+SHA-256-Digest: xJKjazWwFXSWjQrxNFsRrpKeqCY0B7WVboscyNMy+bA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteCancellatio
+ nException.class
+SHA-256-Digest: /7tfZyKbTVCG+A8shQS7aTtfLG0Cp92Lux+yVty5Qgg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/progress/SDTEx
+ ecutionProgressObserverIF.class
+SHA-256-Digest: 9FMnEz1JI8GkXmDAN5gs5QEZNbQkbos/zF5VrYSctnM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldR
+ eadException.class
+SHA-256-Digest: 95fflso+1DkZekCgedWOFAi3XWVb9NiyAT/8WTPTmCo=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/S
+ apAdminCredentialsStore.class
+SHA-256-Digest: 512gP5HaVKnUojKQ4MLN05/Vhcaws6v7yT3tkSU++7U=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfACOpera
+ tion.class
+SHA-256-Digest: jRjTYyFn+/JAbWiVRIhk1eBOAajH02FrHLuwcTQLl4U=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMEditorInput.cl
+ ass
+SHA-256-Digest: fJHhnZIFEBTnAECWG13jhR+Kfl6jvAGM4yeB9/VJ22Y=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlOperatio
+ n.class
+SHA-256-Digest: 7+axYEAJW1uI4vkm/1/pc7jvJciSSf7UjH8fr5StMkM=
+
+Name: icons/obj16/LifecycleMgmtPersp.gif
+SHA-256-Digest: 567SX/nRWj+YjRpeoYioh9x70KN5ITFBJnY0LIAOcHY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteShutdownPro
+ gressDialog$2.class
+SHA-256-Digest: arhyBkGfL2wpOuGl/Sgsd6t7XWJBBzxpI39Axp9EOms=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/GetOperationRe
+ sponse.class
+SHA-256-Digest: c5j9rjOzzP0YHswlt8J46+wzLm2+dsUYb9zQGlKjW58=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlMessage.
+ class
+SHA-256-Digest: VLF4Woal/EGP0wKiLCYIrJvWs2XphlP7qtxhNN5usos=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/WebUpdatePage
+ $1.class
+SHA-256-Digest: qHh1wr/N2gXQw/CNNuZ1oN6NMiorcsAVQLrQqIwCxz4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/e
+ x/SmpAuthenticationRetrieverException.class
+SHA-256-Digest: uB6sJMYoglUZfO/gMyMjO2vNNI1O/77hThhJBldBes4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/CIMObject.clas
+ s
+SHA-256-Digest: IzWCuF+GDkS6uEpPTDudgWIDeLzo5NtloYDZFQBjlxU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/SelectUpdat
+ esPage$4.class
+SHA-256-Digest: ZoSkKg12XEz1rZwUkR/Bs42nM97DXoxamoBvOfEMTV0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encePage$9.class
+SHA-256-Digest: 6B9YOh89hbPQZEAgQkNKkEyWb4g8hqnaT0NAiTO8d6g=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/S
+ essionIdStore.class
+SHA-256-Digest: pfwaqfg8r2J2Z/NaayKjKgi4BGM+sFO2T7FFldoUUyg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/util/message
+ s.properties
+SHA-256-Digest: RSbMXjb5rvrNqnDlrdKNmJniURQI5OXRoHmitcotcC4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/SystemDetec
+ tor.class
+SHA-256-Digest: YgoRjxbusIWtftiSKYTcms0vOECW1ZdKTGdD9tweiw8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/ExitCodeMessage.class
+SHA-256-Digest: m79hnTJ9x5rexDokSDzQbJhhjPkoT7NFIvYy4jM/WlM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteSapControl.
+ class
+SHA-256-Digest: iuyaKJQmZiQ7crs+hIz7kYXyLDXjiRFOAjXMKKjYBXM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/SupportPacka
+ ge.class
+SHA-256-Digest: X49SWDtKoPUH2y6/Mi+lxkf7r6eU8uFQ/SUlBV0PoZs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlHelper.c
+ lass
+SHA-256-Digest: zHqrRiFTiU2oW7Z+m93GXx6iXJZyV3F9nRodqNubflQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/GetDatabaseSta
+ tus.class
+SHA-256-Digest: w6MTWswYWkWWMX/hWTN/kaTVOYnGghMg2ZHqp5ct/J4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ExecuteUpgrade
+ Procedure.class
+SHA-256-Digest: Jk1L4qsu4oco99ixAUXUJojFA7emwBnsBhUmBjcRe9o=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/Stack.class
+SHA-256-Digest: zmgo7TQIqz+VrBSeIR3n7EGncRTcL1tkOu5PLSyaqh0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/CID_API_for_HANA.wsdl
+SHA-256-Digest: /N0yAodYL8UIv5DXOOZne6Ne4H6j/0oR8OpNltTSdQw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/ConnectionSett
+ ings.class
+SHA-256-Digest: e5PYEEVvjxhFsOcNaBvYqPf1VQtIK0tyT5o6di3GjBA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldW
+ riteException.class
+SHA-256-Digest: oY6+SG1x03kTIxLNKCDrSfwSOkggTcXGZxVs0d01eWY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ACOSPrepareRes
+ ponse.class
+SHA-256-Digest: 61t1/rd1+OgaRBdtAGX6rniV6csHB72QR2l7OV0zO38=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ListInstancesR
+ esponse.class
+SHA-256-Digest: tBjvqliH3CAe4uo4O9iOnUQ4eajZ2+WsPOZcQ/jyzXE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/O
+ peratingSystem.class
+SHA-256-Digest: Yo5aUuvCHRhgR8nVcMWcaqlry4iEwr8r8mUhh0k/S7E=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlResult.c
+ lass
+SHA-256-Digest: +iGwpHKKHz/arpDzOkj/G+4/9qdHHBWCXHuGNXD1/LA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ExecuteOperati
+ on.class
+SHA-256-Digest: 4inUGAsQ/KnSdt433YaPrIogFbOiIEvvl7Jc8x3aElA=
+
+Name: icons/obj16/DisplayMode.png
+SHA-256-Digest: onodbJf15ctO12EfxjO8sobc33aY/oJviiAP2ShrLTk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMDialogExec
+ utor$2.class
+SHA-256-Digest: 9Gx8zDL8I4A6lUDLqckV1fE37D+X2wJS54Mzst/FDQA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldC
+ onnectionException.class
+SHA-256-Digest: ICrtQ+wKoEvXhl0eBfvXvQkSz669zrYdNm+dghiWhqA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMEditor$1.class
+SHA-256-Digest: c57ONw4yjiIY0vaCCJJsFk+qvXJMxwD0c4MvxBiF9Ns=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/Preferenc
+ eConstants.class
+SHA-256-Digest: 2orBhewN8uNW00S3T9qdbJu7m5BFaayJr/ubmxICqIc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckUpdate
+ sController$4.class
+SHA-256-Digest: 13jutLVCp9+8dJeoqAUVSWU6d1rGM/4cx42stleODW8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encePage$4.class
+SHA-256-Digest: bPH2g/C5XC6QHUqSN4YtVha/I1HUh6hjGBUI8rD1UvM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/DetachDatabase
+ .class
+SHA-256-Digest: 2FMN8kEk3VgcKHljcIMwbLzOx/azQVdlj0EF7FWy2H0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfInstanc
+ eOptionsFlags.class
+SHA-256-Digest: H2KN3ZrUGJPOyM4/B9yulYt+4lTJjETUF11mZ+KmyFY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/SWDCAPIFORHANADETDWNLOAD$ITSCVINPUT.class
+SHA-256-Digest: ySFtoPg8szIYRW+Qndh3M6RGRL5GTYiWB/Bzieqzg9o=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/StopDatabase.c
+ lass
+SHA-256-Digest: 0NAS7CR3GAbsPo6RCdicjkaICaPsFzaU35RPKQtcoko=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/ComponentUp
+ dateCellModifier.class
+SHA-256-Digest: RWZhCXicE8XPvM7m8UkmMpnmLr0ttlB+ciQnzGytIcU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/hostcontrol.ws
+ dl
+SHA-256-Digest: 2mk6brQIUST60dDmV9tZ5NsvS9IaCH0eQbeuZ5+sbx0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlNotAcces
+ sibleException.class
+SHA-256-Digest: K2R2TpLejOwng8Y9L+PpMrxOqLRUKu7iJNNMPRQlC3Q=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/SWDCAPIFORHANADETDWNLOADResponse$ETSCVERROR.class
+SHA-256-Digest: V1S5ah4J3gSL0oplL9PNAhy60dGqT4Q6iB45C+44wmQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/SWDCAPIFORHANASSCVINPUT.class
+SHA-256-Digest: zVYMx95D+HRlr+Tbd8DxIqSQlXGeh5E8irlW8LsQ7pA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/CIMAttribute.c
+ lass
+SHA-256-Digest: Dru4A6sJ6AweH+o2+FXa7vgqOT48wa2tVKDcoHqWv+o=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/ConfigureDo
+ wnloadPage.class
+SHA-256-Digest: rn50w6hZenNZ7iegIyqcrTvSAap+bzbjJw4mr7deccQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/i
+ mpl/SoftwareComponentVersionRetrieverImpl.class
+SHA-256-Digest: 6IjdsSU0/Xy6cWZxHCyWu4dABNUdawioNS8+1M54KrU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/Validator.cl
+ ass
+SHA-256-Digest: sVESkSLYlo+PMerWDp7zIcdbepxZfd3idGYxpfRezYo=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpSecure
+ StoreSetting.class
+SHA-256-Digest: gDp0KSzUs/pI76OgQ0EAR1DdBFxR6lBwzbdqsty1jV4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/DownloadE
+ xceptionHandler.class
+SHA-256-Digest: Ar50gUhEA7DMeNZUPE4h8KXH6oLTVXhi5/R24I1Kiko=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/Resources.class
+SHA-256-Digest: x04pOz3zszKMvmIFlAg/5WnMMIXRXi74dEPC9J6xJeQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/GetDatabasePro
+ perties.class
+SHA-256-Digest: swuDwbfhGZTeze3XDkFk7B6STtwtEjq5r2h2YHqaP04=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/DialogCancell
+ edException.class
+SHA-256-Digest: /gYocQ3oBegG5A01wFK60rxUdTyLEH9RS5PHLjY/Nio=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ListDatabases.
+ class
+SHA-256-Digest: Cvev5z9H9oqqRHCOBts/f5PmhNFJ/Epd3px2cN51vOE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/ApplicationS
+ ystemInstance.class
+SHA-256-Digest: 5lSB51Ge2kguDfZdATrUgSdLe17YSlSBaTaf9KJiX7I=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/UpdateUiPrope
+ rties.class
+SHA-256-Digest: 4X4QHPKz/eskhKSGtUnadXjEKClve5DWiSKjHxbLAJw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/FileDownl
+ oad.class
+SHA-256-Digest: 8K37y3wJNeEQF2QaRvbojssaWxd+8KrIMb2y5qo6RNE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/ComponentUp
+ dateItem.class
+SHA-256-Digest: N8n0vJ3x1lWbps1YnSJxxmrOBXmQXz13msvp10NiuTo=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/ConfigureDo
+ wnloadPage$1.class
+SHA-256-Digest: QH48ttI4lfV+SXK4MJikQ3J69opJQyZAcYcvM4BmqnU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/R
+ etrieverException.class
+SHA-256-Digest: HTzTuSYRu3BTYSFDrqyegZWqFLupPPMA/rJsUke95M0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfHostAge
+ ntConfiguration.class
+SHA-256-Digest: 8SlG3OYvScF+aiBNlM//ADWq5uj++PKPF5rYPfZscoc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/SMPArchive.c
+ lass
+SHA-256-Digest: VHqY0fOGKma0pmaTDeaHvE1/3CpTcLSyJQOa68Gta70=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMDialogExec
+ utor$5.class
+SHA-256-Digest: Uke3OKS68T5rnS99KLDTbdm/aKKTa49AACT7IIoCysY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/Configura
+ tor.class
+SHA-256-Digest: JaOYp1cp3JLgLeQmWoXMtrBK1zdOVX+oTMm4wJ7qot0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/RemoteFileNotFoundExce
+ ption.class
+SHA-256-Digest: FwAs+2JcCuT8fXm6yHTybPvbx1vp5Hom5AaBTr3SeXc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/SelectUpdat
+ esPage$TargetVersionEditingSupport.class
+SHA-256-Digest: Fma8sAW7WgzNTodQMpPnw9shMq1dFISWeapdEzqX73A=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMMessageHeader$
+ 3.class
+SHA-256-Digest: IzZuxt+h9vWqFfExs6h/PYuW73bw46FgpfL0Nohqkks=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/SUMInfoProvid
+ er.class
+SHA-256-Digest: tZFq60Cf4kNogCqxLQhvwiWyrFKcnqWtKCUUEvuSYKU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/perspectives/LCMPerspecti
+ ve.class
+SHA-256-Digest: Z8NeevnfxdHqqHwwnYFUkmcrhQ3ZS0DWJP2zvvcppl8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/Configuration
+ Names.class
+SHA-256-Digest: xRP1mLLGX6NkThj3S0uvcjmQMtPbFUZrl7zeso4Dpkw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/p
+ ackage-info.class
+SHA-256-Digest: UKmmj3tTTv8eHlFRhM6I4U4hUdptXtdRjYoESwG1fFc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckUpdate
+ sController$DownloadJob.class
+SHA-256-Digest: bSoZhax26yhGRldCdAgg1guYunXXFs+ug1i7lGnsHk4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/comp/Software
+ Component.class
+SHA-256-Digest: MxmMxgit3Gf24wfypfYUeQJBVk8Oz3gJL8+ogRYdUFI=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encePage$2.class
+SHA-256-Digest: PYQWferJw/YOmE8te7S//UEPldDJy+GJq/UjJ3Da1Ps=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/SelectUpdat
+ esPage.class
+SHA-256-Digest: rrLnTSAWbpNy651iv6m2sFNi1FTULOq3n41oXuZMLI4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/AvailableUp
+ datesDetector.class
+SHA-256-Digest: 4scVwb1/MFWNIQe22HVpJjvFhpH7tTfba8HKGfIASSY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMDataModelPubli
+ sherAdapter.class
+SHA-256-Digest: lX8jabsjVSVu9CoC1X/Bfm1KrUaKrEUcj2ILZIFlwSM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ListInstances.
+ class
+SHA-256-Digest: /sB+/r82d9MMC9a7wzKxUbl1V9z+hkIR2br1hKDZkFI=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldN
+ oWritePermissionsException.class
+SHA-256-Digest: PzkUis1WgmHwVVXS3d08b+hXloUwK0KRm92+4IlObeY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/Downloade
+ r.class
+SHA-256-Digest: oRHCb2uwplCWJrDY64SU4LbURAQu5ZMrkLs6F/Bm9f8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldN
+ otAuthorizedException.class
+SHA-256-Digest: GpTZHjMNTsHi5a2V00DzmrvyzzMt/9vh8dvMCOKzN+Y=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/cplcheck/
+ CRC32CheckException.class
+SHA-256-Digest: epmfpAolTgbBprI3R/zt9lM0m0SDDB8g1VHYODy4YU0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/repo/license/Datab
+ aseVersion.class
+SHA-256-Digest: MY5tX4kykq1XqLfFUPoP+v7eSL7mUTN5LH1sDMDJ3S4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteStartProgre
+ ssDialog$UserClosedListener.class
+SHA-256-Digest: 5NMXX4Y0ap2x/WZbD45lfd5CuEDAJzNYZmH6SuNrV+g=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldI
+ ncompleteException.class
+SHA-256-Digest: ef1tJjB7yxno4XLHfZQYjtprw9Ktw7xqfmSfKFCyFf4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMLocationLi
+ stener.class
+SHA-256-Digest: nmnXjarHVdJ3KPot77/kfd186GRVUA43QVDhA0Zc+oM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfSAPInst
+ ance.class
+SHA-256-Digest: hYpDgLOTcrif0KfEGGwM3rFvdUc2dUYyWcg+eZrolGQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteStartExcept
+ ion.class
+SHA-256-Digest: F0xYfBY3txiLwtoJY5HmowWARNmq56WoyTVSA+qIl2M=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/OperationResul
+ t.class
+SHA-256-Digest: ah6t0a6/2nfQCSYTPhk2LvPJaYYUpQVHiDJhAnAuQc8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/AbstractD
+ ownload$FileLock.class
+SHA-256-Digest: XVByyWDWnoMjIynsbt6w5TDC3YRtsXcMcKSJsRS6Abs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldF
+ ileSizeException.class
+SHA-256-Digest: 5T3i2tdfrWRLIDZ7RvJ2Y7i0glGhJf4yNqKWnU8u91I=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/Configura
+ torIf.class
+SHA-256-Digest: A42vnaVQcgnYf/w0OwtkPLFAgj0J8YqDAl8DCQxwT7Q=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/AbstractD
+ ownload.class
+SHA-256-Digest: 2RQFX+ffVZQGTE2nH+8o3vOTJ3ouPf3dau6VUTOLPcA=
+
+Name: intro/overviewExtensionContent1.xml
+SHA-256-Digest: ktMbjPYuyzEyNu4MrPTrrqhOdE49Oqov54foMNTqv1M=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/AbstractD
+ ownload$ProgressWatcher.class
+SHA-256-Digest: 408EyOJ+U3TP2+8TZSgQ/xP4IhSANfheaySXhztzkcg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/InvalidLCMEditorI
+ nput.class
+SHA-256-Digest: 2zUWTNnDA0+Jeo16W8xkdVz8jBx8xeJYUVZTDNdtDhA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/connectiontes
+ t/HttpConnectionTester.class
+SHA-256-Digest: 1NDmgjGfkUuYL0XkfcdXwEVGiPwVpQIAex2dzCfqkbE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/DownloadI
+ F.class
+SHA-256-Digest: kiy2ymlONS9yb2qpd0SGwCoDl6FZ9ECcVeGBf7banU4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/db/SqlOperation.cl
+ ass
+SHA-256-Digest: eBF/6th92hzlZNw4RN2mD2FN+NH2O3lUHBfzT19pzaw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/OperationCode.
+ class
+SHA-256-Digest: QSr4HvDRZtqbb1jHsYQNRit61tQVCFxYxziBnlGreHA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/StartInstanceR
+ esponse.class
+SHA-256-Digest: BU1knJ7ui8ZX7LC3QrvvSzmz9FQNaBs0sR6nRUnlqu0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/WebUpdatePage
+ $3.class
+SHA-256-Digest: XnXe4xxVWbni50m+AxvWERUx+YWsMz7nYO3j1BjiSJE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ExecuteInstall
+ ationProcedureResponse.class
+SHA-256-Digest: 0xm7C0P+SsC7gaup74ZQ1B2Xg4hAK/aIum8NMmqpZu0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/StringVersio
+ nComparator.class
+SHA-256-Digest: vlqZhTGmvO4WV1dw0Gg+oIa6yVU8zcGx+w5sMUJp/ZY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/allCoreComp
+ onentsDescription.xml
+SHA-256-Digest: tSo2mq9swkd6cJChwWxB3Z+jD639XlarWSOt2nUCxjY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/OperationOptio
+ ns.class
+SHA-256-Digest: w+ovIQ8OCklbP8hIik6EO0wVsKypOD43LNS5QGMk/fE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfPropert
+ y.class
+SHA-256-Digest: 4yZuYtYiKshujCxldS2MqehXySkkdKJQvpySDsbed1g=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/NonRecoverableRem
+ oteException.class
+SHA-256-Digest: a2hI7XPFOOJ/fJ9t7Ur70jGSu0yfkX5POFZ9YxYWXaU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/I
+ CredentialsDialog.class
+SHA-256-Digest: Nz4gatDewvBBBItczx88SRcV2Gh6DE7KUzlMsI2XxKI=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/DownloadsMo
+ del.class
+SHA-256-Digest: GWchkPasYJilAM9ckf0gXNlS35qftT+WSmmzN/mS514=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/DetectionEx
+ ception.class
+SHA-256-Digest: 42O0YsrhxgKA88U0gBh8bL/waVDL0eYadtVbxLUYPB0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlExceptio
+ n.class
+SHA-256-Digest: KI3oFLcOuWTzmUHB+QntutU4SVnAgLow5MDjzgcqfXo=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMMessageHeader$
+ 2.class
+SHA-256-Digest: lpo7sibQWhoZQdJWm02zPVE4cTdU5iktYY6jgHV6DvY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfCIMAttr
+ ibute.class
+SHA-256-Digest: doEi4k0rhUOSW/5QnwIPt6H+Bq2drOXaYc5dxwtCveM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/MD5Checks
+ um.class
+SHA-256-Digest: e5JHG039LR4TaTloVV431j+vuPl7KZjFTgE/aYGqrmY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/cplcheck/
+ CRC32Checker$NoCRCException.class
+SHA-256-Digest: daMRwFnbNKygqVrRgrV+sIaD0QUVg+OE5B/lec4k8tk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/DatabaseCompon
+ ent.class
+SHA-256-Digest: 6pmYfPOnEhF/yQxUbNnYwiSibrBjS4ecA5pKuOCE2XY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/util/SystemM
+ odelUtils.class
+SHA-256-Digest: jtruOtuMF5aeLE0GPp7GeaOh2DF1LJ1JA/kRL6lhDRk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/DatabaseStatus
+ .class
+SHA-256-Digest: agyAv47DGos9ukUBKxewS/hnS2c8eY8gpnafpjN4zK4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/util/StringValue.class
+SHA-256-Digest: GvNk4hzddu7ubBHrOEvooWLs484nhoKwKXCaFh+hXfo=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/DownloadC
+ onfiguration.class
+SHA-256-Digest: 5pZtpFoSfRGG447GZ1K/rzDIl8SLaGIcbkikcMoVcDE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/i
+ mpl/SmpWsRetriever.class
+SHA-256-Digest: LAOmPtVLY6ul1EILPA1gT3/Jw26Lfhy76Vi4g3aFvl8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/DownloadB
+ ehaviourIF$Operation.class
+SHA-256-Digest: BPpcI0kCtvPEfjZZBnPgm/icc1++tTpiUbNwD2z5JoA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/AttachDatabase
+ .class
+SHA-256-Digest: Ez2oY0awLPNuUHgdvPB2d8Fdhgszw+PK7n9qhIW3LMM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/S
+ idAdminCredentialsStore.class
+SHA-256-Digest: oDN/X5H1PzmgZlYGatu9zqVpbre2lfLPhZA9nBt2mss=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ACOperationCod
+ e.class
+SHA-256-Digest: y5B5xvQqBEPiy4s55RmWWuhuXvgyylhuGaYDkorPd18=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/DeployConfigur
+ ationResponse.class
+SHA-256-Digest: BBgzfTErNTB/f3mzu4TsCb5rxroZO3MXBTQ54LeSV94=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/RegisterInstan
+ ceServiceResponse.class
+SHA-256-Digest: 36/29FoUXdsmtdXAs+p1H4LCidWAYCgdV5ueO3cixXQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldR
+ equestNotSetException.class
+SHA-256-Digest: kS3EncoR/Q3mYdah6Z+ICNkarSCOn/XqFWlmlDe6Vt8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/resources.properties
+SHA-256-Digest: iJzEqBtB8GL/QjLSaQLFLQ4CTWlVm+X/0Ticqsev7aE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/OperationExcep
+ tion.class
+SHA-256-Digest: 24a4ULi00jvKAl3v+NmDo98mC2Nx5KJ/+X8ASvoW2hQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/DetachDatabase
+ Response.class
+SHA-256-Digest: KFXrLk2H0jsMCCNx+rbl+dyps0fNCExu4TFEGjpH7t4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/i
+ mpl/SmpWsRetriever$SmpAuthenticatorHelper$1.class
+SHA-256-Digest: MTkHizjx7fPKLQq1MhFWUcZEPjJtLk3eB6FkzvC0cmE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMEditorFormPage
+ .class
+SHA-256-Digest: nzm+N24JFc4EzSTBO1o5dEJKkHIG9SidCkNAPkq3Az4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ACOSPrepExcept
+ ion.class
+SHA-256-Digest: k3IkpIMEI8J8wli/D0QCI1JmrqG/QSxdpXHFITLd++0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/SWDCAPIFORHANASSCVERROR.class
+SHA-256-Digest: r4pMFBF5uXFTOcJ/HKh/K4kpLjdSM3gGRg1hlltksmM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/AbstractD
+ ownload$DwnldFilesState.class
+SHA-256-Digest: EKykQiBp3CoV+JWT9YHPGFEUDJfS3NnxBfEqmNCEbtE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RecoverableRemote
+ Exception.class
+SHA-256-Digest: lHsJTVxLApXHVr4uO8Ipadd7GyF4TdqkcmOC4b6mGNg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpSystem
+ PropertiesSetting.class
+SHA-256-Digest: jlSTSKQtV3W4c5sCI7SHbJVKcujhtswNZPhNMtDxp5o=
+
+Name: intro/css/graphics/picto/ClipbCalendarCircleArrow.png
+SHA-256-Digest: ag+tQWbGlsTX37Ksq4O+r8Mzl/y/zFDxyBLOxASOi98=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/LCMPlugin.class
+SHA-256-Digest: CZxijRri766o0MCqCtZ1kKTU/36qvs2l57j8roNmmYc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/SWDCAPIFORHANADETDWNLOADService.class
+SHA-256-Digest: xCWz/V7Dq5QtWgLbI4nfLifskbbJ8oOBe/AdpjfY/LA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckUpdate
+ sController$DetectUpdatesRunnable.class
+SHA-256-Digest: +ckcqxf33EyG6p/T46BFiJARxWoHqehP9HxKY7zrmXM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/i18n/Messages.class
+SHA-256-Digest: FSsxlnu7cC3yLj6rBVARTE70pFHrqzBN5ZQYvM/Mk9M=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/HttpDownl
+ oad$HeaderParam.class
+SHA-256-Digest: 2xbYrg9PXzMUis4RQrqHyYBAwXyi0PB4wWqtqliFwjE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/commands/CheckUpdatesHand
+ ler.class
+SHA-256-Digest: uCYimssDss+h8dQ+fBnDT2g+Csv64qM0gqmVRImnQco=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/comp/SumStatu
+ s.class
+SHA-256-Digest: qJWs5lFHUbCZoTSrPdcHHxLmF0Jx4Q9phI9X6v09y6M=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/InstanceOption
+ sFlags.class
+SHA-256-Digest: QsJAl9BaIvfgxnjQN0pMUiiB8G0OYhh6mAnfxljt3BU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ServiceIdentif
+ ier.class
+SHA-256-Digest: MDN/W68+/qENYK7knpjW+LYCWEDDpHbyIj3ocvfjg94=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/StopInstanceRe
+ sponse.class
+SHA-256-Digest: vN3vG9HGx5VvPFS74l/Of+t0UuumCsNu8OMFtW8mxfc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/commands/LCMEditorHandler
+ .class
+SHA-256-Digest: OHlR5L0WXy/SbyKcFCfLTAnRNdZBKROAnl6TQVWb0OQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/GetDatabasePro
+ pertiesResponse.class
+SHA-256-Digest: GupukCI0woNVxh2qN9ecUBROUR8bf54kSdri2VDO9uE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfDatabas
+ eComponent.class
+SHA-256-Digest: 3cVXv00lrkJIjjCa9ebUvFU2YaX3Tu0hcY+OM8bFaDA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/SAPInstance.cl
+ ass
+SHA-256-Digest: MnGp0K9UulPi9nRm83OiKRttvV13BOFTa4sdJw3giiE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/HttpDownl
+ oadResponseAction.class
+SHA-256-Digest: kahYJFXG/5aHAPHjQPdwfFd2AYlXDf1aGRwmblFPVCk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/ConfigureDo
+ wnloadPage$DownloadsContentProvider.class
+SHA-256-Digest: PBBlFELYkl7FBcjSUcvXsHTIIbl4tCoi+ve76YIZoP4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/Archive.clas
+ s
+SHA-256-Digest: P0zZY/Mty5hHL6rnQhfBzrBj1Rzb4gmlQI51IblYvEw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/connectiontes
+ t/Base64.class
+SHA-256-Digest: bGUow8WLIoTeyDoahISlO86XLgVuVs79aHmppLWIEpo=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteSUMControll
+ er.class
+SHA-256-Digest: TM1AZ183Q3XBY0CrgXtCtKkzQnUgI15eGFTA96/UWtQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/E
+ rrorComponent.class
+SHA-256-Digest: 0/DENZfRem39Ive8nw7n4iDszW1VuDX5qkB6PbX+0C0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/IsOperationFin
+ ished.class
+SHA-256-Digest: +pmQ+HnoiapPUyL7MiNscI6YgRAMgkDGgrwrnX+PmT4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/StopInstance.c
+ lass
+SHA-256-Digest: vcJeRV8kG+JpMaXmZj7cA2MkaAiEU9/2dixF2sT0DjM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/PersistentDat
+ aProvider.class
+SHA-256-Digest: 0JlQb8tz+yv5ZttPqvYT560mlWdXFywVPPPSCB3W+1o=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/COMPONENT_ST
+ ATUS.class
+SHA-256-Digest: CwehclkoCciJ3PuZUEQ5rUUyipU3Yx6M982waMEQ31Y=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/AvailableCom
+ ponentUpdates.class
+SHA-256-Digest: uY5Y7br8Ltd2AHJoUaThnl+wLLpbQbj2wVMc9RW8WUA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/N
+ ewComponent.class
+SHA-256-Digest: 2y3RbNfoty6++Nkr74o4tS19qZtIiYxKxd92J5AMxnM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/HttpDownl
+ oadResponseDecider.class
+SHA-256-Digest: 0jovn9hEDqo2fkqQuK6yZ5qVFMcmDHgP36Pl0bW92XE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/connectiontes
+ t/IConnectionTester.class
+SHA-256-Digest: nOrgJrr2LsPkgpe/0oPt+S+d/WJ2Tn5djUKzxEc1O1A=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/GetCIMObject.c
+ lass
+SHA-256-Digest: 1IhwYoNq1z0ly9Dqw5GF+IEfSHiQ6zs9eMNTiQgDew0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/i
+ mpl/IOConverter.class
+SHA-256-Digest: QrQ0K2WZDpLTIzOwEe9u27AYybJgz6vvfIDMYiug698=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/C
+ redentialsDialog.class
+SHA-256-Digest: kC9FOhEosKEznADJw/YYFBh1CNrPCpOedmxfYxWM1VM=
+
+Name: icons/obj16/Refresh.png
+SHA-256-Digest: qGisDUQqhxk0K4P+sEizKtUTNSq0MmgnIYBq1HJB6pc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/SAPHostControl
+ .class
+SHA-256-Digest: SJCg21zh/1U7N5ruaoDk7cToOjvdFUkf0GXpjFmDggY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/StartInstance.
+ class
+SHA-256-Digest: uZL1oa5FwFIxoF2oQ+2Gz2xygX/LyQ07/dZRAlUZfdU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/util/Softwar
+ eComponentVersionComparator.class
+SHA-256-Digest: QjRLJqvQCwCsFBUwl7/dgOHyUJ1iuy7Iss79Fvat/54=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/HDBLCMAuthent
+ icationListener.class
+SHA-256-Digest: kCsezmtLBv+d2LVS3irCgBg7pYq+BZC2IQzkyWaMu6s=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteStartProgre
+ ssDialog$1.class
+SHA-256-Digest: lYVykqgG4z9Gyh6dzSR4RSjlol2PZDE/Zq6gNMBqvxc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfString.
+ class
+SHA-256-Digest: Sl155HCigxox4X9GbBZHtTEugXKvEcrkyumG/WZbsk8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/Dwnld4
+ 00Exception.class
+SHA-256-Digest: HbFWQP2Yq5kqBrfGZQtZZ9P/proh5Z8sqNeu0hF36Qg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/SWDCAPIFORHANADETDWNLOADResponse.class
+SHA-256-Digest: Xe//UQZl90J6iFIHd6VnsechORQugVmXQEXRCmnjutM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlSOAPExce
+ ption.class
+SHA-256-Digest: 91SHOjLpi3zfsSbz70y7ZhQv275UZd/2QsapAmVTiRE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/i
+ mpl/SmpWsRetriever$SmpAuthenticatorHelper$2.class
+SHA-256-Digest: ve14Y+Bz2Z8SmxVAH4smgWHXEa4JppY8LpnZNeTdZIY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/resources.propert
+ ies
+SHA-256-Digest: DiPmysaylwh2s/b9sQDKEeDByk5SfjkOswDXyqSfnYY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/SelectUpdat
+ esPage$ComponentUpdatesLabelProvider.class
+SHA-256-Digest: fjtKdML/kmzNIsvGqkbPQqKe+OJIWapFakaEpNmyIp8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteShutdownPro
+ gressDialog$3.class
+SHA-256-Digest: clDgW0ISx62aJOqXc2nIPGxV1uJaxG4vGWT56IKYRAU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/LiveDatabaseUp
+ date.class
+SHA-256-Digest: 7yMNZjacIX449dhF0cJsugKrem7VcB4EUyV2cUlxtII=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ListDatabasesR
+ esponse.class
+SHA-256-Digest: L3QaawyyH0+0quaAMauyPJPttgbExcEDwi2BkKOBabs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/comp/SumSid.c
+ lass
+SHA-256-Digest: TfO3SMF/nb0xSavvSOms5GXl+pfr17HB5zqQGuVPzGM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/InstalledSof
+ twareComponent.class
+SHA-256-Digest: CjfD8nvCxSt7WtNgItCv0DeU//YD6eexijvHF9UEXhc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/UiSmpDown
+ loadConfiguration.class
+SHA-256-Digest: StdPkp4mapAZRczhbaXZOl5k2s36hGuP6eZhSK+II/M=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/ConfigureDo
+ wnloadPage$DownloadsLabelProvider.class
+SHA-256-Digest: N6uiLusl5l9jnhpVvqzIZY0qDh3ChEV610lcJBy3fwQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/GetComputerSys
+ tem.class
+SHA-256-Digest: rPulNuWAhkfXiXGj6IGfJFnolC8m1+KGZkaiTZe6kl8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/DefaultDo
+ wnloadBehaviour.class
+SHA-256-Digest: 0mrCUEPnpTIcaEQ1Hyroi1XusbLmiMQguu8zonrc/0c=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/script/ScriptGener
+ ator.class
+SHA-256-Digest: pkWiBPpD7UfvhdDZ50i7CPJsH9d0eUhSwQO2kMCRlbg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/HostAgentConfi
+ guration.class
+SHA-256-Digest: gsVvCvre4mNnsqvmcCXYNvmppzyBxyVILARLc6D0ep8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMTitleTextL
+ istener.class
+SHA-256-Digest: ndpG6rG1KIEjMIPPOu0+jfB2mU+F8Yqj+wdQZNAtgM0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMEditorInputPer
+ sistableElement.class
+SHA-256-Digest: E5IwRnG7CH04mtmqbX731TlDxYvU/joXbQp5xpOizB4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/InstanceServic
+ eOperation.class
+SHA-256-Digest: UsfIKP2mdoWun+31oWmzT4X+3l+SsO+FHP4TAR31O9U=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldP
+ roxyAuthenticationException.class
+SHA-256-Digest: lX0x84dYtzc3e87V2vCT37IUZUAyVLhfvmO6Cai1Ty4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/DatabaseSyst
+ em.class
+SHA-256-Digest: GB+yY3WS4tvJCTI9E9MUK8/C2Ra/7abgio3k1gnRzvs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlProgress
+ ObserverIF.class
+SHA-256-Digest: WMD4aoFJn8xOBSqLKlHw9DXVytoVISy/KAvcNSqkGtI=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/HttpDownl
+ oad$PasswordAuthenticator.class
+SHA-256-Digest: uP8Rcmawm2o9WuJd2yKFquk1NL5ZA7ZSfymlSHG1f1Q=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlOperatio
+ nFailedException.class
+SHA-256-Digest: meuOg+qsznk8fLmnr0b/g2PMlOdgKX6Azis85+Z33Pc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteShutdownPro
+ gressDialog$1.class
+SHA-256-Digest: Q0YjnY6HXnxlQwdB7GISbNsj7PVMjOYv7X+k2H3T2iQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/package-info.class
+SHA-256-Digest: EzZVeNSLRYMu5VDGPyaI4VuRst5CaRdwqdBXf4NygCM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldD
+ irNotExistingException.class
+SHA-256-Digest: A3MJBUb8es1VM403azpEi5ETN4e/MK4hsIPdCH/OoeA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/SWDCAPIFORHANADETDWNLOADPortType.class
+SHA-256-Digest: qxhhkU2JqnpuuDlR8dfgg3hUrGWJQ/N4GLu94LC7NbM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpInitia
+ lizer.class
+SHA-256-Digest: JWg6QFRa906aMloh37NaakkbfQPoA0vbyld5WNOdMo8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/UpdateMappi
+ ngException.class
+SHA-256-Digest: 6R2Ias1KcVG8kjElI0/WbYTOQ23i5w01qt6hFoG5B/M=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/DownloadIte
+ m.class
+SHA-256-Digest: 8MkW28/XNPkhE/KAlI7CVXWR8cJ/c5nEEz8k55gLuIk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/UpdateDataPro
+ vider.class
+SHA-256-Digest: dYfyvEKoxD7qAP3Uz2TSKUWuMeaR+Et3l/WGgdo+EZU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/S
+ ystemInfo.class
+SHA-256-Digest: I4pzMWtd9MKCmOONJZa0mD2J6nijMcve0ZYSINzMyvA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/util/StringUtils.class
+SHA-256-Digest: 0pA6j5zDObRHqHZMk6vpeT5StnAKC18/9Ae5z+sMDV0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/progress/ItemP
+ rogressObserverIF.class
+SHA-256-Digest: JjF9lsqutaLVXA1XFdnRL56x0ZIqgBTj6WdUkZXBxo8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/ComponentUp
+ datesModel.class
+SHA-256-Digest: x8e0guNEjNB42Ie0+NCROS9twRDzolWaWYCVDL7SfBw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ObjectFactory.
+ class
+SHA-256-Digest: jOP9iWdO9eXzlV/+KHfUSGU+Mz4BydPFt8TG+NvVop0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/e
+ x/InvalidComponentRetrieverException.class
+SHA-256-Digest: CUyGPv5KkmALdBPDie9IVPSqSMH/v3EtItxN0+o60cg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/connectiontes
+ t/HttpConnectionTester$DerivedHostnameVerifier.class
+SHA-256-Digest: bSW+kanxe8rKHmayohwgVRIsTaP5ohfXL586hBCiwzM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/repo/license/Metad
+ ataSqlOperation.class
+SHA-256-Digest: cKBTruK7JsP+zA40Q+/ynB1po1XOqtH8wLDezCASj4M=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/SWDCAPIFORHANADETDWNLOADResponse$ETSCVRESULT.class
+SHA-256-Digest: Xe9CzWShAcAAWRt1+ufVHzKGtcS38cmKqTGePX4e8eE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/RequestLogonFi
+ le.class
+SHA-256-Digest: w5siEvPiGF+qZ6/dgbeVBxHHS9CoAaeDjvX5uiR19W0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMEditorVisibleL
+ istener.class
+SHA-256-Digest: KxhBmPQalTsMecc8H81bP82DHd7rtqz5Rs6SHi0y+QQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/xml/XMLUtils.class
+SHA-256-Digest: OXkGY94sBK3emT039N1ka2NxdKqD2sAtJC6aOl3u9Ts=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/C
+ redentialsStoreException.class
+SHA-256-Digest: L2NUHQo00LFJaNpjotXBZlqVgVGyO7dSyfG2F15bzRU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMCurrentLoc
+ ationChecker.class
+SHA-256-Digest: Zjnjwfs/hRpEjn+EebzByH17mDGbOck6NtvNvUZgfk0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encesStoreSetting.class
+SHA-256-Digest: TLGiltU1lKXoAjgVulMLoz/yknKCybH6SiAp+kKHqF8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/TargetService.
+ class
+SHA-256-Digest: xDpWAQY20bJJtAwPGxGDHpRxlM8/deM6gOz15lsZlic=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlHelper$1
+ .class
+SHA-256-Digest: WYubdGMgW4m66nRycPR3yc1pWJXE7zLIRPWu2gDVV80=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/GetCIMObjectRe
+ sponse.class
+SHA-256-Digest: 1uxBhqSwgh3sLFFEuM6QSuRxb9qghW5Fhr845AhmVD8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfACOpera
+ tionArguments.class
+SHA-256-Digest: knUO7GJRuHjQbQmWaYr/3Mo9JoPoZodhMN5pGlSUZEs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/VersionForma
+ tException.class
+SHA-256-Digest: iGpsCmbw7QtfcLvOFwL1EOzPwrWu15AScDrv4taoy5k=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/CancelOperatio
+ nType.class
+SHA-256-Digest: ASiFpMFDmUj2jFd45hdZgkWj8N9fe+lkG7zQmNeDnAI=
+
+Name: plugin.xml
+SHA-256-Digest: c7kcALnn6h+Alidyeh8qJ5wJUKMNguKQJJw0dqHmcgc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ACOperation.cl
+ ass
+SHA-256-Digest: QU1vwZq18CiRQTfQ4vRKq0Op5a2elAzJyqHdMU+EBgU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/ComputerSyst
+ em.class
+SHA-256-Digest: D1oMsAgklJJ1SWJiYtDQ8XgwoLgGTHUaPrzsPePt2BQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlHelper$D
+ erivedHostnameVerifier.class
+SHA-256-Digest: kh/TnkuQr0ZU/hEZ0fwmjriNIwR4A60EjbDW5pKqEpU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/util/Softwar
+ eComponentSetComparator.class
+SHA-256-Digest: SA+swcAexzbAwGWOCdRaQtP81jawG9Yr+ofbSaRgwK4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMDialogExec
+ utor$1.class
+SHA-256-Digest: UGokB3oWDGQevTfE2XgaRUDj2zzBdBhoxI6AnjfNtwY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMEditor$Hyperli
+ nkToolbarItem$1.class
+SHA-256-Digest: Kv3zWjIhop/0RBMtTfajwfItijAp0fj1dx8RKnAPdNA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/LiveDatabaseUp
+ dateResponse.class
+SHA-256-Digest: ESV8yKgrmbS2zbfxdfrQQgkRgnOIQMlu64/I7+TJZPk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/Configura
+ tionException.class
+SHA-256-Digest: PVa73InGGhz+v6rC+ur4MfNWMH6AtnrukfUlicjvz3k=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/Unsupported
+ DetectionException.class
+SHA-256-Digest: xcwQMim+yXBrylqDe9mHZTzUsaN/24aUVUSjq72rNbc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encePage$3.class
+SHA-256-Digest: AY/i4szCgTkWd2bIXJnQf6vkvhhGY8QxfEsTqftVA+8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/ProxySelectorW
+ rapper.class
+SHA-256-Digest: BWhSDHWNw6RT3vwD/cgmPgyxMiCsisZroJHdeQ4Af/Y=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMEditor.class
+SHA-256-Digest: Lwljr//fH2i/d80xD/0i5lgQlfon+T4UCH+mo4rn5V4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/C
+ redentialsDialog$1.class
+SHA-256-Digest: QGoRe4Lg/JeQeetDXCaYlA5esm99RPXn32y/Kln75Ig=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldI
+ mplException.class
+SHA-256-Digest: 12j6mifw9JmiIpPjrXV4E1BKvu0a6Ch1E5jf0zfvzcQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfRespons
+ eMessages.class
+SHA-256-Digest: Pdv/UUURKRCcpzVRoGAkP7vostXSjRL5lGM6ykgRHkU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/Resources.class
+SHA-256-Digest: 2BhTTgRR2KhyA17fPlxkvXEl1pZGQBApvUp6tyLJUdo=
+
+Name: intro/css/overview.css
+SHA-256-Digest: LHaxx8gf7sO0ReaiobI/FOXzxr+PkTI2e54bOnLH02U=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfDatabas
+ e.class
+SHA-256-Digest: yXjCJbfo/BQobveQdDoxXnZq+njUL2XtrmSr+6s6GkY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/xml/XMLProcessingE
+ xception.class
+SHA-256-Digest: rg4MYPQJSZpaEcFancSIKL6GN9GPgYzOFwYCMt//1bQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/SelectedU
+ pdatesDownloader.class
+SHA-256-Digest: lAWJDH61oQ6PaU+3ejVGTqlEXSQpeeByftrxunT0p2M=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/WebUpdatePage
+ $2$1.class
+SHA-256-Digest: mZDAF85QPhB+S9xbAALmt/YTN+u7z5187I+OoKoZ76k=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/DeployConfigur
+ ation.class
+SHA-256-Digest: 3SYrMppWxM/ydnCi3VGq1VTfXjW4/AjcowOg5h0lDsE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/IUiSmpDow
+ nloadConfiguration.class
+SHA-256-Digest: LyAELYH6fuMAsUu9X9+E9gwDhH6Mg6AX7Z3ucCWAgt8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/SAPControlInst
+ ance.class
+SHA-256-Digest: ExFygqCsj1C8qA+GJTa5QeyEjcNq8rz1uAIBC2j6688=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/repo/license/Syste
+ mNumberSqlOperation.class
+SHA-256-Digest: /XSL5wQq/8ornNYXitJ+aHiv5MMVkguGjaKeb3IDFAg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckUpdate
+ sController$3.class
+SHA-256-Digest: D5iUmWPuubD443hNzPpDgapirTEBaIESW78TC0oNZZQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/SelectUpdat
+ esPage$5.class
+SHA-256-Digest: 9eEVdb3RbUo1tWEpQTyJSXrYxf3QZcjghapyo1vfM5U=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/StartDatabase.
+ class
+SHA-256-Digest: A2MMUMujO6wRiOruAJYSiMpxN365T20AGQpP6cz6iOk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMMessageHeader.
+ class
+SHA-256-Digest: tMHpRl+fmUW4NG94W6aryzt7uqaSHmL0ovUlS/YeCII=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteStartProgre
+ ssDialog$InternalRemotePorgressDialog.class
+SHA-256-Digest: nfaY3S7rCWSBGgUFCXX8mlmHSCEKbYOqdN3cV+ISyY8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/SoftwareFeat
+ ure.class
+SHA-256-Digest: pKcS9WAWIGrBhY4LJVwsJxRdNPxSr1714idnQSU2pUM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldN
+ otEnoughSpaceException.class
+SHA-256-Digest: lHC4vPuAqXW2NrMX/98Q7kQ7R/UevOSqFGMZJHUOA00=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/C
+ redentialsValidationStoreException.class
+SHA-256-Digest: dKqfAVltQ3BVegXjge1GUFPDrej6DgBm61HxWJxOnQw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/SmpAndProxyPas
+ swordAuthenticator.class
+SHA-256-Digest: fnjT6fqClurs32YYR6sMGwUs3eBPPk1CC1nQnX94/V8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/C
+ omponentResult.class
+SHA-256-Digest: txG+0VldRojkbyVdOUvAoBs2u/s5rjq1kwbALcwZwrQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlResponse
+ Message.class
+SHA-256-Digest: zuAYnkCFGdoas5zioUo9jwkkuzbGHWbVS3JMpYUEpVs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/e
+ x/package-info.class
+SHA-256-Digest: sIO+zpe82UXjvt6E9OIw38UfZ2FutKI1Xbg7/Rt4YlQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteShutdownPro
+ gressDialog.class
+SHA-256-Digest: u3C21LQYT5uF9RWdMklu7vyYWjv1Ei3pxVWLpTrJT/0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldI
+ nterruptedException.class
+SHA-256-Digest: ucKtJU+90eyaGN14aX25TmYk4p04oeJu7y4dAKTfUm8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteSecureModeE
+ xception.class
+SHA-256-Digest: pVGQzSqoe3G3PE3mxcCePzmcB0hCFdi3W3FTxmuU8R4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ArrayOfCIMObje
+ ct.class
+SHA-256-Digest: nkW8Z90YvVeWY4jbR2ak8hJzZGlKmpXL6s2Ymo3jmI0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/ComponentVer
+ sionComparator.class
+SHA-256-Digest: CqsXErJaGFxgbEUUl6BjSPSqMf6FsMPNIdikgnJbOz8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/ObjectFactory.class
+SHA-256-Digest: PybEGz4QnzehixoT7I0bgymoFHaI367GyPBezs0EbHo=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMEditorElementF
+ actory.class
+SHA-256-Digest: z9wOs23r/6SW8GCZGxt3uMlWa03euo4J0DNHB8Lz7cY=
+
+Name: icons/edit.png
+SHA-256-Digest: GOXcPHrtmX2nvUamCoowmieHTQpQ4NIG51F8+5Y1E4k=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/F
+ ileSizeUnit.class
+SHA-256-Digest: F8R1e9dnrRgHfr2s+UaO3foimH9qNizaqda8rN4b1/A=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteShutdownPro
+ gressDialog$InternalRemotePorgressDialog.class
+SHA-256-Digest: VyS1lG8ifJcXk9b1NytmYNhNCc7OhjMZf8YjC8QGv5M=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlService.
+ class
+SHA-256-Digest: w8jpoIrWWpfOnmubAyZxwg5uIuC8q6LK9r1gI8f39+s=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/NewDBSystem.
+ class
+SHA-256-Digest: fZ9KHF/xfyuGz0KokhzQ2OluJ2DDfnggDKTDZAMxvDk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ACOperationArg
+ uments.class
+SHA-256-Digest: 4BzMuQUuPmoCWRcmSehqlgtdD35IJIXxpoflewJ0yeY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/InstanceStatus
+ .class
+SHA-256-Digest: ggFGBmlPFj2whUM6G3togwTMIE32icbfvRhzSAyIh/I=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/UiSmpDown
+ loadConfiguration$SystemProxyData.class
+SHA-256-Digest: xUixLAMw1hkNj44Q2o+92iGcGShKUecd6PiaIL458hE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/db/CreateDbConnect
+ ionException.class
+SHA-256-Digest: jWLzJD73PuuO7mGX9MKD/yd5g4OgGx0QU4eReSc4JIM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/OnVisibleLCMEdito
+ rExecutor.class
+SHA-256-Digest: kp/GKF9rJ2iTzKP6PZdabUQq1F2cNyLq5rinKpxIVoA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/SMPUpdatesD
+ etector.class
+SHA-256-Digest: Xn75CGm6qsvUfP3xQigmN3pD4tlvNC/u9fLiab5oUXQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckUpdate
+ sController$5.class
+SHA-256-Digest: PgJLbx/Bw1gsCmCyWLDAQdDPO8MI+qMUvWpde4Waxzs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/AvailableUp
+ datesDetector$1.class
+SHA-256-Digest: YwbI2ME5uvM/6PrqQF9GVZPWPjaXcXrzyHftKPydDN0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/Property.class
+SHA-256-Digest: puRBpvY+N7Wuszl3ttEE3lPfGjBbcTu2aL/xwvQItvM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/CancelOperatio
+ nResponse.class
+SHA-256-Digest: Vc3q2uoajo8wC9yXGB9L3cL9mkoctdgNDIDvJkHg/lE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/db/DbException.cla
+ ss
+SHA-256-Digest: Fnd9vUxRfA5ATLpQuX3B7g9pJ3ZQcH6usdDbVtTByyw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/types/ScenarioType.class
+SHA-256-Digest: KP0g49f5bGi4q/aidPgZXotLEi+354nTh6pjQORGk+s=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.lcm.upd.ui/
+ pom.xml
+SHA-256-Digest: +a9DLBYRSwFMJ4HbUqQfqEI6n/RzSsLK+3gIfI9Vxa4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckUpdate
+ sWizard.class
+SHA-256-Digest: GwYLxBTShx9Z5p9hAKRWkK2ddSL6OI5P4Kh/AUjAmH4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/InstanceSelect
+ or.class
+SHA-256-Digest: dlpGzcX5rlWE+QeuZILIrh2CBoD4Y2BDfRRXJmauJaw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/SAPHostControlUnknownO
+ perationIdException.class
+SHA-256-Digest: 93zf/1RZAL7rM+uZ3UYX0i5LqLAN+xIl8lgozYBrP9w=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/cplcheck/
+ CRC32Checker$CRCIncorrectException.class
+SHA-256-Digest: FbI2fI9qoT/0kYij4+xdL/Gz4oT0MzXOZ4iTUV9P3sU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/CallServiceOpe
+ ration.class
+SHA-256-Digest: Sc5PIwPv/V9MkDJQkhcrha3W7r8911d0keJPiBJ5Iyk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/script/hdblcm_prep
+ are.sh
+SHA-256-Digest: Aad9zp3L+NJ/yC9o7S5fEOQfiU8hiTSKH3rc2ZWMK8k=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/GetDatabaseSta
+ tusResponse.class
+SHA-256-Digest: yPZDmoOWfQgJ+O6nldhdVp5FYVZs9yFP0OA/5nl4DPQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/e
+ x/NoInputMessageRetrieverException.class
+SHA-256-Digest: fQqitB5l1OPL6ks5slQZtPEo70fCWoFnm9yLnsj34Lg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encePage.class
+SHA-256-Digest: u6wdToSkrOgplVA/fp6eN2vNXl0mMwP/AIlK1QYd86U=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldS
+ izeMismatchException.class
+SHA-256-Digest: IxB0+FcP4dZGT3q1yFr0xPGvkXAEOOFNjd7VFooPWds=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/connectiontes
+ t/PingTrustManager.class
+SHA-256-Digest: 1pgQkyVjDJ125vj/a6C58khHP2GGpgmE8cDhqr76ehs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldS
+ erverException.class
+SHA-256-Digest: +DDaQt/S7nU1IkkxRmTvyTry4yJLDr9pFw3ULGQqcrM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/GetOperationRe
+ sults.class
+SHA-256-Digest: nSeGuKMCMKELDQe+g5JOzs535SBdzHdHxEyEwfVP9Ac=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteNotAuthoriz
+ edException.class
+SHA-256-Digest: kRCsIqHQ0jn1y/4TYD1l5rkpqGhdZg4lgcsHIBIDJLM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/WebUpdatePage
+ .class
+SHA-256-Digest: jxk8VfgmD1xd24pz6Lf+dcwJsnlCa081yUzFjMnxMhs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/OperationExcep
+ tionFault.class
+SHA-256-Digest: P70/4hYBPVctm/A+AmZr8lpICXti90FgFBQz4Hblwfw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/ComponentUpd
+ ate.class
+SHA-256-Digest: P/vLDmm1NrCVtBQKKiBw9C++EwjBfZM0QUV7cKSL3t4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/BuildTime.cl
+ ass
+SHA-256-Digest: jQc1QuUDnCCU6ru9BkOGW/hwesjWmRnBFyQziN69dbo=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/HttpDownl
+ oad.class
+SHA-256-Digest: teEfHgkkEgvIIWUXIBHMW6MwNDxyamlSkzBDnWz687A=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteSHAControl.
+ class
+SHA-256-Digest: 1ncFAnvhdGMAq3yrd4C5bepmeb3CurM4vNJUm5H4qjE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/progress/Progr
+ essObserverIF.class
+SHA-256-Digest: eXjha7s5DdQAt6QydMBlOJamlK4zNGI4NpZWGmsLz0M=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/OperatingSys
+ tem.class
+SHA-256-Digest: qwFREK8A3z9CrkYWlRvmahZ0qkqU8yx4vTP15p8ErVk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/messages.pro
+ perties
+SHA-256-Digest: UXVDQzLISFHUlWU8WaSY2tostVkcVarFPpFbmPYFYi8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/WebUpdatePage
+ $2.class
+SHA-256-Digest: Ud45y98ZjKK8dQZcbKKW3sffcBOCSBOL2yGIyBv8gQ0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/SetDatabasePro
+ pertyResponse.class
+SHA-256-Digest: 5ESYUq3PAsDGPJaQ4PMOrzt3DzWR0TX+TYMUgDo5INs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ACOSPrepare.cl
+ ass
+SHA-256-Digest: o8WXrAw7zzWCPYldIynxPDBDJUUK3hSe6xmB6097Vbs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/Product.clas
+ s
+SHA-256-Digest: /vjQW28cHX/qruTT44EputrQHzLduUpTgVN5orYIVTU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMAuthentica
+ tionListener.class
+SHA-256-Digest: uC2Y893FprsPNIyZ8uiXi4woE2GFdkFZxwf+WgixByA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMMessageHeader$
+ 1.class
+SHA-256-Digest: X3IO0yzWLwZsSe7WhNdAgDDKn2bDrg3sD1WtuObHCuE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encePage$1.class
+SHA-256-Digest: BXQrN9oztEKZu8UpVHaAz9ac/2vJXl5dOaswjv7xMhQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/UnregisterInst
+ anceServiceResponse.class
+SHA-256-Digest: SdI22R2TQqL7RiNqCRLZa7Lhjiea0AH8a++NEpoLnek=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/DownloadP
+ rocessException.class
+SHA-256-Digest: bZSV4qyNuo65/U5Kq3J9KLe4Dy4ckKQHkA+2fY0RW98=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/ConfigureDo
+ wnloadPage$2.class
+SHA-256-Digest: j3Rspi79HQP8LnUMrcdWz0uklzt2vyB/WxjlH15NYhk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/i18n/messages.properties
+SHA-256-Digest: AVEUolwJ8Un+9EDz1i16Cm/UES23UZPg9sovxjhpZ0k=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/CommandOutputRetriever
+ .class
+SHA-256-Digest: hM4pwizNclRP3kDcu4BzwXehisJCUm5gcC3ihnoHBCc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/SystemUpdat
+ esMapper.class
+SHA-256-Digest: LcRBrAZTJC0KxaTiklpt3QyHvYBYKWcGEM+1rdLsPj8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/util/HostcontrolLogger
+ .class
+SHA-256-Digest: u+c4IlWBUaiViPvahU+PcDPwyCXLWY6T0nBFZwjBTGg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/xml/messages.prope
+ rties
+SHA-256-Digest: z1gAVpIz18eWMsBW972i5x7sx7PJfKYDmXY/WcpIc4I=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ExecuteInstall
+ ationProcedure.class
+SHA-256-Digest: HoVrC4TuBjMqUKVrnDXTLjWlZHeHGsD3V9cWKYoSp/I=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/UpdateUiSyste
+ mProperties.class
+SHA-256-Digest: TQmNk+xYsac6Wt4Xgw25xokwemNY+LuMF0s8sCUlqrw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/e
+ x/ProxyAuthenticationRetrieverException.class
+SHA-256-Digest: cQ3NXtMFL1db4KhO5AgkEcw4lbk2v8mhd1ya5ZB0Sz4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/HdblcmUrlBuil
+ der.class
+SHA-256-Digest: nND62LitUwjee9c3cb7O6KZ0+wgT5y3lYVd77OAym8U=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/UiErrorKey.class
+SHA-256-Digest: WkQN5rWzyXSXXI4FyWLD+Jnnp07vlieQ4xwXOEK17Qg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/UnregisterInst
+ anceService.class
+SHA-256-Digest: NTsoKMoLUSr8moCqgcQmmn58ZkpKJn0qpRslIXTTrtk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckUpdate
+ sController$1.class
+SHA-256-Digest: U+yymNHMdUQ2WEaRczcQ4+GobyGtbuWp3AN9amRQYR0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/utils/JavaVersionInfo.cla
+ ss
+SHA-256-Digest: rUAKlOnJIFyRdJKEkzexXPFJf8TxqQT8/0wHf4Fup8Y=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/Resources.class
+SHA-256-Digest: zjW3j/RlMJZL1L2WZaUR4TiPxBVIkL6HCuEH9yGc5U0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ResponseMessag
+ e.class
+SHA-256-Digest: nIdAfgYWIrryToL+YoqiPtB0/C/r+kPRPbcYZNUobN8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMDialogExec
+ utor$4.class
+SHA-256-Digest: Sb8t3z/QpBtizoI3C1WIW7VXGh77ayJnsNoB1TALWXM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/StringUtils
+ .class
+SHA-256-Digest: QceYEuyKKI/bT0qiZFZyS/GMTYBV4vj2R0tU4TBMvWY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/UnsupportedO
+ peratingSystemException.class
+SHA-256-Digest: 9oWBEdkqG7SQVhd/2vvAqiRJHfzW5Sa1YHS5LwJqjRA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encePage$6.class
+SHA-256-Digest: vd/r6yz8akJMSmSyoSqRAek0kfX3y67O9tY+AtQI6Sk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/HLMNotDetectedExc
+ eption.class
+SHA-256-Digest: lBF+wr41XI5vdmwW8DEz91HUo302T2iFwuHB98lBwqE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/Missin
+ gDownloadFilesException.class
+SHA-256-Digest: 3T5XGp94Elt7siTtTqWf1yrwRLG8yKZd+KYvAJlYjG4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/SelectUpdat
+ esPage$1.class
+SHA-256-Digest: 2GbvBVHFXeC4RLj1L42vuJ1FD/04IIZ1fpkywvSlbog=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/IsOperationFin
+ ishedResponse.class
+SHA-256-Digest: ySRwH4mODE6WyyOG4UaqgCME5kaJ4+AeiaaZSaULbXg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/cplcheck/
+ FileSizeComparator.class
+SHA-256-Digest: ZUPftGiRwkx/vE8VF6G92NSUA8jd7xWWVNl40AcSJYY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/i
+ mpl/SmpWsRetriever$SmpAuthenticatorHelper.class
+SHA-256-Digest: B/KCYl4LXaeOL2OkK2GX4PwRofg/ZW7aztjL+3P6VXs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/CancelOperatio
+ n.class
+SHA-256-Digest: 39XUFzxoq9b7hJwXJefux0JaEH7q900zWdt0s4iwbgo=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/package-info.c
+ lass
+SHA-256-Digest: BJXNK+Yx3oVdc31CQFGr71MhZY9K5e6fCi3Y3rr+MIM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/WebUpdatePage
+ $4.class
+SHA-256-Digest: K3mnEgVr89kOaWsQCcL1uCu+L5KmQbhSRQ6u1EzE31k=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/SWDCAPIFORHANADETDWNLOAD.class
+SHA-256-Digest: H9ewiaYsmyNrn1Ko8VSfS9+RpXb5+DpXoT5U9n45zv8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckUpdate
+ sController$6.class
+SHA-256-Digest: m9qGXb1Xe1Al1E0agB6JEDjtwye9nNNSM1Nms4sUROQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/I
+ SidAdminCredentialsStore.class
+SHA-256-Digest: 01Vgw0+hivboh8dr7h/QNo7l6/OXWz68vBW2O36TfWk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMStartupCon
+ troller.class
+SHA-256-Digest: GlAI4rNukkpJa22pi+jYBGQcjSDVBjv/Kfl/3SED95A=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/util/ValueIF.class
+SHA-256-Digest: 9p5smq/c3U7w+ien8IBZRJBQXOzhnLuQT0xkxmrY0dw=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: Y8npAQiZMto0giVEh7I5hFYnPUdrrA0+aCtZr8Wqpgw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/w
+ sproxy/SWDCAPIFORHANASSCVRESLT.class
+SHA-256-Digest: Z5kbK7z+UwNHhIDW0gXWb4rh9WoilJl0gBe3VdR4AMM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/utils/DataModelHelper.cla
+ ss
+SHA-256-Digest: LNB01tCWXhMhwUvc0uvdsd4xqcBKcawJUWE/n18Bf70=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ExecuteOperati
+ onResponse.class
+SHA-256-Digest: UniGkEcNqv8kFGe1h8IJQStNr7xyKlTj0h21affbJzM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encePage$5.class
+SHA-256-Digest: 2nqZocAifzQcLWPUfjiNpxKDP8Ylsz52XLCWiiCKE1E=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/AttachDatabase
+ Response.class
+SHA-256-Digest: 0wXZAm5J1lUgD2fi3iVgRLlNev+VaJtXqF9TshtCnJ0=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/S
+ essionStoreException.class
+SHA-256-Digest: GdOGhsC6LSibnfU/jZxOvvRTmYhkSQJu+T6/grN4Sxc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldC
+ ertificateException.class
+SHA-256-Digest: LMa4G+CfLYIN9BWMXoL5cnSYeBLSPiZCWE3PAhq9oPQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/cplcheck/
+ FileSizeCheckException.class
+SHA-256-Digest: Mz9B+14sn/zxThhE9ini+MdcBbPPT9TwrxJt7INxMXs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldH
+ eaderException.class
+SHA-256-Digest: h2r2Dz1HK7nLJuTkPiK/sew+A0FfLpZ5AL10ptTOTbg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckUpdate
+ sWizardDialog.class
+SHA-256-Digest: bXRMsLNZp6rbP4jVz6MB32zVN0eY9huD6FGkOM3DaGs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/RegisterInstan
+ ceService.class
+SHA-256-Digest: n3/nTi6twOR72hHBICNv2kEc9BSP3PWNLKfAOAgjBMM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/db/DbSqlOperationE
+ xecutor.class
+SHA-256-Digest: QXPS5b81BKpAhFmD+b4EJvxe+PaUjNw0fkasPSIvcjY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/cplcheck/
+ CheckableTarget.class
+SHA-256-Digest: DtVSshg2h1+CsaNY860kGBXNCcwFbcusgbNqQpO+/QU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/SoftwareComp
+ onent.class
+SHA-256-Digest: PDsuqsdsTJd5y6f/AksizAzgODPrQKHWIoerJxLL6vw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/LCMEditor$Hyperli
+ nkToolbarItem.class
+SHA-256-Digest: tez8aONZ4PK2jWSxiolsITVnUrjrAkjx+HItjC4qM84=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMDialogExec
+ utor.class
+SHA-256-Digest: 50uLFDhEu5g+KOdAIdZqHc503C+w5+3X5rxwzF7sojg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/cplcheck/
+ CompletenessCheckerIF.class
+SHA-256-Digest: Z2ZxLQ2pU8JtvPWeE+g305o1bTCicx5ViaJD6uVypX8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/D
+ BUserCredentialsStore.class
+SHA-256-Digest: LDp7Xj2u4a/MGgCIudhMqV0Vr5btonAPGjDNt2o3H6o=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/DownloadB
+ ehaviourIF.class
+SHA-256-Digest: IgFT5SSamrVHe4B3b6yI06RCN53ppKXBJ9zHd8P+Fis=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteStartProgre
+ ssDialog.class
+SHA-256-Digest: Sld7s3vJ6fAI/x/8HxltUDpQfmmw+FFD1QAT++Lwe/A=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/StopDatabaseRe
+ sponse.class
+SHA-256-Digest: 5OrodzuAk+ricQvBT03Ww0c11mH5ilaktNNMraD69EM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMDialogExec
+ utor$3.class
+SHA-256-Digest: PEXszMIUHdDHqYF0Fb0ZCHgtwlVjEytdbZHVmsOciI8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/SelectUpdat
+ esPage$6.class
+SHA-256-Digest: K1nZrrG2oyDj9JQkwKfFTanBI7QEKEo3UIF7CO/Lgqs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/api/Downl
+ oad.class
+SHA-256-Digest: N4WkHsO2tN8O3KmZQ3MURM9I9ElAfFhQ46/v3JW3ylc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/LandscapeDe
+ scriptionParser.class
+SHA-256-Digest: JvnIgD1a52dASMgbvtDWNLfse10KKu97YRGWvIYT5FY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteShutdownCon
+ troller$1.class
+SHA-256-Digest: hHJMqx4oH7Vmo8Om1n7/Y5uj0eGQ5/rFgk8wFHoUfDA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/detect/messages.pr
+ operties
+SHA-256-Digest: 7AbqmGzX6KSZ6N9iKRpazQnXpjQscdmbMkWvoIaBHlk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteDistributed
+ SystemException.class
+SHA-256-Digest: rkEJgWLJnNkMfL/bX0a8asYyuDziXn4mdLrIl7P81cQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/S
+ oftwareComponentVersionRetriever.class
+SHA-256-Digest: 8KWI3oUzDvr7GieMILerTGLTUTg6ddUsuYQOARYCVdQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/CallServiceOpe
+ rationResponse.class
+SHA-256-Digest: aHWn/axJCeO3eMEKpFRxnCaIpQrOEKZYsXS0WJ1P/0o=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/ClusterSyste
+ m.class
+SHA-256-Digest: ySyEGzH0jpuA6MV32r3p48+aXNfMkQJmoGiT4HZa4/8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/RequestLogonFi
+ leResponse.class
+SHA-256-Digest: o/pQ3CUAfGa5eoIMCUUF3wLl81hmXC5Qe29korQJR2Y=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteHLMControll
+ er.class
+SHA-256-Digest: 1uvp6NNbZ6nY2VJeAOnA992fgNZjWb4aLgRxnVj4qu4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckforUpd
+ ateParameter.class
+SHA-256-Digest: kEbUNb6eWYjawtyxR8etxgydpnpeckSGuQxbObhNeTc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/R
+ etrieverConnectionSettings.class
+SHA-256-Digest: M9ptATtjA4HxdawtKocWFu1Bz7O1JJ+AqStjhGcCR8w=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldR
+ edirectException.class
+SHA-256-Digest: UUDN9xXppxgAYtuYob0oUeFCDjIWpNL8mV48BNjNG+I=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/cplcheck/
+ CRC32Checker.class
+SHA-256-Digest: 46j3XQgCgBLY9I9c03WFxQqDQvqWTEEw6M5chQQObQo=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/SelectUpdat
+ esPage$ComponentUpdatesContentProvider.class
+SHA-256-Digest: lVMOpq9eng1k3lLq6eHCKAlS7J4A9PniOkBUbWfjjus=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encePage$DataField.class
+SHA-256-Digest: d+iQ0SunVh4ZslvMzydgY7lPL1WthHzNA9GHKEyTe6E=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/SAPHostControl
+ Interface.class
+SHA-256-Digest: LwCjoxPNF2YAll/VY/GANqvME8VesWUvCyIHRA2Saok=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/DownloadE
+ xception.class
+SHA-256-Digest: 0Soy01jRU1RUlRBM0VYpeG+WRlXGV4p1Vr2DxheGrOo=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/GetComputerSys
+ temResponse.class
+SHA-256-Digest: rTsoyveFwa9y3Oq8TtHJB7c+ovR4biUk6K9hKbjcQH8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/repo/license/Licen
+ seDetector.class
+SHA-256-Digest: Wz3U6j9JMPUlDRa5pjGOW0pfT0oQmyMzKeJWJgZh7Z8=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/repo/license/Licen
+ seException.class
+SHA-256-Digest: 64y1QN8YJVKsDlIbypfScUUEm6qXTJ+/o/eMthOXhIg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/control/RemoteShutdownCon
+ troller.class
+SHA-256-Digest: 7qaSBSzc7kzjWe94K/U+GwstwlOGnpy/42bf4TbF7Rs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/resources.properties
+SHA-256-Digest: T+78WOizNTgBVn2ahcVoh3oELQjNAlhe8KvR1qb1xFQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/InvalidHostControlCred
+ entialsException.class
+SHA-256-Digest: Ws2VaC8aJgM+I4Xpt5gCzVKX5Xc+FHAtqCuY2PcH89U=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMListenersC
+ ontainer.class
+SHA-256-Digest: wXZB5J/ZZZKmuK44siQG5NvmmXRsidLo7FAYaIzF6E4=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/LcmMainPr
+ eferencePage.class
+SHA-256-Digest: Q6f3UljOGTwcuv/rxYhh3mz6Tg+FONV0vMewjTZAcVU=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/RemoteObjects
+ Factory.class
+SHA-256-Digest: zhpBhhM8hSCB10Dgp0KSZyGE8jwQPyNH4dsAWS6hS5Q=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/xml/XMLConstants.c
+ lass
+SHA-256-Digest: XLQOjdDbu2wnpD9JyVJdQ5NSgcRLW5uWyCiDl7ahJLY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encePage$8.class
+SHA-256-Digest: ep8rB/ijvXKZZPExUgvLwob2AXz5FDh5pr89apeoNhs=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/SelectUpdat
+ esPage$2.class
+SHA-256-Digest: h4okiy2oiOOkNgdPK61Pdoal8KXCtp8/OY/J6vaK9BQ=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/LCMTitleTextL
+ istener$1.class
+SHA-256-Digest: 0xmkT1LZJNrbHMMLG/oLMs40cf8pfEXnRdYapcVnSsY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckUpdate
+ sController$2.class
+SHA-256-Digest: wiOnEU5jjBCpFJEqtgeRhtKf5wwAlAs+lgxq7QFORLY=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/model/FeatureStack
+ .class
+SHA-256-Digest: lGJGyYff0dZV/M2ttFDDVQlNbG2Wu0/hxjsAsQxPEYc=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/update/UpdatePage
+ .class
+SHA-256-Digest: lB1FPeujC076NSogQn6y8zqCU820eztMlilmCLgRzdk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/ExecuteUpgrade
+ ProcedureResponse.class
+SHA-256-Digest: Ydp47I85mMeAgExKftjn+KavfuiKAaZjEfE6XsENYRw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/script/ScriptGener
+ ationException.class
+SHA-256-Digest: U1rrsvurc0vlpWBxoPbA3sFpZUNra2HDWb6QqyTM76A=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/editors/web/comp/ElementN
+ otFoundException.class
+SHA-256-Digest: xQY91jBcBVNyJBJRYL1GmEy7/sDEfHiwy/Dc78/eb6M=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/E
+ rrorCode.class
+SHA-256-Digest: IDyHU2mnwlGXpZQeA/+oAGfZsX59z7DOMSuq34v7AUM=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/ProgressObs
+ erverAdapter.class
+SHA-256-Digest: JexAytBh2gqqB56BejnHyPzHp1TnSunDOxtqF4xj+ls=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/ex/DwnldC
+ lientException.class
+SHA-256-Digest: xV7aln4ytAdiyMazN6R31aRVpZGGOfpPHcZuhwen8hI=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/I
+ SapAdminCredentialsStore.class
+SHA-256-Digest: bZHhoD7nQTwptJulHKT9To61HQJ/k4cR5vHWBRJGdUg=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/SetDatabasePro
+ perty.class
+SHA-256-Digest: 1D2OoLxH/RDY5t7CB0zJ1ebT2G7lW5GLUtq9v3qL0eA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/smp/scvretriever/C
+ omponent.class
+SHA-256-Digest: sXnWYT0dEaF7aGoF/ZdZxGRRHuWkm2NrN/iZo5kNoOk=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/CheckUpdate
+ sController.class
+SHA-256-Digest: hPbysGgxX+0jt6uLiKpn/x/mOhFnQL0DUupIa8/lFUE=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/wizard/SelectUpdat
+ esPage$3.class
+SHA-256-Digest: sgiMiwtM8lmCiQl54iHyRg47roUCuoBjUi6oPGnXeik=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/credentials/C
+ redentialsValidationFlagStore.class
+SHA-256-Digest: 4zm1lj1+f5hPNJpAVnplu8tDiXcC75jT1wk8qGok3Nw=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/preferences/smp/SmpPrefer
+ encePage$7.class
+SHA-256-Digest: ocVDIOedU45zE5XZCpzRmKpDzqjL8MCzgPsmQcMUzic=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/internal/chkupd/download/cplcheck/
+ FileSizeChecker.class
+SHA-256-Digest: T8gj3Tz0gjrabWA9gvD4RKSHnlrSPL7oTbaOj9QCtsA=
+
+Name: com/sap/ndb/studio/lcm/upd/ui/hostcontrol/wsproxy/StartDatabaseR
+ esponse.class
+SHA-256-Digest: OrWwD3RZrpHDMOevTWdoiVbX4NzA4sBchc0ecEu8nuU=
+

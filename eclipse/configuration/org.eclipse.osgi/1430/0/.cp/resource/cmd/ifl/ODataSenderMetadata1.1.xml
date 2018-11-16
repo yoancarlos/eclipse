@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:ODataSender/version::1.1" ComponentName="sap:ODataSender" ComponentDisplayName="OData" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" IsDefaultGenerator="true" MetadataVersion="2.0" xmlns:hci="http://www.w3.org/2001/XMLSchema-instance">
+	<Variant VariantName="ODataSender" VariantId="ctype::AdapterVariant/cname::ODataSender/tp::HTTP/mp::OData V2/direction::Sender/version::1.1.5" VariantDisplayName="OData" hci:RuntimeComponentBaseUri="odata" hci:FirstUriPart="SAP" MetadataVersion="2.0" AttachmentBehavior="Preserve">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema></Schema>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema></Schema>
+			</Content>
+		</OutputContent>
+		<ManifestEntries>
+			<ManifestEntry>
+				<Name>Require-Capability</Name>
+				<Value>com.sap.it.capability.adapter;filter:="(&amp;(name=ODataSender)(version=1.0))"</Value>
+			</ManifestEntry>
+		</ManifestEntries>
+		<Tab id="tabAdapterSpecific">
+			<GuiLabels>
+				<Label language="EN">Adapter Specific</Label>
+			</GuiLabels>
+			<AttributeGroup id="general">
+				<GuiLabels>
+					<Label language="EN">Connection Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>authentication</ReferenceName>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>clientCertificates</ReferenceName>
+					<EditCondition>
+						<AttributeName>authentication</AttributeName>
+						<AttributeValue>certificate</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>userRole</ReferenceName>
+					<EditCondition>
+						<AttributeName>authentication</AttributeName>
+						<AttributeValue>basic</AttributeValue>
+					</EditCondition>
+					<description>Add user role for authorization</description>
+				</AttributeReference>
+			</AttributeGroup>
+			<AttributeGroup id="processing">
+				<GuiLabels>
+					<Label language="EN">Processing Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>edmxPath</ReferenceName>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>operation</ReferenceName>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>entitySet</ReferenceName>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<AllowedHeaders>UriInfo,ODataMethod,ODataResponseType,ODataContext,DataSourceHeaders,HttpStatusCodes,DollarCount,DollarInlineCount,DeltaToken,SkipToken,IsMerge,ExpandSelectTree,HttpSlug,TargetEntitySetName,KeyValueMap,UserName,Password,AutheticationType,KeyId,Address,SystemQueryOption,proxy,If-Match,x-forwarded-for,Accept-Language</AllowedHeaders>
+	</Variant>
+	<AttributeMetadata>
+		<Name>edmxPath</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Flag>nonTransportable</Flag>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<HelpService>
+			<HelpServiceName>resourceLookupService</HelpServiceName>
+			<HelpServiceQueryAttributes>
+				<HelpServiceQueryAttribute>
+					<Name>Type</Name>
+					<Value>edmx,xml</Value>
+				</HelpServiceQueryAttribute>
+				<HelpServiceQueryAttribute>
+					<Name>ResourceLocation</Name>
+					<Value>edmx</Value>
+				</HelpServiceQueryAttribute>
+				<HelpServiceQueryAttribute>
+					<Name>edmxPath</Name>
+					<Value>edmxPath</Value>
+				</HelpServiceQueryAttribute>
+				<HelpServiceQueryAttribute>
+            		<Name>MimeType</Name>
+            		<Value>application/x.edmx+xml</Value>
+ 			 	</HelpServiceQueryAttribute>
+				<HelpServiceQueryAttribute>
+					<Name>ContentType</Name>
+					<Value>application/mapping+edmx</Value>
+				</HelpServiceQueryAttribute>
+				<HelpServiceQueryAttribute>
+            		<Name>ContentFileSize</Name>
+            		<Value>52428800</Value>
+        		</HelpServiceQueryAttribute> 
+			</HelpServiceQueryAttributes>
+		</HelpService>
+		<GuiLabels>
+			<Label language="EN">EDMX</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>entitySet</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Flag>nonTransportable</Flag>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Entity Set</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>operation</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>GET_FEED</Default>
+		<Length/>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Operation</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>GET_FEED</Value>
+				<GuiLabels>
+					<Label language="EN">Query(GET)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>GET_ENTRY</Value>
+				<GuiLabels>
+					<Label language="EN">Read(GET)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>CREATE_ENTRY</Value>
+				<GuiLabels>
+					<Label language="EN">Create(POST)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>UPDATE_ENTRY</Value>
+				<GuiLabels>
+					<Label language="EN">Update(PUT)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>DELETE_ENTRY</Value>
+				<GuiLabels>
+					<Label language="EN">Delete(DELETE)</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>FUNCTION_IMPORT</Value>
+				<GuiLabels>
+					<Label language="EN">Function Import</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>authentication</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>basic</Default>
+		<Length/>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Authorization</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>basic</Value>
+				<GuiLabels>
+					<Label language="EN">User Role</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>certificate</Value>
+				<GuiLabels>
+					<Label language="EN">Client Certificate</Label>
+				</GuiLabels>
+			</FixedValue>
+			<!-- <FixedValue> <Value>principalProp</Value> <GuiLabels> <Label language="EN">Principal
+				Propagation</Label> </GuiLabels> </FixedValue> -->
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeTableMetadata>
+		<Name>clientCertificates</Name>
+		<Usage>true</Usage>
+		<HelpService>
+			<HelpServiceName>certificateLookupService</HelpServiceName>
+		</HelpService>
+		<GuiLabels>
+			<Label language="EN">Client Certificate</Label>
+		</GuiLabels>
+		<AttributeReference>
+			<ReferenceName>clientCertificate.subjectDN</ReferenceName>
+		</AttributeReference>
+		<AttributeReference>
+			<ReferenceName>clientCertificate.issuerDN</ReferenceName>
+		</AttributeReference>
+	</AttributeTableMetadata>
+	<AttributeMetadata>
+		<Name>userRole</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>ESBMessaging.send</Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">User Role</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>clientCertificate.subjectDN</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="0b7dc876-3ec2-4175-bb43-76a8d3d1d82d">
+			<Label language="EN">Subject DN</Label>
+			<Label language="DE">Subject DN</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>clientCertificate.issuerDN</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="9a39abed-a80c-4bf8-a48d-cb6a32d5d767">
+			<Label language="EN">Issuer DN</Label>
+			<Label language="DE">Issuer DN</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+</ComponentMetadata>

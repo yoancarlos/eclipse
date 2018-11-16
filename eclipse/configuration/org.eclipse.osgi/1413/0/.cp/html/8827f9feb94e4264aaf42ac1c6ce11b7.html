@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Define Content Enricher</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio8827f9feb94e4264aaf42ac1c6ce11b7">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Define Content Enricher</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<ul class="ul" id="loio8827f9feb94e4264aaf42ac1c6ce11b7__ul_qq3_2qg_gs">
+				<li class="li">
+					<p class="p">You have accessed your customer workspace in SAP HCI web application.</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">You are editing the integration flow in integration flow editor.</p>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">The content enricher adds the content of a payload with the original message in the
+				course of an integration process. This converts the two separate messages into a
+				single enhanced payload. This feature enables you to make external calls during the
+				course of an integration process to obtain additional data, if any. </p>
+
+			<div class="p">Consider the first message in the integration flow as the original message and the
+				message obtained by making an external call during the integration process as the
+				lookup message. You can choose between two strategies to enrich these two payloads
+				as a single message:<ul class="ul" id="loio8827f9feb94e4264aaf42ac1c6ce11b7__ul_t2n_mlf_3p">
+					<li class="li">Combine</li>
+
+					<li class="li">Enrich</li>
+
+				</ul>
+Consider the following original and lookup messages. </div>
+
+			<p class="p"><strong class="ph b">Original Message</strong></p>
+
+			<div class="p">
+				<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;EmployeeList&gt;
+       &lt;Employee&gt;
+              &lt;id&gt;111&lt;/id&gt;
+              &lt;name&gt;Santosh&lt;/name&gt;
+              &lt;external_id&gt;ext_111&lt;/external_id&gt;
+       &lt;/Employee&gt;
+       &lt;Employee&gt;
+              &lt;id&gt;22&lt;/id&gt;
+              &lt;name&gt;Geeta&lt;/name&gt;
+              &lt;external_id&gt;ext_222&lt;/external_id&gt;
+       &lt;/Employee&gt;
+&lt;/EmployeeList&gt;
+</pre></div>
+
+			</div>
+
+			<p class="p"><strong class="ph b">Lookup Message</strong></p>
+
+			<div class="p">
+				<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;EmergencyContacts&gt;
+       &lt;contact&gt;
+              &lt;c_id&gt;1&lt;/c_id&gt;
+              &lt;c_code&gt;ext_111&lt;/c_code&gt;
+              &lt;isEmergency&gt;0&lt;/isEmergency&gt;
+              &lt;phone&gt;9999&lt;/phone&gt;
+              &lt;street&gt;1st street&lt;/street&gt;
+              &lt;city&gt;Gulbarga&lt;/city&gt;
+       &lt;/contact&gt;
+       &lt;contact&gt;
+              &lt;c_id&gt;2&lt;/c_id&gt;
+              &lt;c_code&gt;ext_111&lt;/c_code&gt;
+              &lt;isEmergency&gt;1&lt;/isEmergency&gt;
+              &lt;phone&gt;1010&lt;/phone&gt;
+              &lt;street&gt;23rd Cross&lt;/street&gt;
+              &lt;city&gt;Chitapur&lt;/city&gt;
+       &lt;/contact&gt;
+       &lt;contact&gt;
+              &lt;c_id&gt;3&lt;/c_id&gt;
+              &lt;c_code&gt;ext_333&lt;/c_code&gt;
+              &lt;isEmergency&gt;1&lt;/isEmergency&gt;
+              &lt;phone&gt;007&lt;/phone&gt;
+              &lt;street&gt;&lt;/street&gt;
+              &lt;city&gt;Raichur&lt;/city&gt;
+       &lt;/contact&gt;
+&lt;/EmergencyContacts&gt;
+
+</pre></div>
+
+			</div>
+
+			<p class="p">If you use <span class="ph uicontrol">Combine</span> as the aggregation strategy, the enriched
+				message appears in the following format. </p>
+
+			<div class="p"><strong class="ph b">Enriched
+				Message</strong><div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;multimap:messages xmlns:multimap=”http://sap.com/xi/XI/SplitAndMerge”&gt;
+&lt;message1&gt;
+&lt;EmployeeList&gt;
+       &lt;Employee&gt;
+              &lt;id&gt;111&lt;/id&gt;
+              &lt;name&gt;Santosh&lt;/name&gt;
+              &lt;external_id&gt;ext_111&lt;/external_id&gt;
+       &lt;/Employee&gt;
+       &lt;Employee&gt;
+              &lt;id&gt;22&lt;/id&gt;
+              &lt;name&gt;Geeta&lt;/name&gt;
+              &lt;external_id&gt;ext_222&lt;/external_id&gt;
+       &lt;/Employee&gt;
+&lt;/EmployeeList&gt;
+&lt;/message1&gt;
+&lt;message2&gt;
+&lt;EmergencyContacts&gt;
+       &lt;contact&gt;
+              &lt;c_id&gt;1&lt;/c_id&gt;
+              &lt;c_code&gt;ext_111&lt;/c_code&gt;
+              &lt;isEmergency&gt;0&lt;/isEmergency&gt;
+              &lt;phone&gt;9999&lt;/phone&gt;
+              &lt;street&gt;1st street&lt;/street&gt;
+              &lt;city&gt;Gulbarga&lt;/city&gt;
+       &lt;/contact&gt;
+       &lt;contact&gt;
+              &lt;c_id&gt;2&lt;/c_id&gt;
+              &lt;c_code&gt;ext_111&lt;/c_code&gt;
+              &lt;isEmergency&gt;1&lt;/isEmergency&gt;
+              &lt;phone&gt;1010&lt;/phone&gt;
+              &lt;street&gt;23rd Cross&lt;/street&gt;
+              &lt;city&gt;Chitapur&lt;/city&gt;
+       &lt;/contact&gt;
+       &lt;contact&gt;
+              &lt;c_id&gt;3&lt;/c_id&gt;
+              &lt;c_code&gt;ext_333&lt;/c_code&gt;
+              &lt;isEmergency&gt;1&lt;/isEmergency&gt;
+              &lt;phone&gt;007&lt;/phone&gt;
+              &lt;street&gt;&lt;/street&gt;
+              &lt;city&gt;Raichur&lt;/city&gt;
+       &lt;/contact&gt;
+&lt;/EmergencyContacts&gt;
+&lt;/message2&gt;
+&lt;/multimap:messages xmlns:multimap=”http://sap.com/xi/XI/SplitAndMerge”&gt;
+</pre></div>
+</div>
+
+			<p class="p"><span class="ph uicontrol">Enrich</span> offers you control on how you can merge the original
+				and lookup message. In this example, we consider the node &lt;ext_111&gt; as the
+				reference to enrich the original message with the lookup message. </p>
+
+			<div class="p">Consequently, you specify the following values while configuring the Content
+					Enricher.
+<div class="table-wrapper tablenoborder"><table summary="" id="loio8827f9feb94e4264aaf42ac1c6ce11b7__table_blp_3sy_kp" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+						
+						
+						
+						<thead class="thead" align="left">
+							<tr class="row">
+								<th class="entry" valign="top" width="33.33333333333333%" id="d2886125e104">Section</th>
+
+								<th class="entry" valign="top" width="33.33333333333333%" id="d2886125e107">Field</th>
+
+								<th class="entry" valign="top" width="33.33333333333333%" id="d2886125e110">User input</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+							<tr class="row">
+								<td class="entry" rowspan="2" valign="top" width="33.33333333333333%" headers="d2886125e104 ">Original Message</td>
+
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e107 ">Path to Node</td>
+
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e110 ">Employees/Employee</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e107 ">Key Element</td>
+
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e110 ">location</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" rowspan="2" valign="top" width="33.33333333333333%" headers="d2886125e104 ">Lookup Message</td>
+
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e107 ">Path to Node</td>
+
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e110 ">EmployeeLocations\emplocation</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e107 ">Key Element</td>
+
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e110 ">locationid</td>
+
+							</tr>
+
+						</tbody>
+
+					</table>
+</div>
+</div>
+
+			<div class="p">The enriched message will be in the following
+				format.<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;EmployeeList&gt;
+       &lt;Employee&gt;
+              &lt;id&gt;111&lt;/id&gt;
+              &lt;name&gt;Santosh&lt;/name&gt;
+              &lt;external_id&gt;ext_111&lt;/external_id&gt;
+              &lt;contact&gt;
+                     &lt;c_id&gt;1&lt;/c_id&gt;
+                     &lt;c_code&gt;ext_111&lt;/c_code&gt;
+                     &lt;isEmergency&gt;0&lt;/isEmergency&gt;
+                     &lt;phone&gt;9999&lt;/phone&gt;
+                     &lt;street&gt;1st street&lt;/street&gt;
+                     &lt;city&gt;Gulbarga&lt;/city&gt;
+              &lt;/contact&gt;
+              &lt;contact&gt;
+                     &lt;c_id&gt;2&lt;/c_id&gt;
+                     &lt;c_code&gt;ext_111&lt;/c_code&gt;
+                     &lt;isEmergency&gt;1&lt;/isEmergency&gt;
+                     &lt;phone&gt;1010&lt;/phone&gt;
+                     &lt;street&gt;23rd Cross&lt;/street&gt;
+                     &lt;city&gt;Chitapur&lt;/city&gt;
+              &lt;/contact&gt;
+       &lt;/Employee&gt;
+       &lt;Employee&gt;
+              &lt;id&gt;22&lt;/id&gt;
+              &lt;name&gt;Geeta&lt;/name&gt;
+              &lt;external_id&gt;ext_222&lt;/external_id&gt;
+       &lt;/Employee&gt;
+&lt;/EmployeeList&gt;
+</pre></div>
+In
+				the enriched message, you can see the content of the lookup message after the node
+					<span class="ph emphasis emphasis">&lt;location&gt;</span>. <div class="note remember"><span class="remembertitle">Remember</span> 
+					<p class="p">If lookup message contains more than one entry of the key element, content
+						enricher enhances the enriched message with all the entries referred by the
+						key element in lookup message. In the above example, the lookup message
+						contains the key element <samp class="ph codeph">ext_111</samp> in two places. You can see
+						that the enriched message contains both the <samp class="ph codeph">&lt;contact&gt;</samp>
+						entries that the key element refers to.</p>
+
+				</div>
+</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">If you want to add <span class="ph uicontrol">Content Enricher</span> to the integration
+					process, perform the following substeps.</span>
+				<ol type="a" class="ol substeps" id="loio8827f9feb94e4264aaf42ac1c6ce11b7__substeps_tvz_qrg_gs">
+					<li class="li substep">
+						<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loio8827f9feb94e4264aaf42ac1c6ce11b7__image_nnp_jrg_gs" src="loiobfbf8b01863243cdad4875f6b66fdcfd_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Content Enricher</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">.</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span></span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Place <span class="ph uicontrol">Content Enricher</span> in the integration
+							process and define message path.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the <span class="ph uicontrol">Content Enricher</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Content Enrichment Type</span> field, select value from
+					dropdown list based on description in table. </span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loio8827f9feb94e4264aaf42ac1c6ce11b7__table_edv_2sg_gs" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="50%" id="d2886125e254">
+										<p class="p">Value</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="50%" id="d2886125e260">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d2886125e254 ">
+										<p class="p">Combine</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d2886125e260 ">
+										<p class="p">Combines the original and lookup messages. You cannot
+											define any rules for combining messages.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d2886125e254 ">
+										<p class="p">Enrich</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d2886125e260 ">
+										<p class="p">You can define the path to node and key element based on
+											which the original message is enriched with the lookup
+											message.</p>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you have selected <span class="ph uicontrol">Enrich</span> as the <span class="ph uicontrol">Content
+						Enrichment Type</span>, provide values in fields based on description
+					in table.</span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loio8827f9feb94e4264aaf42ac1c6ce11b7__table_e5n_qsg_gs" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+							
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="33.33333333333333%" id="d2886125e332">
+										<p class="p">Section</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="33.33333333333333%" id="d2886125e338">
+										<p class="p">Field</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="33.33333333333333%" id="d2886125e344">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" rowspan="2" valign="top" width="33.33333333333333%" headers="d2886125e332 ">
+										<p class="p">Original Message</p>
+
+										<p class="p"/>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e338 ">
+										<p class="p">Path to Node</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e344 ">
+										<p class="p">Path to the reference node in the original message</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e338 ">
+										<p class="p">Key Element</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e344 ">
+										<p class="p">Key element in the original message</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" rowspan="2" valign="top" width="33.33333333333333%" headers="d2886125e332 ">
+										<p class="p">Lookup Message</p>
+
+										<p class="p"/>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e338 ">
+										<p class="p">Path to Node</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e344 ">
+										<p class="p">Path to the reference node in the lookup message</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e338 ">
+										<p class="p">Key Element</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d2886125e344 ">
+										<p class="p">Key element in the lookup message</p>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the configuration.</span>
+				
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

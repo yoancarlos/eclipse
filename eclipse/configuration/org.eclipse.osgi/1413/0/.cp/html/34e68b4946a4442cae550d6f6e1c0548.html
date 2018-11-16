@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=043017893252822126"/>
+<title>Testing Integration Flow Project</title>
+</head>
+<body class="" id="loio34e68b4946a4442cae550d6f6e1c0548">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Testing Integration Flow Project</h1>
+<div class="body taskbody"><p class="shortdesc"/>
+<div class="section prereq p" id="loio34e68b4946a4442cae550d6f6e1c0548__prereq_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>You have configured the runtime target platforms and
+			common testing libraries, which are used to execute tests.</div>
+<div class="section context" id="loio34e68b4946a4442cae550d6f6e1c0548__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You perform this task to execute tests on an integration flow project.</p>
+
+		</div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio34e68b4946a4442cae550d6f6e1c0548__steps_s5z_krk_wh"><li class="li step stepexpand" id="loio34e68b4946a4442cae550d6f6e1c0548__step_N10020_N1001C_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Project Explorer</span> view, right-click on the project and
+					choose <span class="keyword uilabel">Add Test Case</span>. </span></li>
+<li class="li step stepexpand" id="loio34e68b4946a4442cae550d6f6e1c0548__step_N10031_N1001C_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Add Test Case</span> dialog, enter a test case name to be
+					displayed and select the product profile you have set in the steps above that
+					applies for this test case. </span></li>
+<li class="li step stepexpand" id="loio34e68b4946a4442cae550d6f6e1c0548__step_N1003E_N1001C_N10011_N10001"><span class="ph cmd">Choose <span class="keyword uilabel">Finish</span>.</span></li>
+<li class="li step stepexpand" id="loio34e68b4946a4442cae550d6f6e1c0548__step_N1004B_N1001C_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Project Explorer</span> view, expand the testing folder
+					under the current integration flow project.</span></li>
+<li class="li step stepexpand" id="loio34e68b4946a4442cae550d6f6e1c0548__step_N10058_N1001C_N10011_N10001"><span class="ph cmd">Under <span class="keyword uilabel">test.configuration</span> package, right-click on the
+						<span class="keyword uilabel">&lt;Test case name&gt;.ifltest</span> and choose <span class="ph uicontrol">Add
+						Test Method</span> from the context menu.</span></li>
+<li class="li step stepexpand" id="loio34e68b4946a4442cae550d6f6e1c0548__step_N1006D_N1001C_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Add Test Method</span> dialog, enter a name for the new test
+					method.</span></li>
+<li class="li step stepexpand" id="loio34e68b4946a4442cae550d6f6e1c0548__step_N1007A_N1001C_N10011_N10001"><span class="ph cmd">Add an input XML file and an output XML file.</span></li>
+<li class="li step stepexpand" id="loio34e68b4946a4442cae550d6f6e1c0548__step_N10083_N1001C_N10011_N10001"><span class="ph cmd">Choose <span class="keyword uilabel">Finish</span>.</span></li>
+<li class="li step stepexpand" id="loio34e68b4946a4442cae550d6f6e1c0548__step_N10099_N10025_N10011_N10001"><span class="ph cmd">If you want to select a particular runtime target platform on which the test should be
+					executed, then perform the following substeps: </span><ol type="a" class="ol substeps" id="loio34e68b4946a4442cae550d6f6e1c0548__substeps_pcc_b3h_xj"><li class="li substep"><span class="ph cmd">From the context menu of the project, select <span class="ph uicontrol"><span class="keyword uilabel">Set Target
+									Platform</span>.</span></span></li>
+<li class="li substep"><span class="ph cmd">In the <span class="keyword uilabel">Set Target Platform</span> dialog, select the
+							runtime target plaform.from the <span class="keyword uilabel">Runtime</span>
+							dropdown.</span></li>
+<li class="li substep"><span class="ph cmd">If the required runtime target platform is not available in the
+							dropdown list, choose <span class="ph uicontrol">Add...</span>.</span></li>
+</ol>
+ 
+					<div class="note note" id="loio34e68b4946a4442cae550d6f6e1c0548__note_N100CF_N100CC_N10095_N10021_N10011_N10001"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio34e68b4946a4442cae550d6f6e1c0548__ul_kfs_kyc_yj"><li class="li">You can select target runtime platform for multiple integration
+								projects at a time.</li>
+<li class="li">For more information on how to set the runtime target platform, see
+									<a class="xref" href="6f78cecc107141559e94bd6d768499c2.html">Setting the
+									Runtime Platform and Libraries for Testing</a>.</li>
+</ul>
+
+					</div>
+
+				</li>
+<li class="li step stepexpand" id="loio34e68b4946a4442cae550d6f6e1c0548__step_N10090_N1001C_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Project Explorer</span> view, right-click on the project and choose
+						<span class="ph uicontrol">Execute Tests</span>.</span> 
+					<div class="note note" id="loio34e68b4946a4442cae550d6f6e1c0548__note_N100AC_N100A9_N10099_N10025_N10011_N10001"><span class="notetitle">Note</span> If you open the generated .java file under <strong class="ph b">test.content</strong> package,
+						you can find the tests are added as methods. The input and output files are
+						available in <strong class="ph b">test.data</strong> package.</div>
+
+				 <strong class="ph b">Tip</strong>: You can hide the libraries that are displayed under the current integration
+					flow project. Choose the dropdown icon from the toolbar of the <span class="keyword uilabel">Project
+						Explorer</span> view and select <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Customize View…</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Libraries from External...</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>. </li>
+<li class="li step stepexpand" id="loio34e68b4946a4442cae550d6f6e1c0548__step_N100D2_N10025_N10011_N10001"><span class="ph cmd">In the <span class="keyword uilabel">JUnit</span> view, check the test name and the status of the
+					tests.</span> If the JUnit view does not show any data, then increase the value for the field
+						<span class="keyword uilabel">Duration for executing test(sec)</span> in the <span class="keyword uilabel">Test
+						Configuration</span> page in <span class="keyword uilabel">Preferences</span>. The default
+					time interval is 8 seconds.  
+					<div class="note restriction" id="loio34e68b4946a4442cae550d6f6e1c0548__note_N10141_N1013E_N10122_N10022_N10011_N10001"><span class="restrictiontitle">Restriction</span> 
+						<ul class="ul" id="loio34e68b4946a4442cae550d6f6e1c0548__ul_lvb_2zv_1k"><li class="li">If you are executing a test case that involves non-readable
+								characters in the &lt;output&gt;.xml, then the test execution fails.
+								For example, the signature file obtained from <span class="keyword uilabel">PKCS#7/CMS
+									Signature-Content Splitter</span> contains non-readable
+								signed data that causes the test case to fail.</li>
+<li class="li">If you are executing a test case that involves multiple headers,
+								then the test exeuction can fail.</li>
+</ul>
+
+					</div>
+
+				</li>
+</ol>
+</div>
+<div class="related-links"> </div>
+</div></div>
+</body>
+</html>

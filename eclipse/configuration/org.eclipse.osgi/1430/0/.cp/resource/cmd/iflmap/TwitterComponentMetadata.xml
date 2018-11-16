@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::SAP:Twitter/version::1.0.1" ComponentName="SAP:Twitter" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" IsDefaultGenerator="true" MetadataVersion="2.0" xmlns:gen="http://www.sap.hci.adk.com/gen">
+    <Variant VariantName="Twitter Component Receiver" gen:RuntimeComponentBaseUri="twitter" VariantId="ctype::AdapterVariant/cname::SAP:Twitter/tp::HTTP/mp::Not Applicable/direction::Receiver" IsRequestResponse="true" MetadataVersion="2.0" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+            <Content>
+                <ContentType>None</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>NonXml</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </OutputContent>
+        <Metadata>
+            <AdditionalMetadata>
+                <Name>tp</Name>
+                <GuiLabels guid="89a5d833-a2a1-481c-ac59-8d06186586c0">
+                    <Label language="EN">HTTPS</Label>
+                    <Label language="DE">HTTPS</Label>
+                </GuiLabels>
+            </AdditionalMetadata>
+        </Metadata>
+        <Tab id="connection">
+            <GuiLabels guid="4789b037-bf51-4c6a-b8a0-f7c6951b993a">
+                <Label language="EN">Connection</Label>
+                <Label language="DE">Connection</Label>
+            </GuiLabels>
+            <AttributeGroup id="TwitterAttributes">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Twitter Attributes</Name>
+                <GuiLabels guid="5353f4e5-8b0c-4ac3-aea5-c592b4aab678">
+                    <Label language="EN">Twitter Attributes</Label>
+                    <Label language="DE">Twitter Attributes</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>firstUriPart</ReferenceName>
+                    <description>Endpoint of Twitter API to be called.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>count</ReferenceName>
+                    <description>Limiting number of results per page.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>numberOfPages</ReferenceName>
+                    <description>The number of pages result which you want the tenant to consume.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>user</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>firstUriPart</AttributeName>
+                        <AttributeValue>directmessage</AttributeValue>
+                    </EditCondition>
+                    <description>Username of direct message recipient</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="FilterSettings">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Filter Settings</Name>
+                <GuiLabels guid="4a881ff8-efb3-4820-8fab-785b50328277">
+                    <Label language="EN">Filter Settings</Label>
+                    <Label language="DE">Filter Settings</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>keywords</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>firstUriPart</AttributeName>
+                        <AttributeValue>search</AttributeValue>
+                    </EditCondition>
+                    <description>'foo1,foo2,foo3...' Can be used for search and streaming/filter. See Advanced Search for keywords syntax to search, for example, with OR.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>lang</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>firstUriPart</AttributeName>
+                        <AttributeValue>search</AttributeValue>
+                    </EditCondition>
+                    <description> The lang string ISO_639-1 which will be used for searching</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="OAuthSettings">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">OAuth Settings</Name>
+                <GuiLabels guid="33d03b41-a442-4d75-92a0-7f80119b830d">
+                    <Label language="EN">OAuth Settings</Label>
+                    <Label language="DE">OAuth Settings</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>consumerKey</ReferenceName>
+                    <description>Consumer Key. An alias for the consumer key.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>consumerSecret</ReferenceName>
+                    <description>Consumer Secret. An alias for the consumer secret.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>accessToken</ReferenceName>
+                    <description>Access Token. An alias for the access token.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>accessTokenSecret</ReferenceName>
+                    <description>Access Token Secret. An alias for the access token secret.</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="ProxySettings">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Proxy Settings</Name>
+                <GuiLabels guid="33d03b41-a442-4d75-92a0-7f80119b830d">
+                    <Label language="EN">Proxy Settings</Label>
+                    <Label language="DE">Proxy Settings</Label>
+                </GuiLabels>
+		<AttributeReference>
+                  <ReferenceName>proxyType</ReferenceName>
+                  <description>Specify the proxy type to be used.</description>
+                </AttributeReference>
+                <AttributeReference>
+                  <ReferenceName>httpProxyHost</ReferenceName>
+                  <EditCondition>
+                    <AttributeName>proxyType</AttributeName>
+                    <AttributeValue>manual</AttributeValue>
+                  </EditCondition>
+                </AttributeReference>
+                <AttributeReference>
+                  <ReferenceName>httpProxyPort</ReferenceName>
+                  <EditCondition>
+                    <AttributeName>proxyType</AttributeName>
+                    <AttributeValue>manual</AttributeValue>
+                  </EditCondition>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+    </Variant>
+    <AttributeMetadata>
+        <Name>sendEmptyMessageWhenIdle</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="d202104c-5e5a-4102-91df-f1bd86fe8d2c">
+            <Label language="EN">Send Empty Message When Idle</Label>
+            <Label language="DE">Send Empty Message When Idle</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>initialDelay</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:long</DataType>
+        <Default>1000</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="5b361752-3428-43b6-ab94-920062e6ab5e">
+            <Label language="EN">Initial Delay</Label>
+            <Label language="DE">Initial Delay</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>greedy</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="27d14918-01c6-4b8f-914f-1b61d263f90d">
+            <Label language="EN">Greedy</Label>
+            <Label language="DE">Greedy</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>startScheduler</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="d04c1ef1-cfe9-4c43-a2c3-c75a74cca07e">
+            <Label language="EN">Start Scheduler</Label>
+            <Label language="DE">Start Scheduler</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>backoffErrorThreshold</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="bdb2d67c-5dd4-4e23-b18a-714a7a47caa1">
+            <Label language="EN">Backoff Error Threshold</Label>
+            <Label language="DE">Backoff Error Threshold</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>timeUnit</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>MILLISECONDS</Default>
+        <Length></Length>
+        <isparameterized>false</isparameterized>
+        <GuiLabels guid="97a61193-098a-4f0c-addf-805caef51e50">
+            <Label language="EN">Time Unit</Label>
+            <Label language="DE">Time Unit</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>MILLISECONDS</Value>
+                <GuiLabels guid="0469be94-ca23-46a2-986e-83174afd170d">
+                    <Label language="EN">MILLISECONDS</Label>
+                    <Label language="DE">MILLISECONDS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>MINUTES</Value>
+                <GuiLabels guid="9f9f2b35-f6cd-47a5-b460-cbfa8cbe6baa">
+                    <Label language="EN">MINUTES</Label>
+                    <Label language="DE">MINUTES</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>DAYS</Value>
+                <GuiLabels guid="e8dbc5b6-f591-49b0-809e-91075124d165">
+                    <Label language="EN">DAYS</Label>
+                    <Label language="DE">DAYS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SECONDS</Value>
+                <GuiLabels guid="fa2583ce-7fb3-446c-8e8f-be96600d2ed4">
+                    <Label language="EN">SECONDS</Label>
+                    <Label language="DE">SECONDS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>MICROSECONDS</Value>
+                <GuiLabels guid="6fed69d4-7b72-4338-aa2f-d4f6a2bd745b">
+                    <Label language="EN">MICROSECONDS</Label>
+                    <Label language="DE">MICROSECONDS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>NANOSECONDS</Value>
+                <GuiLabels guid="aefada77-aff6-4cd0-a0a3-6b095a6c610e">
+                    <Label language="EN">NANOSECONDS</Label>
+                    <Label language="DE">NANOSECONDS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>HOURS</Value>
+                <GuiLabels guid="576184b2-7dd2-45d9-b69f-de66207b9891">
+                    <Label language="EN">HOURS</Label>
+                    <Label language="DE">HOURS</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>useFixedDelay</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="56f9580d-553c-40bc-974d-df5a31e298c8">
+            <Label language="EN">Use Fixed Delay</Label>
+            <Label language="DE">Use Fixed Delay</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>delay</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:long</DataType>
+        <Default>500</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="375df06d-2d00-48b2-9696-95d618538e7e">
+            <Label language="EN">Delay</Label>
+            <Label language="DE">Delay</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>backoffMultiplier</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="3a568a7d-c628-4b5b-b8f5-d37c110f6ecb">
+            <Label language="EN">Backoff Multiplier</Label>
+            <Label language="DE">Backoff Multiplier</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>runLoggingLevel</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>TRACE</Default>
+        <Length></Length>
+        <isparameterized>false</isparameterized>
+        <GuiLabels guid="e39d34ae-1c19-4a29-938f-4c58b4e96617">
+            <Label language="EN">Run Logging Level</Label>
+            <Label language="DE">Run Logging Level</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>ERROR</Value>
+                <GuiLabels guid="02c36841-f5c6-48dd-90f6-a69ba7e45bc3">
+                    <Label language="EN">ERROR</Label>
+                    <Label language="DE">ERROR</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>OFF</Value>
+                <GuiLabels guid="bb887a65-715f-4f19-a79c-6382ddaae386">
+                    <Label language="EN">OFF</Label>
+                    <Label language="DE">OFF</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>INFO</Value>
+                <GuiLabels guid="2cfd92c7-6cbb-42f3-953c-54cb5fea35f5">
+                    <Label language="EN">INFO</Label>
+                    <Label language="DE">INFO</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>WARN</Value>
+                <GuiLabels guid="97024ffb-76b4-4e74-8484-fa99ca8bfe69">
+                    <Label language="EN">WARN</Label>
+                    <Label language="DE">WARN</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>DEBUG</Value>
+                <GuiLabels guid="78562a7b-cfcc-4e25-8f0c-a8b6fc198236">
+                    <Label language="EN">DEBUG</Label>
+                    <Label language="DE">DEBUG</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>TRACE</Value>
+                <GuiLabels guid="ef38338a-90af-4b5a-8799-6c44f7086f4a">
+                    <Label language="EN">TRACE</Label>
+                    <Label language="DE">TRACE</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>backoffIdleThreshold</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="8342bc8b-e5f4-4a0e-94a2-95b62d2d2cc2">
+            <Label language="EN">Backoff Idle Threshold</Label>
+            <Label language="DE">Backoff Idle Threshold</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>firstUriPart</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>timeline/user</Default>
+        <Length></Length>
+        <isparameterized>false</isparameterized>
+        <GuiLabels guid="79ddd00a-b154-4740-b1e7-20c573c28243">
+            <Label language="EN">Endpoint</Label>
+            <Label language="DE">Endpoint</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>timeline/user</Value>
+                <GuiLabels guid="6d814af1-29a9-4b57-b6e4-4e31bfa1a692">
+                    <Label language="EN">Send Tweet</Label>
+                    <Label language="DE">Send Tweet</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>search</Value>
+                <GuiLabels guid="0c6b32fb-6dab-462e-9ec3-7694d291bc94">
+                    <Label language="EN">Search</Label>
+                    <Label language="DE">Search</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>directmessage</Value>
+                <GuiLabels guid="4dfb222c-637b-4558-b078-a93ac5bc434e">
+                    <Label language="EN">Send Direct Message</Label>
+                    <Label language="DE">Send Direct Message</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>count</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>20</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="e94a1be4-4f8c-4d79-b78e-49a90ae58d16">
+            <Label language="EN">Page Size</Label>
+            <Label language="DE">Page Size</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>numberOfPages</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>1</Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="e160a78a-5231-43fe-9fc2-2861b7bb502f">
+            <Label language="EN">Number of Pages</Label>
+            <Label language="DE">Number of Pages</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>user</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="1b6f07c4-5528-4e18-8605-bd150558df5d">
+            <Label language="EN">User</Label>
+            <Label language="DE">User</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>keywords</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="067340fa-ea38-4b94-a2c8-40e4fa0b1803">
+            <Label language="EN">Keywords</Label>
+            <Label language="DE">Keywords</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>lang</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="4cf5ef60-cd90-4c35-965f-78e87efeecbe">
+            <Label language="EN">Language</Label>
+            <Label language="DE">Language</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>consumerKey</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <AttributeBehavior>SecureAlias</AttributeBehavior>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="f38cbc3f-725c-4d01-99e4-edefe1973554">
+            <Label language="EN">Consumer Key Alias</Label>
+            <Label language="DE">Consumer Key Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>consumerSecret</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <AttributeBehavior>SecureAlias</AttributeBehavior>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="e89e2549-45b1-4f4d-890c-de83fb8867c3">
+            <Label language="EN">Consumer Secret Alias</Label>
+            <Label language="DE">Consumer Secret Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>accessToken</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <AttributeBehavior>SecureAlias</AttributeBehavior>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="e61d2d39-0815-4a56-9d28-bb6ce500fb9f">
+            <Label language="EN">Access Token Alias</Label>
+            <Label language="DE">Access Token Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>accessTokenSecret</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <AttributeBehavior>SecureAlias</AttributeBehavior>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="8b55a758-eae0-4c46-947c-45ed08dd46ae">
+            <Label language="EN">Access Token Secret Alias</Label>
+            <Label language="DE">Access Token Secret Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>proxyType</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Internet</Default>
+        <Length></Length>
+        <AttributeBehavior>DisplayOnly</AttributeBehavior>
+       <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Proxy Type</Label>
+        </GuiLabels>
+        <!-- FixedValues>
+          <FixedValue>
+            <Value>Internet</Value>
+            <GuiLabels>
+              <Label language="EN">Internet</Label>
+            </GuiLabels>
+          </FixedValue>
+          <NotCondition>
+            <EditCondition>
+              <AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+              <AttributeValue>true</AttributeValue>
+            </EditCondition>
+          </NotCondition>
+        </FixedValues -->
+        <FixedValues>
+          <FixedValue>
+            <Value>Internet</Value>
+            <GuiLabels>
+              <Label language="EN">Internet</Label>
+            </GuiLabels>
+          </FixedValue>
+          <FixedValue>
+            <Value>manual</Value>
+            <GuiLabels>
+              <Label language="EN">Manual</Label>
+            </GuiLabels>
+          </FixedValue>
+          <!-- EditCondition>
+            <AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+            <AttributeValue>true</AttributeValue>
+          </EditCondition -->
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+      <Name>httpProxyHost</Name>
+      <Usage>true</Usage>
+      <DataType>xsd:string</DataType>
+      <Length />
+      <isparameterized>true</isparameterized>
+      <GuiLabels>
+        <Label language="EN">Proxy Host</Label>
+      </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+      <Name>httpProxyPort</Name>
+      <Usage>true</Usage>
+      <DataType>xsd:integer</DataType>
+      <Length />
+      <isparameterized>true</isparameterized>
+      <GuiLabels>
+        <Label language="EN">Proxy Port</Label>
+      </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

@@ -1,0 +1,958 @@
+<?xml version="1.0"?>
+<ComponentMetadata xmlns:ns_1="http://www.w3.org/2001/XMLSchema-instance" ComponentId="ctype::Adapter/cname::sap:Mail/version::1.1" ComponentName="sap:Mail" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" ns_1:noNamespaceSchemaLocation="ComponentMetadata.xsd">
+
+    <Variant VariantId="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.1.0" VariantName="Mail Receiver" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema />
+            </Content>
+            <Content>
+                <ContentType>None</ContentType>
+                <Schema />
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema />
+            </Content>
+        </OutputContent>
+        <Tab id="tabGeneral">
+            <GuiLabels>
+                <Label language="EN">Connection</Label>
+            </GuiLabels>
+            <AttributeGroup id="connectionDetails">
+                <GuiLabels>
+                    <Label language="EN">Connection Details</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>server</ReferenceName>
+                    <description>Host name or address of the SMTP server, for example, mail.domain.com:587. For connections to the public Internet, only port 587 (SMTP+STARTTLS) and 465 (SMTPS) are supported</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>timeout</ReferenceName>
+                    <description>Specifies the amount of time, in milliseconds, that the client will wait for a response before it times out; zero means that the client will wait indefinitely.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>ssl</ReferenceName>
+                    <description>Specify the method to establish an encrypted (secure) connection.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>auth</ReferenceName>
+                    <description>Mechanism to be used to authenticate against the server.&#10;Encrypted User Name/Password: User name and password are used in a secure way.&#10;Plain User Name/Password: User name and password are sent in plain text (not recommended).&#10;None: No authentication at all</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>user</ReferenceName>
+                    <description>Specify the credential name used authenticate against the server.</description>
+                    <OrCondition>
+                        <EditCondition>
+                            <AttributeName>auth</AttributeName>
+                            <AttributeValue>loginEncrypted</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>auth</AttributeName>
+                            <AttributeValue>loginPlain</AttributeValue>
+                        </EditCondition>
+                    </OrCondition>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="mailAttributes">
+                <GuiLabels>
+                    <Label language="EN">Mail Attributes</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>from</ReferenceName>
+                    <description>Specify the sender address. Also supports expressions, for example ${header.mail_from}</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>to</ReferenceName>
+                    <description>Specify the recipient address(es). If you specify multiple addresses, separate them with a comma. You can also use expressions, for example ${header.mail_to}</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>cc</ReferenceName>
+                    <description>Specify the Cc address(es). If you specify multiple addresses, separate them with a comma. You can also use expressions, for example ${header.mail_cc}</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>bcc</ReferenceName>
+                    <description>Specify the Bcc address(es). If you specify multiple addresses, separate them with a comma. You can also use expressions, for example ${header.mail_bcc}</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>subject</ReferenceName>
+                    <description>Enter the text to be used as subject in the mail, for example: Email generated from Message ID ${header.SAP_MessageProcessingLogID}</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>body</ReferenceName>
+                    <description>Enter the text to be used as mail body, for example to set the message as mail body: ${in.body} </description>
+                </AttributeReference>
+                <AttributeReference>
+                     <ReferenceName>content_type</ReferenceName>
+                     <description>Specify the Mime-Type of the mail body</description>
+                 </AttributeReference>
+                 <AttributeReference>
+                     <ReferenceName>content_encoding</ReferenceName>
+                     <description>Specify the encoding (character set) of the mail body</description>
+                 </AttributeReference>
+                <AttributeReference>
+                     <ReferenceName>attachments</ReferenceName>
+                 </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>keep_attachments</ReferenceName>
+                    <description>Select this option to add the attachments contained in the message exchange</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+        <Tab id="tabEncryption">
+            <GuiLabels>
+                <Label language="EN">Security</Label>
+            </GuiLabels>
+            <AttributeGroup id="encryptionGroup">
+                <GuiLabels>
+                    <Label language="EN">Encryption</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>encrypt.type</ReferenceName>
+                    <description>Select the scheme to be used to encrypt the message content</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>encrypt.smime.algorithm</ReferenceName>
+                    <description>Select an algorithm with the format Cipher/Operation Mode/Padding Scheme for encrypting the content</description>
+                    <EditCondition>
+                        <AttributeName>encrypt.type</AttributeName>
+                        <AttributeValue>smime</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>encrypt.smime.aes.keysize</ReferenceName>
+                    <description>Select the key length for the secret key to be used for content encryption</description>
+                    <AndCondition>
+                        <EditCondition>
+                            <AttributeName>encrypt.type</AttributeName>
+                            <AttributeValue>smime</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>encrypt.smime.algorithm</AttributeName>
+                            <AttributeValue>aes</AttributeValue>
+                        </EditCondition>
+                    </AndCondition>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>encrypt.smime.des.keysize</ReferenceName>
+                    <description>Select the key length for the secret key to be used for content encryption</description>
+                    <AndCondition>
+                        <EditCondition>
+                            <AttributeName>encrypt.type</AttributeName>
+                            <AttributeValue>smime</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>encrypt.smime.algorithm</AttributeName>
+                            <AttributeValue>des</AttributeValue>
+                        </EditCondition>
+                    </AndCondition>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>encrypt.smime.keys</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>encrypt.type</AttributeName>
+                        <AttributeValue>smime</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+        <AllowedHeaders />
+        <ReferencedComponents />
+    </Variant>
+
+    <AttributeMetadata>
+        <Name>keyalias</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <isparameterized>false</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Public Key Alias</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+
+    <AttributeTableMetadata>
+        <Name>encrypt.smime.keys</Name>
+        <Usage>required</Usage>
+        <GuiLabels>
+            <Label language="EN">Receiver Public Key Alias</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>keyalias</ReferenceName>
+            <description>Enter an alias name for the receiver public key to select the corresponding receiver certificate from the keystore</description>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    
+    <AttributeTableMetadata>
+        <Name>attachments</Name>
+        <Usage>optional</Usage>
+        <GuiLabels>
+            <Label language="EN">Attachments</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>attachment.name</ReferenceName>
+            <description>Specify the file name of the attachment (e.g. 'document.txt' or '${header.attachment_1_name}')</description>
+        </AttributeReference>
+        <AttributeReference>
+            <ReferenceName>attachment.type</ReferenceName>
+            <description>Specify the MIME type of the attachment</description>
+        </AttributeReference>
+        <AttributeReference>    
+            <ReferenceName>attachment.source</ReferenceName>
+            <description>Specify which part of the message to use to construct the attachment</description>
+        </AttributeReference>
+        <AttributeReference>    
+            <ReferenceName>attachment.value</ReferenceName>
+            <description>Specify which header to use to construct the attachment</description>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    
+    <AttributeMetadata>
+        <Name>encrypt.type</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>none</Default>
+        <isparameterized>false</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Encryption Type</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>none</Value>
+                <GuiLabels>
+                    <Label language="EN">None</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>smime</Value>
+                <GuiLabels>
+                    <Label language="EN">S/MIME</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>encrypt.smime.algorithm</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>aes</Default>
+        <isparameterized>false</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Content Encryption Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>aes</Value>
+                <GuiLabels>
+                    <Label language="EN">AES/CBC/PKCS5Padding</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>des</Value>
+                <GuiLabels>
+                    <Label language="EN">DESede/CBC/PKCS5Padding</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>encrypt.smime.aes.keysize</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>128</Default>
+        <isparameterized>false</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Secret Key Length</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>128</Value>
+                <GuiLabels>
+                    <Label language="EN">128</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>192</Value>
+                <GuiLabels>
+                    <Label language="EN">192</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>256</Value>
+                <GuiLabels>
+                    <Label language="EN">256</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>encrypt.smime.des.keysize</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>128</Default>
+        <isparameterized>false</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Secret Key Lentgh</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>128</Value>
+                <GuiLabels>
+                    <Label language="EN">128</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>192</Value>
+                <GuiLabels>
+                    <Label language="EN">192</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>server</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Address</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>timeout</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>3000</Default>
+        <Length>0</Length>
+        <GuiLabels>
+            <Label language="EN">Timeout (in ms)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>from</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">From</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>to</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">To</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>cc</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Cc</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>bcc</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Bcc</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>subject</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Subject</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>user</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Credential Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>body</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <MultiLine>true</MultiLine>
+        <Default>${in.body}</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Mail Body</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>content_type</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>text/plain</Default>
+        <GuiLabels>
+            <Label language="EN">Body Mime-Type</Label>
+        </GuiLabels>
+        <FixedValues>
+            <isEditable>true</isEditable>
+            <FixedValue>
+                <Value>text/plain</Value>
+                <GuiLabels>
+                    <Label language="EN">Text/Plain</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>text/csv</Value>
+                <GuiLabels>
+                    <Label language="EN">Text/CSV</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>text/html</Value>
+                <GuiLabels>
+                    <Label language="EN">Text/HTML</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>application/xml</Value>
+                <GuiLabels>
+                    <Label language="EN">Application/XML</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>application/json</Value>
+                <GuiLabels>
+                    <Label language="EN">Application/JSON</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>application/zip</Value>
+                <GuiLabels>
+                    <Label language="EN">Application/ZIP</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>application/x-gzip</Value>
+                <GuiLabels>
+                    <Label language="EN">Application/X-Gzip</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>application/octet-stream</Value>
+                <GuiLabels>
+                    <Label language="EN">Application/Octet-Stream</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>content_encoding</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>UTF-8</Default>
+        <GuiLabels>
+            <Label language="EN">Body Encoding</Label>
+        </GuiLabels>
+        <FixedValues>
+            <isEditable>true</isEditable>
+            <FixedValue>
+                <Value>UTF-8</Value>
+                <GuiLabels>
+                    <Label language="EN">UTF-8</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Windows-1252</Value>
+                <GuiLabels>
+                    <Label language="EN">windows-1252</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>ISO-8859-1</Value>
+                <GuiLabels>
+                    <Label language="EN">ISO-8859-1</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>US-ASCII</Value>
+                <GuiLabels>
+                    <Label language="EN">US-ASCII</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>attachment.name</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>attachment.source</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <GuiLabels>
+            <Label language="EN">Source</Label>
+        </GuiLabels>
+        <FixedValues>
+            <isEditable>false</isEditable>
+            <FixedValue>
+                <Value>Header</Value>
+                <GuiLabels>
+                    <Label language="EN">Header</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Body</Value>
+                <GuiLabels>
+                    <Label language="EN">Body</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>attachment.value</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <GuiLabels>
+            <Label language="EN">Header Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>attachment.type</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>application/octet-stream</Default>
+        <GuiLabels>
+            <Label language="EN">Mime-Type</Label>
+        </GuiLabels>
+        <FixedValues>
+            <isEditable>true</isEditable>
+            <FixedValue>
+                <Value>text/plain</Value>
+                <GuiLabels>
+                    <Label language="EN">text/plain</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>text/csv</Value>
+                <GuiLabels>
+                    <Label language="EN">Text/CSV</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>text/html</Value>
+                <GuiLabels>
+                    <Label language="EN">text/html</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>application/xml</Value>
+                <GuiLabels>
+                    <Label language="EN">application/xml</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>application/json</Value>
+                <GuiLabels>
+                    <Label language="EN">application/json</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>application/zip</Value>
+                <GuiLabels>
+                    <Label language="EN">Application/ZIP</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>application/x-gzip</Value>
+                <GuiLabels>
+                    <Label language="EN">Application/X-Gzip</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>application/octet-stream</Value>
+                <GuiLabels>
+                    <Label language="EN">application/octet-stream</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>ssl</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>starttls_mandatory</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Protection</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>starttls_mandatory</Value>
+                <GuiLabels>
+                    <Label language="EN">STARTTLS Mandatory</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>starttls_optional</Value>
+                <GuiLabels>
+                    <Label language="EN">STARTTLS Optional</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>smtps</Value>
+                <GuiLabels>
+                    <Label language="EN">SMTPS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>off</Value>
+                <GuiLabels>
+                    <Label language="EN">Off</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>auth</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>loginEncrypted</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Authentication</Label>
+        </GuiLabels>
+        <FixedValues>
+			<Sort Order="">false</Sort>            
+            <FixedValue>
+                <Value>loginEncrypted</Value>
+                <GuiLabels>
+                    <Label language="EN">Encrypted User/Password</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>loginPlain</Value>
+                <GuiLabels>
+                    <Label language="EN">Plain User/Password</Label>
+                </GuiLabels>
+            </FixedValue>
+			<FixedValue>
+                <Value>none</Value>
+                <GuiLabels>
+                    <Label language="EN">None</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+
+    <AttributeMetadata>
+        <Name>keep_attachments</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>0</Default>
+        <GuiLabels><Label language="EN">Add Message Attachments</Label></GuiLabels>
+    </AttributeMetadata>
+
+  <AttributeMetadata>
+    <Name>sslIMAP</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Default>starttls_mandatory</Default>
+    <isparameterized>true</isparameterized>
+    <GuiLabels>
+      <Label language="EN">Protection</Label>
+    </GuiLabels>
+    <FixedValues>
+      <FixedValue>
+        <Value>starttls_mandatory</Value>
+        <GuiLabels>
+          <Label language="EN">STARTTLS Mandatory</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>starttls_optional</Value>
+        <GuiLabels>
+          <Label language="EN">STARTTLS Optional</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>imaps</Value>
+        <GuiLabels>
+          <Label language="EN">IMAPS</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>off</Value>
+        <GuiLabels>
+          <Label language="EN">Off</Label>
+        </GuiLabels>
+      </FixedValue>
+    </FixedValues>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>sslPOP</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Default>starttls_mandatory</Default>
+    <isparameterized>true</isparameterized>
+    <GuiLabels>
+      <Label language="EN">Protection</Label>
+    </GuiLabels>
+    <FixedValues>
+      <FixedValue>
+        <Value>starttls_mandatory</Value>
+        <GuiLabels>
+          <Label language="EN">STARTTLS Mandatory</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>starttls_optional</Value>
+        <GuiLabels>
+          <Label language="EN">STARTTLS Optional</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>pop3s</Value>
+        <GuiLabels>
+          <Label language="EN">POP3S</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>off</Value>
+        <GuiLabels>
+          <Label language="EN">Off</Label>
+        </GuiLabels>
+      </FixedValue>
+    </FixedValues>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>initialDelay</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:integer</DataType>
+    <Default>1000</Default>
+    <GuiLabels>
+      <Label language="EN">Initial Delay (in ms)</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>recurrentDelay</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:integer</DataType>
+    <Default>30000</Default>
+    <GuiLabels>
+      <Label language="EN">Recurrent Delay (in ms)</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>useFixedDelay</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:boolean</DataType>
+    <Default>1</Default>
+    <GuiLabels>
+      <Label language="EN">Use Fixed Delay</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>folder</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Default>INBOX</Default>
+    <isparameterized>false</isparameterized>
+    <GuiLabels>
+      <Label language="EN">Folder</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>archiveMailFolder</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <isparameterized>false</isparameterized>
+    <GuiLabels>
+      <Label language="EN">Archive Folder</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>postProcessingIMAP</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Default>mark</Default>
+    <isparameterized>false</isparameterized>
+    <GuiLabels>
+      <Label language="EN">Post-Processing</Label>
+    </GuiLabels>
+    <FixedValues>
+      <FixedValue>
+        <Value>delete</Value>
+        <GuiLabels>
+          <Label language="EN">Delete</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>mark</Value>
+        <GuiLabels>
+          <Label language="EN">Mark as Read</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>archive</Value>
+        <GuiLabels>
+          <Label language="EN">Archive</Label>
+        </GuiLabels>
+      </FixedValue>
+    </FixedValues>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>postProcessingPOP</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Default>delete</Default>
+    <isparameterized>false</isparameterized>
+    <GuiLabels>
+      <Label language="EN">Post-Processing</Label>
+    </GuiLabels>
+    <FixedValues>
+      <FixedValue>
+        <Value>delete</Value>
+        <GuiLabels>
+          <Label language="EN">Delete</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+         <Value>mark</Value>
+        <GuiLabels>
+          <Label language="EN">Mark as Read</Label>
+        </GuiLabels>
+      </FixedValue>
+    </FixedValues>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>mailBody</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Default>body</Default>
+    <GuiLabels>
+      <Label language="EN">Mail Body</Label>
+    </GuiLabels>
+    <FixedValues>
+      <FixedValue>
+        <Value>body</Value>
+        <GuiLabels>
+          <Label language="EN">Set as Body</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>header</Value>
+        <GuiLabels>
+          <Label language="EN">Set as Header</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>ignore</Value>
+        <GuiLabels>
+          <Label language="EN">Ignore</Label>
+        </GuiLabels>
+      </FixedValue>
+    </FixedValues>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>headerName</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Default>SAPMailBody</Default>
+    <GuiLabels>
+      <Label language="EN">Header Name</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>inAttachments</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Default>ignore</Default>
+    <GuiLabels>
+      <Label language="EN">Attachments</Label>
+    </GuiLabels>
+    <FixedValues>
+      <FixedValue>
+        <Value>ignore</Value>
+        <GuiLabels>
+          <Label language="EN">Ignore</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>setOnlyFirst</Value>
+        <GuiLabels>
+          <Label language="EN">Set Only First as Body</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>setOnlyFirstplusHeaders</Value>
+        <GuiLabels>
+          <Label language="EN">Set Only First as Body and Remaining as Headers</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>setAllAsHeaders</Value>
+        <GuiLabels>
+          <Label language="EN">Set All as Headers</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>split</Value>
+        <GuiLabels>
+          <Label language="EN">Split Each into Single Message as Body</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>singleMessage</Value>
+        <GuiLabels>
+          <Label language="EN">All in Single Message as Attachments</Label>
+        </GuiLabels>
+      </FixedValue>
+    </FixedValues>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>selectionReadFlag</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Default>unread</Default>
+    <isparameterized>false</isparameterized>
+    <GuiLabels>
+      <Label language="EN">Selection</Label>
+    </GuiLabels>
+    <FixedValues>
+      <FixedValue>
+        <Value>all</Value>
+        <GuiLabels>
+          <Label language="EN">All</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>unread</Value>
+        <GuiLabels>
+          <Label language="EN">Only Unread</Label>
+        </GuiLabels>
+      </FixedValue>
+    </FixedValues>
+  </AttributeMetadata>
+
+</ComponentMetadata>

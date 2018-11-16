@@ -1,0 +1,47 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: qTmxe3ammHzZYPZj2NzOG0nF+nnDJ
+ t2lTmoVDH5bP5A=
+SHA-256-Digest-Manifest: I/84beEX2ZMq71DH3hjn+1le0N9N0SypFdPJHGgLZ0s=
+Created-By: 1.8.0_45 (Oracle Corporation)
+
+Name: about.properties
+SHA-256-Digest: t8ajZ+zMX9Vonsq9CY9eGL0HtZvV4HrDlttyYgsrvnQ=
+
+Name: intro/whatsnew.xml
+SHA-256-Digest: 77fpBzZkK00LrOM5U/KpPIFbVwGIGMwc44KxI5HyG1k=
+
+Name: plugin.xml
+SHA-256-Digest: 5x51rO0PmlB2hz9MqQKc/UdWLyPxIYjxbgSD1Tj2QYs=
+
+Name: intro/css/style.css
+SHA-256-Digest: 3PJLoEnFhygOaxWWEv5FTJ/lMARLuCpvflcFY4M6s38=
+
+Name: META-INF/maven/com.sap.core.ide.toolset/com.sap.core.tools.eclip
+ se.server.branding/pom.properties
+SHA-256-Digest: TWEjAu18x/Z+2EwAZBCrajNfuYiQLU9Asv9Nenwvkiw=
+
+Name: intro/css/graphics/cloud_hov.png
+SHA-256-Digest: IMwNMqC29l4C+ZLBp43bvprg5rpErLYVaxVKJb6gTiQ=
+
+Name: intro/tutorials.xml
+SHA-256-Digest: WGf5WTt4qpD9XvMRpMZEv1IfGGn1wWfks65vm7VPgfM=
+
+Name: about.ini
+SHA-256-Digest: lEDLlARVnbyKswoS5DmvsvXk7W6XkmEj3FESTlagXJA=
+
+Name: intro/overview.xml
+SHA-256-Digest: vw7zz1E8mAzg5m4IMVm2fwVW9cpLW8mPTgH++DNMKnY=
+
+Name: intro/css/graphics/cloud.png
+SHA-256-Digest: z74PhPdDtrIx7OhsJ/soDg7EhGtrFH1/XlSv1dpBKPQ=
+
+Name: intro/samples.xml
+SHA-256-Digest: BT1K0UIe2W8uTvImEG3sJLvRciWZ6Q8BaECMoITj24k=
+
+Name: META-INF/maven/com.sap.core.ide.toolset/com.sap.core.tools.eclip
+ se.server.branding/pom.xml
+SHA-256-Digest: p6GQVuQhNachpU4rJdeL3Dm7l66Y0TX5X1P1YiJJx+Y=
+
+Name: images/nwcloud32.png
+SHA-256-Digest: 3pY1zDn/qtnT1RDUasPtR7GVJAkYs0Wv1ZtztMDpVtE=
+

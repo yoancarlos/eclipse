@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+	<extensionContent id="com.sap.ndb.studio.right" name="SAP HANA Studio" style="css/overview.css"	path="overview/@">
+		<group label="Documentation for SAP HANA Platform" style-id="content-group" id="content-group">
+			<text style-id="group-description"> </text>
+			<link style-id="content-link"
+				label="&#8226; What's New (Release Notes)"
+				url="http://help.sap.com/hana/Whats_New_SAP_HANA_Platform_Release_Notes_en.pdf"
+				id="whatsnew">
+			</link>					
+			<link style-id="content-link"
+				label="&#8226; SAP HANA Help Content"
+				url="http://org.eclipse.ui.intro/showHelpTopic?id=/org.eclipse.help.base/doc/help_home.html"
+				id="guides">
+			</link>					
+			<link style-id="content-link"
+				label="&#8226; Complete set of SAP HANA documentation on the SAP Help Portal"
+				url="http://org.eclipse.ui.intro/openBrowser?url=http://help.sap.com/hana_platform"
+				id="saphelp">
+			</link>					
+		</group>
+	</extensionContent>
+</introContent>

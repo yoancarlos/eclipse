@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Creating Integration Project for an Integration Flow</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioc8b95b276d6d4feaa19591f7e7af386b">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Creating Integration Project for an Integration Flow</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loioc8b95b276d6d4feaa19591f7e7af386b__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><p class="p">An integration flow is a graphical representation of how the integration content can be
+				configured to enable the flow of messages between two or more participants using
+					<span class="ph pname">SAP Cloud Platform
+                        Integration</span>, and
+				thus, ensure successful communication.</p>
+<p class="p">You perform this task to create a BPMN 2.0-based integration flow model in your integration
+				project under the <strong class="ph b">src.main.resources.scenarioflows.integrationflow </strong> package.
+				You can create an integration flow by using the built-in patterns, templates
+				provided by SAP, or user-defined templates.</p>
+
+			<div class="note note"><span class="notetitle">Note</span> You can use the templates provided by SAP in the <span class="ph uicontrol">New Integration
+					Flow</span> wizard page to help you create and modify integration flows based
+				on certain scenarios. These templates are based on some of the SAP supported
+				scenarios.</div>
+
+			<div class="note restriction"><span class="restrictiontitle">Restriction</span> In this release, SAP supports only limited number of possible
+				integration scenarios.</div>
+</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N10102_N100FF_N10011_N10001">
+				<span class="ph cmd">In the main menu, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Window</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Open Perspective</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Integration Designer </span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> to open the perspective.</span>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N1011B_N100FF_N10011_N10001">
+				<span class="ph cmd"> In the main menu, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">File</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">New</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Integration Project…</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> to create a new integration project.</span>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N1016D_N10138_N10011_N10001">
+				<span class="ph cmd"> In the <span class="ph uicontrol">New Integration Project</span> wizard, enter a project
+					name.</span>
+				<div class="itemgroup info">
+					<div class="note note" id="loioc8b95b276d6d4feaa19591f7e7af386b__note_N10184_N10181_N1016D_N10138_N10011_N10001"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loioc8b95b276d6d4feaa19591f7e7af386b__ul_o3g_thb_bx">
+							<li class="li">By default, <span class="ph uicontrol">Node Type</span> is set to IFLMAP, which
+								indicates that the integration flow is deployed to that node in the
+								runtime environment.</li>
+
+							<li class="li">Choose product profile for the integration project from
+									<span class="ph uicontrol">Product Profile</span> field. The integration
+								flow templates used during creation adheres to the latest version of
+								a component available in product profile.</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N10155_N100FF_N10011_N10001">
+				<span class="ph cmd"> If you want to add the project to the working set at this point, select the
+					option <span class="ph uicontrol">Add project to working set</span>. </span>
+				<div class="itemgroup info">
+					<div class="note note" id="loioc8b95b276d6d4feaa19591f7e7af386b__note_N1016D_N1016A_N1015E_N10107_N10011_N10001"><span class="notetitle">Note</span>  If you do not choose
+						to add the project to the working set in this step, you can add it later.
+						For more information about working sets, see <a class="xref" href="b410d12f61114248a9f4243bf670648a.html">Creating a Working Set of
+							Projects</a>.</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N10170_N100FF_N10011_N10001">
+				<span class="ph cmd">If you want to create an integration flow of a specific pattern for the new
+					integration project, choose <span class="ph uicontrol">Next</span>.</span>
+				<div class="itemgroup info">
+					<div class="note note" id="loioc8b95b276d6d4feaa19591f7e7af386b__note_N1018E_N1018B_N1017F_N1010A_N10011_N10001"><span class="notetitle">Note</span> You can also create an integration
+						project together with a point-to-point integration flow. To enable this
+						option, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Window</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Preferences</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">SAP Cloud Platform
+                            Integration</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Integration Flow Preferences</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> page, and select the <span class="ph uicontrol">Auto-create integration flow
+							on 'Finish' during integration project creation</span>
+						option.</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N1017D_N100FF_N10011_N10001">
+				<span class="ph cmd"> In the <span class="ph uicontrol">New Integration Flow</span> page, enter a name for the
+					integration flow. </span>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N1018A_N100FF_N10011_N10001">
+				<span class="ph cmd"> If you want to create an integration flow using the built-in patterns, select
+					the <span class="ph uicontrol">Enterprise Integration Patterns</span> category and choose the
+					required pattern.</span>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N101DF_N1010A_N10011_N10001">
+				<span class="ph cmd">If you want to create an integration flow using SAP templates, select the
+						<span class="ph uicontrol">SAP Defined Template</span> category and choose the required
+					template.</span>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N10197_N100FF_N10011_N10001">
+				<span class="ph cmd">If you want to create an integration flow using templates specific to your scenario, select
+					the <span class="ph uicontrol">User Defined Template</span> category and choose the required
+					template.</span>
+				<div class="itemgroup info">
+					<div class="note note" id="loioc8b95b276d6d4feaa19591f7e7af386b__note_N101D8_N101D5_N101C9_N10104_N10011_N10001"><span class="notetitle">Note</span> You can find the
+						templates in the <span class="ph uicontrol">User Defined Template</span> category only if
+						you have saved an integration flow as a template. For more information, see
+							<a class="xref" href="0ac53f3ce7e84499b957755fb0b7bacb.html">Saving Integration
+							Flow as a Template</a>.</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N101A4_N100FF_N10011_N10001">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span>
+				<div class="itemgroup stepresult">A new project with &lt;integration flow&gt;.iflw is available in the
+						<span class="ph uicontrol">Project Explorer</span> view.</div>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N101EB_N10107_N10011_N10001">
+				<span class="ph cmd">If you want to provide a description for the integration project, follow the
+					steps below: </span>
+				<ol type="a" class="ol substeps" id="loioc8b95b276d6d4feaa19591f7e7af386b__substeps_xbc_wzf_j3">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Project Explorer</span>, select the integration
+							project and choose the <span class="ph uicontrol">Properties</span> view.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Properties</span> view, select the <span class="ph uicontrol">Project
+								Configuration</span> tab.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Project Configuration</span> tab page, provide basic
+							details about the integration project, and enter the bundle name and
+							bundle ID.</span>
+						<div class="itemgroup info">
+							<div class="note note" id="loioc8b95b276d6d4feaa19591f7e7af386b__note_N10257_N10254_N10249_N10225_N1021D_N10135_N10011_N10001"><span class="notetitle">Note</span> 
+								<ul class="ul" id="loioc8b95b276d6d4feaa19591f7e7af386b__ul_c4g_znt_gk">
+									<li class="li">The bundle name and bundle ID that you enter get updated in the
+											<span class="ph filepath">MANIFEST.MF</span> file.</li>
+
+									<li class="li">The bundle name and the integration project name are two
+										different attributes.</li>
+
+									<li class="li">The <span class="ph uicontrol">Node Type</span> shows the runtime node type
+										on which the integration flow is deployed.</li>
+
+									<li class="li">The description field allows you to enter brief information
+										about the integration project to help other users understand
+										the use of the project.</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N10275_N10135_N10011_N10001">
+				<span class="ph cmd">Click the graphical area, and in the <span class="ph uicontrol">Properties</span> view, select
+					the <span class="ph uicontrol">Integration Flow</span> tab page. </span>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N10286_N10135_N10011_N10001">
+				<span class="ph cmd">Enter a description about the integration flow that provides information to
+					other users who will view or work with the integration flow. </span>
+			</li>
+<li class="li step stepexpand" id="loioc8b95b276d6d4feaa19591f7e7af386b__step_N10211_N10107_N10011_N10001">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

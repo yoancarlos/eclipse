@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Decoder/version::1.0.1" ComponentName="sap:Decoder" UIElementType="Flowstep" IsExtension="false" IsFinal="true" IsPreserves="false">
+    <Variant VariantId="ctype::FlowstepVariant/cname::Base64 Decode/version::1.0.1" VariantDisplayName="Base64 Decode" VariantName="Base64 Decode" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Base64Encoded</ContentType>
+                <Schema />
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema />
+            </Content>
+        </OutputContent>
+        <AllowedHeaders />
+        <ReferencedComponents />
+    </Variant>
+</ComponentMetadata>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Exporting and Importing Value Mapping Groups</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio41fb037e76ed4f8888ddf82fc85b57d2">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Exporting and Importing Value Mapping Groups</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loio41fb037e76ed4f8888ddf82fc85b57d2__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this task to either import a .csv file containing value mapping groups into the
+					<span class="keyword uilabel">Value Mapping</span> project type within your workspace or export
+				the content of <em class="ph i">value_mapping.xml </em> from your workspace and store it as a .csv
+				file in your file system. The format of the valid .csv file containing value mapping
+				groups is shown in the image below: <img class="image" id="loio41fb037e76ed4f8888ddf82fc85b57d2__image_ox2_ns5_nl" src="loioe5702f97bb10422988df56474afe2248_LowRes.jpg" alt="ValueMappingFormat" title="ValueMappingFormat"/></p>
+
+			<p class="p">This task shows the steps for a simple scenario that requires you to export value mappings
+				from your workspace, and import the same value mappings into a workspace located in
+				another system.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loio41fb037e76ed4f8888ddf82fc85b57d2__step_N1003E_N1003B_N10011_N10001">
+				<span class="ph cmd">Export the value mapping groups into your local file system</span>
+				<ol type="a" class="ol substeps" id="loio41fb037e76ed4f8888ddf82fc85b57d2__substeps_xc1_gwh_4k">
+					<li class="li substep">
+						<span class="ph cmd">In the <span class="keyword uilabel">Project Explorer</span>, select the value mapping
+							project and choose <span class="ph uicontrol">Export Value Mappings</span>.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">In the <span class="ph uicontrol">Export Value Mapping Groups</span> wizard,
+							select the required value mapping groups and choose
+								<span class="ph uicontrol">Next</span>.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">In the <span class="keyword uilabel">Export groups into a file</span> page, enter a name for the .csv file
+							and browse for a location to store the file.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span>
+					</li>
+
+				</ol>
+
+				<div class="itemgroup stepresult">The .csv file containing the exported value mapping groups is available at the
+					selected file location.<div class="note sap-example example"><span class="exampletitle">Example</span> The image below shows an example of a vale
+						mapping group exported into a .csv file.<img class="image" id="loio41fb037e76ed4f8888ddf82fc85b57d2__image_dzz_ws5_nl" src="loio754cec5fc614455197b27ea551074745_LowRes.jpg" alt="ValueMappingExample" title="ValueMappingExample"/></div>
+</div>
+			</li>
+<li class="li step stepexpand" id="loio41fb037e76ed4f8888ddf82fc85b57d2__step_N1008F_N1003B_N10011_N10001">
+				<span class="ph cmd">Import the value mapping groups</span>
+				<ol type="a" class="ol substeps" id="loio41fb037e76ed4f8888ddf82fc85b57d2__substeps_qxv_5xh_4k">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="keyword uilabel">Project Explorer</span>, select the value mapping project that you
+							want to import the value mappings to.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <span class="ph uicontrol">Import Value Mappings</span>.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="keyword uilabel">Select a CSV File </span> page, browse for the .csv file.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span>
+						<div class="itemgroup info">
+							<div class="note note"><span class="notetitle">Note</span> You cannot import value mappings that have been exported from Eclipse. If you do so,
+								then the existing version of the value mapping files changes.</div>
+
+						</div>
+					</li>
+
+				</ol>
+
+				<div class="itemgroup stepresult">The .csv file is imported as <em class="ph i">value_mapping.xml</em> file, and is available under
+					the value mapping project. <div class="note sap-example example"><span class="exampletitle">Example</span> The screenshot below shows how the
+						content of the .csv file (as shown in the previous screenshot) gets imported
+						as the <em class="ph i">value_mapping.xml</em>.<img class="image" id="loio41fb037e76ed4f8888ddf82fc85b57d2__image_y2t_lg1_4l" src="loio566134b4c7b84f5f81c2e8ab67d83c7d_LowRes.jpg" alt="ValueMappingEditor_Design" title="ValueMappingEditor_Design"/></div>
+</div>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

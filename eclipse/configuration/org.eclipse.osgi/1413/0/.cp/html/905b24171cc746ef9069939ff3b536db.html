@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining Script</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio905b24171cc746ef9069939ff3b536db">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining Script</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this task to execute custom Java script or Groovy script for message processing.
+					<span class="ph pname">SAP Cloud Platform
+                        Integration</span> provides
+				a Java API to support this use case.</p>
+
+			<div class="note note"><span class="notetitle">Note</span> 
+				<p class="p">Note that data written into the message header at a certain processing step (for
+					example, in a Content Modifier or Script step) will also be part of the outbound
+					message addressed to a receiver system. Because of this, it is important to
+					consider the following restriction regarding the header size if you use an
+					HTTP-based receiver adapter:</p>
+
+				<p class="p">If the message header exceeds 8 KB, it might lead to situations that the receiver
+					cannot accept the inbound call (relevant for all http-based receiver
+					adapters).</p>
+
+			</div>
+
+			<div class="note note"><span class="notetitle">Note</span> 
+				<p class="p">The Java standard libraries of Java 7 can be used. </p>
+
+				<p class="p"><span class="ph pname">Cloud Integration</span> supports the XML
+            Document Object Model (DOM) to process XML documents. </p>
+
+			</div>
+
+			<div class="note note"><span class="notetitle">Note</span> 
+            <p class="p">Any application that parses XML data is prone to the risk of XML External Entity
+                (XXE) Processing attacks. </p>
+
+            <p class="p">More information: <a class="extlink" href="http://help.sap.com/disclaimer?site=https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Processing" target="_blank" alt="https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Processing" title="https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Processing">https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Processing<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+
+            <p class="p">To overcome this issue, you should take the following measures to protect integration
+                flows that contain Script steps (using Groovy script or Java Script) against XXE
+                Processing attacks: </p>
+
+            <ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__d4262e175">
+                <li class="li">
+                    <p class="p">Do not use XML parsing (for example, DocumentBuilderFactory) at all or </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">Switch off the processing of external entities as described at <a class="extlink" href="http://help.sap.com/disclaimer?site=https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Prevention_Cheat_Sheet#Java" target="_blank" alt="https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Prevention_Cheat_Sheet#Java" title="https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Prevention_Cheat_Sheet#Java">https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Prevention_Cheat_Sheet#Java<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>.</p>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="keyword uilabel">Model
+						Configuration</span> editor.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd"> Add script in the integration flow, choose <span class="ph uicontrol">Add Message
+						Transformers</span>&gt;<span class="ph uicontrol">Script</span> from the context
+					menu of a connection within the pool. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select the added script in the integration flow model to configure it.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you already have an existing java script or groovy script, copy it to the folder
+					src.main.resources.script. To assign this script, choose <span class="ph uicontrol">Assign
+						Script</span> from the context menu of the
+						<span class="ph uicontrol">Script</span> element.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">To create a new java script or groovy script, choose <span class="ph uicontrol">New
+						Script</span> from the context menu of the
+						<span class="ph uicontrol">Script</span> element.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Properties</span> view, specify the script step name in
+						<span class="ph uicontrol">Name</span>. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Properties</span> view, specify a custom function that will take the
+					“message” object as the argument in <span class="ph uicontrol">Script Function</span>. </span>
+				<div class="itemgroup info">
+					<p class="p">In the script you require <span class="ph uicontrol">Script Function</span>, which will be executed at
+						runtime. The function definition is as follows:</p>
+
+					<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">import com.sap.gateway.ip.core.customdev.util.Message
+def Message processData(Message message) {
+    def body = message.getBody()
+    //modify body	
+        message.setBody(body + "enhancements")
+        
+        //modify headers
+        def map = message.getHeaders()
+        def value = map.get("oldHeader");
+        message.setHeader("oldHeader", value + "modified")
+        message.setHeader("newHeader", "headerValue")
+        
+       //modify properties	
+        map = message.getProperties()
+        value = map.get("oldProperty")
+        message.setProperty("oldProperty", value + "modified")
+        message.setProperty("newProperty", "script")
+
+                return message
+}
+
+</pre></div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Add or modify Header, Body, and Property by using the interfaces below on the "message"
+					object.</span>
+				<div class="itemgroup info">
+					<ol class="ol" type="a" id="loio905b24171cc746ef9069939ff3b536db__ol_hwt_y42_k4">
+						<li class="li">You can use the following interfaces for Header:<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_pdw_3p2_k4">
+								<li class="li">public java.util.Map&lt;java.lang.String,java.lang.Object&gt;
+									getHeaders()</li>
+
+								<li class="li">public void
+									setHeaders(java.util.Map&lt;java.lang.String,java.lang.Object&gt;
+									exchangeHeaders)</li>
+
+								<li class="li">public void setHeader(java.lang.String name, java.lang.Object
+									value)</li>
+
+							</ul>
+</li>
+
+						<li class="li">You can use the following interfaces for Body:<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_hqy_sp2_k4">
+								<li class="li">public java.lang.Object getBody() </li>
+
+								<li class="li">public void setBody(<em class="ph i">java.lang.Object</em> exchangeBody)</li>
+
+								<li class="li">public java.lang.Object getBody(<em class="ph i">java.lang.String</em> fullyQualifiedClassName)<div class="note note"><span class="notetitle">Note</span> 
+										<div class="p"><span class="ph pname">SAP Cloud Platform
+                        Integration</span> framework
+											supports conversion of payload into the following
+											formats: <ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_oyn_cvv_2r">
+												<li class="li">String</li>
+
+												<li class="li">InputStream</li>
+
+												<li class="li">byte[]</li>
+
+											</ul>
+</div>
+
+									</div>
+<p class="p">To convert the payload into String or InputStream use
+										the following fullyQualifiedClassName:</p>
+<div class="p">
+										<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_eq2_dwv_2r">
+											<li class="li">java.lang.String</li>
+
+											<li class="li">java.io.InputStream</li>
+
+										</ul>
+
+									</div>
+<div class="p">To convert the payload into byte[] use the following: <ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_p5j_3wv_2r">
+											<li class="li">For groovy script - <em class="ph i">def body =
+												message.getBody(java.lang.String) as
+												byte[]</em></li>
+
+											<li class="li">For java script - <em class="ph i">var body =
+												[message.getBody()]</em></li>
+
+										</ul>
+</div>
+</li>
+
+							</ul>
+</li>
+
+						<li class="li">You can use the following interfaces for Property:<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_qhx_zp2_k4">
+								<li class="li">public java.util.Map&lt;java.lang.String,java.lang.Object&gt;
+									getProperties()</li>
+
+								<li class="li">public void
+									setProperties(java.util.Map&lt;java.lang.String,java.lang.Object&gt;
+									exchangeProperties)</li>
+
+								<li class="li">public void setProperty(java.lang.String name, java.lang.Object
+									value)</li>
+
+							</ul>
+</li>
+
+						<li class="li">You can use the following interfaces for Attachment:<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_lnn_jjx_x5">
+								<li class="li">public
+									java.util.Map&lt;java.lang.String,javax.activation.DataHandler&gt;
+									getAttachments() </li>
+
+								<li class="li">public void setAttachments(Map&lt;java.lang.String,
+									javax.activation.DataHandler&gt;)</li>
+
+							</ul>
+</li>
+
+					</ol>
+
+				</div>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_yjd_wq2_k4">
+							<li class="li">You should not add or modify a Property name starting with sap.</li>
+
+							<li class="li">If no Script Function is specified in the script flow step, the Script Function name will
+								be processData by default. </li>
+
+						</ul>
+
+					</div>
+
+					<div class="note caution"><span class="cautiontitle">Caution</span> 
+						<p class="p">When converting parts of the message object like the body or even headers
+							or properties into a string (as string) or into a byte array (as byte[])
+							please consider copies of the existing data is created which requires
+							extra memory. This resource consumption may even exceed the memory size
+							of the original object if string conversion is executed.</p>
+
+						<p class="p">Example:</p>
+
+						<p class="p">def body = message.getBody(java.lang.String) as String;</p>
+
+						<p class="p">Depending on the size of the object byte[] or string conversion can
+							endanger worker node of OOM failure. Please consciously decide which
+							part of the message object should be converted.</p>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to access the security artifacts such as secure store and keystore that are
+					deployed using the deployment wizard, refer the table below:</span>
+				<div class="itemgroup info">
+					<div class="p">
+						
+<div class="table-wrapper tablenoborder"><table summary="" id="loio905b24171cc746ef9069939ff3b536db__table_n4w_msk_vs" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="21.14164904862579%"/><col width="78.8583509513742%"/></colgroup>
+
+								
+								
+								<thead class="thead" align="left">
+									<tr class="row">
+										<th class="entry" valign="top" width="21.14164904862579%" id="d1748964e335">
+											<p class="p">Artifact Type</p>
+
+										</th>
+
+										<th class="entry" valign="top" width="78.8583509513742%" id="d1748964e341">
+											<p class="p">Sample Groovy Script</p>
+
+										</th>
+
+									</tr>
+
+								</thead>
+
+								<tbody class="tbody">
+									<tr class="row">
+										<td class="entry" valign="top" width="21.14164904862579%" headers="d1748964e335 ">
+											<p class="p">Secure Store </p>
+
+										</td>
+
+										<td class="entry" valign="top" width="78.8583509513742%" headers="d1748964e341 ">
+											<p class="p"><span class="ph emphasis emphasis">Import packages</span></p>
+
+											<p class="p"><samp class="ph codeph">import
+												com.sap.it.api.ITApiFactory;</samp></p>
+
+											<p class="p"><samp class="ph codeph">import
+												com.sap.it.api.securestore.SecureStoreService;
+												</samp></p>
+
+											<p class="p"><samp class="ph codeph">import
+												com.sap.it.api.securestore.UserCredential;
+												</samp></p>
+
+											<p class="p"><samp class="ph codeph">import
+												com.sap.it.api.securestore.exception.SecureStoreException;</samp></p>
+
+											<div class="note sap-samplecodeblock samplecode"><span class="samplecodetitle">Sample Code</span> 
+												<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">def service = ITApiFactory.getApi(SecureStoreService.class, null);
+      
+if( service != null)
+{
+     //Get UserCredential containing user credential details deployed on the node with the given alias.
+
+     def credential = service.getUserCredential(aliasname);     
+}
+</pre></div>
+
+											</div>
+
+										</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="21.14164904862579%" headers="d1748964e335 ">
+											<p class="p">Keystore</p>
+
+										</td>
+
+										<td class="entry" valign="top" width="78.8583509513742%" headers="d1748964e341 ">
+											<p class="p"><span class="ph emphasis emphasis">Import packages</span></p>
+
+											<p class="p"><samp class="ph codeph">import com.sap.it.api.ITApiFactory;
+												</samp></p>
+
+											<p class="p"><samp class="ph codeph">import
+												com.sap.it.api.keystore.KeystoreService;</samp></p>
+
+											<p class="p"><samp class="ph codeph">import
+												com.sap.it.api.keystore.exception.KeystoreException;</samp></p>
+
+											<div class="note sap-samplecodeblock samplecode"><span class="samplecodetitle">Sample Code</span> 
+												<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">def service = ITApiFactory.getApi(KeystoreService.class, null);   
+   
+if( service != null)
+{
+   //Get all trust manager implementation instances using the service for the default trust store
+
+    def trustmanager = service.getTrustManagers();    
+
+   //Get all KeyManager implementation instances using the service
+     
+    def keymanagers = service.getKeyManagers(alias);
+    ……………………………
+}
+</pre></div>
+
+											</div>
+
+										</td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+</div>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to access artificats like value mapping, number ranges refer to the table
+					below:</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio905b24171cc746ef9069939ff3b536db__choicetable_qzs_jqv_gv">
+<thead><tr><th valign="bottom" align="left" id="d1748964e435-option">
+							<p class="p">Artifact</p>
+
+						</th>
+<th valign="bottom" align="left" id="d1748964e435-desc">
+							<p class="p">Sample Script</p>
+
+						</th></tr></thead>
+<tbody>
+					
+					<tr class="strow chrow">
+						<td valign="top" headers="d1748964e435-option" id="d1748964e454" class="stentry choption" width="50%"><strong>
+							<p class="p">Value Mapping</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1748964e435-desc d1748964e454" class="stentry chdesc" width="50%">
+							<p class="p"><span class="ph emphasis emphasis">Import packages</span></p>
+
+							<p class="p"><samp class="ph codeph">import com.sap.it.api.ITApiFactory; </samp></p>
+
+							<p class="p"><samp class="ph codeph">import com.sap.it.api.keystore.KeystoreService;</samp></p>
+
+							<p class="p"><samp class="ph codeph">import
+									com.sap.it.api.keystore.exception.KeystoreException;</samp></p>
+
+							<div class="note sap-samplecodeblock samplecode"><span class="samplecodetitle">Sample Code</span> 
+								<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">def service = ITApiFactory.getApi(KeystoreService.class, null);   
+   
+if( service != null)
+{
+   //Get all trust manager implementation instances using the service for the default trust store
+
+    def trustmanager = service.getTrustManagers();    
+
+   //Get all KeyManager implementation instances using the service
+     
+    def keymanagers = service.getKeyManagers(alias);
+    ……………………………
+}
+</pre></div>
+
+							</div>
+
+						</td>
+
+					</tr>
+
+					
+				</tbody></table></div>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the changes.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_xcs_vsw_j4">
+							<li class="li">The script should be saved in the src.main.resources.script folder.</li>
+
+						</ul>
+
+						<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_udw_wsw_j4">
+							<li class="li">In the <span class="ph uicontrol">Properties</span> view, you can also choose
+									<span class="ph uicontrol">Browse</span> to select java scripts or groovy
+								scripts for custom processing.</li>
+
+						</ul>
+
+						<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_nps_2rd_tp">
+							<li class="li">You can also store external jar(s) in <span class="ph uicontrol">src.main.resources.lib</span>. You
+								can then invoke functions from these external jar(s) in the
+								script.</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+</ol>
+
+		<div class="section postreq"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Next Steps</h2></div>
+			<p class="p">There are the following additional Java interfaces for the message processing log
+				(MPL) which you can address with the script step (either in Groovy Script or
+				JavaScript):  </p>
+
+			<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_dyq_m5n_fs">
+				<li class="li">
+					<p class="p"><samp class="ph codeph">MessageLogFactory</samp>
+					</p>
+
+					<p class="p">Provides access to the message processing log.</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">MessageLog</samp></p>
+
+					<p class="p">Supports writing properties and adding attachments to the message processing
+						log.</p>
+
+				</li>
+
+			</ul>
+
+			<p class="p">The interface <samp class="ph codeph">MessageLogFactory</samp> can be used through the variable
+					<samp class="ph codeph">messageLogFactory</samp> in order to retrieve an instance of
+					<samp class="ph codeph">MessageLog</samp>.</p>
+
+			<p class="p">You can use the following methods in an instance of <samp class="ph codeph">MessageLog</samp> in
+				order to set a property of a given type in the message processing log:  </p>
+
+			<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_x4n_h5l_hs">
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void setStringProperty(String name, String value)</samp>
+					</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void setIntegerProperty(String name, Integer value) </samp></p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void setLongProperty(String name, Long value)</samp>
+					</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void setBooleanProperty(String name, Boolean value)</samp>
+					</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void setFloatProperty(String name, Float value)</samp>
+					</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void setDoubleProperty(String name, Double value)</samp>
+					</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void setDateProperty(String name, Date value)</samp></p>
+
+				</li>
+
+			</ul>
+
+			<p class="p">You can use the following method in an instance of <samp class="ph codeph">MessageLog</samp> in
+				order to add string to an attachment using  message processing log: </p>
+
+			<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_ryg_4xq_jx">
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void addAttachmentAsString(String name, String text, String
+							mediaType)</samp>
+					</p>
+
+				</li>
+
+			</ul>
+
+			<p class="p">You can use the following method in an instance of <samp class="ph codeph">MessageLog</samp> in
+				order to add, set, get, remove headers to/from an attachment using  message
+				processing log: </p>
+
+			<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_z52_55l_hs">
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void addAttachmentHeader(String headerName, String headerValue,AttachmentWrapper
+							attachment)</samp>
+					</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void setAttachmentHeader(String headerName, String headerValue,AttachmentWrapper
+							attachment)</samp>
+					</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">getAttachmentHeader(String headerName,AttachmentWrapper attachment)</samp>
+					</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void removeAttachmentHeader(String headerName, AttachmentWrapper attachment);
+						</samp>
+					</p>
+
+				</li>
+
+			</ul>
+
+			<p class="p">You can use the following method in an instance of <samp class="ph codeph">MessageLog</samp> in
+				order to add, set attachment objects as a map using  message processing log: </p>
+
+			<ul class="ul" id="loio905b24171cc746ef9069939ff3b536db__ul_jfs_xwq_jx">
+				<li class="li">
+					<p class="p"><samp class="ph codeph">Map&lt;String, AttachmentWrapper&gt; getAttachmentWrapperObjects()</samp>
+					</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void setAttachmentWrapperObjects(Map&lt;String, AttachmentWrapper&gt;
+							attachmentObjects) </samp>
+					</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">void addAttachmentObject(String id, AttachmentWrapper content) </samp>
+					</p>
+
+				</li>
+
+			</ul>
+
+			<p class="p">Use method <samp class="ph codeph">addAttachmentAsString</samp> to add a longer,
+            structured document to the message processing log (MPL). Use method
+                <samp class="ph codeph">setStringProperty</samp> only for short strings (containing one or a few
+            words).</p>
+
+			<p class="p">If the value <samp class="ph codeph">"null"</samp> is specified for the parameter
+				<samp class="ph codeph">mediaType</samp>, then the value <samp class="ph codeph">"text/plain"</samp> is assumed
+				as media type.” </p>
+
+			<p class="p">As an example, the following code lines allow you to set a string property:</p>
+
+			<p class="p">Groovy:  </p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">def messageLog = messageLogFactory.getMessageLog(message)
+messageLog.setStringProperty("Greeting", "Hello World!")</pre></div>
+
+			<p class="p">JavaScript:  </p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">var messageLog = messageLogFactory.getMessageLog(message)
+messageLog.setStringProperty("Greeting", "Hello World!")
+</pre></div>
+
+			<div class="note caution"><span class="cautiontitle">Caution</span> 
+				<p class="p">Note that the properties provided by the script step are displayed in
+						<span class="ph emphasis emphasis">alphabetical order</span> in the resulting message processing
+					log (MPL). That means that the sequence of properties in the MPL does not
+					necessarily reflect the sequence applied in the script.</p>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

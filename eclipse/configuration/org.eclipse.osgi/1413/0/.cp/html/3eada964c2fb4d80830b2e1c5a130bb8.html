@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Error Classification</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio3eada964c2fb4d80830b2e1c5a130bb8">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Error Classification</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc"/>
+
+		<div class="section"><p class="p">At design time of an
+                integration project, the way how a message is to be processed is specified by a
+                number of integration flow steps (for example, content modifier, encryptor or
+                routing step). When an integration flow is being processed at runtime, errors can
+                occur at several individual steps within the process flow (referred to as
+                    <cite class="cite">processing steps</cite> to differentiate them from the integration flow
+                steps as modelled at design time).</p>
+<p class="p">Integration flow steps can specify message
+                processing at different levels of complexity. Therefore, in general an integration
+                flow step (design time) can result in multiple processing steps steps at runtime.
+                </p>
+<p class="p">Each processing step gets a unique <span class="ph uicontrol">Step ID</span> which is
+                displayed in the message processing log. </p>
+<div class="note note"><span class="notetitle">Note</span> 
+                <p class="p">For example, a content modifier step in an integration flow model can (at
+                    runtime) be related to multiple processing steps: The content modifier step can
+                    be configured in a way that one processing step changes the message header, one
+                    the message body, and another one an exchange property. </p>
+
+            </div>
+<p class="p">In order to enable the integration developer to relate a
+                    <span class="ph emphasis emphasis">modelled</span> step to an error occurring at a certain processing
+                steps, at runtime, the same identifier is assigned to each processing step that
+                relates to the same integration flow step. This identifier is referred to as
+                    <span class="ph uicontrol">Model Step ID</span>. </p>
+<p class="p">The following figure illustrates
+                this behavior for a content modifier step in an integration flow, where three
+                different processing steps are related at runtime to the content modifier.
+                </p>
+<img class="image" id="loio3eada964c2fb4d80830b2e1c5a130bb8__d3341e41" src="loio27c1cc2ca786483da44ebcb4b7db1872_LowRes.png"/><p class="p">To allow an integration flow developer to relate to a certain integration flow
+                step during error handling, the runtime provides the Model Step ID of the
+                integration flow step where the error occurred as Exchange Property:
+                    <samp class="ph codeph">SAP_ErrorModelStepID</samp>. The content of the property can then be
+                evaluated in the error handling. </p>
+<div class="note note"><span class="notetitle">Note</span> 
+                <p class="p">You can use the property for instance in a condition definition of a Router step
+                    to choose a different error handling strategy depending on the step where the
+                    error occurred. </p>
+
+                <p class="p">Example for a routing condition : <samp class="ph codeph">${property.SAP_ErrorModelStepID} =
+                        ‘CallActivity_1’</samp></p>
+
+            </div>
+</div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

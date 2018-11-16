@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Converter/version::1.0.4" ComponentName="Converter" UIElementType="Flowstep">
+
+    <!-- Variant for Csv to Xml step -->
+	<Variant VariantId="ctype::FlowstepVariant/cname::CsvToXmlConverter/version::1.0.4" VariantName="CSV To XML Converter" AttachmentBehavior="Preserve" VariantDisplayName="CSV To XML Converter">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Text</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+			<Schema />
+		</Content>
+		</OutputContent>
+		<Tab id="iflow.advance.converter.tab">
+			<GuiLabels>
+				<Label language="EN">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id="General Details">
+				<AttributeReference>
+					<ReferenceName>XML_Schema_File_Path</ReferenceName>
+					<Restriction></Restriction>
+					<description>Select the path where the XML schema file is located</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>XPath_Field_Location</ReferenceName>
+					<description>Enter the XPath of the Record Identifier in XSD file e.g., rootElement/childElement</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Record_Identifier_in_CSV</ReferenceName>
+					<description>Enter Record Identifier in CSV file</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Field_Separator_in_CSV</ReferenceName>
+					<description>Enter Field Separator in CSV file</description>
+				</AttributeReference>				
+			</AttributeGroup>
+    	</Tab>
+	</Variant>
+    
+	<AttributeMetadata>
+        <Name>XML_Schema_File_Path</Name>
+		<Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+		<Length />
+		<HelpService>
+			<HelpServiceName>resourceLookupService</HelpServiceName>
+			<HelpServiceQueryAttributes>
+				<HelpServiceQueryAttribute>
+               		<Name>Type</Name>
+               		<Value>xsd</Value>
+           	 	</HelpServiceQueryAttribute>
+           	 	<HelpServiceQueryAttribute>
+					<Name>ResourceLocation</Name>
+					<Value>xsd</Value>
+               </HelpServiceQueryAttribute>				
+			</HelpServiceQueryAttributes>
+		</HelpService>
+        <GuiLabels>
+            <Label language="EN">XML Schema</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	<!-- <AttributeMetadata>
+		<Name>xpathForRecordIdentifier</Name>
+		<DataType>xsd:string</DataType>
+		<Usage>true</Usage>
+		<GuiLabels>
+			<Label language="EN">XPath of the Record Identifier in XSD</Label>
+		</GuiLabels>
+	</AttributeMetadata> -->
+	<AttributeMetadata>
+		<Name>Record_Identifier_in_CSV</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>		
+		<GuiLabels>
+			<Label language="EN">Record Identifier in CSV</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<!-- <AttributeMetadata>
+		<Name>fieldSeparatorInCSV</Name>
+		<DataType>xsd:string</DataType>
+		<Usage>false</Usage>
+		<GuiLabels>
+			<Label language="EN">Field Separator in CSV</Label>
+		</GuiLabels>
+	</AttributeMetadata> -->
+	
+	<!-- Attributes for Xml to Csv converter -->
+	<AttributeMetadata>
+		<Name>XPath_Field_Location</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>		
+		<GuiLabels>
+			<Label language="EN">Path to Target Element in XSD</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>Include_Header</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>		
+		<GuiLabels>
+			<Label language="EN">Include field name as headers</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>Include_Master</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>		
+		<GuiLabels>
+			<Label language="EN">Include master node for conversion</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>Include_Attribute</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>		
+		<GuiLabels>
+			<Label language="EN">Include attribute values</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>Master_XPath_Field_Location</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>		
+		<GuiLabels>
+			<Label language="EN">XPath of the Master Record Identifier</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+
+    <!--  replace simple definition with complete enumeration -->
+    <AttributeMetadata>
+        <Name>Field_Separator_in_CSV</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>        
+        <Default>,</Default>
+        <GuiLabels>
+            <Label language="EN">Field Separator in CSV</Label>
+        </GuiLabels>
+        <FixedValues>
+        	<isEditable>true</isEditable>
+            <FixedValue>
+                <Value>\t</Value>
+                <GuiLabels>
+                    <Label language="EN">Tab(\t)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>;</Value>
+                <GuiLabels>
+                    <Label language="EN">Semicolon(;)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>:</Value>
+                <GuiLabels>
+                    <Label language="EN">Colon(:)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>|</Value>
+                <GuiLabels>
+                    <Label language="EN">Pipe(|)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>.</Value>
+                <GuiLabels>
+                    <Label language="EN">Dot(.)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>,</Value>
+                <GuiLabels>
+                    <Label language="EN">Comma(,)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Space</Value>
+                <GuiLabels>
+                    <Label language="EN">Space</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    
+    <!-- XmlJsonConverter -->
+    <AttributeMetadata>
+        <Name>Activity_Name</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Converter</Default>        
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+		<Name>jsonInputEncoding</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+        <Default></Default>        
+		<GuiLabels>
+			<Label language="EN">JSON Input Encoding</Label>
+		</GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value></Value>
+                <GuiLabels>
+                    <Label language="EN">From Header or Property</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>UTF-8</Value>
+                <GuiLabels>
+                    <Label language="EN">UTF-8</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>UTF-16BE</Value>
+                <GuiLabels>
+                    <Label language="EN">UTF-16BE</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>UTF-16LE</Value>
+                <GuiLabels>
+                    <Label language="EN">UTF-16LE</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>UTF-32BE</Value>
+                <GuiLabels>
+                    <Label language="EN">UTF-32BE</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>UTF-32LE</Value>
+                <GuiLabels>
+                    <Label language="EN">UTF-32LE</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+	</AttributeMetadata>
+    <AttributeMetadata>
+        <Name>jsonOutputEncoding</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>        
+        <GuiLabels>
+            <Label language="EN">JSON Output Encoding</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value></Value>
+                <GuiLabels>
+                    <Label language="EN">From Header or Property</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>UTF-8</Value>
+                <GuiLabels>
+                    <Label language="EN">UTF-8</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>UTF-16BE</Value>
+                <GuiLabels>
+                    <Label language="EN">UTF-16BE</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>UTF-16LE</Value>
+                <GuiLabels>
+                    <Label language="EN">UTF-16LE</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>UTF-32BE</Value>
+                <GuiLabels>
+                    <Label language="EN">UTF-32BE</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>UTF-32LE</Value>
+                <GuiLabels>
+                    <Label language="EN">UTF-32LE</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+		<Name>jsonNamespaceSeparator</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>        
+        <Default>:</Default>
+		<GuiLabels>
+			<Label language="EN">JSON Prefix Separator</Label>
+		</GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>:</Value>
+                <GuiLabels>
+                    <Label language="EN">Colon(:)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>,</Value>
+                <GuiLabels>
+                    <Label language="EN">Comma(,)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>.</Value>
+                <GuiLabels>
+                    <Label language="EN">Dot(.)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>|</Value>
+                <GuiLabels>
+                    <Label language="EN">Pipe(|)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>;</Value>
+                <GuiLabels>
+                    <Label language="EN">Semicolon(;)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value> </Value>
+                <GuiLabels>
+                    <Label language="EN">Space</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+	</AttributeMetadata>
+    <AttributeMetadata>
+        <Name>useNamespaces</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>0</Default>        
+        <GuiLabels>
+            <Label language="EN">Use Namespace Mapping</Label>
+        </GuiLabels>
+    </AttributeMetadata>  
+    <AttributeTableMetadata>
+        <Name>jsonNamespaceMapping</Name>
+        <GuiLabels>
+            <Label language="EN"></Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>xmlNamespace</ReferenceName>
+        </AttributeReference>
+        <AttributeReference>
+            <ReferenceName>jsonPrefix</ReferenceName>
+        </AttributeReference>        
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>jsonPrefix</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>        
+        <GuiLabels>
+            <Label language="EN">JSON Prefix</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xmlNamespace</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>        
+        <GuiLabels>
+            <Label language="EN">XML Namespace</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xmlJsonSuppressRootElement</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>0</Default>        
+        <GuiLabels>
+            <Label language="EN">Suppress JSON Root Element</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>xmlJsonUseStreaming</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>0</Default>        
+        <GuiLabels>
+            <Label language="EN">Streaming</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+		<Name>xmlJsonConvertAllElements</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>        
+        <Default>:</Default>
+		<GuiLabels>
+			<Label language="EN">Convert XML Elements to JSON Array:</Label>
+		</GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>all</Value>
+                <GuiLabels>
+                    <Label language="EN">All</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>specific</Value>
+                <GuiLabels>
+                    <Label language="EN">Specified Ones</Label>
+                </GuiLabels>
+            </FixedValue>        
+        </FixedValues>
+	</AttributeMetadata>
+    <AttributeTableMetadata>
+        <Name>xmlJsonPathTable</Name>
+        <GuiLabels>
+            <Label language="EN"></Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>xmlElement</ReferenceName>
+        </AttributeReference>
+        <AttributeReference>
+            <ReferenceName>fromXsd</ReferenceName>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>xmlElement</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>        
+        <GuiLabels>
+            <Label language="EN">XML Element</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>fromXsd</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>        
+        <GuiLabels>
+            <Label language="EN">From XSD</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

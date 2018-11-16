@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<introContent>
+  	<extensionContent id="com.sap.adt.intro.whatsnewinfo" name="Whats New Details" style="css/sample.css" path="whatsnew/@">
+  	   <group label="ABAP Development Tools" style-id="content-group" id="content-group" expandable="false" >   
+           
+            <text style-id="group-description">Find out about significant changes and new features in this release
+            </text>
+
+            <link style-id="content-link" label=" > ABAP Core Development" 
+                  url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.abapdev.guide.doc.user/html/3ebab4754466449c8a5ef156fbde3df4.html" 
+                  id="abapstandard_doc">
+          		<text>Find out about the major changes made to the tools for the ABAP core development scenario. </text>
+       		</link>
+       		<!-- 
+            <link style-id="content-link" label=" > ABAP for HANA Development" 
+                   url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.a4idev.guide.doc.user/html/tasks/using_abap_hana_tools.html" 
+                   id="abapstandard_doc">
+          		<text>Learn which options are available for integration of the HANA contents within the ABAP layer. 
+          		(Requires that "ABAP Development Tools for SAP HANA" feature is installed.)</text>
+       		</link>       		
+ 			
+            <link style-id="content-link" label=" > Core Data Services (CDS) for ABAP" 
+            		url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.cds.ddl.doc.user/html/cds_view_building.html"
+                         id="abapstandard_doc">
+          		<text>SAP NetWeaver 7.40, SP2 provides already a basic DDL support as part of the CDS layer for defining entities 
+          		for views as projections onto database tables.</text>
+       		</link>
+
+            <link style-id="content-link" label=" > UI Development with Web Dynpro ABAP" 
+            		url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.wda.userguide/html/tasks/Web_Dynpro_ABAP_Development_User_Guide.htm"
+                         id="abapstandard_doc">
+          		<text>Learn about how Web Dynpro tools support you when implementing user interfaces for ABAP applications.
+          		(Requires that "Web Dynpro ABAP Tools" feature is installed.)</text>
+       		</link>
+
+            <link style-id="content-link" label=" > Enterprise Services Development" 
+            		url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.mts.processintegration.userguide/html/tasks/Developing_Enterprise_Services_in_ES%20Repository.html"
+                         id="abapstandard_doc">
+          		<text>Learn about how ABAP Development Tools support you when developing Enterprise Services. 
+          		(Requires that "ABAP Connectivity and Integration Development Tools" feature is installed.)</text>
+       		</link>      				
+       		-->	        
+       </group>  	   
+  	   
+  	
+  	</extensionContent>
+
+
+</introContent>

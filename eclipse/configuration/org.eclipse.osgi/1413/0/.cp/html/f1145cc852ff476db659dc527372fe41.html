@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="The receiver mail adapter allows you to send out encrypted messages by e-mail. The mail sender adapter can download e-mails and access the e-mail body content as well as attachments."/>
+<meta name="description" content="The receiver mail adapter allows you to send out encrypted messages by e-mail. The mail sender adapter can download e-mails and access the e-mail body content as well as attachments."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure a Channel with Mail Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiof1145cc852ff476db659dc527372fe41">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure a Channel with Mail Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">The receiver mail adapter allows you to send out
+            encrypted messages by e-mail. The mail sender adapter can download e-mails and access
+            the e-mail body content as well as attachments.</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><div class="sectiondiv">
+            <p class="p">You configure the mail adapter either as a receiver adapter or as a sender
+                adapter.</p>
+
+            <p class="p">With the mail receiver adapter you can send out encrypted messages by e-mail.</p>
+
+            <div class="p">With the mail sender adapter you can do the following:<ul class="ul" id="loiof1145cc852ff476db659dc527372fe41__d7830e847">
+                    <li class="li">
+                        <p class="p">Downloading e-mails from mailboxes using IMAP or POP3 protocol</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">Accessing the content of the e-mail body</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">Accessing e-mail attachments</p>
+
+                    </li>
+
+                </ul>
+<div class="note note"><span class="notetitle">Note</span> 
+                    <p class="p">The mailbox settings for downloding e-mails can interfere with the settings
+                        in the mail sender adapter.</p>
+
+                    <p class="p">For example: When using POP3 protocol, the post-processing setting
+                        Delete/Remove might not work properly. In this case, try to configure the
+                        correct behavior in the mailbox.</p>
+
+                </div>
+<div class="note note"><span class="notetitle">Note</span> 
+                    <p class="p">To access the mail attributes, i. e. Subject, From or To, you have to set
+                        them manually as <span class="ph uicontrol">Allowed Headers</span> in the
+                            <span class="ph uicontrol">Runtime Configuration</span> tab page. This will add
+                        them to a Whitelist.</p>
+
+                </div>
+<div class="note note"><span class="notetitle">Note</span> 
+                    <p class="p">To access an attachment you have to use Groovy script or JavaScript.</p>
+
+                    <p class="p">For more information on how to access attachments, refer to the documentation
+                        of the Script step.</p>
+
+                </div>
+</div>
+
+        </div><div class="sectiondiv">
+				<div class="note note"><span class="notetitle">Note</span> 
+            <p class="p"><span class="ph emphasis emphasis">No authentication of e-mail sender possible</span></p>
+
+            <p class="p">Unlike with other adapters, when using the Mail Sender Adapter, the <span class="ph pname">Cloud Integration</span> system can't
+                authenticate the sender of an e-mail. </p>
+
+            <p class="p">Therefore, if someone is sending you e.g. maleware, it is not possible to identify
+                and block this sender by the <span class="ph pname">Cloud Integration</span> system. </p>
+
+            <p class="p">To minimize the danger use the authentication mechanism of your mailbox. But keep in
+                mind that this mechanism might not be efficient enough. </p>
+
+            <p class="p"> </p>
+
+            <div class="p">There are three possible threats when processing e-mail content:<ul class="ul" id="loiof1145cc852ff476db659dc527372fe41__d7830e920">
+                    <li class="li">
+                        <p class="p">Danger to a receiver system when forwarding e-mail content</p>
+
+                        <p class="p">E-Mails can contain maleware, such as viruses or trojan horses.</p>
+
+                        <p class="p">These will not affect the <span class="ph pname">Cloud Integration</span>
+                            system, but they can cause damage to a receiver system, if it doesn't
+                            use sufficient protection strategies.</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">Danger to the <span class="ph pname">Cloud Integration</span>
+                            system</p>
+
+                        <p class="p">E-mail content can be designed to affect the processing runtime of a
+                            system.</p>
+
+                        <p class="p">Processing these contents overloads the system and prevents request from
+                            being fulfilled (denial of service).</p>
+
+                        <p class="p">Then the <span class="ph pname">Cloud Integration</span>
+                            system is unavailable until the problem is fixed.</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">Reliability of data</p>
+
+                        <p class="p">Sending e-mails is anonymous. It is not possible to verify, if the sender
+                            of an e-mail really is, who they claim to be.</p>
+
+                        <p class="p">Even if your mailbox offers an authentication mechanism, this mechanism
+                            might not be efficient enough.</p>
+
+                        <p class="p">Therefore data contained in an e-mail, e.g. the amount ordered, isn’t
+                            reliable without further verification. </p>
+
+                    </li>
+
+                </ul>
+</div>
+
+        </div>
+
+			</div><div class="p">The following prerequisites must be met: <ul class="ul" id="loiof1145cc852ff476db659dc527372fe41__ul_iz2_xw5_ds">
+					<li class="li">You have logged into your customer workspace in  web tooling.</li>
+
+					<li class="li">You have assigned the mail adapter to the communication channel.</li>
+
+				</ul>
+
+			</div>
+<div class="note caution"><span class="cautiontitle">Caution</span> 
+				<p class="p">If you select <span class="ph uicontrol">Run Once</span> option in the
+						<span class="ph uicontrol">Scheduler</span>, you see messages triggered from all the
+					integration flows with this setting after a software update. After the latest
+					software is installed on a cluster, it is restarted.</p>
+
+				<p class="p">This results in the integration flows getting deployed again and you see messages
+					from these integration flows with <span class="ph uicontrol">Run Once</span> setting.</p>
+
+			</div>
+<div class="note restriction"><span class="restrictiontitle">Restriction</span> An integration flow you deploy in <span class="ph pname" id="loiof1145cc852ff476db659dc527372fe41__int-long-name">SAP Cloud Platform Integration</span> deploys in multiple
+				IFLMAP worker nodes. Polling is triggered from only one of the worker nodes. The
+				message monitoring currently displays the process status from the worker nodes where
+				the <span class="ph uicontrol">Scheduler</span> is not started. This results in the message
+				monitor displaying messages with less than a few milliseconds, where the schedule
+				was not triggered. These entries contain <span class="ph uicontrol">firenow=true</span> in the
+				log. You can ignore these entries.</div>
+</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loiof1145cc852ff476db659dc527372fe41__steps_opw_pv5_ds"><li class="li step stepexpand">
+				<span class="ph cmd">Select the integration flow you want to configure and choose
+						<span class="ph uicontrol">Edit</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the communication channel with mail adapter that you want to configure.
+				</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">General</span> tab page, provide channel name and
+					description in the relevant fields if required. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Connection</span> tab page, enter the details as shown below.
+					Depending on whether you connect a sender or a receiver adapter, refer to one of
+					the following two tables.</span>
+				<div class="itemgroup info"><div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loiof1145cc852ff476db659dc527372fe41__d7830e14" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Parameters and Values of Sender Mail Adapter (General)</span></caption>
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d5146380e253">Section</th>
+
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d5146380e256">Parameters</th>
+
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d5146380e259">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="5" valign="top" width="33.33333333333333%" headers="d5146380e253 ">
+                                <p class="p"><span class="keyword uilabel">Connection Details</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e256 ">
+                                <p class="p"><span class="ph uicontrol">Address</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e259 ">Specifies the host name or address of the IMAP server, for
+                                example, mail.domain.com</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e256 ">
+                                <p class="p"><span class="ph uicontrol">Timeout (in ms)</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e259 ">Specifies the network timeout for the connection attempt to the
+                                server. The default value is 30000.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e256 ">
+                                <p class="p"><span class="ph uicontrol">Protection</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e259 ">Specify the method to use to establish an encrypted (secure)
+                                connection</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e256 ">
+                                <p class="p"><span class="ph uicontrol">Authentication</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e259 ">Specifies which mechanism is used to authenticate against the
+                                server with a user name and password combination. Possible values
+                                    are:<ul class="ul" id="loiof1145cc852ff476db659dc527372fe41__d7830e101">
+                                    <li class="li"><span class="ph uicontrol">Plain User Name/Password</span><p class="p">The user
+                                            name and password are sent in plain text. It is not
+                                            recommended to use this method over a public or insecure
+                                            network without a protected connection , but it may be
+                                            necessary if the server does not support SSL or other
+                                            authentication mechanisms.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">CRAM-MD5 </span><p class="p">The user name and
+                                            password are hashed before being sent to the server.
+                                            This mechanism is secure even without
+                                        encryption.</p>
+</li>
+
+                                </ul>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e256 "><span class="ph uicontrol">Credential Name</span> (only in case
+                                    <span class="ph uicontrol">CRAM-MD5 </span> or <span class="ph uicontrol">Plain User
+                                    Name/Password</span> has been chosen for
+                                    <span class="ph uicontrol">Authentication</span></td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e259 ">Specify the credential name to use to authenticate against the
+                                server</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="3" valign="top" width="33.33333333333333%" headers="d5146380e253 ">
+                                <p class="p"><span class="keyword uinolabel">Processing Parameters</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e256 ">
+                                <p class="p"><span class="ph uicontrol">Folder</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e259 ">Specify the IMAP folder containing the mails to be read</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e256 ">
+                                <p class="p"><span class="ph uicontrol">Selection</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e259 ">Specify which mails will be processed</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e256 ">
+                                <p class="p"><span class="ph uicontrol">Post-Processing</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e259 ">Specify how to handle processed mails on the server<div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">If the <span class="ph uicontrol">Post-Processing</span> is set to
+                                            <span class="ph uicontrol">Mark as Read</span> and the poll
+                                        strategy is set to poll for all mails (<span class="ph uicontrol">Selection:
+                                            All</span>), then these already processed mails
+                                        will be processed again at every polling interval.</p>
+
+                                    <p class="p">If this is what you want, make sure that your polling
+                                        interval is large enough, otherwise your process might
+                                        become inefficient.</p>
+
+                                </div>
+</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loiof1145cc852ff476db659dc527372fe41__d7830e303" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Parameters and Values of Receiver Mail Adapter (General)</span></caption>
+<colgroup><col width="15.673981191222571%"/><col width="22.884012539184955%"/><col width="61.442006269592476%"/></colgroup>
+
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="15.673981191222571%" id="d5146380e444">Section</th>
+
+                            <th class="entry" valign="top" width="22.884012539184955%" id="d5146380e447">Parameters</th>
+
+                            <th class="entry" valign="top" width="61.442006269592476%" id="d5146380e450">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="5" valign="top" width="15.673981191222571%" headers="d5146380e444 ">
+                                <span class="keyword uilabel">Connection Details</span></td>
+
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <span class="ph uicontrol">Address</span></td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">Specifies the host name and optionally a port number of the SMTP
+                                server. <p class="p">An external mail server can be used. </p>
+<p class="p">Use one of
+                                    the following open ports for external mail servers: </p>
+<ul class="ul" id="loiof1145cc852ff476db659dc527372fe41__d7830e351">
+                                    <li class="li">
+                                        <p class="p">587 for SMTP+STARTTLS </p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p">465 for SMTPS</p>
+
+                                    </li>
+
+                                </ul>
+<p class="p">Note that connections to external email servers on port 25
+                                    are not supported. To connect to servers on the public Internet,
+                                    use one of the ports listed above.</p>
+<p class="p">When you use GMail
+                                    Server, make sure that during server configuration you allow
+                                    insecure applications (GMail considers only communication based
+                                    on OAuth2 as secure).</p>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 "><span class="ph uicontrol">Timeout (in ms)</span>
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">Specifies the network timeout for the connection attempt to the
+                                    server.<p class="p">This is only used for Transmission Control Protocol
+                                    (TCP), there is no timeout for SMTP commands.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <span class="ph uicontrol">Protection</span>
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 "> Controls whether encryption is used. The possible values are:<ul class="ul" id="loiof1145cc852ff476db659dc527372fe41__d7830e395">
+                                    <li class="li"><span class="ph uicontrol">STARTTLS Mandatory </span><p class="p">If the server
+                                            does not support the STARTTLS command, the connection
+                                            fails.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">STARTTLS Optional</span><p class="p">If the server
+                                            supports the STARTTLS command, the connection is
+                                            upgraded to Transport Layer Security encryption. This
+                                            works with the normal port 25.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">SMTPS</span><p class="p">The TCP connection to the
+                                            server is encrypted using SSL/TLS. This usually requires
+                                            an SSL proxy on the server side and access to the port
+                                            it runs on.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">Off </span><p class="p">No encryption is initiated,
+                                            whether the server requests it or not.</p>
+</li>
+
+                                </ul>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <span class="ph uicontrol">Authentication</span>
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">Specifies which mechanism is used to authenticate against the
+                                server with a user name and password combination. Possible values
+                                    are:<ul class="ul" id="loiof1145cc852ff476db659dc527372fe41__d7830e433">
+                                    <li class="li"><span class="ph uicontrol">None</span><p class="p">No authentication is
+                                            attempted. No credential can be chosen.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">Plain User Name/Password</span><p class="p">The user
+                                            name and password are sent in plain text. It is not
+                                            recommended to use this method over a public or insecure
+                                            network without a protected connection , but it may be
+                                            necessary if the server does not support SSL or other
+                                            authentication mechanisms.</p>
+</li>
+
+                                    <li class="li"><span class="ph uicontrol">CRAM-MD5 </span><p class="p">The user name and
+                                            password are hashed before being sent to the server.
+                                            This mechanism is secure even without
+                                        encryption.</p>
+</li>
+
+                                </ul>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <span class="ph uicontrol">Credential Name</span> (only in case
+                                    <span class="ph uicontrol">CRAM-MD5 </span> or <span class="ph uicontrol">Plain User
+                                    Name/Password</span> has been chosen for
+                                    <span class="ph uicontrol">Authentication</span>)</td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">Specifies the name of a deployed credential to use for
+                                authentication (if one of the mechanisms in Authentication Method is
+                                selected).</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="8" valign="top" width="15.673981191222571%" headers="d5146380e444 ">
+                                <p class="p"><span class="keyword uilabel">Mail Attributes</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">From</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">E-mail address that the message comes from.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">To</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">E-mail address that the message is sent to. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">Cc</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">Additional e-mail addresses that the e-mail is to be sent
+                                    to.<p class="p">These addresses are visible to the receiver.</p>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">Bcc</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">Additional e-mail addresses that the e-mail is to be sent to.
+                                    <p class="p">These addresses are not visible to the receiver.</p>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">Subject</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">Subject of the e-mail message.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">Mail Body</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">Specifies the text of an electronic mail message.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">Body MIME Type</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">
+                                <p class="p">Specifies the type of the message body. Depending on this type,
+                                    the message will be displayed differently by different user
+                                    agents.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">Body Encoding</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">
+                                <p class="p">Specifies the character encoding (character set) of the message
+                                    body. The content of the input message will be converted to this
+                                    encoding, and any character that is not available will be
+                                    replaced with a question mark ('?'). To ensure that data is
+                                    passed unmodified, select a Unicode encoding, for example
+                                    UTF-8.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="5" valign="top" width="15.673981191222571%" headers="d5146380e444 ">
+                                <p class="p"><span class="keyword uilabel">Attachments</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">Name</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">
+                                <p class="p">Specifies the file name of the attachment.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">MIME Type</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">
+                                <p class="p">The Multipurpose Internet Mail Extensions (Mime)-Type Specifies
+                                    data format of the email.</p>
+
+                                <p class="p">You can select from the following Mime-Types:</p>
+
+                                <ul class="ul" id="loiof1145cc852ff476db659dc527372fe41__d7830e639">
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Text/Plain</span>
+                                        </p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Text/CSV</span>
+                                        </p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Text/HTML</span></p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Application/XML</span></p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Application/JSON</span></p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Application/Octet-Stream</span></p>
+
+                                    </li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">Source</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">
+                                <p class="p">Specifies the source of the data - either Body, meaning the body
+                                    of the input message, or Header, meaning a header of the input
+                                    message.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">Header Name</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">
+                                <p class="p">If the source is Header, this specifies the name of the header
+                                    that is attached.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="22.884012539184955%" headers="d5146380e447 ">
+                                <p class="p"><span class="ph uicontrol">Add Message Attachments</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="61.442006269592476%" headers="d5146380e450 ">
+                                <p class="p">Select this option to add all attachments contained in the
+                                    message exchange to the e-mail.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+					</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">For the receiver adapter, choose the <span class="ph uicontrol">Security</span> tab page and enter the
+					details as shown in the table below: </span>
+				<div class="itemgroup info"><div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loiof1145cc852ff476db659dc527372fe41__d7830e743" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 3: Parameters and Values of Receiver Mail Adapter (Security)</span></caption>
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d5146380e896">Section</th>
+
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d5146380e899">Parameters</th>
+
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d5146380e902">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="4" valign="top" width="33.33333333333333%" headers="d5146380e896 ">
+                                <p class="p"><span class="keyword uinolabel">Security</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e899 ">
+                                <p class="p"><span class="ph uicontrol">Encryption Type</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e902 ">This parameter configures an encryption scheme used for sending
+                                e-mails. The message body and attachments are encrypted with the
+                                selected scheme and can only be decrypted by the intended
+                                recipients.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e899 ">
+                                <p class="p"><span class="ph uicontrol">Content Encryption Algorithm</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e902 ">Specifies the symmetric (block) cipher. DESede should only be
+                                chosen if the destination system or mail client does not support
+                                AES.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e899 ">
+                                <p class="p"><span class="ph uicontrol">Secret Key Length</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e902 ">Specifies the key size of the previously chosen symmetric cipher.
+                                To increase the security choose the maximum key size supported by
+                                the destination.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e899 ">
+                                <p class="p"><span class="ph uicontrol">Receiver Public Key Alias</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e902 ">Specify an alias for the public key that is to be used to encrypt
+                                the message. This key has to be part of the tenant keystore.</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">For the sender adapter, choose the <span class="ph uicontrol">Delay Parameters</span> tab
+					page and enter the details as shown in the table below:</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loiof1145cc852ff476db659dc527372fe41__d7830e205" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 4: Parameters and Values of Sender Mail Adapter (Scheduler)</span></caption>
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d5146380e1003">Section</th>
+
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d5146380e1006">Parameters</th>
+
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d5146380e1009">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="3" valign="top" width="33.33333333333333%" headers="d5146380e1003 ">
+                                <p class="p"><span class="keyword uinolabel">Delay Parameters</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e1006 ">
+                                <p class="p"><span class="ph uicontrol">Initial Delay (in ms)</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e1009 ">Delay before the mail polling starts. The default value is 1000
+                                ms.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e1006 ">
+                                <p class="p"><span class="ph uicontrol">Recurrent Delay (in ms)</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e1009 ">Delay before the next mail polling starts. The default value is
+                                30000 ms.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e1006 ">
+                                <p class="p"><span class="ph uicontrol">Use Fixed Delay</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d5146380e1009 ">Specifies whether Fixed Delay or Fixed Rate is used. <ul class="ul" id="loiof1145cc852ff476db659dc527372fe41__d7830e279">
+                                    <li class="li">
+                                        <p class="p">Fixed Delay</p>
+
+                                        <p class="p">Delay period starts after last poll has finished.</p>
+
+                                    </li>
+
+                                    <li class="li">Fixed Rate<p class="p">Delay period starts after poll has
+                                        started.</p>
+</li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy changes.</span>
+				<div class="itemgroup info">
+					<div class="p">
+						<div class="note note"><span class="notetitle">Note</span> The parameters <span class="ph uicontrol">From</span>, <span class="ph uicontrol">To</span>,
+								<span class="ph uicontrol">Cc</span>, <span class="ph uicontrol">Bcc</span>,
+								<span class="ph uicontrol">Subject</span>, <span class="ph uicontrol">Mail Body</span> as
+							well as the attachment name, can be dynamically set at runtime from
+							message headers or content. </div>
+
+					</div>
+
+				</div>
+				<div class="itemgroup info">For more information about Camel Simple Expressions, see the
+					following: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://camel.apache.org/simple.html" target="_blank" alt="http://camel.apache.org/simple.html" title="http://camel.apache.org/simple.html">http://camel.apache.org/simple.html<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></div>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="13f2e693c834428dad4c14fcc87fe821.html">Dynamic Parameters</a></div>
+<div><a class="link" href="abb1e90c4210468597e0360e840dcb17.html">Headers and Exchange Properties</a></div>
+<div><a class="link" href="03b32eb2c5c249f0a59bcd27c44d1e4e.html">Define Script</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

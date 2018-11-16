@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure Communication Channel with SuccessFactors (REST) Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio9df8cc675ffd42e3afcf881127a2777f">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure Communication Channel with SuccessFactors (REST) Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loio9df8cc675ffd42e3afcf881127a2777f__ul_hxb_sxp_gr">
+					<li class="li">
+						<p class="p">You have logged into your customer workspace in <span class="ph pname">SAP Cloud Platform
+                        Integration</span> web
+							tooling.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You have assigned the SuccessFactors adapter to the communication
+							channel.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You have selected REST message protocol while assigning the
+							SuccessFactors adapter. </p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">The SuccessFactors adapter enables you to communicate with the SuccessFactors system. You use
+				the REST message protocol to connect to the REST based web services of the
+				SuccessFactors system.</p>
+
+			<p class="p">You use this procedure to configure communication channel with SuccessFactors
+				adapter.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Select the integration flow you want to configure and choose
+					<span class="ph uicontrol">Edit</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the communication channel you want to configure. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">General</span> tab page, provide channel name and
+					description in the relevant fields if required. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Adapter Specific</span> tab page and provide values in
+					fields based on description in table.</span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loio9df8cc675ffd42e3afcf881127a2777f__table_tpv_yxp_gr" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Field Name and Description for SuccessFactors REST Adapter Processing
+							Details</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="50%" id="d3637502e105">
+										<p class="p">Field</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="50%" id="d3637502e111">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3637502e105 ">
+										<p class="p">Address</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3637502e111 ">
+										<p class="p">URL of the SuccessFactors LMS service</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3637502e105 ">
+										<p class="p">Address Suffix</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3637502e111 ">
+										<p class="p">URL suffix for the SuccessFactors LMS service</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3637502e105 ">
+										<p class="p">Credential Name</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3637502e111 ">
+										<p class="p">Name of the credentials deployed on the SuccessFactors
+											LMS service for authentication </p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3637502e105 ">
+										<p class="p">Proxy Type</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3637502e111 ">
+										<p class="p">Type of proxy you want to use to connect to
+											SuccessFactors system.</p>
+
+										<p class="p">If you choose <span class="ph uicontrol">Manual</span>, you should
+											enter values for fields <span class="ph uicontrol">Proxy
+												Host</span> and <span class="ph uicontrol">Proxy
+												Port</span>. </p>
+
+										<p class="p"><span class="ph uicontrol">Proxy Host</span> is the name of proxy
+											host you are using.</p>
+
+										<p class="p"><span class="ph uicontrol">Proxy Port</span> is the port number that
+											you are using.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3637502e105 ">
+										<p class="p">Operation</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3637502e111 ">
+										<p class="p">Operation that you want to perform</p>
+
+										<div class="p">
+											<div class="note note"><span class="notetitle">Note</span> You can only perform GET operation on sender
+												channel. </div>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3637502e105 ">
+										<p class="p">Entity</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3637502e111 ">
+										<p class="p">LMS entity that you are accessing. </p>
+
+										<div class="p">
+											<div class="note note"><span class="notetitle">Note</span> Refer for the relevant LMS API documentation for
+												more details. </div>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3637502e105 ">
+										<p class="p">Parameters</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3637502e111 ">
+										<p class="p">Operation parameters that you want to send </p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3637502e105 ">
+										<p class="p">Page Size</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3637502e111 ">
+										<p class="p">Maximum number of records in one page of response</p>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you are configuring the sender channel, choose
+						<span class="ph uicontrol">Scheduler</span> tab page and provide values in fields based
+					on description in table. </span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loio9df8cc675ffd42e3afcf881127a2777f__table_dch_trp_gr" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+							
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="33.33333333333333%" id="d3637502e305">
+										<p class="p">Scheduler Option</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="33.33333333333333%" id="d3637502e311">
+										<p class="p">Field</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="33.33333333333333%" id="d3637502e317">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e305 ">
+										<p class="p">Run Once</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e311 ">
+										<p class="p">NA</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e317 ">
+										<p class="p">Select to execute the operation immediately after
+											deploying the integration content</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" rowspan="4" valign="top" width="33.33333333333333%" headers="d3637502e305 ">
+										<p class="p">Schedule on Day</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e311 ">
+										<p class="p">On Date</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e317 ">
+										<p class="p">Specify the date on which you want the operation to be
+											executed</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e311 ">
+										<p class="p">On Time</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e317 ">
+										<p class="p">Specify the time on which you want the operation to be
+											executed </p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e311 ">
+										<p class="p">Every</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e317 ">
+										<p class="p">Specify the interval in which the operation has to be
+											executed. </p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e311 ">
+										<p class="p">Time Zone</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e317 ">
+										<p class="p">Select the time zone that you want the scheduler to use
+											as a reference for the date and time settings</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" rowspan="3" valign="top" width="33.33333333333333%" headers="d3637502e305 ">
+										<p class="p">Schedule to Recur</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e311 ">
+										<p class="p">Daily </p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e317 ">
+										<p class="p">Select the time or interval and time zone for the
+											schedule to recur </p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e311 ">
+										<p class="p">Weekly</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e317 ">
+										<p class="p">Select the checkboxes to indicate the days of the week on
+											which the operation has to be executed. Also, specify
+											the time or interval for the schedule to recur</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e311 ">
+										<p class="p">Monthly</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="33.33333333333333%" headers="d3637502e317 ">
+										<p class="p">Select the day of the month on which the operation has to
+											be executed. Also indicate the time or the interval
+											during which the schedule has to recur</p>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the configuration.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

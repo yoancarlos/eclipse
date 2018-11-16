@@ -1,0 +1,583 @@
+grammar OSDL_1_0
+PARSER_OPTIONS
+   NAMESPACE = "xsodata"
+   PARSER_NAME = "OSDL"
+   PARSER_CLASS = "OSDLParserBase"
+   SCANNER_MODE = XSODATA
+   SCANNER_CLASS = "OSDLParserRawScannerImpl"
+   MAX_SUSPICIOUS_MATCHES = 0
+   RESERVE_OPERATORS = TRUE
+   RESERVE_ALL_KEYWORDS = TRUE
+   WARNING_LEVEL = 2   
+;
+
+// any keyword wildcard
+TOK_DEF(_C("#ANYKW#"), NUM_ANYKW)
+// any literal wildcard
+TOK_DEF(_C("#ANYLIT#"), NUM_ANYLIT)
+// whitespace stuff
+TOK_DEF(_C("#EOF#"), NUM_EOF)
+TOK_DEF(_C("#NL#"), NUM_NL)
+TOK_DEF(_C("#COMMENT1#"), NUM_COMMENT1)
+TOK_DEF(_C("#COMMENT2#"), NUM_COMMENT2)
+// for obscure reasons, tokens above shall not be changed! 
+TOK_DEF(_C("."), NUM_DOT)
+TOK_DEF(_C(","), NUM_COMMA)
+TOK_DEF(_C(":"), NUM_COLON)
+TOK_DEF(_C(";"), NUM_SEMICOLON)
+TOK_DEF(_C("("), NUM_LPAREN)
+TOK_DEF(_C(")"), NUM_RPAREN)
+TOK_DEF(_C("{"), NUM_LCURLY)
+TOK_DEF(_C("}"), NUM_RCURLY)
+//TOK_DEF(_C("="), NUM_EQ)
+//TOK_DEF(_C("<"), NUM_LT)
+//TOK_DEF(_C(">"), NUM_GT)
+//TOK_DEF(_C("["), NUM_LBRACK)
+//TOK_DEF(_C("]"), NUM_RBRACK)
+//TOK_DEF(_C("#SLITERAL#"), NUM_SLITERAL)
+//TOK_DEF(_C("#ILITERAL#"), NUM_ILITERAL)
+//TOK_DEF(_C("#"), NUM_HASH)
+//TOK_DEF(_C("#ANNOTATION#"), NUM_ANNOTATION)
+//TOK_DEF(_C("|"), NUM_PIPE)
+//TOK_DEF(_C("*"), NUM_STAR)
+//TOK_DEF(_C("?"), NUM_QUESTION)
+//TOK_DEF(_C("+"), NUM_PLUS)
+//TOK_DEF(_C("-"), NUM_MINUS)
+//TOK_DEF(_C("/"), NUM_DIV)
+//TOK_DEF(_C("^"), NUM_EXP)
+//TOK_DEF(_C("!"), NUM_BANG)
+
+TOK_DEF(_C("#NUM_CATOBJECT#"), NUM_CATOBJECT)
+TOK_DEF(_C("#NUM_REPOBJECT#"), NUM_REPOBJECT)
+
+TOK_DEF(_C("#MULTIPLICITY_ONE#"),TOC_MULTIPLICITY_ONE)
+TOK_DEF(_C("#MULTIPLICITY_MANY#"),TOC_MULTIPLICITY_MANY)
+TOK_DEF(_C("#MULTIPLICITY_ZERO_OR_ONE#"),TOC_MULTIPLICITY_ZERO_OR_ONE)
+TOK_DEF(_C("#MULTIPLICITY_ONE_OR_MORE#"),TOC_MULTIPLICITY_ONE_OR_MORE)
+
+TOK_DEF(_C("#QUOTED_ID#"), NUM_QUOTED_ID)
+TOK_DEF(_C("#NUM_ID#"), NUM_ID)
+
+
+// Keywords
+TOK_DEF(_C("service"), TOC_SERVICE)
+TOK_DEF(_C("namespace"), TOC_NAMESPACE)
+TOK_DEF(_C("entity"), TOC_ENTITY)
+TOK_DEF(_C("as"), TOC_AS)
+TOK_DEF(_C("with"), TOC_WITH)
+TOK_DEF(_C("without"), TOC_WITHOUT)
+TOK_DEF(_C("key"), TOC_KEY)
+TOK_DEF(_C("keys"), TOC_KEYS)
+TOK_DEF(_C("generate"), TOC_GENERATE)
+TOK_DEF(_C("local"), TOC_LOCAL)
+TOK_DEF(_C("navigates"), TOC_NAVIGATES)
+TOK_DEF(_C("from"), TOC_FROM)
+TOK_DEF(_C("principal"), TOC_PRINCIPAL)
+TOK_DEF(_C("dependent"), TOC_DEPENDENT)
+TOK_DEF(_C("aggregates"), TOC_AGGREGATES)
+TOK_DEF(_C("always"), TOC_ALWAYS)
+TOK_DEF(_C("of"), TOC_OF)
+TOK_DEF(_C("SUM"), TOC_SUM)
+TOK_DEF(_C("AVG"), TOC_AVG)
+TOK_DEF(_C("MIN"), TOC_MIN)
+TOK_DEF(_C("MAX"), TOC_MAX)
+TOK_DEF(_C("parameters"), TOC_PARAMETERS)
+TOK_DEF(_C("via"), TOC_VIA)
+TOK_DEF(_C("and"), TOC_AND)
+TOK_DEF(_C("results"), TOC_RESULTS)
+TOK_DEF(_C("property"), TOC_PROPERTY)
+TOK_DEF(_C("create"), TOC_CREATE)
+TOK_DEF(_C("update"), TOC_UPDATE)
+TOK_DEF(_C("delete"), TOC_DELETE)
+TOK_DEF(_C("forbidden"), TOC_FORBIDDEN)
+TOK_DEF(_C("using"), TOC_USING)
+TOK_DEF(_C("events"), TOC_EVENTS)
+TOK_DEF(_C("before"), TOC_BEFORE)
+TOK_DEF(_C("after"), TOC_AFTER)
+TOK_DEF(_C("precommit"), TOC_PRECOMMIT)
+TOK_DEF(_C("postcommit"), TOC_POSTCOMMIT)
+TOK_DEF(_C("association"), TOC_ASSOCIATION)
+TOK_DEF(_C("multiplicity"), TOC_MULTIPLICITY)
+TOK_DEF(_C("over"), TOC_OVER)
+TOK_DEF(_C("storage"), TOC_STORAGE)
+TOK_DEF(_C("no"), TOC_NO)
+TOK_DEF(_C("on"), TOC_ON)
+TOK_DEF(_C("annotations"), TOC_ANNOTATIONS)
+TOK_DEF(_C("enable"), TOC_ENABLE)
+TOK_DEF(_C("OData4SAP"), TOC_ODATA4SAP)
+
+
+TOKEN_ALIAS(_C("NUM_LPAREN"), _C("("))
+TOKEN_ALIAS(_C("NUM_RPAREN"), _C(")"))
+TOKEN_ALIAS(_C("NUM_LCURLY"), _C("{"))
+TOKEN_ALIAS(_C("NUM_RCURLY"), _C("}"))
+//TOKEN_ALIAS(_C("NUM_LBRACK"), _C("["))
+//TOKEN_ALIAS(_C("NUM_RBRACK"), _C("]"))
+TOKEN_ALIAS(_C("NUM_COMMA"), _C(","))
+TOKEN_ALIAS(_C("NUM_DOT"), _C("."))
+TOKEN_ALIAS(_C("NUM_SEMICOLON"), _C(";"))
+
+
+TOKEN_ALIAS(_C("NUM_CATOBJECT"),_C("NUM_CATOBJECT"))
+//TOKEN_ALIAS(_C("NUM_REPOBJECT"),_C("NUM_REPOBJECT"))
+
+
+TOKEN_ALIAS(_C("TOC_MULTIPLICITY_ONE"),_C("MULTIPLICITY_ONE"))
+TOKEN_ALIAS(_C("TOC_MULTIPLICITY_MANY"),_C("MULTIPLICITY_MANY"))
+TOKEN_ALIAS(_C("TOC_MULTIPLICITY_ZERO_OR_ONE"),_C("MULTIPLICITY_ZERO_OR_ONE"))
+TOKEN_ALIAS(_C("TOC_MULTIPLICITY_ONE_OR_MORE"),_C("MULTIPLICITY_ONE_OR_MORE"))
+
+TOKEN_ALIAS(_C("NUM_QUOTED_ID"), _C("QUOTED_ID"))
+
+TOKEN_ALIAS(_C("TOC_SERVICE"),_C("service"))
+TOKEN_ALIAS(_C("TOC_NAMESPACE"),_C("namespace"))
+TOKEN_ALIAS(_C("TOC_ENTITY"),_C("entity"))
+TOKEN_ALIAS(_C("TOC_AS"),_C("as"))
+TOKEN_ALIAS(_C("TOC_WITH"),_C("with"))
+TOKEN_ALIAS(_C("TOC_WITHOUT"),_C("without"))
+TOKEN_ALIAS(_C("TOC_KEY"),_C("key"))
+TOKEN_ALIAS(_C("TOC_KEYS"),_C("keys"))
+TOKEN_ALIAS(_C("TOC_GENERATE"),_C("generate"))
+TOKEN_ALIAS(_C("TOC_LOCAL"),_C("local"))
+TOKEN_ALIAS(_C("TOC_NAVIGATES"),_C("navigates"))
+TOKEN_ALIAS(_C("TOC_FROM"),_C("from"))
+TOKEN_ALIAS(_C("TOC_PRINCIPAL"),_C("principal"))
+TOKEN_ALIAS(_C("TOC_DEPENDENT"),_C("dependent"))
+TOKEN_ALIAS(_C("TOC_AGGREGATES"),_C("aggregates"))
+TOKEN_ALIAS(_C("TOC_ALWAYS"),_C("always"))
+TOKEN_ALIAS(_C("TOC_OF"),_C("of"))
+TOKEN_ALIAS(_C("TOC_SUM"),_C("SUM"))
+TOKEN_ALIAS(_C("TOC_AVG"),_C("AVG"))
+TOKEN_ALIAS(_C("TOC_MIN"),_C("MIN"))
+TOKEN_ALIAS(_C("TOC_MAX"),_C("MAX"))
+TOKEN_ALIAS(_C("TOC_PARAMETERS"),_C("parameters"))
+TOKEN_ALIAS(_C("TOC_VIA"),_C("via"))
+TOKEN_ALIAS(_C("TOC_AND"),_C("and"))
+TOKEN_ALIAS(_C("TOC_RESULTS"),_C("results"))
+TOKEN_ALIAS(_C("TOC_PROPERTY"),_C("property"))
+TOKEN_ALIAS(_C("TOC_CREATE"),_C("create"))
+TOKEN_ALIAS(_C("TOC_UPDATE"),_C("update"))
+TOKEN_ALIAS(_C("TOC_DELETE"),_C("delete"))
+TOKEN_ALIAS(_C("TOC_FORBIDDEN"),_C("forbidden"))
+TOKEN_ALIAS(_C("TOC_USING"),_C("using"))
+TOKEN_ALIAS(_C("TOC_EVENTS"),_C("events"))
+TOKEN_ALIAS(_C("TOC_BEFORE"),_C("before"))
+TOKEN_ALIAS(_C("TOC_AFTER"),_C("after"))
+TOKEN_ALIAS(_C("TOC_PRECOMMIT"),_C("precommit"))
+TOKEN_ALIAS(_C("TOC_POSTCOMMIT"),_C("postcommit"))
+TOKEN_ALIAS(_C("TOC_ASSOCIATION"),_C("association"))
+TOKEN_ALIAS(_C("TOC_MULTIPLICITY"),_C("multiplicity"))
+TOKEN_ALIAS(_C("TOC_OVER"),_C("over"))
+TOKEN_ALIAS(_C("TOC_STORAGE"),_C("storage"))
+TOKEN_ALIAS(_C("TOC_NO"),_C("no"))
+TOKEN_ALIAS(_C("TOC_ON"),_C("on"))
+TOKEN_ALIAS(_C("TOC_ANNOTATIONS"),_C("annotations"))
+TOKEN_ALIAS(_C("TOC_ENABLE"),_C("enable"))
+TOKEN_ALIAS(_C("TOC_ODATA4SAP"),_C("OData4SAP"))
+
+@parser::header {
+package com.sap.ndb.studio.xse.xsodata.generatedfiles;
+
+import com.sap.ndb.studio.xse.xsodata.parser.*;
+
+import com.sap.ndb.studio.sql.parser.common.OSDLParserBase;
+import com.sap.ndb.studio.sql.parser.common.OSDLScanner;
+import com.sap.rnd.rndrt.IByteCode;
+import com.sap.rnd.rndrt.IRuleInfo;
+import com.sap.rnd.rndrt.resolver.base.FramePtr;
+import com.sap.rnd.rndrt.resolver.base.NullFrame;
+import com.sap.rnd.rndrt.resolver.base.Stackframe;
+import com.sap.rnd.rndrt.resolver.base.UserStackframeT;
+
+
+}
+
+START :
+	definition
+;
+
+// definition             :=service [annotations]
+definition :
+		service
+		annotations?
+;
+
+// service				:='service' [namespace] body
+service :
+	TOC_SERVICE svcnamespace? body
+;
+
+// namespace              :='namespace' quotedstring
+svcnamespace :
+	TOC_NAMESPACE #QUOTED_ID#
+;
+
+// quotedstring           :=quote string quote
+//quotedstring :
+//	quota string quote
+//;
+
+// 	
+// quote                  :='"'
+
+// body                   :='{' content '}'
+body :
+//	NUM_LCURLY content NUM_RCURLY
+	NUM_LCURLY entry* NUM_RCURLY
+;
+
+// content                :=entry [content]
+//content :
+//	entry content?
+//;
+	
+// entry                  :=( entity | association ) ';'
+entry :
+	 ( entity | association ) NUM_SEMICOLON
+;
+
+// entity                 :=object [entityset] [with] [key(s)] [navigates] [aggregates] [parameters] [modification]
+entity :
+	object entityset? with? keys? navigates? aggregates? parameters? modification?
+;
+
+// object                 :=['entity'] ( repoobject | catalogobject )
+object returns[Token entityType]
+@init{int quotedId = -1; int numCatObject = -1;}
+:
+	TOC_ENTITY? ( quotedId:#NUM_REPOBJECT# | numCatObject:#NUM_CATOBJECT# )
+	
+	{if ($quotedId > 0) 
+	$$.entityType = TOK(quotedId);
+	else 
+	$$.entityType = TOK(numCatObject);}
+	
+;
+
+
+// repoobject             :=quote repopackage '/' reponame '.' repoextension quote
+// repopackage            :=string
+// reponame               :=string
+// repoextension          :=string
+
+//repoobject :
+//	QUOTED_ID
+//;
+
+//catalogobject          :=catalogobjectschema '.' catalogobjectname
+//catalogobjectschema    :=quotedstring
+//catalogobjectname      :=quotedstring
+//catalogobject : 
+//	catalogobjectschema NUM_DOT catalogobjectname
+//;
+//catalogobjectschema :
+//	QUOTED_ID
+//;
+//catalogobjectname :
+//	QUOTED_ID
+//;
+
+// entityset              :='as' entitysetname
+entityset :
+	TOC_AS entitysetname
+;
+
+// entitysetname          :=quotedstring
+entitysetname :
+	#QUOTED_ID#
+;
+
+// with                   :=( 'with' | 'without' ) propertylist
+with :
+	( TOC_WITH | TOC_WITHOUT ) propertylist
+;
+
+// propertylist           :='(' columnlist ')'
+propertylist :
+	NUM_LPAREN columnlist NUM_RPAREN
+;
+
+// columnlist             :=columnname [',' columnlist]
+columnlist :
+	columnname (NUM_COMMA columnlist)?
+;
+
+// columnname             :=quotedstring
+columnname :
+	#QUOTED_ID#
+;
+
+// keys                   :='key(s)' ( keylist | keygenerated )
+keys :
+	( TOC_KEY | TOC_KEYS ) ( keylist | keygenerated )
+;
+
+// keylist                :=propertylist
+keylist :
+	propertylist
+;	
+	
+// keygenerated           :='generate' ( keygenlocal ) 
+keygenerated :
+	TOC_GENERATE ( keygenlocal )
+;
+
+// keygenlocal            :='local' columnname
+keygenlocal :
+	TOC_LOCAL columnname
+;
+
+// navigates              :='navigates' '(' navlist ')'
+navigates :
+	TOC_NAVIGATES NUM_LPAREN navlist NUM_RPAREN
+;
+
+// navlist                :=naventry [',' navlist]
+navlist :
+	naventry ( NUM_COMMA navlist )?
+;
+
+// naventry               :=assocname 'as' navpropname [fromend]
+naventry :
+	assocname TOC_AS navpropname fromend?
+;
+
+// assocname              :=quotedstring
+assocname :
+	#QUOTED_ID#
+;
+
+// navpropname            :=quotedstring
+navpropname :
+	#QUOTED_ID#
+;
+
+// fromend                :='from' ( 'principal' | 'dependent' )
+fromend :
+	TOC_FROM ( TOC_PRINCIPAL | TOC_DEPENDENT )
+;
+
+// aggregates             :='aggregates' 'always' [aggregatestuple]
+aggregates :
+	TOC_AGGREGATES TOC_ALWAYS aggregatestuple?
+;
+	
+// aggregatestuple        :='(' aggregateslist ')'
+aggregatestuple :
+	NUM_LPAREN aggregateslist NUM_RPAREN
+;
+
+// aggregateslist         :=aggregate [',' aggregateslist]
+aggregateslist :
+	aggregate ( NUM_COMMA aggregateslist )?
+;
+
+// aggregate              :=aggregatefunction 'of' columnname
+aggregate :
+	aggregatefunction TOC_OF columnname
+;
+
+// aggregatefunction      :=( 'SUM' | 'AVG' | 'MIN' | 'MAX' )
+aggregatefunction :
+	TOC_SUM | TOC_AVG | TOC_MIN | TOC_MAX
+;
+
+// parameters             :='parameters' 'via' [parameterskeyand] 'entity' [parameterentitysetname] [parametersresultsprop]
+parameters :
+	TOC_PARAMETERS TOC_VIA parameterskeyand? TOC_ENTITY parameterentitysetname? parametersresultsprop?
+;
+
+// parameterskeyand       :='key' 'and'
+parameterskeyand :
+	TOC_KEY TOC_AND
+;
+
+// parameterentitysetname :=quotedstring
+parameterentitysetname :
+	#QUOTED_ID#
+;
+
+// parametersresultsprop  :='results' 'property' quotedstring
+parametersresultsprop :
+	TOC_RESULTS TOC_PROPERTY #QUOTED_ID#
+;
+
+// modification           :=[create] [update] [delete]
+modification :
+		[ create update delete ]
+;
+
+// create                 :='create' modificationspec
+create :
+	TOC_CREATE modificationspec
+;
+
+// update                 :='update' modificationspec
+update :
+	TOC_UPDATE modificationspec
+;
+
+// delete                 :='delete' modificationspec
+delete :
+	TOC_DELETE modificationspec
+;
+
+// modificationspec	   :=( modificationaction [events] | events | 'forbidden' )
+modificationspec :
+	modificationaction events? | events | TOC_FORBIDDEN
+;
+
+// modificationaction	 :='using' action
+modificationaction :
+	TOC_USING action
+;
+
+// action                 :=quotedstring
+action :
+	#NUM_REPOBJECT#
+;
+
+// events                 :='events' '(' eventlist ')'
+events :
+	TOC_EVENTS NUM_LPAREN eventlist NUM_RPAREN
+;
+
+// eventlist              :=eventtype action [',' eventlist]
+eventlist :
+	eventtype action ( NUM_COMMA eventlist)?
+;
+
+// eventtype              :=( 'before' | 'after' | 'precommit' | 'postcommit' )
+// One known issue with the current state of this grammar:
+
+// eventlist :=eventtype action [',' eventlist]
+// eventtype :=( 'before' | 'after' | 'precommit' | 'postcommit' )
+
+eventtype :
+//	TOC_BEFORE | TOC_AFTER | TOC_PRECOMMIT | TOC_POSTCOMMIT
+	 TOC_BEFORE | TOC_AFTER | TOC_PRECOMMIT | TOC_POSTCOMMIT 
+;
+
+// association            :=associationdef principalend dependentend [( assoctable | storage )]
+association :
+	associationdef principalend dependentend ( assoctable | storage | modification )?
+;
+	
+// associationdef         :='association' assocname
+associationdef :
+	TOC_ASSOCIATION assocname
+;
+
+// principalend           :='principal' end
+principalend :
+	TOC_PRINCIPAL end
+;
+
+// dependentend           :='dependent' end
+dependentend :
+	TOC_DEPENDENT end
+;
+
+// end                    :=endref multiplicity
+end :
+	endref multiplicity
+;
+
+// endref                 :=endtype [joinpropertieslist]
+endref :
+	endtype joinpropertieslist?
+;
+
+// endtype                :=entitysetname
+endtype :
+	entitysetname
+;
+
+// joinpropertieslist	 :='(' joinproperties ')'
+joinpropertieslist :
+	NUM_LPAREN joinproperties NUM_RPAREN
+;
+
+// joinproperties         :=columnlist
+joinproperties :
+	columnlist
+;
+
+// multiplicity           :='multiplicity' quote multiplicityvalue quote
+//multiplicity :
+//	MULTIPLICITY quote multiplicityvalue quote
+//;
+
+// multiplicityvalue      :=( '1' | '0..1' | '1..*' | '*' )
+//multiplicityvalue :
+//	'1' | '0..1' | '1..*' | '*'
+//;
+
+// multiplicity           :='multiplicity' quote multiplicityvalue quote
+multiplicity :
+	TOC_MULTIPLICITY (  #MULTIPLICITY_ONE# | #MULTIPLICITY_MANY# | #MULTIPLICITY_ZERO_OR_ONE# | #MULTIPLICITY_ONE_OR_MORE# )
+;
+
+// assoctable             :='over' repoobject overprincipalend overdependentend [modification]
+assoctable :
+	TOC_OVER #NUM_REPOBJECT# overprincipalend overdependentend modification?
+;
+
+// overprincipalend       :='principal' overend
+overprincipalend :
+	TOC_PRINCIPAL overend
+;
+
+// overdependentend       :='dependent' overend
+overdependentend :
+	TOC_DEPENDENT overend
+;
+
+// overend                :=propertylist 
+overend :
+	propertylist 
+;
+
+// storage                :=( nostorage | storageend [modification] )
+storage :
+	 nostorage | storageend modification?
+;
+
+// nostorage              :='no' 'storage'
+nostorage :
+	TOC_NO TOC_STORAGE
+;
+
+// storageend             :='storage' 'on' ( 'principal' | 'dependent' )
+storageend :
+	TOC_STORAGE TOC_ON ( TOC_PRINCIPAL | TOC_DEPENDENT )
+;
+
+// annotations            :='annotations' annotationsbody
+annotations :
+	TOC_ANNOTATIONS annotationsbody
+;
+
+// annotationsbody        :='{' annotationscontent '}'
+annotationsbody :
+	NUM_LCURLY annotationscontent NUM_RCURLY
+;
+
+// annotationscontent     :=annotationconfig [annotationscontent]
+annotationscontent :
+	annotationconfig annotationscontent?
+;
+
+// annotationconfig       :='enable' annotation
+annotationconfig :
+	TOC_ENABLE annotation NUM_SEMICOLON
+;
+
+// annotation             :='OData4SAP'
+annotation :
+	TOC_ODATA4SAP
+;
+
+
+
+

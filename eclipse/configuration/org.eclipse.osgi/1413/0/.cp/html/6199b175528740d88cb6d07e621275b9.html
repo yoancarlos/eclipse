@@ -1,0 +1,1223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You can use the SFTP sender adapter to transfer files from an SFTP server to the tenant using the SSH protocol."/>
+<meta name="description" content="You can use the SFTP sender adapter to transfer files from an SFTP server to the tenant using the SSH protocol."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring a Channel with SFTP Sender Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio6199b175528740d88cb6d07e621275b9">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring a Channel with SFTP Sender Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You can use the SFTP sender adapter to transfer files from an SFTP server to the tenant
+		using the SSH protocol.</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><div class="sectiondiv subsection">
+            <p class="p subsectiontitle">How the Sender SFTP Adapter Works</p>
+
+            <p class="p">If you have configured a <span class="ph emphasis emphasis">sender</span> SFTP adapter, message processing
+                is performed as follows at runtime: The tenant sends a request to an SFTP server
+                (think of this as the sender system), but the data flow is in the opposite
+                direction, from the SFTP server to the tenant. In other words, the tenant reads
+                files from the SFTP server (a process that is also referred to as
+                    <cite class="cite">polling</cite>).</p>
+
+            <div class="fig fignone" id="loio6199b175528740d88cb6d07e621275b9__d509e26"><div class="figcontainer">
+                
+                <img class="image" id="loio6199b175528740d88cb6d07e621275b9__d509e31" src="loio20817419557c4576aae640aeff620a45_LowRes.png"/>
+            <div class="figcap">Figure 1: SFTP Sender Adapter: Tenant reads files from SFTP server</div></div></div>
+
+        </div><div class="note restriction"><span class="restrictiontitle">Restriction</span> An integration flow you deploy in <span class="ph pname">SAP Cloud Platform
+                        Integration</span> deploys in
+				multiple IFLMAP worker nodes. Polling is triggered from only one of the worker
+				nodes. The message monitoring currently displays the process status from the worker
+				nodes where the <span class="ph uicontrol">Scheduler</span> is not started. This results in the
+				message monitor displaying messages with less than a few milliseconds, where the
+				schedule was not triggered. These entries contain
+					<span class="ph uicontrol">firenow=true</span> in the log. You can ignore these
+				entries.</div>
+</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio6199b175528740d88cb6d07e621275b9__steps_cbh_qb3_5s"><li class="li step stepexpand">
+				<span class="ph cmd">Select the integration flow you want to configure and choose
+						<span class="ph uicontrol">Edit</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the communication channel you want to configure. </span>
+				<div class="itemgroup info">
+					<p class="p">To configure a sender channel, click on a connection between a sender and the
+							<span class="ph uicontrol">Integration Process</span> component.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">General</span> tab page, provide channel name and
+					description in the relevant fields if required. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Adapter Specific</span> tab page and provide values in
+					fields based on description in table.</span>
+				<div class="itemgroup info">
+					<p class="p">On the <span class="ph uicontrol">Source</span> tab of
+            the sender channel, specify the following attributes.</p>
+
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio6199b175528740d88cb6d07e621275b9__d509e187" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="29.49852507374631%"/><col width="70.50147492625368%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="29.49852507374631%" id="d1273027e116">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="70.50147492625369%" id="d1273027e122">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="29.49852507374631%" headers="d1273027e116 ">
+                                <p class="p">Directory</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="70.50147492625369%" headers="d1273027e122 ">
+                                <p class="p">Use the relative path to read the file from a directory, for
+                                    example, &lt;dir&gt;/&lt;subdir&gt;.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="29.49852507374631%" headers="d1273027e116 ">
+                                <p class="p">File Name</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="70.50147492625369%" headers="d1273027e122 ">
+                                <p class="p">Name of the file to be read.</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">If you do not enter a file name and the parameter remains
+                                        blank, all the files in the specified directory are read.
+                                    </p>
+
+                                </div>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p"><span class="ph emphasis emphasis">Usage of file name pattern:</span></p>
+
+                                    <p class="p">Regular expressions, such as <samp class="ph codeph">ab*</samp>,
+                                            <samp class="ph codeph">a.*</samp>, <samp class="ph codeph">*a*</samp>,
+                                            <samp class="ph codeph">?b</samp>, and so on, are supported.</p>
+
+                                    <p class="p">The expression <samp class="ph codeph">*</samp> replaces no character or an
+                                        arbitrary number of characters.</p>
+
+                                    <p class="p">The expression <samp class="ph codeph">?</samp> replaces exactly one
+                                        arbitrary character.</p>
+
+                                    <p class="p">Examples: </p>
+
+                                    <p class="p">If you specify <samp class="ph codeph">file*.txt</samp> as the
+                                            <span class="ph uicontrol">File Name</span>, the following files
+                                        are polled by the adapter: <samp class="ph codeph">file1.txt</samp>,
+                                            <samp class="ph codeph">file2.txt</samp>, as well as
+                                            <samp class="ph codeph">file.txt</samp> and
+                                            <samp class="ph codeph">file1234.txt</samp>, and so on.</p>
+
+                                    <p class="p">If you specify <samp class="ph codeph">file?.txt</samp> as the
+                                            <span class="ph uicontrol">File Name</span>, the following files
+                                        are polled by the adapter: <samp class="ph codeph">file1.txt</samp>,
+                                            <samp class="ph codeph">file2.txt</samp>, and so on, but
+                                            <span class="ph emphasis emphasis">not</span> the files
+                                            <samp class="ph codeph">file.txt</samp> or
+                                            <samp class="ph codeph">file1234.txt</samp>.</p>
+
+                                    <p class="p">Although you can configure this feature, it is not supported
+            when using the corresponding integration content with the SAP Process Orchestration (SAP
+            PO) runtime in releases lower than SAP PO 7.5 SP5. </p>
+
+                                </div>
+
+                                <div class="note caution"><span class="cautiontitle">Caution</span> 
+                                    <p class="p">Files with file names longer than 100 characters will be
+                                        processed with the following limitations: </p>
+
+                                    <ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d509e341">
+                                        <li class="li">
+                                            <p class="p">If two files with names longer than 100 characters
+                                                are available for processing, only one of these
+                                                files will be processed at a time. This means that
+                                                both files will be processed, but not in parallel.
+                                                This is also the case if two runtime nodes are
+                                                available. If the node fails multiple times while
+                                                processing a file with a file name longer than 100
+                                                characters, none of the files sharing the first 100
+                                                characters with that file can be executed without
+                                                manual intervention from the administrator. </p>
+
+                                        </li>
+
+                                        <li class="li">
+                                            <p class="p">The option <span class="ph uicontrol">Keep File and Mark as Processed
+                                                  in Idempotent Repository</span> (for sender
+                                                channels under <span class="ph uicontrol">Processing</span>)
+                                                will not work for these files.</p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="29.49852507374631%" headers="d1273027e116 ">
+                                <p class="p">Address</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="70.50147492625369%" headers="d1273027e122 ">
+                                <p class="p">Host name or IP address of the SFTP server and an optional port,
+                                    for example, wdfd00213123:22.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="29.49852507374631%" headers="d1273027e116 ">
+                                <p class="p">Authentication</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+            <div class="p">In the following cases this new feature might not be available for your current
+                integration flow:<ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d288e167">
+                    <li class="li">
+                        <p class="p">You created the corresponding integration flow shape (adapter or step)
+                            before this feature was released</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">You are using a product profile other than the one expected.</p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="p">More information: </p>
+
+        </div>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="70.50147492625369%" headers="d1273027e122 ">
+                                <p class="p">Authentication option for the connection to the SFTP server.</p>
+
+                                <p class="p">You have the following options:</p>
+
+                                <ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d509e398">
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">User Name/Password</span></p>
+
+                                        <p class="p">SFTP server authenticates the calling component based on
+                                            the user name and password. To make this configuration
+                                            setting work, you need to define the user name and
+                                            password in a <span class="ph uicontrol">User Credential</span>
+                                            artifact and deploy the artifact on the tenant.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Public Key</span></p>
+
+                                        <p class="p">SFTP server authenticates the calling component based on
+                                            a public key.</p>
+
+                                    </li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="29.49852507374631%" headers="d1273027e116 ">
+                                <p class="p">Credential Name</p>
+
+                                <p class="p">(Only available if you have selected <span class="ph uicontrol">User
+                                        Name/Password</span> for
+                                        <span class="ph uicontrol">Authentication</span>)</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+            <div class="p">In the following cases this new feature might not be available for your current
+                integration flow:<ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d288e167">
+                    <li class="li">
+                        <p class="p">You created the corresponding integration flow shape (adapter or step)
+                            before this feature was released</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">You are using a product profile other than the one expected.</p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="p">More information: </p>
+
+        </div>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="70.50147492625369%" headers="d1273027e122 ">
+                                <p class="p">Name of the <span class="ph uicontrol">User Credential</span> artifact that
+                                    contains the user name and password.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="29.49852507374631%" headers="d1273027e116 ">
+                                <p class="p">User Name</p>
+
+                                <p class="p">(Only available if
+                                    you have selected <span class="ph uicontrol">Public Key</span> for
+                                        <span class="ph uicontrol">Authentication</span>)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="70.50147492625369%" headers="d1273027e122 ">
+                                <p class="p">ID of the user performing the file transfer.</p>
+
+                                <p class="p">Make sure that the user name contains no other characters
+            than <samp class="ph codeph">A-z</samp>, <samp class="ph codeph">0-9</samp>, <samp class="ph codeph">_</samp> (underscore),
+                <samp class="ph codeph">-</samp> (hyphen), <samp class="ph codeph">/</samp> (slash), <samp class="ph codeph">?</samp>
+            (question mark), <samp class="ph codeph">@</samp> (at), <samp class="ph codeph">!</samp> (exclamation mark),
+                <samp class="ph codeph">$</samp> (dollar sign ), <samp class="ph codeph">'</samp> (apostrophe),
+                <samp class="ph codeph">(</samp>, <samp class="ph codeph">)</samp> (brackets), <samp class="ph codeph">*</samp> (asterisk),
+                <samp class="ph codeph">+</samp> (plus sign), <samp class="ph codeph">,</samp> (comma), <samp class="ph codeph">;</samp>
+            (semicolon), <samp class="ph codeph">=</samp> (equality sign), <samp class="ph codeph">.</samp> (dot), or
+                <samp class="ph codeph">~</samp> (tilde). Otherwise, an attempt for anonymous login is made which
+            results in an error. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="29.49852507374631%" headers="d1273027e116 ">
+                                <p class="p">Timeout (in ms)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="70.50147492625369%" headers="d1273027e122 ">
+                                <p class="p">Maximum time to wait for the SFTP server to be contacted while
+                                    establishing connection or performing a read operation. </p>
+
+                                <p class="p">Default value: 10000 ms</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="29.49852507374631%" headers="d1273027e116 ">
+                                <p class="p">Maximum Reconnect Attempts</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="70.50147492625369%" headers="d1273027e122 ">
+                                <p class="p">Maximum number of attempts allowed to reconnect to the SFTP
+                                    server. </p>
+
+                                <p class="p">Default value: 3 </p>
+
+                                <p class="p">Use 0 to disable this behavior.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="29.49852507374631%" headers="d1273027e116 ">
+                                <p class="p">Reconnect Delay (in ms)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="70.50147492625369%" headers="d1273027e122 ">
+                                <p class="p">How long the system waits before attempting to reconnect to the
+                                    SFTP server.</p>
+
+                                <p class="p">Default Value: 1000ms</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="29.49852507374631%" headers="d1273027e116 ">
+                                <p class="p">Automatically Disconnect</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="70.50147492625369%" headers="d1273027e122 ">
+                                <p class="p">Disconnect from the SFTP server after each message
+                                    processing.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+				<div class="itemgroup info"><p class="p">The
+                following figure illustrates how the properties configured for
+                    <span class="ph uicontrol">Authentication</span> are used.</p>
+<img class="image" id="loio6199b175528740d88cb6d07e621275b9__d509e1870" src="loioe2b808bbcbcc4e30a34374fdadd89774_LowRes.png"/></div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Processing</span> tab page.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio6199b175528740d88cb6d07e621275b9__d509e886" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Fields and Descriptions for SFTP Adapter Sender Channel</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d1273027e620">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d1273027e626">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e620 ">
+                                <p class="p">Read Lock Strategy</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e626 ">
+                                <p class="p">Prevents files that are in the process of being written from
+                                    being read from the SFTP server. The endpoint waits until it has
+                                    an exclusive read lock on a file before reading it. </p>
+
+                                <p class="p">Select one of the following options based on the capabilities of
+                                    the SFTP server:</p>
+
+                                <ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d509e933">
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">None</span>: Does not use a read lock,
+                                            which means that the endpoint can immediately read the
+                                            file. None is the simplest option if the SFTP server
+                                            guarantees that a file only becomes visible on the
+                                            server once it is completely written.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Rename</span>: Renames the file before
+                                            reading. The Rename option allows clients to rename
+                                            files on the SFTP server.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Content Change</span>: Monitors changes
+                                            in the file length/modification timestamp to determine
+                                            if the write operation on the file is complete and the
+                                            file is ready to be read. The Content Change option
+                                            waits for at least one second until there are no more
+                                            file changes. Therefore, if you select this option,
+                                            files cannot be read as quickly as with the other two
+                                            options.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Done File Expected </span>: Uses a
+                                            specific file to signal that the file to be processed is
+                                            ready for consumption.</p>
+
+                                        <p class="p">If you have selected this option, enter the name of the
+                                            done file. The done file signals that the file to be
+                                            processed is ready for consumption. This file must be in
+                                            the same folder as the file to be processed.
+                                            Placeholders are allowed. Default:
+                                            ${file:name}.done.</p>
+
+                                        <div class="note note"><span class="notetitle">Note</span> 
+            <div class="p">In the following cases this new feature might not be available for your current
+                integration flow:<ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d288e167">
+                    <li class="li">
+                        <p class="p">You created the corresponding integration flow shape (adapter or step)
+                            before this feature was released</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">You are using a product profile other than the one expected.</p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="p">More information: </p>
+
+        </div>
+
+                                    </li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e620 ">
+                                <p class="p">Sorting</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e626 ">
+                                <p class="p">Select the type of sorting to use to poll files from the SFTP
+                                    server:</p>
+
+                                <ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d509e988">
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">None</span>: The sorting is specified by
+                                            the STFP server</p>
+
+                                    </li>
+
+                                </ul>
+
+                                <ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d509e999">
+                                    <li class="li"><span class="ph uicontrol">File Name</span>: Files are polled sorted by
+                                        file name</li>
+
+                                </ul>
+
+                                <ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d509e1007">
+                                    <li class="li"><span class="ph uicontrol">File Size</span>: Files are polled sorted by
+                                        file size</li>
+
+                                </ul>
+
+                                <ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d509e1015">
+                                    <li class="li"><span class="ph uicontrol">Time Stamp</span>: Files are polled sorted
+                                        by the modification time stamp of the file</li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e620 ">
+                                <p class="p">Sorting Order</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e626 ">
+                                <p class="p">Select whether to sort in ascending or descending order.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e620 ">
+                                <p class="p">Lock Timeout (in min):*</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e626 ">
+                                <p class="p">Specify how long to wait before trying to process the file again
+                                    in the event of a cluster outage. If it takes a very long time
+                                    to process the scenario, you may need to increase the timeout to
+                                    avoid parallel processing of the same file.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e620 ">
+                                <p class="p">Change Directories Stepwise</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e626 ">
+                                <p class="p">Select this option to change directory levels one at a time.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e620 ">
+                                <p class="p">Include Subdirectories</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e626 ">
+                                <p class="p">Selecting this option allows you to look for files in all the
+                                    subdirectories of the directory.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e620 ">
+                                <p class="p">Post-Processing</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e626 ">
+                                <p class="p">Allows you to specify how files are to be handled after
+                                    processing. </p>
+
+                                <p class="p">Note that only successfully processed messages can be
+                                    post-processed. If message processing fails, the
+                                        <span class="ph uicontrol">Post-Processing</span> settings are not
+                                    effective.</p>
+
+                                <p class="p">You can select one of the following options from the dropdown
+                                    list:</p>
+
+                                <ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d509e1108">
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Delete File</span>: The file is deleted
+                                            after it has been read.</p>
+
+                                        <p class="p">If you have also selected <span class="ph uicontrol">Done File Expected
+                                            </span> as <span class="ph uicontrol">Read Lock
+                                                Strategy</span>, the file to be processed as
+                                            well as the done file will be deleted.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Keep File and Mark as Processed in Idempotent
+                                                Repository</span>: Enables an idempotent
+                                            repository to prevent a file from being consumed twice.
+                                            Select this option for SFTP servers that do not allow
+                                            deletion or moving of files, but the files are to be
+                                            read only once. You can select one of the following
+                                            idempotent repository options:</p>
+
+                                        <ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d509e1134">
+                                            <li class="li">
+                                                <div class="p"><span class="keyword option">In Memory</span>: Keeps the file names
+                                                  in the memory. Files are read again from the SFTP
+                                                  server when the runtime node is restarted.<div class="note note"><span class="notetitle">Note</span> 
+                                                  <p class="p">If there is a system crash or disaster, this
+                                                  data will be lost and cannot be recovered
+                                                  later.</p>
+
+                                                  </div>
+</div>
+
+                                            </li>
+
+                                            <li class="li">
+                                                <div class="p"><span class="keyword option">Database</span>: Stores the file names
+                                                  in a database to prevent the files from being read
+                                                  again when the runtime node is restarted. File
+                                                  name entries are deleted by default after 90 days.<div class="note note"><span class="notetitle">Note</span> 
+                                                  <p class="p">The database uses the server name, directory,
+                                                  and file name as key values to identify files
+                                                  uniquely across integration flows of a tenant.</p>
+
+                                                  </div>
+</div>
+
+                                            </li>
+
+                                        </ul>
+
+                                        <p class="p">If you have also selected <span class="ph uicontrol">Done File Expected
+                                            </span> as <span class="ph uicontrol">Read Lock
+                                                Strategy</span>, an entry will be created in
+                                            the idempotent repository; the done file will not be
+                                            deleted.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Keep File and Process Again</span>: The
+                                            file is kept on the SFTP server and file processing is
+                                            repeated. You can use this option for testing purposes,
+                                            for example.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Move File</span>: The file is moved to
+                                            another directory. If you select this option, you need
+                                            to specify the target directory. You can specify the
+                                            target directory dynamically, for example, using the
+                                            timestamp of the message. The following example uses
+                                            backup folders with timestamps and replaces the file
+                                            extension with <kbd class="ph userinput">bak:
+                                                backup/${date:now:yyyyMMdd}/${file:name.noext}.bak</kbd></p>
+
+                                        <p class="p">If you have also selected <span class="ph uicontrol">Done File Expected
+                                            </span> as <span class="ph uicontrol">Read Lock
+                                                Strategy</span>, only the file to be processed
+                                            will be moved and the done file will be deleted.</p>
+
+                                    </li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e620 ">
+                                <p class="p">Retry Threshold for Alerting</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e626 ">
+                                <p class="p">If the number of attempts to retry polling of a message from the
+                                    SFTP server exceeds this threshold value, an alert is raised.
+                                    The default value '0' indicates that the alert is not
+                                    raised.</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">If two or more sender channels are configured with the SFTP
+                                        connector, the value for the <span class="ph uicontrol">Alert Threshold for
+                                            Retry</span> parameter should be the same.</p>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Advanced</span> tab page.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio6199b175528740d88cb6d07e621275b9__d509e1410" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d1273027e1000">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d1273027e1006">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1000 ">
+                                <p class="p">Buffer Size</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1006 ">
+                                <p class="p">Write file content using the specified buffer size. </p>
+
+                                <p class="p">Default: 128 KB</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1000 ">
+                                <p class="p">Log Level</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1006 ">
+                                <p class="p">The level of information to be logged during message
+                                    processing.</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> In a troubleshooting situation, you can increase the log level
+                                    to <span class="ph uicontrol">DEBUG</span> or <span class="ph uicontrol">TRACE</span>
+                                    to verify that polling works as expected. Make sure that you
+                                    decrease the log level again afterwards to reduce the load and
+                                    the number of logs written.</div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1000 ">
+                                <p class="p">Flatten File Names</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1006 ">
+                                <p class="p">Flatten the file path by removing the directory levels so that
+                                    only the file names are considered and they are written under a
+                                    single directory.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1000 ">
+                                <p class="p">Max. Messages per Poll (for sender channel only)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1006 ">
+                                <p class="p">Maximum number of messages to gather in each poll. </p>
+
+                                <p class="p">Default: 0 <span class="ph emphasis emphasis">Example:</span> 1000 can be set as a
+                                    limit.</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">If you are using the sender SFTP adapter in combination with
+                                        an Aggregator step and you expect a high message load,
+                                        consider the following recommendation: </p>
+
+                                    <p class="p">Set the value for Maximum Messages per Poll to a small number
+                                        larger than 0 (for example, 20). This ensures proper logging
+                                        of the message processing status at runtime.</p>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1000 ">
+                                <p class="p">Prevent Directory Traversal</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1006 ">
+                                <p class="p">If the file contains any backward path traversals such as \..\ or
+                                    /../.. , this carries a potential risk of directory traversal.
+                                    In such a case, message processing is stopped with an error. The
+                                    unique message ID is logged in the message processing log.</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">We recommend that you specify the
+                                            <span class="ph uicontrol">Directory</span> and <span class="ph uicontrol">File
+                                            Name</span> fields to avoid any security risks. If
+                                        you provide these fields, the header is not considered.</p>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Scheduler</span> tab page.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+            <div class="p">In the following cases this new feature might not be available for your current
+                integration flow:<ul class="ul" id="loio6199b175528740d88cb6d07e621275b9__d288e167">
+                    <li class="li">
+                        <p class="p">You created the corresponding integration flow shape (adapter or step)
+                            before this feature was released</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">You are using a product profile other than the one expected.</p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="p">More information: </p>
+
+        </div>
+
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio6199b175528740d88cb6d07e621275b9__d509e1677" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Scheduler (New Version)</span></caption>
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d1273027e1190">
+                                <p class="p">Scheduler Option</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d1273027e1196">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="33.33333333333333%" id="d1273027e1202">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1190 ">
+                                <p class="p">Run Once</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1196 ">
+                                <p class="p">NA</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1202 ">
+                                <p class="p">Select to execute the operation immediately after deploying the
+                                    integration content.</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">This option is only recommended for testing puposes, not for
+                                        productive scenarios. If this option is selected, the
+                                        integration flow will also poll after each restart, after
+                                        each new deployment and after each cluster update.</p>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="4" valign="top" width="33.33333333333333%" headers="d1273027e1190 ">
+                                <p class="p">Schedule on Day</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1196 ">
+                                <p class="p">On Date</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1202 ">
+                                <p class="p">Specify the date on which you want the operation to be
+                                    executed.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1196 ">
+                                <p class="p">At Time</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1202 ">
+                                <p class="p">Specify the time at which you want the operation to be executed.
+                                </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1196 ">
+                                <p class="p">Every</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1202 ">
+                                <p class="p">Specify the interval at which the operation has to be executed.
+                                </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1196 ">
+                                <p class="p">Time Zone</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1202 ">
+                                <p class="p">Select the time zone that you want the scheduler to use as a
+                                    reference for the date and time settings.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="3" valign="top" width="33.33333333333333%" headers="d1273027e1190 ">
+                                <p class="p">Schedule to Recur</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1196 ">
+                                <p class="p">Daily </p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1202 ">
+                                <p class="p">Select the time or interval and time zone for the schedule to
+                                    recur. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1196 ">
+                                <p class="p">Weekly</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1202 ">
+                                <p class="p">Select the checkboxes to indicate the days of the week on which
+                                    the operation has to be executed. Also, specify the time or
+                                    interval for the schedule to recur.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1196 ">
+                                <p class="p">Monthly</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="33.33333333333333%" headers="d1273027e1202 ">
+                                <p class="p">Select the day of the month on which the operation has to be
+                                    executed. Also indicate the time or the interval for the
+                                    schedule to recur.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+				<div class="itemgroup info"><div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio6199b175528740d88cb6d07e621275b9__d509e1558" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 3: Scheduler (Old Version)</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d1273027e1380">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d1273027e1386">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1380 ">
+                                <p class="p">Initial Delay (in ms)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1386 ">
+                                <p class="p">How long the system waits after deploying the integration
+                                    flow.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1380 ">
+                                <p class="p">Recurrent Delay (in ms)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1386 ">
+                                <p class="p">How long the system waits before executing the integration flow
+                                    again.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1380 ">
+                                <p class="p">Use Fixed Delay</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1273027e1386 ">
+                                <p class="p">Defines whether a fixed delay or fixed rate is used.</p>
+
+                                <p class="p">This parameter specifies how periodic polling of files should
+                                    happen (using the parameters <span class="ph uicontrol">Initial
+                                        Delay</span> and <span class="ph uicontrol">Recurrent
+                                    Delay</span>). </p>
+
+                                <p class="p">If you have selected <span class="ph uicontrol">Use Fixed Delay</span>, the
+                                    time specified as <span class="ph uicontrol">Initial Delay</span> after
+                                    deploying the integration flow for the first polling process
+                                    starts. The second polling process is started after the time
+                                    specified as <span class="ph uicontrol">Recurrent Delay</span>, and so on. </p>
+
+                                <p class="p">If you have deselected the <span class="ph uicontrol">Use Fixed Delay</span>
+                                    option, a <cite class="cite">fixed rate</cite> is applied. This means that,
+                                    as in the first case, the first polling process starts after the
+                                    time specified as <span class="ph uicontrol">Initial Delay</span> after
+                                    deploying the integration flow. The next polling processes are
+                                    then started periodically. The time specified as
+                                        <span class="ph uicontrol">Recurrent Delay</span> is the time between
+                                    the end of a polling process and the start of the next one (see
+                                    figure below).</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+<p class="p">The following figure shows the difference between the two options
+							<span class="ph uicontrol">Use Fixed Delay</span> selected (above) and de-selected
+						(below).</p>
+<img class="image" id="loio6199b175528740d88cb6d07e621275b9__image_ws4_gbg_cv" src="loio27b25965f6b54e3482679d782d9b19f5_LowRes.png"/></div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the configuration.</span>
+				<div class="itemgroup info">
+					<p class="p">SFTP polling is supported in the following way:
+            The same file can be polled by multiple endpoints configured to use the SFTP channel.
+            This means that you can now deploy an integration flow with a configured SFTP channel on
+            multiple runtime nodes (which might be necessary to meet failover requirements) without
+            the risk of creating duplicates by polling the same file multiple times. Note that to
+            enable the new option, integration flows (configured to use SFTP channels) that were
+            developed prior to the introduction of this feature have to be regenerated.</p>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

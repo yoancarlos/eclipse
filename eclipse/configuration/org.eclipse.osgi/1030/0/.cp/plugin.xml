@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+<!-- ============================================================================= -->
+<!-- Define primary TOC                                                            -->
+<!-- ============================================================================= -->
+
+<!-- ============================================================================= -->
+<!-- Define individual TOCs                                                                   -->
+<!-- ============================================================================= -->
+
+
+<!-- ============================================================================= -->
+<!-- Define help context                                                           -->
+<!-- ============================================================================= -->
+
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/introABAPOverview.xml">
+      </configExtension>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/introABAPTutorials1.xml">
+      </configExtension>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/introABAPSamples.xml">
+      </configExtension>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/introABAPSamples2.xml">
+      </configExtension>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/introABAPWhatsnew1.xml">
+      </configExtension>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/introABAPWhatsnew.xml">
+      </configExtension>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/introABAPAccessibility.xml">
+      </configExtension>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <category
+            id="com.sap.adt.cheatsheet.category"
+            name="ABAP Development">
+      </category>
+      <cheatsheet
+            category="com.sap.adt.cheatsheet.category"
+            composite="false"
+            contentFile="cheatsheets/createABAPproject.xml"
+            id="com.sap.adt.cheatsheet.create.abap.project"
+            name="Creating ABAP Projects">
+         <description>
+            ABAP Development
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="com.sap.adt.cheatsheet.category"
+            composite="true"
+            contentFile="$nl$/cheatsheets/addDevelopmentObjectsToProject.xml"
+            id="com.sap.adt.cheatsheet.add.abap.devobjects"
+            name="Adding Development Objects to ABAP Project">
+         <description>
+            ABAP Development
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="com.sap.adt.cheatsheet.category"
+            composite="false"
+            contentFile="$nl$/cheatsheets/searchForDevelopmentObjects.xml"
+            id="com.sap.adt.cheatsheet.search.abap.devobjects"
+            name="Searching for ABAP Development Objects">
+         <description>
+            ABAP Development
+         </description>
+      </cheatsheet>
+      <cheatsheet
+            category="com.sap.adt.cheatsheet.category"
+            composite="false"
+            contentFile="$nl$/cheatsheets/addCodeTemplates.xml"
+            id="com.sap.adt.cheatsheet.abap.templates"
+            name="Working with ABAP Code Templates">
+         <description>
+            ABAP Development
+         </description>
+      </cheatsheet>
+   </extension>
+
+
+</plugin>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:ServiceTask/version::1.0.3" ComponentName="sap:ServiceTask" UIElementType="Flowstep">
+	<Variant VariantId="ctype::FlowstepVariant/cname::contentEnricherWithLookup/version::1.0.3" VariantName="Enricher" VariantDisplayName="Content Enricher" scope="Across Pools" AttachmentBehavior="Drop"> 
+		<!-- allowed input content type -->
+		<InputContent Cardinality="n" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+		</InputContent>		
+		
+		<!-- allowed output content type -->
+		<OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+		</OutputContent>	
+        <Tab id="Processing">
+            <GuiLabels>
+                <Label language="EN">Processing</Label>
+            </GuiLabels>
+            <AttributeGroup id = "Processing Details">
+                <AttributeReference>
+                    <ReferenceName>enrichmentType</ReferenceName>
+                    <description>Select a Content Enrichment Type</description>
+                </AttributeReference>
+            </AttributeGroup>
+                <AttributeGroup id = "Original_Message">
+                <GuiLabels>
+                    <Label language="EN">Original Message</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>originalMessageNodePath</ReferenceName>
+                    <ErrorMessage>Enter a valid path. E.g. Employees/Employee</ErrorMessage>
+                    <description>Path to the reference node in the original message.</description>
+                    <EditCondition>
+                        <AttributeName>enrichmentType</AttributeName>
+                        <AttributeValue>xmlLookupAggregation</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>originalMessageKeyElement</ReferenceName>
+                    <description>Key element in the original message.</description>
+                    <EditCondition>
+                        <AttributeName>enrichmentType</AttributeName>
+                        <AttributeValue>xmlLookupAggregation</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+                </AttributeGroup>
+                <AttributeGroup id = "Lookup_Message">
+                <GuiLabels>
+                    <Label language="EN">Lookup Message</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>resourceMessageNodePath</ReferenceName>
+                    <ErrorMessage>Enter a valid path. E.g. Employees/Employee</ErrorMessage>
+                    <description>Path to the reference node in the lookup message.</description>
+                    <EditCondition>
+                        <AttributeName>enrichmentType</AttributeName>
+                        <AttributeValue>xmlLookupAggregation</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>resourceMessageKeyElement</ReferenceName>
+                    <description>Key element in the lookup message.</description>
+                        <EditCondition>
+                            <AttributeName>enrichmentType</AttributeName>
+                            <AttributeValue>xmlLookupAggregation</AttributeValue>
+                        </EditCondition>
+                </AttributeReference>
+                </AttributeGroup>
+            
+        </Tab>
+        <AllowedHeaders></AllowedHeaders>
+    </Variant>
+    <AttributeMetadata>
+        <Name>originalMessageNodePath</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default/>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Path to Node</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>originalMessageKeyElement</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default/>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Key Element</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>resourceMessageNodePath</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default/>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Path to Node</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>resourceMessageKeyElement</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default/>
+        <Length/>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Key Element</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    
+    <!-- BEGIN Aggregation Algorithm -->
+    <AttributeMetadata>
+        <Name>enrichmentType</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>multiMappingAggregation</Default>
+        <Length></Length>
+        <GuiLabels>
+            <Label language="EN">Aggregation Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>multiMappingAggregation</Value>
+                <GuiLabels>
+                    <Label language="EN">Combine</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>xmlLookupAggregation</Value>
+                <GuiLabels>
+                    <Label language="EN">Enrich</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <!-- END Aggregation Algorithm -->
+
+</ComponentMetadata>

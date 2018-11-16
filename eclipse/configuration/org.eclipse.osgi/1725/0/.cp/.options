@@ -1,0 +1,3 @@
+# Debugging options for the com.sap.ndb.studio.xse.editor plugin.
+
+com.sap.ndb.studio.xse.editor/debug=false

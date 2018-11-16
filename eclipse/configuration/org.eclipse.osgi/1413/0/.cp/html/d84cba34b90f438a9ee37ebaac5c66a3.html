@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining Content Filter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiod84cba34b90f438a9ee37ebaac5c66a3">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining Content Filter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loiod84cba34b90f438a9ee37ebaac5c66a3__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this task if you want to filter information by extracting a specific node
+				from the incoming message. </p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loiod84cba34b90f438a9ee37ebaac5c66a3__step_N10020_N1001D_N10011_N10001">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="keyword uilabel">Model Configuration</span> editor </span>
+			</li>
+<li class="li step stepexpand" id="loiod84cba34b90f438a9ee37ebaac5c66a3__step_N1002D_N1001D_N10011_N10001">
+				<span class="ph cmd">If you want to add content filter in the integration flow, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Add Message Transformers</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Content Filter</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> from the context menu of a connection within the pool.</span>
+			</li>
+<li class="li step stepexpand" id="loiod84cba34b90f438a9ee37ebaac5c66a3__step_N1003A_N1001D_N10011_N10001">
+				<span class="ph cmd"> Select the added content filter in the integration flow model to configure it. </span>
+			</li>
+<li class="li step stepexpand" id="loiod84cba34b90f438a9ee37ebaac5c66a3__step_N10043_N1001D_N10011_N10001">
+				<span class="ph cmd">In the <span class="keyword uilabel">Properties</span> view, enter an Xpath to extract a specific message
+					part from the body. For example, in the <span class="keyword uilabel">Xpath Expression</span>
+					field, enter
+						<kbd class="ph userinput">/ns0:MessageBulk/Message/MessageContent/text()</kbd> . </span>
+				<div class="itemgroup info">
+					<div class="note tip"><span class="tiptitle">Tip</span> To quickly specify the Xpath in the content filter, select
+							<span class="ph uicontrol">Define Content Filter</span> from the context menu of
+						the element.</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="keyword uilabel">Properties</span> view, select a particular value for the
+					output, from the <span class="ph uicontrol">Value Type</span>dropdown menu. </span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loiod84cba34b90f438a9ee37ebaac5c66a3__choicetable_nn5_xy4_55">
+<thead><tr><th valign="bottom" align="left" id="d2733006e88-option">
+							<p class="p">Value Type</p>
+
+						</th>
+<th valign="bottom" align="left" id="d2733006e88-desc">
+							<p class="p">Description</p>
+
+						</th></tr></thead>
+<tbody>
+					
+					<tr class="strow chrow">
+						<td valign="top" headers="d2733006e88-option" id="d2733006e107" class="stentry choption" width="50%"><strong>
+							<p class="p">String</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2733006e88-desc d2733006e107" class="stentry chdesc" width="50%">
+							<p class="p">The output is of type string.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2733006e88-option" id="d2733006e122" class="stentry choption" width="50%"><strong>
+							<p class="p">Integer</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2733006e88-desc d2733006e122" class="stentry chdesc" width="50%">
+							<p class="p">The output is of type integer.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2733006e88-option" id="d2733006e137" class="stentry choption" width="50%"><strong>
+							<p class="p">Boolean</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2733006e88-desc d2733006e137" class="stentry chdesc" width="50%">
+							<p class="p">The output is of type boolean.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2733006e88-option" id="d2733006e152" class="stentry choption" width="50%"><strong>
+							<p class="p">Node</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2733006e88-desc d2733006e152" class="stentry chdesc" width="50%">
+							<p class="p">The output is of type node.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2733006e88-option" id="d2733006e168" class="stentry choption" width="50%"><strong>
+							<p class="p">Nodelist</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2733006e88-desc d2733006e168" class="stentry chdesc" width="50%">
+							<p class="p">The output is collection of nodes. </p>
+
+						</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step stepexpand" id="loiod84cba34b90f438a9ee37ebaac5c66a3__step_N10054_N1001D_N10011_N10001">
+				<span class="ph cmd">Save the changes. </span>
+			</li>
+</ol>
+
+		<div class="example"><h2 class="exampletitle">Example</h2>
+			<p class="p">Consider an XML payload structure-</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;Message&gt;
+&lt;orders&gt;
+		&lt;order&gt;
+			&lt;clientId&gt;I0001&lt;/clientId&gt;
+			&lt;count&gt;100&lt;/count&gt;
+		&lt;/order&gt;
+		&lt;order&gt;
+			&lt;clientId&gt;I0002&lt;/clientId&gt;
+		     	 &lt;count&gt;10&lt;/count&gt;
+		&lt;/order&gt;
+&lt;/orders&gt;
+&lt;/Message&gt;
+</pre></div>
+
+			<p class="p">If you enter an Xpath- <kbd class="ph userinput">/Message/orders/order/count/text()</kbd>. The
+				output of the Content Filter would be- <samp class="ph systemoutput">10010</samp>
+			</p>
+
+		</div>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

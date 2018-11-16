@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Aggregator/version::1.0.5" ComponentName="sap:Aggregator" UIElementType="Flowstep" IsExtension="false" IsFinal="true" >
+    <Variant VariantId="ctype::FlowstepVariant/cname::Aggregator/version::1.0.5" VariantDisplayName="Aggregator" VariantName="Aggregator"  AttachmentBehavior="Drop">
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="n" isStreaming="">
+            <Content>
+                <ContentType>Xml</ContentType>
+                <Schema/>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="1" isStreaming="">
+            <Content>
+                <ContentType>Xml</ContentType>
+                <Schema/>
+            </Content>
+        </OutputContent>
+        <Tab id="iflow.advance.aggregator.correlation.tab">
+            <GuiLabels>
+                <Label language="EN">Correlation</Label>
+            </GuiLabels>
+            <AttributeGroup id="correlationAttributes">
+                <AttributeReference>
+                    <ReferenceName>correlationExpression</ReferenceName>
+                    <description>Enter an XPath expression that identifies an element based on which the incoming messages should be correlated</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+        <Tab id="iflow.advance.aggregator.aggregationStrategy.tab">
+            <GuiLabels>
+                <Label language="EN">Aggregation Strategy</Label>
+            </GuiLabels>
+            <AttributeGroup id="aggregationStrategyAttributes">
+                <AttributeReference>
+                    <ReferenceName>incomingFormat</ReferenceName>
+                    <description>Select the content type of the incoming message</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>aggregationAlgorithm</ReferenceName>
+                    <description>Select the strategy how to combine the incoming messages</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>messageSequenceExpression</ReferenceName>
+                    <description>Enter an XPath expression which is used to determine the sequence number</description>
+                    <EditCondition>
+                        <AttributeName>aggregationAlgorithm</AttributeName>
+                        <AttributeValue>sap-sequenced-id-list</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>lastMessageCondition</ReferenceName>
+                    <description>Enter an XPath condition which is used to determine the last message of the aggregate</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>timeout</ReferenceName>
+                    <description>Enter Time period (in minutes) which defines the maximum time between two messages before aggregation is being stopped (period of inactivity)</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>datastoreName</ReferenceName>
+                    <description>Enter the name of the transient data store where the aggregated messages are stored during processing. The name should begin with an alphabetic character and use characters (aA-zZ, 0-9, - _ . ~ ) without any whitespace and it must not be used by another Aggregator step in this IFlow.</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <description>Define the aggregation algorithms and the completeness condition</description>
+        </Tab>
+        <AllowedHeaders/>
+        <ReferencedComponents/>
+    </Variant>
+
+
+    <!-- Aggregator attributes -->
+    <AttributeMetadata>
+        <Name>correlationExpression</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Correlation Expression (XPath)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>incomingFormat</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>XML_SAME_FORMAT</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Incoming Format</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>XML_SAME_FORMAT</Value>
+                <GuiLabels>
+                    <Label language="EN">XML (Same Format)</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>aggregationAlgorithm</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>sap-sequenced-id-list</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Aggregation Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>sap-id-list</Value>
+                <GuiLabels>
+                    <Label language="EN">Combine</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>sap-sequenced-id-list</Value>
+                <GuiLabels>
+                    <Label language="EN">Combine in Sequence</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>messageSequenceExpression</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Message Sequence Expression (XPath)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>lastMessageCondition</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Last Message Condition (XPath)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>timeout</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>60</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Completion Timeout (in min)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>datastoreName</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <AutoGenerate>
+            <Prefix>Aggregator-</Prefix>
+        </AutoGenerate>
+        <Default>Aggregator-1</Default><!-- until AutoGenerate works use default -->
+        <GuiLabels>
+            <Label language="EN">Data Store Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

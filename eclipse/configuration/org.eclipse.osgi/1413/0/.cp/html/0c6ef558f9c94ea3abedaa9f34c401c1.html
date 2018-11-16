@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="EDI Extractor enables you to extract EDI headers and transfer to camel headers. This element extracts data from the incoming EDI document and adds it to the exchange such that this information can be used further in message processing. EDI extractor can read both flat file and XML format."/>
+<meta name="description" content="EDI Extractor enables you to extract EDI headers and transfer to camel headers. This element extracts data from the incoming EDI document and adds it to the exchange such that this information can be used further in message processing. EDI extractor can read both flat file and XML format."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining EDI Extractor</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio0c6ef558f9c94ea3abedaa9f34c401c1">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Defining EDI Extractor </h1>
+<div class="body taskbody"><p class="shortdesc">EDI Extractor enables you to extract EDI headers and transfer to camel headers. This
+		element extracts data from the incoming EDI document and adds it to the exchange such that
+		this information can be used further in message processing. EDI extractor can read both flat
+		file and XML format. </p>
+<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p"/>
+
+		</div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio0c6ef558f9c94ea3abedaa9f34c401c1__steps_blm_tnn_35"><li class="li step"><span class="ph cmd">Open the integration flow in the <span class="ph uicontrol">Model Configuration</span>
+					editor.</span></li>
+<li class="li step"><span class="ph cmd">Choose  <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Add Message Transformers</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">EDI Extractor</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> from the context menu of a connection within the pool.</span></li>
+<li class="li step"><span class="ph cmd">On the <span class="ph uicontrol">EDI Extractor</span> properties tab page, define the
+					parameter.</span></li>
+<li class="li step"><span class="ph cmd">Save the changes.</span></li>
+</ol>
+<div class="example"><h2 class="exampletitle">Example</h2>The element creates camel headers and populates it with respective extracted
+			values. For example, if following segments are part of message payload then respective
+			headers and values for the same are given in the table
+					below.<p class="p">UNB+UNOC:3+<span class="ph emphasis emphasis">4006501000002</span>:<span class="ph emphasis emphasis">14</span>+<span class="ph emphasis emphasis">5790000016839</span>:<span class="ph emphasis emphasis">14</span>+100818:0028+<span class="ph emphasis emphasis">0650</span>+++++XXXXX'</p>
+<p class="p">UNH+1+<span class="ph emphasis emphasis">INVOIC</span>:<span class="ph emphasis emphasis">D</span>:<span class="ph emphasis emphasis">96A</span>:<span class="ph emphasis emphasis">UN</span>'
+				</p>
+
+<div class="tablenoborder"><table summary="" id="loio0c6ef558f9c94ea3abedaa9f34c401c1__table_spy_dlt_k5" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1:
+					</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+<thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="50%" id="d146741e81">
+								<p class="p">Header Name</p>
+
+							</th>
+<th class="entry" valign="top" width="50%" id="d146741e86">
+								<p class="p">Value</p>
+
+							</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="50%" headers="d146741e81 ">
+								<p class="p">EDI_Payload_Format</p>
+
+							</td>
+<td class="entry" valign="top" width="50%" headers="d146741e86 ">
+								<p class="p">XML or Flat-File</p>
+
+							</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d146741e81 ">
+								<p class="p">EDI_Document_Standard</p>
+
+							</td>
+<td class="entry" valign="top" width="50%" headers="d146741e86 ">
+								<p class="p">EDIFACT</p>
+
+							</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d146741e81 ">
+								<p class="p">EDI_Sender_ID </p>
+
+							</td>
+<td class="entry" valign="top" width="50%" headers="d146741e86 ">
+								<p class="p">4006501000002</p>
+
+							</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d146741e81 ">
+								<p class="p">EDI_Sender_ID_Qualifier </p>
+
+							</td>
+<td class="entry" valign="top" width="50%" headers="d146741e86 ">
+								<p class="p">14</p>
+
+							</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d146741e81 ">
+								<p class="p">EDI_Receiver_ID </p>
+
+							</td>
+<td class="entry" valign="top" width="50%" headers="d146741e86 ">
+								<p class="p">5790000016839</p>
+
+							</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d146741e81 ">
+								<p class="p">EDI_Receiver_ID_Qualifier </p>
+
+							</td>
+<td class="entry" valign="top" width="50%" headers="d146741e86 ">
+								<p class="p">14</p>
+
+							</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d146741e81 ">
+								<p class="p">EDI_Interchange_control_number </p>
+
+							</td>
+<td class="entry" valign="top" width="50%" headers="d146741e86 ">
+								<p class="p">0650</p>
+
+							</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d146741e81 ">
+								<p class="p">EDI_Message_Type </p>
+
+							</td>
+<td class="entry" valign="top" width="50%" headers="d146741e86 ">
+								<p class="p">INVOIC </p>
+
+							</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d146741e81 ">
+								<p class="p">EDI_Message_Version </p>
+
+							</td>
+<td class="entry" valign="top" width="50%" headers="d146741e86 ">
+								<p class="p">D</p>
+
+							</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d146741e81 ">
+								<p class="p">EDI_Message_Release </p>
+
+							</td>
+<td class="entry" valign="top" width="50%" headers="d146741e86 ">
+								<p class="p">96A</p>
+
+							</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="50%" headers="d146741e81 ">
+								<p class="p">EDI_Message_Agency </p>
+
+							</td>
+<td class="entry" valign="top" width="50%" headers="d146741e86 ">
+								<p class="p">UN</p>
+
+							</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

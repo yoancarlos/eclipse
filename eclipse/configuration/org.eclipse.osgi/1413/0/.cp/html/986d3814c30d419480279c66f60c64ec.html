@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=6857980614526853"/>
+<title>Defining Message Security</title>
+</head>
+<body class="" id="loio986d3814c30d419480279c66f60c64ec">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Defining Message Security</h1>
+<div class="body conbody"><p class="shortdesc"/>
+<p class="p">Ensuring security is important, during  message exchange, to preserve the integrity of
+			messages. A sender participant uses signatures to ensure authenticity of the sender, and
+			encryption to prevent  non-repudiation of messages during the message exchange.</p>
+<div class="p">You can sign a message content depending on the format you require:<ul class="ul" id="loio986d3814c30d419480279c66f60c64ec__ul_mtd_gnm_bl"><li class="li">PKCS#7/CMS can be used to protect any message content with or without
+						tags.<p class="p">For more information, see <a class="xref" href="ac8ce244914841229f2387799677d1d0.html"> Signing the Message
+							Content with PKCS#7/CMS Signature</a>.</p>
+</li>
+<li class="li">XML digital signature can be used only for XML messages. <p class="p">For more
+						information, see <a class="xref" href="60be57de411e4dd59fdc140d7c5b0ac3.html">Signing
+							the Message Content with XML Digital Signature</a>.</p>
+</li>
+</ul>
+For more information on how to encrypt the message content, see <a class="xref" href="f0d0838b0ba047ddad42f0799a9934f3.html">Encrypting the Message
+			Content</a>.</div>
+<p class="p">A receiver participant uses a signature verifier to identify the authenticity of the sender and
+			a decryptor to decrypt the message received over cloud. </p>
+<div class="p">The corresponding verifiers for the message content are:<ul class="ul" id="loio986d3814c30d419480279c66f60c64ec__ul_j2x_24m_bl"><li class="li">PKCS#7/CMS Signature Verifier<p class="p"><a class="xref" href="cf6053e9d9854b3fafbb7e7807e059da.html">Configuring the PKCS#7/CMS
+							Signature Verifier</a>.</p>
+</li>
+<li class="li">XML Digital Signature Verifier<p class="p"><a class="xref" href="e3e2cd3523814d9db4344b9d252b1788.html">Configuring XML Digital
+							Signature Verifier</a>.</p>
+</li>
+</ul>
+For more information on how to decrypt the received message content, see <a class="xref" href="3c5bb63184374c57bfa9a777982bb18a.html">Decrypting the Message
+			Content</a>.</div>
+</div>
+<div class="related-links"> </div>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="A splitter step decomposes a composite message into a series of individual messages and sends them to a receiver."/>
+<meta name="description" content="A splitter step decomposes a composite message into a series of individual messages and sends them to a receiver."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining Splitter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio83e2022f9c014bebab63cb933e625610">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining Splitter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">A splitter step decomposes a composite message into a series of individual messages and
+		sends them to a receiver.</p>
+
+		<div class="section prereq p" id="loio83e2022f9c014bebab63cb933e625610__prereq_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<p class="p">You have selected the <span class="ph uicontrol">Splitter</span> step or you have explicitly added the
+				splitter step to the integration flow model.</p>
+
+		</div>
+
+		<div class="section context" id="loio83e2022f9c014bebab63cb933e625610__context_N10021_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You perform this task if you need to break down a composite message into a series of
+				individual messages and send them to a receiver. You split the composite message
+				based on the message type, for example, IDoc or PKCS#7/CMS Signature-Content, or the
+				manner in which the message is to be split, for example, general or iterative
+				splitter.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loio83e2022f9c014bebab63cb933e625610__step_N1002D_N1002A_N10011_N10001">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="keyword uilabel">Model Configuration</span>
+					editor. </span>
+			</li>
+<li class="li step stepexpand" id="loio83e2022f9c014bebab63cb933e625610__step_N1003A_N1002A_N10011_N10001">
+				<span class="ph cmd"> If you want to add a splitter to the integration flow, choose <span class="ph uicontrol">Add
+						Splitter</span> from the context menu of the connection within the
+					pool. </span>
+			</li>
+<li class="li step stepexpand" id="loio83e2022f9c014bebab63cb933e625610__step_N10047_N1002A_N10011_N10001">
+				<span class="ph cmd"> In the <span class="keyword uilabel">Model Configuration</span> editor, select the splitter element.</span>
+			</li>
+<li class="li step stepexpand" id="loio83e2022f9c014bebab63cb933e625610__step_N10054_N1002A_N10011_N10001">
+				<span class="ph cmd"> In the <span class="ph uicontrol">Properties</span> view, select a <span class="ph uicontrol">Splitter
+						Type</span>.</span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loio83e2022f9c014bebab63cb933e625610__table_a4p_5gw_bs" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Splitter Types</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="50%" id="d1632340e88">
+										<p class="p">Splitter Type</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="50%" id="d1632340e94">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d1632340e88 "><span class="ph uicontrol">IDoc</span></td>
+
+									<td class="entry" valign="top" width="50%" headers="d1632340e94 ">
+										<p class="p">Is used to split a composite IDoc messages into a series
+											of individual IDoc messages with the enveloping elements
+											of the composite IDoc message.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d1632340e88 "><span class="ph uicontrol">PKCS#7/CMS
+										Signature-Content</span></td>
+
+									<td class="entry" valign="top" width="50%" headers="d1632340e94 ">
+										<p class="p">Is used when an agent sends a PKCS7 Signed Data message that contains a signature and
+											content. This splitter type breaks down the signature
+											and content into separate files.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d1632340e88 "><span class="ph uicontrol">General </span></td>
+
+									<td class="entry" valign="top" width="50%" headers="d1632340e94 ">
+										<p class="p">Is used to split a composite message comprising of N
+											messages into N individual messages each containing one
+											message with the enveloping elements of the composite
+											message.</p>
+
+										<div class="note note"><span class="notetitle">Note</span> 
+											<p class="p">A possible use case for this splitter type is where a message obtained from a sender
+												contains multiple account statements and needs to be
+												split into separate individual messages, each
+												containing the account statement for one specific
+												account owner. </p>
+
+											<p class="p">Typically, the target message also needs to contain enveloping information such as the
+												bank name or other attributes to make the account
+												statement complete. In this case, it would make
+												sense to choose the general splitter pattern.</p>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d1632340e88 "><span class="ph uicontrol">Iterating </span></td>
+
+									<td class="entry" valign="top" width="50%" headers="d1632340e94 ">
+										<p class="p">Is used to split a composite message into a series of
+											messages without copying the enveloping elements of the
+											composite message.</p>
+
+										<div class="note note"><span class="notetitle">Note</span> 
+											<p class="p"> A possible use case for this splitter type is where a message obtained from a sender
+												contains multiple orders from different customers
+												and needs to be split into individual messages. Each
+												resulting message should contain the order of one
+												customer only and is to be routed to this customer.
+												In this case it might make more sense for the
+												resulting split messages to contain only data that
+												is related to the corresponding customer, without
+												any of the additional information that is contained
+												in enveloping elements. </p>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								
+							</tbody>
+
+						</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify the properties of the splitter.</span>
+			</li>
+<li class="li step stepexpand" id="loio83e2022f9c014bebab63cb933e625610__step_N100E4_N1002A_N10011_N10001">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+		<div class="example"><h2 class="exampletitle">Example</h2>Consider the following XML payload structure as input for the
+				<span class="ph uicontrol">Splitter</span>
+				step:<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;orders&gt;
+	&lt;order&gt;
+		&lt;clientId&gt;I0001&lt;/clientId&gt;
+		&lt;count&gt;100&lt;/count&gt;
+	&lt;/order&gt;
+	&lt;order&gt;
+		&lt;clientId&gt;I0002&lt;/clientId&gt;
+		&lt;count&gt;10&lt;/count&gt;
+	&lt;/order&gt;
+&lt;/orders&gt;
+
+</pre></div>
+<p class="p">If
+				you use <span class="ph uicontrol">Token</span> as <span class="ph uicontrol">Expression Type</span> and
+				enter the <span class="ph uicontrol">order</span> as <span class="ph uicontrol">Token</span>, the XML
+				payload is split into two output files.</p>
+<p class="p">Output1.xml contains the
+				following:</p>
+<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">
+&lt;order&gt;
+	&lt;clientId&gt;I0001&lt;/clientId&gt;
+	&lt;count&gt;100&lt;/count&gt;
+&lt;/order&gt;
+</pre></div>
+<p class="p">Output2.xml
+				contains the
+				following:</p>
+<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">
+&lt;order&gt;
+	&lt;clientId&gt;I0002&lt;/clientId&gt;
+	&lt;count&gt;10&lt;/count&gt;
+&lt;/order&gt;
+</pre></div>
+<p class="p">Using
+					<span class="ph uicontrol">XPath</span> as <span class="ph uicontrol">Expression Type</span>, you can
+				achieve the same behavior by entering one of the following two expressions (as
+				XPath)::</p>
+<ul class="ul" id="loio83e2022f9c014bebab63cb933e625610__ul_g2k_tmw_bs">
+				<li class="li">
+					<p class="p"><samp class="ph codeph">/orders/order</samp> (absolute expression for the element
+						&lt;order&gt;))</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p"><samp class="ph codeph">//order</samp> (relative expression for the element
+						&lt;order&gt;)</p>
+
+				</li>
+
+			</ul>
+</div>
+
+		<div class="section postreq"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Next Steps</h2></div>
+			<p class="p">When a message is split (as configured in a Splitter
+            step of an integration flow), the Camel headers listed below are generated every time
+            the runtime finishes splitting an Exchange. You have several options for accessing these
+            Camel headers at runtime. For example, suppose that you are configuring an integration
+            flow with a Splitter step before an SFTP receiver adapter. If you enter the string
+                <kbd class="ph userinput">split_${exchangeId}_Index${header.CamelSplitIndex}</kbd> for
+                <span class="ph uicontrol">File Name</span>, the file name of the generated file on the SFTP
+            server contains the Camel header <samp class="ph codeph">CamelSplitIndex</samp> (in other words, the
+            information on the number of split Exchanges induced by the Splitter step). </p>
+
+			<div class="p">
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loio83e2022f9c014bebab63cb933e625610__d1944e417" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Headers Relevant for Message Splitting</span></caption>
+<colgroup><col width="17.513134851138354%"/><col width="82.48686514886165%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="17.513134851138354%" id="d1632340e277">
+                                    <p class="p">Header</p>
+
+                                </th>
+
+                                <th class="entry" valign="top" width="82.48686514886164%" id="d1632340e283">
+                                    <p class="p">Description</p>
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d1632340e277 ">
+                                    <p class="p">CamelSplitIndex </p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d1632340e283 ">
+                                    <p class="p">Provides a counter of split items that increases for each
+                                        Exchange that is split (starts from 0). </p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d1632340e277 ">
+                                    <p class="p">CamelSplitSize</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d1632340e283 ">
+                                    <p class="p">Provides the total number of split items (if you are using
+                                        stream-based splitting, this header is only provided for the
+                                        last item, in other words, for the completed Exchange). </p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d1632340e277 ">
+                                    <p class="p">CamelSplitComplete</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d1632340e283 ">
+                                    <p class="p">Indicates whether an Exchange is the last split. </p>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+			<div class="p">
+				<div class="note note"><span class="notetitle">Note</span> 
+					<p class="p">You can use the <span class="ph uicontrol">Gather</span> step after
+							<span class="ph uicontrol">Splitter</span> in an integration flow if you have
+						configured the <span class="ph uicontrol">Splitter Type</span> as
+							<span class="ph uicontrol">General</span> or <span class="ph uicontrol">Iterating</span>. </p>
+
+				</div>
+
+				<div class="note restriction"><span class="restrictiontitle">Restriction</span> 
+					<div class="p">
+						<ul class="ul" id="loio83e2022f9c014bebab63cb933e625610__ul_orr_gz4_cr">
+							<li class="li">
+								<p class="p">You cannot use <span class="ph uicontrol">Splitter</span> after
+										<span class="ph uicontrol">Multicast</span>.</p>
+
+							</li>
+
+							<li class="li">
+								<p class="p">You cannot use two consecutive <span class="ph uicontrol">Splitter</span>
+									elements ending in <span class="ph uicontrol">Gather</span>.</p>
+
+							</li>
+
+							<li class="li">
+								<p class="p">You cannot use <span class="ph uicontrol">Splitter</span> within a
+									<span class="ph uicontrol">Subprocess</span>.</p>
+
+							</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="7569837c950e46ea843189f187903a37.html" title="A general splitter is used to split a composite message comprising of N messages into N individual messages each containing one message with the enveloping elements of the composite message.">Defining a General Splitter</a></div>
+<div><a class="link" href="fbdcb6731d0741608f23de03c13b5298.html" title="An iterating splitter is used to split a composite message into a series of messages without copying the enveloping elements of the composite message.">Defining an Iterating Splitter</a></div>
+<div><a class="link" href="53e4856aadde436488e3d58274bb6750.html" title="The PKCS#7/CMS Signature-Content splitter is used when an agent sends a PKCS7 Signed Data message that contains a signature and content. This splitter type breaks down the signature and content into separate files.">Defining a PKCS#7/CMS Signature-Content Splitter</a></div>
+<div><a class="link" href="8f3c59428eae4605a2977f70f7af334f.html" title="The two splitter types General Splitter and Iterative Splitter behave differently in their handling of the enveloping elements of the input message.">General and Iterating Splitter</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

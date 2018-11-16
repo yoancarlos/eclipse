@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Define PGP Decryptor</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiod0dc511970b04f9bb4a844bcc3d5b89e">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Define PGP Decryptor</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loiod0dc511970b04f9bb4a844bcc3d5b89e__ul_snk_z4x_jr">
+					<li class="li">
+						<p class="p">You have logged into your customer workspace in SAP HCI web application. </p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You are editing the integration flow in the editor. </p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use the PGP Decryptor to decrypt a message using OpenPGP standards.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loiod0dc511970b04f9bb4a844bcc3d5b89e__image_oqv_t5x_jr" src="loioccb09c1e8d904b42966cd321c4008329_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Decryptor</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">PGP Decryptor</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Place <span class="ph uicontrol">PGP Decryptor</span> in integration process and define
+					the message path.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Name</span> field, provide a name for the element.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Signatures</span> dropdown list, select option based on
+					description in table.</span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loiod0dc511970b04f9bb4a844bcc3d5b89e__table_mfr_wzx_jr" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="50%" id="d4527955e102">
+										<p class="p">Option</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="50%" id="d4527955e108">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d4527955e102 ">
+										<p class="p">None Expected</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d4527955e108 ">
+										<p class="p">Select if you do not expect a signature in the inbound
+											message.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d4527955e102 ">
+										<p class="p">Optional</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d4527955e108 ">
+										<p class="p">Select if you are not sure of the inbound message
+											containing a signature. This enables the decryptor to
+											decrypt messages that contain signature and do not
+											contain signature.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d4527955e102 ">
+										<p class="p">Required</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d4527955e108 ">
+										<p class="p">Select if you are sure of the inbound message containing
+											a signature.</p>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you have selected <span class="ph uicontrol">Optional</span> or
+						<span class="ph uicontrol">Required</span> in <span class="ph uicontrol">Signatures</span> field,
+					choose <img class="image" id="loiod0dc511970b04f9bb4a844bcc3d5b89e__image_lxh_41y_jr" src="loio5eb3d33626a9461293036e2c68c45c11_LowRes.png"/> to add signer user ID.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<p class="p">This field is disabled if you select <span class="ph uicontrol">None Expected</span>
+							in <span class="ph uicontrol">Signatures</span> field.</p>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the configuration.</span>
+				
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

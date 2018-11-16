@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Modeling Operations for SuccessFactors SOAP Web Service</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio20215cbea3c34ed0846852ff192e4584">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Modeling Operations for SuccessFactors SOAP Web Service</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loio20215cbea3c34ed0846852ff192e4584__ul_ezb_y5w_gv">
+					<li class="li">You have assigned the <span class="ph uicontrol">SuccessFactors</span> adapter to the communication
+						channel.</li>
+
+					<li class="li">You have selected <span class="ph uicontrol">SOAP</span> in the <span class="ph uicontrol">Message
+							Protocol</span> field.</li>
+
+					<li class="li">You have launched the operations modeler wizard by choosing <span class="ph uicontrol">Model
+							Operation</span> on the <span class="ph uicontrol">Adapter Specific</span>
+						tab.</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You need to provide operation details to access and modify records in the SuccessFactors SOAP
+				Web service. You use the operations modeler wizard to provide these details and also
+				generate the XSD file.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Connect to System</span> window, provide values in the fields based
+					on the descriptions in the table below and choose
+					<span class="ph uicontrol">Next</span>.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio20215cbea3c34ed0846852ff192e4584__choicetable_ub2_hvw_gv">
+<thead><tr><th valign="bottom" align="left" id="d367304e67-option">
+							<p class="p">Field</p>
+
+						</th>
+<th valign="bottom" align="left" id="d367304e67-desc">Description</th></tr></thead>
+<tbody>
+					
+					<tr class="strow chrow">
+						<td valign="top" headers="d367304e67-option" id="d367304e83" class="stentry choption" width="50%"><strong>
+							<p class="p">Address</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d367304e67-desc d367304e83" class="stentry chdesc" width="50%">
+							<p class="p">URL of the SuccessFactors system that you are connecting to</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d367304e67-option" id="d367304e98" class="stentry choption" width="50%"><strong>
+							<p class="p">Company ID</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d367304e67-desc d367304e98" class="stentry chdesc" width="50%">
+							<p class="p">SuccessFactors company ID</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d367304e67-option" id="d367304e113" class="stentry choption" width="50%"><strong>
+							<p class="p">User Name</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d367304e67-desc d367304e113" class="stentry chdesc" width="50%">
+							<p class="p">Your user name for authentication</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d367304e67-option" id="d367304e128" class="stentry choption" width="50%"><strong>
+							<p class="p">Password</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d367304e67-desc d367304e128" class="stentry chdesc" width="50%">
+							<p class="p">Relevant password for the specified user name</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d367304e67-option" id="d367304e144" class="stentry choption" width="50%"><strong>
+							<p class="p">Proxy Communication</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d367304e67-desc d367304e144" class="stentry chdesc" width="50%">
+							<p class="p">Select this checkbox if you want to manually specify the proxy
+								details</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d367304e67-option" id="d367304e159" class="stentry choption" width="50%"><strong>
+							<p class="p">Proxy Host</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d367304e67-desc d367304e159" class="stentry chdesc" width="50%">
+							<p class="p">Proxy host name</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d367304e67-option" id="d367304e174" class="stentry choption" width="50%"><strong>
+							<p class="p">Proxy Port</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d367304e67-desc d367304e174" class="stentry chdesc" width="50%">
+							<p class="p">Proxy port number</p>
+
+						</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Entity Selection</span> window, select the entity that you want to
+					perform the operation on from the <span class="ph uicontrol">Entity List</span>. Choose
+						<span class="ph uicontrol">Next</span>.</span>
+				<div class="itemgroup stepresult">
+					<p class="p">The wizard fetches the fields for the selected entity.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Model Operation</span> window, select the
+						<span class="ph uicontrol">Operation</span> from the dropdown list.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select the fields that you want to perform the operation on.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you have selected <span class="ph uicontrol">query</span> for the <span class="ph uicontrol">Operation</span>,
+					choose <span class="ph uicontrol">Next</span> to specify filter conditions.</span>
+				<div class="itemgroup info">
+					<p class="p">You can configure the filter conditions to execute delta sync scenarios. For more
+						information, see <a class="xref" href="262bac36b4d545c982ba3badd71c83a3.html">Configuring Delta Sync Scenarios</a>.
+						Refer to the following table when specifying filter conditions.</p>
+
+					<div class="p">
+						
+<div class="table-wrapper tablenoborder"><table summary="" id="loio20215cbea3c34ed0846852ff192e4584__table_qjx_bgl_tq" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+								
+								
+								<thead class="thead" align="left">
+									<tr class="row">
+										<th class="entry" valign="top" width="50%" id="d367304e267">Field</th>
+
+										<th class="entry" valign="top" width="50%" id="d367304e270">Description</th>
+
+									</tr>
+
+								</thead>
+
+								<tbody class="tbody">
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d367304e267 ">Filter Field</td>
+
+										<td class="entry" valign="top" width="50%" headers="d367304e270 ">Field that is used in the SuccessFactors API ‘WHERE’ clause for filtering.<div class="note note"><span class="notetitle">Note</span> The
+												field set contains the set of filterable fields
+												returned from the SuccessFactors API that you can
+												use in the filter condition.</div>
+</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d367304e267 ">Operation</td>
+
+										<td class="entry" valign="top" width="50%" headers="d367304e270 ">Operator to be used in the WHERE condition. Example: &lt; , &gt; </td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d367304e267 ">Type</td>
+
+										<td class="entry" valign="top" width="50%" headers="d367304e270 ">Value that the filter field has to be compared against. <p class="p">If the type is
+												<span class="ph uicontrol">Text</span>, specify the exact
+												value.</p>
+<p class="p">If the type is
+												<span class="ph uicontrol">XPath</span>, specify the entire
+												XPath value. If the previous integration flow step
+												is a content enricher, the XPath must be specified
+												as a relative path, starting with a double-slash
+												‘\\’.</p>
+
+											<p class="p">If the type is <span class="ph uicontrol">Delta Sync</span>, the
+												value is populated with
+												<span class="ph uicontrol">maxDateFromLastRun</span>.</p>
+<p class="p">If
+												the type is <span class="ph uicontrol">Property</span>, the
+												system reads the value from the property that you
+												have defined in the integration flow element.</p>
+
+										</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d367304e267 ">Value</td>
+
+										<td class="entry" valign="top" width="50%" headers="d367304e270 ">Value that the filter field has to be compared against. <p class="p">If the type is
+												<span class="ph uicontrol">Text</span>, specify the exact
+												value</p>
+<p class="p">If the type is
+												<span class="ph uicontrol">XPath</span>, specify the entire
+												XPath value. If the previous integration flow step
+												is a content enricher, the XPath must be specified
+												as a relative path, starting with a double-slash
+												‘\\’.</p>
+
+											<p class="p">If the type is <span class="ph uicontrol">Delta Sync</span>, the
+												value is populated with
+												<span class="ph uicontrol">maxDateFromLastRun</span>.</p>
+
+										</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d367304e267 ">Condition</td>
+
+										<td class="entry" valign="top" width="50%" headers="d367304e270 ">‘AND’ or ‘OR’ condition that needs to be used in the query WHERE clause filter
+											condition.</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d367304e267 ">Add</td>
+
+										<td class="entry" valign="top" width="50%" headers="d367304e270 ">The condition will be added to the generated SuccessFactors query.<div class="note note"><span class="notetitle">Note</span> Multiple
+												conditions can be added if required.</div>
+</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="50%" headers="d367304e267 ">Remove</td>
+
+										<td class="entry" valign="top" width="50%" headers="d367304e270 ">Any condition that is already added to the list can be selected and removed from
+											the final SuccessFactors query. </td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+</div>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span>
+				<div class="itemgroup info">The <span class="ph uicontrol">Finish</span> button is only activated if you have selected fields of
+					the entity in step 3. When you choose <span class="ph uicontrol">Finish</span>, the system
+					creates a XML schema file with the selected entities. You can access the schema
+					file in the src.main.resources.wsdl folder of your project. If there is an
+					existing XML schema file, you have the option of overwriting the existing file
+					or creating a new file after choosing the <span class="ph uicontrol">Finish</span> option.
+					This file can be used in the integration flow like a mapping step.</div>
+				<div class="itemgroup info">One of the root elements in the XML schema file is the <span class="ph uicontrol">Entity Name</span>.
+					In cases where the <span class="ph uicontrol">Entity Name</span> is in the format
+						<span class="ph emphasis emphasis">&lt;EntityName&gt;_$XX</span>, only
+						<span class="ph emphasis emphasis">&lt;EntityName&gt;</span> is used as the root element of the
+					XML schema file. <span class="ph emphasis emphasis">$XX</span> is dropped from the root element name
+					of the XML schema so that you can use the same integration flow in other
+					SuccessFactors company IDs without changing the mapping.</div>
+			</li>
+</ol>
+
+	</div>
+
+<div class="related-links"> 
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

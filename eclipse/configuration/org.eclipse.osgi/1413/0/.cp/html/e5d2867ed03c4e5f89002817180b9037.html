@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="This integration flow step is used to calculate a digest of the Payload or parts of it and store the result in a message header."/>
+<meta name="description" content="This integration flow step is used to calculate a digest of the Payload or parts of it and store the result in a message header."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining Message Digest</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioe5d2867ed03c4e5f89002817180b9037">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining Message Digest</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">This integration flow step is used to calculate a digest of the Payload or parts of it
+		and store the result in a message header.  </p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">In detail, the <span class="ph uicontrol">Message Digest</span> integration flow step transforms a
+				message into a canonical XML document. From this document, a digest (hash value) is
+				calculated and written to the message header.</p>
+
+			<div class="note note"><span class="notetitle">Note</span> 
+				<p class="p">Canonicalization transforms an XML document into a form (the canonic form) that
+					makes it possible to compare it with other XML documents. With the Message
+					Digest integration flow step, you can apply canonicalization to a message (or to
+					parts of a message), calculate a digest out of the transformed message, and add
+					the digest to the message header. </p>
+
+				<p class="p">In simple terms, canonicalization skips non-significant elements from an XML document. To
+					give some examples, the following changes are applied during the
+					canonicalization of an XML document: Unification of quotation marks and blanks,
+					or encoding of empty elements as start/end pairs. </p>
+
+			</div>
+
+			<p class="p">The original message remains unchanged.</p>
+
+			<p class="p">You also have the option to define a filter to apply canonicalization only to a sub-set of the
+				message.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step" id="loioe5d2867ed03c4e5f89002817180b9037__step_N10020_N1001D_N10011_N10001">
+				<span class="ph cmd">Open the integration flow in the <span class="keyword uilabel">Model Configuration</span> editor.
+				</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Select the <span class="ph uicontrol">Message Digest</span> step and add it to the
+					integration flow.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Specify the following attributes for the step.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loioe5d2867ed03c4e5f89002817180b9037__choicetable_ey3_dbl_4n">
+<thead><tr><th id="d2831576e65-option" valign="bottom" align="left">Option</th>
+<th id="d2831576e65-desc" valign="bottom" align="left">Description</th></tr></thead>
+<tbody>
+					<tr class="strow chrow">
+						<td valign="top" headers="d2831576e65-option" id="d2831576e69" class="stentry choption"><strong>Filter</strong></td>
+
+						<td valign="top" headers="d2831576e65-desc d2831576e69" class="stentry chdesc">If you only want to transform part of the message, enter an XPath expression to
+							specify the part (optional attribute).<p class="p">You can also define a prefix
+								namespace mapping (open the <span class="ph uicontrol">Properties</span> view
+								to do that).</p>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2831576e65-option" id="d2831576e83" class="stentry choption"><strong>Canonicalization Method</strong></td>
+
+						<td valign="top" headers="d2831576e65-desc d2831576e83" class="stentry chdesc">You can choose between the following methods.<ul class="ul" id="loioe5d2867ed03c4e5f89002817180b9037__ul_ssx_nbl_4n">
+								<li class="li">Canonical XML Version 1.0<p class="p">More information: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/TR/2001/REC-xml-c14n-20010315" target="_blank" alt="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" title="http://www.w3.org/TR/2001/REC-xml-c14n-20010315">http://www.w3.org/TR/2001/REC-xml-c14n-20010315<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+
+								</li>
+
+								<li class="li">Canonical XML with Comments Version 1.0 <p class="p">More information: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments" target="_blank" alt="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments" title="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments">http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+
+								</li>
+
+								<li class="li">Exclusive XML Canonicalization Version 1.0 <p class="p">More information: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/2001/10/xml-exc-c14n" target="_blank" alt="http://www.w3.org/2001/10/xml-exc-c14n" title="http://www.w3.org/2001/10/xml-exc-c14n">http://www.w3.org/2001/10/xml-exc-c14n<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+
+								</li>
+
+								<li class="li">Exclusive XML Canonicalization with Comments Version 1.0<p class="p">More information: <a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/2001/10/xml-exc-c14n#WithComments" target="_blank" alt="http://www.w3.org/2001/10/xml-exc-c14n#WithComments" title="http://www.w3.org/2001/10/xml-exc-c14n#WithComments">http://www.w3.org/2001/10/xml-exc-c14n#WithComments<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></p>
+
+								</li>
+
+							</ul>
+<p class="p">This is an optional attribute. </p>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2831576e65-option" id="d2831576e132" class="stentry choption"><strong>Digest Algorithm</strong></td>
+
+						<td valign="top" headers="d2831576e65-desc d2831576e132" class="stentry chdesc">Select the hash algorithm to be used to calculate the digest.<div class="p">You can choose between
+								the following hash algorithms: <ul class="ul" id="loioe5d2867ed03c4e5f89002817180b9037__ul_oq4_zbl_4n">
+									<li class="li">SHA-1 </li>
+
+									<li class="li">SHA-256 </li>
+
+									<li class="li">SHA-384 </li>
+
+									<li class="li">SHA-512 </li>
+
+									<li class="li">MD5</li>
+
+								</ul>
+</div>
+<p class="p">This is a mandatory attribute. </p>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2831576e65-option" id="d2831576e162" class="stentry choption"><strong>Target Header Name</strong></td>
+
+						<td valign="top" headers="d2831576e65-desc d2831576e162" class="stentry chdesc">Enter the name of the target header element which is to contain the hash value
+								(digest).<p class="p">This is a mandatory attribute. </p>
+</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

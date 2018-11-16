@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=74399753796695"/>
+<title>Submitting Content to the Git Repository</title>
+</head>
+<body class="" id="loio95144d6a300c4b45b99538c381804562">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Submitting Content to the Git Repository</h1>
+<div class="body taskbody"><p class="shortdesc"/>
+<div class="section context" id="loio95144d6a300c4b45b99538c381804562__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p"/>
+
+		</div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loio95144d6a300c4b45b99538c381804562__step_N1001F_N1001C_N10011_N10001"><span class="ph cmd"><strong class="ph b">Share new projects after deploy</strong></span> If you create a new project, you have to share the project to the Git Repository.<ol type="a" class="ol substeps" id="loio95144d6a300c4b45b99538c381804562__substeps_lmj_jqm_sh"><li class="li substep substepexpand"><span class="ph cmd">In the <span class="keyword uilabel">Project Explorer</span>, right-click on the project and choose <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Team</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Share Project…</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> from the context menu.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">In the <span class="keyword uilabel">Share Project </span>wizard, select <em class="ph i">Git</em> as the repository type
+							and choose <span class="ph uicontrol">Next</span>.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">In the <span class="keyword uilabel">Configure Git Repository</span> page, from the
+								<span class="keyword uilabel">Repository</span> dropdown, select the Git Repository to
+							which you need to share the project.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span> Now your project is available in the Git Repository. In the <span class="keyword uilabel">Git
+								Staging</span> view, under the <span class="keyword uilabel">Unstaged
+								Changes</span>, you can view the list of files of the
+							project.</li>
+</ol>
+</li>
+<li class="li step stepexpand" id="loio95144d6a300c4b45b99538c381804562__step_N10087_N1001C_N10011_N10001"><span class="ph cmd"><strong class="ph b">Commit the changes</strong>
+				</span><ol type="a" class="ol substeps" id="loio95144d6a300c4b45b99538c381804562__substeps_n43_1rm_sh"><li class="li substep substepexpand"><span class="ph cmd">In the <span class="keyword uilabel">Git Repositories</span> view, right-click on the project and choose
+								<span class="ph uicontrol">Pull</span> from the context menu to avoid any
+							conflicts while pushing the content.</span> 
+							<div class="note note" id="loio95144d6a300c4b45b99538c381804562__note_N100A8_N100A5_N10096_N10092_N10087_N1001C_N10011_N10001"><span class="notetitle">Note</span> It is always advised to pull the content before you commit your
+								changes to merge any conflicting changes. </div>
+
+						</li>
+<li class="li substep substepexpand"><span class="ph cmd"> Open the <span class="keyword uilabel">Git Staging</span> tab view. </span></li>
+<li class="li substep substepexpand"><span class="ph cmd">If any file is listed under the <span class="keyword uilabel">Unstaged Files</span> section, right-click on
+							the file and choose <span class="ph uicontrol">Add to index</span> from the context
+							menu. This moves the files to the <span class="keyword uilabel">Staged Files</span>
+							area.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">From the toolbar of the <span class="keyword uilabel">Git Staging</span> view, choose <img class="image" id="loio95144d6a300c4b45b99538c381804562__image_qrr_m2y_mj" src="20bf9691d36b4f00982bdb6df03e7361.image" alt="Add Signed-off by_FSN" title="Add Signed-off by_FSN"/>(<em class="ph i">Add Signed-off by</em> icon) and then choose <img class="image" id="loio95144d6a300c4b45b99538c381804562__image_mdd_1fy_mj" src="e82377bf993444c68d038f35752b26b6.image" alt="Add Change ID" title="Add Change ID"/>(<em class="ph i">Add Change-Id</em> icon). You can also
+							choose to write a description of the commit action in the first line of
+							the <span class="keyword uilabel">Commit Message</span>Commit Message section.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">In the toolbar of the <span class="keyword uilabel">Git Staging</span> view, choose <img class="image" id="loio95144d6a300c4b45b99538c381804562__image_w2m_gfy_mj" src="93dc6d366f0a4139a9a09f27c480c5bd.image" alt="Commit_FSN" title="Commit_FSN"/>(<em class="ph i">Commit</em> icon). </span>  The files are committed locally. </li>
+</ol>
+</li>
+<li class="li step stepexpand" id="loio95144d6a300c4b45b99538c381804562__step_N10111_N1001C_N10011_N10001"><span class="ph cmd"><strong class="ph b">Push content to the Git Repository</strong>
+				</span><ol type="a" class="ol substeps" id="loio95144d6a300c4b45b99538c381804562__substeps_rgd_rrm_sh"><li class="li substep substepexpand"><span class="ph cmd">Under <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Remotes</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">origin</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>, right-click on the URL of the remote repository
+							indicated with <img class="image" id="loio95144d6a300c4b45b99538c381804562__image_w5y_hfy_mj" src="7f1c888cbc484022a099a9d2b7d40e5c.image" alt="Push_FSN" title="Push_FSN"/>(<em class="ph i">Push</em> icon). </span></li>
+<li class="li substep substepexpand"><span class="ph cmd">Choose <span class="ph uicontrol">Configure Push...</span>
+						</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">Expand <span class="keyword uilabel">Advanced </span> section and choose
+								<span class="ph uicontrol">Edit(Advanced)…</span> to change reference
+							specifications.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">In <span class="keyword uilabel">Push Ref Specification</span> wizard, select<em class="ph i"> refs/heads/&lt;working
+								branch in cloned repository&gt;</em> as the <span class="keyword uilabel">Source
+								ref:</span> and <em class="ph i">refs/heads/&lt;branch in Git
+								Repository&gt;</em> as the <span class="keyword uilabel">Destination ref:</span>.</span> For example, select <em class="ph i">refs/heads/&lt;TenantID&gt;_Test</em> as the <span class="keyword uilabel">Source
+								ref:</span> and <em class="ph i">refs/heads/&lt;TenantID&gt;_Test</em> as the
+								<span class="keyword uilabel">Destination ref:</span>.</li>
+<li class="li substep substepexpand"><span class="ph cmd">Choose <span class="ph uicontrol">Add Spec+</span>.</span></li>
+<li class="li substep substepexpand"><span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>. </span></li>
+<li class="li substep substepexpand"><span class="ph cmd">Choose <span class="ph uicontrol">Save and Finish</span>. </span> <span class="keyword uilabel">Push Result</span> dialog shows you the content that is pushed into
+							the central Git Repository.</li>
+</ol>
+ In case you are unable to push the changes as the changes are being rejected, click <a class="extlink" href="http://help.sap.com/disclaimer?site=https://git.wdf.sap.corp:8080/Documentation/error-messages.html" target="_blank">https://git.wdf.sap.corp:8080/Documentation/error-messages.html<img src="images/3rd_link.png" class="link-sap" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>, and follow the available troubleshooting
+					information. </li>
+</ol>
+</div>
+<div class="related-links"> </div>
+</div></div>
+</body>
+</html>

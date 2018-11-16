@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::ProcessCallElement/version::1.1.2" ComponentName="sap:ProcessCallElement" UIElementType="Flowstep">
+
+    <Variant VariantId="ctype::FlowstepVariant/cname::LoopingProcess/version::1.1.2" VariantName="LoopingProcess" VariantDisplayName="Looping Process Call">
+        <!-- allowed input content type -->
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema />
+            </Content>
+        </InputContent>
+
+        <!-- allowed output content type -->
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema />
+            </Content>
+        </OutputContent>
+        <!-- Attribute Groupings and Restriction -->
+        <Tab id="ProcessCall">
+            <GuiLabels>
+                <Label language="EN">Processing</Label>
+            </GuiLabels>
+            <AttributeGroup id="generalDetails">
+                <AttributeReference>
+                    <ReferenceName>processId</ReferenceName>
+                    <description>Select a pre-defined Local Integration Process to be invoked</description>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="LoopConditionDetails">
+                <GuiLabels>
+                    <Label language="EN">Loop Condition Details</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>expressionType</ReferenceName>
+                    <description>Select Non-XML if expression contains message header.
+Select XML if expression contains Xpath.</description>
+                    <ErrorMessage>Expression Type cannot be empty</ErrorMessage>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>expressionValue</ReferenceName>
+                    <description>Enter an expression to formulate a routing condition.
+E.g. of XML conditions: /bank_name/bank_id = 'mybank', //BankId ='ABC'
+E.g. of Non-XML conditions:${header.SenderId} = '001'
+Press F1 to know about the allowed formats and operators used to form expressions.</description>
+                    <ErrorMessage>Condition cannot be empty</ErrorMessage>
+                </AttributeReference>
+                 <AttributeReference>
+                    <ReferenceName>loopMaximum</ReferenceName>
+                    <description>Loop Maximum</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+
+
+        <!-- additional information -->
+        <AllowedHeaders />
+        <ReferencedComponents />
+    </Variant>
+    
+    <AttributeMetadata>
+        <Name>processId</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:idref</DataType>
+        <ReadOnly>true</ReadOnly>
+        <isparameterized>false</isparameterized>
+        <HelpService>
+            <HelpServiceName>LocalIntegrationProcessLookup</HelpServiceName>
+        </HelpService>
+        <GuiLabels>
+            <Label language="EN">Local Integration Process:</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>expressionType</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>XML</Default>
+        <GuiLabels>
+            <Label language="EN">Expression Type:</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>XML</Value>
+                <GuiLabels>
+                    <Label language="EN">XML</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Non XML</Value>
+                <GuiLabels>
+                    <Label language="EN">Non-XML</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>expressionValue</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <GuiLabels>
+            <Label language="EN">Condition Expression:</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>loopMaximum</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>100</Default>
+        <Length>5</Length>
+        <GuiLabels>
+            <Label language="EN">Max. Numbers of Iterations:</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="com.sap.ndb.studio.jdbc.driver" name="%extension-point.name_NOTR" schema="schema/com.sap.ndb.studio.jdbc.driver.exsd"/>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.sap.ndb.studio.datamodel.ISAPSystem"
+            class="com.sap.ndb.studio.jdbc.JDBCAdapterFactory">
+         <adapter
+               type="com.sap.ndb.studio.jdbc.IJDBCConnectionProps">
+         </adapter>
+      </factory>
+      <factory
+            adaptableType="com.sap.ndb.studio.datamodel.manager.SAPSystemObject"
+            class="com.sap.ndb.studio.jdbc.JDBCAdapterFactory">
+         <adapter
+               type="com.sap.ndb.studio.jdbc.IJDBCConnectionProps">
+         </adapter>
+      </factory>	      
+   </extension>
+   <extension
+         point="com.sap.ndb.studio.datamodel.memento">
+      <mementoHandler
+            class="com.sap.ndb.studio.jdbc.JDBCMementoHandler">
+      </mementoHandler>
+   </extension>
+   <extension
+         point="com.sap.ndb.studio.jdbc.driver">
+      <driverAdapter
+            class="com.sap.ndb.studio.jdbc.JDBCDefaultDriver"
+            id="com.sap.ndb.studio.jdbc.defaultdriver">
+      </driverAdapter>
+   </extension>
+</plugin>

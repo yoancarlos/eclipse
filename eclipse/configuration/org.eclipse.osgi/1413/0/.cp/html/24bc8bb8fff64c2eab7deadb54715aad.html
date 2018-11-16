@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Guidelines for Creating Mapping Scripts using Custom Functions</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio24bc8bb8fff64c2eab7deadb54715aad">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Guidelines for Creating Mapping Scripts using Custom Functions</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc"/>
+
+		<p class="p">You can create your own custom functions by using mapping scripts and use them as
+			required. You can use custom functions from the function palette for modeling the
+			mapping expressions.</p>
+
+		<div class="p">The execution mode for functions are supported by two types: <ul class="ul" id="loio24bc8bb8fff64c2eab7deadb54715aad__ul_bhl_nqx_2t">
+				<li class="li">Single value</li>
+
+				<li class="li">All values of context</li>
+
+			</ul>
+</div>
+
+		<div class="section"><div class="section_title">Guidelines for Creating Mapping Script for Single Value Type of Execution</div><div type="Guidelines for Creating Mapping Script for Single Value Type of Execution">
+			
+			<p class="p">If you want to add a mapping script to a Message Mapping function palette, ensure
+				that the following conditions are fulfilled:</p>
+
+			<ul class="ul" id="loio24bc8bb8fff64c2eab7deadb54715aad__ul_aqm_rrx_2t">
+				<li class="li"> Make sure that each function has at least one argument, and also make sure that
+					their type is also declared along with it.</li>
+
+				<li class="li">The supported types for mapping script are <span class="keyword">int</span>,
+						<span class="keyword">float</span>, <span class="keyword">string</span>, or
+						<span class="keyword">boolean</span>.</li>
+
+				<li class="li">Make sure that the function’s <span class="ph emphasis emphasis">return type</span> is specified and
+					that it can only be a <span class="keyword">String</span>.</li>
+
+				<li class="li">Functions which you declare as <span class="ph emphasis emphasis">private</span> cannot be seen in
+					the Message Mapping function palette, but it can be used in other functions
+					internally.</li>
+
+				<li class="li">You can only use the functions of the <span class="ph emphasis emphasis">JAR</span> files supported
+					by the Integration project/package that you are working on.</li>
+
+			</ul>
+
+			<div class="note sap-example example"><span class="exampletitle">Example</span> 
+				<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">import com.sap.it.api.mapping.*
+
+def String extParam(String P1,String P2,MappingContext context) {
+                                                String value1 = context.getHeader(P1);
+                                                String value2 = context.getProperty(P2);
+                                                return value1+value2;
+}
+</pre></div>
+
+			</div>
+
+		</div></div>
+
+		<div class="section"><div class="section_title">Guidelines for Creating Mapping Script for All Values of Context Type of Execution</div><div type="Guidelines for Creating Mapping Script for All Values of Context Type of Execution">
+			
+			<p class="p">For all values of context, ensure that the following conditions are fulfilled:</p>
+
+			<ul class="ul" id="loio24bc8bb8fff64c2eab7deadb54715aad__ul_fnn_kty_2t">
+				<li class="li">Make sure that <span class="ph emphasis emphasis">Method</span> does not return a value</li>
+
+				<li class="li">Method has an argument called <span class="ph emphasis emphasis">Output</span>, to which you can add
+					values.</li>
+
+				<li class="li">Make sure that all the variables except Output and Mapping Context is of type
+						<span class="ph emphasis emphasis">array</span>.</li>
+
+			</ul>
+
+			<div class="note sap-example example"><span class="exampletitle">Example</span> 
+				<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">import com.sap.it.api.mapping.*
+
+def void extParam(String[] P1,String[] P2, Output output, MappingContext context) {
+                                                String value1 = context.getHeader(P1);
+                                                String value2 = context.getProperty(P2);
+                                                output.addValue(value1);
+                                                output.addValue(value2);
+
+}
+
+</pre></div>
+
+			</div>
+
+		</div></div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

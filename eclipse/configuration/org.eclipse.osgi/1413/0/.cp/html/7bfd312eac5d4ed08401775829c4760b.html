@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring a Channel with Facebook Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio7bfd312eac5d4ed08401775829c4760b">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring a Channel with Facebook Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><p class="p">You can use the Facebook receiver adapter to extract
+            information from Facebook (which is the receiver platform) based on certain criteria
+            such as keywords, user data, for example. As one example, you can use this feature in
+            social marketing activities to do social media data analysis based on facebook content. </p>
+<p class="p">The connection works that way that the tenant logs on to
+            Facebook based on an OAuth authentication mechnism and searches for information based on
+            criteria as configured in the adapter at design time. OAuth allows a the tenant to
+            access someone else’s resources (of a specific Facebook user) on behalf of the tenant.
+            As illustrated in the figure, the tenant (through the Facebook receiver adapter) calls
+            the Facebook API to access resources of a specific Facebook user. For more information
+            on the Facebook API, go to: <a class="extlink" href="http://help.sap.com/disclaimer?site=https://developers.facebook.com/" target="_blank" alt="https://developers.facebook.com/" title="https://developers.facebook.com/">https://developers.facebook.com/<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>.</p>
+<img class="image" id="loio7bfd312eac5d4ed08401775829c4760b__image_btt_ksr_st" src="loio11156124a36a428aa21d28011a14fb60_LowRes.png"/></div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio7bfd312eac5d4ed08401775829c4760b__steps_drl_5qr_st"><li class="li step stepexpand">
+				<span class="ph cmd">Double-click the channel that you want to configure on the <span class="ph uicontrol">Model
+						Configuration</span> tab page.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">On the <span class="ph uicontrol">General</span> tab page, choose
+						<span class="ph uicontrol">Browse</span> in the <span class="ph uicontrol">Adapter Type</span>
+					screen area.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select <span class="ph uicontrol">Facebook</span> in the <span class="ph uicontrol">Choose Adapter</span> window
+					and choose <span class="ph uicontrol">OK</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the <span class="keyword uilabel">Adapter-Specific</span> tab page and enter the details
+					as shown in the table below: </span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio7bfd312eac5d4ed08401775829c4760b__d3712e23" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Attributes of the Facebook Receiver Adapter (Facebook Components) </span></caption>
+<colgroup><col width="15.503875968992247%"/><col width="84.49612403100775%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="15.503875968992247%" id="d1608037e94">Field</th>
+
+                            <th class="entry" valign="top" width="84.49612403100775%" id="d1608037e97">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1608037e94 ">
+                                <p class="p"><span class="ph uicontrol">Endpoint</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1608037e97 ">
+                                <p class="p">To access Facebook content, you can choose among the following
+                                    general options.</p>
+
+                                <ul class="ul" id="loio7bfd312eac5d4ed08401775829c4760b__d3712e62">
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Get Posts</span></p>
+
+                                        <p class="p">Allows you to search for specific Facebook posts.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Get Post Comments</span></p>
+
+                                        <p class="p">Allows you search for specific Facebook post
+                                            comments.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Get Users</span></p>
+
+                                        <p class="p"/>
+
+                                    </li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1608037e94 ">
+                                <p class="p"><span class="ph uicontrol">User/Page ID</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1608037e97 ">
+                                <p class="p">Specifies the Facebook user from which account the information is
+                                    to be extracted. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1608037e94 ">
+                                <p class="p"><span class="ph uicontrol">Timeout (ms)</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1608037e97 ">
+                                <p class="p">Specifies a timeout (in miliseconds) after which the connection
+                                    to te Facebook platform should be terminated.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio7bfd312eac5d4ed08401775829c4760b__d3712e134" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Attributes of the Facebook Receiver Adapter (OAuth Settings)</span></caption>
+<colgroup><col width="15.503875968992247%"/><col width="84.49612403100775%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="15.503875968992247%" id="d1608037e205">Field</th>
+
+                            <th class="entry" valign="top" width="84.49612403100775%" id="d1608037e208">Description</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1608037e205 ">
+                                <p class="p"><span class="ph uicontrol">Application ID</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1608037e208 ">
+                                <p class="p">An alias by which the consumer (tenant) that requests Facebook
+                                    resources is identified</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1608037e205 ">
+                                <p class="p"><span class="ph uicontrol">Application Secret</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1608037e208 ">
+                                <p class="p">An alias by which the shared secret is identified (that is used
+                                    to to define the token of the consumer (tenant)) </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="15.503875968992247%" headers="d1608037e205 ">
+                                <p class="p"><span class="ph uicontrol">Access Token</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="84.49612403100775%" headers="d1608037e208 ">
+                                <p class="p">An alias by which the access token for the Facebook user is
+                                    identified</p>
+
+                                <p class="p">In order to make authorized calls to the Facebook API, your
+                                    application must first obtain an OAuth access token on behalf of
+                                    a Facebook user </p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+					<p class="p">The authorization is based on shared secret technology.
+            This method relies on the fact that all parties of a communication share a piece of data
+            that is known only to the parties involved. Using OAuth in the context of this adapter,
+            the Consumer (that calls the API of the receiver platform on behalf of a specific user
+            of this platform) identifies itself using its <span class="ph emphasis emphasis">Consumer Key</span> and
+                <span class="ph emphasis emphasis">Consumer Secret</span>, while the context to the user itself is
+            defined by an <span class="ph emphasis emphasis">Access Token</span> and an <span class="ph emphasis emphasis">Access Token
+                Secret</span>. These artifacts are to be generated for the receiver platform app
+            (consumer) and should be configured that way that they will never expire. This adapter
+            only supports consumer key/secret and access token key/secret artifacts that do not
+            expire.</p>
+
+					<p class="p">To finish the configuration of a scenario using this
+            adapter, the generated consumer key/secret and access token key/secret artifacts are to
+            be deployed as Secure Parameter artifact on the related tenant. To do this, use the
+            Integration Operations feature, position the cursor on the tenant and chosen
+                <span class="ph uicontrol">Deploy Artifact ...</span>. As artifact type, choose
+                <span class="ph uicontrol">Secure Parameter</span>.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the configuration of the channel editor.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring SuccessFactors Adapter with REST Message Protocol</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio7309f2a35b5d45249d80bc161569a062">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring SuccessFactors Adapter with REST Message Protocol</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this procedure to configure the SuccessFactors adapter with the OData V2 message
+				protocol.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step">
+				<span class="ph cmd">On the <span class="ph uicontrol">Model Configuration</span> tab, double-click the channel that you
+					want to configure.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Go to the <span class="ph uicontrol">General</span> tab  and choose <span class="ph uicontrol">Browse</span> in
+					the <span class="ph uicontrol">Adapter Type</span> screen area.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">In the <span class="ph uicontrol">Choose Adapter</span> window, select
+						<span class="ph uicontrol">SuccessFactors</span> and choose
+					<span class="ph uicontrol">OK</span>.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Choose <span class="ph uicontrol">OData V2</span> from the dropdown list in the <span class="ph uicontrol">Message
+						Protocol</span> field.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Go to the <span class="ph uicontrol">Adapter Specific</span> tab.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Provide values in the fields based on the descriptions in the table below.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio7309f2a35b5d45249d80bc161569a062__choicetable_qf3_2qw_gv">
+<thead><tr><th valign="bottom" align="left" id="d1507986e89-option">
+							<p class="p">Field</p>
+
+						</th>
+<th valign="bottom" align="left" id="d1507986e89-desc">
+							<p class="p">Description</p>
+
+						</th></tr></thead>
+<tbody>
+					
+					<tr class="strow chrow">
+						<td valign="top" headers="d1507986e89-option" id="d1507986e108" class="stentry choption" width="50%"><strong>
+							<p class="p">Address</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1507986e89-desc d1507986e108" class="stentry chdesc" width="50%">
+							<p class="p">URL of the SuccessFactors data center that you would like to connect to.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1507986e89-option" id="d1507986e123" class="stentry choption" width="50%"><strong>
+							<p class="p">Address Suffix</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1507986e89-desc d1507986e123" class="stentry chdesc" width="50%">
+							<p class="p">The system provides a value for this field based on the protocol you choose. For
+									<span class="ph uicontrol">SOAP</span>, the value is
+									<span class="ph uicontrol">/odata/v2</span>.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1507986e89-option" id="d1507986e144" class="stentry choption" width="50%"><strong>
+							<p class="p">Credential Name</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1507986e89-desc d1507986e144" class="stentry chdesc" width="50%">
+							<p class="p">Credential name that you have used while deploying credentials on the tenant.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1507986e89-option" id="d1507986e159" class="stentry choption" width="50%"><strong>
+							<p class="p">Proxy Type</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1507986e89-desc d1507986e159" class="stentry chdesc" width="50%">
+							<p class="p">Type of proxy you want to use to connect to the SuccessFactors system.</p>
+
+							<p class="p">You can choose <span class="ph uicontrol">Internet</span> or
+									<span class="ph uicontrol">On-premise</span>.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1507986e89-option" id="d1507986e184" class="stentry choption" width="50%"><strong>
+							<p class="p">Operation</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1507986e89-desc d1507986e184" class="stentry chdesc" width="50%">
+							<p class="p">Select the operation you want to perform from the dropdown list.</p>
+
+							<div class="note note"><span class="notetitle">Note</span> Only <span class="ph uicontrol">GET</span> for the sender channel and <span class="ph uicontrol">GET</span>
+									and<span class="ph uicontrol">POST</span> for the receiver channel are
+								currently supported. </div>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1507986e89-option" id="d1507986e211" class="stentry choption" width="50%"><strong>
+							<p class="p">Entity</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1507986e89-desc d1507986e211" class="stentry chdesc" width="50%">LMS entity you are accessing.<div class="p">
+								<div class="note note"><span class="notetitle">Note</span> 
+									<p class="p">You can find the entity name in the relevant API
+										documentation.</p>
+
+								</div>
+
+							</div>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1507986e89-option" id="d1507986e231" class="stentry choption" width="50%"><strong>
+							<p class="p">Parameters</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1507986e89-desc d1507986e231" class="stentry chdesc" width="50%">
+							<p class="p">Parameters to be sent to the REST service.</p>
+
+							<p class="p"><span class="ph emphasis emphasis">Example:</span> creationDate=1&amp;active=true</p>
+
+							<div class="note note"><span class="notetitle">Note</span> In the case of the GET operation, you can fetch just the modified records in subsequent
+								runs by using the condition
+									<span class="ph emphasis emphasis">lastModifiedDate=${deltasync.maxDateFromLastRun}</span>.</div>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1507986e89-option" id="d1507986e257" class="stentry choption" width="50%"><strong>
+							<p class="p">Page Size</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1507986e89-desc d1507986e257" class="stentry chdesc" width="50%">
+							<p class="p">The number of records that are read from the SuccessFactors system in one request.</p>
+
+							<p class="p">If you find that the <span class="ph uicontrol">Operation</span> stops due to a timeout, reduce the
+									<span class="ph uicontrol">Page Size</span> and execute the operation
+								again.</p>
+
+						</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">If you are configuring the sender channel, perform the following substeps to
+					configure the scheduler:</span>
+				<ol type="a" class="ol substeps" id="loio7309f2a35b5d45249d80bc161569a062__substeps_chb_4m5_b4">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Go to the <span class="ph uicontrol">Scheduler</span> tab.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Enter the scheduler details based on the
+							descriptions
+							in the table below.</span>
+						<div class="itemgroup info">
+							
+<div class="table-wrapper tablenoborder"><table summary="" id="loio7309f2a35b5d45249d80bc161569a062__table_jph_tm5_b4" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Parameters and Values of SuccessFactors Adapter Scheduler</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+									
+									
+									<thead class="thead" align="left">
+										<tr class="row">
+											<th class="entry" valign="top" width="50%" id="d1507986e324">Field</th>
+
+											<th class="entry" valign="top" width="50%" id="d1507986e327">Description</th>
+
+										</tr>
+
+									</thead>
+
+									<tbody class="tbody">
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d1507986e324 ">Run Once</td>
+
+											<td class="entry" valign="top" width="50%" headers="d1507986e327 ">Run a data polling process immediately after deploying the project.</td>
+
+										</tr>
+
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d1507986e324 ">On Date</td>
+
+											<td class="entry" valign="top" width="50%" headers="d1507986e327 ">Specific date on which the data polling process has to be initiated to fetch data
+												from the SuccessFactors system.</td>
+
+										</tr>
+
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d1507986e324 ">Daily</td>
+
+											<td class="entry" valign="top" width="50%" headers="d1507986e327 ">Run message polling every day to fetch data from the SuccessFactors
+												system.</td>
+
+										</tr>
+
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d1507986e324 ">Weekly</td>
+
+											<td class="entry" valign="top" width="50%" headers="d1507986e327 ">Run  message polling on a specified day every week to fetch data from the
+												SuccessFactors system.</td>
+
+										</tr>
+
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d1507986e324 ">Monthly on Day</td>
+
+											<td class="entry" valign="top" width="50%" headers="d1507986e327 ">Run message polling on a specified date every month to fetch data from the
+												SuccessFactors server. <div class="note note"><span class="notetitle">Note</span> If the specified date
+												is not applicable to a month, data polling is not
+												executed in that particular month. For example, if
+												the 30th day of the month is selected as the
+												polling date, polling will not be executed in the
+												month of February as February 30 is not a valid
+												date.</div>
+</td>
+
+										</tr>
+
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d1507986e324 ">Time</td>
+
+											<td class="entry" valign="top" width="50%" headers="d1507986e327 ">The time at which the data polling cycle has to be initiated. For example, if you
+												want data polling to start at 4.1PM, enter 16:10.
+												Note that the time must be entered in 24-hour
+												format.</td>
+
+										</tr>
+
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d1507986e324 ">Every <kbd class="ph userinput">xx</kbd> minutes between
+												<kbd class="ph userinput">HH</kbd> hours and
+												<kbd class="ph userinput">HH</kbd> hours</td>
+
+											<td class="entry" valign="top" width="50%" headers="d1507986e327 ">The connector fetches data from the SuccessFactors system every ‘xx’ minutes
+												between HH hours and HH hours.<div class="note note"><span class="notetitle">Note</span> If you want the
+												polling to run for the entire day, enter 1 and
+												59.</div>
+</td>
+
+										</tr>
+
+										<tr class="row">
+											<td class="entry" valign="top" width="50%" headers="d1507986e324 ">Time Zone</td>
+
+											<td class="entry" valign="top" width="50%" headers="d1507986e327 ">Select the time zone that you want to use as the reference for scheduling the data
+												polling cycle.</td>
+
+										</tr>
+
+									</tbody>
+
+								</table>
+</div>
+
+						</div>
+						<div class="itemgroup info">
+							<div class="note caution"><span class="cautiontitle">Caution</span> 
+								<div class="p">If a cluster is updated with the latest node assembly, it is
+									restarted after the update. If you have deployed projects on the
+									cluster with scheduler settings, you face the following
+										issues:<ul class="ul" id="loio7309f2a35b5d45249d80bc161569a062__ul_am5_zfm_kq">
+										<li class="li"><span class="ph emphasis emphasis">Run Once settings:</span> If you have selected <span class="ph uicontrol">Run
+												Once</span> in the scheduler, the system
+											deploys the project after the cluster is updated. This
+											results in the system performing the operation again.
+											You see copies of the same result after the cluster
+											update.</li>
+
+										<li class="li"><span class="ph emphasis emphasis">Specific time schedule:</span> If you have configured a specific date in
+											the scheduler and those projects are deployed again
+											after a cluster update, you might see those projects in
+											an error state.</li>
+
+									</ul>
+</div>
+
+								<p class="p">To avoid this, you have to undeploy the project after the system has executesd the
+									operation according to the scheduler settings.</p>
+
+							</div>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:Mail/version::1.1.1" ComponentName="sap:Mail" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" MetadataVersion="2.0">
+    <Variant VariantName="Mail Sender" VariantId="ctype::AdapterVariant/cname::sap:Mail/tp::IMAP/mp::Not Applicable/direction::Sender/version::1.1.1" MetadataVersion="2.0" AttachmentBehavior="Modify" supportsPolling="true" useDefaultScheduler="true">
+        <InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </OutputContent>
+        <Metadata>
+            <AdditionalMetadata>
+                <Name>tp</Name>
+                <GuiLabels>
+                    <Label language="EN" >IMAP4</Label>
+                    <Label language="DE" >IMAP4</Label>
+                </GuiLabels>
+            </AdditionalMetadata>
+        </Metadata>
+        
+        <Tab id="Connection">
+            <GuiLabels>
+                <Label language="EN">Connection</Label>
+                <Label language="DE">Connection</Label>
+            </GuiLabels>
+            <AttributeGroup id="connectionDetails">
+                <GuiLabels>
+                    <Label language="EN">Connection Details</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>server</ReferenceName>
+                    <description>Host name or address of the IMAP server, for example, mail.domain.com:587. For connections to the public Internet, only port 143 (IMAP+STARTTLS) and 993 (IMAPS) are supported</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>timeout</ReferenceName>
+                    <Restriction>Constraint.isValidRegex([0-9]*)</Restriction>
+					<ErrorMessage>Enter a valid number of milliseconds (digits only)</ErrorMessage>
+                    <description>Specifies the amount of time, in milliseconds, that the client will wait for a response before it times out; zero means that the client will wait indefinitely.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>ssl</ReferenceName>
+                    <description>Specify the method to establish an encrypted (secure) connection.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>auth</ReferenceName>
+                    <description>Specify which mechanism is used to authenticate against the server. Plain User Name/Password: User name and password are sent in plain text (not recommended). CRAM-MD5: User name and password are hashed before being sent to the server.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>user</ReferenceName>
+                    <OrCondition>
+                        <EditCondition>
+                            <AttributeName>auth</AttributeName>
+                            <AttributeValue>crammd5</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>auth</AttributeName>
+                            <AttributeValue>plain</AttributeValue>
+                        </EditCondition>
+                    </OrCondition>
+                    <description>Specify the credential name to use to authenticate against the server.</description>
+                </AttributeReference>
+            </AttributeGroup>
+            </Tab>
+            
+            <Tab id="Processing">
+	            <GuiLabels>
+	                <Label language="EN">Processing</Label>
+	                <Label language="DE">Processing</Label>
+	            </GuiLabels>
+            <AttributeGroup id="ProcessingParameters">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">URI Setting</Name>
+                <GuiLabels guid="5fbd0d24-8435-4ad2-a1ec-b5cf98729638">
+                    <Label language="EN">Processing Parameters</Label>
+                    <Label language="DE">Processing Parameters</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>folder</ReferenceName>
+                    <description>Specify the IMAP folder containing the mails to be read.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>selectionReadFlag</ReferenceName>
+                    <description>Specify which mails will be processed.</description>
+                </AttributeReference>
+				<AttributeReference>
+                    <ReferenceName>maxMessagesPerPoll</ReferenceName>
+					<Restriction>Constraint.isValidRegex([0-9]*)</Restriction>
+					<ErrorMessage>Enter a valid positive number or zero (digits only)</ErrorMessage>
+					<description>Specifies the maximum number of messages to gather per poll (0-100). Set a value  0 to disable this option.&#10;Default: 20 </description>
+                </AttributeReference>				
+                <AttributeReference>
+                    <ReferenceName>postProcessing</ReferenceName>
+                    <description>Specify how to handle processed mails on the server.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>archiveMailFolder</ReferenceName>
+                    <description>Specify an archive folder name if the mail should be archived after processing.</description>
+                    <EditCondition>
+                        <AttributeName>postProcessing</AttributeName>
+                        <AttributeValue>archive</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>removeAttachments</ReferenceName>
+                    <description>Select this option to remove attachments from the incoming message.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>scheduleKey</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>dummy</AttributeName>
+                        <AttributeValue>213</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+    </Variant>
+
+    <AttributeMetadata>
+        <Name>server</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Address</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>timeout</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>3000</Default>
+        <Length>0</Length>
+        <GuiLabels>
+            <Label language="EN">Timeout (in ms)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>ssl</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>starttls_mandatory</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Protection</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>starttls_mandatory</Value>
+                <GuiLabels>
+                    <Label language="EN">STARTTLS Mandatory</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>starttls_optional</Value>
+                <GuiLabels>
+                    <Label language="EN">STARTTLS Optional</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>imaps</Value>
+                <GuiLabels>
+                    <Label language="EN">IMAPS</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>off</Value>
+                <GuiLabels>
+                    <Label language="EN">Off</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>auth</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>plain</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Authentication</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>crammd5</Value>
+                <GuiLabels>
+                    <Label language="EN">CRAM-MD5</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>plain</Value>
+                <GuiLabels>
+                    <Label language="EN">Plain User/Password</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>user</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Credential Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    
+    <AttributeMetadata>
+        <Name>folder</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>INBOX</Default>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Folder</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>selectionReadFlag</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>unread</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Selection</Label>
+        </GuiLabels>
+        <FixedValues>
+			<FixedValue>
+                <Value>all</Value>
+                <GuiLabels>
+                    <Label language="EN">All</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>unread</Value>
+                <GuiLabels>
+                    <Label language="EN">Only Unread</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>maxMessagesPerPoll</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+		<Default>20</Default>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Max. Messages per Poll</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>postProcessing</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>delete</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Post-Processing</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>delete</Value>
+                <GuiLabels>
+                    <Label language="EN">Delete</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>mark</Value>
+                <GuiLabels>
+                    <Label language="EN">Mark as Read</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>archive</Value>
+                <GuiLabels>
+                    <Label language="EN">Archive</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>archiveMailFolder</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Archive Folder</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	
+	<AttributeMetadata>
+	  <Name>scheduleKey</Name>
+	  <Usage>required</Usage>
+	  <DataType>custom:schedule</DataType>
+	  <isparameterized>true</isparameterized>
+	  <GuiLabels>
+	    <Label language="EN">Schedule</Label>
+	  </GuiLabels>
+	</AttributeMetadata>
+    
+    <AttributeMetadata>
+        <Name>removeAttachments</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>0</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Remove Attachments</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	
+</ComponentMetadata>

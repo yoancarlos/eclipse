@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Modifying SuccessFactors SOAP Entity and Operation</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioa6ee60308011402abd8fe9ac1bc5a460">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Modifying SuccessFactors SOAP Entity and Operation</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loioa6ee60308011402abd8fe9ac1bc5a460__ul_u53_541_qr">
+					<li class="li">
+						<p class="p">You are configuring the communication channel that is assigned with
+							SuccessFactors SOAP adapter. </p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">Ensure that the TrustedCAs from the service provider you are connecting
+							to are added to the system keystore associated with your HCI
+							account.</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<div class="p">SuccessFactors SOAP adapter enables you to modify the entity that you are accessing
+				and the operation that you are performing on the entity. You can use this adapter to
+				perform the following operations:<ul class="ul" id="loioa6ee60308011402abd8fe9ac1bc5a460__ul_kqb_nsp_gr">
+					<li class="li">
+						<p class="p">Query</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">Insert</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">Update</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">Upsert</p>
+
+					</li>
+
+				</ul>
+</div>
+
+			<p class="p">You use this procedure to change the entity and modify the operation for
+				SuccessFactors SOAP adapter. </p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loioa6ee60308011402abd8fe9ac1bc5a460__steps_h31_qsp_gr"><li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Entity</span> field, choose
+					<span class="ph uicontrol">Select</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you have not added the system with authentication details, choose <img class="image" id="loioa6ee60308011402abd8fe9ac1bc5a460__image_ggk_gtp_gr" src="loio89b84958486548d299d68c56c0516e27_LowRes.png"/> and
+					provide values in fields based on description in table. Choose
+						<span class="ph uicontrol">Connect</span>.</span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loioa6ee60308011402abd8fe9ac1bc5a460__table_tqm_3tp_gr" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="50%" id="d3813788e109">
+										<p class="p">Fields</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="50%" id="d3813788e115">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3813788e109 ">
+										<p class="p">System</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3813788e115 ">
+										<p class="p">Name of the SuccessFactors datacenter that you are
+											connecting to</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3813788e109 ">
+										<p class="p">Address</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3813788e115 ">
+										<p class="p">URL of the SuccessFactors datacenter that you are
+											connecting to</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3813788e109 ">
+										<p class="p">Company ID</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3813788e115 ">
+										<p class="p">Company ID for authentication</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3813788e109 ">
+										<p class="p">User ID</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3813788e115 ">
+										<p class="p">User ID associated with the Company ID</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d3813788e109 ">
+										<p class="p">Password</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d3813788e115 ">
+										<p class="p">Relevant password for the specified user ID</p>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you have added the system with authentication details, perform the following
+					substeps. </span>
+				<ol type="a" class="ol substeps" id="loioa6ee60308011402abd8fe9ac1bc5a460__substeps_dqq_ytp_gr">
+					<li class="li substep">
+						<span class="ph cmd">In <span class="ph uicontrol">System</span> field, choose the system you want to
+							connect to from the dropdown list. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">In <span class="ph uicontrol">Password</span> field, provide the appropriate
+							password. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Choose <span class="ph uicontrol">Connect</span>.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Entity Selection</span> dialog, select the entity that you
+					want to access. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Query</span> field, choose
+					<span class="ph uicontrol">Modify</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Operation</span></span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<p class="p">You can only perform Query operation in sender channel.</p>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Fields</span> dropdown list, select the fields that you
+					want to perform the operation on. </span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<p class="p">You can select multiple fields by selecting their respective
+							checkboxes. field, choose the operation you want to
+					perform. </p>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to specify filter conditions, choose <img class="image" id="loioa6ee60308011402abd8fe9ac1bc5a460__image_qpw_rwp_gr" src="loioef806ebe57904d00bfb8ff8000348b13_LowRes.png"/> field, choose the operation you want to and perform the following
+					substeps. </span>
+				<ol type="a" class="ol substeps" id="loioa6ee60308011402abd8fe9ac1bc5a460__substeps_hy3_swp_gr">
+					<li class="li substep">
+						<span class="ph cmd">In <span class="ph uicontrol">Filter By</span> field, choose the fields that you
+							want filter. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">In <span class="ph uicontrol">Operator</span> field, choose the operator that you
+							want to use to define the filter condition. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">In <span class="ph uicontrol">Input Type</span> field, select the type of input
+							you want to provide for defining the filter condition. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">In <span class="ph uicontrol">Value</span> field, provide value of the input for
+							filter condition. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Select <span class="ph uicontrol">AND</span> or <span class="ph uicontrol">OR</span> based on
+							how you want this filter condition to be considered when the operation
+							is executed. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loioa6ee60308011402abd8fe9ac1bc5a460__image_wxj_zwp_gr" src="loioa9b078caf63346a2957c8d104c765d32_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol"><img class="image" id="loioa6ee60308011402abd8fe9ac1bc5a460__image_ubd_1xp_gr" src="loiof7389f03241e4f5d8cf9443fbe5132ff_LowRes.png"/></span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> to add more than one filter condition.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to specify sorting conditions, choose <img class="image" id="loioa6ee60308011402abd8fe9ac1bc5a460__image_ewm_cxp_gr" src="loioa9b078caf63346a2957c8d104c765d32_LowRes.png"/> and perform the following
+					substeps. </span>
+				<ol type="a" class="ol substeps" id="loioa6ee60308011402abd8fe9ac1bc5a460__substeps_zgx_cxp_gr">
+					<li class="li substep">
+						<span class="ph cmd">In <span class="ph uicontrol">Field</span>, select the field you want to include
+							in the sorting condition. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">If you want the sorting to be done in descending order, select the
+							checkbox in <span class="keyword uinolabel">Desc</span> column. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loioa6ee60308011402abd8fe9ac1bc5a460__image_a4d_gxp_gr" src="loioa9b078caf63346a2957c8d104c765d32_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol"><img class="image" id="loioa6ee60308011402abd8fe9ac1bc5a460__image_f4d_gxp_gr" src="loiof7389f03241e4f5d8cf9443fbe5132ff_LowRes.png"/></span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> to add more than one filter condition.</span>
+					</li>
+
+				</ol>
+
+			</li>
+</ol>
+
+		<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div>
+			<p class="p">The system displays a prompt that a XSD file is created. You can use this XSD file
+				for mapping steps. </p>
+
+		</div>
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

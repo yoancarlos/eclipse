@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Converter/version::1.0.4" ComponentName="Converter" UIElementType="Flowstep">
+
+	<!--v1.0.4 Variant for Xml To Csv step -->
+	<Variant VariantId="ctype::FlowstepVariant/cname::XmlToCsvConverter/version::1.0.4" VariantName="XML To CSV Converter" VariantDisplayName="XML To CSV Converter" AttachmentBehavior="Preserve">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Text</ContentType>
+			<Schema />
+		</Content>
+		</OutputContent>
+		<Tab id="iflow.advance.xml2csv.converter.tab">
+			<GuiLabels>
+				<Label language="EN">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id="General Details">   
+				<GuiLabels>
+					<Label language="EN">Basic Elements</Label>
+				</GuiLabels>             
+				<AttributeReference>
+					<ReferenceName>XPath_Field_Location</ReferenceName>
+					<description>Enter the XPath of the Record Identifier</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Field_Separator_in_CSV</ReferenceName>
+					<description>Enter Field Separator in CSV file</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Include_Header</ReferenceName>
+					<description>Include Field Name as Headers</description>
+				</AttributeReference>
+			</AttributeGroup>
+			<AttributeGroup id="Advanced">
+				<GuiLabels>
+						<Label language="EN">Parent Element</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>Include_Master</ReferenceName>
+					<description>Include master node for conversion</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Master_XPath_Field_Location</ReferenceName>
+					<description>Enter the XPath of the Master Record Identifier</description>
+					<EditCondition>
+					    <AttributeName>Include_Master</AttributeName>
+					    <AttributeValue>true</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Include_Attribute</ReferenceName>
+					<description>Include attribute values</description>
+				</AttributeReference>			
+			</AttributeGroup>
+		</Tab>
+	</Variant>
+
+    <!--v1.0.2 Variant for Xml To Csv step -->
+	<Variant VariantId="ctype::FlowstepVariant/cname::XmlToCsvConverter/version::1.0.2" VariantName="XML To CSV Converter" AttachmentBehavior="Preserve">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Text</ContentType>
+			<Schema />
+		</Content>
+		</OutputContent>
+		<Tab id="iflow.advance.xml2csv.converter.tab">
+			<GuiLabels>
+				<Label language="EN">Basic</Label>
+			</GuiLabels>
+			<AttributeGroup id="General Details">
+                <AttributeReference>
+                    <ReferenceName>Activity_Name</ReferenceName>
+                    <Restriction></Restriction>
+                    <ErrorMessage>Enter a name for the Converter step</ErrorMessage>
+                </AttributeReference>
+				<AttributeReference>
+					<ReferenceName>XPath_Field_Location</ReferenceName>
+					<description>Enter the XPath of the Record Identifier</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Field_Separator_in_CSV</ReferenceName>
+					<description>Enter Field Separator in CSV file</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Include_Header</ReferenceName>
+					<description>Include Field Name as Headers</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<Tab id="iflow.advance.xml2csv.converter.additional.tab">
+		<GuiLabels>
+			<Label language="EN">Advanced</Label>
+		</GuiLabels>
+		<AttributeGroup id="Advanced">
+			<AttributeReference>
+				<ReferenceName>Include_Master</ReferenceName>
+				<description>Include master node for conversion</description>
+			</AttributeReference>
+			<AttributeReference>
+				<ReferenceName>Master_XPath_Field_Location</ReferenceName>
+				<description>Enter the XPath of the Master Record Identifier</description>
+				<EditCondition>
+				    <AttributeName>Include_Master</AttributeName>
+				    <AttributeValue>true</AttributeValue>
+				</EditCondition>
+			</AttributeReference>
+			<AttributeReference>
+				<ReferenceName>Include_Attribute</ReferenceName>
+				<description>Include attribute values</description>
+			</AttributeReference>			
+		</AttributeGroup>
+		</Tab>
+	</Variant>
+	<!-- ATTRIBUTES FOR XML TO CSV -->	     
+    <AttributeMetadata>
+        <Name>Activity_Name</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Converter</Default>
+        <isparameterized>true</isparameterized>        
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+		<Name>XPath_Field_Location</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>	
+		<isparameterized>true</isparameterized>	
+		<GuiLabels>
+			<Label language="EN">Path to Source Element in XSD</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+        <Name>Field_Separator_in_CSV</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>,</Default>       
+        <isparameterized>true</isparameterized>        
+        <GuiLabels>
+            <Label language="EN">Field Separator in CSV</Label>
+        </GuiLabels>
+        <FixedValues>
+        	<isEditable>true</isEditable>
+            <FixedValue>
+                <Value>\t</Value>
+                <GuiLabels>
+                    <Label language="EN">Tab(\t)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>;</Value>
+                <GuiLabels>
+                    <Label language="EN">Semicolon(;)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>:</Value>
+                <GuiLabels>
+                    <Label language="EN">Colon(:)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>|</Value>
+                <GuiLabels>
+                    <Label language="EN">Pipe(|)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>.</Value>
+                <GuiLabels>
+                    <Label language="EN">Dot(.)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>,</Value>
+                <GuiLabels>
+                    <Label language="EN">Comma(,)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Space</Value>
+                <GuiLabels>
+                    <Label language="EN">Space</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+		<Name>Include_Header</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>false</Default>		
+		<GuiLabels>
+			<Label language="EN">Include Field Name as Headers</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>Include_Master</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>false</Default>		
+		<GuiLabels>
+			<Label language="EN">Include Parent Element</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>Include_Attribute</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>	
+		<Default>false</Default>	
+		<GuiLabels>
+			<Label language="EN">Include Attribute Values</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>Master_XPath_Field_Location</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>	
+		<isparameterized>true</isparameterized>	
+		<GuiLabels>
+			<Label language="EN">Path to Parent Element</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+    <!-- ATTRIBUTES FOR XML TO CSV -->       
+</ComponentMetadata>

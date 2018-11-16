@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Creating ABAP Programs">
+   <intro>
+      <description>
+         This cheat sheet shows you how to create <b>executable programs</b>  directly in the <b>Project Explorer</b> by means of the new ABAP program wizard.
+<br/>
+<br/>
+<b>NOTE</b>
+<br/>
+To create programs of other program types, such as include programs or module pools, you still need to use the GUI-based tools.
+      </description>
+   </intro>
+   <item
+         skip="true"
+         title="Select the APAP project">
+      <description>
+         The subsequent steps require that an <b>APAP project</b> exists for the relevant backend system 
+<br/>
+Otherwise, choose “Click to perform” to launch the appropriate cheat sheet.
+      </description>
+      
+            <command
+            required="false"
+            serialization="org.eclipse.ui.cheatsheets.openCheatSheet(cheatSheetId=com.sap.adt.cheatsheet.create.abap.project)"/>
+      
+   </item>
+   <item
+         skip="true"
+         title="Add Relevant Package to Your Favorites">
+      <description>
+         Specify the package in which the program is going to be created. 
+<br/>
+If you have not yet already done so, add this package to the <b>favorites</b> of your ABAP project. 
+<br/>
+      </description>
+   </item>
+   <item
+         title="Create a New Program" dialog="true">
+      <description>
+         To create an <b>executable program </b>, select the relevant package node in the Project Explorer and continue the procedure as follows: 
+<br/>
+      </description>
+      <subitem
+            label="In the context menu of the package selected, choose &quot;New&quot; in the context menu and then select &quot;Program&quot;, or simply choose &quot;Click to perform&quot;.">
+            <command
+            required="false"
+            serialization="org.eclipse.ui.newWizard(newWizardId=com.sap.adt.programs.ui.newWizards.NewProgramWizard)"/>
+      </subitem>
+      <subitem
+            label="In addition to the project and package, enter the name and description for the program to be created.  Accept the remaining default properties and choose “Next”.">
+      </subitem>
+      <subitem
+            label="Assign a transport request (not required for $TMP packages) and choose &quot;Finish&quot;.">
+      </subitem>
+   </item>
+   <item
+         skip="true"
+         title="Check Results">
+      <description>
+         An inactive version of the program has been created in the selected package of the ABAP backend system. 
+<br/>
+<br/>
+In the <b>Project Explorer</b>, the new program is added to the <b>Source Library</b> of the assigned package.
+The IDE starts the Source Editor with the generated program, which is ready for editing. The statement REPORT introduces an executable ABAP program.
+      </description>
+   </item>
+</cheatsheet>

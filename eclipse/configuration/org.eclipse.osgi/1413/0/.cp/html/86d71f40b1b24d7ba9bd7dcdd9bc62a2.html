@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=7220671033468428"/>
+<title>SAP Integration Flow Templates</title>
+</head>
+<body id="loio86d71f40b1b24d7ba9bd7dcdd9bc62a2">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">SAP Integration Flow Templates</h1>
+<div class="body refbody"><p class="shortdesc"/>
+<div class="section" id="loio86d71f40b1b24d7ba9bd7dcdd9bc62a2__section_N10014_N10011_N10001">
+			<p class="p">When you model and configure an integration flow, the tool validates the integration flow with
+				the closest matching SAP supported scenario. If the integration flow configuration
+				does not match the SAP supported modelling, the tool shows you a list of allowed
+				scenarios in the <span class="keyword uilabel">Console</span>. Contact SAP Support if you require
+				additional integration scenarios to be supported.</p>
+
+			<div class="note note"><span class="notetitle">Note</span> The section below suggests the valid elements for each integration scenario, but
+				the elements can be used only in a specific sequence.</div>
+
+		</div>
+</div>
+<div class="related-links"> </div>
+<div class="topic nested1" id="topic_kpg_qz4_4k"><h2 class="title topictitle2">Integrate with an external SOAP Endpoint</h2>
+<div class="body"><div class="section" id="topic_kpg_qz4_4k__section_N100EE_N10029_N1001E_N10001"><strong class="ph b">Integration between sender SOAP
+					(SOAP 1.x) connector and receiver SOAP (SOAP 1.x) connector</strong><div class="p">Model your
+					integration flow using a combination of the elements given below, and configure
+					the sender channel with SOAP (SOAP 1.x) connector and the receiver channel with
+					SOAP (SOAP 1.x) connector. <ul class="ul" id="topic_kpg_qz4_4k__ul_vzt_mjp_4k"><li class="li">Point-to-Point: If the sender participant needs a simple message
+							exchange with a receiver participant, use a Point-to-Point integration
+							flow.</li>
+<li class="li">(Optional)Gateway: If the sender participant needs to forward selected
+							messages to a particular receiver based on certain condition, use a
+							gateway and configure condition for the routing branch.</li>
+<li class="li">Persist Message: If you want to store the message payload at a
+							particular step, use persist message.</li>
+<li class="li">Message Transformation Elements:<ul class="ul" id="topic_kpg_qz4_4k__ul_p3j_nrf_sk"><li class="li">(Optional)Mapping: If the sender participant can communicate
+									with the receiver participant only after the message payload is
+									transformed in a specific format, use a mapping between the
+									sender and receiver participants</li>
+<li class="li">(Optional)Enricher: If the message should be provided with
+									additional information to the receiver, use an enricher.</li>
+<li class="li">(Optional)Filter: If a specific content needs to be extracted
+									from the message, use a filter.</li>
+<li class="li">Optional)Decoder: If the message should be decoded using Base64,
+									use an decoder.</li>
+</ul>
+</li>
+<li class="li">Security Elements:<ul class="ul" id="topic_kpg_qz4_4k__ul_bz5_hyy_bl"><li class="li">(Optional) XML Digital Signer with Enveloping Signature: If the
+									XMl digital signature should contain the content to be signed
+									within itself, use an XML digital signer of type enveloping
+									signature.</li>
+<li class="li">(Optional) XML Digital Signer with Enveloped Signature: If the
+									XML digital signature needs to be inserted within the content to
+									be signed, use an XML digital signer of type enveloped
+									signature.</li>
+<li class="li">(Optional)XML Signature Verifier: If the digital signature of an
+									incoming XML message needs to be verified, use XML signature
+									verifier.</li>
+<li class="li">(Optional)Decryptor: If the encrypted content in the message
+									body needs to be decrypted, use an encryptor.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="topic_kpg_qz4_4k__section_N10046_N10029_N1001E_N10001"><strong class="ph b">Integration between sender IDoc (IDoc SOAP)
+					connector and receiver SOAP (SAP Plain SOAP) connector</strong><div class="p">Model your
+					integration flow using a combination of the elements given below, and configure
+					the sender channel with IDoc(IDoc SOAP) and receiver channel with SOAP (SAP
+					Plain SOAP) connector.<ul class="ul" id="topic_kpg_qz4_4k__ul_grg_4bp_4k"><li class="li">Point-to-Point: If the sender participant needs a simple message
+							exchange with a receiver participant, use a Point-to-Point integration
+							flow.</li>
+<li class="li">(Optional)Mapping: If the sender participant can communicate with the
+							receiver participant only after the message payload is transformed in a
+							specific format, use a mapping between the sender and receiver
+							participants</li>
+<li class="li">(Optional)Gateway: If the sender participant needs to forward selected
+							messages to a particular receiver based on certain condition, use a
+							gateway and configure condition for the routing branch.</li>
+<li class="li">Persist Message: If you want to store the message payload at a
+							particular step, use persist message.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="topic_kpg_qz4_4k__section_N10068_N10029_N1001E_N10001"><strong class="ph b">Integration between sender SOAP (SAP Plain SOAP) connector and receiver SOAP
+					(SAP Plain SOAP) connector</strong><div class="p">Model your integration flow using a combination
+					of the elements given below, and configure the sender channel with SOAP(SAP
+					Plain SOAP) and receiver channel with SOAP (SAP Plain SOAP) connector.<ul class="ul" id="topic_kpg_qz4_4k__ul_adk_1qf_sk"><li class="li">Point-to-Point: If the sender participant needs a simple message
+							exchange with a receiver participant, use a Point-to-Point integration
+							flow.</li>
+<li class="li">(Optional)Mapping: If the sender participant can communicate with the
+							receiver participant only after the message payload is transformed in a
+							specific format, use a mapping between the sender and receiver
+							participants</li>
+<li class="li">(Optional)Enricher: If the message should be provided with additional
+							information to the receiver, use an enricher.</li>
+</ul>
+</div>
+</div>
+<div class="section"><strong class="ph b">Integration between sender SFTP connector and receiver SOAP (SOAP 1.x)
+					connector</strong><div class="p">Model your integration flow using a combination of the elements
+					given below, and configure the sender channel with SFTP and receiver channel
+					with SOAP (SOAP 1.x) connector.<ul class="ul" id="topic_kpg_qz4_4k__ul_uwj_qty_bl"><li class="li">Point-to-Point: If the sender participant needs a simple message
+							exchange with a receiver participant, use a Point-to-Point integration
+							flow.</li>
+<li class="li">(Optional)Mapping: If the sender participant can communicate with the
+							receiver participant only after the message payload is transformed in a
+							specific format, use a mapping between the sender and receiver
+							participants</li>
+<li class="li">(Optional)Gateway: If the sender participant needs to forward selected
+							messages to a particular receiver based on certain condition, use a
+							gateway and configure condition for the routing branch.</li>
+<li class="li">Persist Message: To store the message payload at a particular step, use
+							persist message.</li>
+<li class="li">Security Elements:<ul class="ul" id="topic_kpg_qz4_4k__ul_e4k_xxy_bl"><li class="li">(Optional) XML Digital Signer with Enveloping Signature: If the
+									XMl digital signature should contain the content to be signed
+									within itself, use an XML digital signer of type enveloping
+									signature.</li>
+<li class="li">(Optional) XML Digital Signer with Enveloped Signature: If the
+									XML digital signature needs to be inserted within the content to
+									be signed, use an XML digital signer of type enveloped
+									signature.</li>
+<li class="li">(Optional)XML Signature Verifier: If the digital signature of an
+									incoming XML message needs to be verified, use XML signature
+									verifier.</li>
+<li class="li">(Optional)Decryptor: If the encrypted content in the message
+									body needs to be decrypted, use an encryptor.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="topic nested1" id="topic_tml_chp_4k"><h2 class="title topictitle2">Integrate with an external SFTP directory</h2>
+<div class="body"><div class="section" id="topic_tml_chp_4k__section_N101A8_N101A5_N1019A_N10001"><strong class="ph b">Integration between sender SFTP connector and receiver SFTP
+					connector</strong><div class="p">Model your integration flow using a combination of the elements given below, and configure the
+					sender channel with SFTP connector and the receiver channel with SFTP
+						connector.<ul class="ul" id="topic_tml_chp_4k__ul_kb4_jjp_4k"><li class="li">Point-to-Point: If the sender participant needs a simple message
+							exchange with a receiver participant, use a Point-to-Point integration
+							flow.</li>
+<li class="li">(Optional)Mapping: If the sender participant can communicate with the
+							receiver participant only after the message payload is transformed in a
+							specific format, use a mapping between the sender and receiver
+							participants</li>
+<li class="li">(Optional)Gateway: If the sender participant needs to forward selected
+							messages to a particular receiver based on certain condition, use a
+							gateway and configure condition for the routing branch.</li>
+<li class="li">Persist Message: If you want to store the message payload at a
+							particular step, use persist message.</li>
+<li class="li">Security Elements:<ul class="ul" id="topic_tml_chp_4k__ul_tkd_wwp_4k"><li class="li">(Optional)PKCS7/CMS Signer: If the XML or non-XML messages should be signed with one or
+									more signature, use a PKCS7/CMS signer.</li>
+<li class="li">(Optional) XML Digital Signer with Enveloping Signature: If the
+									XMl digital signature should contain the content to be signed
+									within itself, use an XML digital signer of type enveloping
+									signature.</li>
+<li class="li">(Optional) XML Digital Signer with Enveloped Signature: If the
+									XML digital signature needs to be inserted within the content to
+									be signed, use an XML digital signer of type enveloped
+									signature.</li>
+<li class="li">(Optional)Encryptor: If the content of the message should be
+									encrypted, use an encryptor.</li>
+<li class="li">PKCS7/CMS Signature Verifier: If the signatures available in the header or body needs to
+									be verified, use a PKCS7/CMS signature verifier.</li>
+<li class="li">(Optional)XML Signature Verifier: If the digital signature of an
+									incoming XML message needs to be verified, use XML signature
+									verifier.</li>
+<li class="li">Decryptor: If the encrypted content in the message body needs to
+									be decrypted, use an encryptor.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="topic_tml_chp_4k__section_N10212_N101A5_N1019A_N10001"><strong class="ph b">Integration between sender SOAP (SOAP 1.x) connector and receiver SFTP
+					connector</strong><div class="p">Model your integration flow using a combination of the elements
+					given below, and configure the sender channel with SOAP (SOAP 1.x) connector and
+					the receiver channel with SFTP connector..<ul class="ul" id="topic_tml_chp_4k__ul_lrk_3kp_4k"><li class="li">Point-to-Point: If the sender participant needs a simple message
+							exchange with a receiver participant, use a Point-to-Point integration
+							flow.</li>
+<li class="li">Persist Message: If you want to store the message payload at a
+							particular step, use persist message.</li>
+<li class="li">(Optional)Gateway: If the sender participant needs to forward selected
+							messages to a particular receiver based on certain condition, use a
+							gateway and configure condition for the routing branch.</li>
+<li class="li">Message Transformation Elements:<ul class="ul" id="topic_tml_chp_4k__ul_hbx_m2f_sk"><li class="li">(Optional)Mapping: If the sender participant can communicate
+									with the receiver participant only after the message payload is
+									transformed in a specific format, use a mapping between the
+									sender and receiver participants</li>
+<li class="li">(Optional)Enricher: If the message should be provided with
+									additional information to the receiver, use an enricher.</li>
+<li class="li">(Optional)Filter: If a specific content needs to be extracted
+									from the message, use a filter.</li>
+<li class="li">Optional)Encoder: If the message should be encoded in Base64,
+									use an encoder.</li>
+</ul>
+</li>
+<li class="li">Security Elements:<ul class="ul" id="topic_tml_chp_4k__ul_qrs_hlp_4k"><li class="li">(Optional)PKCS7/CMS Signer: If the XML or non-XML messages
+									should be signed with one or more signature, use a PKCS7/CMS
+									signer.</li>
+<li class="li">(Optional)Encryptor: If the content of the message should be encrypted, use an
+									encryptor.</li>
+<li class="li">PKCS7/CMS Signature Verifier: If the signatures available in the
+									header or body needs to be verified, use a PKCS7/CMS signature
+									verifier.</li>
+<li class="li">(Optional) XML Digital Signer with Enveloped Signature: If the
+									XML digital signature needs to be inserted within the content to
+									be signed, use an XML digital signer of type enveloped
+									signature.</li>
+<li class="li">(Optional) XML Digital Signer with Enveloping Signature: If the
+									XMl digital signature should contain the content to be signed
+									within itself, use an XML digital signer of type enveloping
+									signature.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="topic nested1" id="topic_on2_cgf_sk"><h2 class="title topictitle2">Integrate with an SAP ERP(R3) System</h2>
+<div class="body"><div class="section" id="topic_on2_cgf_sk__section_N1014C_N10149_N1013E_N10001"><strong class="ph b">Integration between sender SOAP (Plain SOAP) connector and receiver IDoc
+					connector</strong><div class="p">Model your integration flow using a combination of the elements
+					given below, and configure the sender channel with SOAP (Plain SOAP) connector
+					and the receiver channel with IDoc connector.<ul class="ul" id="topic_on2_cgf_sk__ul_u42_cgf_sk"><li class="li">Point-to-Point: If the sender participant needs a simple message
+							exchange with a receiver participant, use a Point-to-Point integration
+							flow.</li>
+<li class="li">(Optional)Mapping: If the sender participant can communicate with the
+							receiver participant only after the message payload is transformed in a
+							specific format, use a mapping between the sender and receiver
+							participants</li>
+<li class="li">(Optional)Splitter: If the complex message needs to be split into
+							individual messages, use IDoc splitter type.</li>
+<li class="li">Persist Message: If you want to store the message payload at a
+							particular step, use persist message.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</body>
+</html>

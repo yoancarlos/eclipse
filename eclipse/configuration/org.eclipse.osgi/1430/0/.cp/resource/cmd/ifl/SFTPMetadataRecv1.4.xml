@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:SFTP/version::1.4.1" ComponentName="sap:SFTP" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" MetadataVersion="2.0">
+	<Variant VariantId="ctype::AdapterVariant/cname::SFTP/tp::SFTP/mp::File/direction::Receiver/version::1.4.1" VariantName="SFTP Receiver" AttachmentBehavior="Preserve" MetadataVersion="2.0">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality = "" isStreaming="">
+		 	<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+		</InputContent>		
+		<OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality = "" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+		</OutputContent>
+		<Tab id="target_1">
+			<GuiLabels>
+				<Label language="EN">Target</Label>
+			</GuiLabels>
+			<AttributeGroup id = "ftp.system">
+				<GuiLabels>
+					<Label language="EN">File Access Parameters</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>path</ReferenceName>
+					<description>File path from where the file should be written, for example, &lt;dir&gt;/&lt;subdir&gt;</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>fileName</ReferenceName>
+					<description>Name of the file to be written</description>
+				</AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>fileAppendTimeStamp</ReferenceName>
+                    <description>Append a timestamp to the filename</description>
+                </AttributeReference>
+			</AttributeGroup>
+			<AttributeGroup id = "ftp.connection">
+				<GuiLabels>
+					<Label language="EN">Connection Parameters</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>host</ReferenceName>
+					<description>Host name or IP address of the FTP Server</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>authentication</ReferenceName>
+					<description>Specifies how the User will be authenticated</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>credential_name</ReferenceName>
+					<description>The referenced credential name</description>
+					<EditCondition>
+						<AttributeName>authentication</AttributeName>
+						<AttributeValue>user_password</AttributeValue>
+					</EditCondition>
+				</AttributeReference>				
+				<AttributeReference>
+					<ReferenceName>username</ReferenceName>
+					<description>ID of the user performing the file transfer</description>
+					<EditCondition>
+						<AttributeName>authentication</AttributeName>
+						<AttributeValue>public_key</AttributeValue>
+					</EditCondition>
+					<Restriction>Constraint.isValidRegex([A-Za-z0-9\/?@!\$\'\(\)\*\+,;\=\-\._~]+)</Restriction>
+					<ErrorMessage>Attribute 'User Name' is mandatory and allows only the following characters: A-Z a-z 0-9 / ? @ ! $ ' ( ) * + , ; = - . _ ~</ErrorMessage>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>connectTimeout</ReferenceName>
+					<description>Maximum waiting time taken to contact the FTP server while establishing connection or performing a read operation.&#10;Default value: 10000 ms</description>
+                    <Restriction>Constraint.isValidRegex(^([1-9][0-9]{0,4}|[1-2][0-9]{0,5}|300000)$)</Restriction>
+                    <ErrorMessage>Enter a value between 1 and 300000.</ErrorMessage>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>maximumReconnectAttempts</ReferenceName>
+					<description>Maximum number of attempts allowed to reconnect to the FTP server.&#10;Default value: 3 Use "0" to disable this behavior</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>reconnectDelay</ReferenceName>
+					<description>Time period to wait before attempting to reconnect to the remote FTP server.&#10;Default value: 1000 ms</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>disconnect</ReferenceName>
+					<description>Disconnect from SFTP server after each message processing</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<Tab id="processing_2">
+			<GuiLabels>
+				<Label language="EN">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id = "file.processing">
+				<GuiLabels>
+					<Label language="EN">Processing Parameters</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>stepwise</ReferenceName>
+					<description>Changes directory levels one at a time</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>autoCreate</ReferenceName>
+					<description>Automatically creates missing directory levels as provided in the file's pathname</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>fileExist</ReferenceName>
+					<description>If file already exists in the target, allow to:&#10;Override- Replace the existing file content with the new one.&#10;Append- Add the new file content to the end of the existing one.&#10;Fail- Do not perform any action and raise a failure.&#10;Ignore- Do not perform any action</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>useTempFile</ReferenceName>
+					<description>Option to use temporary file name</description>
+					<NotCondition>
+					 <EditCondition>
+                       <AttributeName>fileExist</AttributeName>
+                       <AttributeValue>Append</AttributeValue>
+                     </EditCondition>
+                    </NotCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>tempFileName</ReferenceName>
+					<description>Enter a unique temporary file name.&#10;The file name has to be unique so that the temp file will not be overwritten by parallel running messages.&#10;This can be achieved by using variable parts in the file name, such as $(file:name).temp or target_${exchangeId}.temp</description>
+					<AndCondition>
+						<NotCondition>
+							<EditCondition>
+								<AttributeName>fileExist</AttributeName>
+								<AttributeValue>Append</AttributeValue>
+							</EditCondition>
+						</NotCondition>
+						<EditCondition>
+							<AttributeName>useTempFile</AttributeName>
+							<AttributeValue>1</AttributeValue>
+						</EditCondition>
+					</AndCondition>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<Tab id="advanced_2">
+			<GuiLabels>
+				<Label language="EN">Advanced</Label>
+			</GuiLabels>
+			<AttributeGroup id = "file.advanced">
+				<GuiLabels>
+					<Label language="EN">Advanced Parameters</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>bufferSize</ReferenceName>
+					<description>Write file content using the mentioned buffer size. Default: 128 KB</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>flatten</ReferenceName>
+					<description>Flatten the file path by removing the directory levels so that only the file names are considered and they are written under a single directory.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>sftpSecEnabled</ReferenceName>
+					<description>Replaces the header with the message unique ID, if the header contains any path traversals such as \..\ or /../..</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<AllowedHeaders/>
+		<ReferencedComponents/>
+	</Variant>
+	<AttributeMetadata>
+		<Name>host</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Address</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>path</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Directory</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>username</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">User Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>strictHostKeyChecking</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Strict Host Key Checking</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>YES</Value>
+				<GuiLabels>
+					<Label language="EN">Yes</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>NO</Value>
+				<GuiLabels>
+					<Label language="EN">No</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>maximumReconnectAttempts</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>3</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Maximum Reconnect Attempts</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>reconnectDelay</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>1000</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Reconnect Delay (in ms)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>connectTimeout</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>10000</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Timeout (in ms)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>stepwise</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Change Directories Stepwise</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>chmod</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default></Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">CHMOD</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>autoCreate</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Create Directories</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>useTempFile</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>0</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Use Temporary File</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>tempFileName</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>${file:name}.tmp</Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Temporary File Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>bufferSize</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>128</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Buffer Size (in KB)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>fileName</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">File Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+    <AttributeMetadata>
+        <Name>fileAppendTimeStamp</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default></Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Append Timestamp</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	<AttributeMetadata>
+		<Name>flatten</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Flatten Filenames</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>initialDelay</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>1000</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Initial Delay (in ms)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>delay</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>500</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Recurrent Delay (in ms)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>useFixedDelay</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Use Fixed Delay</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>readLock</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>none</Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Read Lock Strategy</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>none</Value>
+				<GuiLabels>
+					<Label language="EN">None</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>rename</Value>
+				<GuiLabels>
+					<Label language="EN">Rename</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>change</Value>
+				<GuiLabels>
+					<Label language="EN">Content Change</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>recursive</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Include Sub-Directories</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+<!-- 	<AttributeMetadata> -->
+<!-- 		<Name>additionalArguments</Name> -->
+<!-- 		<Usage>false</Usage> -->
+<!-- 		<DataType>xsd:string</DataType> -->
+<!-- 		<Default></Default> -->
+<!-- 		<Length /> -->
+<!-- 		<GuiLabels> -->
+<!-- 			<Label language="EN">Additional Arguments</Label> -->
+<!-- 		</GuiLabels> -->
+<!-- 	</AttributeMetadata> -->
+	<AttributeMetadata>
+		<Name>delete</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Delete After Processing</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>sftpSecEnabled</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Prevent Directory Traversal </Label>
+		</GuiLabels>
+	</AttributeMetadata>
+
+<!-- 
+	<AttributeMetadata>
+		<Name>noop</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">No Operations After Processing</Label>
+		</GuiLabels>
+		
+		<ContentBindingService>
+			<ContentBindingServiceName>SFTPContentBindingService</ContentBindingServiceName>
+ 			<BindingServiceAttributes>
+				<BindingServiceAttribute>
+					<Name>target</Name>
+					<Value>noop</Value>
+			  	 </BindingServiceAttribute>
+ 			</BindingServiceAttributes>
+		</ContentBindingService>
+	</AttributeMetadata>
+ -->
+ 
+	<AttributeMetadata>
+		<Name>noop</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>delete</Default>
+		<Length/>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Post-Processing</Label>
+		</GuiLabels>
+		<ContentBindingService>
+			<ContentBindingServiceName>SFTPContentBindingService</ContentBindingServiceName>
+ 			<BindingServiceAttributes>
+				<BindingServiceAttribute>
+					<Name>target</Name>
+					<Value>noop</Value>
+			  	 </BindingServiceAttribute>
+ 			</BindingServiceAttributes>
+		</ContentBindingService>
+		<FixedValues>
+			<FixedValue>
+				<Value>delete</Value>
+				<GuiLabels>
+					<Label language="EN">Delete File</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>mark</Value>
+				<GuiLabels>
+					<Label language="EN">Keep File and Mark as Processed in Idempotent Repository</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>test</Value>
+				<GuiLabels>
+					<Label language="EN">Keep File and Process Again</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>move</Value>
+				<GuiLabels>
+					<Label language="EN">Move File</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>file.move</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>.archive</Default>
+		<Length/>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Archive Directory</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>disconnect</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Automatically Disconnect</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>maxMessagesPerPoll</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>20</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Max. Messages per Poll</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>retryAlertThreshold</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>0</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Retry Threshold for Alerting</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>fileExist</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>Override</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Handling for Existing Files</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>Override</Value>
+				<GuiLabels>
+					<Label language="EN">Override</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Append</Value>
+				<GuiLabels>
+					<Label language="EN">Append</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Fail</Value>
+				<GuiLabels>
+					<Label language="EN">Fail</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Ignore</Value>
+				<GuiLabels>
+					<Label language="EN">Ignore</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+		<Name>idempotentRepository</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>inMemory</Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Idempotent Repository</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>inMemory</Value>
+				<GuiLabels>
+					<Label language="EN">In Memory</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>database</Value>
+				<GuiLabels>
+					<Label language="EN">Database</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>	
+
+	<AttributeMetadata>
+		<Name>authentication</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>public_key</Default>
+		<Length />
+		<isparameterized>true</isparameterized>		
+		<GuiLabels>
+			<Label language="EN">Authentication</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>public_key</Value>
+				<GuiLabels>
+					<Label language="EN">Public Key</Label>
+				</GuiLabels>
+			</FixedValue>		
+			<FixedValue>
+				<Value>user_password</Value>
+				<GuiLabels>
+					<Label language="EN">User Name/Password</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+
+	<AttributeMetadata>
+		<Name>credential_name</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Credential Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+
+	<AttributeMetadata>
+	  <Name>scheduleKey</Name>
+	  <Usage>required</Usage>
+	  <DataType>custom:schedule</DataType>
+	  <isparameterized>true</isparameterized>
+	  <GuiLabels>
+	    <Label language="EN">Schedule</Label>
+	  </GuiLabels>
+	</AttributeMetadata>
+
+</ComponentMetadata>

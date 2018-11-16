@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<dependencies>
+		<dependency>
+			<groupId>com.sap.it.commons</groupId>
+			<artifactId>com.sap.it.commons.command</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.it.nm</groupId>
+			<artifactId>com.sap.it.nm.commands</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.ifl.gnb</groupId>
+			<artifactId>com.sap.it.cmd.api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.ifl.gnb</groupId>
+			<artifactId>com.sap.it.cmd.api.impl</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.ifl.gnb.common</groupId>
+			<artifactId>com.sap.it.core.ifl.common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.osgi</groupId>
+			<artifactId>org.eclipse.osgi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.it.gb.api</groupId>
+			<artifactId>com.sap.it.gb.share</artifactId>
+		</dependency>
+		<dependency>
+		  <groupId>xalan</groupId>
+		  <artifactId>xalan</artifactId>
+		  <version>2.7.0</version>
+		</dependency> 
+		<dependency>
+		  <groupId>wsdl4j</groupId>
+		  <artifactId>wsdl4j</artifactId>
+		</dependency>
+		
+		<!-- Test depedencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?NLS TYPE="org.eclipse.help.contexts"?>
+<contexts>
+	<!-- Reorganization -->
+	<context id="c6579b60d9761014ae59c8c868e6e054">
+		<description>In a distributed SAP HANA system, tables and table partitions are assigned to an index server on a particular host at their time of creation, but this assignment can be changed. In certain situations, it is even necessary.</description>
+		<topic label="Redistribution of Tables in a Distributed SAP HANA System" href="../com.sap.ndb.studio.admin.help/html/c6579b60d9761014ae59c8c868e6e054.html" />
+	</context>
+	<context id="c8967125d97610149529aa4af46acc75">
+		<description>Changing how tables are distributed across the hosts of a distributed SAP HANA system is a critical operation. Therefore, before executing a redistribution operation, it is recommended that you save the current distribution of table data so that it can be restored if necessary. </description>
+		<topic label="Save Current Table Distribution" href="../com.sap.ndb.studio.admin.help/html/c8967125d97610149529aa4af46acc75.html" />
+	</context>
+	<context id="c88b4887d9761014a923d35a2f0291e8">
+		<description>Changing how tables are distributed across the hosts of an SAP HANA system is a critical operation. You may need to restore the table distribution from a previous point in time. </description>
+		<topic label="Restore Previous Table Distribution" href="../com.sap.ndb.studio.admin.help/html/c88b4887d9761014a923d35a2f0291e8.html" />
+	</context>
+	<context id="c8654f1fd976101481ddb20589f56ad0">
+		<description>After you have added a new worker host to your SAP HANA system, you need to redistribute the tables in the system to balance the memory footprint of the tables and to improve performance (load balancing).</description>
+		<topic label="Redistribute Tables After Adding a Host" href="../com.sap.ndb.studio.admin.help/html/c8654f1fd976101481ddb20589f56ad0.html" />
+	</context>
+	<context id="c8493358d9761014b9dca8c5af2068eb">
+		<description>During productive operation, you may discover that the initial assignment of tables and table partitions to index servers is no longer optimal, for example, frequently joined tables are located on different servers. You can therefore trigger a redistribution operation that evaluates the current situation and determines how distribution can be improved. </description>
+		<topic label="Optimize Table Distribution" href="../com.sap.ndb.studio.admin.help/html/c8493358d9761014b9dca8c5af2068eb.html" />
+	</context>
+	<context id="c8548c23d976101480a4a7f22fd71f24">
+		<description>In a distributed SAP HANA system, partitioned tables are distributed across different index servers. The location of the different partitions can be specified manually or determined by the database when the table is initially partitioned. Over time, this initial partitioning may no longer be optimal, for example, if a partition has grown significantly.</description>
+		<topic label="Optimize Table Partitioning" href="../com.sap.ndb.studio.admin.help/html/c8548c23d976101480a4a7f22fd71f24.html" />
+	</context>
+	<!-- Overview -->
+	<context id="be60cf00bb571014944cd31413d6b7bb">
+		<description>When you open the Administration editor for a particular SAP HANA system, the Overview tab provides you with a summary of the overall status of the system, as well as an overview of resource usage.</description>
+		<topic label="Monitoring Overall System Status and Resource Usage" href="../com.sap.ndb.studio.admin.help/html/be60cf00bb571014944cd31413d6b7bb.html" />
+	</context>
+	<!-- Landscape -->
+	<context id="bec74a10bb571014992aaa4c3265871d">
+		<description>An SAP HANA system comprises all the system components of an installation of SAP HANA, for example, the index server, name server, and statistics server. You can monitor the operational status and resource usage of individual system components on the Landscape Services tab of the Administration editor. </description>
+		<topic label="Monitoring Detailed System Status and Resource Usage" href="../com.sap.ndb.studio.admin.help/html/bec74a10bb571014992aaa4c3265871d.html" />
+	</context>
+	<context id="HostTab">
+		<description>The SAP HANA database supports high availability in a distributed system by providing for host auto-failover. If an active host fails, for example, because of a hardware failure, standby hosts can take over and thus ensure the continued availability of the database.</description>
+		<!--SH: Added missing description-->
+		<topic label="Monitoring Host Status and Failover Configuration" href="../com.sap.ndb.studio.admin.help/html/bdc61f80bb571014a59df2628d26ee8f.html" />
+	</context>
+	<context id="be8bebc020b442e7aec255b935276ead">
+		<description>System replication is a mechanism for ensuring the high availability of your SAP HANA system. Through the continuous replication of data from a primary to a secondary system, including in-memory loading, system replication facilitates rapid failover in the event of a disaster. Productive operations can be resumed with minimal downtime.</description>
+		<topic label="Managing System Replication in the SAP HANA Studio" href="../com.sap.ndb.studio.admin.help/html/be8bebc020b442e7aec255b935276ead.html">
+			<!--SH: Fixed error in label text and description.-->
+		</topic>
+	</context>
+	<!-- Performance Tab -->
+	<context id="ThreadMonitoring">
+		<description>You can monitor all running threads in your system on the Threads tab. It may be useful to see, for example, how long a thread is running, or if a thread is blocked for an inexplicable length of time.</description>
+		<topic label="Thread Monitoring" href="../com.sap.ndb.studio.admin.help/html/7245cadf8e244d7fb8f7197aeac5bd62.html" />
+		<topic label="Monitoring System Performance" href="../com.sap.ndb.studio.admin.help/html/be6baf00bb571014889ba94d5cf76135.html" />
+	</context>
+	<context id="SessionMonitoring">
+		<description>You can monitor all sessions in your landscape on the Sessions tab.</description>
+		<topic label="Session Monitoring" href="../com.sap.ndb.studio.admin.help/html/5ac5db0edc77446c81b88ff15a34d637.html" />
+		<topic label="Monitoring System Performance" href="../com.sap.ndb.studio.admin.help/html/be6baf00bb571014889ba94d5cf76135.html" />
+	</context>
+	<context id="BlockedTransactionMonitoring">
+		<description>Blocked transactions, or transactionally blocked threads, can impact application responsiveness. They are indicated in the Administration editor on the Threads tab. You can see another representation of the information about blocked and blocking transactions on the Blocked Transactions tab.</description>
+		<topic label="Blocked Transaction Monitoring" href="../com.sap.ndb.studio.admin.help/html/b4c0f60390d7472999ff56abbf263666.html" />
+		<topic label="Monitoring System Performance" href="../com.sap.ndb.studio.admin.help/html/be6baf00bb571014889ba94d5cf76135.html" />
+	</context>
+	<context id="SQLPlanCacheMonitoring">
+		<description>The SQL plan cache can provide you with an insight into the workload in the system as it lists frequently executed queries. You can view the plan cache in the Administration editor on SQL Plan Cache tab.</description>
+		<topic label="Monitoring SQL Performance with the SQL Plan Cache" href="../com.sap.ndb.studio.admin.help/html/64994489d1574e2089e80a4db065ca6a.html" />
+		<topic label="Monitoring System Performance" href="../com.sap.ndb.studio.admin.help/html/be6baf00bb571014889ba94d5cf76135.html" />
+	</context>
+	<context id="ExpensiveStatementsMonitoring">
+		<description>Expensive statements are individual SQL queries whose execution time was above a configured threshold. The expensive statements trace records information about these statements for further analysis and displays them in the Administration editor on the Expensive Statements Trace tab</description>
+		<topic label="Expensive Statements Monitoring" href="../com.sap.ndb.studio.admin.help/html/30324a0aa1ff49c4a0c50c6c54acb2ee.html" />
+		<topic label="Monitoring System Performance" href="../com.sap.ndb.studio.admin.help/html/be6baf00bb571014889ba94d5cf76135.html" />
+	</context>
+	<context id="JobProgressMonitoring">
+		<description>Certain operations in SAP HANA typically run for a long time and may consume a considerable amount of resources. You can monitor long-running jobs on the Job Progress tab</description>
+		<topic label="Job Progress Monitoring" href="../com.sap.ndb.studio.admin.help/html/9b2bd927a16a4526a8d9e71f39facd52.html" />
+		<topic label="Monitoring System Performance" href="../com.sap.ndb.studio.admin.help/html/be6baf00bb571014889ba94d5cf76135.html" />
+	</context>
+	<context id="LoadMonitoring">
+		<description>A graphical display of a range of system performance indicators is available on the Load tab.</description>
+		<topic label="Load Monitoring" href="../com.sap.ndb.studio.admin.help/html/acb377a50c384b139719ebd4e0162daf.html" />
+		<topic label="Monitoring System Performance" href="../com.sap.ndb.studio.admin.help/html/be6baf00bb571014889ba94d5cf76135.html" />
+	</context>
+	<!-- Trace Configuration Tab -->
+	<context id="c02957cbbb571014bb81affbeb69f103">
+		<description>Various traces are available for obtaining detailed information about the actions of the database system. You can activate and configure traces on the Trace Configuration tab of the Administration editor. </description>
+		<topic label="Configure Traces" href="../com.sap.ndb.studio.admin.help/html/c02957cbbb571014bb81affbeb69f103.html" />
+	</context>
+	<context id="bea35660bb571014b7bef43c00010c7d">
+		<description> The database trace records information about activity in the components of the SAP HANA database. You can use this information to analyze performance and to diagnose and debug errors.</description>
+		<topic label="Database Trace" href="../com.sap.ndb.studio.admin.help/html/bea35660bb571014b7bef43c00010c7d.html" />
+	</context>
+	<context id="bdd27500bb571014b7f7e61e7c4cda04">
+		<description>The kernel profiler is a sampling profiler built into the SAP HANA database. It collects, for example, information about frequent and/or expensive execution paths during query processing. It can be used to analyze performance issues with systems on which third-party software cannot be installed, or parts of the database that are not accessible by the performance trace.</description>
+		<topic label="Kernel Profiler" href="../com.sap.ndb.studio.admin.help/html/bdd27500bb571014b7f7e61e7c4cda04.html" />
+	</context>
+	<context id="bedc9668bb5710149d56d29fe2632ba0">
+		<description>The SQL trace collects information about all executed SQL statements and saves it in a trace file for further analysis.</description>
+		<topic label="SQL Trace" href="../com.sap.ndb.studio.admin.help/html/bedc9668bb5710149d56d29fe2632ba0.html" />
+	</context>
+	<context id="beae0b80bb5710149a28e6891a42d641">
+		<description>The performance trace is a performance tracing tool built into the SAP HANA database. It records performance indicators for individual query processing steps in the database kernel. </description>
+		<topic label="Performance Trace" href="../com.sap.ndb.studio.admin.help/html/beae0b80bb5710149a28e6891a42d641.html" />
+	</context>
+	<context id="5faf04f17830464eacdb7938b383d2ab">
+		<description>Expensive statements are individual SQL statements whose execution time exceeded a configured threshold. The expensive statements trace records information about these statements for further analysis.</description>
+		<topic label="Expensive Statements Trace" href="../com.sap.ndb.studio.admin.help/html/5faf04f17830464eacdb7938b383d2ab.html" />
+	</context>
+ <context id="PlanningEngineTrace">
+    <description>If the planning engine trace is enabled, the system records information that allows the data sources used in the planning activities to be identified and the same activities to be re-run. The file created enables development support to reproduce these planning activities in a different system.</description>
+    <topic href="http://service.sap.com/sap/support/notes/1995968" label="SAP Note 1995968"/>
+ </context>
+	<!-- Volumes Tab -->
+	<context id="be4939c0bb571014996ab1daffb13c3b">
+		<description>To ensure that the database can always be restored to its most recent committed state, you must ensure that there is enough space on disk for data and log volumes. You can monitor disk usage, volume size, and other disk activity statistics on the Volumes tab of the Administration editor.</description>
+		<topic label="Monitoring Disk Space" href="../com.sap.ndb.studio.admin.help/html/be4939c0bb571014996ab1daffb13c3b.html" />
+	</context>
+	<!--Configutaion Tab -->
+	<context id="bf9b9880bb5710148539cf9d8fb3a546">
+		<description>The properties of an SAP HANA system are defined in the parameters of its configuration files. Configuration files are separated into sections; sections bundle parameters of the same category. </description>
+		<topic label="Change System Properties" href="../com.sap.ndb.studio.admin.help/html/bf9b9880bb5710148539cf9d8fb3a546.html" />
+	</context>
+	<!-- System Information -->
+	<context id="69c1067d6d7947cbbdd380220c9d2575">
+		<description>If you have your own SQL statements for monitoring purposes, you can save these statements in the Administration editor for convenient repeated execution. Statements are saved in an XML file, which you can edit either directly on the System Information tab or offline on your local file system.</description>
+		<topic label="Use User-Defined SQL Statements for System Monitoring" href="../com.sap.ndb.studio.admin.help/html/69c1067d6d7947cbbdd380220c9d2575.html" />
+	</context>
+	<!-- Diagnosis Files -->
+	<context id="c1fd33c3bb5710148e92e977c8d2f1d6">
+		<description>In the event of problems with the SAP HANA database, you can display the relevant diagnosis file and analyze for errors.</description>
+		<topic label="Diagnosis Files" href="../com.sap.ndb.studio.admin.help/html/c1fd33c3bb5710148e92e977c8d2f1d6.html" />
+		<topic label="Options for Diagnosis File Handling" href="../com.sap.ndb.studio.admin.help/html/9c807436191742349e8bf87daa59cb1e.html"/>
+		<topic label="Collect and Download Diagnosis Information in SAP HANA Studio" href="../com.sap.ndb.studio.admin.help/html/bfd29438bb5710148b16aac0cca12df3.html" />
+	</context>
+	<!-- Alerts -->
+	<context id="be152f48bb571014b5f5aa213793402f">
+		<description>As an administrator, you actively monitor the status of the system, its services, and the consumption of system resources. However, you are also alerted of critical situations, for example: a disk is becoming full, CPU usage is reaching a critical level, or a server has stopped.</description>
+		<topic label="Monitoring Alerts" href="../com.sap.ndb.studio.admin.help/html/be152f48bb571014b5f5aa213793402f.html" />
+	</context>
+	<context id="ConfigureAlertCheckSettings">
+		<description>You can configure e-mail alert notifications, check default values, and the start time of periodic checks.</description>
+		<topic label="Configure E-Mail Notifications for Alerts" href="../com.sap.ndb.studio.admin.help/html/bffd6d00bb571014a04d89d35cb01804.html" />
+		<topic label="Configure Check Thresholds" href="../com.sap.ndb.studio.admin.help/html/bff2a708bb571014ae8dc19db1a54581.html" />
+		<topic label="Configure Start Times of Periodic Checks" href="../com.sap.ndb.studio.admin.help/html/bfe7f270bb571014ba25d3e9daf4d64c.html" />
+	</context>
+	<!-- System Monitor -->
+	<context id="888f9561fe9247fab3e70e34faa11c98">
+		<!--SH:The id should be changed to the href filename.-->
+		<description>The System Monitor is an editor that provides you with an overview of all your SAP HANA systems at a glance. From the System Monitor, you can drill down into the details of an individual system in the Administration editor.</description>
+		<topic label="System Monitor" href="../com.sap.ndb.studio.admin.help/html/befc9748bb571014aa1cdeabd0f89881.html" />
+	</context>
+	<!-- Import and Export -->
+	<context id="c11da25bbb5710148100c3badcd8dbde">
+		<description>You can import previously exported catalog objects into an another database. For example, to move data from a test system to a productive system, clone your system, or provide the data to SAP Support so they can replicate a scenario. You can also import ESRI shapefiles into SAP HANA column-store tables.</description>
+		<topic label="Import Tables and Other Catalog Objects" href="../com.sap.ndb.studio.admin.help/html/c11da25bbb5710148100c3badcd8dbde.html" />
+		<topic label="Import ESRI Shapefiles" href="../com.sap.ndb.studio.admin.help/html/6ee89f6694244966bcd25f429840575e.html">
+			<!--SH: Added additional topic-->
+		</topic>
+	</context>
+	<context id="c0f2c5c3bb571014bad6f470300172a3">
+		<description>You can export all catalog objects to a file system and then import them back into an another database. For example, you want to move data from a test system to a productive system, clone your system, or provide the data to SAP Support so they can replicate a scenario.</description>
+		<topic label="Export Tables and Other Catalog Objects" href="../com.sap.ndb.studio.admin.help/html/c0f2c5c3bb571014bad6f470300172a3.html" />
+	</context>
+	<!-- -->
+	<context id="ConfigureSystemReplicationWizard">
+		<topic href="../com.sap.ndb.studio.admin.help/html/ff016a0396e7419b95863e34d687862a.html" label="Help_Topic"/>
+	</context>
+</contexts>

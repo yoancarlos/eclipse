@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Specific Use Cases for LDAP Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiodd49f1fc27f44f068b3c3d6f3c8809d5">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Specific Use Cases for LDAP Adapter</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc"/>
+
+        <div class="section"><div class="section_title">Using Input Type Java (JNDI) Attributes</div><div type="Using Input Type Java (JNDI) Attributes">
+            
+            <p class="p">The LDAP adapter supports input via JNDI attributes. If you choose this as the input
+                type, you use a script step to obtain values to attributes that are then passed to
+                the LDAP service.</p>
+
+            <div class="p">For example, consider this script being used in a <span class="ph uicontrol">Script</span>
+                step.<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">importClass(com.sap.gateway.ip.core.customdev.util.Message);
+importClass(java.util.HashMap);
+importClass(javax.naming.directory.Attribute);
+importClass(javax.naming.directory.BasicAttribute);
+importClass(javax.naming.directory.BasicAttributes);
+importClass(javax.naming.directory.Attributes);
+ 
+function processData(message) {
+	var body = message.getBody();
+	var dn= "cn=Markus,ou=users,dc=testcompany,dc=com";
+	var givenNameAttr = new BasicAttribute("givenName", "Jack");
+	var displayNameAttr = new BasicAttribute("displayName", "Reacher");
+	var telephoneNumberAttr = new BasicAttribute("telephoneNumber", "100-100-100");
+	var attributes = new BasicAttributes();
+	attributes.put(givenNameAttr);
+	attributes.put(displayNameAttr);
+	attributes.put(telephoneNumberAttr);
+     attr =new BasicAttribute("title", "Developer");
+     attributes.put(attr);
+     attr =new BasicAttribute("sn", "Brutus");
+     attributes.put(attr);
+	var resultingMap = new HashMap();
+	resultingMap.put("dn", dn);
+	resultingMap.put("attributes", attributes);
+	message.setBody(resultingMap);
+	return message;
+}
+</pre></div>
+</div>
+
+            <p class="p">In the script, the values for attributes <kbd class="ph userinput">givenName</kbd>,
+                    <kbd class="ph userinput">displayName</kbd> and  <kbd class="ph userinput">telephoneNumber</kbd>
+                are declared in the script before they are passed to the LDAP adapter. Similarly,
+                you can also create a script where these values are dynamically fetched during
+                runtime.</p>
+
+        </div></div>
+
+		<div class="section"><div class="section_title">Adding Attributes to Template Schema</div><div type="Adding Attributes to Template Schema">
+			
+			<p class="p">The example schema contains a set of attributes for a given record. In case you want
+				the schema to contain additional attributes, you can manually edit the schema before
+				using it in the mapping step.</p>
+
+			<p class="p">For example, if you want to add a field, telephone number, you can add an element in
+				the schema under the <kbd class="ph userinput">sequence</kbd> element.</p>
+
+			<div class="p">Here’s how the edited schema will look
+				like:<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;schema xmlns="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;element name="Schema"&gt;
+        &lt;complexType&gt;
+            &lt;sequence&gt;
+            &lt;element name="DistinguishedName" maxOccurs="1" minOccurs="1" type="string"/&gt;
+            &lt;element name="ObjectClass" maxOccurs="1" minOccurs="0" type="string"/&gt;
+                &lt;element name="Attributes" maxOccurs="1" minOccurs="1"&gt;
+                    &lt;complexType&gt;
+                        &lt;sequence&gt;
+                            &lt;element name="sAMAccountName" type="string"&gt;&lt;/element&gt;
+                            &lt;element name="sn" type="string"&gt;&lt;/element&gt;
+                            &lt;element name="givenName" type="string"&gt;&lt;/element&gt;
+                            &lt;element name="displayName" type="string"&gt;&lt;/element&gt;
+                            &lt;element name="name" type="string"&gt;&lt;/element&gt;
+                            &lt;element name="telephoneNumber" type="string"&gt;&lt;/element&gt;
+					   &lt;!--The above element has been added to the schema. If you want to add or remove elements, ensure that you make changes within the sequence tag--&gt;	
+                        &lt;/sequence&gt;
+                    &lt;/complexType&gt;
+                &lt;/element&gt;
+            &lt;/sequence&gt;
+        &lt;/complexType&gt;
+    &lt;/element&gt;
+&lt;/schema&gt;
+</pre></div>
+</div>
+
+		</div></div>
+
+		<div class="section"><div class="section_title">Add Additional Attributes to the Message after Mapping using Script</div><div type="Add Additional Attributes to the Message after Mapping using Script">
+			
+			<p class="p">Let us consider a scenario where you want to add an attribute to the message
+				(payload) that you are sending to the LDAP service. For example, you want to add a
+				password attribute. Due to security concerns, you should encode the password before
+				you add it.</p>
+
+            <div class="p">You can achieve this by adding a <span class="ph uicontrol">Script</span> step after the mapping
+                step in the integration flow. Here's an example of the script that you can use in
+                the <span class="ph uicontrol">Script</span>
+                step:<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">import com.sap.gateway.ip.core.customdev.util.Message;
+import java.util.HashMap;
+import javax.xml.bind.DatatypeConverter;
+import javax.naming.directory.Attribute;
+import javax.naming.directory.Attributes;
+import javax.naming.directory.BasicAttribute;
+import javax.naming.directory.BasicAttributes;
+
+def Message processData(Message message) 
+{
+	Attributes attributes = new BasicAttributes();
+	String quotedPassword = '"'+"Initial@1"+'"';
+     byte[] unicodePasswordByteArray = quotedPassword.getBytes("UTF-16LE");
+	attributes.put(new BasicAttribute("unicodePwd", unicodePasswordByteArray));
+	message.setHeader("SAP_LDAPAttributes",attributes);
+	return message;
+}</pre></div>
+</div>
+
+		</div></div>
+
+        <div class="section"><div class="section_title">Using Modify Operation to Change DN</div><div type="Using Modify Operation to Change DN">
+            
+            <p class="p">You can use the <span class="ph uicontrol">Modify</span> operation to change the DN of an LDAP
+                record. You can do this by adding the tag
+                    <kbd class="ph userinput">&lt;DistinguishedName_Previous&gt;</kbd> to the input payload with
+                the old DN. Specify the modified DN in <kbd class="ph userinput">&lt;DistinguishedName&gt;</kbd>
+                tag and perform the <span class="ph uicontrol">Modify</span> operation.</p>
+
+            <div class="p">Here's an example that shows a sample input payload for modiying the DN of an LDAP
+                record:<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+            &lt;DistinguishedName&gt;CN=CMD ABC,CN=Users,DC=dev109,DC=dev-wdf,DC=sap,DC=corp&lt;/DistinguishedName&gt;
+            &lt;DistinguishedName_Previous&gt;CN=CMD,CN=Users,DC=dev109,DC=dev-wdf,DC=sap,DC=corp&lt;/DistinguishedName_Previous&gt;
+            &lt;ObjectClass&gt;user&lt;/ObjectClass&gt;
+            &lt;Attributes&gt;
+                        &lt;mail&gt;123@xyz.com&lt;/mail&gt;
+                        &lt;telephoneNumber&gt;123456789&lt;/telephoneNumber&gt;
+            &lt;/Attributes&gt;
+&lt;/Schema&gt; 
+</pre></div>
+</div>
+
+        </div></div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

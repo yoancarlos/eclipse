@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Encrypting and Signing the Message Content with PKCS#7/CMS</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiof0d0838b0ba047ddad42f0799a9934f3">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Encrypting and Signing the Message Content with PKCS#7/CMS</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loiof0d0838b0ba047ddad42f0799a9934f3__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>You perform this task to protect the message content
+			from being altered while it is being sent to other participants on the cloud, by
+			encrypting the content. In the integration flow model, you configure the
+				<span class="ph uicontrol">Encryptor</span> by providing information on the public key alias,
+			content encryption algorithm, and secret key length. The encryptor uses one or more
+			receiver public key aliases to find the public key in the keystore. The encryption
+			process uses a symmetric key of specified length for content encryption. The symmetric
+			key is encrypted by the public recipient key with the cipher. The encryption is
+			determined by the type of <span class="ph uicontrol">Content Encryption Algorithm</span> that you
+			select. The encrypted content and the receiver information containing the symmetric
+			encryption key are placed in the message body.<p class="p">In addition to encrypting the message
+				content, you can also sign the content to make your identity known to the
+				participants and thus ensure the authenticity of the messages you are sending. This
+				task guarantees your identity by signing the messages with one or more private keys
+				using a signature algorithm.</p>
+</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loiof0d0838b0ba047ddad42f0799a9934f3__step_N1001C_N10019_N10011_N10001">
+				<span class="ph cmd">Open the <span class="ph filepath">&lt;integration flow&gt;.iflw</span> in the <span class="ph uicontrol">Model
+						Configuration</span> editor.</span>
+			</li>
+<li class="li step stepexpand" id="loiof0d0838b0ba047ddad42f0799a9934f3__step_N10029_N10019_N10011_N10001">
+				<span class="ph cmd">Right-click a connection within the pool and choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Add Security Element</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Content Encryptor</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand" id="loiof0d0838b0ba047ddad42f0799a9934f3__step_N1003E_N10019_N10011_N10001">
+				<span class="ph cmd"> In the <span class="ph uicontrol">Model Configuration</span> editor, select
+						<span class="ph uicontrol">Encryptor</span>.</span>
+			</li>
+<li class="li step stepexpand" id="loiof0d0838b0ba047ddad42f0799a9934f3__step_N1005B_N10025_N10011_N10001">
+				<span class="ph cmd">To configure the encryptor with a saved configuration that is available as a template,
+					choose <span class="ph uicontrol">Load Element Template</span> from the context menu of the
+						<span class="ph uicontrol">Encryptor</span> element.</span>
+			</li>
+<li class="li step stepexpand" id="loiof0d0838b0ba047ddad42f0799a9934f3__step_N1004F_N10019_N10011_N10001">
+				<span class="ph cmd">In the <span class="ph uicontrol">Properties</span> view, specify the general settings for
+					encryption.</span>
+				<div class="itemgroup info">
+					<div class="p">
+			
+<div class="table-wrapper tablenoborder"><table summary="" id="loiof0d0838b0ba047ddad42f0799a9934f3__d6562e15" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+					
+					
+					<tbody class="tbody">
+						<tr class="row">
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Name</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Enter a name for the signer. It must consist of alphanumeric
+									ASCII characters or underscores and start with a letter. The
+									minimum length is 3, the maximum length is 30.</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Block Size (in bytes)</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Enter the size of the data that is to be encoded.</p>
+
+								<p class="p">If you enter a value equal to or less than
+										<kbd class="ph userinput">0</kbd>, the whole data is encoded.</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Encode Body with Base64</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Select this option if the message body will be
+									base64-encoded.</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Signatures in PKCS7 Message</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Select one of the following options:</p>
+
+								<div class="p">
+									<ul class="ul" id="loiof0d0838b0ba047ddad42f0799a9934f3__d6562e91">
+										<li class="li">
+											<p class="p">Enveloped Data Only</p>
+
+											<p class="p">Select this option if you want to apply encryption
+												only.</p>
+
+										</li>
+
+										<li class="li">
+											<p class="p">Signed and Enveloped Data</p>
+
+											<p class="p">Select this option if you want to apply both
+												encryption and signing.</p>
+
+										</li>
+
+									</ul>
+
+								</div>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+</div>
+
+		</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify the settings for the encryption process (under
+						<span class="ph uicontrol">Encryption</span>).</span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loiof0d0838b0ba047ddad42f0799a9934f3__table_atq_lhq_js" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+					
+					
+					<tbody class="tbody">
+						<tr class="row">
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Content Encryption Algorithm</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Specify the algorithm that is to be used to encrypt the
+									payload.</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Secret Key Length</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Specify the key length.</p>
+
+								<p class="p">The offered key lengths depend on the chosen encryption
+									algorithm.</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Receiver Public Key Alias</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Specify one or more aliases.</p>
+
+								<p class="p">You use the alias to select the public key from the keystore.</p>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify the settings for the signing process under <span class="ph uicontrol">Signature</span> (only
+					if you selected <span class="ph uicontrol">Signed and Enveloped Data</span> for
+						<span class="ph uicontrol">Signatures in PKCS7 Message</span>).</span>
+				<div class="itemgroup info">
+					<p class="p">For each private key alias (specified under <span class="ph uicontrol">Signer
+							Parameters</span>), you define the following parameters:</p>
+
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loiof0d0838b0ba047ddad42f0799a9934f3__table_dsr_mhq_js" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+					
+					
+					<tbody class="tbody">
+						<tr class="row">
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Signature Algorithm</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Specify the signature (digest) algorithm.</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%">
+								<p class="p">Include Certificates</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%">
+								<p class="p">If you activate this option (value true), the signer's
+									certificate chain will be added to the SignedAndEnvelopedData
+									object of the message.</p>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loiof0d0838b0ba047ddad42f0799a9934f3__step_N1005C_N10019_N10011_N10001">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+<li class="li step stepexpand" id="loiof0d0838b0ba047ddad42f0799a9934f3__step_N10082_N10025_N10011_N10001">
+				<span class="ph cmd">To save the configuration of the encryptor as a template, choose <span class="ph uicontrol">Save as
+						Template</span> from the context menu of the
+						<span class="ph uicontrol">Encryptor</span> element.</span>
+				<div class="itemgroup info">
+					<div class="note note" id="loiof0d0838b0ba047ddad42f0799a9934f3__note_N10093_N10090_N10081_N10025_N10011_N10001"><span class="notetitle">Note</span> When you save the configuration of
+						the <span class="ph uicontrol">Encryptor</span> element as a template, the tool stores
+						the template in the workspace as
+							<span class="ph filepath">&lt;ElementTemplateName&gt;.fst</span>.</div>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

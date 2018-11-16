@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Assigning the Sender and Receiver Participants</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio45a7fe20558b4b188cfc93180be982be">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Assigning the Sender and Receiver Participants</h1>
+
+	
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loio45a7fe20558b4b188cfc93180be982be__context_N10016_N10013_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>You perform this task to assign the sender participant
+			and receiver participant to the integration flow. To allow the sender participant to
+			connect to the tenant, you have to provide either the client certificates or
+			authenticate using the SDN username and password.</div>
+		
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step" id="loio45a7fe20558b4b188cfc93180be982be__step_N10030_N1001D_N10013_N10001">
+				<span class="ph cmd">Assign the Sender Participant</span>
+				<ol type="a" class="ol substeps" id="loio45a7fe20558b4b188cfc93180be982be__substeps_yzq_q41_4k">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Model Configuration</span> editor tab page, select the sender.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd"> In the <span class="ph uicontrol">Properties</span> page, enter a name for the sender system that may
+							represent a single participant or a group of logically related
+							participants in a communication.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Specify the <span class="ph uicontrol">Authentication Mode</span>.</span>
+						<div class="itemgroup info">
+            <p class="p">You have the following options to authenticate the sender.</p>
+
+            <ul class="ul" id="loio45a7fe20558b4b188cfc93180be982be__d2268e18">
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">Role-based Authentication</span></p>
+
+                    <p class="p">Select this options if you like to configure one of the following use
+                        cases:</p>
+
+                    <ul class="ul" id="loio45a7fe20558b4b188cfc93180be982be__d2268e29">
+                        <li class="li">
+                            <p class="p">Basic authentication</p>
+
+                        </li>
+
+                        <li class="li">
+                            <p class="p">Client certificate authentication with certificate-to-user
+                                mapping</p>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">Client Certificate Authentication</span></p>
+
+                    <p class="p">Select this option if you like to configure the use case that the permissions
+                        of the sender are to be checked on the tenant by evaluating the
+                        distinguished name (DN) of the client certificate (sent by the sender).</p>
+
+                    <p class="p">Choose <span class="ph uicontrol">Add…</span> to browse and add an authorized client
+                        certificate or enter the <span class="ph uicontrol">Subject DN</span> and
+                            <span class="ph uicontrol">Issuer DN</span> manually.</p>
+
+                </li>
+
+            </ul>
+
+        </div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Save the changes.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step" id="loio45a7fe20558b4b188cfc93180be982be__step_N1005E_N1001D_N10013_N10001">
+				<span class="ph cmd">Assign the Receiver Participant</span>
+				<ol type="a" class="ol substeps" id="loio45a7fe20558b4b188cfc93180be982be__substeps_hvx_x41_4k">
+					<li class="li substep">
+						<span class="ph cmd">In the <span class="ph uicontrol">Model Configuration</span> editor page, select the
+							receiver.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">In the <span class="ph uicontrol">Properties</span> page, enter a name for the
+							receiver system.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Save the changes.</span>
+					</li>
+
+				</ol>
+
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

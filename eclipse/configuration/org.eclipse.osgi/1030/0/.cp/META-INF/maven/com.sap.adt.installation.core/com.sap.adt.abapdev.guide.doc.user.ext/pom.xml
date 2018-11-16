@@ -1,0 +1,14 @@
+<project
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>com.sap.adt.abapdev.guide.doc.user.ext</artifactId>
+  <version>2.94.7</version>
+  <name>com.sap.adt.abapdev.guide.doc.user.ext</name>
+  <packaging>eclipse-plugin</packaging>
+  <parent>
+    <artifactId>parent</artifactId>
+    <groupId>com.sap.adt.installation.core</groupId>
+    <version>2.94.7</version>
+    <relativePath>../parent/pom.xml</relativePath>
+  </parent>
+</project>

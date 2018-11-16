@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You can configure transaction handling on integration process or local integration process level."/>
+<meta name="description" content="You can configure transaction handling on integration process or local integration process level."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining Transaction Handling</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioe4630de9a8314848b73555e0b0c35d7e">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining Transaction Handling</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You can configure transaction handling on integration process or local integration
+		process level.</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><p class="p">Transactional processing means that the message (as defined by the steps contained in
+				a process) is processed within one transaction.</p>
+<p class="p">For example, consider a process with a Data
+            Store Write operation. When transaction handling is activated, the Data Store entry is
+            only committed if the whole process is executed successfully. In an error case, the
+            transaction is rolled back and the
+            Data
+            Store
+            entry is not written. When transaction handling is deactivated, the Data Store entry is
+            committed directly when the integration flow step is executed. In an error case, the
+            Data Store entry is nevertheless persisted (and not removed or rolled back).
+        </p>
+<div class="sectiondiv">
+            <p class="p">Note the following limitations related to transaction handling:</p>
+
+            <ul class="ul" id="loioe4630de9a8314848b73555e0b0c35d7e__d4840e184">
+                <li class="li">
+                    <p class="p">Always activate transaction handling when the integration process contains
+                        one or more <span class="ph uicontrol">Aggregator</span> steps. </p>
+
+                </li>
+
+                
+                <li class="li">
+                    <p class="p">Asynchronous parallel processing of messages cannot be transactional.</p>
+
+                    <p class="p">Asynchronous parallel processing of messages is configured by the
+                            <span class="ph uicontrol">Parallel Processing</span> option of the (general or
+                        iterating) <span class="ph uicontrol">Splitter</span> step or the <span class="ph uicontrol">Parallel
+                            Multicast</span> step.</p>
+
+                    <p class="p">For example, when you configure a message multicast and the integration flow
+                        also contains a <span class="ph uicontrol">Data Store</span> operations step, you can
+                        choose one of the following options to overcome this limitation: Either
+                        deactivate transactional processing or use a <span class="ph uicontrol">Sequential
+                            Multicast</span> instead of a <span class="ph uicontrol">Parallel
+                            Multicast</span>.</p>
+
+                </li>
+
+            </ul>
+
+        </div></div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Depending on whether you like to configure transaction handling for an integration process
+					or a local local integration process, select the header of the corresponding
+					shape in the integration flow modelling area.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify the details for transactional processing:</span>
+				<div class="itemgroup info">
+					<p class="p">To configure transactional process for an Integration Process, select one of the following
+						options for the <span class="ph uicontrol">Transaction Handling</span> property. </p>
+
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioe4630de9a8314848b73555e0b0c35d7e__d4840e14" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Transaction Handling for Integration Process</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d2809319e117">
+                                <p class="p">Attribute</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d2809319e123">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2809319e117 ">
+                                <p class="p"><span class="ph uicontrol">Required</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2809319e123 ">
+                                <p class="p">Message processing as defined by the process is
+            accomplished within one transaction.</p>
+
+                                <p class="p">You can define a <span class="ph uicontrol">Transaction
+                Timeout</span> (in minutes). Maximum value is 12 hours.
+            Only
+            specify timeouts longer than 1
+            hour in
+            cases where this is absolutely
+            necessary
+            because long running transactions might cause issues with the system database. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2809319e117 ">
+                                <p class="p"><span class="ph uicontrol">Not Required</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2809319e123 ">
+                                <p class="p">No specific transactional processing is configured. The
+                                    integration process does not process transactions even if data
+                                    store operations are included.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+					<p class="p">To configure transactional process for a local Integration Process, select one
+						of the following options for the <span class="ph uicontrol">Transaction Handling</span>
+						property. </p>
+
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioe4630de9a8314848b73555e0b0c35d7e__d4840e83" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Transaction Handling for Local Integration Process</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d2809319e211">
+                                <p class="p">Attribute</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d2809319e217">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2809319e211 ">
+                                <p class="p"><span class="ph uicontrol">From Calling Process</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2809319e217 ">
+                                <p class="p">Transactional processing is inherited from the calling process.
+                                    The
+                                    value defined for the calling process is
+                                    used
+                                    as the timeout. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2809319e211 ">
+                                <p class="p"><span class="ph uicontrol">Required</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2809319e217 ">
+                                <p class="p">Message processing as defined by the process is
+            accomplished within one transaction.</p>
+
+                                <p class="p">You can define a <span class="ph uicontrol">Transaction
+                Timeout</span> (in minutes). Maximum value is 12 hours.
+            Only
+            specify timeouts longer than 1
+            hour in
+            cases where this is absolutely
+            necessary
+            because long running transactions might cause issues with the system database. </p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

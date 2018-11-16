@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<introContent>
+  <extensionContent id="org.eclipse.pde" name="PDE" alt-style="css/swt.properties" style="css/overview.css" path="overview/@">
+    <group style-id="content-group" id="content-group">
+    	<link style-id="content-link" label="SAP JVM Profiler" url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.jvm.profiling.ui.help/html/overview.html" id="sapjvm">
+      		<text>Learn how to us the SAP JVM Profiler</text>
+    	</link>
+    </group>
+    <link
+        label="Go to SAP JVM Profiler Perspective!"
+        url="http://org.eclipse.ui.intro/runAction?pluginId=com.sap.jvm.profiling.ui&amp;class=com.sap.jvm.profiling.ui.perspective.SwitchToPerspectiveAction"
+        id="profiler-perspectiveLink"
+        style-id="content-link"/>
+  </extensionContent>
+</introContent>

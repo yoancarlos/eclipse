@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="com.sap.ndb.studio.dwb.team.ui.internal.providers.DeploymentServiceUiProvider">
+   <implementation class="com.sap.ndb.studio.dwb.team.ui.internal.providers.DeploymentServiceUiProvider"/>
+   <service>
+      <provide interface="com.sap.ndb.studio.dwb.tools.ui.deployment.IDeploymentServiceUi"/>
+   </service>
+</scr:component>

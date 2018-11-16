@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You have the option to decrypt the message content using Open Pretty Good Privacy (OpenPGP)."/>
+<meta name="description" content="You have the option to decrypt the message content using Open Pretty Good Privacy (OpenPGP)."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Decrypting and Verifying the Message Content with OpenPGP</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio4588244108ee48078a5d6e04c432483e">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Decrypting and Verifying the Message Content with OpenPGP</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You have the option to decrypt the message content using Open Pretty Good Privacy
+		(OpenPGP).</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p"/>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step" id="loio4588244108ee48078a5d6e04c432483e__step_N10024_N10021_N10011_N10001">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="ph uicontrol">Model
+						Configuration</span> editor. </span>
+			</li>
+<li class="li step" id="loio4588244108ee48078a5d6e04c432483e__step_N10031_N10021_N10011_N10001">
+				<span class="ph cmd">Right-click on a connection within the pool and choose<span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Add Security Element</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Content Decryptor</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step" id="loio4588244108ee48078a5d6e04c432483e__step_N10046_N10021_N10011_N10001">
+				<span class="ph cmd"> In the <span class="ph uicontrol">Model Configuration</span> editor, position the cursor
+					on the <span class="ph uicontrol">Content Decryptor</span> step and in the context menu
+					select <span class="ph uicontrol">Switch to PGP</span>. </span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Open the <span class="ph uicontrol">Properties</span> view. </span>
+			</li>
+<li class="li step" id="loio4588244108ee48078a5d6e04c432483e__step_N10057_N10021_N10011_N10001">
+				<span class="ph cmd">Specify the following parameters for message decryption:.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio4588244108ee48078a5d6e04c432483e__choicetable_wvw_zqx_xn">
+<thead><tr><th id="d956746e76-option" valign="bottom" align="left">Option</th>
+<th id="d956746e76-desc" valign="bottom" align="left">Description</th></tr></thead>
+<tbody>
+					<tr class="strow chrow">
+						<td valign="top" headers="d956746e76-option" id="d956746e80" class="stentry choption"><strong>Name</strong></td>
+
+						<td valign="top" headers="d956746e76-desc d956746e80" class="stentry chdesc">Name of the selected PGP Decryptor element. The default name is PGP Decryptor.<p class="p">If
+								you add a second PGP Decryptor to the integration flow, you have to
+								change the name because the Decryptor name must be
+							unique.</p>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d956746e76-option" id="d956746e91" class="stentry choption"><strong>Signatures in PGP Message</strong></td>
+
+						<td valign="top" headers="d956746e76-desc d956746e91" class="stentry chdesc">Specify the expected payload content type which is to be decrypted. You have the
+							following options:<ul class="ul" id="loio4588244108ee48078a5d6e04c432483e__ul_b4q_nj5_b4">
+								<li class="li">No Signatures Expected<p class="p">When you select this option, the
+										decryptor expects an inbound message that doesn't contain a
+										signature.  </p>
+<div class="note note"><span class="notetitle">Note</span> If you select this option, inbound
+										messages that contain a signature cannot be processed.
+									</div>
+</li>
+
+								<li class="li">Signatures Optional<p class="p">When you select this option, the decryptor can process messages
+										that either contain a signature or not. </p>
+</li>
+
+								<li class="li">Signatures Required<p class="p">When you select this option, the decryptor
+										expects an inbound message that contains a signature.
+									</p>
+</li>
+
+							</ul>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d956746e76-option" id="d956746e120" class="stentry choption"><strong>Signer User ID of Key(s) from the Public Keyring</strong></td>
+
+						<td valign="top" headers="d956746e76-desc d956746e120" class="stentry chdesc">Specify the signer user ID of key(s) parts of all expected senders.<p class="p">Based on the
+								signer user ID of key(s) parts, the public key (for message
+								verification) is looked up in the PGP public keyring.</p>
+<p class="p">The
+								signer user ID of key(s) key parts specified in this step restrict
+								the list of expected senders and, in this way, act as an
+								authorization check.</p>
+</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step" id="loio4588244108ee48078a5d6e04c432483e__step_N10064_N10021_N10011_N10001">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

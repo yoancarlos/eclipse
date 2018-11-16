@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure CSV to XML Converter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiofe338881f2fc4ea094c334b18e63a015">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure CSV to XML Converter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loiofe338881f2fc4ea094c334b18e63a015__ul_q1v_tqq_gr">
+					<li class="li">
+						<p class="p">You have logged into your customer workspace.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You are editing the integration flow in the editor. </p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">The CSV to XML converter converts content in CSV format into XML format. </p>
+
+			<p class="p">You use this procedure to configure CSV to XML converter. </p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loiofe338881f2fc4ea094c334b18e63a015__image_r1g_wqq_gr" src="loioa34d7d66133d4635a991cbecabebe074_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Converter</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">CSV to XML Converter</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Place the <span class="ph uicontrol">CSV to XML converter</span> in the integration
+					process and define the message path.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">CSV to XML Converter</span> and provide values in fields
+					based on description in table.</span>
+				<div class="itemgroup info">
+					
+<div class="table-wrapper tablenoborder"><table summary="" id="loiofe338881f2fc4ea094c334b18e63a015__table_itd_mmx_jr" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+							
+							
+							<thead class="thead" align="left">
+								<tr class="row">
+									<th class="entry" valign="top" width="50%" id="d5389658e96">
+										<p class="p">Field</p>
+
+									</th>
+
+									<th class="entry" valign="top" width="50%" id="d5389658e102">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody class="tbody">
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d5389658e96 ">
+										<p class="p">XML Schema</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d5389658e102 ">
+										<p class="p">Choose <span class="ph uicontrol">Browse</span>. Select the XML
+											schema you want to use.  </p>
+
+										<p class="p">Optionally, you can also upload the XML schema from your
+											local file system by choosing <span class="ph uicontrol">Upload from
+												File System</span>.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d5389658e96 ">
+										<p class="p">Path to Target Element in XSD</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d5389658e102 ">
+										<p class="p">XPath in the XML schema file where the content from CSV
+											file has to be placed.</p>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d5389658e96 ">
+										<p class="p">Record Marker in CSV</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d5389658e102 ">
+										<p class="p">The record in CSV file that indicates the entry which the
+											converter has to consider as the starting point of the
+											content. </p>
+
+										<div class="note note"><span class="notetitle">Note</span> If you do not provide a value for this field, all the records in the CSV file are
+											considered for conversion </div>
+
+									</td>
+
+								</tr>
+
+								<tr class="row">
+									<td class="entry" valign="top" width="50%" headers="d5389658e96 ">
+										<p class="p">Field Separator in CSV</p>
+
+									</td>
+
+									<td class="entry" valign="top" width="50%" headers="d5389658e102 ">
+										<p class="p">Select the character from dropdown list that is used as
+											the field separator in CSV file.</p>
+
+										<div class="note tip"><span class="tiptitle">Tip</span> If you want to use a field separator that
+											is not available in the dropdown list, manually enter
+											the character.</div>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to exclude the header information in first line of CSV file for
+					conversion, select <span class="ph uicontrol">Exclude First Line Header</span>
+					checkbox.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the configuration.</span>
+				
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

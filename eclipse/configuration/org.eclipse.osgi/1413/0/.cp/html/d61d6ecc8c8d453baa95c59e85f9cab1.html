@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Define Iterating Splitter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiod61d6ecc8c8d453baa95c59e85f9cab1">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Define Iterating Splitter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loiod61d6ecc8c8d453baa95c59e85f9cab1__ul_snk_z4x_jr">
+					<li class="li">
+						<p class="p">You have logged in to your customer workspace in the SAP HCI Web tooling. </p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You are editing the integration flow in the editor. </p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">The iterative splitter splits a composite message into a series of smaller messages without
+				copying the enveloping elements of the composite message. </p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loiod61d6ecc8c8d453baa95c59e85f9cab1__image_f5w_cpx_jr" src="loioe7b2a80fb0f54ee29022d2fefed87d3c_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Splitter</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">General Splitter</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Place <span class="ph uicontrol">General Splitter</span> in the integration process and define the
+					message path.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Splitter</span> and provide values in the fields based on the
+					descriptions in the table. </span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loiod61d6ecc8c8d453baa95c59e85f9cab1__d1625e207" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d4663490e95">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d4663490e101">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d4663490e95 "><p class="p"><span class="ph uicontrol">Expression Type</span></p>
+</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d4663490e101 "><p class="p">Specify the expression type you want to use to define the
+                                    split point (the element in the message structure below which
+                                    the message is to be split). </p>
+<p class="p">The following options are
+                                    available:</p>
+<ul class="ul" id="loiod61d6ecc8c8d453baa95c59e85f9cab1__d1625e247">
+                                    <li class="li"><p class="p"><span class="ph uicontrol">XPath</span></p>
+<p class="p">The splitter argument
+                                            is specified by an XPath expression.</p>
+</li>
+
+                                    <li class="li"><p class="p"><span class="ph uicontrol">Token</span></p>
+<p class="p">The splitter argument is specified by a keyword.</p>
+</li>
+
+                                    <li class="li"><p class="p"><span class="ph uicontrol">Line Break</span></p>
+<p class="p">If the input message is a non-XML file, it is split according to the line breaks in the input
+                                            message. </p>
+</li>
+
+                                </ul>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d4663490e95 ">
+                                <p class="p"><span class="ph uicontrol">Token</span> (Enabled only if you select
+                                        <span class="ph uicontrol">Token</span> in the <span class="ph uicontrol">Expression
+                                        Type</span> field)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d4663490e101 ">
+                                <p class="p">The keyword or token to be used as a reference for splitting the
+                                    composite message</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d4663490e95 "><p class="p"><span class="ph uicontrol">XPath</span>
+                                </p>
+<p class="p">(Enabled only if you select <span class="ph uicontrol">XPath</span> in
+                                    the <span class="ph uicontrol">Expression Type</span> field)</p>
+</td>
+
+                            <td class="entry" valign="top" width="50%" headers="d4663490e101 "><p class="p">Absolute or relative XPath of the node to be used as a
+                                    reference for splitting the message</p>
+<div class="note note"><span class="notetitle">Note</span> 
+            <p class="p">Note that only the following types of XPath expressions are supported:</p>
+
+            <ul class="ul" id="loiod61d6ecc8c8d453baa95c59e85f9cab1__d1625e553">
+                <li class="li">
+                    <p class="p">Absolute XPath expressions, for example, <samp class="ph codeph">/A/B/C/D </samp></p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">Relative XPath expressions, for example, <samp class="ph codeph">//D</samp>
+                    </p>
+
+                </li>
+
+            </ul>
+
+            <p class="p">Note that each element with a namespace prefix has to be explicitly declared in the
+                following form (example):</p>
+
+            <p class="p"><samp class="ph codeph">xmlns:ns:="http://test"</samp></p>
+
+            <p class="p">If there are multiple elements with a namespace prefix, add the additional namespace
+                declarations after the XPath expression (separated by blank spaces).</p>
+
+            <p class="p">The following characters are <span class="ph emphasis emphasis">not</span> supported in an XPath
+                expression:</p>
+
+            <ul class="ul" id="loiod61d6ecc8c8d453baa95c59e85f9cab1__d1625e590">
+                <li class="li">
+                    <p class="p">|</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">+ </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">* </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">&gt; </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">&lt; </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">&gt;= </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">&lt;= </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">[ </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">] </p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">@</p>
+
+                </li>
+
+            </ul>
+
+        </div>
+</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d4663490e95 ">
+                                <p class="p"><span class="ph uicontrol">Grouping</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d4663490e101 ">
+                                <p class="p">The size of the groups into which the composite message is to be
+                                    split. </p>
+
+                                <p class="p">For example, if a message has 10 nodes and grouping is defined as
+                                    2, the message is split into 5 messages with 2 nodes each. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d4663490e95 ">
+                                <p class="p"><span class="ph uicontrol">Timeout (in s)</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d4663490e101 ">
+                                <p class="p">Maximum time in seconds that the system will wait for processing
+                                    to complete before it is aborted. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d4663490e95 ">
+                                <p class="p"><span class="ph uicontrol">Streaming</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d4663490e101 ">
+                                <p class="p">Select this option if you want to stream the process of splitting
+                                    a large composite message. </p>
+
+                                <p class="p">If you activate streaming, the system already starts processing
+                                    parts (<cite class="cite">chunks</cite>) of the composite message before the
+                                    message is fully transferred to the memory (of the runtime
+                                    node). </p>
+
+                                <p class="p">If you deactivate this option, the message is transferred fully
+                                    to the memory before it is split and processed further.
+                                    Deactivating streaming is more memory-intensive than activating
+                                    it. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d4663490e95 ">
+                                <p class="p"><span class="ph uicontrol">Parallel Processing</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d4663490e101 ">
+                                <p class="p">Select this checkbox if you want to enable processing of all the
+                                    split messages at once.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d4663490e95 ">
+                                <p class="p"><span class="ph uicontrol">Stop On Exception</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d4663490e101 ">
+                                <p class="p">Select this option to stop message processing if an exception
+                                    occurs.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the configuration.</span>
+				
+			</li>
+</ol>
+
+		<div class="section postreq"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Next Steps</h2></div>
+			<p class="p">When a message is split (as configured in a Splitter
+            step of an integration flow), the Camel headers listed below are generated every time
+            the runtime finishes splitting an Exchange. You have several options for accessing these
+            Camel headers at runtime. For example, suppose that you are configuring an integration
+            flow with a Splitter step before an SFTP receiver adapter. If you enter the string
+                <kbd class="ph userinput">split_${exchangeId}_Index${header.CamelSplitIndex}</kbd> for
+                <span class="ph uicontrol">File Name</span>, the file name of the generated file on the SFTP
+            server contains the Camel header <samp class="ph codeph">CamelSplitIndex</samp> (in other words, the
+            information on the number of split Exchanges induced by the Splitter step). </p>
+
+			<div class="p">
+                
+<div class="table-wrapper tablenoborder"><table summary="" id="loiod61d6ecc8c8d453baa95c59e85f9cab1__d3350e417" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Headers Relevant for Message Splitting</span></caption>
+<colgroup><col width="17.513134851138354%"/><col width="82.48686514886165%"/></colgroup>
+
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="17.513134851138354%" id="d4663490e435">
+                                    <p class="p">Header</p>
+
+                                </th>
+
+                                <th class="entry" valign="top" width="82.48686514886164%" id="d4663490e441">
+                                    <p class="p">Description</p>
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d4663490e435 ">
+                                    <p class="p">CamelSplitIndex </p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d4663490e441 ">
+                                    <p class="p">Provides a counter of split items that increases for each
+                                        Exchange that is split (starts from 0). </p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d4663490e435 ">
+                                    <p class="p">CamelSplitSize</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d4663490e441 ">
+                                    <p class="p">Provides the total number of split items (if you are using
+                                        stream-based splitting, this header is only provided for the
+                                        last item, in other words, for the completed Exchange). </p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="17.513134851138354%" headers="d4663490e435 ">
+                                    <p class="p">CamelSplitComplete</p>
+
+                                </td>
+
+                                <td class="entry" valign="top" width="82.48686514886164%" headers="d4663490e441 ">
+                                    <p class="p">Indicates whether an Exchange is the last split. </p>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+		</div>
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="b49d088a87854a07a761596bf0890389.html" title="The two splitter types General Splitter and Iterative Splitter behave differently in their handling of the enveloping elements of the input message.">General and Iterating Splitter</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

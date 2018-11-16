@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="To ensure a successful conversion frrm JSON to XML format you have to know the limitations for this conversion."/>
+<meta name="description" content="To ensure a successful conversion frrm JSON to XML format you have to know the limitations for this conversion."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Limitations for JSON to XML Conversion</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio3a02829ea84e4f7dac62bdd10d06b084">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Limitations for JSON to XML Conversion</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc">To ensure a successful conversion frrm JSON to XML format you have to know the
+		limitations for this conversion.</p>
+
+		<div class="p">The JSON to XML conversion has the following limitations:<ul class="ul" id="loio3a02829ea84e4f7dac62bdd10d06b084__ul_wxd_tck_vp">
+				<li class="li">The XML element and attribute names must
+                not contain any delimiter characters, because the delimiter is used in JSON to
+                separate the prefix from the element name.</li>
+
+				<li class="li">Elements with mixed content are not
+                supported.</li>
+
+				<li class="li">Conversion of "@attr":null to XML is not supported. You get a
+					NullPointerException; as of cluster version 1.21 you get a
+					JsonXmlException.</li>
+
+				<li class="li">JSON member names must not contain in their local or prefix part any characters
+					that are not allowed for XML element/attribute names (for example, space or
+					column (':') are not allowed). XML element/attribute names are of type NCName
+					(see <a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/TR/1999/REC-xml-names-19990114/#NT-NCName" target="_blank" alt="http://www.w3.org/TR/1999/REC-xml-names-19990114/#NT-NCName" title="http://www.w3.org/TR/1999/REC-xml-names-19990114/#NT-NCName">http://www.w3.org/TR/1999/REC-xml-names-19990114/#NT-NCName<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>).</li>
+
+				<li class="li">JSON texts that start with an array (for example,
+						<samp class="ph codeph">[{"a":{"b":"bvalue"}}]</samp> ) are not supported. The JSON text
+					must start with a JSON object such as <samp class="ph codeph">{{"a":{"b":"bvalue"}}}</samp>. A
+					javax.xml.stream.XMLStreamException is thrown. As of cluster version 1.21, a
+					JsonXmlException is thrown.</li>
+
+				<li class="li">The root JSON object must contain exactly one member. If the root JSON object
+					contains more than one member (for example,
+						<samp class="ph codeph">{"a":"avalue","b":"bvalue"}</samp>), a
+					javax.xml.stream.XMLStreamException is thrown. If the root JSON object is empty
+						(<samp class="ph codeph">{}</samp>), a javax.xml.stream.XMLStreamException is thrown. As
+					of cluster version 1.21, a JsonXmlException or IllegalStateException (for
+						<samp class="ph codeph">{}</samp>) is thrown.</li>
+
+				<li class="li">If no XML namespace is defined for a JSON prefix, the full member name with the
+					prefix and JSON delimiter is set as the element name: "p:A" -&gt; &lt;p:A&gt;.
+				</li>
+
+			</ul>
+</div>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="5a7c0cd2a3e8497c89ffcda41787477f.html" title="The JSON to XML converter enables you to transform messages in JSON format to XML format.">Define JSON to XML Converter</a></div>
+<div><a class="link" href="232a9cf5194d40189a3672a0ef1567c1.html" title="To ensure a successful conversion of you data, you should make yourself familiar with the conversion rules.">Conversion Rules for JSON to XML Conversion</a></div>
+<div><a class="link" href="a5b4641c393f406bb544987497c90a72.html" title="To ensure a successful conversion form XML to JSON format you have to know the limitations for this conversion.">Limitations for XML-to-JSON Conversion</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

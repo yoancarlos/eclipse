@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Create Message Mapping Definition Resource</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio3f2f4bb739b84bf48154d6734869a992">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Create Message Mapping Definition Resource</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loio3f2f4bb739b84bf48154d6734869a992__ul_vzy_f53_zx">
+					<li class="li">You have accessed the workspace (<span class="ph uicontrol">Design</span>) tab page in
+						the HCI Web application.</li>
+
+					<li class="li">You are editing the integration flow that contains the message mapping
+						step.</li>
+
+					<li class="li">You have added a <span class="ph uicontrol">Message Mapping</span> step to the integration flow and
+						selected the <span class="ph uicontrol">Create</span>(<span class="SAPiconsV3-6"></span>) option.</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You create a mapping definition resource to define an association between a field in the
+				source message with a field in the target message. In case you want to manipulate
+				the field in the source message before mapping it to a field in the target message,
+				you can use mapping expression to perform that operation.</p>
+
+			<p class="p">For example, you have two fields, <span class="ph emphasis emphasis">FirstName</span> and
+					<span class="ph emphasis emphasis">LastName</span> in the source message. In the target message, you
+				have only one field, <span class="ph emphasis emphasis">Name</span> which contains both the first and
+				last names. Using mapping, you map both <span class="ph emphasis emphasis">FirstName</span> and
+					<span class="ph emphasis emphasis">LastName</span> fields to the <span class="ph emphasis emphasis">Name</span> field in
+				the target message. Additionally, you use the <span class="ph uicontrol">concat</span>
+				operation from the <span class="ph uicontrol">Mapping Expression</span> to concatenate the two
+				fields from the source message before mapping it to the target message.</p>
+
+			
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Add Source Message</span>.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">In <span class="ph uicontrol">Select Source Message</span> prompt perform the following
+					substeps:</span>
+				<ol type="a" class="ol substeps" id="loio3f2f4bb739b84bf48154d6734869a992__substeps_yff_3w3_zx">
+					<li class="li substep">
+						<span class="ph cmd">If the file you want to use as the source message is already available,
+							select it.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">If the file you want to use as the source message is not available,
+							choose <span class="ph uicontrol">Upload from File System</span> and upload the
+							file from your file system.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Add Target Message</span>.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">In <span class="ph uicontrol">Select Target Message</span> prompt perform the following
+					substeps:</span>
+				<ol type="a" class="ol substeps" id="loio3f2f4bb739b84bf48154d6734869a992__substeps_scd_rw3_zx">
+					<li class="li substep">
+						<span class="ph cmd">If the file you want to use as the target message is already available,
+							select it.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">If the file you want to use as the target message is not available,
+							choose <span class="ph uicontrol">Upload from File System</span> and upload the
+							file from your file system.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">To map a field from the source to the target, drag a field from the source to
+					the required field in the target.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">If you want to add a mapping expression, perform the following substeps:</span>
+				<ol type="a" class="ol substeps" id="loio3f2f4bb739b84bf48154d6734869a992__substeps_vjl_hx3_zx">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose the <span class="ph uicontrol">fx</span> icon in the mapping path in which
+							you want to add a mapping expression.</span>
+						<div class="itemgroup stepresult">
+							<p class="p">You see a association defined between the fields in the
+									<span class="ph uicontrol">Mapping Expression</span> window.</p>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose the operation that you want to perform from the
+								<span class="ph uicontrol">Functions</span> column.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Using the graphical editor, add the function between the source and
+							target fields.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">If you want to change the context of a field from the source structure, perform
+					the following substeps:</span>
+				<ol type="a" class="ol substeps" id="loio3f2f4bb739b84bf48154d6734869a992__substeps_yqg_by3_zx">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose the <span class="ph uicontrol">fx</span> icon in the mapping path in which
+							you want to add a mapping expression.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Mapping Expression</span> screen area, select the required field
+							and choose <span class="SAPiconsV3-6"></span>.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Context</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">&lt;required context&gt;</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+						<div class="itemgroup info">If there is no context switch available, the
+								<span class="ph uicontrol">Context</span> option will not be active.</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">If you want to delete a mapping association, choose the
+						<span class="ph uicontrol">fx</span> icon in the mapping path and delete using
+						<span class="ph emphasis emphasis">Delete</span> key from the keyboard.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

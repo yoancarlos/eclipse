@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Editing the Value Mapping Project</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio0f305edf396c4cd180d744e2c256d6d9">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Editing the Value Mapping Project</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loio0f305edf396c4cd180d744e2c256d6d9__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this task to define value mapping groups in the <em class="ph i">value_mapping.xml</em> file that is
+				available under the <span class="keyword uilabel">Value Mapping</span> project type. You enter the
+				group IDs for each set of agency, schema and a value of the object that together
+				identify a specific representation of the object.</p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loio0f305edf396c4cd180d744e2c256d6d9__step_N10020_N1001D_N10011_N10001">
+				<span class="ph cmd">Open the <em class="ph i">value_mapping.xml</em> in the editor and choose the <span class="keyword uilabel">Source</span>
+					tab page editor.</span>
+			</li>
+<li class="li step stepexpand" id="loio0f305edf396c4cd180d744e2c256d6d9__step_N1002D_N1001D_N10011_N10001">
+				<span class="ph cmd">Enter the group ID, agency, schema and value as shown in the example below, and save the
+					changes.</span>
+				<div class="itemgroup stepxmp">
+					<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;vm&gt;
+	&lt;group id="Vegetable"&gt;
+		&lt;entry&gt;
+			&lt;agency&gt;UK&lt;/agency&gt;
+			&lt;schema&gt;Food Items&lt;/schema&gt;
+			&lt;value&gt;Aubergine&lt;/value&gt;		
+		&lt;/entry&gt;
+		&lt;entry&gt;
+			&lt;agency&gt;US&lt;/agency&gt;
+			&lt;schema&gt;Food Items&lt;/schema&gt;
+			&lt;value&gt;Eggplant&lt;/value&gt;
+		&lt;/entry&gt;
+	&lt;/group&gt;
+	&lt;group id="Herb"&gt;
+		&lt;entry&gt;
+			&lt;agency&gt;UK&lt;/agency&gt;
+			&lt;schema&gt;Food Items&lt;/schema&gt;
+			&lt;value&gt;Coriander&lt;/value&gt;
+		&lt;/entry&gt;
+		&lt;entry&gt;
+			&lt;agency&gt;US&lt;/agency&gt;
+			&lt;schema&gt;Food Items&lt;/schema&gt;
+			&lt;value&gt;Cilantro&lt;/value&gt;
+		&lt;/entry&gt;
+	&lt;/group&gt;
+&lt;/vm&gt;</pre></div>
+
+				</div>
+				<div class="itemgroup info">
+					<div class="note tip"><span class="tiptitle">Tip</span> If you want to edit the values, you can switch to the
+							<span class="keyword uilabel">Design</span> tab page editor. <img class="image" id="loio0f305edf396c4cd180d744e2c256d6d9__image_ubn_4x2_pl" src="loio566134b4c7b84f5f81c2e8ab67d83c7d_LowRes.jpg" alt="ValueMappingEditor_Design" title="ValueMappingEditor_Design"/></div>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

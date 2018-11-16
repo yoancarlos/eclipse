@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<introContent>
+
+	<extensionContent id="com.sap.adt.intro.cds.ddl" name="Core Data Services" style="css/sample.css" path="overview/@">
+
+		<group label="Core Data Services (CDS) for ABAP" style-id="content-group" id="content-group">
+			<link label=" CDS View Building"
+					url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.adt.cds.ddl.doc.user/html/4ed1f2e06e391014adc9fffe4e204223.html"
+					id="abapproject_doc" style-id="content-link">
+				<text>
+					Find out how to use the implementation of the Data Definition Language (DDL) as part of the CDS layer so that you can use it in ABAP.   
+				</text>	
+			</link>
+		</group>
+
+	</extensionContent>
+
+</introContent>

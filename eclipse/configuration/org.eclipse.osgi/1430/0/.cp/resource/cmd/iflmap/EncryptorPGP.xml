@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::Encrypt/version::1.0.3" ComponentName="sap:Encryptor" UIElementType="Flowstep">
+    <Variant VariantId="ctype::FlowstepVariant/cname::PgpEncrypt/version::1.0.3" VariantName="PgpEncryptor" VariantDisplayName="PGP Encryptor" AttachmentBehavior="Preserve">
+        <!-- allowed input content type -->
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </InputContent>
+        <!-- allowed output content type -->
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Binary</ContentType>
+                <Schema></Schema>
+            </Content>
+        </OutputContent>
+        <!-- Attribute Groupings and Restriction -->
+        <Tab id="iflow.advance.PGPEncryptor">
+            <AttributeGroup id="General Details">
+                <GuiLabels>
+                    <Label language="EN">General Details</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>Activity_Name</ReferenceName>
+                    <Restriction>^[a-zA-Z][a-zA-Z0-9_]{3,30}$</Restriction>
+                    <ErrorMessage>Name not specified for Encryptor step</ErrorMessage>
+                    <ErrorMessage>Cannot have same name for multiple Encryptor steps</ErrorMessage>
+                    <ErrorMessage>Name should begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30</ErrorMessage>
+                    <description>Enter a name for the Encryptor step. Begin with a letter and use characters (aA-zZ, 0-9, _ ) of length 3 to 30.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PgpSignatureOption</ReferenceName>
+                    <description>Select whether you want to sign or not to sign the message</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PgpContentEncryptionAlgorithm</ReferenceName>
+                    <description>Select an algorithm for encrypting the content</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>Key_Length</ReferenceName>
+                    <description>Select the key length for the secret key to be used for content encryption</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PgpCompressionAlgorithm</ReferenceName>
+                    <description>Select the compression algorithm</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PgpArmored</ReferenceName>
+                    <description>Select this option if you want the resulting PGP Message to be encoded in Base 64 with a specific header</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PgpIntegrity</ReferenceName>
+                    <description>Select this option in case you want to create a 'Symmetrically Encrypted and Integrity Protected Data Packet' (otherwise a 'Symmetrically Encrypted Data Packet' is created)</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PgpEncryptionUserIDs</ReferenceName>
+                    <description>Enter a User ID or a part of a User ID to select the receiver public key(s) from Public Keyring</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PgpDigestAlgorithm</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>PgpSignatureOption</AttributeName>
+                        <AttributeValue>IncludeSignature</AttributeValue>
+                    </EditCondition>
+                    <description>Select the digest algorithm for the signature</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>PgpSignerUserIDs</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>PgpSignatureOption</AttributeName>
+                        <AttributeValue>IncludeSignature</AttributeValue>
+                    </EditCondition>
+                    <description>Enter a User ID or a part of a User ID to select the signer private key(s) from Secret Keyring</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+        <!-- additional information -->
+        <AllowedHeaders></AllowedHeaders>
+        <ReferencedComponents></ReferencedComponents>
+    </Variant>
+    <AttributeMetadata>
+        <Name>Activity_Name</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <AutoGenerate>
+            <Prefix>PGPEncryptor</Prefix>
+        </AutoGenerate>
+        <Default>PGPEncryptor</Default><!-- until AutoGenerate works use default -->
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PgpSignatureOption</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>NoSignature</Default>
+        <GuiLabels>
+            <Label language="EN">Signatures</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>NoSignature</Value>
+                <GuiLabels>
+                    <Label language="EN">None</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>IncludeSignature</Value>
+                <GuiLabels>
+                    <Label language="EN">Including</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+
+    <AttributeMetadata>
+        <Name>PgpContentEncryptionAlgorithm</Name>
+        <DataType>xsd:string</DataType>
+        <Default>AES</Default>
+        <GuiLabels>
+            <Label language="EN">Content Encryption Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>AES</Value>
+                <GuiLabels>
+                    <Label language="EN">AES</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Blowfish</Value>
+                <GuiLabels>
+                    <Label language="EN">Blowfish</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>CAST5</Value>
+                <GuiLabels>
+                    <Label language="EN">CAST5</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>DESede</Value>
+                <GuiLabels>
+                    <Label language="EN">DESede</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Twofish</Value>
+                <GuiLabels>
+                    <Label language="EN">Twofish</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+
+    <AttributeMetadata>
+        <Name>Key_Length</Name>
+        <DataType>xsd:string</DataType>
+        <Default>128</Default>
+        <GuiLabels>
+            <Label language="EN">Secret Key Length</Label>
+        </GuiLabels>
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>128</Value>
+                <GuiLabels>
+                    <Label language="EN">128</Label>
+                </GuiLabels>
+            </FixedValue>
+            <OrCondition>
+                <EditCondition>
+                    <AttributeName>PgpContentEncryptionAlgorithm</AttributeName>
+                    <AttributeValue>AES</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>PgpContentEncryptionAlgorithm</AttributeName>
+                    <AttributeValue>Blowfish</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>PgpContentEncryptionAlgorithm</AttributeName>
+                    <AttributeValue>CAST5</AttributeValue>
+                </EditCondition>
+            </OrCondition>
+        </FixedValues>
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>168</Value>
+                <GuiLabels>
+                    <Label language="EN">168</Label>
+                </GuiLabels>
+            </FixedValue>
+            <EditCondition>
+                <AttributeName>PgpContentEncryptionAlgorithm</AttributeName>
+                <AttributeValue>DESede</AttributeValue>
+            </EditCondition>
+        </FixedValues>
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>192</Value>
+                <GuiLabels>
+                    <Label language="EN">192</Label>
+                </GuiLabels>
+            </FixedValue>
+            <EditCondition>
+                <AttributeName>PgpContentEncryptionAlgorithm</AttributeName>
+                <AttributeValue>AES</AttributeValue>
+            </EditCondition>
+        </FixedValues>
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>256</Value>
+                <GuiLabels>
+                    <Label language="EN">256</Label>
+                </GuiLabels>
+            </FixedValue>
+            <OrCondition>
+                <EditCondition>
+                    <AttributeName>PgpContentEncryptionAlgorithm</AttributeName>
+                    <AttributeValue>AES</AttributeValue>
+                </EditCondition>
+                <EditCondition>
+                    <AttributeName>PgpContentEncryptionAlgorithm</AttributeName>
+                    <AttributeValue>Twofish</AttributeValue>
+                </EditCondition>
+            </OrCondition>
+        </FixedValues>
+    </AttributeMetadata>
+
+    <AttributeMetadata>
+        <Name>PgpCompressionAlgorithm</Name>
+        <DataType>xsd:string</DataType>
+        <Default>ZLIB</Default>
+        <GuiLabels>
+            <Label language="EN">Compression Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>ZLIB</Value>
+                <GuiLabels>
+                    <Label language="EN">ZLIB</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>ZIP</Value>
+                <GuiLabels>
+                    <Label language="EN">ZIP</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>BZip2</Value>
+                <GuiLabels>
+                    <Label language="EN">BZip2</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Uncompressed</Value>
+                <GuiLabels>
+                    <Label language="EN">Uncompressed</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PgpArmored</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <GuiLabels>
+            <Label language="EN">Armored</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PgpIntegrity</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>true</Default>
+        <GuiLabels>
+            <Label language="EN">Integrity Protected Data Packet</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    
+    <AttributeTableMetadata>
+        <Name>PgpEncryptionUserIDs</Name>
+        <Usage>required</Usage>
+        <GuiLabels>
+            <Label language="EN">Encryption Key User IDs</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>EncryptUserID</ReferenceName>
+            <description>Enter a User ID or a part of a User ID to select the receiver public key(s) from Public Keyring</description>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>EncryptUserID</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Encryption User ID of Key(s) from Public Keyring</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    
+    <AttributeMetadata>
+        <Name>PgpDigestAlgorithm</Name>
+        <DataType>xsd:string</DataType>
+        <Default>SHA-256</Default>
+        <GuiLabels>
+            <Label language="EN">Signature Algorithm</Label>
+        </GuiLabels>
+        <FixedValues>
+            <Sort>false</Sort>
+            <FixedValue>
+                <Value>SHA-256</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA-256</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA-512</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA-512</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA-384</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA-384</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA-224</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA-224</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>SHA-1</Value>
+                <GuiLabels>
+                    <Label language="EN">SHA-1</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>RIPE-MD/160</Value>
+                <GuiLabels>
+                    <Label language="EN">RIPE-MD/160</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>MD5</Value>
+                <GuiLabels>
+                    <Label language="EN">MD5</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    
+    <AttributeTableMetadata>
+        <Name>PgpSignerUserIDs</Name>
+        <Usage>required</Usage>
+        <GuiLabels>
+            <Label language="EN">Signer Key User IDs</Label>
+        </GuiLabels>
+        <AttributeReference>
+            <ReferenceName>SignerUserID</ReferenceName>
+            <description>Enter a User ID or a part of a User ID to select the signer private key(s) from Secret Keyring</description>
+        </AttributeReference>
+    </AttributeTableMetadata>
+    <AttributeMetadata>
+        <Name>SignerUserID</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <GuiLabels>
+            <Label language="EN">Signer User ID of Key(s) from Secret Keyring</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

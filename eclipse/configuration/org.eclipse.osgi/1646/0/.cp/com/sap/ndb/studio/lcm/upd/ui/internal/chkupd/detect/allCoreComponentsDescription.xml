@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by SAP Elec Del. (SAP Labs LLC) -->
+<landscapeDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="landscapeDescription.xsd">
+	<version>1.09</version>
+	<includeVariables>
+		<path>landscapeVariables.properties</path>
+	</includeVariables>
+	<includeCurrentStack>
+		<path>currentStack.properties</path>
+	</includeCurrentStack>
+	<productSystem>
+		<sid>unknown</sid>
+		<host>unknown</host>
+		<productSystemLandscapeProduct>
+			<installedProductVersion>
+				<identifyingNumber>01200314690900003484</identifyingNumber>
+				<name>SAP NEWDB</name>
+				<vendor>sap.com</vendor>
+				<version>1.0</version>
+				<caption>SAP HANA PLATFORM EDIT. 1.0</caption>
+				<installedSPStack>
+					<identifyingNumber>67837800103300003782</identifyingNumber>
+					<caption>04 (05/2012)</caption>
+					<releaseDate>2012-05-01</releaseDate>
+					<installDateTime>2013-01-01T15:09:46+0100</installDateTime>
+				</installedSPStack>
+			</installedProductVersion>
+		</productSystemLandscapeProduct>
+		
+		<applicationSystemInLandscape>
+			<databaseSystem>
+				<sid>unknown</sid>
+				<dBName>unknown</dBName>
+				<dBTypeForSAP>HDB</dBTypeForSAP>
+				<host>unknown</host>
+				<installationPath>unknown</installationPath>
+				<installationNumber>unknown</installationNumber>
+				<systemNumber>unknown</systemNumber>
+				<installedProductOnApplicationSystem>
+					<installedProductVersion>
+						<identifyingNumber>01200314690900003484</identifyingNumber>
+						<name>SAP NEWDB</name>
+						<vendor>sap.com</vendor>
+						<version>1.0</version>
+						<caption>SAP HANA PLATFORM EDIT. 1.0</caption>
+						<collectedSoftwareFeatures>
+							<installedSWFeature>
+								<caption>SAP HANA PLATFORM EDIT. 1.0: SAP HANA database server</caption>
+								<instanceKey>2</instanceKey>
+								<identifyingNumber>01200314694900011972</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP HANA DATABASE</caption>
+										<ppms-number>01200615320200017790</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>HDB</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+							<installedSWFeature>
+								<caption>SAP HANA PLATFORM EDIT. 1.0: XS Advanced Runtime</caption>
+								<instanceKey>41</instanceKey>
+								<identifyingNumber>73555000104900001717</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP HANA XS Advanced Runtime</caption>
+										<ppms-number>73555000100200004274</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>SAP_EXTENDED_APP_SERVICES</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+							<installedSWFeature>
+								<caption>SAP HANA PLATFORM EDIT. 1.0: HANA Lifecycle manager</caption>
+								<instanceKey>13</instanceKey>
+								<identifyingNumber>67837800104900015457</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP HANA Lifecycle manager</caption>
+										<ppms-number>67837800100200023486</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>SAPHANALM</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>6</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+							<installedSWFeature>
+								<caption>SAP HANA PLATFORM EDIT. 1.0: HANA Application Function Libraries</caption>
+								<instanceKey>11</instanceKey>
+								<identifyingNumber>67838200104900017429</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP HANA AFL</caption>
+										<ppms-number>67837800100200021866</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>HANA_AFL</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+							<installedSWFeature>
+								<caption>SAP HANA PLATFORM EDIT. 1.0: HANA TABLEREDIST AFL</caption>
+								<instanceKey>28</instanceKey>
+								<identifyingNumber>73554900104900000343</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP HANA TABLEREDIST AFL</caption>
+										<ppms-number>73554900100200000650</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>TABLEREDIST</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>							
+							<installedSWFeature>
+								<caption>SAP HANA PLATFORM EDIT. 1.0: HANA Live Cache</caption>
+								<instanceKey>10</instanceKey>
+								<identifyingNumber>67838200104900017682</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP HANA LCAPPS</caption>
+										<ppms-number>67837800100200022483</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>LCAPPS_HDB</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+							<installedSWFeature>
+								<caption>SAP HANA PLATFORM EDIT. 1.0: SAP HANA smart data access drivers for federation</caption>
+								<instanceKey>17</instanceKey>
+								<identifyingNumber>67838200104900018527</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP HANA smart data access</caption>
+										<ppms-number>67838200100200021802</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>HDB_FEDERATION_DRIVERS</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+						</collectedSoftwareFeatures>
+					</installedProductVersion>
+					<installedProductVersion>
+						<identifyingNumber>67838200100900007395</identifyingNumber>
+						<name>SAP LUMIRA SERVER</name>
+						<vendor>sap.com</vendor>
+						<version>1.0</version>
+						<caption>SAP LUMIRA SERVER 1</caption>
+						<collectedSoftwareFeatures>
+							<installedSWFeature>
+								<caption>SAP LUMIRA SERVER 1: Self Service Analytics AFL</caption>
+								<instanceKey>2</instanceKey>
+								<identifyingNumber>67837800104900016594</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP SAL AFL FOR HANA</caption>
+										<ppms-number>67837800100200025376</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>NETT_AFL</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+						</collectedSoftwareFeatures>
+					</installedProductVersion>
+					<installedProductVersion>
+						<identifyingNumber>67838200100900007710</identifyingNumber>
+						<name>IBP_OD</name>
+						<vendor>sap.com</vendor>
+						<version>1.0</version>
+						<caption>SAP IBP OD 4.0</caption>
+						<collectedSoftwareFeatures>
+							<installedSWFeature>
+								<caption>SCA AFL</caption>
+								<instanceKey>2</instanceKey>
+								<identifyingNumber>67838200104900020464</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP SCA AFL FOR SAP HANA</caption>
+										<ppms-number>67837800100200025548</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>SAPSCAAFL</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+							<installedSWFeature>
+								<caption>SOP AFL</caption>
+								<instanceKey>1</instanceKey>
+								<identifyingNumber>67838200104900020463</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP SOP AFL FOR SAP HANA</caption>
+										<ppms-number>67837800100200025838</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>SAPSOPAFL</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+						</collectedSoftwareFeatures>
+					</installedProductVersion>
+					<installedProductVersion>
+						<identifyingNumber>67837800100900008705</identifyingNumber>
+						<name>CAR RETAIL APPLICATIONS BUNDLE</name>
+						<vendor>sap.com</vendor>
+						<version>1.0</version>
+						<caption>CAR RETAIL APPL BUNDLE 1.0</caption>
+						<collectedSoftwareFeatures>
+							<installedSWFeature>
+								<caption>POS AFL</caption>
+								<instanceKey>3</instanceKey>
+								<identifyingNumber>67838200104900020344</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP POS AFL FOR HANA</caption>
+										<ppms-number>67837800100200025847</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>POSAFL_INST</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+							<installedSWFeature>
+								<caption>UDF AFL</caption>
+								<instanceKey>3</instanceKey>
+								<identifyingNumber>67838200104900020344</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP UDF AFL FOR HANA</caption>
+										<ppms-number>67837800100200025846</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>UDFAFL_INST</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+						</collectedSoftwareFeatures>
+					</installedProductVersion>
+					<installedProductVersion>
+						<identifyingNumber>73554900100900000142</identifyingNumber>
+						<name>SAP HANA DYNAMIC TIERING</name>
+						<vendor>sap.com</vendor>
+						<version>1.0</version>
+						<caption>SAP HANA Dynamic Tiering</caption>
+						<collectedSoftwareFeatures>
+							<installedSWFeature>
+								<caption>HANA Dynamic Tiering</caption>
+								<instanceKey>1</instanceKey>
+								<identifyingNumber>73554900104900000175</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>HANA Dynamic Tiering</caption>
+										<ppms-number>73555000100200000715</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>DYNAMIC_TIERING</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+						</collectedSoftwareFeatures>
+					</installedProductVersion>
+					<installedProductVersion>
+						<identifyingNumber>73554900100900000064</identifyingNumber>
+						<name>SAP HANA SMART DATA STREAMING</name>
+						<vendor>sap.com</vendor>
+						<version>1.0</version>
+						<caption>SAP HANA Smart Data Streaming</caption>
+						<collectedSoftwareFeatures>
+							<installedSWFeature>
+								<caption>Smart Data Steraming</caption>
+								<instanceKey>1</instanceKey>
+								<identifyingNumber>73554900104900000261</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>Smart Data Steraming</caption>
+										<ppms-number>73554900100200000994</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>SMART_DATA_STREAM</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+						</collectedSoftwareFeatures>
+					</installedProductVersion>
+					<installedProductVersion>
+						<identifyingNumber>73555000100900000013</identifyingNumber>
+						<name>SAP HANA ACCELERATOR SAP ASE</name>
+						<vendor>sap.com</vendor>
+						<version>1.0</version>
+						<caption>SAP HANA Accelerator For SAP ASE</caption>
+						<collectedSoftwareFeatures>
+							<installedSWFeature>
+								<caption>SAP HANA Accelerator For SAP ASE</caption>
+								<instanceKey>1</instanceKey>
+								<identifyingNumber>73555000104900000082</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP HANA Accelerator For SAP ASE</caption>
+										<ppms-number>73555000100200000175</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>SAP_HANA_ACCLRATR_FOR_ASE</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+						</collectedSoftwareFeatures>
+					</installedProductVersion>
+					<installedProductVersion>
+						<identifyingNumber>73554900100900000358</identifyingNumber>
+						<name>SAP HANA REMOTE DATA SYNC</name>
+						<vendor>sap.com</vendor>
+						<version>1.0</version>
+						<caption>SAP HANA Remote Data Sync</caption>
+						<collectedSoftwareFeatures>
+							<installedSWFeature>
+								<caption>SAP HANA Remote Data Sync</caption>
+								<instanceKey>1</instanceKey>
+								<identifyingNumber>73554900104900001113</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP HANA Remote Data Sync</caption>
+										<ppms-number>73554900100200001736</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>REMOTE_DATA_SYNC</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+						</collectedSoftwareFeatures>
+					</installedProductVersion>
+				</installedProductOnApplicationSystem>
+			</databaseSystem>
+			<unspecificStandaloneApplicationSystem>
+				<sid>IMCC</sid>
+				<host>unknown</host>
+				<technologyType>IMDBClient</technologyType>
+				<installationPath>unknown</installationPath>
+				<installedProductOnApplicationSystem>
+					<installedProductVersion>
+						<identifyingNumber>01200314690900003484</identifyingNumber>
+						<name>SAP NEWDB</name>
+						<vendor>sap.com</vendor>
+						<version>1.0</version>
+						<caption>SAP HANA PLATFORM EDIT. 1.0</caption>
+						<collectedSoftwareFeatures>
+							<installedSWFeature>
+								<caption>SAP HANA PLATFORM EDIT. 1.0: IMDB Client</caption>
+								<instanceKey>1</instanceKey>
+								<identifyingNumber>01200314694900011971</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP HANA CLIENT</caption>
+										<ppms-number>01200615320200017866</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>HDB_CLIENT</name>
+										<vendor>sap.com</vendor>
+										<version>1.00</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+						</collectedSoftwareFeatures>
+					</installedProductVersion>
+				</installedProductOnApplicationSystem>
+			</unspecificStandaloneApplicationSystem>
+			<unspecificStandaloneApplicationSystem>
+				<sid>IMCS</sid>
+				<host>unknown</host>
+				<technologyType>IMDBStudioRepository</technologyType>
+				<installationPath>unknown</installationPath>
+				<installedProductOnApplicationSystem>
+					<installedProductVersion>
+						<identifyingNumber>01200314690900003484</identifyingNumber>
+						<name>SAP NEWDB</name>
+						<vendor>sap.com</vendor>
+						<version>1.0</version>
+						<caption>SAP HANA PLATFORM EDIT. 1.0</caption>
+						<collectedSoftwareFeatures>
+							<installedSWFeature>
+								<caption>SAP HANA PLATFORM EDIT. 1.0: IMDB Studio</caption>
+								<instanceKey>3</instanceKey>
+								<identifyingNumber>01200314694900012008</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAP HANA STUDIO</caption>
+										<ppms-number>01200615320200017791</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>HDB_STUDIO</name>
+										<vendor>sap.com</vendor>
+										<version>1</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+									<software-component>
+										<caption>SAP HANA STUDIO</caption>
+										<ppms-number>73554900100200000585</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>HDB_STUDIO</name>
+										<vendor>sap.com</vendor>
+										<version>2</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+						</collectedSoftwareFeatures>
+					</installedProductVersion>
+				</installedProductOnApplicationSystem>
+			</unspecificStandaloneApplicationSystem>
+			<bCHostController>
+				<sid>hostctrl</sid>
+				<host>unknown</host>
+				<installationPath>unknown</installationPath>
+				<installedProductOnApplicationSystem>
+					<installedProductVersion>
+						<identifyingNumber>01200314690900003484</identifyingNumber>
+						<name>SAP NEWDB</name>
+						<vendor>sap.com</vendor>
+						<version>1.0</version>
+						<caption>SAP HANA PLATFORM EDIT. 1.0</caption>
+						<collectedSoftwareFeatures>
+							<installedSWFeature>
+								<caption>SAP HANA PLATFORM EDIT. 1.0: SAP Host Agent</caption>
+								<instanceKey>4</instanceKey>
+								<identifyingNumber>01200615324900011955</identifyingNumber>
+								<software-components>
+									<software-component>
+										<caption>SAPHOSTAGENT</caption>
+										<ppms-number>01200314690200011329</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>SAPHOSTAGENT</name>
+										<vendor>sap.com</vendor>
+										<version>7.20</version>
+										<sp-level>150</sp-level>
+										<patch-level>150</patch-level>
+									</software-component>
+									<software-component>
+										<caption>SAPHOSTAGENT</caption>
+										<ppms-number>67838200100200018473</ppms-number>
+										<os-set>linuxx86_64</os-set>
+										<name>SAPHOSTAGENT</name>
+										<vendor>sap.com</vendor>
+										<version>7.21</version>
+										<sp-level>0</sp-level>
+										<patch-level>0</patch-level>
+									</software-component>
+								</software-components>
+							</installedSWFeature>
+						</collectedSoftwareFeatures>
+					</installedProductVersion>
+				</installedProductOnApplicationSystem>
+			</bCHostController>
+		</applicationSystemInLandscape>
+	</productSystem>
+	<computerSystemsInLandscape>
+		<computerSystem>
+			<host>unknown</host>
+			<sharedDirectory>unknown</sharedDirectory>
+		</computerSystem>
+	</computerSystemsInLandscape>
+</landscapeDescription>

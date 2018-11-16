@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<introContent>
+
+  	<extensionContent id="com.sap.adt.intro.abap.samples" name="ABAP Samples Gallery" style="css/sample.css" path="samples/@">
+
+  	   <group label="ABAP Development" style-id="content-group" id="content-group">   
+           
+            <text style-id="group-description">Make an extensive use of the variety of ABAP samples that are available in your development system.  </text>
+<!--         
+            <link style-id="content-link" label="ABAP Samples Gallery" url="http://org.eclipse.ui.intro/runAction?pluginId=com.sap.adt.product.branding&amp;class=com.sap.adt.product.branding.internal.samples.ShowAbapSamplesAction" id="abapstandard_cod">
+          		<text>To explore the ABAP samples, take a look at the source code in the appropriate editor, 
+          		read comments provided in the ABAP language help, and then run or debug them.</text>
+       		</link>
+
+-->        
+
+            <link style-id="content-link" label="ABAP Samples Gallery" url="http://org.eclipse.ui.intro/runAction?pluginId=com.sap.adt.abapdev.guide.doc.user.ext&amp;class=com.sap.adt.abapdev.guide.doc.user.internal.samples.ShowAbapSamplesAction" id="abapstandard_cod">
+          		<text>To explore the ABAP samples, take a look at the source code in the appropriate editor, 
+          		read comments provided in the ABAP language help, and then run or debug them.</text>
+       		</link>
+       				        
+       </group>
+       
+  	</extensionContent>
+
+</introContent>

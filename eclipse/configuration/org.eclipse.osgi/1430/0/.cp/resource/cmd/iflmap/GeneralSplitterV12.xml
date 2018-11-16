@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Splitter/version::1.2.1" ComponentName="sap:Splitter" UIElementType="Flowstep">
+	
+	<Variant VariantId="ctype::FlowstepVariant/cname::GeneralSplitter/version::1.2.1" VariantDisplayName="General Splitter" VariantName="GeneralSplitter" AttachmentBehavior="Drop" MetadataVersion="2.0">
+		<!-- allowed input content type -->
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>		
+		</InputContent>	
+		
+		<!-- allowed output content type -->
+		<OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+	</OutputContent>	
+		<!-- Attribute Groupings and Restriction -->
+		<Tab id="iflow.advance.General_Splitter.tab">
+			<GuiLabels>
+				<Label language="EN">Splitter</Label>
+			</GuiLabels>
+			<AttributeGroup id="General Details">
+				<AttributeReference>
+					<ReferenceName>exprType</ReferenceName>
+					<description>Select Xpath to split the messages using a relative or absolute path to a node of an XML payload&#10;Select Line Break to split non-xml files</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>splitExprValue</ReferenceName>
+					<Restriction>[//|/][a-zA-Z0-9/]+</Restriction>
+					<ErrorMessage>XPath only allows '/', '//', letters and digits</ErrorMessage>
+					<EditCondition>
+                       <AttributeName>exprType</AttributeName>
+                       <AttributeValue>XPath</AttributeValue>
+					</EditCondition>
+					<description>Enter an Xpath expression to navigate to the split item using absolute (e.g. /orderitems/order) or relative (//order) path. &#10;Example for path with namespace: /orderitems/n0:order xmlns:n0=\"http://abc.com/def\"</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>grouping</ReferenceName>
+					<Restriction>[0-9]*</Restriction>
+					<ErrorMessage>Grouping should be an integer value greater than 0</ErrorMessage>
+					<description>Specify the group size into which the composite message should be split.&#10;E.g. If a message has 4 nodes the grouping specified is 2, the message gets split into 2 individual messages with 2 nodes each.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>timeOut</ReferenceName>
+					<Restriction>[0-9]*</Restriction>
+					<ErrorMessage>Timeout should be an integer value greater than 0 and should be specified only if Parallel Processing in checked</ErrorMessage>
+                    <EditCondition>
+                       <AttributeName>ParallelProcessing</AttributeName>
+                       <AttributeValue>true</AttributeValue>
+					</EditCondition> 
+					<description>If the concurrent processing of the split messages does not respond in the specified time, the splitter operation is aborted and the next elements in the sequence flow are processed.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Streaming</ReferenceName>
+					<description>Select this option to stream the process of splitting a big composite message into series of messages in small chunks.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ParallelProcessing</ReferenceName>
+					<description>Select this option to enable concurrent processing of the split messages. Also, specify the timeout value.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>StopOnExecution</ReferenceName>
+					<description>You have the option to stop message processing immediately if an exception occurs.&#10;If you disable this option, message splitting and processing of the submessages continues, even if one of them fails.</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		
+
+		<!-- additional information -->	
+		<AllowedHeaders/>
+		<ReferencedComponents/>
+	</Variant>
+
+
+	<AttributeMetadata>
+		<Name>splitExprValue</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">XPath Expression</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>grouping</Name>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Grouping</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>timeOut</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>60</Default>
+		<GuiLabels>
+			<Label language="EN">Timeout(in s)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>Streaming</Name>
+		<DataType>xsd:boolean</DataType>
+		<Default>true</Default>
+		<GuiLabels>
+			<Label language="EN">Streaming</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ParallelProcessing</Name>
+		<DataType>xsd:boolean</DataType>
+		<Default>false</Default>
+		<GuiLabels>
+			<Label language="EN">Parallel Processing</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>StopOnExecution</Name>
+		<DataType>xsd:boolean</DataType>
+		<Default>true</Default>
+		<GuiLabels>
+			<Label language="EN">Stop on Exception</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+    <AttributeMetadata>
+		<Name>exprType</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>XPath</Default>
+		<GuiLabels>
+			<Label language="EN">Expression Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>XPath</Value>
+				<GuiLabels>
+					<Label language="EN">XPath</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Line Break</Value>
+				<GuiLabels>
+					<Label language="EN">Line Break</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+</ComponentMetadata>

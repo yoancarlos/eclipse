@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You can use the SFTP receiver adapter to transfer files the tenant to an SFTP server using the SSH protocol."/>
+<meta name="description" content="You can use the SFTP receiver adapter to transfer files the tenant to an SFTP server using the SSH protocol."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring a Channel with SFTP Receiver Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loioa9d84ab623bc436db8ddd073db6b5165">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring a Channel with SFTP Receiver Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You can use the SFTP receiver adapter to transfer files the tenant to an SFTP server
+		using the SSH protocol.</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><p class="p"/>
+<div class="sectiondiv subsection">
+            <p class="p subsectiontitle">How the Receiver SFTP Adapter Works</p>
+
+            <p class="p">If you have configured a <span class="ph emphasis emphasis">receiver</span> SFTP adapter, message
+                processing is performed as follows at runtime: The tenant sends a request to an SFTP
+                server (think of this as the receiver system), and the data flow is in the same
+                direction, from the tenant to the SFTP server. In other words, the tenant writes
+                files to the SFTP server (from where the communication partner can read them).</p>
+
+            <div class="fig fignone" id="loioa9d84ab623bc436db8ddd073db6b5165__d509e45"><div class="figcontainer">
+                
+                <img class="image" id="loioa9d84ab623bc436db8ddd073db6b5165__d509e50" src="loioe380f4a4562e4a8e85c209ca712e82e3_LowRes.png"/>
+            <div class="figcap">Figure 1: SFTP Receiver Adapter: Tenant writes file to SFTP server</div></div></div>
+
+        </div></div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loioa9d84ab623bc436db8ddd073db6b5165__steps_y3w_pc3_5s"><li class="li step stepexpand">
+				<span class="ph cmd">Select the integration flow you want to configure and choose
+						<span class="ph uicontrol">Edit</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the communication channel you want to configure. </span>
+				<div class="itemgroup info">
+					<p class="p">To configure a receiver channel, click on a connection between
+							<span class="ph uicontrol">Integration Process</span> component and a receiver.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">General</span> tab page, provide channel name and
+					description in the relevant fields if required. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Adapter Specific</span> tab page and provide values in
+					fields based on description in table.</span>
+				<div class="itemgroup info">
+					<p class="p">On the <span class="ph uicontrol">Target</span> tab of the receiver
+            channel, specify the following attributes.</p>
+
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioa9d84ab623bc436db8ddd073db6b5165__d509e559" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d2182171e103">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d2182171e109">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e103 ">
+                                <p class="p">Directory</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e109 ">
+                                <p class="p">Use the relative path to write the file to a directory, for
+                                    example &lt;dir&gt;/&lt;subdir&gt;.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e103 ">
+                                <p class="p">File Name</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e109 ">
+                                <p class="p">Name of the file to be read.</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">If you do not enter a file name and the parameter remains
+                                        blank, all the files in the specified directory are read.
+                                        Regular expressions, such as ab*, a.*, *a*, and so on, are
+                                        not supported.</p>
+
+                                </div>
+
+                                <div class="note caution"><span class="cautiontitle">Caution</span> 
+                                    <p class="p">Files with file names longer than 100 characters will be
+                                        processed with the following limitations: </p>
+
+                                    <ul class="ul" id="loioa9d84ab623bc436db8ddd073db6b5165__d509e626">
+                                        <li class="li">
+                                            <p class="p">If two files with names longer than 100 characters
+                                                are available for processing, only one of these
+                                                files will be processed at a time. This means that
+                                                both files will be processed, but not in parallel.
+                                                This is also the case if two runtime nodes are
+                                                available. If the node fails multiple times while
+                                                processing a file with a file name longer than 100
+                                                characters, none of the files sharing the first 100
+                                                characters with that file can be executed without
+                                                manual intervention from the administrator. </p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                                <p class="p">The
+            endpoint URL that is actually used at runtime is displayed in the message processing log
+            (MPL) in the message monitoring application (MPL property
+            <samp class="ph codeph">ProducedFile</samp>). Note that you can manually configure the endpoint URL
+            using the <span class="ph uicontrol">File Name</span> attribute of the SFTP adapter. However, there
+            are several ways to dynamically override the value of this attribute (for example, by
+            using the Camel header <samp class="ph codeph">CamelFileName</samp>). </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e103 ">
+                                <p class="p">Append Timestamp</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e109 ">
+                                <p class="p">Appends a timestamp at the end of the file name.</p>
+
+                                <p class="p">If the file has an extension (for example, .xml), the timestamp
+                                    is appended to the file extension itself. Example: If the file
+                                    name is <span class="ph filepath">myfile.xml</span>, the <span class="ph uicontrol">Append
+                                        Timestamp</span> option (assuming the timestamp is
+                                        <samp class="ph systemoutput">Nov 30, 2015, 10:10:20</samp>)
+                                    generates the following file name: </p>
+
+                                <p class="p"><samp class="ph systemoutput">myfile20151201170800.xml</samp></p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">Be aware of the following behavior if you have configured the
+                                        file name dynamically: If you have selected the
+                                            <span class="ph uicontrol">Append Timestamp</span> option, the
+                                        timestamp overrides the file name defined dynamically via
+                                        the header (<samp class="ph codeph">CamelFileName</samp>).</p>
+
+                                </div>
+
+                                <div class="note caution"><span class="cautiontitle">Caution</span> 
+                                    <p class="p">Note that in case files are processed very quickly, the
+                                            <span class="ph uicontrol">Append Timestamp</span> option might not
+                                        guarantee unique file names.</p>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e103 ">
+                                <p class="p">Address</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e109 ">
+                                <p class="p">Host name or IP address of the SFTP server and an optional port,
+                                    for example, wdfd00213123:22.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e103 ">
+                                <p class="p">Authentication</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+            <div class="p">In the following cases this new feature might not be available for your current
+                integration flow:<ul class="ul" id="loioa9d84ab623bc436db8ddd073db6b5165__d288e167">
+                    <li class="li">
+                        <p class="p">You created the corresponding integration flow shape (adapter or step)
+                            before this feature was released</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">You are using a product profile other than the one expected.</p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="p">More information: </p>
+
+        </div>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e109 ">
+                                <p class="p">Authentication option for the connection to the SFTP server.</p>
+
+                                <p class="p">You have the following options:</p>
+
+                                <ul class="ul" id="loioa9d84ab623bc436db8ddd073db6b5165__d509e725">
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">User Name/Password</span></p>
+
+                                        <p class="p">SFTP server authenticates the calling component based on
+                                            the user name and password. To make this configuration
+                                            setting work, you need to define the user name and
+                                            password in a <span class="ph uicontrol">User Credential</span>
+                                            artifact and deploy the artifact on the tenant.</p>
+
+                                    </li>
+
+                                    <li class="li">
+                                        <p class="p"><span class="ph uicontrol">Public Key</span></p>
+
+                                        <p class="p">SFTP server authenticates the calling component based on
+                                            a public key.</p>
+
+                                    </li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e103 ">
+                                <p class="p">Credential Name</p>
+
+                                <p class="p">(Only available if you have selected <span class="ph uicontrol">User
+                                        Name/Password</span> for
+                                        <span class="ph uicontrol">Authentication</span>)</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+            <div class="p">In the following cases this new feature might not be available for your current
+                integration flow:<ul class="ul" id="loioa9d84ab623bc436db8ddd073db6b5165__d288e167">
+                    <li class="li">
+                        <p class="p">You created the corresponding integration flow shape (adapter or step)
+                            before this feature was released</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">You are using a product profile other than the one expected.</p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="p">More information: </p>
+
+        </div>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e109 ">
+                                <p class="p">Name of the <span class="ph uicontrol">User Credential</span> artifact that
+                                    contains the user name and password.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e103 ">
+                                <p class="p">User Name</p>
+
+                                <p class="p">(Only available if
+                                    you have selected <span class="ph uicontrol">Public Key</span> for
+                                        <span class="ph uicontrol">Authentication</span>)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e109 ">
+                                <p class="p">ID of the user performing the file transfer.</p>
+
+                                <p class="p">Make sure that the user name contains no other characters
+            than <samp class="ph codeph">A-z</samp>, <samp class="ph codeph">0-9</samp>, <samp class="ph codeph">_</samp> (underscore),
+                <samp class="ph codeph">-</samp> (hyphen), <samp class="ph codeph">/</samp> (slash), <samp class="ph codeph">?</samp>
+            (question mark), <samp class="ph codeph">@</samp> (at), <samp class="ph codeph">!</samp> (exclamation mark),
+                <samp class="ph codeph">$</samp> (dollar sign ), <samp class="ph codeph">'</samp> (apostrophe),
+                <samp class="ph codeph">(</samp>, <samp class="ph codeph">)</samp> (brackets), <samp class="ph codeph">*</samp> (asterisk),
+                <samp class="ph codeph">+</samp> (plus sign), <samp class="ph codeph">,</samp> (comma), <samp class="ph codeph">;</samp>
+            (semicolon), <samp class="ph codeph">=</samp> (equality sign), <samp class="ph codeph">.</samp> (dot), or
+                <samp class="ph codeph">~</samp> (tilde). Otherwise, an attempt for anonymous login is made which
+            results in an error. </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e103 ">
+                                <p class="p">Timeout (in ms)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e109 ">
+                                <p class="p">Maximum time to wait for the SFTP server to be contacted while
+                                    establishing connection or performing a read operation. </p>
+
+                                <p class="p">Default value: 10000 ms</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e103 ">
+                                <p class="p">Maximum Reconnect Attempts</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e109 ">
+                                <p class="p">Maximum number of attempts allowed to reconnect to the SFTP
+                                    server. </p>
+
+                                <p class="p">Default value: 3 </p>
+
+                                <p class="p">Use 0 to disable this behavior.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e103 ">
+                                <p class="p">Reconnect Delay (in ms)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e109 ">
+                                <p class="p">How long the system waits before attempting to reconnect to the
+                                    SFTP server.</p>
+
+                                <p class="p">Default Value: 1000ms</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e103 ">
+                                <p class="p">Automatically Disconnect</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e109 ">
+                                <p class="p">Disconnect from the SFTP server after each message
+                                    processing.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+				<div class="itemgroup info"><p class="p">The
+                following figure illustrates how the properties configured for
+                    <span class="ph uicontrol">Authentication</span> are used.</p>
+<img class="image" id="loioa9d84ab623bc436db8ddd073db6b5165__d509e1870" src="loioe2b808bbcbcc4e30a34374fdadd89774_LowRes.png"/></div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Processing</span> tab page.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioa9d84ab623bc436db8ddd073db6b5165__d509e1232" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Parameters and Descriptions for SFTP Adapter Receiver Channel</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d2182171e571">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d2182171e577">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e571 ">
+                                <p class="p">Handling for Existing Files</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e577 ">
+                                <p class="p">If the file already exists in the target, allow the following: </p>
+
+                                <p class="p"><span class="ph uicontrol">Override</span>: Replace the existing file
+                                    content with the new one. </p>
+
+                                <p class="p"><span class="ph uicontrol">Append</span>: Add the new file content to the
+                                    end of the existing one. </p>
+
+                                <p class="p"><span class="ph uicontrol">Fail</span>: Do not perform any action and raise
+                                    a failure. </p>
+
+                                <p class="p"><span class="ph uicontrol">Ignore</span>: Do not perform any action.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e571 ">
+                                <p class="p">Change Directories Stepwise</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e577 ">
+                                <p class="p">Changes directory levels one at a time.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e571 ">
+                                <p class="p">Create Directories</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e577 ">
+                                <p class="p">Automatically creates missing directory levels as provided in the
+                                    file's path name.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e571 ">
+                                <p class="p">Temporary File Name</p>
+
+                                <p class="p">(Only visible when <span class="ph uicontrol">Handling for Existing
+                                        Files</span> is set to
+                                    <span class="ph uicontrol">Override</span>)</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+            <div class="p">In the following cases this new feature might not be available for your current
+                integration flow:<ul class="ul" id="loioa9d84ab623bc436db8ddd073db6b5165__d288e167">
+                    <li class="li">
+                        <p class="p">You created the corresponding integration flow shape (adapter or step)
+                            before this feature was released</p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">You are using a product profile other than the one expected.</p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="p">More information: </p>
+
+        </div>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e577 ">
+                                <p class="p">Allows you to specify a name for a temporary file.</p>
+
+                                <p class="p">If you override an existing file (on the SFTP server) with a new
+                                    one, the following situation can occur: The subsequent file
+                                    processor (implemented on the receiver side) already starts
+                                    processing the file, even though it is not yet completely
+                                    written (by the SFTP adapter) to the SFTP server. Together with
+                                    the <span class="ph uicontrol">Override</span> option, you can specify the
+                                    name of a temporary file. The SFTP adapter then finishes writing
+                                    the file with the temporary file name to the SFTP server first.
+                                    After that, the temporary file is renamed according to the
+                                    target file name specified in the SFTP adapter (according to the
+                                    setting for <span class="ph uicontrol">File Name</span> under
+                                        <span class="ph uicontrol">Target</span>). This makes sure that the
+                                    subsequent processor only processes a completely written
+                                    file.</p>
+
+                                <div class="note caution"><span class="cautiontitle">Caution</span> 
+                                    <p class="p">Make sure that the name of the temporary file is unique on
+                                        the server, otherwise problems can occur when different
+                                        clients try to access the SFTP server using the same
+                                        temporary file name.</p>
+
+                                    <p class="p">To make sure the name of the temporary file is unique, you
+                                        can enter one of the following strings, for example:</p>
+
+                                    <p class="p"><samp class="ph codeph">${exchangeId}.tmp</samp> (because the Camel
+                                        Exchange ID is unique)</p>
+
+                                    <p class="p"><samp class="ph codeph">${file:name}.tmp</samp> (in this case, make sure
+                                        that the file name is unique, which anyway is a reasonable
+                                        requirement for a scenario including a SFTP file
+                                        transfer)</p>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e571 "><span class="ph uicontrol">Use Temporary File</span>
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e577 ">
+                                <p class="p">For synchronization reasons, the SFTP receiver writes the data to
+                                    a temporary file initially. Once the write procedure is
+                                    finished, the temp file is renamed to the target file. The temp
+                                    file is deleted automatically, irrespective of whether the write
+                                    procedure is successful or contains errors.</p>
+
+                                <p class="p">Enter a temporary file name. </p>
+
+                                <p class="p">You can either use a static file name such as large.file.temp or
+                                    a placeholder such as $(file:name).temp</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Advanced</span> tab page.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loioa9d84ab623bc436db8ddd073db6b5165__d509e1410" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d2182171e783">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d2182171e789">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e783 ">
+                                <p class="p">Buffer Size</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e789 ">
+                                <p class="p">Write file content using the specified buffer size. </p>
+
+                                <p class="p">Default: 128 KB</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e783 ">
+                                <p class="p">Log Level</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e789 ">
+                                <p class="p">The level of information to be logged during message
+                                    processing.</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> In a troubleshooting situation, you can increase the log level
+                                    to <span class="ph uicontrol">DEBUG</span> or <span class="ph uicontrol">TRACE</span>
+                                    to verify that polling works as expected. Make sure that you
+                                    decrease the log level again afterwards to reduce the load and
+                                    the number of logs written.</div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e783 ">
+                                <p class="p">Flatten File Names</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e789 ">
+                                <p class="p">Flatten the file path by removing the directory levels so that
+                                    only the file names are considered and they are written under a
+                                    single directory.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e783 ">
+                                <p class="p">Max. Messages per Poll (for sender channel only)</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e789 ">
+                                <p class="p">Maximum number of messages to gather in each poll. </p>
+
+                                <p class="p">Default: 0 <span class="ph emphasis emphasis">Example:</span> 1000 can be set as a
+                                    limit.</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">If you are using the sender SFTP adapter in combination with
+                                        an Aggregator step and you expect a high message load,
+                                        consider the following recommendation: </p>
+
+                                    <p class="p">Set the value for Maximum Messages per Poll to a small number
+                                        larger than 0 (for example, 20). This ensures proper logging
+                                        of the message processing status at runtime.</p>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d2182171e783 ">
+                                <p class="p">Prevent Directory Traversal</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d2182171e789 ">
+                                <p class="p">If the file contains any backward path traversals such as \..\ or
+                                    /../.. , this carries a potential risk of directory traversal.
+                                    In such a case, message processing is stopped with an error. The
+                                    unique message ID is logged in the message processing log.</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">We recommend that you specify the
+                                            <span class="ph uicontrol">Directory</span> and <span class="ph uicontrol">File
+                                            Name</span> fields to avoid any security risks. If
+                                        you provide these fields, the header is not considered.</p>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the configuration.</span>
+				<div class="itemgroup info">
+					<p class="p">SFTP polling is supported in the following way:
+            The same file can be polled by multiple endpoints configured to use the SFTP channel.
+            This means that you can now deploy an integration flow with a configured SFTP channel on
+            multiple runtime nodes (which might be necessary to meet failover requirements) without
+            the risk of creating duplicates by polling the same file multiple times. Note that to
+            enable the new option, integration flows (configured to use SFTP channels) that were
+            developed prior to the introduction of this feature have to be regenerated.</p>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

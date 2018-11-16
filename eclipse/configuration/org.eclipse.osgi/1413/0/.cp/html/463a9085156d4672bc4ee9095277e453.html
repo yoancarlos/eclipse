@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="SAP HANA Cloud Integration supports several standards to protect the message content (message level security)."/>
+<meta name="description" content="SAP HANA Cloud Integration supports several standards to protect the message content (message level security)."/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=7603937658628614"/>
+<title>Message Level Security</title>
+</head>
+<body class="" id="loio463a9085156d4672bc4ee9095277e453">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Message Level Security</h1>
+<div class="body conbody"><p class="shortdesc">SAP HANA Cloud Integration supports several standards to protect the message content
+		(message level security). </p>
+<div class="p">Message level security features allow you to digitally encrypt/decrypt or sign/verify a message
+			(or both). The following standards and algorithms are supported.
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="loio463a9085156d4672bc4ee9095277e453__table_lzw_nt2_rl" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Message Level Security Standards and Algorithms</span></caption><thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="33.33333333333333%" id="d100372e23">Standard</th>
+<th class="entry" valign="top" width="33.33333333333333%" id="d100372e25">Security Feature</th>
+<th class="entry" valign="top" width="33.33333333333333%" id="d100372e27">Supported Algorithms</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" rowspan="2" valign="top" width="33.33333333333333%" headers="d100372e23 ">
+								<p class="p">PKCS#7/CMS Enveloped Data and Signed Data</p>
+
+							</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d100372e25 ">
+								<p class="p">Encryption/decryption of message content</p>
+
+							</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d100372e27 ">The following algorithms for content encryption (by the symmetric
+								key) are supported (format Cipher/Operation Mode/Padding Scheme):
+								DESede/CBC/PKCS5Padding, DES/CBC/PKCS5Padding, AES/CBC/PKCS5Padding,
+								ARCFOUR/ECB/NoPadding, Camellia/CBC/PKCS5Padding,
+								RC2/CBC/PKCS5Padding, CAST5/CBC/PKCS5Padding.</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d100372e25 ">
+								<p class="p">Signing/verifying payload </p>
+
+							</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d100372e27 ">The following algorithms for content signing are supported
+								(digest and encryption algorithm): SHA512/RSA, SHA384/RSA,
+								SHA256/RSA, SHA224/RSA, SHA/RSA, RIPEMD128/RSA, RIPEMD160/RSA,
+								MD5/RSA, MD2/RSA, RIPEMD160andMGF1/RSA-ISO9796-2-2-3,
+								SHAandMGF1/RSA-ISO9796-2-2-3, SHA256withDSA, SHA224withDSA,
+								SHA/DSA.</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d100372e23 ">
+								<p class="p">XML Signature</p>
+
+							</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d100372e25 ">
+								<p class="p">Signing/verifying payload </p>
+
+							</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d100372e27 ">SAP HANA Cloud Integration supports the following signature
+								algorithms when applying XML Signature: DSA/SHA1, RSA/SHA1,
+								RSA/SHA256, RSA/SHA384, RSA/SHA512</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="33.33333333333333%" headers="d100372e23 ">
+								<p class="p">WS-Security</p>
+
+							</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d100372e25 ">
+								<p class="p">Signing/verifying SOAP body </p>
+
+							</td>
+<td class="entry" valign="top" width="33.33333333333333%" headers="d100372e27 ">Default the signature algorithm is set by the data in the
+								certificate,that means, one of the following:
+								http://www.w3.org/2000/09/xmldsig#rsa-sha1 or
+								http://www.w3.org/2000/09/xmldsig#dsa-sha1. <p class="p">The default signature
+									digest algorithm is: http://www.w3.org/2000/09/xmldsig#sha1
+								</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p class="p">Strong encryption is supported for the following algorithms:  </p>
+<ul class="ul" id="loio463a9085156d4672bc4ee9095277e453__ul_asr_4qv_2m"><li class="li">AES/CBC/PKCS5Padding   </li>
+<li class="li">Camellia/CBC/PKCS5Padding</li>
+</ul>
+<p class="p">For these algorithms also the key lengths 192 and 256 are possible.</p>
+<p class="p">For more information, see the SAP HANA Cloud
+			Integration Operations Guide (published at: <a class="extlink" href="http://help.sap.com/disclaimer?site=https://wiki.wdf.sap.corp/wiki/display/Avatar/Avatar+Documentation" target="_blank">https://wiki.wdf.sap.corp/wiki/display/Avatar/Avatar+Documentation<img src="images/3rd_link.png" class="link-sap" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>) in
+			section <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Security Configuration</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Configuring Message Level Security</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Configuring Keystores for the Usage of PKCS#7/CMS Enveloped Data and
+					Signed Data</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Basics of Message Level Security (PKCS#7 Standard)</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</p>
+</div>
+<div class="related-links"> </div>
+</div></div>
+</body>
+</html>

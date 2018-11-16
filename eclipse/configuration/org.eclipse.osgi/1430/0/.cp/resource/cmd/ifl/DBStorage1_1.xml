@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:DBstorage/version::1.1.2" ComponentName="sap:DataStore" UIElementType="Flowstep">
+  <Variant VariantId="ctype::FlowstepVariant/cname::put/version::1.1.2" VariantDisplayName="Write" VariantName="Write" Preserves="true" AttachmentBehavior="Preserve">
+    <!-- allowed input content type -->
+    <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+      <Content>
+        <ContentType>Any</ContentType>
+        <Schema/>
+      </Content>
+    </InputContent>
+    <!-- allowed output content type -->
+    <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+      <Content>
+        <ContentType>Any</ContentType>
+        <Schema/>
+      </Content>
+    </OutputContent>
+    <!-- Attribute Groupings and Restriction -->
+    <Tab id="WriteOperation">
+      <GuiLabels>
+        <Label language="EN">Write Operation</Label>
+      </GuiLabels>
+      <AttributeGroup id="generalDetails">
+        <AttributeReference>
+          <ReferenceName>storageName</ReferenceName>
+          <description>Enter a data store name (maximum 20 characters). The name should begin with an alphabetic character and use characters (aA-zZ, 0-9, - _ . ~ ) without any whitespace or you can enter ${header.headername} to dynamically read the name from a header.</description>
+          <Restriction>Constraint.isValidRegex(^\$\{header\.[a-zA-Z][a-zA-Z0-9\_\-]*\}$|^[a-zA-Z][a-zA-Z0-9\-\_\.\~]*$)</Restriction>
+          <ErrorMessage>Data store name should begin with a letter and use characters (aA-zZ, 0-9, - _ . ~ ) without any whitespace or you can enter ${header.headername} to dynamically read the name from a header.</ErrorMessage>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>visibility</ReferenceName>
+          <description>Specify if the store is to be used within one integration flow (Local) or shared between different integration flows (Global).</description>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>messageId</ReferenceName>
+          <description>Entry id with which content will be persisted, you can use ${header.headername} or ${xpath.node} to read entry id details from incoming message. A generated GUID would be used if the field is empty</description>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>alert</ReferenceName>
+          <description>Enter a time period (in days). If messages are not fetched within this period, an alert is raised. The default value is 2.</description>
+          <Restriction>Constraint.isValidRegex([0-9]+)</Restriction>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>expire</ReferenceName>
+          <description>Enter a time period (in days). The stored message is automatically deleted from the data store after this period. The default value is 90 days.</description>
+          <!-- 						<AndCondition> -->
+          <Restriction>Constraint.isValidRegex([0-9]+)</Restriction>
+          <!--						<Restriction>@expire > @alert</Restriction> -->
+          <!-- 						</AndCondition> -->
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>encrypt</ReferenceName>
+          <description>Select this option to encrypt the message in data store</description>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>override</ReferenceName>
+          <description>Select this option to overwrite the message in data store</description>
+        </AttributeReference>
+      </AttributeGroup>
+    </Tab>
+    <!-- additional information -->
+    <AllowedHeaders/>
+    <ReferencedComponents/>
+  </Variant>
+  <Variant VariantId="ctype::FlowstepVariant/cname::select/version::1.1.2" VariantDisplayName="Select" VariantName="Select" AttachmentBehavior="Drop">
+    <!-- allowed input content type -->
+    <InputContent Cardinality = "1" Scope="insidepool" MessageCardinality="" isStreaming="">
+      <Content>
+        <ContentType>Any</ContentType>
+        <Schema/>
+      </Content>
+      <Content>
+        <ContentType>None</ContentType>
+        <Schema/>
+      </Content>
+    </InputContent>
+    <OutputContent Cardinality = "1" Scope="insidepool" MessageCardinality="" isStreaming="">
+      <Content>
+        <ContentType>Xml</ContentType>
+        <Schema/>
+      </Content>
+    </OutputContent>
+    <!-- Attribute Groupings and Restriction -->
+    <Tab id="SelectOperation">
+      <GuiLabels>
+        <Label language="EN">Select Operation</Label>
+      </GuiLabels>
+      <AttributeGroup id="generalDetails">
+        <AttributeReference>
+          <ReferenceName>storageName</ReferenceName>
+          <description>Enter a data store name (maximum 20 characters). The name should begin with an alphabetic character and use characters (aA-zZ, 0-9, - _ . ~ ) without any whitespace or you can enter ${header.headername} to dynamically read the name from a header.</description>
+          <Restriction>Constraint.isValidRegex(^\$\{header\.[a-zA-Z][a-zA-Z0-9\_\-]*\}$|^[a-zA-Z][a-zA-Z0-9\-\_\.\~]*$)</Restriction>
+              <ErrorMessage>Data store name should begin with a letter and use characters (aA-zZ, 0-9, - _ . ~ ) without any whitespace or you can enter ${header.headername} to dynamically read the name from a header.</ErrorMessage>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>visibility</ReferenceName>
+          <description>Specify if the store is to be used within one integration flow (Local) or shared between different integration flows (Global).</description>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>maxresults</ReferenceName>
+          <description>Specify the number of messages to be fetched from data store in one poll. Default value is 1. If messages fetched per poll is also specified in the header 'SapDataStoreMaxResults', the header takes the precedence. You can enter ${header.headername} or ${xpath.node} to read the message count from the incoming message.</description>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>delete</ReferenceName>
+          <description>Select this option to delete messages from data store after successfully fetching the messages</description>
+        </AttributeReference>
+      </AttributeGroup>
+    </Tab>
+    <!-- additional information -->
+    <AllowedHeaders/>
+    <ReferencedComponents/>
+  </Variant>
+  <Variant VariantId="ctype::FlowstepVariant/cname::get/version::1.1.2" VariantDisplayName="Get" VariantName="Get" AttachmentBehavior="Drop">
+    <!-- allowed input content type -->
+    <InputContent Cardinality = "1" Scope="insidepool" MessageCardinality="" isStreaming="">
+      <Content>
+        <ContentType>Any</ContentType>
+        <Schema/>
+      </Content>
+      <Content>
+        <ContentType>None</ContentType>
+        <Schema/>
+      </Content>
+    </InputContent>
+    <OutputContent Cardinality = "1" Scope="insidepool" MessageCardinality="" isStreaming="">
+      <Content>
+        <ContentType>Xml</ContentType>
+        <Schema/>
+      </Content>
+    </OutputContent>
+    <!-- Attribute Groupings and Restriction -->
+    <Tab id="GetOperation">
+      <GuiLabels>
+        <Label language="EN">Get Operation</Label>
+      </GuiLabels>
+      <AttributeGroup id="generalDetails">
+        <AttributeReference>
+          <ReferenceName>storageName</ReferenceName>
+          <description>Enter a data store name (maximum 20 characters). The name should begin with an alphabetic character and use characters (aA-zZ, 0-9, - _ . ~ ) without any whitespace or you can enter ${header.headername} to dynamically read the name from a header.</description>
+          <Restriction>Constraint.isValidRegex(^\$\{header\.[a-zA-Z][a-zA-Z0-9\_\-]*\}$|^[a-zA-Z][a-zA-Z0-9\-\_\.\~]*$)</Restriction>
+          <ErrorMessage>Data store name should begin with a letter and use characters (aA-zZ, 0-9, - _ . ~ ) without any whitespace or you can enter ${header.headername} to dynamically read the name from a header.</ErrorMessage>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>visibility</ReferenceName>
+          <description>Specify if the store is to be used within one integration flow (Local) or shared between different integration flows (Global).</description>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>dataStoreId</ReferenceName>
+          <description>Specify the corresponding Entry ID of the content to be fetched from data store. You can enter ${header.headername} or ${xpath.node} to read the Entry ID from the incoming message. Entry ID specified here takes precedence over the ID in header 'SapDataStoreId'.</description>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>delete</ReferenceName>
+          <description>Select this option to delete messages from data store after successfully fetching the messages</description>
+        </AttributeReference>
+      </AttributeGroup>
+    </Tab>
+    <!-- additional information -->
+    <AllowedHeaders/>
+    <ReferencedComponents/>
+  </Variant>
+  <Variant VariantId="ctype::FlowstepVariant/cname::delete/version::1.1.2" VariantDisplayName="Delete" VariantName="Delete" Preserves="true" AttachmentBehavior="Preserve">
+    <!-- allowed input content type -->
+    <InputContent Cardinality = "1" Scope="insidepool" MessageCardinality="" isStreaming="">
+      <Content>
+        <ContentType>Any</ContentType>
+        <Schema/>
+      </Content>
+    </InputContent>
+    <OutputContent Cardinality = "1" Scope="insidepool" MessageCardinality="" isStreaming="">
+      <Content>
+        <ContentType>Any</ContentType>
+        <Schema/>
+      </Content>
+    </OutputContent>
+    <!-- Attribute Groupings and Restriction -->
+    <Tab id="DeleteOperation">
+      <GuiLabels>
+        <Label language="EN">Delete Operation</Label>
+      </GuiLabels>
+      <AttributeGroup id="generalDetails">
+        <AttributeReference>
+          <ReferenceName>storageName</ReferenceName>
+          <description>Enter a data store name (maximum 20 characters). The name should begin with an alphabetic character and use characters (aA-zZ, 0-9, - _ . ~ ) without any whitespace or you can enter ${header.headername} to dynamically read the name from a header.</description>
+          <Restriction>Constraint.isValidRegex(^\$\{header\.[a-zA-Z][a-zA-Z0-9\_\-]*\}$|^[a-zA-Z][a-zA-Z0-9\-\_\.\~]*$)</Restriction>
+          <ErrorMessage>Data store name should begin with a letter and use characters (aA-zZ, 0-9, - _ . ~ ) without any whitespace or you can enter ${header.headername} to dynamically read the name from a header.</ErrorMessage>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>visibility</ReferenceName>
+          <description>Specify if the store is to be used within one integration flow (Local) or shared between different integration flows (Global).</description>
+        </AttributeReference>
+        <AttributeReference>
+          <ReferenceName>messageId</ReferenceName>
+          <description>Specify the corresponding Entry ID of the content to be deleted from data store. You can enter ${header.headername} or ${xpath.node} to read the Entry ID from the incoming message. Entry ID specified here takes precedence over the ID in header 'SapDataStoreId'.</description>
+        </AttributeReference>
+      </AttributeGroup>
+    </Tab>
+    <!-- additional information -->
+    <AllowedHeaders/>
+    <ReferencedComponents/>
+  </Variant>
+  <!-- AttributeMetadata -->
+  <AttributeMetadata>
+    <Name>override</Name>
+    <DataType>xsd:boolean</DataType>
+	<Default>false</Default>
+    <GuiLabels>
+      <Label language="EN">Overwrite Existing Message</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>messageId</Name>
+    <Usage>false</Usage>
+    <DataType>xsd:string</DataType>
+    <GuiLabels>
+      <Label language="EN">Entry ID</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <!--  full copy of messageId  -->
+  <AttributeMetadata>
+    <Name>dataStoreId</Name>
+    <Usage>false</Usage>
+    <DataType>xsd:string</DataType>
+    <GuiLabels>
+      <Label language="EN">Entry ID</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>visibility</Name>
+    <Usage>false</Usage>
+    <DataType>xsd:string</DataType>
+	<Default>local</Default>
+    <GuiLabels>
+      <Label language="EN">Visibility</Label>
+    </GuiLabels>
+    <FixedValues>
+      <FixedValue>
+        <Value>local</Value>
+        <GuiLabels>
+          <Label language="EN">Integration Flow</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>global</Value>
+        <GuiLabels>
+          <Label language="EN">Global</Label>
+        </GuiLabels>
+      </FixedValue>
+    </FixedValues>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>encrypt</Name>
+    <DataType>xsd:boolean</DataType>
+	<Default>true</Default>
+    <GuiLabels>
+      <Label language="EN">Encrypt Stored Message</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>expire</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Default>90</Default>
+    <GuiLabels>
+      <Label language="EN">Expiration Period (in d)</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>alert</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Default>2</Default>
+    <GuiLabels>
+      <Label language="EN">Retention Threshold for Alerting (in d)</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>storageName</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+    <Length />
+    <GuiLabels>
+      <Label language="EN">Data Store Name</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>delete</Name>
+	<DataType>xsd:boolean</DataType>
+	<Default>false</Default>
+    <GuiLabels>
+      <Label language="EN">Delete After Fetch</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>maxresults</Name>
+    <Usage>true</Usage>
+    <DataType>xsd:string</DataType>
+	<Default>1</Default>
+    <GuiLabels>
+      <Label language="EN">Number of Polled Messages</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+</ComponentMetadata>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="org.eclipse.pde"
+  		style="css/style.css"
+  		name="SAP Cloud Platform" path="tutorials/@">
+		<group id="neo-tutorials-group"
+			label="SAP Cloud Platform"
+			style-id="content-group">
+       		<link label="Creating a HelloWorld application"
+       			url="http://org.eclipse.ui.intro/openBrowser?url=https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/e5a8b1d3bb571014a0f89bb4706d4e0b.html"
+       			id="neo-link"
+       			style-id="content-link">
+          		<text>Create a simple "HelloWorld" Web application, which you can use for testing on SAP Cloud Platform</text>
+       		</link>
+       		<link label="All tutorials"
+       			url="http://org.eclipse.ui.intro/openBrowser?url=https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/8105b26e430a4aea9dc46a7aa6f8d011.html"
+       			id="neo-link"
+       			style-id="content-link">
+          		<text>Learn how to use the services offered by the platform</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>

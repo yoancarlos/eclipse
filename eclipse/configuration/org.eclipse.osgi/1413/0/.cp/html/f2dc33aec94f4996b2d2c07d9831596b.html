@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="The Integration Designer allows you to model specific patterns which are handled at runtime in an unexpected way."/>
+<meta name="description" content="The Integration Designer allows you to model specific patterns which are handled at runtime in an unexpected way."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Restrictions</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiof2dc33aec94f4996b2d2c07d9831596b">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Restrictions</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc">The Integration Designer allows you to model specific patterns which are handled at
+		runtime in an unexpected way.</p>
+
+		<div class="section">
+<div class="table-wrapper tablenoborder"><table summary="" id="loiof2dc33aec94f4996b2d2c07d9831596b__d6646e96" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Restrictions and Alternative Configuration Settings</span></caption>
+<colgroup><col width="25%"/><col width="25%"/><col width="25%"/><col width="25%"/></colgroup>
+
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="25%" id="d5245934e36">Modelled Pattern</th>
+
+                            <th class="entry" valign="top" width="25%" id="d5245934e39">Expected Behavior at Runtime</th>
+
+                            <th class="entry" valign="top" width="25%" id="d5245934e42">Actual Behavior at Runtime</th>
+
+                            <th class="entry" valign="top" width="25%" id="d5245934e45">Alternative Modeling Option</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="25%" headers="d5245934e36 ">Integration flow step with more than one outgoing sequence
+                                    flows<p class="p">For example, after a Message Persistence step the
+                                    message is supposed to be sent to multiple receivers in
+                                    parallel.</p>
+</td>
+
+                            <td class="entry" valign="top" width="25%" headers="d5245934e39 ">The same message is processed in parallel after the integration
+                                flow step.</td>
+
+                            <td class="entry" valign="top" width="25%" headers="d5245934e42 ">The messages are delivered to the different receivers in a
+                                sequence. <p class="p">Hereby, the order in that the messages are delivered is
+                                    randomly generated.</p>
+<p class="p">In addition to that, the following
+                                    behavior may occur: the message which results from the
+                                    processing in the previous sequence flow is taken as input for
+                                    the next sequence flow.</p>
+<div class="note note"><span class="notetitle">Note</span> As an example,
+                                    consider two parallel sequence flows where the first one
+                                    contains an encryption step and the second one not. In that
+                                    case, the receiver of the second sequence flow also gets an
+                                    encrypted message (although in the second sequence flow no
+                                    encryption step has been configured).</div>
+</td>
+
+                            <td class="entry" valign="top" width="25%" headers="d5245934e45 ">Configure only one outgoing sequence flow and parallel processing
+                                using a multicast of messages.</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+<div class="sectiondiv subsection" id="d6646e157">
+                <p class="p subsectiontitle">Comment on Database Transactions </p>
+
+                <p class="p">The following step types include <cite class="cite">transactional database processing</cite>.  </p>
+
+                <p class="p">If one of the below listed steps is contained in an integration flow, the
+                    processing of the message is executed in one transaction.</p>
+
+                <ul class="ul" id="loiof2dc33aec94f4996b2d2c07d9831596b__d6646e171">
+                    <li class="li">
+                        <p class="p">Data Store Operations step </p>
+
+                        <ul class="ul" id="loiof2dc33aec94f4996b2d2c07d9831596b__d6646e178">
+                            <li class="li">
+                                <p class="p">Select (in case delete=true) </p>
+
+                            </li>
+
+                            <li class="li">
+                                <p class="p">Write</p>
+
+                            </li>
+
+                            <li class="li">
+                                <p class="p">Get (in case delete=true)</p>
+
+                            </li>
+
+                            <li class="li">
+                                <p class="p">Delete</p>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">Usage of Write variables </p>
+
+                    </li>
+
+                    <li class="li">
+                        <p class="p">Gather step (aggregating messages) </p>
+
+                    </li>
+
+                    
+                    
+                    <li class="li">
+                        <p class="p">Content Enricher</p>
+
+                    </li>
+
+                    
+                </ul>
+
+                <div class="note caution"><span class="cautiontitle">Caution</span> 
+                    <p class="p">Such steps might lead to resource shortages because long running transactions
+                        can cause node instability and impede other processes that are running in
+                        transactions.</p>
+
+                    <p class="p">Some of the above mentioned steps or adapters persist data in the database.
+                        In case of an error, the whole process is rolled back and the original state
+                        is being re-established. That means, data from failed processes remain and,
+                        in case message processing fails, customers normally cannot access data
+                        about the failed processing (due to the roll-back). </p>
+
+                    <p class="p">In case an error is propagated back to the calling component, all data that
+                        have been written in the course of the (failed) transaction are being
+                        removed (in other words: not persisted in the database). For the calling
+                        component, an error implies, therefore, to restart the integration flow.  </p>
+
+                    <p class="p">Transactional processing is also to be considered in scenarios that contain
+                        asynchronous decoupling. Let’s assume integration flow A contains a Data
+                        Store Operation step. Integration flow B contains a Select operation on the
+                        Data Store and runs into an error. In that case, that data is preserved that
+                        has been written to the database by integration flow A. This behavior makes
+                        sense in particular when you consider the case that integration flow B
+                        changes or deletes the data that has been stored by integration flow A. In
+                        case integration flow B fails, the original data from integration flow A can
+                        be retrieved.</p>
+
+                </div>
+
+            </div></div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You can perform a get operation on the transient data store."/>
+<meta name="description" content="You can perform a get operation on the transient data store."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Define Data Store Delete Operations</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio5efa3ac838e349669f3ad543fc596af6">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Define Data Store Delete Operations</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You can perform a get operation on the transient data store.</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p"/>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio5efa3ac838e349669f3ad543fc596af6__steps_rsl_lyx_wx"><li class="li step stepexpand">
+				<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loio5efa3ac838e349669f3ad543fc596af6__image_swr_b52_cs" src="loioea39f6725af8488fb21702ecea0b6f50_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Data Store Operations</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Position the cursor on the step and in the context menu select the
+					operation.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify the attributes of the data store operation. The set of attributes
+					depends on the chosen operation.</span>
+				<div class="itemgroup info">
+					<div class="p">
+            <div class="table-wrapper"><table summary="" id="loio5efa3ac838e349669f3ad543fc596af6__d800e817" border="1" class="simpletable"><tr class="sthead">
+                    <th valign="bottom" align="left" id="d2205242e57" class="stentry" width="28.98550724637681%">Attribute</th>
+
+                    <th valign="bottom" align="left" id="d2205242e60" class="stentry" width="71.01449275362319%">Description</th>
+
+                </tr>
+<tr class="strow">
+                    <td valign="top" headers="d2205242e57" class="stentry">
+                        <p class="p"><span class="ph uicontrol">Data Store Name</span></p>
+
+                    </td>
+
+                    <td valign="top" headers="d2205242e60" class="stentry">
+                        <p class="p">Specifies the name of the data store (no white spaces).</p>
+
+                        <p class="p">The default data store name for variables is
+                                <span class="ph filepath">sap_global_store</span>. You must not use this name
+                            for data store operations.</p>
+
+                        <p class="p">You can dynamically define this property based on a header. As
+            dynamic parameter for the data store name, enter a header name in the following form:
+                <samp class="ph codeph">${header.&lt;header name&gt;}</samp>. </p>
+
+                    </td>
+
+                </tr>
+<tr class="strow">
+                    <td valign="top" headers="d2205242e57" class="stentry">
+                        <p class="p"><span class="ph uicontrol">Visibility</span></p>
+
+                    </td>
+
+                    <td valign="top" headers="d2205242e60" class="stentry">
+                        <p class="p">Defines if the data store is shared by all integration flows (deployed on
+                            the tenant) or only by one specific integration flow. </p>
+
+                        <ul class="ul" id="loio5efa3ac838e349669f3ad543fc596af6__d800e866">
+                            <li class="li">
+                                <p class="p"><span class="ph uicontrol">Global</span>: Data store is shared across all
+                                    integration flows deployed on the tenant.</p>
+
+                            </li>
+
+                            <li class="li">
+                                <p class="p"><span class="ph uicontrol">Integration Flow</span>: Data store is used by
+                                    one integration flow.</p>
+
+                            </li>
+
+                        </ul>
+
+                    </td>
+
+                </tr>
+<tr class="strow">
+                    <td valign="top" headers="d2205242e57" class="stentry">
+                        <p class="p"><span class="ph uicontrol">Entry ID</span>
+                        </p>
+
+                    </td>
+
+                    <td valign="top" headers="d2205242e60" class="stentry">
+                        <p class="p">Specify an entry ID that will be stored together with the message
+                            content. </p>
+
+                        <p class="p">Details for the entry ID are read from the incoming message. You can
+                            enter the following kind of expressions:</p>
+
+                        <ul class="ul" id="loio5efa3ac838e349669f3ad543fc596af6__d800e905">
+                            <li class="li">
+                                <p class="p"><kbd class="ph userinput">${header.&lt;name&gt;}</kbd> to dynamically
+                                    generate the entry ID from the message header</p>
+
+                            </li>
+
+                            <li class="li">
+                                <p class="p"><kbd class="ph userinput">${xpath.&lt;xpath&gt;}</kbd> to dynamically
+                                    generate the entry ID from an element in the message indicated
+                                    by an xPath expression</p>
+
+                            </li>
+
+                        </ul>
+
+                        <p class="p">In the case of <span class="ph uicontrol">Write</span> operations, if the
+                                <span class="ph uicontrol">Entry ID</span> is not defined, the data store
+                            component generates an entry ID.</p>
+
+                        <p class="p">In the case of <span class="ph uicontrol">Delete</span> and
+                                <span class="ph uicontrol">Get</span> operations, you can explicitly define an
+                                <span class="ph uicontrol">Entry ID</span> or pass header SapDataStoreId.</p>
+
+                    </td>
+
+                </tr>
+</table></div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="13f2e693c834428dad4c14fcc87fe821.html">Dynamic Parameters</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

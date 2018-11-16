@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining Content Modifier</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio2c667a12a0a545d2ad4210e070479312">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining Content Modifier</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loio2c667a12a0a545d2ad4210e070479312__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You can also use content modifier to define local properties for storing additional
+				data during message processing. These properties can be further used in connectors
+				and conditions. </p>
+
+			<p class="p"><strong class="ph b">Example</strong></p>
+
+			<p class="p">In SFTP Connector, the user can specify the receiver file name as -
+				File_${property.count}.txt. </p>
+
+			<p class="p">In Router, the user can define the condition as ${property.count} = '5'. </p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio2c667a12a0a545d2ad4210e070479312__steps_qg3_jtp_cq"><li class="li step stepexpand" id="loio2c667a12a0a545d2ad4210e070479312__step_N10020_N1001D_N10011_N10001">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="keyword uilabel">Model
+						Configuration</span> editor. </span>
+			</li>
+<li class="li step stepexpand" id="loio2c667a12a0a545d2ad4210e070479312__step_N1002D_N1001D_N10011_N10001">
+				<span class="ph cmd">If you want to add a content modifier in the integration flow, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Add Message Transformers</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Content Modifier</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> from the context menu of a connection within the pool.</span>
+			</li>
+<li class="li step stepexpand" id="loio2c667a12a0a545d2ad4210e070479312__step_N1003A_N1001D_N10011_N10001">
+				<span class="ph cmd"> Select the added content modifier in the integration flow model to configure
+					it. </span>
+			</li>
+<li class="li step stepexpand" id="loio2c667a12a0a545d2ad4210e070479312__step_N1004B_N1001D_N10011_N10001">
+				<span class="ph cmd">To configure the content modifier with a saved configuration that is available
+					as a template, choose <span class="ph uicontrol">Load Element Template</span> from the
+					context menu of the <span class="keyword uilabel">Content Modifier</span> element.</span>
+			</li>
+<li class="li step stepexpand" id="loio2c667a12a0a545d2ad4210e070479312__step_N10043_N1001D_N10011_N10001">
+				<span class="ph cmd"> In the <span class="keyword uilabel">Properties</span> view, select the <strong class="ph b">Header</strong> tab.</span>
+			</li>
+<li class="li step stepexpand" id="loio2c667a12a0a545d2ad4210e070479312__step_N10054_N1001D_N10011_N10001">
+				<span class="ph cmd">In the <span class="ph uicontrol">Action</span> column you can either
+						<span class="ph uicontrol">Create</span> additional headers, set values for existing
+					headers of messages (by using constants, another header, an XPath, a property,
+					an external parameter, or by forming an expression).</span>
+				<ol type="a" class="ol substeps" id="loio2c667a12a0a545d2ad4210e070479312__substeps_ukb_5zs_nk">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">To enter an XPath, select <em class="ph i">xpath</em> in the <span class="keyword uilabel">Type</span>
+							column and browse for an XPath from the lookup in the
+								<span class="keyword uilabel">Value</span> column.</span>
+						<div class="itemgroup info">
+							<div class="note note" id="loio2c667a12a0a545d2ad4210e070479312__note_N1008E_N1008B_N10078_N10074_N1006C_N1001D_N10011_N10001"><span class="notetitle">Note</span> 
+								<ul class="ul" id="loio2c667a12a0a545d2ad4210e070479312__ul_tt5_5zs_nk">
+									<li class="li">The <span class="keyword uilabel">Data Type</span> column is mainly used for
+										the XPath type. The data type can belong to any Java class.
+										An example of a data type for an XPath is
+											<em class="ph i">java.lang.String</em>.</li>
+
+									<li class="li">If the XPath contains a namespace prefix, specify the
+										association between the namespace and the prefix on the
+											<span class="keyword uilabel">Runtime Configuration</span> tab page of the
+										integration flow <span class="keyword uilabel">Properties</span> view.</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+						<div class="itemgroup info">Note that data written into the message header at a certain processing
+							step (for example, in a Content Modifier or Script step) will also be
+							part of the outbound message addressed to a receiver system. Because of
+							this, it is important to consider the following restriction regarding
+							the header size if you use an HTTP-based receiver adapter:<p class="p">If the
+								message header exceeds 8 KB, it might lead to situations that the
+								receiver cannot accept the inbound call. (Relevant for all
+								http-based receiver adapters)</p>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">To enter a header, select <em class="ph i">header</em> in the <span class="keyword uilabel">Type</span>
+							column, and browse for a header from the lookup in the
+								<span class="keyword uilabel">Value</span> column.</span>
+						<div class="itemgroup info">
+							<div class="note note" id="loio2c667a12a0a545d2ad4210e070479312__note_N100C4_N100C1_N100AE_N10074_N1006C_N1001D_N10011_N10001"><span class="notetitle">Note</span> 
+								<ul class="ul" id="loio2c667a12a0a545d2ad4210e070479312__ul_iyg_wzs_nk">
+									<li class="li">This lookup dialog shows you a list of headers that you have
+											specified:<ul class="ul" id="loio2c667a12a0a545d2ad4210e070479312__ul_qyg_wzs_nk">
+											<li class="li">In the <span class="keyword uilabel">Header</span> tab page of
+												<span class="keyword uilabel">Content Modifier</span> flow
+												steps</li>
+
+											<li class="li">In the <span class="keyword uilabel">Allowed Headers</span> field of
+												the <span class="keyword uilabel">Runtime Configuration</span> tab
+												page</li>
+
+										</ul>
+</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">To enter a property, select <em class="ph i">property</em> in the
+								<span class="keyword uilabel">Type</span> column and define a value based on the
+							selected value type. </span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">To enter an external parameter, select <em class="ph i">external parameter</em> in the
+								<span class="keyword uilabel">Type</span> column and define the parameter key. For
+							more information, see <strong class="ph b">Externalizing Parameters of Integration
+								Flow</strong> (section 2.5). </span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you are using version 1.2 then you can specify name or expression of the
+					header/property to <span class="ph uicontrol">Delete</span> an existing header/property
+					through the <span class="ph uicontrol">Action</span> column, by executing the following
+					substeps.</span>
+				<ol type="a" class="ol substeps" id="loio2c667a12a0a545d2ad4210e070479312__substeps_llp_5h2_jx">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you click on the icon <img class="image" id="loio2c667a12a0a545d2ad4210e070479312__image_rvw_bm2_jx" src="loio18e3bf9ce48d4db299a4f557057abcb9_LowRes.png"/> in
+								<span class="ph uicontrol">Name</span> field, then <span class="ph uicontrol">Specify Header or
+								Expression</span> dialog appears.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want to delete header using header name then enter the required
+							name in <span class="ph uicontrol">Header</span> field.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want to delete headers using expression then enter the required
+							name or expression in <span class="ph uicontrol">Expression</span> field.</span>
+						<div class="itemgroup info">
+							<ul class="ul" id="loio2c667a12a0a545d2ad4210e070479312__ul_msf_g32_jx">
+								<li class="li">
+									<p class="p">In <span class="ph uicontrol">Include</span> field you can enter name or
+										expression of the header you want to delete. For example, if
+										you enter 'test*', then all headers starting with test are
+										deleted. </p>
+
+								</li>
+
+								<li class="li">
+									<p class="p">In <span class="ph uicontrol">Exclude</span> field you can enter name or
+										expression of the header you do not want to delete. For
+										example, if you enter 'test*', then all headers starting
+										with test are not deleted. </p>
+
+								</li>
+
+							</ul>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd"> In the same way as for headers, in <span class="ph uicontrol">Action</span> column, the
+					user can either <span class="ph uicontrol">Create</span> additional properties, set values
+					for existing properties of messages (by using constants, another header, an
+					XPath, a property, an external parameter, or by forming an expression) or
+						<span class="ph uicontrol">Delete</span> properties as explained above, by selecting
+					the <strong class="ph b">Property</strong> tab in the <span class="keyword uilabel">Properties</span> view. </span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio2c667a12a0a545d2ad4210e070479312__ul_asy_41y_h4">
+							<li class="li">
+								<p class="p">Special characters like <span class="ph emphasis emphasis">{}</span>,
+										<span class="ph emphasis emphasis">[]</span> are not allowed in header name, for
+									a header of type <kbd class="ph userinput">Constant</kbd>.</p>
+
+							</li>
+
+							<li class="li">Header values can be lost following the external system call,
+								whereas properties will be available for complete message execution.
+							</li>
+
+						</ul>
+
+						<ul class="ul" id="loio2c667a12a0a545d2ad4210e070479312__ul_oyv_p1y_h4">
+							<li class="li">During outbound communication, headers will be handed over to all
+								message receivers and integration flow steps, whereas properties
+								will remain within the integration flow and will not be handed over
+								to receivers.</li>
+
+							<li class="li">You must specify name of the property you want to delete.</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loio2c667a12a0a545d2ad4210e070479312__step_N100C7_N1001D_N10011_N10001">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+<li class="li step stepexpand" id="loio2c667a12a0a545d2ad4210e070479312__step_N100FC_N1001D_N10011_N10001">
+				<span class="ph cmd">To save the configuration of the modifier as a template, choose <span class="keyword uilabel">Save
+						as Template</span> from the context menu of the <span class="keyword uilabel">Content
+						Modifier</span> element.</span>
+				<div class="itemgroup info">
+					<div class="note note" id="loio2c667a12a0a545d2ad4210e070479312__note_N1010D_N1010A_N100FB_N1001D_N10011_N10001"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio2c667a12a0a545d2ad4210e070479312__ul_p1x_zfp_g5">
+							<li class="li">
+								<p class="p">When you save the configuration of the <span class="keyword uilabel">Content
+										Modifier</span> element as a template, the tool stores
+									the template in the workspace as
+										<em class="ph i">&lt;ElementTemplateName&gt;.fst</em>. </p>
+
+							</li>
+
+							<li class="li">
+								<p class="p">If you add a content modifier without header, body and property
+									then you cannot trace the element.</p>
+
+							</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+</ol>
+
+		<div class="example"><h2 class="exampletitle">Example</h2> Suppose the incoming message has the following information:<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;order&gt;
+	&lt;book&gt;
+		&lt;BookID&gt;A1000&lt;/BookID&gt;
+&lt;Count&gt;5&lt;Count&gt;
+&lt;/book&gt;
+&lt;/order&gt;
+</pre></div>
+
+			<p class="p">In the <span class="keyword uilabel">Body</span> tab of the <span class="keyword uilabel">Content Modifier</span>, you
+				specify the content expected in the outgoing message. Keep a placeholder for the
+				header information to modify the content as shown below:</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;invoice&gt;
+&lt;vendor&gt;${header.vendor}&lt;/vendor&gt;
+${in.body}
+&lt;deliverydate&gt;${header.date}&lt;/delivery&gt;
+&lt;/invoice&gt;
+</pre></div>
+
+			<div class="p">In the Header tab of the <span class="keyword uilabel">Content Modifier</span>, enter the
+					following:
+<div class="table-wrapper tablenoborder"><table summary="" id="loio2c667a12a0a545d2ad4210e070479312__table_rks_b3q_1j" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: </span></caption>
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+						
+						
+						
+						<thead class="thead" align="left">
+							<tr class="row">
+								<th class="entry" valign="top" width="33.33333333333333%" id="d546607e437">Name</th>
+
+								<th class="entry" valign="top" width="33.33333333333333%" id="d546607e440">Type</th>
+
+								<th class="entry" valign="top" width="33.33333333333333%" id="d546607e443">Value</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+							<tr class="row">
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d546607e437 ">vendor</td>
+
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d546607e440 ">constant</td>
+
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d546607e443 ">ABC Corp</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d546607e437 ">delivery date</td>
+
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d546607e440 ">constant</td>
+
+								<td class="entry" valign="top" width="33.33333333333333%" headers="d546607e443 ">25062013</td>
+
+							</tr>
+
+						</tbody>
+
+					</table>
+</div>
+</div>
+<p class="p">The output message would look like this:</p>
+
+			<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;invoice&gt;
+&lt;vendor&gt;ABC Corp&lt;/vendor&gt;
+	&lt;order&gt;
+	&lt;book&gt;
+		&lt;BookID&gt;A1000&lt;/BookID&gt;
+&lt;Count&gt;5&lt;Count&gt;
+&lt;/book&gt;
+&lt;/order&gt;
+&lt;deliverydate&gt;25062013&lt;/deliverydate&gt;
+&lt;/invoice&gt;
+</pre></div>
+
+		</div>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="11ef0f5fca8a42159e5d817529a8b31b.html">Content Modifier Basics</a></div>
+<div><a class="link" href="abb1e90c4210468597e0360e840dcb17.html">Headers and Exchange Properties</a></div>
+<div><a class="link" href="c5eeddd36c0143c18258e5f9210803e9.html" title="With the Runtime Configuration you can specify general properties of the integration flow.">Specifying Runtime Configuration</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

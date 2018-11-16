@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Sign the Message Content with PKCS#7/CMS Signer</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiocc09e03e28984f609b1a05788e8c6129">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Sign the Message Content with PKCS#7/CMS Signer</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>You work with the PKCS#7/CMS signer to make your identity known to the participants and
+			thus ensure the authenticity of the messages you are sending on the cloud. This task
+			guarantees your identity by signing the messages with one or more private keys using a
+			signature algorithm.<p class="p">The following prerequisites must be met:</p>
+<ul class="ul" id="loiocc09e03e28984f609b1a05788e8c6129__ul_znm_n1v_ds">
+				<li class="li">You have logged into your customer workspace in HCI web tooling.</li>
+
+				<li class="li">You are editing the integration flow in the editor.</li>
+
+			</ul>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loiocc09e03e28984f609b1a05788e8c6129__image_oqv_t5x_jr" src="loioccb09c1e8d904b42966cd321c4008329_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Signer</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">PKCS7#7 Signer</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Place <span class="ph uicontrol">PKCS7#7 Signer</span> in integration process and define
+					the message path.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Name</span> field, provide a name for the element.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Properties</span> view, enter the details to sign the
+					incoming message with one or more signatures.</span>
+				<div class="itemgroup info">
+					<div class="p">
+			
+<div class="table-wrapper tablenoborder"><table summary="" id="loiocc09e03e28984f609b1a05788e8c6129__d1806e15" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Parameters and Values of PKCS#7/CMS Signer</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+					
+					
+					<thead class="thead" align="left">
+						<tr class="row">
+							<th class="entry" valign="top" width="50%" id="d4490223e94">
+								<p class="p">Parameters</p>
+
+							</th>
+
+							<th class="entry" valign="top" width="50%" id="d4490223e100">
+								<p class="p">Description</p>
+
+							</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d4490223e94 ">
+								<p class="p">Name</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d4490223e100 ">
+								<p class="p">Name for the signer step</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d4490223e94 ">
+								<p class="p">Block Size (in bytes)</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d4490223e100 ">
+								<p class="p">Enter the size of the data that is to be encoded.</p>
+
+								<p class="p">If you enter a value equal to or less than <kbd class="ph userinput">0</kbd>, the whole data is
+									encoded.</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d4490223e94 ">
+								<p class="p">Include Content in Signed Data</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d4490223e100 ">
+								<p class="p">You can choose to include the original content that is to be
+									signed in the Signed Data element. This Signed Data element is
+									written to the message body. Otherwise, you can choose to
+									include the Signed Data in the
+										<span class="ph uicontrol">SapCmsSignedData</span> header and only keep
+									the original content in the message body. </p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d4490223e94 ">
+								<p class="p">Encode Signed Data with Base64</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d4490223e100 ">
+								<p class="p">You can also Base64-encode the Signed Data in either the message
+									body or the message header, to further protect it during message
+									exchange.</p>
+
+								<div class="note note"><span class="notetitle">Note</span> When you Base64-encode the Signed Data, you encode either the
+									message header or body, depending on where the Signed Data is
+									placed. When verifying the message, make sure you specify which
+									part of the message (header or body) was Base64-encoded.</div>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d4490223e94 ">
+								<p class="p">Signer Parameters</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d4490223e100 ">
+								<p class="p">The following parameters can be defined:</p>
+
+								<div class="p">
+									<ul class="ul" id="loiocc09e03e28984f609b1a05788e8c6129__d1806e133">
+										<li class="li">
+											<p class="p">Private Key Alias</p>
+
+										</li>
+
+										<li class="li">
+											<p class="p">Signature Algorithm</p>
+
+										</li>
+
+										<li class="li">
+											<p class="p">Include Certificates</p>
+
+										</li>
+
+										<li class="li">
+											<p class="p">Include Signing Time</p>
+
+										</li>
+
+									</ul>
+
+								</div>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+</div>
+
+		</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

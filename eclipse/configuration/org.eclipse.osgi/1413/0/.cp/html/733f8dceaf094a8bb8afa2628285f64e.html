@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Define Filter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio733f8dceaf094a8bb8afa2628285f64e">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Define Filter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loio733f8dceaf094a8bb8afa2628285f64e__ul_vcz_p1p_gr">
+					<li class="li">
+						<p class="p">You have logged on to <span class="ph pname">SAP Cloud Platform
+                        Integration</span> web application.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You have copied or imported the integration package to your
+							workspace.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You are editing the integration flow.</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div><p class="p">You use <span class="ph uicontrol">Filter</span> to extract information from an incoming message.
+				In other words, you filter out parts of the message that you do not want and extract
+				only the data that you want.</p>
+<div class="p">Here's an example for a
+				message:<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;Message&gt;
+&lt;orders&gt;
+		&lt;order&gt;
+			&lt;clientId&gt;I0001&lt;/clientId&gt;
+			&lt;count&gt;100&lt;/count&gt;
+		&lt;/order&gt;
+		&lt;order&gt;
+			&lt;clientId&gt;I0002&lt;/clientId&gt;
+		     	 &lt;count&gt;10&lt;/count&gt;
+		&lt;/order&gt;
+&lt;/orders&gt;
+&lt;/Message&gt;</pre></div>
+Let
+				us assume that you are interested only in the <span class="ph uicontrol">count</span>. You use
+				the <span class="ph uicontrol">Filter</span> and specify an Xpath
+					<kbd class="ph userinput">/Message/orders/order/count/text()</kbd>.</div>
+<p class="p">The output of
+				the content filter would be data in <span class="ph uicontrol">count</span> fields of the
+				message. The output in this example with the specified Xpath is
+					<span class="ph uicontrol">10010</span></p>
+.</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step">
+				<span class="ph cmd">In the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loio733f8dceaf094a8bb8afa2628285f64e__image_nx1_vc1_z5" src="loioa34d7d66133d4635a991cbecabebe074_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Filter</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Place <span class="ph uicontrol">Filter</span> in the integration process and define the
+					message path.</span>
+			</li>
+<li class="li step">
+				<span class="ph cmd">Select <span class="ph uicontrol">Filter</span> and provide values in fields based on
+					description in table.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio733f8dceaf094a8bb8afa2628285f64e__choicetable_qt1_cd1_z5">
+<thead><tr><th valign="bottom" align="left" id="d2644492e108-option">
+							<p class="p">Field</p>
+
+						</th>
+<th valign="bottom" align="left" id="d2644492e108-desc">
+							<p class="p">Description</p>
+
+						</th></tr></thead>
+<tbody>
+					
+					<tr class="strow chrow">
+						<td valign="top" headers="d2644492e108-option" id="d2644492e127" class="stentry choption" width="50%"><strong>
+							<p class="p">Name</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2644492e108-desc d2644492e127" class="stentry chdesc" width="50%">
+							<p class="p">Specify a name for filter step. By default, the value is
+									<span class="ph uicontrol">Filter</span>.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2644492e108-option" id="d2644492e145" class="stentry choption" width="50%"><strong>
+							<p class="p">XPath Expression</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2644492e108-desc d2644492e145" class="stentry chdesc" width="50%">
+							<p class="p">Specify Xpath to the message node that contains information to be
+								extracted</p>
+
+						</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">In <span class="ph uicontrol">Value Type</span> dropdown list, select value type based on
+					description in table.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio733f8dceaf094a8bb8afa2628285f64e__choicetable_fbg_w21_z5">
+<thead><tr><th valign="bottom" align="left" id="d2644492e168-option">
+							<p class="p">Value Type</p>
+
+						</th>
+<th valign="bottom" align="left" id="d2644492e168-desc">
+							<p class="p">Description</p>
+
+						</th></tr></thead>
+<tbody>
+					
+					<tr class="strow chrow">
+						<td valign="top" headers="d2644492e168-option" id="d2644492e187" class="stentry choption" width="50%"><strong>
+							<p class="p">String</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2644492e168-desc d2644492e187" class="stentry chdesc" width="50%">
+							<p class="p">The output of filter is of type string</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2644492e168-option" id="d2644492e202" class="stentry choption" width="50%"><strong>
+							<p class="p">Integer</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2644492e168-desc d2644492e202" class="stentry chdesc" width="50%">
+							<p class="p">The output of filter is of type integer</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2644492e168-option" id="d2644492e217" class="stentry choption" width="50%"><strong>
+							<p class="p">Boolean</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2644492e168-desc d2644492e217" class="stentry chdesc" width="50%">
+							<p class="p">The output of filter is of type boolean</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2644492e168-option" id="d2644492e232" class="stentry choption" width="50%"><strong>
+							<p class="p">Node</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2644492e168-desc d2644492e232" class="stentry chdesc" width="50%">
+							<p class="p">The output of filter is of type node</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d2644492e168-option" id="d2644492e248" class="stentry choption" width="50%"><strong>
+							<p class="p">Nodelist</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d2644492e168-desc d2644492e248" class="stentry chdesc" width="50%">
+							<p class="p">The output of filter is a collection of nodes</p>
+
+						</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step">
+				<span class="ph cmd">Save or deploy the configuration.</span>
+				
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

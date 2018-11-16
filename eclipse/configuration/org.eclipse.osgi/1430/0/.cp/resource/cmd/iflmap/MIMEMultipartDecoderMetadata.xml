@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Decoder/version::1.0.2" ComponentName="sap:Decoder" UIElementType="Flowstep" IsExtension="false" IsFinal="true" IsPreserves="false">
+    <Variant VariantId="ctype::FlowstepVariant/cname::MIME Multipart Message Decode/version::1.0.2" VariantDisplayName="MIME Multipart Decoder" VariantName="MIME Multipart Message Decode" AttachmentBehavior="Modify">
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </OutputContent>
+        <Tab id="iflow.mime.multipart.decode.tab">
+            <GuiLabels>
+                <Label language="EN">Processing</Label>
+            </GuiLabels>
+            <AttributeGroup id="iflow.mime.multipart.decode.general_details">
+                <AttributeReference>
+                    <ReferenceName>MultipartHeadersInline</ReferenceName>
+                    <description>Select if the MIME headers of the multipart are part of the message body instead of a message header</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+        <AllowedHeaders></AllowedHeaders>
+        <ReferencedComponents></ReferencedComponents>
+    </Variant>
+    <AttributeMetadata>
+        <Name>MultipartHeadersInline</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>false</Default>
+        <GuiLabels>
+            <Label language="EN">Multipart Headers Inline</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

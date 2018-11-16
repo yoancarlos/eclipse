@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring a Channel with SuccessFactors Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio9ffdd15d82c2479eba9f92843c97b127">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring a Channel with SuccessFactors Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<p class="p">You have created an integration project and an integration flow.</p>
+
+			<div class="p">To successfully run the <span class="ph emphasis emphasis">Operations Modeler</span>, your Java Virtual Machine
+				(JVM) must contain the security certificate recommended by the SuccessFactors
+				system. <span class="ph emphasis emphasis">Example:</span> VeriSign Class 3 Public Primary Certification
+				Authority - G5 security certificate. <div class="note note"><span class="notetitle">Note</span> First, you must verify if the JVM
+					contains the security certificate that is used by SuccessFactors system. If not,
+					then download the certificate from the appropriate security certificate vendor
+					and install it. You can refer to JVM documentation for verifying and installing
+					the security certificate on to your JVM. Ensure that the IP addresses of the
+						<span class="ph pname">SAP Cloud Platform
+                        Integration</span>
+					runtime worker node and the systems you are using to connect to the
+					SuccessFactors system are in the list of allowed IP addresses.</div>
+</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>The SuccessFactors adapter provides three message protocols for you to communicate with
+			the SuccessFactors system. They are:<ol class="ol" id="loio9ffdd15d82c2479eba9f92843c97b127__ol_rnz_mxt_b4">
+				<li class="li"><span class="ph uicontrol">SOAP</span> - <a class="xref" href="aad94bc587904765b64f1bbbf80aac19.html">Configuring SuccessFactors Adapter with SOAP Message Protocol</a></li>
+
+				<li class="li"><span class="ph uicontrol">OData V2</span> - <a class="xref" href="8b4ff4fd9ee446cbbc7af8578ffd27c0.html">Configuring SuccessFactors Adapter with OData V2 Message Protocol</a><div class="note note"><span class="notetitle">Note</span> This is available only
+						for the receiver channel.</div>
+</li>
+
+				<li class="li"><span class="ph uicontrol">OData V4</span> - <a class="xref" href="9c915cc929d84559997c12e18c74e9f0.html">Configuring SuccessFactors Adapter with OData V4 Message Protocol</a><div class="note note"><span class="notetitle">Note</span> This is available only
+						for the receiver channel.</div>
+</li>
+
+				<li class="li"><span class="ph uicontrol">REST</span> - <a class="xref" href="7309f2a35b5d45249d80bc161569a062.html">Configuring SuccessFactors Adapter with REST Message Protocol</a></li>
+
+			</ol>
+<p class="p">You can choose the protocol you want based on the scenario you want to execute.
+				</p>
+<div class="p">You need to provide the following details in order to communicate with the
+				SuccessFactors system. <ul class="ul" id="loio9ffdd15d82c2479eba9f92843c97b127__ul_axw_zyt_b4">
+					<li class="li"><span class="ph emphasis emphasis">Connection details</span> – Details required to establish a
+						connection with the SuccessFactors system</li>
+
+					<li class="li"><span class="ph emphasis emphasis">Processing details</span> – Information required to process
+						your modeled operation</li>
+
+					<li class="li"><span class="ph emphasis emphasis">Scheduler</span> – Settings that enable you to schedule a data
+						polling cycle at regular intervals<div class="p">
+							<div class="note note"><span class="notetitle">Note</span> The scheduler is available only for the sender channel.</div>
+
+						</div>
+</li>
+
+				</ul>
+<div class="note note"><span class="notetitle">Note</span> The password for connecting to the SuccessFactors system should be
+					deployed onto the tenant via the ‘Credentials’ deployment wizard available in
+					the Node Explorer. </div>
+<div class="note tip"><span class="tiptitle">Tip</span> You can use the Insert (POST)
+					operation to insert more than one records in a single operation. These records
+					must have an edmx association between them.</div>
+</div>
+</div>
+	</div>
+
+<div class="related-links"> 
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

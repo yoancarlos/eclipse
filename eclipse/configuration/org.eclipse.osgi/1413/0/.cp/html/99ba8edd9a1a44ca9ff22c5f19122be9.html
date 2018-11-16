@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure Multiple Integration Flows</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio99ba8edd9a1a44ca9ff22c5f19122be9">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure Multiple Integration Flows</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>You have copied the integration package to your workspace</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">SAP standard integration packages offer a feature where you can configure multiple integration
+				flows that connect to the same system at once. You need to enter the configuration
+				details only once in the mass configuration screen. All the integration flows that
+				connect to that system instance are updated with the details. This eliminates the
+				need for individually entering the configuration details in each integration
+				flow.</p>
+
+			<p class="p">For example, consider a scenario in which all the integration flows connect to the
+				same instance of SAP ERP. The configuration details like Host, Port and Client are
+				the same for all the integration flows. Once you specify these details in the mass
+				configuration screen, the application updates these details in all the relevant
+				integration flows. This simplifies the task of configuring multiple integration
+				flows that share common system properties. </p>
+
+			<div class="note remember"><span class="remembertitle">Remember</span> 
+				<ul class="ul" id="loio99ba8edd9a1a44ca9ff22c5f19122be9__ul_kbf_j3d_m4">
+					<li class="li">The system consolidates field names into a single section only if they match exactly across
+						all the integration flows you select for configuration. These field names
+						are sender, receiver authentication details and receiver system
+						details.</li>
+
+					<li class="li">You can also configure authentication details during mass
+						configuration.</li>
+
+					<li class="li">You can only configure for SOAP and IDOC adapters.</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><p class="li stepsection">You use this procedure to configure multiple integration
+				flows.</p><ol class="ol steps" id="loio99ba8edd9a1a44ca9ff22c5f19122be9__steps_yxk_tkc_1p"><li class="li step stepexpand">
+				<span class="ph cmd">Launch <span class="ph pname" id="loio99ba8edd9a1a44ca9ff22c5f19122be9__int-long-name">SAP Cloud Platform Integration</span> Web application
+					using the application URL. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol"><img class="image" id="loio99ba8edd9a1a44ca9ff22c5f19122be9__image_p4l_n3q_gr" src="loio2e38de020d5940a19f341ef8c54af5b9_LowRes.png"/></span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Design</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select the package that contains the integration flows that you want to configure and
+					choose <span class="ph uicontrol">Package content</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Artifacts</span> screen area, select the integration flow(s) you
+					want to configure. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Actions</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Configure</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> You can also download the artifacts to your local folder by choosing
+							<span class="ph uicontrol">Download</span> instead of
+							<span class="ph uicontrol">Configure</span>.</div>
+
+				</div>
+				<div class="itemgroup stepresult">The system displays the externalized system properties pertaining to the selected
+					integration flows that you want to configure. If there are common properties,
+					the application displays them as a single entry. </div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to save the configuration, choose <span class="ph uicontrol">Save</span>.
+				</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to deploy the integration flows, choose
+						<span class="ph uicontrol">Deploy</span>. </span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

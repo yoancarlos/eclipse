@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Content Modifier Basics</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio11ef0f5fca8a42159e5d817529a8b31b">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Content Modifier Basics</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc"/>
+
+		<div class="section">
+            <p class="p">An integration flow is a BPM (Business Process Model and Notation)-like model that
+                allows you to specify how a message is to be processed on a tenant. </p>
+
+            <p class="p">To interpret an integration flow model at runtime, it is transformed into an XML
+                structure that is compatible with Apache Camel (<a class="extlink" href="http://help.sap.com/disclaimer?site=http://camel.apache.org" target="_blank" alt="http://camel.apache.org" title="http://camel.apache.org">http://camel.apache.org<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>),
+                an Open Source integration framework for Java that supports the mediation and
+                routing of messages of any format. </p>
+
+            <p class="p">The only prerequisite for a message that is to be processed by the Camel framework is
+                that it comprises the following elements: </p>
+
+            <ul class="ul" id="loio11ef0f5fca8a42159e5d817529a8b31b__d527e101">
+                <li class="li">
+                    <p class="p">Headers </p>
+
+                    <p class="p">Contain information related to the message, for example, information for
+                        addressing the message sender.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">Attachments </p>
+
+                    <p class="p">Contain optional data that is to be attached to the message.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">Body</p>
+
+                    <p class="p">Contains the payload (usually with the business-related data) to be
+                        transferred in the message.</p>
+
+                </li>
+
+            </ul>
+
+            <p class="p">As long as a message is being processed, a data container (referred to
+            as <cite class="cite">Exchange</cite>) is available. This container is used to store additional data
+            besides the message to be processed. An Exchange can be seen as an abstraction of a
+            message exchange process as it is executed by the Camel framework. An Exchange is
+            identified uniquely by an Exchange ID. In the <span class="ph uicontrol">Properties</span> area of
+            the Exchange, additional data can be stored temporarily during message processing. This
+            data is available for the runtime during the whole duration of the message exchange.</p>
+
+            <p class="p">You can use the <span class="ph uicontrol">Content Modifier</span> step to modify a message by
+                adding additional data to it. </p>
+
+            <p class="p">More precisely, this step type allows you to modify the content of the following
+                three data containers during message processing: </p>
+
+            <ul class="ul" id="loio11ef0f5fca8a42159e5d817529a8b31b__d527e143">
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">Message Header</span></p>
+
+                    <p class="p">You can add, headers to the message or you can edit and delete headers.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">Message Body</span></p>
+
+                    <p class="p">You can modify the message body part.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p"><span class="ph uicontrol">Exchange Property</span></p>
+
+                    <p class="p">You can write data to the message exchange, edit and delete the
+                        properties.</p>
+
+                </li>
+
+            </ul>
+
+            <p class="p">For example, you can retrieve the value of a particular element of the payload of an
+                inbound message and write this value to the header of the message (to make it
+                available for subsequent processing steps). </p>
+
+            <p class="p">You need to specify additional parameters in the Content Modifier step to tell the
+                integration runtime how exactly to access the data from the incoming message (that
+                is to be written to one of the three data containers above). </p>
+
+            <p class="p">Here's a simple example to show how this works: Let's say you want to write the value
+                of the element <samp class="ph codeph">CustomerNumber</samp> from an inbound XML message to the
+                message header, to make it available for subsequent process steps. </p>
+
+            <p class="p">In this case, you could configure the Content Modifier as follows:</p>
+
+            <p class="p">On the <span class="ph uicontrol">Message Header</span> tab of the Content Modifier, add a new
+                entry. Specify <span class="ph uicontrol">XPath</span> as the <span class="ph uicontrol">Type</span>
+                (because you want to address the <samp class="ph codeph">CustomerNumber</samp> element in an
+                incoming XML message). For <span class="ph uicontrol">Value</span>, enter the exact XPath
+                expression that is to be used to address this element (for example:
+                    <span class="ph uicontrol">/Order/Customer/CustomerNumber</span>). In an additional field,
+                you now need to specify the data format expected for the content of the
+                    <samp class="ph codeph">CustomerNumber</samp> element. To express that this is a String
+                element, you need to specify a valid Java data type, which is
+                    <kbd class="ph userinput">java.lang.string</kbd> in our case. For
+                    <span class="ph uicontrol">Name</span>, enter the desired name of the message header (which
+                should contain the <samp class="ph codeph">CustomerNumber</samp> value), for example:
+                    <kbd class="ph userinput">CustomerNo</kbd>. </p>
+
+        </div>
+
+		<div class="section"><div class="section_title">Example</div><div type="Example">
+            
+            <p class="p">The following example shows how to modify both the header and body data container of
+                a message using the Content Modifier step.</p>
+
+            <p class="p"> Suppose that the incoming message has the following information:</p>
+
+            <div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;order&gt;
+	&lt;book&gt;
+		&lt;BookID&gt;A1000&lt;/BookID&gt;
+		&lt;Count&gt;5&lt;/Count&gt;
+	&lt;/book&gt;
+&lt;/order&gt;
+</pre></div>
+
+            <div class="p">On the <span class="keyword uilabel">Header</span> tab of the Content Modifier, enter the following to
+                write constant values to the message header:
+<div class="table-wrapper tablenoborder"><table summary="" id="loio11ef0f5fca8a42159e5d817529a8b31b__d841e600" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: </span></caption>
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+                        
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" valign="top" width="33.33333333333333%" id="d189579e201">Name</th>
+
+                                <th class="entry" valign="top" width="33.33333333333333%" id="d189579e204">Type</th>
+
+                                <th class="entry" valign="top" width="33.33333333333333%" id="d189579e207">Value</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" valign="top" width="33.33333333333333%" headers="d189579e201 ">vendor</td>
+
+                                <td class="entry" valign="top" width="33.33333333333333%" headers="d189579e204 ">constant</td>
+
+                                <td class="entry" valign="top" width="33.33333333333333%" headers="d189579e207 ">ABC Corp</td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" valign="top" width="33.33333333333333%" headers="d189579e201 ">delivery date</td>
+
+                                <td class="entry" valign="top" width="33.33333333333333%" headers="d189579e204 ">constant</td>
+
+                                <td class="entry" valign="top" width="33.33333333333333%" headers="d189579e207 ">25062013</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+</div>
+
+            <p class="p">On the <span class="keyword uilabel">Body</span> tab, keep placeholders for the header information
+                specified in the first Content Modifier step (<samp class="ph codeph">${header.vendor}</samp> and
+                    <samp class="ph codeph">${header.date}</samp>) to modify the content as shown below.
+                Additionally, use a placeholder <samp class="ph codeph">${in.body}</samp> for the incoming
+                message.</p>
+
+            <div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;invoice&gt;
+&lt;vendor&gt;${header.vendor}&lt;/vendor&gt;
+${in.body}
+&lt;deliverydate&gt;${header.date}&lt;/delivery&gt;
+&lt;/invoice&gt;
+</pre></div>
+
+            <p class="p">The output message would look like this:</p>
+
+            <div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;invoice&gt;
+&lt;vendor&gt;ABC Corp&lt;/vendor&gt;
+&lt;order&gt;
+	&lt;book&gt;
+		&lt;BookID&gt;A1000&lt;/BookID&gt;
+		&lt;Count&gt;5&lt;/Count&gt;
+	&lt;/book&gt;
+&lt;/order&gt;
+&lt;deliverydate&gt;25062013&lt;/deliverydate&gt;
+&lt;/invoice&gt;
+</pre></div>
+
+        </div></div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

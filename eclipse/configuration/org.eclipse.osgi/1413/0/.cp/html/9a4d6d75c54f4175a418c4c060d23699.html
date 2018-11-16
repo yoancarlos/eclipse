@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Referencing Value Mappings from a Message Mapping</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio9a4d6d75c54f4175a418c4c060d23699">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Referencing Value Mappings from a Message Mapping</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<ul class="ul" id="loio9a4d6d75c54f4175a418c4c060d23699__ul_xl5_plb_4l">
+				<li class="li">You have imported message mapping (.mmap) from an On-Premise repository into the
+						<strong class="ph b">src.main.resources.mapping</strong> folder of the integration project in your
+					workspace.</li>
+
+				<li class="li">You have placed the required source and target WSDLs into the
+						<strong class="ph b">src.main.resources.wsdl</strong> folder of the integration project in your
+					workspace.</li>
+
+				<li class="li">You have added <em class="ph i">value_mapping.xml</em> under the value mapping project. </li>
+
+			</ul>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this procedure to configure the message mapping definition with references to a value
+				mapping. The value mapping referencing is required when a node value of a message
+				needs to be converted to another representation. The runtime can evaluate the
+				reference only if you deploy the integration flow project containing the message
+				mapping, and the associated value mapping project on the same tenant. </p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Project Explorer</span> view, expand the integration flow
+					project.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Under <span class="keyword uilabel">src.main.resources.mapping</span> folder, double-click the &lt;message
+					map&gt;.mmap to open it in the message mapping editor.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="keyword uilabel">Message Mapping Overview</span>, under the
+						<span class="keyword uilabel">Signature</span> category, provide the source and target
+					WSDLs.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the <span class="keyword uilabel">Definition</span> editor tab page to view the message
+					mapping tree structure.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Connect a source node item with one or more target node item to define the
+					mapping.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Double-click the function icon on the connection, denoted as f<sub class="ph sub">x</sub>, to open the
+					mapping relation between the source and target elements.</span>
+				<div class="itemgroup stepxmp">For example, see the screenshot below:<img class="image" id="loio9a4d6d75c54f4175a418c4c060d23699__image_uhn_gzb_4l" src="loioce1da7f1a2854325b1becf44c7c37849_LowRes.jpg" alt="MessageMapping_Editor" title="MessageMapping_Editor"/></div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="keyword uilabel">Expression</span> tab page of the
+						<span class="keyword uilabel">Properties</span> view, expand the <span class="keyword uilabel">Function</span>
+					folder.</span>
+				<div class="itemgroup stepxmp">For example, see the screenshot below:<img class="image" id="loio9a4d6d75c54f4175a418c4c060d23699__image_zwv_r1c_4l" src="loio0554678ac60347b6ab879939c7978251_LowRes.jpg" alt="ValueMapping_Function" title="ValueMapping_Function"/></div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select the <span class="keyword uilabel">valuemap</span> option under the
+						<span class="keyword uilabel">Conversion</span> package and drop it within the
+						<span class="keyword uilabel">Expression</span> tab page.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Connect the required node and the valuemapping function.</span>
+				<div class="itemgroup stepxmp">For example, see the screenshot below:<img class="image" id="loio9a4d6d75c54f4175a418c4c060d23699__image_g2w_s1c_4l" src="loio0fe6c13d37b1432897ac6c39c314d858_LowRes.jpg" alt="ValueMapping_Expression" title="ValueMapping_Expression"/></div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Double-click the value mapping function and provide details for the value
+					mapping parameters.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+	<extensionContent id="com.sap.ndb.studio.left" name="SAP HANA Studio" style="css/overview.css"
+		path="overview/@">
+	</extensionContent>
+</introContent>

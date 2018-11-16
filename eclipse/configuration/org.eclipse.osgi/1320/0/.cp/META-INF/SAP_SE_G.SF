@@ -1,0 +1,38 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: CKF6bMjURUW76wCSArzb7nhSuz3r6
+ G4XuOW4ySEG+9c=
+SHA-256-Digest-Manifest: PEhKMMPR8fPxYDUcdRGL+w/FeIRds3FYCIJkJ8G8hCc=
+Created-By: 1.8.0_45 (Oracle Corporation)
+
+Name: create.dir
+SHA-256-Digest: RuBsad/Wg6u7pSajPM/yL4VN+GzSyMLhD1jaIzpy49A=
+
+Name: intro/css/sample.css
+SHA-256-Digest: uxpqZxOdpBc6QHlHUeYQyElCnU9j14sULlxL8xGxHiA=
+
+Name: plugin.xml
+SHA-256-Digest: JVPUwPhP0CjkXnKm6+CqZSSjpmHe0A7LIOgvfjYFtrg=
+
+Name: book.css
+SHA-256-Digest: rhCkW+52SxyFc612uwyWov/3WEoiQ2/un6RBzyD3cds=
+
+Name: META-INF/maven/com.sap.ide.support/com.sap.ide.support.doc.user.
+ ext/pom.properties
+SHA-256-Digest: elzzamyD1+TzZKiXJ9t34J6ingLD1xWj/WB7gDqbySU=
+
+Name: intro/css/graphics/picto/abap_project_doc.png
+SHA-256-Digest: tWkJgFbHDaPNdVbLgpOxUuShFzsX0gUJJRpZMGgpvK4=
+
+Name: intro/css/graphics/picto/abap_project.png
+SHA-256-Digest: NM/Yo6nDkcmqal9wGq/z6rMi1LxAX4uOoXUzY4hELqo=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: YgebyBfz36r4shHkLTLKdcTCuy08gMz5jCcZXieWbOc=
+
+Name: intro/introABAPSupportOverview.xml
+SHA-256-Digest: 3GF3SGDU4U6Il+IRNHN7nle8prVoLzmrNFVzA7I7g30=
+
+Name: META-INF/maven/com.sap.ide.support/com.sap.ide.support.doc.user.
+ ext/pom.xml
+SHA-256-Digest: FOu2ILl0cmOubSg0pmTS7nu0zUOFlz8qjG51EAQxpXk=
+

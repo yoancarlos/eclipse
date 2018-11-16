@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Dynamic Parameters</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio5705f2b41cca422e967511e3deb1beb4">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Dynamic Parameters</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc"/>
+
+		<p class="p">You can define placeholders for attributes of certain adapters or step types. The values of
+			these attributes will then dynamically be set based on the content of the processed
+			message.</p>
+
+		<p class="p">For example, parameters <span class="ph uicontrol">From</span>, <span class="ph uicontrol">To</span>,
+				<span class="ph uicontrol">Cc</span>, <span class="ph uicontrol">Bcc</span>,
+				<span class="ph uicontrol">Subject</span>, <span class="ph uicontrol">Mail Body</span> as well as the
+			attachment name, can be dynamically set at runtime from message headers or content. </p>
+
+		<p class="p">To set an attribute to be dynamically filled by a message header attribute, enter a
+			variable in the form <samp class="ph codeph">${header.attr}</samp> in the corresponding field for the
+			attribute of the corresponding step or adapter.</p>
+
+		<p class="p">At runtime, the value of the header attribute (<samp class="ph codeph">attr</samp>) of the processed message
+			is written into the field for the corresponding attribute of the outbound email.</p>
+
+		<div class="section"><div class="section_title">Example: Dynamic Attributes for the Mail Adapter</div><div type="Example: Dynamic Attributes for the Mail Adapter"><p class="p">For example,
+				assume that you dynamically define the email <span class="ph uicontrol">Subject</span> of the
+				mail adapter as shown in the figure below by the variable
+					<samp class="ph codeph">{header.attr}</samp>. </p>
+<p class="p">At runtime, a message is received whose
+				header contains a header attribute <samp class="ph codeph">attr</samp> with the value
+					<samp class="ph codeph">value1</samp>. The mail adapter will then dynamically set the subject
+				of the outbound email with the entry <samp class="ph codeph">value1</samp>.</p>
+<p class="p">Note that the
+				mail adapter processes message content either already contained in the inbound mail
+				(from a sender system) or as modified by content modifier steps on its way between
+				sender and mail adapter.</p>
+<img class="image" id="loio5705f2b41cca422e967511e3deb1beb4__image_wcx_p1d_ss" src="loio177bb4eb5637423d84eec3ec7d780625_LowRes.png"/></div></div>
+
+		<div class="section">
+			
+<div class="table-wrapper tablenoborder"><table summary="" id="loio5705f2b41cca422e967511e3deb1beb4__table_arv_25h_55" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Dynamic Parameters for the different Adapters</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+					
+					
+					<thead class="thead" align="left">
+						<tr class="row">
+							<th class="entry" valign="top" width="50%" id="d1125666e96">
+								<p class="p">Adapter Type</p>
+
+							</th>
+
+							<th class="entry" valign="top" width="50%" id="d1125666e102">
+								<p class="p">Parameters that can be set dynamically at runtime</p>
+
+							</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d1125666e96 ">
+								<p class="p">Mail Adapter</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d1125666e102 ">
+								<p class="p">Receiver: From, To, Cc, Bcc, Subject, Mail Body, Attachment
+									Name</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d1125666e96 ">
+								<p class="p">AS2 Adapter</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d1125666e102 ">
+								<p class="p">Receiver: Own AS2 ID, Partner AS2 ID, Message Subject, Own e-mail Address, Content Type,
+									Signing Algorithm, Encryption Algorithm, Public Key of
+									certificate to be used for encryption, MDN Type
+									(None/Sync/Async), MDN Asynch URL, MDN Signing Algorithm, MDN
+									Signature verfication public key alias, AS2 receipient URL, AS2
+									MDN Sender</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d1125666e96 ">
+								<p class="p">HTTP Adapter</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d1125666e102 ">
+								<p class="p">Receiver: Address, Query</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d1125666e96 ">
+								<p class="p">Success Factors (SOAP) Adapter</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d1125666e102 ">
+								<p class="p">Receiver/Sender: Query, Parameters</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d1125666e96 ">
+								<p class="p">OData Adapter</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d1125666e102 ">
+								<p class="p">Receiver: Query, Custom Query Options, Resource Path</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d1125666e96 ">
+								<p class="p">SFTP Adapter</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d1125666e102 ">
+								<p class="p">File Name</p>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+</div>
+
+			
+<div class="table-wrapper tablenoborder"><table summary="" id="loio5705f2b41cca422e967511e3deb1beb4__table_vlb_bdy_wx" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2: Dynamic Parameters for the different Step Types</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+					
+					
+					<thead class="thead" align="left">
+						<tr class="row">
+							<th class="entry" valign="top" width="50%" id="d1125666e221">
+								<p class="p">Adapter Type</p>
+
+							</th>
+
+							<th class="entry" valign="top" width="50%" id="d1125666e227">
+								<p class="p">Parameters that can be set dynamically at runtime</p>
+
+							</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d1125666e221 ">
+								<p class="p">Data Store Operations Select</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d1125666e227 ">
+								<p class="p">Data Store Name</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d1125666e221 ">
+								<p class="p">Data Store Operations Write</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d1125666e227 ">
+								<p class="p">Data Store Name</p>
+
+								<p class="p">Entry ID</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d1125666e221 ">
+								<p class="p">Data Store Operations Get</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d1125666e227 ">
+								<p class="p">Data Store Name</p>
+
+								<p class="p">Entry ID</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d1125666e221 ">
+								<p class="p">Data Store Operations Delete</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="50%" headers="d1125666e227 ">
+								<p class="p">Data Store Name</p>
+
+								<p class="p">Entry ID</p>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+</div>
+
+		</div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

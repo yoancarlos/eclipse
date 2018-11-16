@@ -1,0 +1,4 @@
+# Debugging options for the com.sap.ndb.studio.jdbc plugin.
+
+# Turn on debugging
+com.sap.ndb.studio.jdbc/debug=true

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You can use the transient data store to temporarily store messages."/>
+<meta name="description" content="You can use the transient data store to temporarily store messages."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining Data Store Operations</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio249800a2ce894867bb6dde96b5dc5df3">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining Data Store Operations</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You can use the transient data store to temporarily store messages. </p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<div class="p">The transient data store (<cite class="cite">data store</cite> for sakes of simplicity) supports four types
+				of operations:
+<div class="table-wrapper tablenoborder"><table summary="" id="loio249800a2ce894867bb6dde96b5dc5df3__table_opt_kn2_cs" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Data Store Operations</span></caption>
+<colgroup><col width="14.005602240896359%"/><col width="85.99439775910365%"/></colgroup>
+
+						
+						
+						<thead class="thead" align="left">
+							<tr class="row">
+								<th class="entry" valign="top" width="14.005602240896359%" id="d438930e38">
+									<p class="p">Operation</p>
+
+								</th>
+
+								<th class="entry" valign="top" width="85.99439775910363%" id="d438930e44">
+									<p class="p">Used to ...</p>
+
+								</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+							<tr class="row">
+								<td class="entry" valign="top" width="14.005602240896359%" headers="d438930e38 ">
+									<p class="p"><span class="ph uicontrol">Write</span></p>
+
+								</td>
+
+								<td class="entry" valign="top" width="85.99439775910363%" headers="d438930e44 ">
+									<p class="p">Store the messages temporarily in the data store.</p>
+
+									<p class="p">If you use a <span class="ph uicontrol">Write</span> operation, you can
+										store the messages in the data store by configuring the data
+										store name and a unique <span class="ph uicontrol">Entry ID</span>.</p>
+
+								</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="14.005602240896359%" headers="d438930e38 ">
+									<p class="p"><span class="ph uicontrol">Delete</span></p>
+
+								</td>
+
+								<td class="entry" valign="top" width="85.99439775910363%" headers="d438930e44 ">
+									<p class="p">Trigger the deletion of messages in the data store.</p>
+
+								</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="14.005602240896359%" headers="d438930e38 ">
+									<p class="p"><span class="ph uicontrol">Select</span></p>
+
+								</td>
+
+								<td class="entry" valign="top" width="85.99439775910363%" headers="d438930e44 ">
+									<p class="p">Fetch messages in bulk from the data store. </p>
+
+									<p class="p">You can also specify the number of messages you fetch in each
+										poll.</p>
+
+									<p class="p">If you use <span class="ph uicontrol">Select</span> operation, you can
+										transfer only overwritten data fetched from the data
+										store.</p>
+
+								</td>
+
+							</tr>
+
+							<tr class="row">
+								<td class="entry" valign="top" width="14.005602240896359%" headers="d438930e38 ">
+									<p class="p"><span class="ph uicontrol">Get</span></p>
+
+								</td>
+
+								<td class="entry" valign="top" width="85.99439775910363%" headers="d438930e44 ">
+									<p class="p">Fetch a specific message from the data store.</p>
+
+								</td>
+
+							</tr>
+
+						</tbody>
+
+					</table>
+</div>
+</div>
+
+			<div class="note note"><span class="notetitle">Note</span> 
+				<p class="p">Note the following related to storing header in the data store:
+            Only headers are stored that are primitive data types, serializable standard data types
+            (such as strings) or lists/sets of such entities. All other data types, although they
+            remain part of the processed message, are not considered during a data store operation
+            and, therefore, can also not be retrieved by subsequent steps from the data store. When
+            retrieving a message body from a data store operation (for example in a select
+            operation), only XML is supported. .</p>
+
+			</div>
+
+			<div class="note note"><span class="notetitle">Note</span> 
+				<p class="p">It is required to explicit trigger a Data Store Operations step,
+            for example, by a Timer event. </p>
+
+			</div>
+
+		</div>
+		<div class="section postreq"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Next Steps</h2></div>
+			<p class="p">You can display the content of the data store in the Data Store Viewer of the
+				Integration Operations feature.</p>
+
+			<div class="p">
+				<div class="note note"><span class="notetitle">Note</span> 
+					<ul class="ul" id="loio249800a2ce894867bb6dde96b5dc5df3__ul_ajk_sh2_fp">
+						<li class="li">In the case of <span class="ph uicontrol">Select</span> operations, you can select
+							multiple messages. The content of the selected messages will appear in
+							the following format:<p class="p">&lt;messages&gt;</p>
+<p class="p"> &lt;message
+								id=”&lt;Entry ID&gt;”&gt;</p>
+<p class="p"> &lt;Content of selected
+								message&gt;</p>
+<p class="p"> &lt;/message&gt; </p>
+<p class="p">&lt;message id=”&lt;Entry
+								ID&gt;”&gt;</p>
+<p class="p">……….. </p>
+<p class="p">………. </p>
+<p class="p">……….
+								</p>
+<p class="p">&lt;/message&gt; </p>
+<p class="p">&lt;message id=”&lt;Entry ID&gt;”&gt;
+								</p>
+<p class="p">……….. </p>
+<p class="p">………. </p>
+<p class="p">………. </p>
+<p class="p">&lt;/message&gt;
+								</p>
+<p class="p">&lt;/messages&gt; </p>
+</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="61eeffa074954cd394f01eb8fe5e14f8.html" title="You can perform a select operation on the transient data store.">Defining Data Store Select Operations</a></div>
+<div><a class="link" href="0e12b005ce1549ce86ed307410e3fe4e.html" title="You can perform a select operation on the transient data store.">Defining Data Store Write Operations</a></div>
+<div><a class="link" href="fb7582f812c24c66a7a7ce453b8e29a0.html" title="n perform a select operation on the transient data store.">Defining Data Store Get Operations</a></div>
+<div><a class="link" href="8e4d9bfa6b8541378e9787eeb6af1f70.html" title="You can perform a select operation on the transient data store.">Defining Data Store Delete Operations</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

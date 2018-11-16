@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css?x=369232283121783"/>
+<title>Defining Content Enricher</title>
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"> </script>
+</head>
+<body class="" id="loio95671b658677483d84d1276c15f2b098">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Defining Content Enricher</h1>
+<div class="body taskbody"><p class="shortdesc"/>
+<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<div class="p">You use this task to enrich an incoming message by appending the additional data retrieved
+				from an external resource before it is sent to the target receiver. Content Enricher
+				offers inbuilt aggregation mechanism to merge incoming payload with content fetched
+				from external resource.<div class="note sap-example example"><span class="exampletitle">Example</span> Suppose a message contains job description
+					details, such as Job ID, Job Category and Job Location. Whereas, the target
+					receiver requires additional information such as the profile details of the
+					candidate who registers for that job and the hiring manager details.<p class="p">In such a
+						scenario, the incoming message can be enriched twice to get the desired
+						output message. The first content enricher will append the profile details
+						of the candidate after the job description details. This enriched output
+						message of the first content enricher acts as the input message to the
+						second content enricher, which appends the hiring manager details to the
+						previously enriched message. In this way, the original message is enriched
+						with the required information as expected by the receiver.</p>
+
+				</div>
+The content enricher uses a look up channel to retrieve additional
+				data from an external resource and it appends the data to the incoming message as
+				shown below:</div>
+
+			<div><pre class="pre codeblock">&lt;n1:Messages xmlns:multimap="http://sap.com/xi/XI/SplitAndMerge"&gt;
+   &lt;n1:Message1&gt;
+      [XML document 1]
+   &lt;/n1:Message1&gt;
+   &lt;n1:Message2&gt;
+      [XML document 2]
+   &lt;/n1:Message2&gt;
+   &lt;n1:Message3&gt;
+      [XML document 3]
+   &lt;/n1:Message3&gt;
+    ...
+&lt;/n1:Messages&gt;
+</pre></div>
+
+			<div class="note note"><span class="notetitle">Note</span> Data Type Definitions (DTDs) that might exist in the original XML or in the second
+				looked-up XML will not be part of the enriched XML. </div>
+
+		</div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand"><span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="keyword uilabel">Model
+						Configuration</span> editor. </span></li>
+<li class="li step stepexpand"><span class="ph cmd">Choose <span class="ph uicontrol">Add Service Call</span> from the context menu of a
+					connection within the pool. </span></li>
+<li class="li step stepexpand"><span class="ph cmd">Right click on <span class="ph uicontrol">Request -Reply</span> element and select <span class="ph uicontrol">Switch
+						To Content Enricher</span>.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">From the <span class="ph uicontrol">Palette</span>, select <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Others</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Reciever</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>, and drop it outside the <span class="ph uicontrol">Integration
+						Process</span> pool.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">From the speed button of the <span class="ph uicontrol">Receiver</span> element, create a connection
+					that represents a channel from the <span class="ph uicontrol">Receiver</span> to the
+						<span class="ph uicontrol">Content Enricher</span>.</span></li>
+<li class="li step stepexpand"><span class="ph cmd">Configure the channel with the SuccessFactors connector details.</span> 
+					<div class="note note"><span class="notetitle">Note</span> In this release, the channel connecting the external resource with the
+						content enricher can be configured with the SuccessFactors adapter and SOAP
+						1.x. </div>
+
+				</li>
+</ol>
+</div>
+<div class="related-links"> 
+
+<div class="familylinks">
+</div>
+</div>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You have the option to encrypt the message content using Open Pretty Good Privacy (OpenPGP)."/>
+<meta name="description" content="You have the option to encrypt the message content using Open Pretty Good Privacy (OpenPGP)."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Encrypting and Signing the Message Content with OpenPGP</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio723081b50ce44f30be03760d304a728a">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Encrypting and Signing the Message Content with OpenPGP</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You have the option to encrypt the message content using Open Pretty Good Privacy
+		(OpenPGP). </p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You have the following options to protect communication at message level based on the OpenPGP
+				standard: </p>
+
+			<ul class="ul" id="loio723081b50ce44f30be03760d304a728a__ul_mfg_s4y_4n">
+				<li class="li">You can encrypt a payload. </li>
+
+				<li class="li">You can sign and encrypt a payload. </li>
+
+			</ul>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loio723081b50ce44f30be03760d304a728a__step_N1001C_N10019_N10011_N10001">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the <span class="ph uicontrol">Model Configuration</span>
+					editor. </span>
+			</li>
+<li class="li step stepexpand" id="loio723081b50ce44f30be03760d304a728a__step_N10029_N10019_N10011_N10001">
+				<span class="ph cmd">Right-click a connection within the pool and choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Add Security Element</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Content Encryptor</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+			</li>
+<li class="li step stepexpand" id="loio723081b50ce44f30be03760d304a728a__step_N1003E_N10019_N10011_N10001">
+				<span class="ph cmd"> In the <span class="ph uicontrol">Model Configuration</span> editor, position the cursor on the
+						<span class="ph uicontrol">Content Encryptor</span> step and in the context menu select
+						<span class="ph uicontrol">Switch to PGP</span>. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Open the <span class="ph uicontrol">Properties</span> view.  </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify whether or not to sign the payload (in addition to applying payload encryption). To
+					do this, select one of the following options for <span class="ph uicontrol">Signatures in PGP
+						Message</span>: </span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio723081b50ce44f30be03760d304a728a__choicetable_udq_pf5_b4">
+<thead><tr><th id="d1482036e89-option" valign="bottom" align="left">Option</th>
+<th id="d1482036e89-desc" valign="bottom" align="left">Description</th></tr></thead>
+<tbody>
+					<tr class="strow chrow">
+						<td valign="top" headers="d1482036e89-option" id="d1482036e93" class="stentry choption"><strong>Include Signature</strong></td>
+
+						<td valign="top" headers="d1482036e89-desc d1482036e93" class="stentry chdesc">Select this option if you want to apply both encryption and
+							signing.</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1482036e89-option" id="d1482036e102" class="stentry choption"><strong>No Signature</strong></td>
+
+						<td valign="top" headers="d1482036e89-desc d1482036e102" class="stentry chdesc">Select this option if you want to apply encryption only. </td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step stepexpand" id="loio723081b50ce44f30be03760d304a728a__step_N1004F_N10019_N10011_N10001">
+				<span class="ph cmd">Under <span class="ph uicontrol">Encryption</span>, specify the following parameters for message
+					encryption:</span>
+				<div class="itemgroup info">
+					<div class="p">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio723081b50ce44f30be03760d304a728a__d3561e15" class="table" frame="border" border="1" rules="all">
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d1482036e136">
+                                <p class="p">Field</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d1482036e142">
+                                <p class="p">Description</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1482036e136 ">
+                                <p class="p">Content Encryption Algorithm</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1482036e142 ">
+                                <p class="p">In the dropdown list, select the algorithm you want to use to
+                                    encrypt the payload.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1482036e136 ">
+                                <p class="p">Secret Key Length</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1482036e142 ">
+                                <p class="p">Enter the secret key length.</p>
+
+                                <div class="p">
+                                    <div class="note note"><span class="notetitle">Note</span> 
+                                        <p class="p">The length of the secret key depends on the encryption
+                                            algorithm that you choose.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1482036e136 ">
+                                <p class="p">Compression Algorithm</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1482036e142 ">
+                                <p class="p">Select the algorithm you want to use to compress the payload.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1482036e136 ">
+                                <p class="p">Armored</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1482036e142 ">
+                                <p class="p">Select if you want the output to be radix 64 (base64) encoded
+                                    with additional header.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1482036e136 ">
+                                <p class="p">Integrity protected Data Packet</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1482036e142 ">
+                                <p class="p">Select if you want to create an Encrypted Integrity Protected
+                                    Data Packet. This is a specific format where an additional hash
+                                    value is calculated (using SHA-1 algorithm) and added to the
+                                    message.</p>
+
+                                <p class="p">This increases the message security level.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d1482036e136 ">
+                                <p class="p">Encryption User ID of Key(s) from Public Keyring</p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d1482036e142 ">
+                                <p class="p">You can specify the encryption key user IDs (or parts of them).
+                                    Based on this, system look for the public key in PGP public
+                                    keyring.</p>
+
+                                <p class="p">You can specify multiple user IDs.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Under <span class="ph uicontrol">Signature</span>, specify the following parameters for message
+					signing (only if you have selected <span class="ph uicontrol">Include Signature</span> for
+						<span class="ph uicontrol">Signatures in PGP Message</span>): </span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio723081b50ce44f30be03760d304a728a__choicetable_tzv_dcx_xn">
+<thead><tr><th id="d1482036e278-option" valign="bottom" align="left">Option</th>
+<th id="d1482036e278-desc" valign="bottom" align="left">Description</th></tr></thead>
+<tbody>
+					<tr class="strow chrow">
+						<td valign="top" headers="d1482036e278-option" id="d1482036e282" class="stentry choption"><strong>Digest Algorithm</strong></td>
+
+						<td valign="top" headers="d1482036e278-desc d1482036e282" class="stentry chdesc">Specify the digest algorithm (or hash algorithm) that is to be applied.<p class="p">The sender
+								calculates a digest (or hash value) from the message content using a
+								digest algorithm. To finalize the payload signing step, this digest
+								is encrypted by the sender using a private key. </p>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1482036e278-option" id="d1482036e293" class="stentry choption"><strong>Signer Key User ID Parts of Keys from the Secret Keyring</strong></td>
+
+						<td valign="top" headers="d1482036e278-desc d1482036e293" class="stentry chdesc">Specify the signer key user ID parts.<p class="p">Based on the signer key user
+								ID parts, the private key (for message signing) is looked up in the
+								PGP secret keyring.</p>
+</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step stepexpand" id="loio723081b50ce44f30be03760d304a728a__step_N1005C_N10019_N10011_N10001">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+		<div class="section postreq"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Next Steps</h2></div>You can provide a file name with the PGP message in the Literal Packet, according to the
+			specification at <a class="extlink" href="http://help.sap.com/disclaimer?site=https://tools.ietf.org/html/rfc4880" target="_blank" alt="https://tools.ietf.org/html/rfc4880" title="https://tools.ietf.org/html/rfc4880">https://tools.ietf.org/html/rfc4880<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>, chapter <cite class="cite">5.9
+				Literal Data Packet (Tag 11)</cite>. <p class="p">By default, this file name is set to an
+				empty string.</p>
+<p class="p">A file name that differs from an empty string can be specified
+				by the header <samp class="ph codeph">CamelFileName</samp>. </p>
+<div class="note note"><span class="notetitle">Note</span> The SFTP adapter sets the
+				header <samp class="ph codeph">CamelFileName</samp> automatically.</div>
+</div>
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

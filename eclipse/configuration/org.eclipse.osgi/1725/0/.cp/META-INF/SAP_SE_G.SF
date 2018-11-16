@@ -1,0 +1,532 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: BareF7y57QGKnXGrfzQzqDxkDyLPM
+ nqMiRCqIG5/EPY=
+SHA-256-Digest-Manifest: 6MEv2d11OSjLKMJZ5q65vVgLSk2jWg8qEEnWLOJz3Kw=
+Created-By: 1.8.0_121 (Oracle Corporation)
+
+Name: plugin.xml
+SHA-256-Digest: mKg7q7Y/cln8Frqh1udG5vkvT9nk62uK24L4SrXO4Gk=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSsqlccNewFileWizard.class
+SHA-256-Digest: 5u7xsT6YwiWmFEq5cjvvLzN7Q+VE0XFhXTnVOnL4ULk=
+
+Name: com/sap/ndb/studio/xse/editor/parser/common/OSDLCoreParser.class
+SHA-256-Digest: YsOAJxCWpq++vsIO0uEPkgU5nZ9MvIztQKgaEGReDjw=
+
+Name: com/sap/ndb/studio/xse/editor/libraries/XSJSLibInitializer.class
+SHA-256-Digest: fXpXwdSLMClJ3i23NjFZUCaCBPy8XiA8hNZyNFUvClk=
+
+Name: com/sap/ndb/studio/xse/editor/lint/ui/preferences/XSJSLintOption
+ sPropertyPage.class
+SHA-256-Digest: Vfwj4TnZAG75KBOWhlWOf3yV1/XADQcd8lBuf4zHZ3E=
+
+Name: com/sap/ndb/studio/xse/editor/builder/XSJSProjectUtil.class
+SHA-256-Digest: uSvcC4UArz01aTYJ/n91JWwkFyd5C7PvRxjubFl+qfk=
+
+Name: icons/JobScheduler.gif
+SHA-256-Digest: sxd36z6lgPArUmkCLMyfVWxrKwg8zvJZZpKxA/ZODsI=
+
+Name: icons/JobSchedulerNew.gif
+SHA-256-Digest: IEkmnI9gOfiXKMPHrOuXS0SEXb6Xjr6Vr+mvqbi7fzc=
+
+Name: com/sap/ndb/studio/xse/editor/lint/ui/preferences/XSJSLintOption
+ sPreferencePage.class
+SHA-256-Digest: 158m2XtJh031AbVIU66o1pMzRZhv4xqj+eNXUHuKn6Y=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/templates/xshttpdest.templ
+ ate
+SHA-256-Digest: PEalVs+lBmWImZ8KOJve8PKPNrZddLQUzlny+yXUz0o=
+
+Name: icons/AppDescriptor.gif
+SHA-256-Digest: +7P3q454iKNQR2Q1zr+B4Ng21xnmhzZdRCl6USMK7Uo=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewSourceFileWizard.clas
+ s
+SHA-256-Digest: IEnaB1IeBbGZiCS9aiiHyL9afu9H0nGcp6UGSGr5RfE=
+
+Name: com/sap/ndb/studio/xse/editor/lint/builder/XSJSLintExcluder$1.cl
+ ass
+SHA-256-Digest: HtkDum0EhC6T/lKU8grPrcps2PXjpQhBwksgAGew5YY=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/ObjectsForProjectWizardPag
+ e$4.class
+SHA-256-Digest: yj99F/zc5eazqV3mT8Lb7jenpcIgrpiRyda0+EIZ5Zs=
+
+Name: com/sap/ndb/studio/xse/editor/help/IXSEditorHelpContextIds.class
+SHA-256-Digest: bfx9SC6cRZmGlrcck+fjVCnp+/pLhE5EvLFTpfk1MaI=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSSqlccMultiPageEditor.cla
+ ss
+SHA-256-Digest: 3kHYd9s6qfG62NbUO7Bag2i5STXH7eRG/r+2d14hD3c=
+
+Name: com/sap/ndb/studio/xse/editor/Activator.class
+SHA-256-Digest: 6blP0PpU71GL61JKty0PWMTiHKmrDV5H+gXaiVqUnQg=
+
+Name: com/sap/ndb/studio/xse/editor/parser/common/OSDLScanner.class
+SHA-256-Digest: 0v25WSIo/9CUrrYE2kOZLLfJzFwB+2SKTlspUsps5rY=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewProjectWizard.class
+SHA-256-Digest: 9XCNtUT4yQnpl3E24ZkrzBzrGoleevuvoE7WUNjGU9o=
+
+Name: src/com/sap/ndb/studio/xse/editor/wizards/templates/xsjs.templat
+ e
+SHA-256-Digest: 26iMH3DFsmjHQIAviBJhn+bMxT4wUPFWAOf3/rp+7nE=
+
+Name: OSGI-INF/XSTemplateContentProvider.xml
+SHA-256-Digest: 3qO89O6/9jCQiOtAnP3SNJuO2d1CIvbUfuFF885VZ+E=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/ObjectsForProjectWizardPag
+ e$1.class
+SHA-256-Digest: nAzRkTnVn2eqSFXX+fWN12qZ8DwzR/G4hp7VOrWyT5o=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewProjectWizard$1.class
+SHA-256-Digest: 5MlMPqbhiQNFghVjk7AruV3/l/UR59szY7oP4gzfPqo=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/ObjectsForProjectWizardPag
+ e$7.class
+SHA-256-Digest: A9DhH32/8jeKa8I1yUgQu3rUlAcaIXGLr0uFUH0fBpQ=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSPrivilegePageEditor.clas
+ s
+SHA-256-Digest: BDogXtsFMHto4u9IdLppkiihqBZLA2foNYkHMLyoUFI=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSODataPageEditor.class
+SHA-256-Digest: 4nHTTZl+Ue5Byi6I8eOmwRcVvlpApZH+zrpo2V11rOk=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewProjectSharedWizard$1
+ .class
+SHA-256-Digest: xizI8apnClqvx9p6WUdRl+esd6IppqLAsPwWx4EcWME=
+
+Name: com/sap/ndb/studio/xse/editor/lint/builder/XSJSLintProvider$1.cl
+ ass
+SHA-256-Digest: 5qLZgItU958l4KN5hsF1Klmj2t8kfxE5tG051LmTnGY=
+
+Name: com/sap/ndb/studio/xse/editor/lint/preferences/XSJSLintPreferenc
+ esInitializer.class
+SHA-256-Digest: tG4S0IeL5klFJE80CrZVV/+isl4zYPywV3uvRq4qVSo=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: BesMfOH/Hl88hhPnF/D6sUpiwohvjofiUDXh70kDfb0=
+
+Name: com/sap/ndb/studio/xse/editor/parser/generatedfiles/OSDL_1_0Reso
+ lver.class
+SHA-256-Digest: jyXD1Hg6urYu8Gd/ZNI/8oZThOnh0YiUDvRQAMBdVIc=
+
+Name: icons/AppPrivileges.gif
+SHA-256-Digest: BAINXGNuhchsZ+S/ig0HWQSfyYZHmMtf2PscdcRECqs=
+
+Name: com/sap/ndb/studio/xse/editor/parser/OSDLSemanticParser.class
+SHA-256-Digest: nKJ31zRXawk3+LJQvUSJnywv6e0yDo3HHcd411kmpdY=
+
+Name: com/sap/ndb/studio/xse/editor/parser/common/XSEPadFileResolver.c
+ lass
+SHA-256-Digest: CbK/qf/7sexy44nl2+xRXslO9qaDgdPM7SoX/krhpSU=
+
+Name: com/sap/ndb/studio/xse/editor/parser/generatedfiles/OSDLParserTo
+ kens.class
+SHA-256-Digest: ZgAu3Ne3HtnlR8de/82lwmKznUCKwS49wr3/JTptM/k=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/ObjectsForProjectWizardPag
+ e$5.class
+SHA-256-Digest: GMv6Oca9G+0ksfClGv/0DhCNtrziV8PJqpOm5A2LVAM=
+
+Name: icons/AppAccess.gif
+SHA-256-Digest: 4mfjo6atkOvzS599gRIWDH03Jvt1pGhiYum/szf8kZ4=
+
+Name: src/com/sap/ndb/studio/xse/editor/wizards/templates/xsaccess.tem
+ plate
+SHA-256-Digest: ukH/LC0o2IVgSsL5ULoJ93Rgw/UgBtHbB2OYPj1ExPo=
+
+Name: com/sap/ndb/studio/xse/editor/lint/ui/preferences/XSJSLintOption
+ sPreferencePage$2.class
+SHA-256-Digest: TenHEK2uJ+HhWw3/MThJnuZCGoeA3BZFGoXs+ffYXR0=
+
+Name: icons/SQLConnectionConfigurationNew.gif
+SHA-256-Digest: +d28MQ6oh69QjcIE7oQhGUBa3OqY0KM1n2fMMpkJ4Kc=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewLibraryWizard.class
+SHA-256-Digest: pheoLXqCafbYrVTSTQqGHuryr860l2N5knbnMquXiNI=
+
+Name: com/sap/ndb/studio/xse/editor/preferences/ApplicationDevelopment
+ Perspective.class
+SHA-256-Digest: M9paOSdMzO4KyVGLCMlug4IqfphpUuQkCV++UqRGEnE=
+
+Name: .options
+SHA-256-Digest: xnbrZ6wnEKu+r9O06+bBMu+XLF/cR9Xrz9/7G/nMZB8=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/templates/xsjs.template
+SHA-256-Digest: SjVjv8pVpIP0urbVJ8FusKCtN2j4kBxYcPEqpmfLues=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/templates/xsprivileges.tem
+ plate
+SHA-256-Digest: chPdvi6Ufq1iErAgUJFyZ5uUO6HtZLCi/VWjPPtaKhs=
+
+Name: com/sap/ndb/studio/xse/editor/i18n/Messages.class
+SHA-256-Digest: W943KS4RQmeP8pSVWKdbC4N9C/n3gsopzVzeFYMl1c8=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.xse.editor/
+ pom.xml
+SHA-256-Digest: gwHZjdgIvaArgRSm2m1wyb0OAglPWxT1xSI4ecHgphQ=
+
+Name: com/sap/ndb/studio/xse/editor/parser/grammar/OSDL_1.0.grnd
+SHA-256-Digest: i5oLkB0t71yPYeJqx93BPmCSPgbiroMQEEaNJKaU6x0=
+
+Name: src/com/sap/ndb/studio/xse/editor/wizards/templates/xsprivileges
+ .template
+SHA-256-Digest: dIfQHPOBtmCdvtKTDEwcKYQ7xIUYoy5wEfjptHY3uEg=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewProjectSharedWizard$3
+ $1.class
+SHA-256-Digest: 55AVemC5KFlz0tTIu2hmDQc9qIDMGnBQYvwI0Fj/7YE=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/CreateNewProjectWizardPage
+ $1.class
+SHA-256-Digest: ASKmPZwPnMqvj34hJwdLjHCBdVhNTMM6h9y23+zVuzo=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSAccessPageEditor.class
+SHA-256-Digest: e/KcO9P0INwq3UfzHGMhWSEbV36rHp1HpCotezzKmss=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/WizardConstants.class
+SHA-256-Digest: 3CEfMcjfjVMin3I9uSFViayoSQpox7Jh17y/beZfVdY=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewProjectSharedWizard.c
+ lass
+SHA-256-Digest: OuPcHirhH0u9JMkFBcXh+legTMfigcSq9t47xRJfdpY=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewFileWizard.class
+SHA-256-Digest: PpxgZC1anzk/hFt8RS2WM96llM2/UC3P6FttXhOw9Mc=
+
+Name: com/sap/ndb/studio/xse/editor/lint/builder/XSJSLintProvider.clas
+ s
+SHA-256-Digest: zrcQt4XkBq7rwViFcSVUDWRLPsk1jywxi4T/8exH2lo=
+
+Name: com/sap/ndb/studio/xse/editor/builder/XSJSNature.class
+SHA-256-Digest: u/WClRVAmMuTj6lprfK/pZ5V9XR3ph2Cg7cfwNOhYqo=
+
+Name: com/sap/ndb/studio/xse/editor/lint/ui/preferences/XSJSLintOption
+ sPreferencePage$1.class
+SHA-256-Digest: BwwRNkmuiYsf728yfNu1L8j8osI5/xBdfFvpTRTHtFA=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSAppDescriptorMultiPageEd
+ itor.class
+SHA-256-Digest: QmuRJJUNszZ0HoVS9yFs5eLCNxvBm7cvQOWKAmZORms=
+
+Name: libraries/XSAPI.js
+SHA-256-Digest: HTVoVTIDYbNGxyh75xadwl4hXWYhxIvVkWnD8k6VNLw=
+
+Name: src/com/sap/ndb/studio/xse/editor/wizards/templates/xssqlcc.temp
+ late
+SHA-256-Digest: ea/Xcxl84VT9ktDjNh+89Wz3OaNiw2KcCj1hXaDZ8BQ=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSWorkspaceCreationHelper.
+ class
+SHA-256-Digest: PtQMkmVtXyXfik5Q77h4B7Cf/HafvosZ1/5pjI/wK94=
+
+Name: icons/AppPrivilegesNew.gif
+SHA-256-Digest: ScLffTZEFOQN23RVBgx2ZH32ygHURoyYEmXK82PHGHc=
+
+Name: icons/HTTPDestinationNew.gif
+SHA-256-Digest: lxr0A7llnfAguRP/estx+T0+ShJE1+QucWJPb6nVQjI=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/ObjectsForProjectWizardPag
+ e$6.class
+SHA-256-Digest: 0BbKAwVd8Pa0ZXLI3z+inRPHGDXcEKeU0ArWv6tZB1A=
+
+Name: com/sap/ndb/studio/xse/editor/parser/generatedfiles/OSDL_1_0Reso
+ lver$object_attributes.class
+SHA-256-Digest: MTan6rZwg4knFjI3wzpwB/OJ5O5wWkjwq/f7YSjCPlU=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSTemplateContentProvider.
+ class
+SHA-256-Digest: f8k3P+t54eRGPeCncv9irMY2921taM2MQD1GGZPw+nk=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSCreateNewFileWizardPage.
+ class
+SHA-256-Digest: Xxvae+jn6B2RU5hD5ZEgSerreDAvArQ0uOb7hy20fAk=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSSqlccPageEditor.class
+SHA-256-Digest: Msg4XtaMH5dTHttdhgP49XTQUlqb1ktkVWlDONf5iRk=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewProjectSharedWizard$3
+ .class
+SHA-256-Digest: WlFeyxdxCyEAV1w5+ykm3MoTNuQcl5zEj2+vaUUbDTA=
+
+Name: com/sap/ndb/studio/xse/editor/parser/generatedfiles/OSDLParserRa
+ wScannerImpl$XScanner.class
+SHA-256-Digest: l77O8+Ffs4iL+y8RHeP0+xplNd+6nHlf93qp5DbfQjU=
+
+Name: icons/WIZARD_BANNER_ICON.gif
+SHA-256-Digest: wWswycPyKDpuEqStBxScqP+DJRFyzbHMCiQBkYH9Z4o=
+
+Name: com/sap/ndb/studio/xse/editor/parser/generatedfiles/OSDL_1_0Reso
+ lver$entity_locals.class
+SHA-256-Digest: y/6wl/u7Krnez/igWju6jp59ckXplrdNenhGISkPqrQ=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSaccessNewFileWizard.clas
+ s
+SHA-256-Digest: JWkES9RGpEaphySUPuzg5eNrmc/s4nmBbUhZ+BDghJ4=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/ObjectsForProjectWizardPag
+ e$3.class
+SHA-256-Digest: 3Ua0fTDztbT9ktsmqyxo6hRb+lt5MSAIv5Y3e7GRv70=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/ObjectsForProjectWizardPag
+ e.class
+SHA-256-Digest: ibQTUv6tul/K4/ejwnfGpE4uqmytxh7506j84IklFKE=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSPrivilegeMultiPageEditor
+ .class
+SHA-256-Digest: 1RNrmKBZV6mmq90nBhDH5TdkHyRSDDWm/bdOye+h9hY=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio.xse.editor/
+ pom.properties
+SHA-256-Digest: bAkLfXtI/rw3VHE/Aog4dQ5OhcFd1XIdBY09Xx+LJMw=
+
+Name: com/sap/ndb/studio/xse/editor/libraries/XSJSLibInitializer$HanaX
+ SJSLibLocation.class
+SHA-256-Digest: VeyCSZkRNzFo9CLxppZRaFTIW8HEGKg6v1dH1ryCYe4=
+
+Name: icons/SQLConnectionConfiguration.gif
+SHA-256-Digest: 1JxvSkdirkmcos9dSJ67c+pTps+ozYZJ9jttW771kt0=
+
+Name: com/sap/ndb/studio/xse/editor/parser/grammar/OSDLParserRawScanne
+ rImpl.re
+SHA-256-Digest: AfeNClFH69527GSgL4OFEnIegfIPx6t5B3dYm8M0BG4=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSappNewFileWizard.class
+SHA-256-Digest: Q5pCD82/gQWobzsAPTWHhvUlwxVgl+ggbAQJmDfD63I=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewProjectSharedWizard$2
+ .class
+SHA-256-Digest: 6lbR0OQGZRfyDZP4IqHJ5HOgCLi6yI7UMhWT16r3Rhs=
+
+Name: com/sap/ndb/studio/xse/editor/lint/builder/XSJSLintNature.class
+SHA-256-Digest: 7gVzibNNCqtuAXMXNe2gpqJipXz4SDTV/6acJ90rUeQ=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSODataMultiPageEditor.cla
+ ss
+SHA-256-Digest: n1tNKhLjCUd0kBtRrVmly886EKzxXAuEcCRk8ikyuIg=
+
+Name: icons/xs_proj.png
+SHA-256-Digest: kcqhBWtb4Tiwrr/XhK2owlFf7d/eD30JbyhNMALEbR8=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewProjectSharedWizard$2
+ $1.class
+SHA-256-Digest: Fr4oV6+yEoMAYd66AYrugKXQ8xA1hUBdcP2npxM9szA=
+
+Name: com/sap/ndb/studio/xse/editor/lint/ui/XSJSLintToggleNatureAction
+ .class
+SHA-256-Digest: EbyRoT/ews9kdC1BgHKzbEwahJmUGpM7s9SGOWM+YNI=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewReadOnlyNameFileWizar
+ d.class
+SHA-256-Digest: BKZjhP32RbzZuYv7Gi0uRMJoi00tbCOUyoQI63WGfj8=
+
+Name: com/sap/ndb/studio/xse/editor/i18n/messages.properties
+SHA-256-Digest: Lkzrsv2SAKKbFlCDMNI0O7tyJDeLLSYw1uyRTgiiWCA=
+
+Name: icons/XSLibFile.png
+SHA-256-Digest: p7yK6yIRmYHcgGv8XcurM0J589Ad1eqezpZPe1etw0w=
+
+Name: icons/HTTPDestination.gif
+SHA-256-Digest: 4fnV7puYqc6pZpIbgG51EYpTPz6WYx5MIgDqjzxGsT4=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSodataNewFileWizard.class
+SHA-256-Digest: n0/SLkmFpigYtXEwzeB/0znZxPCQSoVVqKNVSnqI3V0=
+
+Name: com/sap/ndb/studio/xse/editor/lint/builder/XSJSLintBuilder.class
+SHA-256-Digest: BmJKcq33FiGdFWWyufBe7/izvwDOkhhLbNKfyP0wdww=
+
+Name: com/sap/ndb/studio/xse/editor/parser/generatedfiles/OSDL_1_0Reso
+ lver$object_locals.class
+SHA-256-Digest: jPutEZssiUfczd0jWNb6/ZtoKtIQy+YNOpO/xUdBbng=
+
+Name: icons/XSOdata.gif
+SHA-256-Digest: AjkRfSzKd/yJm2Fo6zwLkdoO5MTVT9lHND2YonjP3QA=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/CreateNewProjectWizardPage
+ $2.class
+SHA-256-Digest: +s2LJNgTGwLi1eahxhgWrQPeXUkhVuiQriu8vA4X18U=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewReadOnlyNameFileWizar
+ dPage.class
+SHA-256-Digest: 3+37LXjsz7Q/HGnMa7AiBYVsWQG+Q3zatxX5aXBFlBc=
+
+Name: icons/XSOdataNew.gif
+SHA-256-Digest: QyWRNGWeLzxmSBYOharTDCbeC6h4+spU3CtUBVu+pC4=
+
+Name: com/sap/ndb/studio/xse/editor/parser/generatedfiles/OSDL_1_0.pad
+SHA-256-Digest: /CsqNzUTtXL7KpQNsOT77tYyx2JQzWWjwNLR+yz2nGU=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSAppPageEditor.class
+SHA-256-Digest: G+drLPy7iYNUmkQghhxLUptmi4/ruGVhY83VBlFgEJU=
+
+Name: icons/new-XSLibFile.png
+SHA-256-Digest: QTE7uxg0gflOi0poLeNo2ayK1lgzKq9Jj+nkP+XcoVY=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSpriviledgeNewFileWizard.
+ class
+SHA-256-Digest: rIAXz3M/LTeCXFOEYq0poLO7M5y56xYhOmoKGZ+ml5o=
+
+Name: com/sap/ndb/studio/xse/editor/builder/XSJSProjectUtil$1.class
+SHA-256-Digest: ARVrajrVkOwPohZOxoJRFzpaHiil8oyFTZ+QGPcZvMs=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSCreateNewProjectWizardPa
+ ge.class
+SHA-256-Digest: eMY2xctJ3I42hZnmWEj4XGHunJxjKo4PcsPH1Woc1fQ=
+
+Name: com/sap/ndb/studio/xse/editor/lint/builder/XSJSLintBuilder$JSLin
+ tDeltaVisitor.class
+SHA-256-Digest: 1X8uLoSBlilParJi8Dov8gQjUSXPDoT9cgz8h58Ru0s=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/templates/xssqlcc.template
+SHA-256-Digest: 3CuKkQofcU4fqEYyFh72Cav05uXdJmH5y5ZAT0+T6Q8=
+
+Name: com/sap/ndb/studio/xse/editor/parser/generatedfiles/OSDLParserRa
+ wScannerImpl.class
+SHA-256-Digest: aVnXCACfTwcaPcdJaw5NrqJssgdIe0YW5EZuYDKqjHU=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSHttpdestPageEditor.class
+SHA-256-Digest: k0tQcdc368eDFTiPkpXqZaoSxmrq/ihOaiD/9xve3oA=
+
+Name: icons/XSFile.png
+SHA-256-Digest: JxNsQe+l2Zerbe5PMMNE+p4gECC/aRwe/acS5a3AgDw=
+
+Name: com/sap/ndb/studio/xse/editor/parser/ParserConstants.class
+SHA-256-Digest: 052WM1Qg5lojuEO9EuSdHtprs5rfHq8EXa2AMh9HlvU=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSWorkspaceCreationHelper$
+ 1.class
+SHA-256-Digest: DCYcOGvbzV5gfJ5XJmXg7H0nPLgzDy3SI9JaSKK4PB8=
+
+Name: com/sap/ndb/studio/xse/editor/XSJSEditorLogger.class
+SHA-256-Digest: nc0beMpHDCxkSm2dydXvpcg5Z4TtHpJ+GfMIEWcT1ys=
+
+Name: com/sap/ndb/studio/xse/editor/lint/builder/XSJSLintExcluder.clas
+ s
+SHA-256-Digest: s1Xu6CiLDv4oYN+gV4IImYT6kCKTAUd/ROVERnhkhA0=
+
+Name: com/sap/ndb/studio/xse/editor/lint/builder/XSJSLintNatureManager
+ .class
+SHA-256-Digest: 8bdx0EyaS/9H4YUegpCVgyYfZCFSwKu9HDVbTKsVvbk=
+
+Name: com/sap/ndb/studio/xse/editor/parser/generatedfiles/OSDLParserRa
+ wScannerImpl$NumCat.class
+SHA-256-Digest: FEaLclvThplztlfsqXSZhyc76esujtPUAOaIhKQXMgQ=
+
+Name: src/com/sap/ndb/studio/xse/editor/wizards/templates/xsodata.temp
+ late
+SHA-256-Digest: WYgCub4YymXcG1azbBqnORpm8E2xQWR3jJWx1hzmg/A=
+
+Name: icons/new-XSFile.png
+SHA-256-Digest: L1jyJ6rB7O4YVzXfBAplOc7gtkq1qGce9QSvTjmHW+g=
+
+Name: src/com/sap/ndb/studio/xse/editor/parser/generatedfiles/OSDL_1_0
+ .pad
+SHA-256-Digest: 3qrDL/gfYPJssVcxi2FwywRR64KsV3cOhcckmS8g1kM=
+
+Name: icons/AdminXS.png
+SHA-256-Digest: DJenUeQ882P9k6o6JKz3l08m3YuVHfg7nC7Ly+lnjYI=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSJobPageEditor.class
+SHA-256-Digest: M65JfK+nevqLhA3mjlh0JdD0k3244HbRtqbpu9PIdhk=
+
+Name: com/sap/ndb/studio/xse/editor/handlers/OpenXSAdminEditorBrowserH
+ andler.class
+SHA-256-Digest: /4G6VQSf/mZxsXmbKmdHB0X0nMi04s3n7WZyBhJlpPg=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSNewProjectSharedWizard$1
+ $1.class
+SHA-256-Digest: abEdX6ALEuim3tViLs4MsCqeQ9eNNu5EL7FsNi866RM=
+
+Name: icons/AppAccessNew.gif
+SHA-256-Digest: DaaRtF9tFJVhnEDMMhiVbjhJyxYQdMTLnBuj35n/WUA=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/templates/xsjob.template
+SHA-256-Digest: RDRpe5nTAXadZV8UhufJiviEA9cQ1pJfuA2fK4N2Rh8=
+
+Name: icons/AppDescriptorNew.gif
+SHA-256-Digest: M29aSaA/dTZ+qT69ZgR9Ro4gz02Ha9wvRi9HVLSGkWw=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSAccessMultiPageEditor.cl
+ ass
+SHA-256-Digest: WPlQpH+lozODny/iJWABIk9sDRuh10qsp9k75oSpKvY=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/CreateNewProjectWizardPage
+ .class
+SHA-256-Digest: H3qG+mHfsv9O+PUyLHsEKw1zG6f6GfUB5NJC0eemRdU=
+
+Name: src/com/sap/ndb/studio/xse/editor/wizards/templates/xsjob.templa
+ te
+SHA-256-Digest: un3H5+jGUOCGPKiR/kx3SqxqDSag4pE4vImdixtBV6k=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSJobMultiPageEditor.class
+SHA-256-Digest: CjIuE/QKoUNvZdGNUzOWFadcc0nOBou1/F1Fur40QEg=
+
+Name: icons/new-xs_proj.png
+SHA-256-Digest: Y2RfEmGz30wgZERZc5cKvCvF+4vzsifXHGY/QLtm8ik=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/templates/xsaccess.templat
+ e
+SHA-256-Digest: JjKqiQHNwKdyrwj2BT/j9vhhsvEsZofgldXQBZIx30w=
+
+Name: com/sap/ndb/studio/xse/editor/parser/generatedfiles/OSDL_1_0Reso
+ lver$object_action.class
+SHA-256-Digest: 1kH5ifZQRSxow450d0RSUOdm39yJCGYooGJqYyCHZTI=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/ObjectsForProjectWizardPag
+ e$2.class
+SHA-256-Digest: MFLx94BYcIB9qhXK96ULef1ds3jcETo7lValjriTqNk=
+
+Name: com/sap/ndb/studio/xse/editor/lint/builder/XSJSLintCommandManage
+ r.class
+SHA-256-Digest: lIxQngGftnK3dmEaCsYGhFi7St7zZ2PdUOVjgTS29qo=
+
+Name: com/sap/ndb/studio/xse/editor/editors/XSHttpdestMultiPageEditor.
+ class
+SHA-256-Digest: 5IqoZAka2HzZJv7SNVO4MqtIYktv3ZV5UDQbfI3W35I=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/CreateNewProjectWizardPage
+ $3.class
+SHA-256-Digest: lW6u0TdyIHFGMQLr1sgWM3dh45pmkf7smu7PY/xfPME=
+
+Name: icons/sample.gif
+SHA-256-Digest: nityhfdwDBvBTJAmLEfJHWWF9m4KlBIJ1DoECZjq87w=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/HanaRepositoryProjectState
+ PropertyTester.class
+SHA-256-Digest: IHIMO3eEJYPp/IZAmhDoR/uW9Adj0slrbdCjOWM1tpw=
+
+Name: com/sap/ndb/studio/xse/editor/lint/builder/XSJSLintBuilder$1.cla
+ ss
+SHA-256-Digest: RmlsO2hkTUfo3xTcvKKgCP2wMsmhMxgsoIfV8AT5RQA=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/templates/xsodata.template
+SHA-256-Digest: IivkzdwmCcVNOvIQnBtfgPMVO/3PHVNy5RM5VZQA3YQ=
+
+Name: icons/XS_wizard.png
+SHA-256-Digest: pza6B4KOweyZ3WoNOa9uwMtaEUsLa5l6WGTwrlC5gp8=
+
+Name: com/sap/ndb/studio/xse/editor/parser/OSDLParserIntegrationfactor
+ y.class
+SHA-256-Digest: V36iMPEwkHkcbT7Iq5HKIXkqcufv5aCbrg53GNOK0TE=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XShttpdestNewFileWizard.cl
+ ass
+SHA-256-Digest: NFADsRmT0ujFXHa344Pv+0InAHuftIWY/iEERaF2XIM=
+
+Name: com/sap/ndb/studio/xse/editor/parser/OSDLCompletionProcessor.cla
+ ss
+SHA-256-Digest: spBArVjJ2cOoK1DKi7CYeEOtvvr27HIsVC1l/fvSkVM=
+
+Name: com/sap/ndb/studio/xse/editor/lint/builder/XSJSLintBuilder$JSLin
+ tResourceVisitor.class
+SHA-256-Digest: LS9BTTbbUeFU53V3Ir9b1O7ZeeUSFd2x9tLNZCW9De8=
+
+Name: com/sap/ndb/studio/xse/editor/wizards/XSjobNewFileWizard.class
+SHA-256-Digest: 2mJlvYB5XDfaRRoinsvriLHkqPR2UoYCTy0BrzBtePw=
+
+Name: src/com/sap/ndb/studio/xse/editor/wizards/templates/xshttpdest.t
+ emplate
+SHA-256-Digest: jWPSB568Wylb720D81C4kayfqaT1nvInDrqDn28Kszw=
+

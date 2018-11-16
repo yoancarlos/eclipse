@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>XML Digital Signature</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio2c60cb53d9b74ddc81c8deb6fd1cb906">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">XML Digital Signature</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc"/>
+
+		<p class="p"/>
+
+		<div class="section">
+            <p class="p">The following types of XML digital signatures are supported: </p>
+
+            <ul class="ul" id="loio2c60cb53d9b74ddc81c8deb6fd1cb906__d1658e18">
+                <li class="li"><span class="ph emphasis emphasis">Enveloping XML Signature</span>: The input message body is signed
+                    and embedded within the signature. This means that the message body is wrapped
+                    by the <span class="ph uicontrol">Object</span> element, where
+                        <span class="ph uicontrol">Object</span> is a child element of the
+                        <span class="ph uicontrol">Signature</span> element. <div class="note sap-example example"><span class="exampletitle">Example</span> A template of the
+                        enveloping signature is shown below and describes the structure supported by
+                        XML signature implementation. ("?" denotes zero or one occurrence; the
+                        brackets [] denote variables whose values can
+                        vary.)<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;Signature&gt;
+     &lt;SignedInfo&gt;
+            &lt;CanonicalizationMethod&gt;
+            &lt;SignatureMethod&gt;
+            &lt;Reference URI="#[generated object_id]" type="[optional_type_value]"&gt;
+                  &lt;Transform Algorithm="canonicalization method"&gt;
+                  &lt;DigestMethod&gt;
+                  &lt;DigestValue&gt;
+            &lt;/Reference&gt;
+            (&lt;Reference URI="#[generated keyinfo_id]"&gt;
+                  &lt;Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/&gt;
+                  &lt;DigestMethod&gt;
+                  &lt;DigestValue&gt;
+            &lt;/Reference&gt;)?
+     &lt;/SignedInfo&gt;
+     &lt;SignatureValue&gt;
+     (&lt;KeyInfo Id="[generated keyinfo_id]"&gt;)?
+	&lt;--!The Id attribute is only added if there exists a reference--&gt;
+     &lt;Object Id="[generated object_id]"/&gt;
+&lt;/Signature&gt;
+</pre></div>
+</div>
+</li>
+
+                <li class="li"><span class="ph emphasis emphasis">Enveloped XML Signature</span>: The digital signature is embedded
+                    in the XML message to be signed. This means that the XML message contains the
+                        <span class="ph uicontrol">Signature</span> element as one of its child elements. The
+                        <span class="ph uicontrol">Signature</span> element contains information such as:<ul class="ul" id="loio2c60cb53d9b74ddc81c8deb6fd1cb906__d1658e48">
+                        <li class="li">Algorithms to be used to obtain the digest value</li>
+
+                        <li class="li">Reference with empty URI, which means the entire XML resource</li>
+
+                        <li class="li">Optional reference to the KeyInfo element (attribute <span class="ph uicontrol">Also
+                                Sign Key Info</span>)</li>
+
+                    </ul>
+<div class="note sap-example example"><span class="exampletitle">Example</span> A template of the enveloped signature is shown below and
+                        describes the structure supported by XML signature implementation. ("?"
+                        denotes zero or one occurrence; the brackets [] denote variables whose
+                        values can
+                    vary):</div>
+<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;[parent element]&gt;
+      ...
+      &lt;Signature&gt;
+          &lt;SignedInfo&gt;
+                &lt;CanonicalizationMethod&gt;
+                &lt;SignatureMethod&gt;
+                &lt;Reference URI="" type="[optional_type_value]"&gt;
+                      &lt;Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/&gt;
+                      &lt;Transform Algorithm=[canonicalization method]/&gt;
+                      &lt;DigestMethod&gt;
+                      &lt;DigestValue&gt;
+                &lt;/Reference&gt;
+                (&lt;Reference URI="#[generated keyinfo_Id]"&gt;
+                      &lt;Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/&gt;
+                      &lt;DigestMethod&gt;
+                      &lt;DigestValue&gt;
+                &lt;/Reference&gt;)?
+         &lt;/SignedInfo&gt;
+         &lt;SignatureValue&gt;
+         (&lt;KeyInfo Id="[generated keyinfo_id]"&gt;)?
+		&lt;--!The Id attribute is only added if there exists a reference--&gt;
+     &lt;/Signature&gt;
+&lt;/[parent element]&gt;
+</pre></div>
+</li>
+
+                <li class="li"><span class="ph emphasis emphasis">Detached XML Signature</span>: The digital signature is a sibling
+                    of the signed element. There can be several XML signatures in one XML
+                        document.<p class="p">You can sign several elements of the message body. The elements
+                        to be signed must have an attribute of type ID. The ID type of the attribute
+                        must be defined in the XML schema that is specified during the
+                        configuration.</p>
+<p class="p">Additionally, you specify a list of XPath expressions
+                        pointing to attributes of type ID. These attributes determine the elements
+                        to be signed. For each element, a signature is created as a sibling of the
+                        element. The elements are signed with the same private key. Elements with a
+                        higher hierarchy level are signed first. This can result in nested
+                        signatures.</p>
+</li>
+
+            </ul>
+
+            <div class="note sap-example example"><span class="exampletitle">Example</span> A template of the detached signature is shown below and describes the
+                structure supported by XML signature implementation. ("?" denotes zero or one
+                occurrence; the brackets [] denote variables whose values can vary):</div>
+
+            <div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">
+	(&gt;&lt;
+				[signed element&lt;/
+	(&gt;&lt;]DigestMethod Id="[id_value&gt;]
+				
+				[signed element&lt;]DigestMethod Id="[id_value&gt;&lt;]"
+				
+			&lt;&gt;"&lt;
+			
+	&gt;/Reference&lt;&lt;
+	&gt;/Reference!-- signed element must have an attribute of type ID --&lt;)?&gt;&gt;!-- signed element must have an attribute of type ID --
+	)?&gt;
+	...
+	&lt;
+	...
+
+	&lt;/SignedInfo
+
+	&lt;/SignedInfo&gt;/[signed element&lt;&gt;
+	/[signed element]
+	&lt;&gt;SignatureValue
+	]&lt;&gt;&lt;
+	(other sibling/&lt;&gt;KeyInfoId="[generated_keyinfo_id&gt;* ]&lt;"!-- between the signed element and the corresponding signature element, there can be other siblings --&gt;&gt;SignatureValue)?
+	
+	
+
+	&lt;&gt;&lt;&lt;Signature
+	(other sibling/!-- The Id attribute is only added if there exists a reference with the corresponding URI --&lt;&gt;&gt;
+	&gt;
+	&lt;KeyInfoId="[generated_keyinfo_id&lt;!-- signature element becomes the last sibling of the signed element --Signature&gt;* &gt;
+		)+]&lt;&lt;
+
+"SignedInfo&gt;!-- between the signed element and the corresponding signature element, there can be other siblings --&gt;&gt;
+			&lt;)?
+	CanonicalizationMethod&gt;
+
+	&lt;&lt;
+			&lt;SignatureSignatureMethod&gt;!-- The Id attribute is only added if there exists a reference with the corresponding URI --
+			&gt;&lt;ReferenceURI="&gt;
+	
+	#[id_value]"type="[optional_type_value]&lt;"&lt;&gt;!-- signature element becomes the last sibling of the signed element --Signature
+			&lt;&gt;!-- reference URI contains the ID attribute value of the signed element --&gt;&gt;
+				
+		&lt;)+TransformAlgorithm=[canonicalization method&lt;]
+
+SignedInfo/&gt;
+				&gt;&lt;
+			DigestMethod&lt;&gt;CanonicalizationMethod
+				&gt;&lt;
+			&lt;DigestValueSignatureMethod&gt;&gt;
+			
+			&lt;&lt;/ReferenceReferenceURI="&gt;
+			(&lt;#[id_value]ReferenceURI="#[generated_keyinfo_Id"type="[optional_type_value]]""&gt;&gt;
+			
+				&lt;&lt;!-- reference URI contains the ID attribute value of the signed element --TransformAlgorithm="&gt;<a class="extlink" href="http://help.sap.com/disclaimer?site=http://www.w3.org/TR/2001/REC-xml-c14n-20010315" target="_blank" alt="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" title="http://www.w3.org/TR/2001/REC-xml-c14n-20010315">http://www.w3.org/TR/2001/REC-xml-c14n-20010315"<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a></pre></div>
+
+            <p class="p">Note that the following elements are generated and cannot be configured with the
+                Integration Designer: </p>
+
+            <ul class="ul" id="loio2c60cb53d9b74ddc81c8deb6fd1cb906__d1658e89">
+                <li class="li">Key Info ID</li>
+
+                <li class="li">Object ID</li>
+
+            </ul>
+
+        </div>
+
+		<div class="section">
+            <div class="p">The sender canonicalizes the XML resource to be signed, based on the specified
+                transform algorithm. Using a digest algorithm on the canonicalized XML resource, a
+                digest value is obtained. This digest value is included within the 'Reference'
+                element of the 'SignedInfo' block. Then, a digest algorithm, as specified in the
+                signature algorithm, is used on the canonicalized SignedInfo. The obtained digest
+                value is encrypted using the sender's private key. <div class="note note"><span class="notetitle">Note</span> Canonicalization transforms
+                    the XML document to a standardized format, for example, canonicalization removes
+                    white spaces within tags, uses particular character encoding, sorts namespace
+                    references and eliminates redundant ones, removes XML and DOCTYPE declarations,
+                    and transforms relative URIs into absolute URIs. The representation of the XML
+                    data is used to determine if two XML documents are identical. Even a slight
+                    variation in white spaces results in a different digest for an XML
+                    document.</div>
+</div>
+
+        </div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

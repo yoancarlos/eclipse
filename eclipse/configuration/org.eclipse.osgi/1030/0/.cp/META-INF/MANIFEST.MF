@@ -1,0 +1,196 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.sap.adt.abapdev.guide.doc.user.ext;singleton:
+ =true
+Archiver-Version: Plexus Archiver
+Built-By: ppurple
+Require-Bundle: org.eclipse.ui.intro;bundle-version="[3.5.0,4.0.0)",or
+ g.eclipse.ui.intro.universal;bundle-version="[3.3.0,4.0.0)",org.eclip
+ se.ui.cheatsheets;bundle-version="[3.5.0,4.0.0)",com.sap.adt.docu.ui;
+ bundle-version="[2.93.0,3.0.0)",com.sap.adt.logging;bundle-version="[
+ 2.93.0,3.0.0)",com.sap.adt.tools.core.ui;bundle-version="[2.93.0,3.0.
+ 0)",org.eclipse.core.runtime;bundle-version="[3.12.0,4.0.0)",org.ecli
+ pse.core.resources;bundle-version="[3.11.0,4.0.0)",org.eclipse.ui.nav
+ igator;bundle-version="[3.6.100,4.0.0)",org.eclipse.jface.text;bundle
+ -version="[3.11.0,4.0.0)",com.sap.adt.projectexplorer.ui;bundle-versi
+ on="[2.93.0,3.0.0)",com.sap.adt.project.ui;bundle-version="[2.93.0,3.
+ 0.0)",com.sap.adt.tools.core.ui;bundle-version="[2.93.0,3.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 2.94.7
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_66
+
+Name: intro/css/graphics/picto/wn_updates48_hov.gif
+SHA-256-Digest: 28tXVA0qGTZnbKipZp/NKoNDS0CXQAcCNWXZEirOXvg=
+
+Name: plugin.xml
+SHA-256-Digest: +4Ole68Q+8OxjrvPnfsko3tixIPW3SxP+Tvu7d87lHU=
+
+Name: intro/css/graphics/picto/newspaper.gif
+SHA-256-Digest: zxkzSF7p8+aG5d4nSiqvx2uIcmzm1mj3y2UmsnuWzKc=
+
+Name: intro/css/graphics/picto/PersDocMagnifiCircuArrow.gif
+SHA-256-Digest: NCqTpFIXlRXc0qbkkBct2/FoSiqxL8H+Kd+q1JLBcEw=
+
+Name: META-INF/maven/com.sap.adt.installation.core/com.sap.adt.abapdev
+ .guide.doc.user.ext/pom.xml
+SHA-256-Digest: oRK+36KSONj1yJSFnfG4skD+TLZ/1efGQWy8VGv9BAA=
+
+Name: intro/css/graphics/picto/abap_samples48_hov.gif
+SHA-256-Digest: FKCd68dJ2EGKJs+bhbprqSV4rXfJJd8l7OGAP3AugH4=
+
+Name: intro/css/graphics/picto/abap_standard_video.png
+SHA-256-Digest: bau8Ssb/Wcg36KVb3fJ2Nau9CFUjoR/kenoK46ty5DQ=
+
+Name: intro/css/graphics/picto/abap_project.png
+SHA-256-Digest: NmVxoG4jR5qdvH9CK9WhKzUwHNweQ9DVEbFxAh9an/M=
+
+Name: intro/css/graphics/picto/notebook.gif
+SHA-256-Digest: vUjQa+xupmNW5YxNMSYqPcxWI3XBCXCMu459xJBefJg=
+
+Name: book.css
+SHA-256-Digest: zk+eb2dEGSnA4OPrvNVXwiCm4MzyX/Cm8sCIBV7okq0=
+
+Name: cheatsheets/createABAPprograms.xml
+SHA-256-Digest: bBlZXEwLt3xF++yY4WgktL3kphJXKEoC2DLh77JXJz8=
+
+Name: intro/introABAPWhatsnew.xml
+SHA-256-Digest: nTF70H2+70o9nMf44Vv0KWFBCgY8DhPn9Tzx3Yij3Lg=
+
+Name: com/sap/adt/abapdev/guide/doc/user/internal/samples/CreateAbapSa
+ mpleProjectAction$ShowNewAbapProjectWizardRunnable.class
+SHA-256-Digest: zzbvSeXBv278cfKZxbvDHBU92Mq6/+z4mMF9nS4ENlQ=
+
+Name: intro/introABAPOverview1.xml
+SHA-256-Digest: gHFoZs2rbX0XzLUT2VYKNw1y1vDMvu+cw/UVMKnPtjw=
+
+Name: cheatsheets/addCodeTemplates.xml
+SHA-256-Digest: nHOSQOYOXstm+aGlpfiKCA3G21ZbtX+1RVK1OcRlO2U=
+
+Name: intro/css/graphics/picto/overview.gif
+SHA-256-Digest: gWD3R/Px+3Hw55WUEOdfz0z7i9PW41lDE+tf+42z19g=
+
+Name: intro/css/graphics/picto/abap_standard_doc.png
+SHA-256-Digest: cIDrIc2Ikm6M/R/D4GkEc9PurauEYjnwSXpZq3AH74c=
+
+Name: intro/introABAPSamples2.xml
+SHA-256-Digest: w439bdraa+3LSaftl1YPn+1o4hURusST8wqhv4kClaQ=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: JM+fsdQO677jHmiSAA06d4RCJc4rZZbyKtLYPFuS+b8=
+
+Name: cheatsheets/addDevelopmentObjectsToProject.xml
+SHA-256-Digest: wtUPCnILO1IoUAv5s9Ko/2fGLRcbuaHR0BNqKD8XigM=
+
+Name: cheatsheets/createDDICdataelements.xml
+SHA-256-Digest: 150p5HvmjWxBDgLeMj6UBjb3w98Qj0bxrnFzNO5krmk=
+
+Name: intro/css/graphics/picto/clipboard.gif
+SHA-256-Digest: WPku6y3cnPW0ZR9ioT6jJRr+yRrerbSCvzmFW9xsI1s=
+
+Name: intro/introABAPAccessibility.xml
+SHA-256-Digest: 093sPT1J7SFHzdqjmZ4mqOl/MOyjDGWT1VJLHqglLNg=
+
+Name: intro/introABAPWhatsnew1.xml
+SHA-256-Digest: 5MAfTiL30A79RHncbX37jRUowlkGyPzmC6hTGwfU1Mw=
+
+Name: intro/css/graphics/picto/SendFeedback.gif
+SHA-256-Digest: 3kq+IZa5TJ/M99+iQ18Tl6ijaE1pQa/sZ9293tYWwgw=
+
+Name: intro/css/graphics/picto/abap_project_doc.png
+SHA-256-Digest: u+JQ8kMaV2Mxt/DCXNPAkxyXPzvHmHYvDIC0e1opn5s=
+
+Name: intro/css/graphics/picto/3_people.gif
+SHA-256-Digest: sR+h5F+E2xfEasADd+2oCj6n/6t/dt/HxAH9wlOg5hw=
+
+Name: intro/introABAPSamples.xml
+SHA-256-Digest: u0HtEMc9h2tsvOAa17GCEBJLd9QtDxnKcnm0DnpNRfk=
+
+Name: com/sap/adt/abapdev/guide/doc/user/internal/samples/CreateAbapSa
+ mpleProjectAction.class
+SHA-256-Digest: AbGURFf5dWNXou96hgbNoJQJ3khCbXp9HGNDiKwDETU=
+
+Name: cheatsheets/createABAPproject.xml
+SHA-256-Digest: nPcXgP/jlvqlEiixY621xRucQNqewQY/i+APDxQ0B+Q=
+
+Name: com/sap/adt/abapdev/guide/doc/user/internal/samples/ShowAbapSamp
+ lesAction.class
+SHA-256-Digest: X2d5hbKih4OTuZZqJf4JjoFsUhd1049/exWQ5aRJNXA=
+
+Name: intro/css/graphics/picto/abap_project_cs.png
+SHA-256-Digest: 0G7TpVSq9cMTvUrRxDQi8VBtBW47FfaMBYUiZvr67OI=
+
+Name: META-INF/maven/com.sap.adt.installation.core/com.sap.adt.abapdev
+ .guide.doc.user.ext/pom.properties
+SHA-256-Digest: 9edW+3xjLDLNAt0tfXTv6jN85EgLLDZf8Z3YX+xfqi4=
+
+Name: intro/css/graphics/picto/sample.gif
+SHA-256-Digest: 7yw6WJAhFev5/DoUMzkkS20gSvn6VAT+kdNfBvlF1Aw=
+
+Name: intro/css/graphics/picto/abap_search_doc.png
+SHA-256-Digest: STtwYs0fxyPuZuzafe3rdo9naI3HRuBLbn1rnHumUYg=
+
+Name: intro/css/graphics/picto/abap_standard_code.png
+SHA-256-Digest: ceY0JZJRfGmnUnOndfU/P3943cPwEqCAci5694SUZf0=
+
+Name: com/sap/adt/abapdev/guide/doc/user/internal/samples/ShowAbapSamp
+ lesAction$1.class
+SHA-256-Digest: MKf4c5lZ+Su5rCuZQXy858zG1l/bnDoXLVmbLJ/6g9o=
+
+Name: intro/css/graphics/picto/abap_search_cs.png
+SHA-256-Digest: iAQVlpQsh53KUt9CXcQoY7NbqYQU7r+HOdsPrgK4Myg=
+
+Name: intro/css/graphics/picto/abap_search_video.png
+SHA-256-Digest: qk8DAAHHwtayVQY2gAeBt7EGtvecx8Wfbf6iae+J1lQ=
+
+Name: src/com/sap/adt/abapdev/guide/doc/user/internal/samples/ShowAbap
+ SamplesAction.java
+SHA-256-Digest: aq7FYe3+4Qm6AGEuXaKBWgS0D49lA1DVvwOiDIZvYX8=
+
+Name: intro/css/graphics/picto/sample_hov.gif
+SHA-256-Digest: 7mbskRP5cTjLo8QZPXzyUTk7C0aIdD0ywEtrB/zXXn0=
+
+Name: intro/css/graphics/picto/abap_samples48.gif
+SHA-256-Digest: +pRxAWNHYDdiVb/DU3VpoQZIYY1HakKn7gVNL6GGfpM=
+
+Name: intro/css/sample.css
+SHA-256-Digest: SMq55IWZFtgJJc5zAltztQ95wEXWq86CQAkblf3S/2Q=
+
+Name: intro/css/graphics/picto/abap_standard.png
+SHA-256-Digest: JMlvPuTyGnsfCCQsgRnWA7/yZz5Za00Fgf35nCwNnpc=
+
+Name: intro/css/graphics/picto/abap_project_video.png
+SHA-256-Digest: fLg3DcKIpBtJMyD6d3lvxXj5aUeAuSltcUgUWvCpalY=
+
+Name: intro/css/graphics/picto/abap_standard_cs.png
+SHA-256-Digest: HKYLfUgFTwlw+sCgDvnYl67EP6oLeRQnj9xVOVtO9LM=
+
+Name: com/sap/adt/abapdev/guide/doc/user/internal/samples/ShowAbapSamp
+ lesAction$2.class
+SHA-256-Digest: 207WYxWSIj1NLkyWYPHxLXMvukO3cxI9mY+YOp0mBlc=
+
+Name: intro/css/graphics/picto/abap_search.png
+SHA-256-Digest: du+SaDmXAi7IGpB3qGL8A3UixQjE0zFgXoHms6gG5+U=
+
+Name: intro/introABAPOverview.xml
+SHA-256-Digest: f86/Qz07UeW0dW3qitq5ObaGxNZJ1KbPjjt6xz+9Dbc=
+
+Name: intro/css/graphics/picto/wn_updates48.gif
+SHA-256-Digest: ANyoXVkytZc0O4ND7MfdHzSU9BDnXkhKJhY9+2kfU9I=
+
+Name: intro/introABAPTutorials1.xml
+SHA-256-Digest: uWoi88MNPxmAwYdUmmLf2zzzXK+aHy1R43YKTio2KwI=
+
+Name: cheatsheets/createABAPclasses.xml
+SHA-256-Digest: wiNBpflBjUeyWgNTLV7ZcFsjvKE4j+ecFwScRZvxrGU=
+
+Name: cheatsheets/searchForDevelopmentObjects.xml
+SHA-256-Digest: TAnakb9bUxqYRF6sotrtnhsinb9q6q55aB7YrTwr/+I=
+
+Name: src/com/sap/adt/abapdev/guide/doc/user/internal/samples/CreateAb
+ apSampleProjectAction.java
+SHA-256-Digest: wd+oO3cAPSITMemWqs73h6YKYkAeTqQG/KNcaUi1Prg=
+

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:Mail/version::1.4.0" ComponentName="sap:Mail" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" MetadataVersion="2.0">
+    <Variant VariantName="Mail Sender" VariantId="ctype::AdapterVariant/cname::sap:Mail/tp::POP3/mp::Not Applicable/direction::Sender/version::1.4.0" MetadataVersion="2.0" AttachmentBehavior="Modify" supportsPolling="true" useDefaultScheduler="true">
+        <InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </OutputContent>
+        <Tab id="Connection">
+            <GuiLabels>
+                <Label language="EN">Connection</Label>
+                <Label language="DE">Connection</Label>
+            </GuiLabels>
+            <AttributeGroup id="connectionDetails">
+                <GuiLabels>
+                    <Label language="EN">Connection Details</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>server</ReferenceName>
+                    <description>Host name or address of the POP3 server, for example, mail.domain.com:110. For connections to the public Internet, only port 110 (POP3+STARTTLS) and 995 (POP3S) are supported</description>
+                </AttributeReference>
+		<AttributeReference>
+		  <ReferenceName>proxyType</ReferenceName>
+		  <description>Specify the proxy type to be used.</description>
+		</AttributeReference>
+		<AttributeReference>
+		  <ReferenceName>locationId</ReferenceName>
+		  <description>To connect to a cloud connector instance associated with your account, enter the location ID that you defined for this instance in the destination configuration on the cloud side.</description>
+		  <EditCondition>
+                    <AttributeName>proxyType</AttributeName>
+                    <AttributeValue>sapcc</AttributeValue>
+                  </EditCondition>
+		</AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>timeout</ReferenceName>
+                    <Restriction>Constraint.isValidRegex([0-9]*)</Restriction>
+					<ErrorMessage>Enter a valid number of milliseconds (digits only)</ErrorMessage>
+                    <description>Specifies the amount of time, in milliseconds, that the client will wait for a response before it times out; zero means that the client will wait indefinitely.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>ssl</ReferenceName>
+                    <description>Specify the method to establish an encrypted (secure) connection.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>auth</ReferenceName>
+                    <description>Mechanism to be used to authenticate against the server.&#10;Encrypted User Name/Password: User name and password are used in a secure way.&#10;Plain User Name/Password: User name and password are sent in plain text (not recommended).</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>user</ReferenceName>
+                    <OrCondition>
+                        <EditCondition>
+                            <AttributeName>auth</AttributeName>
+                            <AttributeValue>loginEncrypted</AttributeValue>
+                        </EditCondition>
+                        <EditCondition>
+                            <AttributeName>auth</AttributeName>
+                            <AttributeValue>loginPlain</AttributeValue>
+                        </EditCondition>
+                    </OrCondition>
+                    <description>Specify the credential name to use to authenticate against the server.</description>
+                </AttributeReference>
+            </AttributeGroup>
+            </Tab>
+            <Tab id="Processing">
+            	<GuiLabels>
+                	<Label language="EN">Processing</Label>
+                	<Label language="DE">Processing</Label>
+            	</GuiLabels>
+            <AttributeGroup id="ProcessingParameters">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">URI Setting</Name>
+                <GuiLabels guid="5fbd0d24-8435-4ad2-a1ec-b5cf98729638">
+                    <Label language="EN">Processing Parameters</Label>
+                    <Label language="DE">Processing Parameters</Label>
+                </GuiLabels>				
+				<AttributeReference>
+                    <ReferenceName>maxMessagesPerPoll</ReferenceName>     
+					<Restriction>Constraint.isValidRegex([0-9]*)</Restriction>
+					<ErrorMessage>Enter a valid positive number or zero (digits only)</ErrorMessage>					
+					<description>Specifies the maximum number of messages to gather per poll (0-100). Set a value of 0 to disable this option.&#10;Default: 20 </description>
+                </AttributeReference>				
+                <AttributeReference>
+                    <ReferenceName>postProcessing</ReferenceName>
+                    <description>Specify how to handle processed mails on the server.</description>
+                </AttributeReference>
+				<AttributeReference>
+                    <ReferenceName>removeAttachments</ReferenceName>
+                    <description>Select this option to remove attachments from the incoming message.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>scheduleKey</ReferenceName>
+                    <EditCondition>
+                        <AttributeName>dummy</AttributeName>
+                        <AttributeValue>213</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+    </Variant>
+    <AttributeMetadata>
+        <Name>server</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+    	<Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Address</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>timeout</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>3000</Default>
+        <Length>0</Length>
+        <GuiLabels>
+            <Label language="EN">Timeout (in ms)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>ssl</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>starttls_mandatory</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Protection</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>starttls_mandatory</Value>
+                <GuiLabels>
+                    <Label language="EN">STARTTLS Mandatory</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>starttls_optional</Value>
+                <GuiLabels>
+                    <Label language="EN">STARTTLS Optional</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>pop3s</Value>
+                <GuiLabels>
+                    <Label language="EN">POP3S</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>off</Value>
+                <GuiLabels>
+                    <Label language="EN">Off</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>auth</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>loginEncrypted</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Authentication</Label>
+        </GuiLabels>
+        <FixedValues>
+			<Sort Order="">false</Sort>
+			<FixedValue>
+                <Value>loginEncrypted</Value>
+                <GuiLabels>
+                    <Label language="EN">Encrypted User/Password</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>loginPlain</Value>
+                <GuiLabels>
+                    <Label language="EN">Plain User/Password</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>user</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Credential Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>maxMessagesPerPoll</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+		<Default>20</Default>
+        <Length>0</Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Max. Messages per Poll</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>postProcessing</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>delete</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Post-Processing</Label>
+        </GuiLabels>
+        <FixedValues>
+        	<FixedValue>
+                <Value>delete</Value>
+                <GuiLabels>
+                    <Label language="EN">Delete</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>mark</Value>
+                <GuiLabels>
+                    <Label language="EN">Mark as Read</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+	
+	<AttributeMetadata>
+	  <Name>scheduleKey</Name>
+	  <Usage>required</Usage>
+	  <DataType>custom:schedule</DataType>
+      <Default>0/10 * 0-24 ? * *</Default>
+	  <AttributeBehavior>Scheduler_ScheduleOnDay,Scheduler_ScheduleToRecur</AttributeBehavior>
+      <isparameterized>true</isparameterized>
+	  <GuiLabels>
+	    <Label language="EN">Schedule</Label>
+	  </GuiLabels>
+	</AttributeMetadata>
+
+	<AttributeMetadata>
+        <Name>removeAttachments</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>0</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Remove Attachments</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>proxyType</Name>
+    <DataType>xsd:string</DataType>
+    <Default>none</Default>
+    <isparameterized>true</isparameterized>
+    <GuiLabels>
+      <Label language="EN">Proxy Type</Label>
+    </GuiLabels>
+    <FixedValues>
+      <FixedValue>
+        <Value>none</Value>
+        <GuiLabels>
+          <Label language="EN">None</Label>
+        </GuiLabels>
+      </FixedValue>
+      <FixedValue>
+        <Value>sapcc</Value>
+        <GuiLabels>
+          <Label language="EN">On-Premise</Label>
+        </GuiLabels>
+      </FixedValue>
+      <NotCondition>
+        <EditCondition>
+          <AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+          <AttributeValue>true</AttributeValue>
+        </EditCondition>
+      </NotCondition>
+    </FixedValues>
+    <FixedValues>
+      <FixedValue>
+        <Value>none</Value>
+        <GuiLabels>
+          <Label language="EN">None</Label>
+        </GuiLabels>
+      </FixedValue>
+      <EditCondition>
+        <AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+        <AttributeValue>true</AttributeValue>
+      </EditCondition>
+    </FixedValues>
+  </AttributeMetadata>
+  <AttributeMetadata>
+    <Name>locationId</Name>
+    <Usage>false</Usage>
+    <DataType>xsd:string</DataType>
+    <GuiLabels>
+      <Label language="EN">Location ID</Label>
+    </GuiLabels>
+  </AttributeMetadata>
+</ComponentMetadata>

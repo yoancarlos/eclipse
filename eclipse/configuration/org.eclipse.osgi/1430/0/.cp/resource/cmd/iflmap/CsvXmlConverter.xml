@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:Converter/version::1.1" ComponentName="Converter" UIElementType="Flowstep">
+
+    <!-- v1.1.2 Variant for Csv to Xml step -->
+    <Variant VariantId="ctype::FlowstepVariant/cname::CsvToXmlConverter/version::1.1.4" VariantName="CSV To XML Converter" VariantDisplayName="CSV To XML Converter" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Text</ContentType>
+                <Schema />
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Xml</ContentType>
+            <Schema />
+        </Content>
+        </OutputContent>
+        <Tab id="iflow.advance.converter.tab">
+            <GuiLabels>
+                <Label language="EN">Processing</Label>
+            </GuiLabels>
+            <AttributeGroup id="General Details">                
+                <AttributeReference>
+                    <ReferenceName>XML_Schema_File_Path</ReferenceName>
+                    <Restriction></Restriction>
+                    <description>Select the path where the XML schema file is located</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>XPath_Field_Location</ReferenceName>
+                    <description>Enter the XPath of the Record Identifier in XSD file</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>Record_Identifier_in_CSV</ReferenceName>
+                    <description>Enter Record Identifier in CSV file</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>Field_Separator_in_CSV</ReferenceName>
+                    <description>Enter Field Separator in CSV file</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>ignoreFirstLineAsHeader</ReferenceName>
+                    <description>Ignores first line of CSV file for conversion</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+    </Variant>
+
+    <!-- v1.1.0 Variant for Csv to Xml step -->
+	<Variant VariantId="ctype::FlowstepVariant/cname::CsvToXmlConverter/version::1.1.0" VariantName="CSV To XML Converter" AttachmentBehavior="Preserve">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Text</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+			<Schema />
+		</Content>
+		</OutputContent>
+		<Tab id="iflow.advance.converter.tab">
+			<GuiLabels>
+				<Label language="EN">Define the parameters to convert CSV to XML</Label>
+			</GuiLabels>
+			<AttributeGroup id="General Details">
+                <AttributeReference>
+                    <ReferenceName>Activity_Name</ReferenceName>
+                    <Restriction></Restriction>
+                    <ErrorMessage>Enter a name for the Converter step</ErrorMessage>
+                </AttributeReference>
+				<AttributeReference>
+					<ReferenceName>XML_Schema_File_Path</ReferenceName>
+					<Restriction></Restriction>
+					<description>Select the path where the XML schema file is located</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>XPath_Field_Location</ReferenceName>
+					<description>Enter the XPath of the Record Identifier in XSD file</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Record_Identifier_in_CSV</ReferenceName>
+					<description>Enter Record Identifier in CSV file</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Field_Separator_in_CSV</ReferenceName>
+					<description>Enter Field Separator in CSV file</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ignoreFirstLineAsHeader</ReferenceName>
+					<description>Ignores first line of CSV file for conversion</description>
+				</AttributeReference>
+			</AttributeGroup>
+    	</Tab>
+	</Variant>
+		     
+    <AttributeMetadata>
+        <Name>Activity_Name</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Converter</Default>
+        <isparameterized>true</isparameterized>        
+        <GuiLabels>
+            <Label language="EN">Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+		<Name>XPath_Field_Location</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>		
+		<GuiLabels>
+			<Label language="EN">Path to Target Element in XSD</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+        <Name>XML_Schema_File_Path</Name>
+		<Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <isparameterized>true</isparameterized>		
+		<HelpService>
+			<HelpServiceName>resourceLookupService</HelpServiceName>
+			<HelpServiceQueryAttributes>
+				<HelpServiceQueryAttribute>
+               		<Name>Type</Name>
+               		<Value>xsd</Value>
+           	 	</HelpServiceQueryAttribute>
+           	 	<HelpServiceQueryAttribute>
+					<Name>ResourceLocation</Name>
+					<Value>xsd</Value>
+               </HelpServiceQueryAttribute>	
+               <HelpServiceQueryAttribute>
+            		<Name>MimeType</Name>
+            		<Value>application/x.xsd+xml</Value>
+ 			 	</HelpServiceQueryAttribute>
+ 			 	<HelpServiceQueryAttribute>
+					<Name>ContentType</Name>
+					<Value>application/mapping+xsd</Value>
+				</HelpServiceQueryAttribute> 
+				<HelpServiceQueryAttribute>
+            		<Name>ContentFileSize</Name>
+            		<Value>2097152</Value>
+        		</HelpServiceQueryAttribute> 			
+			</HelpServiceQueryAttributes>
+		</HelpService>
+        <GuiLabels>
+            <Label language="EN">XML Schema</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+		<Name>Record_Identifier_in_CSV</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>		
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Record Marker in CSV</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+    <AttributeMetadata>
+        <Name>Field_Separator_in_CSV</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType> 
+        <Default>,</Default>       
+        <isparameterized>true</isparameterized>        
+        <GuiLabels>
+            <Label language="EN">Field Separator in CSV</Label>
+        </GuiLabels>
+        <FixedValues>
+        	<isEditable>true</isEditable>
+            <FixedValue>
+                <Value>\t</Value>
+                <GuiLabels>
+                    <Label language="EN">Tab(\t)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>;</Value>
+                <GuiLabels>
+                    <Label language="EN">Semicolon(;)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>:</Value>
+                <GuiLabels>
+                    <Label language="EN">Colon(:)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>|</Value>
+                <GuiLabels>
+                    <Label language="EN">Pipe(|)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>.</Value>
+                <GuiLabels>
+                    <Label language="EN">Dot(.)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>,</Value>
+                <GuiLabels>
+                    <Label language="EN">Comma(,)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Space</Value>
+                <GuiLabels>
+                    <Label language="EN">Space</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata> 
+    <AttributeMetadata>
+		<Name>ignoreFirstLineAsHeader</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>false</Default>		
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Exclude First Line Header</Label>
+		</GuiLabels>
+	</AttributeMetadata>       
+</ComponentMetadata>

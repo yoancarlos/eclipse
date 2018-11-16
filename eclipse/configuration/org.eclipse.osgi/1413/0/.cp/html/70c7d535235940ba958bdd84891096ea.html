@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="css/documentation.css?x=8673828923530496"/>
+<title>Pushing Content to the Git Repository</title>
+</head>
+<body class="" id="loio70c7d535235940ba958bdd84891096ea">
+<div id="wrapper"><div id="container">
+<h1 class="title topictitle1">Pushing Content to the Git Repository</h1>
+<div class="body taskbody"><p class="shortdesc"/>
+<div class="section context" id="loio70c7d535235940ba958bdd84891096ea__context_N10015_N10012_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You perform this task to push the developed content into the Live branch of the customer Git
+				repository.</p>
+
+		</div><div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio70c7d535235940ba958bdd84891096ea__steps_hlm_f2m_wh"><li class="li step stepexpand" id="loio70c7d535235940ba958bdd84891096ea__step_N10022_N1001E_N10012_N10001"><span class="ph cmd">In the <span class="keyword uilabel">Git Repositories</span> view, right-click on the project and choose
+						<span class="ph uicontrol">Pull</span> from the context menu to pull any changes that
+					other users have recently pushed.</span></li>
+<li class="li step stepexpand" id="loio70c7d535235940ba958bdd84891096ea__step_N10033_N1001E_N10012_N10001"><span class="ph cmd">Under <span class="ph menucascade"><img src="images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Remote</span> <img src="images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">origin</span> <img src="images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>, right-click on the URL of the remote repository indicated with
+					<img class="image" id="loio70c7d535235940ba958bdd84891096ea__image_bgw_nfy_mj" src="7f1c888cbc484022a099a9d2b7d40e5c.image" alt="Push_FSN" title="Push_FSN"/>(<em class="ph i">Push</em> icon).</span></li>
+<li class="li step stepexpand" id="loio70c7d535235940ba958bdd84891096ea__step_N10053_N1001E_N10012_N10001"><span class="ph cmd">Choose <span class="ph uicontrol">Configure Push</span>.</span></li>
+<li class="li step stepexpand" id="loio70c7d535235940ba958bdd84891096ea__step_N10060_N1001E_N10012_N10001"><span class="ph cmd">If you want to change reference specifications, expand
+					<span class="ph uicontrol">Advanced</span>.</span></li>
+<li class="li step stepexpand" id="loio70c7d535235940ba958bdd84891096ea__step_N1006D_N1001E_N10012_N10001"><span class="ph cmd">In <span class="keyword uilabel">Push Ref Specification</span> wizard, select <em class="ph i">refs/heads/&lt;Target branch
+						of cloned repository&gt;</em> as the <span class="keyword uilabel">Source ref:</span> and
+						<em class="ph i">refs/heads/&lt;Target branch of central Git Repository&gt;</em> as the
+						<span class="keyword uilabel">Destination ref:</span>. </span> 
+					<p class="p">Suppose the content needs to be pushed from the <em class="ph i">&lt;TenantID&gt;_Live</em>
+						branch of the cloned repository to the <em class="ph i">&lt;TenantID&gt;_Live</em> of the
+						central Git Repository.</p>
+   <p class="p">So, in the <span class="keyword uilabel">Push Ref
+							Specification</span> wizard, select
+							<em class="ph i">refs/heads/&lt;Tenant&gt;_Live</em> as the <span class="keyword uilabel">Source
+							ref:</span> and <em class="ph i">refs/heads/&lt;Tenant&gt;_Live</em> as the
+							<span class="keyword uilabel">Destination ref:</span>.</p>
+
+				</li>
+<li class="li step stepexpand" id="loio70c7d535235940ba958bdd84891096ea__step_N100B2_N1001E_N10012_N10001"><span class="ph cmd">Choose <span class="ph uicontrol">Add Spec+</span>.</span></li>
+<li class="li step stepexpand" id="loio70c7d535235940ba958bdd84891096ea__step_N100BF_N1001E_N10012_N10001"><span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span> 
+					<p class="p"><span class="keyword uilabel">Push Result</span> dialog shows you the content that is pushed into the central
+						Git Repository. Now the customer specific content is available in the Live
+						branch of the Git Repository.</p>
+
+				</li>
+</ol>
+</div>
+<div class="related-links"> </div>
+</div></div>
+</body>
+</html>

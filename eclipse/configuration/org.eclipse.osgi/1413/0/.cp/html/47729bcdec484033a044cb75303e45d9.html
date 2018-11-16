@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Using Custom Functions in Message Mapping</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio47729bcdec484033a044cb75303e45d9">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Using Custom Functions in Message Mapping</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<p class="p">Make sure you have created a valid Integration project with Message Mapping associated
+				scripts.</p>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">In Message Mapping, you can create your own custom functions by using groovy scripts and use
+				them as required. You can use custom functions from the function palette for
+				modeling the mapping expressions. </p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="keyword uinolabel">Project explorer</span> view, select
+						<span class="ph uicontrol">src.main.resources.mapping</span> package.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the context menu of <span class="ph uicontrol">src.main.resources.mapping</span>,
+					choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">New</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Other</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+				<div class="itemgroup stepresult">
+					<p class="p">The <span class="keyword uinolabel">New</span> dialog box appears.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Message Mapping</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Next</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+				<div class="itemgroup stepresult">
+					<p class="p">The <span class="keyword uinolabel">New Message Mapping</span> dialog box appears.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="keyword uinolabel">General Details</span> section, enter the message
+					mapping name in the <span class="ph uicontrol">Name</span> field.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Location Details</span> section, select the project name
+						using<span class="ph uicontrol"> Browse…</span></span>
+				<div class="itemgroup stepresult">
+					<p class="p">The path of the selected project gets added to the <span class="ph uicontrol">Path</span> field, and
+						the selected message mapping page opens.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Signature</span> section of the message mapping, select the
+						<span class="keyword uinolabel">Source Element</span> (.xsd) and <span class="keyword uinolabel">Target
+						Element</span> (.xsd) by choosing <span class="ph uicontrol">Add…</span></span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="keyword uinolabel">Properties</span> section, double-click the
+						<span class="ph uicontrol">Definition</span> tab to see the message mapping.</span>
+				<div class="itemgroup stepresult">
+					<p class="p">The <span class="keyword uinolabel">Standard Functions</span> and <span class="keyword uinolabel">Custom Functions</span>
+						appear on the function palette of the <span class="keyword uinolabel">Properties</span>
+						section.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Custom Functions</span>.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<p class="p">In the <span class="keyword uinolabel">Properties</span> section, if you do not find any groovy scripts
+							under <span class="keyword uinolabel">Custom Functions</span> in the function palette,
+							then can add an existing groovy script or create a new groovy script. </p>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the context menu of <span class="ph uicontrol">Custom Functions</span>, choose
+						<span class="ph uicontrol">Add</span> to use and existing groovy script file.</span>
+				<div class="itemgroup info">The <span class="ph uicontrol">Add Script </span> dialog box appears.</div>
+				<ol type="a" class="ol substeps" id="loio47729bcdec484033a044cb75303e45d9__substeps_zdv_pvk_hs">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Select a groovy script (.gsh) file, and choose <span class="ph uicontrol">OK</span>.</span>
+						<div class="itemgroup stepresult">
+							<p class="p">The selected groovy script along with all the functions that fulfill the message mapping
+								requirements appear under <span class="keyword uinolabel">Custom Functions</span> in
+								the functions palette.</p>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the context menu of <span class="keyword uinolabel">Custom Functions</span>, choose
+						<span class="ph uicontrol">Create</span> to create a new groovy script file.</span>
+				<div class="itemgroup info">The <span class="keyword uinolabel">New Mapping Script</span> dialog box appears.</div>
+				<ol type="a" class="ol substeps" id="loio47729bcdec484033a044cb75303e45d9__substeps_qjg_wvk_hs">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Enter or select the parent folder for the new groovy script file.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Enter the name of the new groovy script file in the <span class="keyword uinolabel">File
+								name</span> field.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span>
+						<div class="itemgroup stepresult">
+							<p class="p">The new groovy script file appears under <span class="keyword uinolabel">Custom Functions</span> in the
+								function palette. You can expand the new groovy script to see all
+								the functions under it.</p>
+
+							<p class="p">In the function palette, you can select any groovy script under <span class="keyword uinolabel">Custom
+									functions</span> and you can use it and customize it
+								according to your requirements.</p>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to add a function to the <span class="keyword uinolabel">Expression</span> editor, select a
+					function under the groovy script in the function palette.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Drag and drop the function from the groovy script to the text area of the expression
+					editor.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">You can define your mapping logic by using your custom functions.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">File</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Save</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<div class="p">
+							<ul class="ul" id="loio47729bcdec484033a044cb75303e45d9__ul_jfc_xcz_hs">
+								<li class="li">
+									<p class="p">You can validate your mapping and check for errors by viewing the
+											<span class="keyword uinolabel">Problems</span> tab, or
+											<span class="keyword uinolabel">Console</span> tab, or <span class="keyword uinolabel">Error
+											log </span> tab. If your mapping has any errors,
+										then they are displayed with error markers <img class="image" id="loio47729bcdec484033a044cb75303e45d9__image_kwg_hwp_js" src="loiocb0f3aa420714bc99103cf679da39e8a_LowRes.png"/>.</p>
+
+								</li>
+
+								<li class="li">In the function palette, if you have used a function from one of your scripts under
+										<span class="keyword uinolabel">Custom Functions</span>, and if that script
+									is removed is from the functions palette, then an error marker
+										<img class="image" id="loio47729bcdec484033a044cb75303e45d9__image_mhf_n2z_hs" src="loiocb0f3aa420714bc99103cf679da39e8a_LowRes.png"/> is
+									displayed.</li>
+
+								<li class="li">You can access the Message Processing logs using
+										<samp class="ph codeph">messageLogFactory.getMessageLog(context);</samp>.
+									For access specific logs, please refer Javadocs.</li>
+
+								<li class="li">When you launch Eclipse, if you do not see your local workspace,
+									choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">File</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Switch workspace</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Other...</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> and select the required workspace.</li>
+
+							</ul>
+
+						</div>
+
+					</div>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+<div class="related-links"> 
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

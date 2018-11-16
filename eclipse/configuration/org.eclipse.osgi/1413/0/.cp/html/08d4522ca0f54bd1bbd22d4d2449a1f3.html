@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="SAP currently only supports XAdES-BES and XAdES-EPES. There are a number of additional limitations."/>
+<meta name="description" content="SAP currently only supports XAdES-BES and XAdES-EPES. There are a number of additional limitations."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Limitations</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio08d4522ca0f54bd1bbd22d4d2449a1f3">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Limitations</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc">SAP currently only supports XAdES-BES and XAdES-EPES. There are a number of additional
+		limitations.</p>
+
+		<p class="p"/>
+
+		<ul class="ul" id="loio08d4522ca0f54bd1bbd22d4d2449a1f3__ul_ydx_bkc_jq">
+			<li class="li">No support for the <samp class="ph codeph">QualifyingPropertiesReference</samp> element (see section 6.3.2
+				of the XAdES specification at <a class="extlink" href="http://help.sap.com/disclaimer?site=http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf" target="_blank" download="" alt="http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf" title="http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf">http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>). </li>
+
+			<li class="li">No support for signature forms XAdES-T and XAdES-C. </li>
+
+			<li class="li">No support for the <samp class="ph codeph">Transforms</samp> element contained in the
+					<samp class="ph codeph">SignaturePolicyId</samp> element contained in the
+					<samp class="ph codeph">SignaturePolicyIdentifier</samp> element. </li>
+
+			<li class="li">No support of the <samp class="ph codeph">CounterSignature</samp> element; this implies that there is no
+				support for the <samp class="ph codeph">UnsignedProperties</samp> element.</li>
+
+			<li class="li">At most one <samp class="ph codeph">DataObjectFormat</samp> element is supported. <p class="p">More than one
+						<samp class="ph codeph">DataObjectFormat</samp> element does not make any sense in the use
+					cases supported by the Signer step, because only one signed data object is
+					expected (the incoming message body to the XML signer). </p>
+</li>
+
+			<li class="li">At most one <samp class="ph codeph">CommitmentTypeIndication</samp> element is supported. <p class="p">More than one
+						<samp class="ph codeph">CommitmentTypeIndicationelement</samp> does not make any sense in
+					the use cases supported by the Signer step, because only one signed data object
+					is expected (the incoming message body to the XML signer).</p>
+
+			</li>
+
+			<li class="li">A <samp class="ph codeph">CommitmentTypeIndication</samp> element always contains the
+					<samp class="ph codeph">AllSignedDataObjects</samp> element. <p class="p">The
+						<samp class="ph codeph">ObjectReference</samp> element within a
+						<samp class="ph codeph">CommitmentTypeIndication</samp> element is not supported.
+				</p>
+</li>
+
+			<li class="li">No support of the <samp class="ph codeph">AllDataObjectsTimeStamp</samp> element (it requires a time
+				authority).</li>
+
+			<li class="li">No support of the <samp class="ph codeph">IndividualDataObjectsTimeStamp</samp> element (it requires a time
+				authority).</li>
+
+		</ul>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:SOAP/version::1.1.5" ComponentName="sap:SOAP" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" MetadataVersion="2.0">
+	<Variant VariantId="ctype::AdapterVariant/cname::SOAP/tp::HTTP/mp::Plain SOAP/direction::Sender/version::1.1.5" VariantName="Soap SAP RM Sender" MetadataVersion="2.0">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality = "" isStreaming="">
+		 	<Content>
+				<ContentType>Xml</ContentType>
+				<Schema/>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality = "" isStreaming="">
+			<Content>
+				<ContentType>Xml</ContentType>
+				<Schema/>
+			</Content>
+		</OutputContent>
+		<Metadata>
+			<AdditionalMetadata>
+         		<Name>tp</Name>
+         		<GuiLabels>
+              		<Label language="EN" >HTTPS</Label>
+          		</GuiLabels>
+    		</AdditionalMetadata>
+    		<AdditionalMetadata>
+    			<Name>mp</Name>
+    			<GuiLabels>
+					<Label language="EN">SAP RM</Label>
+				</GuiLabels>
+    		</AdditionalMetadata>
+    	</Metadata>
+		<Tab id="connection">
+			<GuiLabels>
+				<Label language="EN">Connection</Label>
+			</GuiLabels>
+			<AttributeGroup id = "Connection Details">
+				<GuiLabels>
+					<Label language="EN">Connection Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>address</ReferenceName>
+					<Restriction>(/\w+.*_*)+</Restriction>
+					<ErrorMessage>Enter a valid address. E.g. /file/test</ErrorMessage>
+					<description>Relative endpoint address on which the ESB Bus listens to the incoming request, for example "/payment"</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>wsdlURL</ReferenceName>
+					<Restriction>(/?)(wsdl/){1}(\w+)(.(?i)wsdl)$</Restriction>
+					<ErrorMessage>Enter a valid URL. E.g. /wsdl/sample.wsdl; wsdl/sample.wsdl</ErrorMessage>
+					<description>URL to the WSDL defining the WS provider endpoint.&#10;URL format: wsdl/&lt;InterfaceName&gt;.wsdl, where the WSDL is available in src.main.resources.wsdl</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>cxfOnewayRobust</ReferenceName>
+					<description>Used for reliable one-way message exchanges.&#10;The consumer sends a message to a provider, which returns a status.&#10;When the processing fails a fault is returned.</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<Tab id="conditions">
+			<GuiLabels>
+				<Label language="EN">Conditions</Label>
+			</GuiLabels>
+			<AttributeGroup id = "Maximum Message Size">
+				<GuiLabels>
+					<Label language="EN">Maximum Message Size</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>maximumBodySize</ReferenceName>
+					<description>Maximum Message Body Size (in MB)</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>maximumAttachmentSize</ReferenceName>
+					<description>Maximum Message Attachments Size (in MB)</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<AllowedHeaders>SapMessageId,SapMessageIdEx,SapPlainSoapQueueId,SapPlainSoapQoS</AllowedHeaders>
+		<ReferencedComponents>
+			<ReferencedComponent>MessageSizing</ReferencedComponent>
+		</ReferencedComponents>
+	</Variant>
+	<AttributeMetadata>
+		<Name>maximumAttachmentSize</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>100</Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Attachments Size (in MB)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>maximumBodySize</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>40</Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Body Size (in MB)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>Maxlength</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Maximum Length</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>address</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default><!-- /BSN/paymentOrder --></Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Address</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>CompressMessage</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default><!-- 1 --></Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Compress Message</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>EncryptRMPersistence</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Encrypt Message During Persistence</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>enableAnonymous</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+
+		<GuiLabels>
+			<Label language="EN">Connect without Client Authentication</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>wsdlURL</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default />
+		<Length />
+		<HelpService>
+			<HelpServiceName>resourceLookupService</HelpServiceName>
+			<HelpServiceQueryAttributes>
+				<HelpServiceQueryAttribute>
+               		<Name>Type</Name>
+               		<Value>WSDL</Value>
+           	 	</HelpServiceQueryAttribute>
+           	 	<HelpServiceQueryAttribute>
+					<Name>ResourceLocation</Name>
+					<Value>wsdl</Value>
+               </HelpServiceQueryAttribute>				
+			</HelpServiceQueryAttributes>
+		</HelpService>
+		<GuiLabels>
+			<Label language="EN">URL to WSDL</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>cxfOnewayRobust</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Robust One-Way Communication</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ReliableMessageDelivery</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Reliable Messaging</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>assurance</Name>
+		<Usage />
+		<DataType>xsd:string</DataType>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Assurance Patterns</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>Atleast Once</Value>
+				<GuiLabels>
+					<Label language="EN">Atleast Once</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>MaxLength</Name>
+		<Usage />
+		<DataType>xsd:integer</DataType>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Max Length</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>MaxRetry</Name>
+		<Usage />
+		<DataType>xsd:integer</DataType>
+		<Default>-1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Maximum Number of Retries</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>BaseRetransmissionInterval</Name>
+		<Usage />
+		<DataType>xsd:integer</DataType>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Retry Interval (ms)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ExponentialBackOffInterval</Name>
+		<Usage />
+		<DataType>xsd:integer</DataType>
+		<Default>2000</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Exponential Backoff Interval</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ExponentialBackOffEnable</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Exponential Backoff</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>AcknowledgementInterval</Name>
+		<Usage />
+		<DataType>xsd:integer</DataType>
+		<Default>0</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Interval</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+		<Name>IntraMessageThreshold</Name>
+		<Usage />
+		<DataType>xsd:integer</DataType>
+		<Default>0</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Intra Message Threshold</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+    <AttributeMetadata>
+        <Name>retryAlertThreshold</Name>
+        <Usage />
+        <DataType>xsd:integer</DataType>
+        <Default>5</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Retry Threshold for Alerting</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+	<AttributeMetadata>
+		<Name>soapOptions</Name>
+		<Usage />
+		<DataType>xsd:string</DataType>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Processing Settings</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>None</Value>
+				<GuiLabels>
+					<Label language="EN">Standard</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>cxfRobust</Value>
+				<GuiLabels>
+					<Label language="EN">Robust</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+    <!-- Not used anymore; not removed as there should be no re-invention of this attribute-key in the future -->
+		<Name>verifyRequestMessage</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Verify Request Message</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+        <!-- Not used anymore; not removed as there should be no re-invention of this attribute-key in the future -->
+		<Name>signResponseMessage</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Default />
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Sign Response Message</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+    <!-- Not used anymore; not removed as there should be no re-invention of this attribute-key in the future -->
+		<Name>includeCertificateInResponse</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Include Certificate in Response Message</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+    <!-- Not used anymore; not removed as there should be no re-invention of this attribute-key in the future -->
+		<Name>signRequestMessage</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Default />
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Sign Request Message</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+    <!-- Not used anymore; not removed as there should be no re-invention of this attribute-key in the future -->
+		<Name>verifyResponseMessage</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Verify Response Message</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+    <!-- Not used anymore; not removed as there should be no re-invention of this attribute-key in the future -->
+		<Name>includeCertificateInRequest</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Include Certificate in Request Message</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>enableBasicAuthentication</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Basic Authentication</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>allowChunking</Name>
+		<Usage />
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Allow Chunking</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>credentialName</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Credential Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>privateKeyAlias</Name>
+		<DataType>xsd:string</DataType>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Private Key Alias</Label>
+		</GuiLabels>
+		<ContentBindingService>
+			<ContentBindingServiceName>GenericContentBindingService</ContentBindingServiceName>
+ 			<BindingServiceAttributes>
+				<BindingServiceAttribute>
+               		<Name>srcAttributePath</Name>
+               		<Value>/bpmn2:definitions/bpmn2:collaboration</Value>
+           	 	</BindingServiceAttribute>
+            	<BindingServiceAttribute>
+               		<Name>srcAttributeId</Name>
+               		<Value>privateKeyAlias</Value>
+           	 	</BindingServiceAttribute>
+ 			</BindingServiceAttributes>
+		</ContentBindingService>
+	</AttributeMetadata>
+	<AttributeMetadata>
+    <!-- Not used anymore; not removed as there should be no re-invention of this attribute-key in the future -->
+		<Name>signAlias</Name>
+		<Usage />
+		<DataType>xsd:string</DataType>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Private Key Alias</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+
+	<AttributeMetadata>
+		<Name>operationName</Name>
+		<Usage />
+		<DataType>xsd:string</DataType>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Operation Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+		<Name>requestTimeout</Name>
+		<DataType>xsd:string</DataType>
+		<Default>60000</Default>		
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Timeout (in ms)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	
+    <!-- WS Security inbound -->
+    <AttributeMetadata>
+        <Name>WSSecurity</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>None</Default>        
+        <Length />
+        <GuiLabels>
+            <Label language="EN">WS-Security Configuration</Label>
+        </GuiLabels>
+        <FixedValues>
+	        <FixedValue>
+	            <Value>ManualConfiguration</Value>
+	            <GuiLabels>
+	                <Label language="EN">Via Manual Configuration in Channel</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	        <FixedValue>
+	            <Value>None</Value>
+	            <GuiLabels>
+	                <Label language="EN">None</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	    </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>WSSecurityType</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>VerifyMessage</Default>        
+        <Length />
+        <GuiLabels>
+            <Label language="EN">WS-Security Type</Label>
+        </GuiLabels>
+        <FixedValues>
+	        <FixedValue>
+	            <Value>VerifyMessage</Value>
+	            <GuiLabels>
+	                <Label language="EN">Verify Message</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	        <FixedValue>
+	            <Value>VerifyDecryptMessage</Value>
+	            <GuiLabels>
+	                <Label language="EN">Verify and Decrypt Message</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	    </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>SaveIncomingSignedMessage</Name>
+        <Usage />
+        <DataType>xsd:boolean</DataType>
+        <Default>0</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Save Incoming Signed Message</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>CheckTimeStamp</Name>
+        <Usage />
+        <DataType>xsd:boolean</DataType>
+        <Default>0</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Check Time Stamp</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>SenderBasicSecurityProfileCompliant</Name>
+        <Usage />
+        <DataType>xsd:boolean</DataType>
+        <Default>1</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Sender is Basic Security Profile Compliant</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PrivateKeyAliasResponseSigning</Name>
+        <Usage />
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Private Key Alias for Response Signing</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PublicKeyAliasResponseEncryption</Name>
+        <Usage />
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Public Key Alias for Response Encryption</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>X509TokenAssertion</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>WssX509V3Token10</Default>        
+        <Length />
+        <GuiLabels>
+            <Label language="EN">X509 Token Assertion</Label>
+        </GuiLabels>
+        <FixedValues>
+	        <FixedValue>
+	            <Value>WssX509V3Token10</Value>
+	            <GuiLabels>
+	                <Label language="EN">Wss X509 V3 Token 10</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	        <FixedValue>
+	            <Value>RequireKeyIdentifierReference</Value>
+	            <GuiLabels>
+	                <Label language="EN">Require Key Identifier Reference</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	        <FixedValue>
+	            <Value>RequireIssuerSerialReference</Value>
+	            <GuiLabels>
+	                <Label language="EN">Require Issuer Serial Reference</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	        <FixedValue>
+            	<Value>RequireThumbprintReference</Value>
+            	<GuiLabels>
+                	<Label language="EN">Require Thumbprint Reference</Label>
+            	</GuiLabels>
+        	</FixedValue>
+	    </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+    <Name>recipientX509TokenAssertion</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>WssX509V3Token10</Default>        
+        <Length />
+        <GuiLabels>
+            <Label language="EN">X509 Token Assertion</Label>
+        </GuiLabels>
+        <FixedValues>
+        <FixedValue>
+            <Value>WssX509V3Token10</Value>
+            <GuiLabels>
+                <Label language="EN">Wss X509 V3 Token 10</Label>
+            </GuiLabels>
+        </FixedValue>
+        <FixedValue>
+            <Value>RequireKeyIdentifierReference</Value>
+            <GuiLabels>
+                <Label language="EN">Require Key Identifier Reference</Label>
+            </GuiLabels>
+        </FixedValue>
+        <FixedValue>
+            <Value>RequireIssuerSerialReference</Value>
+            <GuiLabels>
+                <Label language="EN">Require Issuer Serial Reference</Label>
+            </GuiLabels>
+        </FixedValue>
+        <FixedValue>
+            <Value>RequireThumbprintReference</Value>
+            <GuiLabels>
+                <Label language="EN">Require Thumbprint Reference</Label>
+            </GuiLabels>
+        </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>InitiatorTokenIncludeStrategy</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>AlwaysToRecipient</Default>        
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Include Strategy</Label>
+        </GuiLabels>
+        <FixedValues>
+	        <FixedValue>
+	            <Value>AlwaysToRecipient</Value>
+	            <GuiLabels>
+	                <Label language="EN">Always to Recipient</Label>
+	            </GuiLabels>
+	        </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>RecipientTokenIncludeStrategy</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Never</Default>        
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Include Strategy</Label>
+        </GuiLabels>
+        <FixedValues>
+	        <FixedValue>
+	            <Value>Never</Value>
+	            <GuiLabels>
+	                <Label language="EN">Never</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	        <FixedValue>
+	            <Value>AlwaysToInitiator</Value>
+	            <GuiLabels>
+	                <Label language="EN">Always to Initiator</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	     </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>AlgorithmSuiteAssertion</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Basic128Rsa15</Default>        
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Algorithm Suite Assertion</Label>
+        </GuiLabels>
+        <FixedValues>
+	        <FixedValue>
+	            <Value>Basic128Rsa15</Value>
+	            <GuiLabels>
+	                <Label language="EN">Basic 128 Rsa 15</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	        <FixedValue>
+	            <Value>TripleDesRsa15</Value>
+	            <GuiLabels>
+	                <Label language="EN">Triple Des Rsa 15</Label>
+	            </GuiLabels>
+	        </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    
+    <!-- WS Security outbound -->
+    <AttributeMetadata>
+        <Name>WSSecurity_outbound</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>None</Default>        
+        <Length />
+        <GuiLabels>
+            <Label language="EN">WS-Security Configuration</Label>
+        </GuiLabels>
+        <FixedValues>
+	        <FixedValue>
+	            <Value>ManualConfiguration</Value>
+	            <GuiLabels>
+	                <Label language="EN">Via Manual Configuration in Channel</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	        <FixedValue>
+	            <Value>PoliciesInWSDL</Value>
+	            <GuiLabels>
+	                <Label language="EN">Based on Policies in WSDL</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	        <FixedValue>
+	            <Value>None</Value>
+	            <GuiLabels>
+	                <Label language="EN">None</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	    </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>WSSecurityType_outbound</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>SignMessage</Default>        
+        <Length />
+        <GuiLabels>
+            <Label language="EN">WS-Security Type</Label>
+        </GuiLabels>
+        <FixedValues>
+	        <FixedValue>
+	            <Value>SignMessage</Value>
+	            <GuiLabels>
+	                <Label language="EN">Sign Message</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	        <FixedValue>
+	            <Value>SignEncryptMessage</Value>
+	            <GuiLabels>
+	                <Label language="EN">Sign and Encrypt Message</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	    	<FixedValue>
+			<Value>None</Value>
+            	<GuiLabels>
+                	<Label language="EN">None</Label>
+            	</GuiLabels>
+        	</FixedValue>
+	    	
+	    </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>SetTimeStamp</Name>
+        <Usage />
+        <DataType>xsd:boolean</DataType>
+        <Default>0</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Set Time Stamp</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>SenderBasicSecurityProfileCompliant_wsdl</Name>
+        <Usage />
+        <DataType>xsd:boolean</DataType>
+        <Default>1</Default>
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Sender is Basic Security Profile Compliant</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PrivateKeyAliasSigning</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Private Key Alias for Signing</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PublicKeyAliasEncryption</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Public Key Alias for Encryption</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PrivateKeyAliasSigning_wsdl</Name>
+        <Usage />
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Private Key Alias for Signing</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>PublicKeyAliasEncryption_wsdl</Name>
+        <Usage />
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Public Key Alias for Encryption</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>InitiatorTokenIncludeStrategy_outbound</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>AlwaysToRecipient</Default>        
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Include Strategy</Label>
+        </GuiLabels>
+        <FixedValues>
+	        <FixedValue>
+	            <Value>AlwaysToRecipient</Value>
+	            <GuiLabels>
+	                <Label language="EN">Always to Recipient</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	        <FixedValue>
+	            <Value>Never</Value>
+	            <GuiLabels>
+	                <Label language="EN">Never</Label>
+	            </GuiLabels>
+	        </FixedValue>
+	    </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>UserNameTokenOption</Name>
+        <Usage/>
+        <DataType>xsd:string</DataType>
+        <Default>None</Default>
+        <Length/>
+        <GuiLabels>
+            <Label language="EN">Options</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>PlainText</Value>
+                <GuiLabels>
+                    <Label language="EN">Plain Text Password</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>PasswordDigest</Value>
+                <GuiLabels>
+                    <Label language="EN">Hashed Password</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>None</Value>
+                <GuiLabels>
+                    <Label language="EN">None</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>UserNameTokenCredentialName</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Credential Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>WsdlUserNameTokenCredentialName</Name>
+        <Usage/>
+        <DataType>xsd:string</DataType>
+        <Default />
+        <Length />
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Credential Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>Layout_outbound</Name>
+        <Usage>required</Usage>
+        <DataType>xsd:string</DataType>
+        <Default>Strict</Default>        
+        <Length />
+        <GuiLabels>
+            <Label language="EN">Layout</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>Strict</Value>
+                <GuiLabels>
+                    <Label language="EN">Strict</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>Lax</Value>
+                <GuiLabels>
+                    <Label language="EN">Lax</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+</ComponentMetadata>

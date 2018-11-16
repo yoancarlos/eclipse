@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="With Runtime Configuration you can specify general properties of the integration flow."/>
+<meta name="description" content="With Runtime Configuration you can specify general properties of the integration flow."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Specify the Runtime Configuration</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio0c1c96e50ff340869090469d260976f3">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Specify the Runtime Configuration</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">With Runtime Configuration you can specify general properties of the integration
+		flow.</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p"/>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loio0c1c96e50ff340869090469d260976f3__step_N10042_N1003E_N10012_N10001">
+				<span class="ph cmd">Open the integration flow and select the graphical area outside the integration flow model. </span>
+			</li>
+<li class="li step stepexpand" id="loio0c1c96e50ff340869090469d260976f3__step_N1004F_N1003E_N10012_N10001">
+				<span class="ph cmd">Choose the <span class="keyword uilabel">Runtime Configuration</span> tab.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify the following properties.</span>
+				<div class="itemgroup info">
+            <p class="p">With the property <span class="ph uicontrol">Product Profile</span> you choose the target
+                runtime environment for the integration content designed with the application.</p>
+
+            <p class="p">A product profile defines a set of capabilities for Cloud integration content design
+                supported by a specific target integration platform. For example, a specific product
+                profile supports the configuration of a specific set of adapter types and
+                integration flow steps. </p>
+
+        </div>
+				<div class="itemgroup info">
+            
+<div class="table-wrapper tablenoborder"><table summary="" id="loio0c1c96e50ff340869090469d260976f3__d635e33" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Runtime Configuration Properties</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" valign="top" width="50%" id="d293849e72">
+                                <p class="p">Property</p>
+
+                            </th>
+
+                            <th class="entry" valign="top" width="50%" id="d293849e78">
+                                <p class="p">Allows you to ...</p>
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d293849e72 ">
+                                <p class="p"><span class="ph uicontrol">Namespace Mapping</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d293849e78 ">
+                                <p class="p">Map a prefix to a namespace at runtime.  </p>
+
+                                <p class="p">Enter a namespace-prefix pair with a format
+                                        <kbd class="ph userinput">xmlns:&lt;prefix&gt;=&lt;namespace&gt;</kbd>.</p>
+
+                                <p class="p">This parameter is required for elements such as the content-based
+                                    router, content modifier or content filter that can use
+                                    namespaces in their configuration. You can either enter the
+                                    namespace-prefix pair or the tool automatically fills the
+                                    namespace-prefix pair whenever a lookup is performed for the
+                                    assigned WSDL.</p>
+
+                                <p class="p">You can also enter multiple namespace-prefixes as shown in the
+                                    example:
+                                        <kbd class="ph userinput">xmlns:test=http://sapcd.com/testABC;xmlns:test2=http://sapcd.com/testPQR</kbd>. </p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p"><samp class="ph codeph">xmlns:ns0=https://hcischemas.netweaver.neo.com/hciflow</samp></p>
+
+                                    <div class="p">Here, <samp class="ph codeph">ns0</samp> is the prefix and
+                                            <samp class="ph codeph">https://hcischemas.netweaver.neo.com/hciflow</samp>
+                                        is the namespace. That way, in a router, you can specify the
+                                        routing condition for an XML message as:
+                                        <div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">/ns0:HCIMessage/SenderID='Sender01'</pre></div>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d293849e72 ">
+                                <p class="p"><span class="ph uicontrol">Message Processing Log</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d293849e78 ">
+                                <p class="p">Configure the log level to display in the
+                                        <span class="ph uicontrol">Monitoring</span> editor.</p>
+
+                                <p class="p">Select one of the log levels from the <span class="keyword uilabel">Message Processing
+                                        Log</span> dropdown.</p>
+
+                                <ul class="ul" id="loio0c1c96e50ff340869090469d260976f3__d635e137">
+                                    <li class="li"><span class="keyword uilabel">All Events</span>: Allows all messages to be
+                                        logged and displayed</li>
+
+                                    <li class="li"><span class="keyword uilabel">Error Events</span>: Allows only error messages
+                                        to be logged and displayed</li>
+
+                                    <li class="li"><span class="keyword uilabel">No Logging</span>: Hides logging
+                                        information</li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d293849e72 ">
+                                <p class="p"><span class="ph uicontrol">Allowed Header(s)</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d293849e78 ">
+                                <p class="p">Specify the headers to be retained when the incoming message is
+                                    processed. </p>
+
+                                <p class="p">Enter one or more names of headers by separating them with pipe
+                                        (<samp class="ph codeph">|</samp>).</p>
+
+                                <div class="note note"><span class="notetitle">Note</span> 
+                                    <p class="p">If you want to enter several headers with similar names, use
+                                        wildcards to make the entering faster.</p>
+
+                                    <p class="p">The wildcards are regular expressions, such as
+                                            <samp class="ph codeph">.*</samp> and
+                                            <samp class="ph codeph">?</samp>.<samp class="ph codeph">?</samp> substitutes
+                                        exactly one non-space character.<samp class="ph codeph">.*</samp>
+                                        substitutes zero or more non-space characters.</p>
+
+                                    <p class="p">Example: You want to enter the headers A, A1, A2, A3.</p>
+
+                                    <p class="p">Instead of entering all of them singularly, simply
+                                            enter<kbd class="ph userinput"> A .*</kbd>. This will allow all
+                                        headers starting with A.</p>
+
+                                </div>
+
+                                <p class="p">In general, headers used by the runtime components are retained
+                                    and other headers are removed during message processing. This
+                                    field is useful when you need specific header information along
+                                    with the message body.</p>
+
+                                <p class="p">For inbound SSL connections (when a sender calls SAP HCI),
+                                    senders have to authenticate against a load balancer component.
+                                    The load balancer sets the following message header fields:
+                                        <samp class="ph codeph">SSL_CLIENT_CERT</samp> (contains the
+                                    Base64-encoded sender client certificate) and
+                                        <samp class="ph codeph">SSL_CLIENT_USER</samp>. Entering these values in
+                                    the <span class="ph uicontrol">Allowed Header(s)</span> field, allowes you
+                                    to forward these headers during message processing.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" valign="top" width="50%" headers="d293849e72 ">
+                                <p class="p"><span class="ph uicontrol">Enable Debug Trace</span></p>
+
+                            </td>
+
+                            <td class="entry" valign="top" width="50%" headers="d293849e78 ">
+                                <p class="p">Enable server log in case you need to obtain help from SAP
+                                    Support for troubleshooting issues.</p>
+
+                                <div class="note caution" id="loio0c1c96e50ff340869090469d260976f3__d635e238"><span class="cautiontitle">Caution</span> If you select this option and if the SaaS Admin
+                                    has set the log level for
+                                        <span class="ph sap-technical-name sap-technical-name">org.apache.cxf</span> as
+                                        <span class="ph sap-technical-name sap-technical-name">INFO</span>, the message
+                                    payload is written into the log files. If the message payload
+                                    contains sensitive data, consider the settings as the message
+                                    payload should not be logged.</div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+			</li>
+<li class="li step stepexpand" id="loio0c1c96e50ff340869090469d260976f3__step_N1008A_N1003D_N10011_N10001">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="8007daa7b193409580ba151b1df77fa4.html" title="The SAP Cloud Platform Integration Web UI (also known as Content Hub) allows you to use Cloud integration content for different target integration platforms. Accordingly, different product profiles are available to adapt the user interface of the integration content designer to the specifications and capabilities of the target integration platform.">Product Profiles</a></div>
+<div><a class="link" href="8f04a707843a40bf9f6e07ed55b93034.html">Define Content Modifier</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::IFlow/cname::sap:IFlowConfiguration/version::1.0.12" ComponentName="sap:IFlowConfiguration" UIElementType="IFlow" MetadataVersion="2.0">
+	<Variant VariantId="ctype::IFlowVariant/cname::IFlowConfiguration/version::1.0.12" VariantName="Integration Flow" VariantDisplayName="Integration Flow" MetadataVersion="2.0">
+		<Tab id="general">
+			<GuiLabels>
+				<Label language="EN">General</Label>
+			</GuiLabels>
+			<AttributeGroup id="generalDetails">
+				<AttributeReference>
+					<ReferenceName>name</ReferenceName>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>Description</ReferenceName>
+					<description>Enter description for integration flow</description>
+				</AttributeReference>
+			</AttributeGroup>
+			<description>General information of the Integration Flow</description>
+		</Tab>
+		<Tab id="runtimeConfiguration">
+			<GuiLabels>
+				<Label language="EN">Runtime Configuration</Label>
+			</GuiLabels>
+			<AttributeGroup id="generalDetails">
+				<AttributeReference>
+					<ReferenceName>productProfiles</ReferenceName>
+					<EditCondition>
+						<AttributeName>$artifact.hasSupportedBundleType()</AttributeName>
+						<AttributeValue>IntegrationFlow</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>namespaceMapping</ReferenceName>
+					<description>Enter namespace-prefix pair(s). To separate multiple entries, use ';'.  Example. xmlns:test=http://sapcd.com/testABC;xmlns:test2=http://sapcd.com/testPQR</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>log</ReferenceName>
+					<description>Configure the log level to display the logs in the message processing log</description>
+					<EditCondition>
+						<AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.mpl-log-level-configuration:Mpl Log Level Configuration)</AttributeName>
+						<AttributeValue>true</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>allowedHeaderList</ReferenceName>
+					<description>Enter header name(s) you want to retain in the incoming message. To separate multiple headers use '|'.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ServerTrace</ReferenceName>
+					<description>Enable server log to get help in troubleshooting issues.</description>
+                    <EditCondition>
+                        <AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.debug-trace-configuration:Debug Trace Configuration)</AttributeName>
+                        <AttributeValue>true</AttributeValue>
+                    </EditCondition>
+				</AttributeReference>
+			</AttributeGroup>
+			<description>Set the configurations to be used while processing integration flow at runtime</description>
+		</Tab>
+		
+		<Tab id="errorConfiguration">
+			<GuiLabels>
+				<Label language="EN">Error Configuration</Label>
+			</GuiLabels>
+			<AttributeGroup id="generalDetails">
+				<AttributeReference>
+					<ReferenceName>returnExceptionToSender</ReferenceName>
+					<description>Select a strategy to handle errors when message processing fails in the runtime</description>
+					<EditCondition>
+						<AttributeName>$artifact.hasSupportedBundleType()</AttributeName>
+						<AttributeValue>IntegrationFlow</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+			</AttributeGroup>
+			<description>Select a strategy to handle errors when messages processing fails in the runtime</description>
+		</Tab>
+	</Variant>
+	<AttributeMetadata>
+		<Name>name</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<ReadOnly>true</ReadOnly>
+		<GuiLabels>
+			<Label language="EN">Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>Description</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<MultiLine>true</MultiLine>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Description</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>productProfiles</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+        <isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Product Profile</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>$profile.availableProductProfiles</Value>
+				<GuiLabels>
+					<Label language="EN"></Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>namespaceMapping</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<isparameterized>false</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Namespace Mapping</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>log</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>All events</Default>
+		<GuiLabels>
+			<Label language="EN">Message Processing Log</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>All events</Value>
+				<GuiLabels>
+					<Label language="EN">All Events</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>Error events</Value>
+				<GuiLabels>
+					<Label language="EN">Error Events</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>No logging</Value>
+				<GuiLabels>
+					<Label language="EN">None</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>allowedHeaderList</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Allowed Header(s)</Label>
+		</GuiLabels>		
+	</AttributeMetadata>	
+	<AttributeMetadata>
+		<Name>ServerTrace</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>false</Default>
+		<GuiLabels>
+			<Label language="EN">Enable Debug Trace</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>returnExceptionToSender</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>false</Default>
+		<GuiLabels>
+			<Label language="EN">Return Exception to Sender</Label>
+		</GuiLabels>		
+	</AttributeMetadata>	
+</ComponentMetadata>

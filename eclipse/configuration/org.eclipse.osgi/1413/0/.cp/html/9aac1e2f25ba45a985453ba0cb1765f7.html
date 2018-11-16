@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="This option allows you to add timestamps (for the signing time), a reference to the signer's key certificate, and other information that further qualifies the signature."/>
+<meta name="description" content="This option allows you to add timestamps (for the signing time), a reference to the signer's key certificate, and other information that further qualifies the signature."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Signing the Message Content with XAdES-BES (1)</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio9aac1e2f25ba45a985453ba0cb1765f7">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Signing the Message Content with XAdES-BES (1)</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">This option allows you to add timestamps (for the signing time), a reference to the
+		signer's key certificate, and other information that further qualifies the
+		signature.</p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">For more information, see <a class="extlink" href="http://help.sap.com/disclaimer?site=http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf" target="_blank" download="" alt="http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf" title="http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf">http://uri.etsi.org/01903/v1.3.2/ts_101903v010302p.pdf<img src="../images/3rd_link.png" class="link-external" alt="Information published on non-SAP site" title="Information published on non-SAP site" border="0"/></a>. </p>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd"> In the <span class="keyword uilabel">Model Configuration</span> editor, select the <span class="keyword uilabel">Signer</span>
+					element and, from the context menu, select the <span class="keyword uilabel">Switch to XAdES-BES
+						(1)</span> option.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Add the signing time and the certificate to the signature.</span>
+				<div class="itemgroup info"/>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio9aac1e2f25ba45a985453ba0cb1765f7__choicetable_ehj_ys4_3q">
+<thead><tr><th id="d1963949e50-option" valign="bottom" align="left">Option</th>
+<th id="d1963949e50-desc" valign="bottom" align="left">Description</th></tr></thead>
+<tbody>
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e50-option" id="d1963949e54" class="stentry choption"><strong><span class="ph uicontrol">Time</span>
+						</strong></td>
+
+						<td valign="top" headers="d1963949e50-desc d1963949e54" class="stentry chdesc">Select this option if you want to add the signing time to the signature. <p class="p">This
+								measure helps to provide evidence that the signature key was valid
+								at the time the signature was created. </p>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e50-option" id="d1963949e67" class="stentry choption"><strong><span class="ph uicontrol">Certificate</span>
+						</strong></td>
+
+						<td valign="top" headers="d1963949e50-desc d1963949e67" class="stentry chdesc">Specify whether the certificate of the signing key is to be added to the signature.
+								<p class="p">You have the following options: </p>
+<ul class="ul" id="loio9aac1e2f25ba45a985453ba0cb1765f7__ul_eg2_dt4_3q">
+								<li class="li"><kbd class="ph userinput">None</kbd><p class="p">Add no certificate.</p>
+</li>
+
+								<li class="li"><kbd class="ph userinput">Certificate Only</kbd><p class="p">Add digest value,
+										issuer, and serial number of the signing
+									certificate.</p>
+</li>
+
+								<li class="li"><kbd class="ph userinput">Certificate Chain</kbd>
+									<p class="p">Add digest value, issuer, and serial number of the
+										certificates of the certificate chain. </p>
+</li>
+
+							</ul>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e50-option" id="d1963949e101" class="stentry choption"><strong><span class="ph uicontrol">Digest Algorithm</span> (only when either <kbd class="ph userinput">Certificate
+								Only</kbd> or <kbd class="ph userinput">Certificate Chain</kbd> is
+							selected for <span class="ph uicontrol">Certificate</span>) </strong></td>
+
+						<td valign="top" headers="d1963949e50-desc d1963949e101" class="stentry chdesc">Specify a digest algorithm that is to be used to calculate a digest value from the
+							certificate. <p class="p">This measure helps to control whether the certificate
+								that is used to verify the message content corresponds to the one
+								that has been used to sign the message
+									content.</p>
+<p class="p"><span class="keyword parmname">SHA256</span> is proposed as the
+								default. </p>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e50-option" id="d1963949e127" class="stentry choption"><strong><span class="ph uicontrol">Certificate URI</span></strong></td>
+
+						<td valign="top" headers="d1963949e50-desc d1963949e127" class="stentry chdesc">Specify a reference to the certificate. <p class="p">If as
+									<span class="ph uicontrol">Certificate</span> you have selected
+									<kbd class="ph userinput">Certificate Only</kbd>, only one URI is
+								allowed. </p>
+<p class="p">If as <span class="ph uicontrol">Certificate</span> you have
+								selected <kbd class="ph userinput">Certificate Chain</kbd>, you can add for
+								each certificate in the certificate chain an URI. The URI must be
+								added at the position where the corresponding certificate in the
+								chain is located. At the position 0 the signing certificate URI must
+								be placed. If for a certain certificate in the chain no URI is
+								available, enter an empty string at the corresponding place in the
+								URI list. </p>
+</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+				<div class="itemgroup info">
+					<p class="p">Adding the signer's key certificate and its digest value to the signed document makes sure
+						that the signed document contains an unambiguous reference to the signer's
+						certificate. </p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify the signer role.</span>
+				<div class="itemgroup info">These properties allow you to specify the role of the signer in order to make clear the
+					signer's position in the company or organization. Doing this helps provide
+					evidence to the verifier that the signer is empowered by the organization to
+					perform the signing task.</div>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio9aac1e2f25ba45a985453ba0cb1765f7__choicetable_o1n_5t4_3q">
+<thead><tr><th id="d1963949e167-option" valign="bottom" align="left">Option</th>
+<th id="d1963949e167-desc" valign="bottom" align="left">Description</th></tr></thead>
+<tbody>
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e167-option" id="d1963949e171" class="stentry choption"><strong><span class="ph uicontrol">Claimed Roles</span> (optional)</strong></td>
+
+						<td valign="top" headers="d1963949e167-desc d1963949e171" class="stentry chdesc">Specify the claimed roles of the signer. <p class="p">To specify a claimed role, choose
+									<span class="ph uicontrol">Add</span> and enter a text or an XML fragment
+								with the root element <cite class="cite">ClaimedRole</cite>. </p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e167-option" id="d1963949e191" class="stentry choption"><strong><span class="ph uicontrol">Certified Roles</span> (optional)</strong></td>
+
+						<td valign="top" headers="d1963949e167-desc d1963949e191" class="stentry chdesc">Specify the roles of the signer which are certified by an attribute certificate.<p class="p">An
+								attribute certificate associates the identifier of a certificate to
+								some attributes of its owner, in this case, to a role</p>
+<p class="p">The
+								specified attribute certificates must be base-64 encoded.</p>
+<p class="p">To
+								specify a certified role, choose <span class="ph uicontrol">Add</span> and
+								specify the following attributes: </p>
+<ul class="ul" id="loio9aac1e2f25ba45a985453ba0cb1765f7__ul_gr2_gvh_zq">
+								<li class="li"><span class="ph uicontrol">Encoding</span><p class="p">Select the encoding
+										scheme.</p>
+<p class="p">An empty string indicates that the
+											<span class="ph uicontrol">Encoding</span> attribute is not
+										specified. In this case, it is assumed that the PKI data is
+										ASN.1 data encoded in DER. </p>
+</li>
+
+								<li class="li"><span class="ph uicontrol">ID</span> (optional)</li>
+
+							</ul>
+</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Under <span class="ph uicontrol">Data Object Format</span>, specify the format of the signed
+					data.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio9aac1e2f25ba45a985453ba0cb1765f7__choicetable_drg_b54_3q">
+<thead><tr><th id="d1963949e237-option" valign="bottom" align="left">Option</th>
+<th id="d1963949e237-desc" valign="bottom" align="left">Description</th></tr></thead>
+<tbody>
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e237-option" id="d1963949e241" class="stentry choption"><strong><span class="ph uicontrol">Description</span> (optional) </strong></td>
+
+						<td valign="top" headers="d1963949e237-desc d1963949e241" class="stentry chdesc">Provide an informal text to describe the format of the signed data.</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e237-option" id="d1963949e252" class="stentry choption"><strong><span class="ph uicontrol">MIME Type </span> (optional) </strong></td>
+
+						<td valign="top" headers="d1963949e237-desc d1963949e252" class="stentry chdesc">Specify the Internet Media Type (MIME type) that determines the data object
+								format.<p class="p">You need to enter the MIME type manually.</p>
+<p class="p">Example:
+									<kbd class="ph userinput">text/xml</kbd></p>
+</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+				<div class="itemgroup info">This information can help to parse the signed document correctly.</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Specify the Identifier of the data object format. </span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio9aac1e2f25ba45a985453ba0cb1765f7__choicetable_bcx_mzh_zq">
+<thead><tr><th id="d1963949e277-option" valign="bottom" align="left">Option</th>
+<th id="d1963949e277-desc" valign="bottom" align="left">Description</th></tr></thead>
+<tbody>
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e277-option" id="d1963949e281" class="stentry choption"><strong><span class="ph uicontrol">Name</span></strong></td>
+
+						<td valign="top" headers="d1963949e277-desc d1963949e281" class="stentry chdesc">Specify an identifier to indicate the format of a signed data.
+								<p class="p">You can specify the identifier by one of the following options:
+								</p>
+<ul class="ul" id="loio9aac1e2f25ba45a985453ba0cb1765f7__ul_bx5_c13_zq">
+								<li class="li">By means of a Uniform Resource Identifier (URI) (preferred
+									option when dealing with XML documents) <p class="p">In this case, the
+											<span class="ph uicontrol">Name</span> of the identifier consists
+										of the identifying URI. In this case, the property
+											<span class="ph uicontrol">Qualifier</span> must not be specified
+										(empty string). </p>
+</li>
+
+								<li class="li">By means Object Identifier (OID) when using ASN.1 (Abstract
+									Syntax Notation One) <p class="p">To support an OID, the content of
+										Identifier consists of an OID, either encoded as Uniform
+										Resource Name (URN) or as Uniform Resource Identifier (URI).
+										The optional <span class="ph uicontrol">Qualifier</span> attribute can
+										be used to provide a hint about the applied encoding (values
+											<kbd class="ph userinput">OIDAsURN</kbd> or
+											<kbd class="ph userinput">OIDAsURI</kbd>). </p>
+</li>
+
+							</ul>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e277-option" id="d1963949e320" class="stentry choption"><strong><span class="ph uicontrol">Qualifier</span> (only relevant if an Identifier
+								<span class="ph uicontrol">Name</span> has been specified)</strong></td>
+
+						<td valign="top" headers="d1963949e277-desc d1963949e320" class="stentry chdesc">Further qualify how the identifier is defined in case Abstract
+							Syntax Notation One (ASN 1) is used. <p class="p">You can select one of the
+								following values: </p>
+<ul class="ul" id="loio9aac1e2f25ba45a985453ba0cb1765f7__ul_ubk_k13_zq">
+								<li class="li"><span class="keyword parmname">empty string</span>
+								</li>
+
+								<li class="li"><kbd class="ph userinput">OIDAsURI</kbd> – uses Uniform Resource Name. </li>
+
+								<li class="li"><kbd class="ph userinput">OIDAsURN</kbd> – uses Uniform Resource
+									Name.</li>
+
+							</ul>
+</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e277-option" id="d1963949e353" class="stentry choption"><strong><span class="ph uicontrol">Description</span> (only relevant if an Identifier
+								<span class="ph uicontrol">Name</span> has been specified)</strong></td>
+
+						<td valign="top" headers="d1963949e277-desc d1963949e353" class="stentry chdesc">Provide a reference to further documentation of the
+							identifier.</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1963949e277-option" id="d1963949e367" class="stentry choption"><strong><span class="ph uicontrol">Documentation Reference</span> (only relevant if
+							an Identifier <span class="ph uicontrol">Name</span> has been specified)</strong></td>
+
+						<td valign="top" headers="d1963949e277-desc d1963949e367" class="stentry chdesc"> </td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

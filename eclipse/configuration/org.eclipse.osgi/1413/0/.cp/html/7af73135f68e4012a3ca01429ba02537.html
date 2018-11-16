@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Handling Inconsistencies in Mapping Editor</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio7af73135f68e4012a3ca01429ba02537">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Handling Inconsistencies in Mapping Editor</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section context" id="loio7af73135f68e4012a3ca01429ba02537__context_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this task to handle the inconsistencies in the message structures or mappings that
+				occur due to modification of source or target elements.</p>
+
+			<div class="p">Scenarios where such inconsistencies occur are:<ul class="ul" id="loio7af73135f68e4012a3ca01429ba02537__ul_xxh_qys_n3">
+					<li class="li">When you change an XSD or WSDL that are being used in existing mapping as source or target
+						element</li>
+
+					<li class="li">When you change the source or target nodes in the message mapping tree
+							structure<div class="note note" id="loio7af73135f68e4012a3ca01429ba02537__note_N1002A_N10027_N1001F_N1001C_N10014_N10011_N10001"><span class="notetitle">Note</span> 
+							<p class="p">Whenever you open a mapping where any changes have been made to the
+								source or target element, the editor notifies you about the
+								change.</p>
+
+						</div>
+</li>
+
+				</ul>
+</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loio7af73135f68e4012a3ca01429ba02537__step_N1003B_N10038_N10011_N10001">
+				<span class="ph cmd">In the <span class="keyword uilabel">Definition</span> tab page editor, choose the icon <img class="image" id="loio7af73135f68e4012a3ca01429ba02537__image_i2f_cyx_mj" src="loioc52af850228c4379a591abec50861e5b_LowRes.jpg" alt="CorrectingStructureInconsistency" title="CorrectingStructureInconsistency"/> (<span class="keyword uilabel"> Check for
+						consistencies between changed message structures </span>).</span>
+			</li>
+<li class="li step stepexpand" id="loio7af73135f68e4012a3ca01429ba02537__step_N10056_N10035_N10011_N10001">
+				<span class="ph cmd">In the <span class="keyword uilabel">Reload Confirmation </span> dialog, choose <span class="ph uicontrol">OK</span> to
+					continue with correcting of structural inconsistencies.</span>
+				<div class="itemgroup info">
+					<div class="note note" id="loio7af73135f68e4012a3ca01429ba02537__note_N10068_N10065_N10056_N10035_N10011_N10001"><span class="notetitle">Note</span> 
+						<p class="p">This action discards any recent changes or additional mappings that you
+							have done after changing the source or target element.</p>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loio7af73135f68e4012a3ca01429ba02537__step_N1004C_N10038_N10011_N10001">
+				<span class="ph cmd">In the <span class="ph uicontrol">Missing Fields</span> wizard, you can choose to reassign or delete
+					the inconsistent fields.</span>
+				<div class="itemgroup info">
+					<div class="note note" id="loio7af73135f68e4012a3ca01429ba02537__note_N10065_N10062_N10056_N10035_N10011_N10001"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio7af73135f68e4012a3ca01429ba02537__ul_ox5_3hs_b3">
+							<li class="li">A red mark appears on the fields with inconsistencies.</li>
+
+							<li class="li">If there are changes in both source and target structures, then in the <span class="ph uicontrol">Missing
+									Fields</span> wizard, changes in source structure are
+								displayed first and the follow on screen displays the changes in the
+								target structure.</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loio7af73135f68e4012a3ca01429ba02537__step_N1009B_N10035_N10011_N10001">
+				<span class="ph cmd">If you want to reassign the missing fields, then follow the substeps
+					below:</span>
+				<ol type="a" class="ol substeps" id="loio7af73135f68e4012a3ca01429ba02537__substeps_s3x_21t_n3">
+					<li class="li substep">
+						<span class="ph cmd">Right-click on the missing field in the old structure.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Drag the missing field from the old structure and drop it on the required field in the
+							new structure.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">If you want to map all the children fields related to the selected
+							missing field in old structure with the matching fields in the new
+							structure, choose the option <span class="ph uicontrol">Map
+							Automatically</span>.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">If you want to map only the single selected field, then choose <span class="ph uicontrol">Create
+								mapping</span> option.</span>
+					</li>
+
+				</ol>
+
+				<div class="itemgroup info">
+					<div class="note note" id="loio7af73135f68e4012a3ca01429ba02537__note_N100D1_N100CE_N1009A_N10035_N10011_N10001"><span class="notetitle">Note</span> 
+						<ul class="ul" id="loio7af73135f68e4012a3ca01429ba02537__ul_klw_cbt_n3">
+							<li class="li">Alternatively, you can simply drag the fields from old structure and drop onto the fields
+								in the new structure.</li>
+
+							<li class="li">In case you have moved a disabled missing field, then the mapping also moves along with
+								the field but the new field is not marked as disabled.</li>
+
+							<li class="li">In case you have moved a missing field with a variable defined under it, then the
+								variable also appears under the new field, and the mapping of the
+								old variable is assigned to the new variable.</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loio7af73135f68e4012a3ca01429ba02537__step_N10099_N10038_N10011_N10001">
+				<span class="ph cmd">If you do not require the missing fields in your mapping, then select the missing field and
+					choose the icon <img class="image" id="loio7af73135f68e4012a3ca01429ba02537__image_lyy_fyx_mj" src="loio744a0f4978294a6986bb61832a5a0e85_LowRes.jpg" alt="DeleteField_FSN" title="DeleteField_FSN"/> (<span class="keyword uilabel">Delete
+						Field</span>) to mark for deletion.</span>
+				<div class="itemgroup info">
+					<div class="note note" id="loio7af73135f68e4012a3ca01429ba02537__note_N100B8_N100B5_N100AD_N10035_N10011_N10001"><span class="notetitle">Note</span> 
+						<p class="p">If you want to use the field marked for deletion, then select the icon <img class="image" id="loio7af73135f68e4012a3ca01429ba02537__image_kjw_gyx_mj" src="loio744a0f4978294a6986bb61832a5a0e85_LowRes.jpg" alt="DeleteField_FSN" title="DeleteField_FSN"/> (<em class="ph i">Delete Field</em>
+							icon) again to cancel the delete action.</p>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loio7af73135f68e4012a3ca01429ba02537__step_N100AA_N10038_N10011_N10001">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Next </span> to check the missing fields of target structure.</span>
+			</li>
+<li class="li step stepexpand" id="loio7af73135f68e4012a3ca01429ba02537__step_N100B3_N10038_N10011_N10001">
+				<span class="ph cmd">Repeat the steps above to reassign or delete the missing fields of target structure.</span>
+			</li>
+<li class="li step stepexpand" id="loio7af73135f68e4012a3ca01429ba02537__step_N1011F_N10035_N10011_N10001">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span>
+				<div class="itemgroup stepresult">Now the fields are reassigned and the fields marked for deletion are
+					removed from the structure.</div>
+			</li>
+<li class="li step stepexpand" id="loio7af73135f68e4012a3ca01429ba02537__step_N100BC_N10038_N10011_N10001">
+				<span class="ph cmd"> Save the mappings.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

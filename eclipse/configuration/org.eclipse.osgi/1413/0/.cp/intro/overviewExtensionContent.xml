@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?><!---->
+
+<introContent>
+	<extensionContent id="com.sap.ide.xpi" name="SAP Cloud Platform Integration"
+		style="css/overview.css" alt-style="css/overview.properties" path="overview/@">
+		<group id="content-group" style-id="content-group">
+			<link label="SAP Cloud Platform Integration"
+				url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.sap.it.ide.ifl.help/html/0fb7bc09c497487289362840bdfb2000.html"
+				id="pi-overview" style-id="content-link">
+				<text>Learn how to develop and configure integration content using the SAP Cloud Platform Integration Services to integrate processes across departments, organizations, or companies.</text>
+			</link>
+		</group>
+	</extensionContent>
+</introContent>

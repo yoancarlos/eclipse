@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="com.sap.ndb.studio.dwb.team.ui.internal.providers.TeamServiceUiProvider">
+   <implementation class="com.sap.ndb.studio.dwb.team.ui.internal.providers.TeamServiceUiProvider"/>
+   <service>
+      <provide interface="com.sap.ndb.studio.dwb.team.ui.ITeamServiceUi"/>
+   </service>
+</scr:component>

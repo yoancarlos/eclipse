@@ -1,0 +1,504 @@
+<contexts>
+ <context id="sendersystem" title="Sender System">
+		<description>This view allows you to authenticate the sender to connect to the Enterprise Service Bus (ESB). 
+&lt;b&gt;Note:&lt;/b&gt; You can authenticate the sender either by providing the client certificates or by basic authentication using the SDN username and password</description>
+	</context>
+ <context id="iflowprojconfig" title="Project Details">
+    <description>This view allows you to enter basic details for the integration project bundle. The name and ID help you identify the integration bundle. This information is updated in the MANIFEST.MF file.
+
+The Node Type dropdown indicates the runtime node on which the bundle is deployed. 
+
+The Description text area allows you to enter a brief information about the integration project.
+This description can be useful in situations when a Business User is viewing the integration flow and needs more information about the integration project representing a scenario.</description>
+ </context>
+ <context id="headerlookuplist" title="Header List">
+    <description>This lookup dialog shows you a list of headers that you have specified:
+•	in the &apos;Header&apos; tab page of Enricher flow steps
+•	in the &apos;Allowed Headers&apos; field of the &apos;Runtime Configuration&apos; tab page</description>
+ </context>
+
+	<context id="recvsystem" title="Receiver System">
+		<description>This view helps you to represent the receiver participant in a communication.</description>
+	</context>
+
+	<context id="channeleditorgeneral" title="Channel Editor">
+		<description>This editor allows you to configure the connectors of the sender and receiver channels.
+
+General:  Allows you to enter the name and description of the channel 
+Adapter Type:  Allows you to select a connector type that the sender and receiver systems support.
+		</description>
+	</context>
+	<context id="channeleditoradapters" title="Adapter Specific">
+		<description>Allows you to specify configuration details for the selected connector.
+		</description>
+  <topic href="html/i071348220499358.html" label="Defining the Channels"/>
+	</context>
+	<context id="senderinterface" title="Sender Interface">
+		<description>This view helps you assign sender interface to the integration flow. Choose Browse... to select a source (local file system or ES Repository) from where you want to obtain an interface.
+
+
+		</description>
+	</context>
+	<context id="receiverinterface" title="Receiver Interface">
+		<description>This view helps you assign receiver interface to the integration flow. Choose Browse... to select an interface from a source(local file system or ES Repository) from where you want to obtain an interface. If the receiver connector is of type SFTP, choose Browse WSDL...icon from the toolbar of the Properties view to select a WSDL from your local file system. This auto fills values for adapter-specific
+fields like Address, URL to WSDL, Port Name and Service Name.
+		</description>
+	</context>
+
+	<context id="interfacedialog" title="Choose Interface">
+		<description>This wizard allows you to choose the dropdown icon to select a source (local file system or ES Repository) from where you want to obtain an interface.
+		</description>
+	</context>
+ <context id="SFSFWizardOpen" title="Connect to system">
+    <description>This wizard enables you to model an operation. These operations enable you to communicate with the servers. 
+
+In this screen, you connect to the server by providing the required details.</description>
+ </context>
+ <context id="SFSFWizardEntity" title="Select entity for operation">
+    <description>You select the entity that you want to perform the operation on.</description>
+ </context>
+ <context id="SFSFWizardFilter" title="Define filter conditions">
+    <description>You define the filter conditons for the operation in this step.</description>
+ </context>
+	<context id="senderchannel" title="Sender Channel">
+		<description>This view allows you to enter the name of the sender channel that gets associated with the details you provided in the Adapter-specific tab of the channel editor.
+		</description>
+	</context>
+	<context id="recvchannel" title="Receiver Channel">
+		<description>This view allows you to enter the name of the receiver channel that gets associated with the details you provided in the Adapter-specific tab of the channel editor.
+		</description>
+	</context>
+ <context id="importContent" title="Import Integration Content">
+    <description>This wizard helps you to import integration content from Tenant Management Node or local file system in your workspace.</description>
+ </context>
+	<context id="gateway" title="Gateway">
+		<description>This view helps you to do the following:
+•	View the condition expressions that you have specified for each routing sequence flow. 
+•	Change the default receiver 
+•	In case a receiver is not found, set if an exception should be thrown or an alert should be raised
+		</description>
+	</context>
+	<context id="router" title="Router">
+		<description>This view allows you to enter a valid expression for the message to reach the correct receiver.
+
+Note: To know the syntax of the valid expressions, check the tooltip for the Condition field.
+		</description>
+  <topic href="html/3ae001c5f6344ee79eff0120daf5f596.html" label="Defining Routing Conditions in Gateway"/>
+	</context>
+ <context id="splitter" title="Splitter">
+    <description>This flow element allows you to select a splitter based on the type of composite message that needs to be split into series of messages.
+
+IDoc Splitter is used for composite IDoc messages to be split into a series of individual IDoc messages with the enveloping elements of the composite IDoc message.
+
+PKCS#7/CMS Signature-Content Splitter is used when an agent sends PKCS7 Signed Data message that contains signature and content. This splitter type breaks down the signature and content into separate files.
+
+General Splitter splits a composite message comprising of N messages into N individual messages each containing one message with the enveloping elements of the composite message.
+
+Iterative Splitter splits a composite message into a series of messages without copying the enveloping elements of the composite message.</description>
+    <topic href="html/83e2022f9c014bebab63cb933e625610.html" label="Defining Splitter"/>
+ </context>
+ <context id="contentfilter" title="Content Filter">
+    <description>This flow element allows you to filter information by extracting a specific node in the incoming message. The XPath is used to navigate to the XML node to be extracted and the Value Type suggests the type of data that is expected at the specified XML node.</description>
+ </context>
+ <context id="contentEnricherWithLookup" title="Content Enricher">
+    <description>This element allows you to enrich an incoming message by appending the additional data retrieved from an external resource.</description>
+    <topic href="html/95671b658677483d84d1276c15f2b098.html" label="Defining Content Enricher"/>
+ </context>
+ <context id="ProcessCallElement" title="Process Call">
+    <description>This task enables you to simplify your integration process. It enables you to fragment your integration process into smaller processes (Direct Call Processes) which are in turn called from the main integration process or from other Direct Call Processes. 
+
+Note
+1.	The main integration process has SAP icon in the left most corner unlike the Direct Call Process.
+2.	Direct Call Process should always start with Start Event and end with End Event.
+3.	Direct Call Process does not support multicast and splitter elements.
+
+</description>
+ </context>
+ <context id="DirectCallProcess" title="Direct Call Process">
+    <description>This task enables you to simplify your integration process. It enables you to fragment your integration process into smaller processes (Direct Call Processes) which are in turn called from the main integration process or from other Direct Call Processes. 
+
+Note
+1.	The main integration process has SAP icon in the left most corner unlike the Direct Call Process.
+2.	Direct Call Process should always start with Start Event and end with End Event.
+3.	Direct Call Process does not support multicast and splitter elements.
+
+</description>
+ </context>
+ 
+ <context id="SubProcess" title="Exception SubProcess">
+    <description>This task enables you to catch any exception and perform further processing on it.
+
+Note
+1.	Exception Subprocess can be dropped in the integration process and should not be connected to any of the elements of the integration flow.
+2.	The process should always start with Error Start event.
+3.	There can be just one end event. It can be either End Message or Error End event. 
+
+</description>
+    <topic href="html/f090fd40347c4cccba6c566193f76624.html" label="Defining Exception Subprocess"/>
+ </context>
+ <context id="enricherheader" title="Content Modifier">
+    <description>This flow element allows you to modify the content of the incoming message by providing additional information in the header and updating the body of a message. You can create, set values or delete headers and properties. You can set headers in the following ways:
+
+Specify a Constant- Enter any string or integer value. 
+E.g Delivery date
+
+Specify an Xpath- Enter an Xpath to access a value from the input payload. Ensure that you have specified the namespace-prefix pair in the Namespace Mapping field.
+E.g. /urn:submitQueryJobRequest/sessionId with Namespace Mapping specified as- xmlns:urn=http://sap.com/xi/SFIHCM01
+
+Specify a Header- Set a header which this header can use to obtain some other information 
+E.g. An endpoint such as a filename- CamelFileNameOnly
+
+Specify an Expression- Enter an expression to concatenate values of type constants, headers etc.
+
+You must specify respective header or property name to delete an existing header or property.</description>
+    <topic href="html/2c667a12a0a545d2ad4210e070479312.html" label="Content Modifier"/>
+ </context>
+ <context id="enricherbody" title="Content Modifier">
+    <description>This flow element allows you to form a new message body using XML tags and Simple Camel Expressions that modifies the outgoing message being sent to the receiver. For example, the new message body can reuse the existing message body along with the values specified in the Header tab page that modify the content.
+Reuse an existing body with ${in.body}</description>
+    <topic href="html/2c667a12a0a545d2ad4210e070479312.html" label="Content Modifier"/>
+ </context>
+ <context id="decrypt" title="Content Decryptor">
+    <description>This flow element helps you to retrieve the content of a message that was encrypted. The Decryptor determines a private key from the keystore taking into account key information in the message. The private key is used to decrypt the symmetric key that was used in the encryption process. The symmetric key is then used to decrypt the content of the message.</description>
+ </context>
+ <context id="encrypt" title="Content Encryptor">
+    <description>This flow element helps you to encrypt the content of a message. The content is encrypted by a symmetric key (Secret Key) based on the Content Encryption Algorithm and the key length that you have selected. The Encryptor also uses a public key to encrypt the symmetric key. This means the message body contains the encrypted content and the encrypted symmetric key. If there are several receivers, the symmetric key is encrypted for each receiver by its corresponding public key. You can further encode the entire data in the message body with Base64.</description>
+ </context>
+ <context id="PKCS7sign" title="PKCS7/CMS Signer">
+    <description>This flow element helps you to sign outgoing messages (XML or non-XML) with one or more signatures to ensure authenticity and data integrity.
+
+See the related help topic for more information.</description>
+    <topic href="html/226b20d211b4440e8ae0686b8e8bafda.html" label="Signing the Message Content with PKCS7/CMS Signature"/>
+ </context>
+ <context id="XMLDigitalsign" title="XML Digital Signer">
+    <description>This flow element helps you sign an XML message with a digital signature to ensure authenticity and data integrity.
+
+See the related help topic for more information.</description>
+    <topic href="html/ac6fbbf76f2a4fb6b115911c5cd86523.html" label="Signing the Message Content with XML Digital Signature"/>
+ </context>
+ <context id="PKCS7verify" title="PKCS7/CMS Verifier">
+    <description>This flow element helps you verify the signature to ensure authenticity and data integrity of the incoming messages (XML or non-XML).
+
+See the related help topic for more information.</description>
+    <topic href="html/321b191a04c446c3995c5062390bd2df.html" label="Verifying the PKCS7/CMS Signature"/>
+ </context>
+ <context id="XMLDigitalverify" title="XML Signature Verifier">
+    <description>This flow element helps you to verify the XML signature contained in the incoming message body to ensure authenticity and data integrity.
+
+See the related help topic for more information.</description>
+    <topic href="html/969f8165175e4946ba31b3e8de55e3f2.html" label="Verifying the XML Digital Signature"/>
+ </context>
+ <context id="decoder" title="Decoder">
+    <description>This flow element allows you to apply a decoding scheme, such as Base64 Decoder, that transforms the encoded data back to its original message format.</description>
+ </context>
+ <context id="encoder" title="Encoder">
+    <description>This flow element allows you to apply an encoding scheme, such as Base64 Encoder, to ensure the message is securely transferred over the network. The Base64 encodes the message by representing the binary data in an ASCII string format.</description>
+ </context>
+ <context id="timerstart" title="Timer Start Event">
+    <description>This flow element helps you to specify the date and time on which a process needs to be trigerred, either once or in a regular schedule. 
+
+Use the left hand column to select a date or set a recurring trigger that occurs either every day, specific days in a week, or specific day in a month. 
+
+Next, use the right hand column to set the clock time or specify a recurring time interval in which the trigger should occur.</description>
+ </context>
+ <context id="SequentialMulticast" title="Sequential Multicast">
+    <description>You use this iFlow element to route copies of the same message to more than one message paths.  You can define the sequence of routes in which message is transmitted.</description>
+ </context>
+ <context id="Join" title="Join">
+    <description>You use this iFlow element to join messages from multiple message routes.</description>
+ </context>
+ <context id="Gather" title="Gather">
+    <description>You use this iFlow element to combine multiple messages from different multicast routes. You define the conditions for combining messages based on the type of messages that you are combining.
+
+IMPORTANT: It is mandatory to use the Join iFlow step to combine messges from different multicast routes before combining it using Gather.</description>
+ </context>
+ <context id="XmlToCsvConverter" title="XML to CSV Converter">
+    <description>This iFlow element enables you to convert a message in XML format to CSV format.</description>
+ </context>
+ <context id="CsvToXmlConverter" title="Csv To Xml Converter">
+    <description>You use this iFlow element to convert a file in CSV format to XML format</description>
+ </context>
+	<context id="mapping" title="Mapping">
+		<description>When sender and receiver systems expect data in different formats and structure, then the data from sender needs to be transformed into the format and structure that the receiver can handle. This transformation is called mapping. The different types of mappings supported are:
+
+
+Message Mapping 
+Mapping is used for mapping messages when receiver system accepts a different message format than that of the sender system.
+
+Operation Mapping 
+Operation mapping is used when you require one or more mappings for request, response and fault payloads.
+
+XSL Mapping
+XSL Mapping is used when one XML structure is transformed into another XML structure. XSL Transformation (XSLT) is a member of the XML family of languages.
+		</description>
+  <topic href="html/bb7da9abd6914e98ba5b7baacec5c609.html" label="Assign Mapping"/>
+  <topic href="html/3389dbded8324a6d80221045da9be218.html" label="Import Mapping Object from ES Repository"/>
+  <command label="Create Message Mapping" serialization="org.eclipse.ui.newWizard(newWizardId=com.sap.mapping.wizard)"/>
+  <command label="Create XSLT Mapping" serialization="org.eclipse.ui.newWizard(newWizardId=org.eclipse.wst.xsl.ui.internal.wizards.NewStylesheetWizard)"/>
+	</context>
+	<context id="choosemapping" title="Choose Mapping">
+		<description>This dialog helps you to select an FSN Mapping or a mapping from the local workspace. 
+
+&lt;b&gt;Note&lt;/b&gt;: You can import mappings from an external repository such as ES Repository. The imported mappings are available in src.main.resources.mapping in your project.
+		</description>
+	</context>
+ <context id="custombeans" title="Custom Beans">
+    <description>This view allows you to specify a custom java code in the integration flow that can perform additional functions. You can refer the Java Bean with its BeanID and method name in the Header tab page as a part of an expression.</description>
+ </context>
+ <context id="runtimeconfig" title="Runtime Configuration">
+    <description>This view allows you to specify information that is required when the integration flow is executed in runtime.
+
+&lt;b&gt;Namespace Mapping&lt;/b&gt;: Used to set a prefix for a namespace in the format xmlns:&lt;prefix&gt;=&lt;namespace&gt;. It is required for integration flows containing content-based router, content enricher or content filter as these flow steps use namespaces.
+
+&lt;b&gt;Log Levels&lt;/b&gt;: Used to specify the option to display log levels in the Message Processing Log view of the Integration Operations perspective. The available options are:
+•	If all messages should be displayed
+•	Only error messages should be displayed 
+•	No logging is required to be displayed
+
+&lt;b&gt;Private Key Alias&lt;/b&gt;: Used to authenticate a user to the receiver participant when the receiver channel uses SOAP or IDoc in an HTTPs communication.
+
+&lt;b&gt;Allowed Header(s)&lt;/b&gt;: Used to specify the headers that should be allowed in the message after it is processed. You can enter multiple headers by separating them with comma (|).
+
+Enable Debug Trace: Used to enable server log in case you need to obtain help from SAP Support for troubleshooting any issues.</description>
+ </context>
+ <context id="errorconfig" title="Error Configuration">
+    <description>This view allows you to select a strategy for handling errors in case the message processing fails.
+
+<b>Raise Exception</b>: Used to raise an exception back to the sender and applies only if you have used SOAP(SAP Plain SOAP) or IDoc( IDoc SOAP) connectors.
+<b>Note</b>: If an Integration Process pool contains timer start event, Raise Exception option is not valid.
+
+<b>None</b>: Used when you do not require any notification on failure.</description>
+ </context>
+ <context id="customconfig" title="Custom Configurations">
+    <description>This view allows you to request a proxy server to enable communication with another system using the HTTP(S) protocol.
+
+<b>Note</b>: The Proxy Server setting is available in internal mode only.</description>
+ </context>
+	<context id="iflowwizard" title="New Integration Flow">
+		<description>This wizard helps you create an integration flow by entering a name, its location in the project structure and selecting a built-in pattern or user-defined template.
+		</description>
+	</context>
+	<context id="iflowproject" title="New Integration Project">
+		<description>This wizard allows you to create an integration project of type integration flow or value mapping and stores it as the specified location.
+
+You can add the new project into a Working Set to organize the related projects. For example, you can create a Working Set for specific integration scenarios.
+		</description>
+	</context>
+	<context id="adapterproject" title="New Adapter Project">
+		<description>This wizard allows you to create an adapter project for SAP Cloud Platform Integration.You can add the new project into a Working Set to organize the related projects.
+		</description>
+	</context>
+	<context id="params" title="Parameter Properties">
+		<description>This page allows you to provide values for the attributes you have parameterized. You must enter values for the &quot;Mandatory&quot; attributes.
+		</description>
+	</context>
+	<context id="propdef" title="Properties Definition">
+		<description>This page allows you to maintain the metadata of the attributes that need to be parameterized.
+		</description>
+	</context>
+	<context id="massdeploy" title="Mass Deployment">
+		<description>This wizard helps you to select projects from your current workspace and deploy them to the operations server, all at once.
+		</description>
+	</context>
+	<context id="ifleditor" title="Integration Flow Configuration">
+		<description>The Model Configuration editor page provides BPMN 2.0 based graphical editor to view and model integration flows. 
+The Model Configuration editor page is linked to the Properties view. You can select a graphical shape to view its properties or choose actions from its context menu. 
+
+If required, you can modify the integration flow model by selecting the notations in the Palette pane on the right side within the editor. You can also drag a notation and  drop it on the required location in integration flow model. 
+
+When you want to connect two elements in the graphical editor, you can hover on an element and from the hover menu you can select the connection symbol and connect to the required element.
+
+You can use Exception SubProcess pool to catch any exception and perform additional processing on it.
+
+</description>
+  <topic href="html/02991b0cda114d9497702808e76b3399.html" label="Channel"/>
+  <command label="Create Message Mapping" serialization="org.eclipse.ui.newWizard(newWizardId=com.sap.mapping.wizard)"/>
+  <command label="Create XSLT Mapping" serialization="org.eclipse.ui.newWizard(newWizardId=org.eclipse.wst.xsl.ui.internal.wizards.NewStylesheetWizard)"/>
+  <topic href="html/bb7da9abd6914e98ba5b7baacec5c609.html" label="Assign Mapping"/>
+  <topic href="html/3ae001c5f6344ee79eff0120daf5f596.html" label="Message Routing"/>
+  <topic href="html/83e2022f9c014bebab63cb933e625610.html" label="Message Splitter"/>
+  <topic href="html/986d3814c30d419480279c66f60c64ec.html" label="Security Elements"/>
+  <topic href="html/95671b658677483d84d1276c15f2b098.html" label="Content Enricher"/>
+  <topic href="html/2c667a12a0a545d2ad4210e070479312.html" label="Header Transformation"/>
+  <topic href="html/27f4f030b2cc432f93869f9692f5f5c2.html" label="Scheduler"/>
+	</context>
+
+	<context id="prefifl" title="Personalize">
+		<description>This page allows you to set the path where you want to store the integration flow templates. The stored templates are available in the New Integration Project wizard during integration flow creation.
+		</description>
+	</context>
+ <context id="testinglib" title="Testing Libraries">
+    <description>This page allows you to set the update site of the common testing libraries.</description>
+ </context>
+	<context id="prefconnection" title="Repository Connection">
+		<description>This page allows you to set the connection details to an external repository from where you can import mappings and interface WSDLs.
+		</description>
+	</context>
+ <context id="configview" title="Configurations">
+    <description>This view helps you to: 
+1.	Manage the externalized parameters
+2.	Ensure that all the projects are consistent 
+3.	Deploy without opening the associated integration flow projects</description>
+ </context>
+ <context id="addTestCase" title="Add Test Case">
+    <description>After you have configured the runtime in Preferences &gt; SAP Cloud Platform Integration &gt;  Runtime Configuration, you add a testcase to check if an integration content is working.
+
+This dialog is used to enter a name for the testcase and select a runtime configuration for executing the testcase in a target runtime platform.</description>
+ </context>
+ <context id="runtimePlatform" title="Runtime Platform">
+    <description>This page allows you to set the update site of the target runtime platform.</description>
+ </context>
+ <context id="addTest" title="Add Test Method">
+    <description>This dialog is used to specify an input XML file for the integration flow before it is processed and an output XML file that contains the expected integration content after the integration flow is processed. This helps you to test if the integration flow is working as expected.</description>
+ </context>
+ <context id="TestingConfigPref" title="Testing Configuration">
+    <description>This page allows you to control the technical settings involved in testing the integration flow configurations.</description>
+ </context>
+ <context id="createBranch" title="Create Branch">
+    <description>This dialog is used to create a new branch for the repository you have selected in the Integration Content Explorer view.</description>
+ </context>
+ <context id="merge" title="Merge">
+    <description>This dialog is used when you want to merge the content of one branch with another, either within a repository or across repositories of same type. This dialog offers the advantage of automating a series of actions that is required to merge the content.</description>
+ </context>
+ <context id="addRepo" title="Add Repository">
+    <description>This dialog is used to add a source control system of a specific type, such as a Git Repository, to the Integration Content Explorer view. 
+Enter a display name for the repository and the URI of the repository, which you have obtained on creating the repository.</description>
+ </context>
+ <context id="advancedEndpointSender" title="Advanced">
+    <description>This view allows you to define the cardinality of communication between the sender and receiver. This means you can specify:
+
+•	If the communication is always between one sender participant and the ESB Bus
+•	If the communication is between multiple sender participants and ESB Bus at a time
+
+If there are multiple instances of a participant (Customer, Bank or Corporation), enter the technical IDs such as Tenant ID or External System ID for these instances. 
+The multiple instances of a participant are denoted in the Sender element of the Model Configuration editor with three vertical bars. 
+
+&lt;b&gt;Note&lt;/b&gt;: The information that you provide here is used to identify the participant during message monitoring.</description>
+ </context>
+ <context id="advancedEndpointReceiver" title="Advanced">
+    <description>This view helps you to provide the technical ID (Tenant ID or External System ID) for an instance of the receiver participant that communicates with the ESB Bus.</description>
+ </context>
+ <context id="externalize" title="Externalized Parameters">
+    <description>This view helps you to provide details for the parameters you have externalized. The description of the table columns are given below:
+
+&lt;b&gt;Name&lt;/b&gt;: Shows the parameter key you have entered for the field in the integration flow. If you have extracted the parameter, a generated parameter key name is displayed.
+
+&lt;b&gt;Type&lt;/b&gt;: Allows you to set the type, either xsd:integer or xsd:string, for the value of the parameter.
+
+&lt;b&gt;Value&lt;/b&gt;: Allows you to enter a value for the parameter based on the Type you have selected.
+
+&lt;b&gt;Mandatory&lt;/b&gt;: Checks if the externalized parameter is mandatory and needs to be provided with any value.
+
+&lt;b&gt;Parameters that can be externalized&lt;/b&gt;
+•	SOAP (SAP WS-RM) Connector: Address, URL to WSDL
+•	SOAP (SAP Plain SOAP) Connector: Address, URL to WSDL
+•	SOAP (SOAP 1.x): Address, URL to WSDL
+•	IDoc (IDoc-SOAP) Connector: Address, URL to WSDL
+•	SFTP Connector: Address , User Name , Directory
+•	Sender Authorization: Subject DN and Issuer DN</description>
+ </context>
+ <context id="IflowGeneralDetails" title="Integration Flow">
+    <description>This view allows you to enter a brief description about the integration flow. 
+The description can be useful in situations when a Business User is viewing the integration flow and needs more information to know what scenario does the integration flow model represent.</description>
+ </context>
+ <context id="DBStorageselect" title="Select Operation">
+    <description>This flow element helps you to fetch messages in bulk from the data store. Also you can specify the number of messages you fetch per poll.
+
+From the context menu of this element, you can also switch to other operations like:
+1. Write
+2. Get
+3. Delete</description>
+ </context>
+ <context id="DBStoragewrite" title="Write Operation">
+    <description>This flow element helps you to store messages in the data store. It helps you to define the scope of messages to a specific integration flow or across integrations flows in a tenant. It ensures that you can configure the behavior of the stored message, for example, specify the time by which the messages have to be fetched before an alert is raised or the number of days in which the stored messages are deleted. 
+
+The Write operation stores the messages into the data store by referring to the data store name and a unique Entry ID you have specified. 
+
+From the context menu of this element, you can also switch to other operations like:
+1. Select
+2. Get
+3. Delete</description>
+ </context>
+ <context id="DBStoragedelete" title="Delete Operation">
+    <description>This flow element helps you to trigger the deletion of messages in the data store. It enables you to specify ID(s) to be deleted in the Entry ID or pass them as header. 
+
+Note - ID(s) for deletion can also be read from message body by using Xpath expression. Xpath expression should return a node or node list. For example,
+${xpath./n0:FSNMessageBulk/FSNMessage/RelatedMessageId/text()}
+
+From the context menu of this element, you can also switch to other operations like:
+1. Select
+2. Get
+3. Write</description>
+ </context>
+ <context id="DBStorageget" title="Get Operation">
+    <description>This flow element helps you to define configuration for fetching message from the data store. It enables you to configure the parameters that define the behavior of fetching the messages per poll from the data store. It helps you to choose to allow the messages to be deleted once the receiver completes fetching the messages. Otherwise, the message remains in the data store unless it is explicitly deleted using the Delete operation.
+
+From the context menu of this element, you can also switch to other operations like:
+1. Write
+2. Select
+3. Delete</description>
+ </context>
+ <context id="persist" title="Persist Message">
+    <description>Persist Message stores a message payload so that you can access and analyze this stored message at a later point in time. In the integration flow, you mark a process step for persistence by specifying a unique step ID, which can be a descriptive name or a step number. For example, a step ID configured after a mapping step could be MessageStoredAfterMapping.</description>
+ </context>
+
+ <context id="XmlValidator" title="XML Validator">
+    <description>This integration flow step is used to validate incoming message payload against specified XSD.
+    </description>
+    <topic href="html/daeca02e069640d6bfcf2b27036d882a.html" label="Validating Message Payload against XML Schema"/>
+ </context>
+
+ <context id="EDItoXMLConverter" title="EDI to XML Converter">
+    <description>The EDI to XML converter transforms a message in EDI format to XML format. You can convert only EDIFACT format into XML format.</description>
+    <topic href="html/523dfd46bfe846efa0a25e48516f1504.html" label="Defining EDI to XML Converter"/>
+ </context>
+ 
+ <context id="XMLtoEDIConverter" title="XML to EDI Converter">
+   <description>The XML to EDI converter transforms a message in XML format to EDI format. You can convert only into EDIFACT format.</description>
+   <topic href="html/ccf0a2591de94821b61d4b21518c82fe.html" label="Defining XML to EDI Converter"/> 
+ </context>
+ 
+ <context id="EDIExtractor" title="EDI Extractor">
+ <description>EDI Extractor enables you to extract EDI headers and transfer to camel headers. This element extracts data from the incoming EDI document and adds it to the exchange such that this information can be used further in message processing. EDI extractor can read both flat file and XML format.</description>
+ <topic href="html/0c6ef558f9c94ea3abedaa9f34c401c1.html" label="Defining EDI Extractor"/> 
+ </context>
+ 
+ <context id="digest" title="Message Digest">
+    <description>This integration flow step is used to calculate a digest of the Payload or parts of it and store the result in a message header.
+In detail, this flow step transforms a message into a canonical XML document. From this document, a digest (hash value) is calculated and written to the message header.
+    </description>
+ </context>
+ <context id="Request-Reply" title="Request-Reply">
+    <description>This element allows you to enable request and reply interactions between sender and receiver systems.</description>
+    <topic href="html/1975019942ec464fa77f8776babc60b4.html" label="Defining Request-Reply"/>
+    <topic href="html/39bdce55b21a427b8ee89164aaac8176.html" label="Defining Service Call"/>
+ </context>
+ <context id="Script" title="Script">
+    <description>This task enables you to execute custom java script or groovy script for message processing.</description>
+    <topic href="html/905b24171cc746ef9069939ff3b536db.html" label="Defining Script"/>
+ </context>
+<context id="Aggregator" title="Aggregator">
+    <description>The Aggregator step combines multiple incoming messages into a single message.</description>
+ </context>
+<context id="WriteVariable" title="Write Variables">
+   <description>This flow element enables you to access same variable(s) across message(s) for same or different integration flows. It enables you to assign value to a variable by using constant, header, XPath, property, external parameter, defining an expression. The Global Scope checkbox allows you to use the variable across multiple integration flows.
+
+a.	To assign a value using an XPath, select xpath in the Value Type column and enter the XPath expression in the Value column. 
+
+Note 
+•	The Data Type column is applicable for the “XPath” and “Expression” Value Type. The Data Type can be any Java class. An example of a data type for an XPath is java.lang.String.
+•	If the XPath contains a namespace prefix, specify the association between the namespace and the prefix in the Runtime Configuration tab page of the integration flow Properties view.
+
+b.	To assign a value using a header, select header in the Value Type column, and enter the header in the Value column. 
+
+c.	To assign an external parameter, select external parameter in the Value Type column and define parameter key. For more details, refer to Externalizing Parameters of Integration Flow. 
+
+d.	To assign a property, select property in the Value Type column. Properties are local variables. The scope of these variables limits to a specific message processing. For more details on properties, refer to Defining Content Modifier.</description>
+</context>
+<context id="Multicast" title="Parallel Multicast">
+   <description>You use this iFlow element to route copies of the same message to more than one message paths. The messages are transmitted to multiple routes at the same time.</description>
+</context>
+
+
+</contexts>
+

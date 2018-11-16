@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:SFTP/version::1.3.1" ComponentName="sap:SFTP" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" MetadataVersion="2.0">
+    <Variant VariantId="ctype::AdapterVariant/cname::SFTP/tp::SFTP/mp::File/direction::Sender/version::1.3.1" VariantName="SFTP Sender" supportsPolling="true" useDefaultScheduler="true" MetadataVersion="2.0">
+		<InputContent Cardinality="1" Scope="outsidepool" MessageCardinality = "" isStreaming="">
+		 	<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+		</InputContent>		
+		<OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality = "" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema/>
+			</Content>
+			<Content>
+				<ContentType>None</ContentType>
+				<Schema/>
+			</Content>
+		</OutputContent>		
+		<Tab id="source_1">
+			<GuiLabels>
+				<Label language="EN">Source</Label>
+			</GuiLabels>
+					<AttributeGroup id="ftp.system">
+						<GuiLabels>
+							<Label language="EN">File Access Parameters</Label>
+						</GuiLabels>						
+						<AttributeReference>
+							<ReferenceName>path</ReferenceName>
+							<description>File path from where the file should be read, for example, &lt;dir&gt;/&lt;subdir&gt;</description>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>fileName</ReferenceName>
+							<description>Name of the file to be read.&#10;Blank field indicates all the files in the specified directory are read.</description>
+						</AttributeReference>
+					</AttributeGroup>
+					<AttributeGroup id = "ftp.connection">
+						<GuiLabels>
+							<Label language="EN">Connection Parameters</Label>
+						</GuiLabels>
+						<AttributeReference>
+							<ReferenceName>host</ReferenceName>
+							<description>Host name or IP address of the FTP Server and an false port (e.g. wdfd00213123:22).</description>
+						</AttributeReference>
+						
+						<AttributeReference>
+							<ReferenceName>authentication</ReferenceName>
+							<description>Specifies how the User will be authenticated</description>
+						</AttributeReference>
+						
+						<AttributeReference>
+							<ReferenceName>credential_name</ReferenceName>
+							<EditCondition>
+								<AttributeName>authentication</AttributeName>
+								<AttributeValue>user_password</AttributeValue>
+							</EditCondition>
+							<description>The referenced credential name</description>
+						</AttributeReference>
+						
+						<AttributeReference>
+							<ReferenceName>username</ReferenceName>
+							<EditCondition>
+								<AttributeName>authentication</AttributeName>
+								<AttributeValue>public_key</AttributeValue>
+							</EditCondition>
+							<description>ID of the user performing the file transfer</description>
+							<Restriction>Constraint.isValidRegex([A-Za-z0-9\/?@!\$\'\(\)\*\+,;\=\-\._~]+)</Restriction>
+							<ErrorMessage>Only the following characters are allowed: A-Z a-z 0-9 / ? @ ! $ ' ( ) * + , ; = - . _ ~</ErrorMessage>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>connectTimeout</ReferenceName>
+							<description>Maximum waiting time taken to contact the FTP server while establishing connection or performing a read operation.&#10;0 means the timeout is not used. Default value: 10000 ms</description>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>maximumReconnectAttempts</ReferenceName>
+							<description>Maximum number of attempts allowed to reconnect to the FTP server.&#10;Default value: 3. Use "0" to disable this behavior.</description>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>reconnectDelay</ReferenceName>
+							<description>Time period to wait before attempting to reconnect to the remote FTP server.&#10;Default value: 1000 ms</description>
+						</AttributeReference>
+						<AttributeReference>
+							<ReferenceName>disconnect</ReferenceName>
+							<description>Disconnect from SFTP server after each message processing</description>
+						</AttributeReference>
+					</AttributeGroup>
+		</Tab>
+		<Tab id="processing_1">
+			<GuiLabels>
+				<Label language="EN">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id = "file.processing">
+				<GuiLabels>
+					<Label language="EN">Processing Parameters</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>readLock</ReferenceName>
+					<description>Specifies the read-lock strategy during polling. Available options are:&#10;None - No read locks.&#10;Rename - Rename the file.&#10;Content Change - Detect whether the file is currently being copied to target location or not.&#10;Done File Expected - Uses a specific file to signal that the file to be processed is ready for consumption.</description>
+				</AttributeReference>                
+				<AttributeReference>
+					<ReferenceName>doneFileName</ReferenceName>
+					<EditCondition>
+                         <AttributeName>readLock</AttributeName>
+                         <AttributeValue>doneFile</AttributeValue>
+                      </EditCondition>
+					<description>Enter the name of the done file. The done file signals that the file to be processed is ready for consumption. This file must be in the same folder as the file to be processed. Placeholders are allowed. Default: ${file:name}.done</description>
+				</AttributeReference>
+                                
+                <AttributeReference>
+                    <ReferenceName>file_sorting_criteria</ReferenceName>
+                    <description>Select the type of sorting to use to poll files from the SFTP server:&#10;- None: The sorting is specified by the STFP server&#10;- File Name: Files are polled sorted by file name&#10;- File Size: Files are polled sorted by file size&#10;- Time Stamp: Files are polled sorted by the modification time stamp of the file</description>
+                </AttributeReference>
+                
+                <AttributeReference>
+                    <ReferenceName>file_sorting_direction</ReferenceName>
+                    <description>Select whether to sort in ascending or descending order.</description>
+                    <NotCondition>
+                        <EditCondition>
+                            <AttributeName>file_sorting_criteria</AttributeName>
+                            <AttributeValue>sort_by_none</AttributeValue>
+                        </EditCondition>
+                    </NotCondition>
+                </AttributeReference>
+                
+                <AttributeReference>
+                    <ReferenceName>file_lock_timeout</ReferenceName>
+                    <description>Specify how long to wait  before trying to process the file again in the event of a cluster outage. If it takes a very long time to process the scenario, you may need to increase the timeout to avoid parallel processing of the same file.</description>
+                </AttributeReference>
+                
+				<AttributeReference>
+					<ReferenceName>stepwise</ReferenceName>
+					<description>Changes directory levels one at a time</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>recursive</ReferenceName>
+					<description>Allows to look for files in all the sub-directories of the directory</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>noop</ReferenceName>
+					<description>Controls which actions should be done after file processing</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>file.move</ReferenceName>
+					<EditCondition>
+						<AttributeName>noop</AttributeName>
+						<AttributeValue>move</AttributeValue>
+					</EditCondition>
+					<description>Specifies the directory and the filename when moving the file after processing. To move files into .archive directory enter .archive</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>idempotentRepository</ReferenceName>
+					<OrCondition>						
+						<EditCondition>
+							<AttributeName>noop</AttributeName>
+							<AttributeValue>mark</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>noop</AttributeName>
+							<AttributeValue>1</AttributeValue>
+						</EditCondition>
+					</OrCondition>						
+					<description>In Memory: Keeps the filenames in the memory. Files are read again from the SFTP server, when the worker node is restarted.&#10;Database: Stores the filenames in database to prevent the files from being read again, when the worker node is restarted. Filename entries are deleted by default after 90 days.</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>retryAlertThreshold</ReferenceName>
+					<description>If the number of attempts to poll a message from SFTP server exceeds the retry threshold, an alert is raised.&#10;Default value '0' indicates that alert is not raised on error.</description>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		<Tab id="advanced_1">
+			<GuiLabels>
+				<Label language="EN">Advanced</Label>
+			</GuiLabels>
+			<AttributeGroup id = "file.advanced">
+				<GuiLabels>
+					<Label language="EN">Advanced Parameters</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>bufferSize</ReferenceName>
+					<description>Write file content using the mentioned buffer size. Default: 128 KB</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>runLoggingLevel</ReferenceName>
+					<description>Logs a start/complete log line on polling. Default: TRACE</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>maxMessagesPerPoll</ReferenceName>
+					<description>Maximum messages to gather per poll.&#10;Default: 20 Example:1000 can be set as a limit</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>flatten</ReferenceName>
+					<description>Flatten the file path by removing the directory levels so that only the file names are considered and they are written under a single directory.</description>
+				      </AttributeReference>
+				      <AttributeReference>
+					<ReferenceName>scheduleKey</ReferenceName>
+					<EditCondition>
+					  <AttributeName>dummy</AttributeName>
+					  <AttributeValue>213</AttributeValue>
+					</EditCondition>
+				      </AttributeReference>
+
+			</AttributeGroup>
+		</Tab>
+		<AllowedHeaders>CamelFileName,CamelFileNameOnly</AllowedHeaders>
+	</Variant>
+    <AttributeMetadata>
+		<Name>host</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Address</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>path</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Directory</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>username</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">User Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>maximumReconnectAttempts</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>3</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Maximum Reconnect Attempts</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>reconnectDelay</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>1000</Default>
+		<GuiLabels>
+			<Label language="EN">Reconnect Delay (in ms)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>connectTimeout</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>10000</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Timeout (in ms)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>stepwise</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default>1</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Change Directories Stepwise</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>bufferSize</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>128</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Buffer Size (in KB)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>fileName</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">File Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>flatten</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Flatten Filenames</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+
+	<AttributeMetadata>
+		<Name>runLoggingLevel</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>TRACE</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Log Level</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>TRACE</Value>
+				<GuiLabels>
+					<Label language="EN">Trace</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>INFO</Value>
+				<GuiLabels>
+					<Label language="EN">Info</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>IGNORE</Value>
+				<GuiLabels>
+					<Label language="EN">Ignore</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>WARNING</Value>
+				<GuiLabels>
+					<Label language="EN">Warning</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>readLock</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>none</Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Read Lock Strategy</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>none</Value>
+				<GuiLabels>
+					<Label language="EN">None</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>rename</Value>
+				<GuiLabels>
+					<Label language="EN">Rename</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>change</Value>
+				<GuiLabels>
+					<Label language="EN">Content Change</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>doneFile</Value>
+				<GuiLabels>
+					<Label language="EN">Done File Expected</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>doneFileName</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>${file:name}.done</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Done File Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>recursive</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Include Sub-Directories</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+
+	<AttributeMetadata>
+		<Name>noop</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>delete</Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Post-Processing</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>delete</Value>
+				<GuiLabels>
+					<Label language="EN">Delete File</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>mark</Value>
+				<GuiLabels>
+					<Label language="EN">Keep File and Mark as Processed in Idempotent Repository</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>test</Value>
+				<GuiLabels>
+					<Label language="EN">Keep File and Process Again</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>move</Value>
+				<GuiLabels>
+					<Label language="EN">Move File</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>file.move</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>.archive</Default>
+		<Length/>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Archive Directory</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>disconnect</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:boolean</DataType>
+		<Default></Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Automatically Disconnect</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>maxMessagesPerPoll</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>20</Default>
+		<GuiLabels>
+			<Label language="EN">Max. Messages per Poll</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>retryAlertThreshold</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:integer</DataType>
+		<Default>0</Default>
+		<Length />
+		<GuiLabels>
+			<Label language="EN">Retry Threshold for Alerting</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+		<Name>idempotentRepository</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>inMemory</Default>
+		<Length />
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Idempotent Repository</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>inMemory</Value>
+				<GuiLabels>
+					<Label language="EN">In Memory</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>database</Value>
+				<GuiLabels>
+					<Label language="EN">Database</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>	
+
+	<AttributeMetadata>
+		<Name>authentication</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>public_key</Default>
+		<Length />
+		<isparameterized>true</isparameterized>		
+		<GuiLabels>
+			<Label language="EN">Authentication</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>public_key</Value>
+				<GuiLabels>
+					<Label language="EN">Public Key</Label>
+				</GuiLabels>
+			</FixedValue>		
+			<FixedValue>
+				<Value>user_password</Value>
+				<GuiLabels>
+					<Label language="EN">User Name/Password</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+
+	<AttributeMetadata>
+		<Name>credential_name</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<isparameterized>true</isparameterized>
+		<GuiLabels>
+			<Label language="EN">Credential Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+
+	<AttributeMetadata>
+	  <Name>scheduleKey</Name>
+	  <Usage>required</Usage>
+	  <DataType>custom:schedule</DataType>
+	  <isparameterized>true</isparameterized>
+	  <GuiLabels>
+	    <Label language="EN">Schedule</Label>
+	  </GuiLabels>
+	</AttributeMetadata>
+    
+    <AttributeMetadata>
+        <Name>file_lock_timeout</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>5</Default>
+        <GuiLabels>
+            <Label language="EN">Lock Timeout (in min)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    
+    <AttributeMetadata>
+        <Name>file_sorting_criteria</Name>
+        <DataType>xsd:string</DataType>
+        <Default>sort_by_none</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Sorting</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>sort_by_filename</Value>
+                <GuiLabels>
+                    <Label language="EN">File Name</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>sort_by_filesize</Value>
+                <GuiLabels>
+                    <Label language="EN">File Size</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>sort_by_none</Value>
+                <GuiLabels>
+                    <Label language="EN">None</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>sort_by_timestamp</Value>
+                <GuiLabels>
+                    <Label language="EN">Time Stamp</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    
+    <AttributeMetadata>
+        <Name>file_sorting_direction</Name>
+        <DataType>xsd:string</DataType>
+        <Default>sort_direction_asc</Default>
+        <isparameterized>true</isparameterized>
+        <GuiLabels>
+            <Label language="EN">Sorting Order</Label>
+        </GuiLabels>
+        <FixedValues>
+            <FixedValue>
+                <Value>sort_direction_asc</Value>
+                <GuiLabels>
+                    <Label language="EN">Ascending</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>sort_direction_desc</Value>
+                <GuiLabels>
+                    <Label language="EN">Descending</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+    </AttributeMetadata>
+    
+</ComponentMetadata>

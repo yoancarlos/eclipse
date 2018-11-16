@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata MetadataVersion="2.0" ComponentId="ctype::Flowstep/cname::sap:Gather/version::1.0.0" ComponentName="Gather" UIElementType="Flowstep">
+	<Variant MetadataVersion="2.0" VariantId="ctype::FlowstepVariant/cname::Gather/version::1.0.0" VariantName="Gather" VariantDisplayName="Gather">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="n" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="insidepool" MessageCardinality="1" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+			<Schema />
+		</Content>
+		</OutputContent>
+		
+		<Tab id="Gather">
+			<GuiLabels>
+				<Label language="EN">Aggregation Strategy</Label>
+			</GuiLabels>
+			<AttributeGroup id="Gather">
+				<AttributeReference>
+					<ReferenceName>messageType</ReferenceName>
+					<description>Select incoming message format</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>aggregationAlgorithm</ReferenceName>
+					<description>Select aggregation algorithm</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>sourceXPath</ReferenceName>
+					<EditCondition>
+                        <AttributeName>aggregationAlgorithm</AttributeName>
+                        <AttributeValue>xpath-merge-strategy</AttributeValue>
+                    </EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>targetXPath</ReferenceName>
+					<EditCondition>
+                        <AttributeName>aggregationAlgorithm</AttributeName>
+                        <AttributeValue>xpath-merge-strategy</AttributeValue>
+                    </EditCondition>
+				</AttributeReference>
+			</AttributeGroup>
+		</Tab>
+		
+	</Variant>
+	<AttributeMetadata>
+		<Name>messageType</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>SameXMLFormat</Default>
+		<GuiLabels>
+			<Label language="EN">Incoming Format</Label>
+		</GuiLabels>
+		<FixedValues>
+            <FixedValue>
+                <Value>SameXMLFormat</Value>
+                <GuiLabels>
+                    <Label language="EN">XML (Same Format)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>DiffXMLFormat</Value>
+                <GuiLabels>
+                    <Label language="EN">XML (Different Format)</Label>
+                </GuiLabels>
+            </FixedValue>
+            <FixedValue>
+                <Value>PlainText</Value>
+                <GuiLabels>
+                    <Label language="EN">Plain Text</Label>
+                </GuiLabels>
+            </FixedValue>
+        </FixedValues>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+		<Name>aggregationAlgorithm</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>sap-identical-multi-mapping</Default>
+		<GuiLabels>
+			<Label language="EN">Aggregation Algorithm</Label>
+		</GuiLabels>
+		<FixedValues>
+            <FixedValue>
+                <Value>sap-identical-multi-mapping</Value>
+                <GuiLabels>
+                    <Label language="EN">Combine</Label>
+                </GuiLabels>
+            </FixedValue>
+            <OrCondition>
+            	<EditCondition>
+               		<AttributeName>messageType</AttributeName>
+               		<AttributeValue>SameXMLFormat</AttributeValue>
+             	</EditCondition>
+             	<EditCondition>
+               		<AttributeName>messageType</AttributeName>
+               		<AttributeValue>DiffXMLFormat</AttributeValue>
+             	</EditCondition>
+            </OrCondition>
+        </FixedValues>
+        <FixedValues>
+            <FixedValue>
+                <Value>xpath-merge-strategy</Value>
+                <GuiLabels>
+                    <Label language="EN">Combine at XPath</Label>
+                </GuiLabels>
+            </FixedValue>
+            <EditCondition>
+            	<AttributeName>messageType</AttributeName>
+            	<AttributeValue>SameXMLFormat</AttributeValue>
+            </EditCondition>
+        </FixedValues>
+        <FixedValues>
+            <FixedValue>
+                <Value>concatenate-strategy</Value>
+                <GuiLabels>
+                    <Label language="EN">Concatenate</Label>
+                </GuiLabels>
+            </FixedValue>
+            <EditCondition>
+            	<AttributeName>messageType</AttributeName>
+            	<AttributeValue>PlainText</AttributeValue>
+            </EditCondition>
+        </FixedValues>
+	</AttributeMetadata>
+	
+	<AttributeMetadata>
+		<Name>sourceXPath</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Combine from source (XPath)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>targetXPath</Name>
+		<DataType>xsd:string</DataType>
+		<GuiLabels>
+			<Label language="EN">Combine at target (XPath)</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	
+</ComponentMetadata>

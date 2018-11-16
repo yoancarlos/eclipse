@@ -1,0 +1,125 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: 2eXOXjO7b105+TNIiWMXLByt5jrCz
+ vasysHq3P21Qoo=
+SHA-256-Digest-Manifest: u+BlmPZVjwzUr3sVVAcZZs/CxM7zYMFo5bSyaKqusfw=
+Created-By: 1.8.0_121 (Oracle Corporation)
+
+Name: narrow_book.css
+SHA-256-Digest: jQp6x3n2XE3ERbuFpsTrL/C0J+cUNKTpnCHEfxnAPmw=
+
+Name: macosx_narrow_book.css
+SHA-256-Digest: 5g53tY70UqekrkLDjQi7mlPVye0hgy4nM5w2Kwy6QMM=
+
+Name: about.properties
+SHA-256-Digest: imX86E7YRVvjAL+BkBtaXDdtfBaNVkAs6SA9aP8IP/A=
+
+Name: plugin.xml
+SHA-256-Digest: 0NJ/0v+sM1+M0xfPMjj4CvJL+eCjJh5El5/DwNMdwfk=
+
+Name: com/sap/ndb/studio/StudioStartup.class
+SHA-256-Digest: sjVhx550A4eFkn6CVDi/uP9O6pIdfC6uP1Wp2VtSsNQ=
+
+Name: com/sap/ndb/studio/StudioPlugin.class
+SHA-256-Digest: ota/YIerbXBQzxG4YuEdx7Gh/v/ss1rR4dsc32vfsZA=
+
+Name: splash.bmp
+SHA-256-Digest: dDP1a+eMjGkea8J+od/wKDSsYbZ1LYjRY5/MV31YMO0=
+
+Name: .options
+SHA-256-Digest: JWc/1JFCDQqTkPPfGT6UFyLMdb7YrNY3cuXJq1Mtjcs=
+
+Name: plugin_customization.properties
+SHA-256-Digest: kQorD2UuTuqNkPHs8bI5yqkqh8s09Mwl4GO+/3wvVu8=
+
+Name: about.mappings
+SHA-256-Digest: LAiIlXhJOCsBluOgg0ilm7bKPD0Y9gdkvtyDa5wCI18=
+
+Name: images/studio16.png
+SHA-256-Digest: Mx7IOfjUJ8sm7oyRl7uz0kMvoqWl/jT7Rj8ktD29qnE=
+
+Name: com/sap/ndb/studio/internal/supportinfo/StudioSupportInfoProvide
+ r.class
+SHA-256-Digest: yBXikSesl8DVEwX/jotsk0Rf58QhrZ8OHqW26lNZUW8=
+
+Name: images/studio.xpm
+SHA-256-Digest: W0F6AKqzccLjiIzJzfLSEvP605YPEhRpWPgNkjoCOj8=
+
+Name: book.css
+SHA-256-Digest: MQysqPRyE4ivGaQB3ACDvvMMIOE64wN5/FEh8SDYbrA=
+
+Name: images/about.png
+SHA-256-Digest: aIMN+jx7Ad48jKcOcEYGRZsfhj2C+9LibRe5i88yD90=
+
+Name: about.ini
+SHA-256-Digest: qsR18N5k2gsD3HJXbUL621xKCTXzP+DLwgeLjVtWZX4=
+
+Name: com/sap/ndb/studio/i18n/Messages.class
+SHA-256-Digest: Xk9O2oo+YXiXSH+riVlBn/KzJT5hcFDt9mkTowMWsbo=
+
+Name: intro/overviewExtensionContent1.xml
+SHA-256-Digest: NDVVmsjA+xU4NTGCLGmzBE692JGowGIkHTBBTXSzzQI=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio/pom.xml
+SHA-256-Digest: NqoalbSxe+s/GpYNGrfEjJI7nw/HWlfQeSPuhqkZy3Y=
+
+Name: introData.xml
+SHA-256-Digest: VblCbwkeQOaSFDkZ5zXpxWrkxcasxLhzmDjvmvjOY5Q=
+
+Name: plugin_customization.ini
+SHA-256-Digest: MSQ+AucQ1IviH+Ox8LqRGLRLrHIOshgqqKXQIr0MT4Y=
+
+Name: images/studio.icns
+SHA-256-Digest: au8XC/jyxKCAdcVdVBcsLiw//ystybOWx3C3zS0qak4=
+
+Name: com/sap/ndb/studio/internal/splash/StudioSplashHandler.class
+SHA-256-Digest: 8/0633Dq5cPioxvAp4SYYUnwJFHSNKmoZVuRGbYPg5U=
+
+Name: META-INF/maven/com.sap.ndb.studio/com.sap.ndb.studio/pom.propert
+ ies
+SHA-256-Digest: 4w1amETjahbTWlDqQutZk1OABvZf9idyMcdtqnSt1zA=
+
+Name: com/sap/ndb/studio/i18n/messages.properties
+SHA-256-Digest: S+qlPNLrdtSfwx+yLDxBQ8YW3C52Fc2qfLRp85VwlmI=
+
+Name: intro/css/overview.css
+SHA-256-Digest: /nBURvQ24iRVbW1LPrkDLnxA8zQCoVKbN/9P5jfgpds=
+
+Name: intro-eclipse.png
+SHA-256-Digest: BOOKMqFmpSJcCMh6Q64KN7HfftK7xiBHllr/xlIRIzU=
+
+Name: intro/css/graphics/picto/5Docs.png
+SHA-256-Digest: 6blYRjRefVNR2sBwfmXbBhkBX1GZGEL8qsKQeUAvH10=
+
+Name: intro/overviewExtensionContent2.xml
+SHA-256-Digest: gg/Ya21iqpJJdyhSX/N+tDwzoEjNU1NVeO7N1QQt6gk=
+
+Name: images/studio.ico
+SHA-256-Digest: HpmiII1ia+MXdIZvxkAlF6HqLpve3RQQZvgKVyVEQzA=
+
+Name: images/studio128.png
+SHA-256-Digest: oe/3YDhchyIhyDYOtPgcwNpXXiE1nN/ocLqubs3kWUI=
+
+Name: images/studio32.png
+SHA-256-Digest: uVNwkNF+695PRkewc4C6DA8RCbgMRAP+YK0DVynVBH8=
+
+Name: com/sap/ndb/studio/StudioPlugin$1.class
+SHA-256-Digest: FkDMM2DjHpzMWuDSKuDww33cm674eR+iIegrSjZORo8=
+
+Name: images/progress.gif
+SHA-256-Digest: aWxcIGXJ0obBMmqo/+jQBTcdxvHpoAChGA8P09VUf8U=
+
+Name: com/sap/ndb/studio/actions/OpenPerspective.class
+SHA-256-Digest: JgyDt94THqjvfjP6gAHUumb1l54cLEwqGKplv6C5NHo=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: 0hHWBMQ5YcICQ0wEke9XSDSoBhZspyP7A1DxdHoGXl4=
+
+Name: images/studio256.png
+SHA-256-Digest: eQY/0Hwt2DJgJjvCqvCoNsPXucFeR2ZFLp8Ezg2Nfmo=
+
+Name: com/sap/ndb/studio/StudioPlugin$1$1.class
+SHA-256-Digest: aq4rC+tInhvaaramaBgxOs4yBJPhvQCYl5LGCKekxaE=
+
+Name: disabled_book.css
+SHA-256-Digest: YtMtWOk7vxqVvWWLLEoSUC0ETssW0mWD8Bu6CMB2WuA=
+

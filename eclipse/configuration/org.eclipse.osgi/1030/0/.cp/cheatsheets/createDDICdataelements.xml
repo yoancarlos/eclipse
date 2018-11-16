@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Creating an ABAP Dictionary Data Elements">
+   <intro>
+      <description>
+         Using an existing ABAP project as a basis, this unit shows you how to create a <b> data element</b>.
+<br/> 
+The underlying procedure is representative of all other ABAP Repository objects that are not created entirely using Eclipse-based tools, but also using <b>GUI-based tools</b> at the end.
+<br/>
+<br/>
+To create a data element, you start with the Project Explorer and then open the ABAP Development Object creation wizard for the ABAP project selected. Afterwards, the wizard delegates the following steps to the GUI, which then ensures that the suitable tool is started.
+      </description>
+   </intro>
+   <item
+         title="Create a Data Element" dialog="true">
+      <description>
+         To create a data element, select the relevant ABAP Project in the Project Explorer and continue the procedure as follows: 
+         <br/>
+      </description>
+      <subitem
+            label="Choose &quot;New&quot; in the context menu and then select &quot;ABAP Repository Object&quot;, or choose &quot;Click to perform&quot;.">
+         <command
+               required="false"
+               serialization="org.eclipse.ui.newWizard(newWizardId=com.sap.adt.projectexplorer.ui.newWizards.NewAbapVitObject)"/>
+      </subitem>
+      <subitem
+            label="Expand the “Dictionary” folder and select the “Data Element” node. Choose “Next”.">
+      </subitem>
+      <subitem
+            label="Enter the name of the data element to be created. Choose “Finish”.">
+      </subitem>
+      <subitem
+            label="Fill in all the required fields in the GUI-based tool and complete the definition procedure of the new data element.">
+      </subitem>
+   </item>
+   
+   <item
+         title="Check Results">
+      <description>
+         An inactive version of the data element has been created in the selected package of the ABAP backend system. 
+<br/>
+You can use the new data element to define the type of a table field or a structure component, or the row type of a table type.
+         
+      </description>
+   </item>
+</cheatsheet>

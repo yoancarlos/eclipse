@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You use this task to encode messages using an encoding scheme to secure any sensitive message content during transfer over the network."/>
+<meta name="description" content="You use this task to encode messages using an encoding scheme to secure any sensitive message content during transfer over the network."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Define an Encoder</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio89f8bddeb90b44bab0a7d2ef7e37ad1a">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Define an Encoder</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You use this task to encode messages using an encoding scheme to secure any sensitive
+		message content during transfer over the network. </p>
+
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="loio89f8bddeb90b44bab0a7d2ef7e37ad1a__steps_zfj_2rq_35"><li class="li step stepexpand" id="loio89f8bddeb90b44bab0a7d2ef7e37ad1a__step_N10020_N1001D_N10011_N10001">
+				<span class="ph cmd">Open the integration flow in the editor. </span>
+			</li>
+<li class="li step stepexpand" id="loio89f8bddeb90b44bab0a7d2ef7e37ad1a__step_N1002D_N1001D_N10011_N10001">
+				<span class="ph cmd">From the palette, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Transformation</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Encoder</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span>. </span>
+			</li>
+<li class="li step stepexpand" id="loio89f8bddeb90b44bab0a7d2ef7e37ad1a__step_N10043_N1001D_N10011_N10001">
+				<span class="ph cmd">Select one of the following encoding schemes:</span>
+				<div class="itemgroup info">
+					<div class="p">
+            <ul class="ul" id="loio89f8bddeb90b44bab0a7d2ef7e37ad1a__d4191e15">
+                <li class="li">
+                    <p class="p">Base64 Encode</p>
+
+                    <p class="p">Allows you to encode the message content using base64.</p>
+
+                </li>
+
+                
+                <li class="li">
+                    <p class="p">GZIP Compress</p>
+
+                    <p class="p">Allows you to compress the message content using GNU zip (GZIP).</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">ZIP Compress</p>
+
+                    <p class="p">Allows you to compress the message content using zip.</p>
+
+                </li>
+
+                <li class="li">
+                    <p class="p">MIME multipart encode</p>
+
+                    <p class="p">Allows you to transform the message content into a MIME multipart message</p>
+
+                    <p class="p">If you want to send a message with attachments, but the protocol (for
+                        example, HTTP or SFTP) does not support attachments, you can send the
+                        message as a MIME multipart instead.</p>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loio89f8bddeb90b44bab0a7d2ef7e37ad1a__step_N10050_N1001D_N10011_N10001">
+				<span class="ph cmd">Save the changes.</span>
+			</li>
+</ol>
+
+		<div class="example"><h2 class="exampletitle">Example</h2>
+            <p class="p">A message with the header Content-Type "text/plain" is sent to a MIME multipart
+                encoder. The add multipart headers inline functionality is activated.</p>
+
+            <div class="note sap-samplecodeblock samplecode"><span class="samplecodetitle">Sample Code</span> 
+                <div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">from("...").marshal().mimeMultipart("related", true, true, "(included|x-.*)", true);</pre></div>
+
+                <p class="p">The resulting message body will be:</p>
+
+                <div class="p">
+                    <div class="note sap-samplecodeblock samplecode"><span class="samplecodetitle">Sample Code</span> 
+                        <div class="div_pre_codeblock"><pre class="pre codeblock prettyprint"><span class="ph emphasis emphasis">Message Body</span>
+
+
+Message-ID: &lt;...&gt;
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+    boundary="----=_Part_0_1134128170.1447659361365"
+
+------=_Part_0_1134128170.1447659361365
+Content-Type: text/plain
+Content-Transfer-Encoding: 8bit
+ 
+Body text
+------=_Part_0_1134128170.1447659361365
+Content-Type: application/binary
+Content-Transfer-Encoding: binary
+Content-Disposition: attachment; filename="Attachment File Name"
+ 
+[binary content]
+------=_Part_0_1134128170.1447659361365
+</pre></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="p">Consider the input XML payload structure to the encoder:</p>
+
+            <div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;message&gt;
+	Input for encoder
+&lt;/message&gt;
+</pre></div>
+
+            <p class="p">If you select Base64 Encode, the output message would look like this:</p>
+
+            <p class="p"><samp class="ph systemoutput">PG1lc3NhZ2U+DQoJSW5wdXQgZm9yIGVuY29kZXINCjwvbWVzc2FnZT4NCg==</samp></p>
+
+        </div>
+
+	</div>
+
+<div class="related-links"> 
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

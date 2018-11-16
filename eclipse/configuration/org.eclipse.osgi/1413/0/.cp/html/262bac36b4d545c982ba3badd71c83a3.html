@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring Delta Sync Scenarios</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio262bac36b4d545c982ba3badd71c83a3">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring Delta Sync Scenarios</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc"/>
+
+		<p class="p">You can configure the SuccessFactors connector to fetch the modified or delta records instead
+			of fetching all the records. This optimizes the polling mechanism. This is known as a
+			delta sync configuration.</p>
+
+		<div class="section"><div class="section_title">Delta Sync</div><div type="Delta Sync">
+			<p class="p">If you want to add more filter conditions after you have configured the delta sync, use the
+				appropriate operators and add them. Once the query is executed, the relevant
+				scenarios are executed.</p>
+
+			<div class="note note"><span class="notetitle">Note</span> The following steps guide you through the configuration of the delta sync conditions only.
+				For an end-to-end procedure for creating and executing operations, see
+					<span class="ph emphasis emphasis">Modeling Operations</span>.</div>
+
+			
+			<p class="p">With this configuration, the system fetches all records from the beginning of time
+				(1/1/19070, by default) in the first run. Only modified records are fetched in the
+				subsequent runs.</p>
+
+			<ol class="ol" id="loio262bac36b4d545c982ba3badd71c83a3__ol_vp3_kbq_jm">
+				<li class="li">In the <span class="ph uicontrol">Configure Filter Condition for Fields</span> window, select a field
+					of type DATETIME for the <span class="ph uicontrol">Filter Field</span>. Example:
+						<span class="ph uicontrol">lastModified</span></li>
+
+				<li class="li">In the <span class="ph uicontrol">Operation</span> field, select
+						<span class="ph uicontrol">&gt;</span>.</li>
+
+				<li class="li">In the <span class="ph uicontrol">Type</span> field, select <span class="ph uicontrol">Delta Sync</span>.
+						<span class="ph uicontrol">maxDateFromLastRun</span> is automatically populated in the
+						<span class="ph uicontrol">Value</span> field.</li>
+
+			</ol>
+
+			<div class="note note"><span class="notetitle">Note</span> If the payload from the SuccessFactors system has
+					<span class="ph uicontrol">execution_timestamp</span> as one of the fields, that time stamp
+				is used as the reference date for the subsequent delta sync polling cycles. The date
+				specified in the <span class="ph uicontrol">Query</span> is ignored.</div>
+
+		</div></div>
+
+		<div class="section"><div class="section_title">Modify Query in Existing Delta Sync Configuration</div><div type="Modify Query in Existing Delta Sync Configuration">
+			
+			<p class="p">With this configuration, you can modify the query in an existing delta sync configuration. The
+				system will consider the new query and fetch only modified records in the subsequent
+				polling cycles.</p>
+
+			<ol class="ol" id="loio262bac36b4d545c982ba3badd71c83a3__ol_vn4_ygq_jm">
+				<li class="li">In the <span class="ph uicontrol">Model Operation</span> window, add or remove the new fields that you
+					wish to fetch.</li>
+
+				<li class="li">In the <span class="ph uicontrol">Configure Filter Conditions for Fields</span> window, you can add new
+					filter conditions.</li>
+
+				<li class="li">You can also modify or remove existing filter conditions in the
+						<span class="ph uicontrol">Configure Filter Conditions for Fields</span> window.</li>
+
+				<li class="li">Continue with the existing delta sync configuration.</li>
+
+			</ol>
+
+		</div></div>
+
+		<div class="section"><div class="section_title">Reset Existing Delta Sync Configuration</div><div type="Reset Existing Delta Sync Configuration">
+			
+			<p class="p">You perform these steps only to reset an existing delta sync configuration. After
+				reset, the configuration enables you to fetch data from the beginning of time
+				(1/1/1970) in the first polling cycle and fetch only modified records in the
+				subsequent polling cycles.</p>
+
+			<ol class="ol" id="loio262bac36b4d545c982ba3badd71c83a3__ol_zdq_1y5_jm">
+				<li class="li">In the channel configuration, enter a new channel name in the <span class="ph uicontrol">Channel
+						Details</span> section. The new name resets the existing delta sync
+						configuration.<div class="note caution"><span class="cautiontitle">Caution</span> Choose a unique channel name. Do not use
+						names that were used in earlier delta sync configurations.</div>
+</li>
+
+				<li class="li">Save the configuration.</li>
+
+			</ol>
+
+		</div></div>
+
+		<div class="section"><div class="section_title">Fetch Records After a Specified Date in the First Run and Fetch Modified Records in Subsequent Runs</div><div type="Fetch Records After a Specified Date in the First Run and Fetch Modified Records in Subsequent Runs">
+			
+			<p class="p">With this configuration, you can specify a date that will be used as a reference to fetch
+				records. The system fetches the records that have been modified or added after the
+				specified date in the first polling cycle. The modified records are fetched in the
+				subsequent polling cycles.</p>
+
+			<ol class="ol" id="loio262bac36b4d545c982ba3badd71c83a3__ol_qmv_4lq_jm">
+				<li class="li">In the <span class="ph uicontrol">Model Configuration</span> window, select the fields that you want to
+					fetch.</li>
+
+				<li class="li">In the <span class="ph uicontrol">Configure Filter Condition for Fields</span> window, select a
+					DATETIME type field in the<span class="ph uicontrol">Filter Field</span> window. Example:
+						<span class="ph uicontrol">lastModified</span></li>
+
+				<li class="li">In the <span class="ph uicontrol">Operation</span> field, choose <span class="ph uicontrol">&gt;=</span>.</li>
+
+				<li class="li">In the <span class="ph uicontrol">Value</span> field, enter the date after which you want
+					the records to be fetched from the system.</li>
+
+				<li class="li">Choose <span class="ph uicontrol">Add</span>.</li>
+
+				<li class="li">Select a field of type DATETIME for the <span class="ph uicontrol">Filter Field</span>. Example:
+						<span class="ph uicontrol">lastModified</span></li>
+
+				<li class="li">In the <span class="ph uicontrol">Operation</span> field, select
+						<span class="ph uicontrol">&gt;</span>.</li>
+
+				<li class="li">In the <span class="ph uicontrol">Type</span> field, select <span class="ph uicontrol">Delta Sync</span>.
+						<span class="ph uicontrol">maxDateFromLastRun</span> is automatically populated in the
+						<span class="ph uicontrol">Value</span> field.</li>
+
+				<li class="li">In the <span class="ph uicontrol">Operators</span> field, choose
+					<span class="ph uicontrol">AND</span>.</li>
+
+			</ol>
+
+		</div></div>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="During streaming the XML document is processed in parts or segments:"/>
+<meta name="description" content="During streaming the XML document is processed in parts or segments:"/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>How Streaming in the XML-to-JSON Converter Works</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="copya010879114cb454bbda3e3529d6a5178">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">How Streaming in the XML-to-JSON Converter Works</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc">During streaming the XML document is processed in parts or segments:  </p>
+
+		<p class="p">The individual tags of an XML document are processed consecutively,irrespective of where in the
+			overall structure the tag occurs and how often (multiplicity). This means that during
+			the streaming process the converter cannot <cite class="cite">know</cite> if an element occurs in the
+			structure more than once. In other words, during the streaming process the object model
+			that reflects the overall structure of the XML document (and, therefore, also all
+			information that can only be derived from the object model, like the multiplicity of
+			elements) is not in place. This is different to the non-streaming case, where the
+			converter can calculate the multiplicity of the XML elements from the object model of
+			the complete XML document. The multiplicity is needed to create a correct JSON document.
+			Elements whose multiplicity is greater than one must be transformed to a JSON member
+			with an array. For example, you may think that for the XML document
+				<samp class="ph codeph">&lt;root&gt;&lt;B&gt;b1&lt;/B&gt;&lt;B&gt;b2&lt;/B&gt;&lt;/root&gt;</samp>,
+			you create the JSON document <samp class="ph codeph">{“root”:{“B”:”b1”,”B”:”b2”}}</samp>. However,
+			this JSON document is invalid, because the member name <samp class="ph codeph">“B”</samp> occurs twice
+			on the same hierarchy level. </p>
+
+		<p class="p">To ensure nevertheless a conversion that creates correct JSON documents during streaming, you
+			need to either manually provide the information about which XML elements are multiple in
+			advance, or decide that every XML element is converted to a JSON array (when configuring
+			the converter in the Integration Designer).</p>
+
+		<p class="p">To illustrate this behavior, let’s consider how the following simple XML structure has to be
+			converted to JSON:</p>
+
+		<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;root&gt;
+  &lt;A&gt;a&lt;/A&gt;
+  &lt;B&gt;b1&lt;/B&gt;
+  &lt;B&gt;b2&lt;/B&gt;
+  &lt;C&gt;c&lt;/C&gt;
+&lt;/root&gt;</pre></div>
+
+		<p class="p">Note that the element <samp class="ph codeph">root/B</samp> occurs twice (multiplicity = 2). </p>
+
+		<p class="p">Without streaming, the converter would produce the following JSON structure:</p>
+
+		<p class="p"><samp class="ph codeph">{"root":{"A":"a","B":["b1","b2"],"C":"c"}}</samp></p>
+
+		<p class="p">As expected, the XML element <samp class="ph codeph">root/B</samp> would transform into a JSON member with an
+			array as value, where the array has two values (<samp class="ph codeph">b1</samp> and
+				<samp class="ph codeph">b2</samp>) – according to the multiplicity of <samp class="ph codeph">root/B</samp>.
+			Note that a JSON array is indicated by the following type of brackets: [ … ].</p>
+
+		<p class="p">With streaming with all elements to JSON arrays, the converter would produce the
+			following JSON structure:</p>
+
+		<p class="p"><samp class="ph codeph">{"root":[{"A":["a"],"B":["b1","b2"],"C":["c"]}]}</samp></p>
+
+		<p class="p">All XML elements are transformed into members with a JSON array as value.</p>
+
+		<p class="p">With streaming and specific elements as arrays (where root/A and root/B are specified),
+			the converter would produce the following JSON structure: </p>
+
+		<p class="p"><samp class="ph codeph">{"root":{"A":["a"],"B":["b1","b2"],"C":"c"}}</samp></p>
+
+		<p class="p">An array is produced only for the XML elements root/A and root/B, but not for root/C. </p>
+
+		<p class="p">With streaming and specific elements as arrays (where only root/A is specified), the
+			converter would produce the following invalid JSON structure: </p>
+
+		<p class="p"><samp class="ph codeph">{"root":{"A":["a"],"B":"b1",”B”:"b2","C":"c"}}</samp></p>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

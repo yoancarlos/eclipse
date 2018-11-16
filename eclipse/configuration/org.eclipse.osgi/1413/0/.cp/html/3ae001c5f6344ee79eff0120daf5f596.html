@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining Router</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio3ae001c5f6344ee79eff0120daf5f596">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining Router</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p" id="loio3ae001c5f6344ee79eff0120daf5f596__prereq_N10014_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<p class="p">You have selected the <span class="ph uicontrol">Content-Based Router (Multiple Interfaces/Multiple
+					Receivers)</span> pattern or you have added the router element to the
+				integration flow model from the palette.</p>
+
+		</div>
+
+		<div class="section context" id="loio3ae001c5f6344ee79eff0120daf5f596__context_N10025_N10011_N10001"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You perform this task when you have to specify conditions based on which the messages are
+				routed to a receiver or an interface during runtime. If the message contains XML
+				payload, you form expressions using the Xpath-supported operators. If the message
+				contains non-XML payload, you form expressions using the operators shown in the
+				table below: </p>
+
+			
+<div class="table-wrapper tablenoborder"><table summary="" id="loio3ae001c5f6344ee79eff0120daf5f596__table_ktk_ykv_jl" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Usage of Operators in Non- XML Conditions</span></caption>
+<colgroup><col width="50%"/><col width="50%"/></colgroup>
+
+					
+					
+					<thead class="thead" align="left">
+						<tr class="row">
+							<th class="entry" valign="top" width="50%" id="d643666e44">Operator</th>
+
+							<th class="entry" valign="top" width="50%" id="d643666e47">Example</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">=</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} = '1'</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">!=</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} != '1'</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">&gt;</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} &gt; '1'</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">&gt;=</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} &gt;= '1'</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">&lt;</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} &lt; '1'</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">&lt;=</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} &lt;= '1'</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">and</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId}= '1' and ${header.ReceiverId} = '2' </td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">or</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId}= '1' or ${header.ReceiverId}= '2' </td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">contains</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} contains '1' </td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">not contains</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} not contains '1'</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">in</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} in '1,2'</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">not in</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} not in '1,2'</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">regex</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} regex '1.*'</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="50%" headers="d643666e44 ">not regex</td>
+
+							<td class="entry" valign="top" width="50%" headers="d643666e47 ">${header.SenderId} not regex '1.*'</td>
+
+						</tr>
+
+						
+					</tbody>
+
+				</table>
+</div>
+
+			<div class="note sap-example example"><span class="exampletitle">Example</span> A condition with expression <kbd class="ph userinput">${header.SenderId} regex
+					'1.*'</kbd> routes all the messages having Sender ID starting with
+				1'.</div>
+
+			<div class="note note"><span class="notetitle">Note</span> You can define a condition based on an exception that may occur. If condition
+					<kbd class="ph userinput">${exception.message}contains 'java.lang.Exception'</kbd> is
+				true then Defining Router routes the message to a particular receiver else it routes
+				to other receiver. </div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="loio3ae001c5f6344ee79eff0120daf5f596__step_N10031_N1002E_N10011_N10001">
+				<span class="ph cmd"> Open the <span class="ph filepath">&lt;integration flow&gt;.iflw</span> in the <span class="ph uicontrol">Model
+						Configuration</span> editor. </span>
+			</li>
+<li class="li step stepexpand" id="loio3ae001c5f6344ee79eff0120daf5f596__step_N1003E_N1002E_N10011_N10001">
+				<span class="ph cmd"> If you want to add a router at any point in the integration flow, follow the steps below: </span>
+				<ol type="a" class="ol substeps" id="loio3ae001c5f6344ee79eff0120daf5f596__substeps_r44_1lh_13">
+					<li class="li substep">
+						<span class="ph cmd">Right-click a connection within the pool and choose <span class="ph uicontrol">Add Routing</span>. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd"> Right-click the added <span class="ph uicontrol">Router</span> notation and choose the relevant
+							option, either <span class="ph uicontrol">Add Receiver</span> or <span class="ph uicontrol">Add
+								Interface</span>. </span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand" id="loio3ae001c5f6344ee79eff0120daf5f596__step_N10068_N1002E_N10011_N10001">
+				<span class="ph cmd">In the <span class="ph uicontrol">Model Configuration</span> editor, select one of the routing
+					branches splitting from the router. </span>
+			</li>
+<li class="li step stepexpand" id="loio3ae001c5f6344ee79eff0120daf5f596__step_N10075_N1002E_N10011_N10001">
+				<span class="ph cmd"> On the <span class="ph uicontrol">Route</span> tab of the <span class="ph uicontrol">Properties</span> view, enter a
+					descriptive name for the routing branch.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">From the <span class="ph uicontrol">Expression Type</span> dropdown, select the type of
+					expression used to formulate the routing condition.</span>
+				<ol type="a" class="ol substeps" id="loio3ae001c5f6344ee79eff0120daf5f596__substeps_pvc_35w_jl">
+					<li class="li substep">
+						<span class="ph cmd">Select <span class="ph uicontrol">XML</span> to form an expression using Xpath.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Select <span class="ph uicontrol">Non-XML</span> to form an expression using message header and message
+							body. </span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand" id="loio3ae001c5f6344ee79eff0120daf5f596__step_N10086_N1002E_N10011_N10001">
+				<span class="ph cmd"> In the <span class="ph uicontrol">Condition</span> field, formulate a valid XML or non-XML
+					condition that routes the message to its associated receiver. </span>
+				<div class="itemgroup info">
+					<div class="note sap-recommendation recommendation"><span class="recommendationtitle">Recommendation</span> We recommend you to ensure that the routing branches of a router are
+						configured with the same type of condition, either XML or non-XML, and not a
+						combination of both. At runtime, the specified conditions are executed in
+						the same order as displayed in the <span class="ph uicontrol">Properties</span> view of
+						the <span class="ph uicontrol">Router</span>. If the conditions are a combination of
+						both non-XML and XML type, the evaluation fails.</div>
+
+					<div class="note tip" id="loio3ae001c5f6344ee79eff0120daf5f596__note_N10091_N1008E_N10082_N1002A_N10011_N10001"><span class="tiptitle">Tip</span> To quickly configure
+						routing conditions, select <span class="ph uicontrol">Define Condition</span> from the
+						context menu of the routing branch.</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loio3ae001c5f6344ee79eff0120daf5f596__step_N10093_N1002E_N10011_N10001">
+				<span class="ph cmd"> If you want to set the selected route as the default, such that, its associated receiver
+					handles the error situation if no receiver is found, select the <span class="ph uicontrol">Default
+						Route</span> option. </span>
+				<div class="itemgroup info">
+					<div class="note note" id="loio3ae001c5f6344ee79eff0120daf5f596__note_N1009E_N1009B_N1008F_N1002A_N10011_N10001"><span class="notetitle">Note</span> Only the route that
+						was recently selected as <span class="ph uicontrol">Default Route</span> is considered as
+						the default route.</div>
+
+					<div class="note tip"><span class="tiptitle">Tip</span> To quickly set a route as a default route from the Model Configuration editor
+						tab page, select <span class="ph uicontrol">Set as Default Route</span> from the
+						context menu of routing branch.</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loio3ae001c5f6344ee79eff0120daf5f596__step_N100A8_N1002E_N10011_N10001">
+				<span class="ph cmd"> In the <span class="ph uicontrol">Model Configuration</span> editor, select the
+						<span class="ph uicontrol">Router</span> notation. </span>
+			</li>
+<li class="li step stepexpand" id="loio3ae001c5f6344ee79eff0120daf5f596__step_N100B5_N1002E_N10011_N10001">
+				<span class="ph cmd">In the <span class="ph uicontrol">Properties</span> view, under <span class="ph uicontrol">Routing Behavior</span>,
+					select <span class="ph uicontrol">Raise Alert</span> or <span class="ph uicontrol">Throw
+						Exception</span> to set the behavior if no receiver is found.</span>
+				<div class="itemgroup info">
+					<div class="note note" id="loio3ae001c5f6344ee79eff0120daf5f596__note_N100CD_N100CA_N100B2_N1002A_N10011_N10001"><span class="notetitle">Note</span> To configure an alert, see the Alert
+						Configuration section in the Operations Guide.</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand" id="loio3ae001c5f6344ee79eff0120daf5f596__step_N100D4_N1002A_N10011_N10001">
+				<span class="ph cmd">To model the integration flow when no receiver is found, follow the steps below:</span>
+				<ol type="a" class="ol substeps" id="loio3ae001c5f6344ee79eff0120daf5f596__substeps_ssp_d1x_y3">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">From the <span class="ph uicontrol">Palette</span> select the <span class="ph uicontrol">Terminate End</span> notation
+							and drop it inside the pool in the <span class="ph uicontrol">Model
+								Configuration</span>.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Place the cursor on the <span class="ph uicontrol">Router </span> to select the connection from the
+							hover menu and drag the connection to the <span class="ph uicontrol">Terminate
+								End</span> notation.</span>
+						<div class="itemgroup info">
+							<div class="note note" id="loio3ae001c5f6344ee79eff0120daf5f596__note_N1010D_N1010A_N100FB_N100D7_N100CF_N1002A_N10011_N10001"><span class="notetitle">Note</span>  If you do not add
+								the <span class="ph uicontrol">Terminate End</span> notation in your integration
+								flow model, the <span class="ph uicontrol">Raise Alert</span> or
+									<span class="ph uicontrol">Throw Exception</span> option does not
+								apply.</div>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand" id="loio3ae001c5f6344ee79eff0120daf5f596__step_N1012A_N1002A_N10011_N10001">
+				<span class="ph cmd">Select the <span class="ph uicontrol">Router</span> notation and, in the
+						<span class="ph uicontrol">Properties</span> view, check the overview of all the routes
+					and their conditions that you have defined for the scenario. </span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

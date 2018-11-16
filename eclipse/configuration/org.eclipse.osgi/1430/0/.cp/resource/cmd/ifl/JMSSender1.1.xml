@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:JMS/version::1.1.1" ComponentName="sap:JMS"
+    UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" ns_1:noNamespaceSchemaLocation="ComponentMetadata.xsd"
+    MetadataVersion="2.0" xmlns:ns_1="http://www.w3.org/2001/XMLSchema-instance">
+    <Variant VariantId="ctype::AdapterVariant/cname::JMS/tp::Not Applicable/mp::Not Applicable/direction::Sender/version::1.1.1"
+        VariantName="JMS Sender" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="" isStreaming="">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema></Schema>
+            </Content>
+        </OutputContent>
+        <ManifestEntries>
+            <ManifestEntry>
+                <Name>SAP-PreDeployment</Name>
+                <Value>/META-INF/deployment/queueDefinitions.json</Value>
+            </ManifestEntry>
+        </ManifestEntries>
+        <Tab id="tabProcessing">
+            <GuiLabels>
+                <Label language="EN">Connection</Label>
+            </GuiLabels>
+            <AttributeGroup id="processingDetails">
+                <GuiLabels>
+                    <Label language="EN">Processing Details</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>QueueName_inbound</ReferenceName>
+                    <Restriction>Constraint.isValidRegex(^([a-zA-Z0-9_])*$)</Restriction>
+                    <description>Enter a queue name having maximum 20 characters. The name should use characters (aA-zZ, 0-9, _) without any whitespaces.
+                    </description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>NumberConcurrentProcesses</ReferenceName>
+                    <Restriction>Constraint.isValidRegex(^[1-9][0-9]{0,1}?$)</Restriction>
+                    <ErrorMessage>Enter a value between 1 and 99</ErrorMessage>
+                    <description>Enter the number of processes running in parallel for each worker node. The recommended value depends on the number of worker nodes, the number of queues on the tenant and the incoming load. It should be as small as possible.
+                    </description>
+                </AttributeReference>
+            </AttributeGroup>
+            <AttributeGroup id="retryDetails">
+                <GuiLabels>
+                    <Label language="EN">Retry Details</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>RetryInterval</ReferenceName>
+                    <description>Enter the retry interval.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>ExponentialBackoff</ReferenceName>
+                    <description>If selected, the retry interval is doubled after each unsuccessful retry.</description>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>MaxRetryInterval</ReferenceName>
+                    <description>Enter a limit to avoid an endless increase of the retry interval caused by exponential backoff setting.</description>
+                    <EditCondition>
+                        <AttributeName>ExponentialBackoff</AttributeName>
+                        <AttributeValue>1</AttributeValue>
+                    </EditCondition>
+                </AttributeReference>
+                <AttributeReference>
+                    <ReferenceName>useDeadLetterQueue</ReferenceName>
+                    <description>Select this checkbox to place the message in the dead-letter queue if it cannot be processed after two retries.</description>
+                </AttributeReference>
+            </AttributeGroup>
+        </Tab>
+        <AllowedHeaders>SAPJMSRetries</AllowedHeaders>
+        <ReferencedComponents></ReferencedComponents>
+    </Variant>
+
+    <AttributeMetadata>
+        <Name>QueueName_inbound</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length>20</Length>
+        <GuiLabels>
+            <Label language="EN">Queue Name</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>NumberConcurrentProcesses</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>1</Default>
+        <GuiLabels>
+            <Label language="EN">Number of Concurrent Processes</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>RetryInterval</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>1</Default>
+        <GuiLabels>
+            <Label language="EN">Retry Interval (in min)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>ExponentialBackoff</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>1</Default>
+        <GuiLabels>
+            <Label language="EN">Exponential Backoff</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>MaxRetryInterval</Name>
+        <Usage>true</Usage>
+        <DataType>xsd:integer</DataType>
+        <Default>60</Default>
+        <GuiLabels>
+            <Label language="EN">Maximum Retry Interval (in min)</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>useDeadLetterQueue</Name>
+        <Usage>optional</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Default>1</Default>
+        <GuiLabels>
+            <Label language="EN">Dead-Letter Queue</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+</ComponentMetadata>

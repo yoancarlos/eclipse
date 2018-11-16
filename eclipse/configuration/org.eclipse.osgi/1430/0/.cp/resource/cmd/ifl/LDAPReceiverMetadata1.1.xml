@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::sap:LDAP/version::1.1.4"
+	ComponentName="sap:LDAP" UIElementType="Adapter" IsExtension="false"
+	IsFinal="true" IsPreserves="true" IsDefaultGenerator="true"
+	MetadataVersion="2.0" xmlns:gen="http://www.sap.hci.adk.com/gen"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://dewdfglp01185.wdf.sap.corp:8080/job/CMD/lastBuild/artifact/ComponentMetadata.xsd">
+	<Variant VariantName="LDAP" gen:RuntimeComponentBaseUri="ldap"
+		VariantId="ctype::AdapterVariant/cname::sap:LDAP/tp::TCP/mp::LDAP/direction::Receiver/version::1.1.4"
+		MetadataVersion="2.0" AttachmentBehavior="Preserve" IsRequestResponse="true"
+		DisplayName="TCP/IP">
+		<InputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</InputContent>
+		<OutputContent Cardinality="1" Scope="outsidepool"
+			MessageCardinality="1" isStreaming="false">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+			</Content>
+		</OutputContent>
+		<Metadata>
+			<AdditionalMetadata>
+				<Name>tp</Name>
+				<GuiLabels>
+					<Label language="EN">TCP/IP</Label>
+					<Label language="DE">TCP/IP</Label>
+				</GuiLabels>
+			</AdditionalMetadata>
+		</Metadata>
+		<Tab id="connection">
+			<GuiLabels guid="69590770-a6c6-45d7-a3a9-4eae7a9324e4">
+				<Label language="EN">Connection</Label>
+				<Label language="DE">Connection</Label>
+			</GuiLabels>
+			<AttributeGroup id="defaultUriParameter">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">LDAP System Settings</Name>
+				<GuiLabels guid="00d0a177-e58a-4a26-af79-1e7b1b18ac4c">
+					<Label language="EN">Connection Details</Label>
+					<Label language="DE">Connection Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>ldapAddress</ReferenceName>
+					<description>Enter the LDAP server URL</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ldapProxyType</ReferenceName>
+					<description>Proxy Type to be used to connect to the server</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ldapLocationID</ReferenceName>
+					<description>To connect to a cloud connector instance associated with your account, enter the location ID that you have defined for this instance in the destination configuration on the cloud side. You can enter ${header.headername} to dynamically read the value from the header.</description>
+					<Restriction>Constraint.isValidRegex(^((?!\\|\\r|\\n|\\r\\n).)*$)</Restriction>
+					<ErrorMessage>Location ID contains characters that are not allowed. Characters that are not allowed: '\', '/', '\r\n', '\r', '\n'.
+					</ErrorMessage>
+					<EditCondition>
+						<AttributeName>ldapProxyType</AttributeName>
+						<AttributeValue>ldapProxyTypeOnPremise</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ldapAuthentication</ReferenceName>
+					<description>Authentication type of the server</description>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ldapCredentialName</ReferenceName>
+					<description>Enter credential name that you have deployed on the tenant</description>
+				</AttributeReference>
+			</AttributeGroup>
+			</Tab>
+			<Tab id="tabProcessing">
+			<GuiLabels>
+				<Label language="EN">Processing</Label>
+				<Label language="DE">Processing</Label>
+			</GuiLabels>
+			<AttributeGroup id="defaultOperationDetails">
+				<Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">LDAP Operation Details</Name>
+				<GuiLabels guid="00d0a177-e58a-4a26-af79-1e7b1b18ac4c">
+					<Label language="EN">Processing Details</Label>
+					<Label language="DE">Processing Details</Label>
+				</GuiLabels>
+				<AttributeReference>
+					<ReferenceName>ldapOperation</ReferenceName>
+					<description>Select operation that you want to perform</description>
+				</AttributeReference>
+				<!-- <AttributeReference>
+					<ReferenceName>ldapBaseDN</ReferenceName>
+					<description>Enter the distinguished name</description>
+					<EditCondition>
+						<AttributeName>ldapOperation</AttributeName>
+						<AttributeValue>ldapOperationDelete</AttributeValue>
+					</EditCondition>
+				</AttributeReference>  -->
+				<AttributeReference>
+					<ReferenceName>ldapInputType</ReferenceName>
+					<description>Select input type that you are providing</description>
+					<OrCondition>
+						<EditCondition>
+							<AttributeName>ldapOperation</AttributeName>
+							<AttributeValue>ldapOperationInsert</AttributeValue>
+						</EditCondition>
+						<EditCondition>
+							<AttributeName>ldapOperation</AttributeName>
+							<AttributeValue>ldapOperationModify</AttributeValue>
+						</EditCondition>
+					</OrCondition>
+				</AttributeReference>
+				<!--  <AttributeReference>
+					<ReferenceName>ldapSearchFilter</ReferenceName>
+					<EditCondition>
+						<AttributeName>ldapOperation</AttributeName>
+						<AttributeValue>ldapOperationSearch</AttributeValue>
+					</EditCondition>
+				</AttributeReference>
+				<AttributeReference>
+					<ReferenceName>ldapOutputType</ReferenceName>
+					<EditCondition>
+						<AttributeName>ldapOperation</AttributeName>
+						<AttributeValue>ldapOperationSearch</AttributeValue>
+					</EditCondition>
+				</AttributeReference> -->
+			</AttributeGroup>
+		</Tab>
+	</Variant>
+	<AttributeMetadata>
+		<Name>ldapAddress</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">Address</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ldapProxyType</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>ldapProxyTypeOnPremise</Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">Proxy Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>ldapProxyTypeOnPremise</Value>
+				<GuiLabels>
+					<Label language="EN">On Premise</Label>
+				</GuiLabels>
+			</FixedValue>
+			<NotCondition>
+				<EditCondition>
+					<AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+					<AttributeValue>true</AttributeValue>
+				</EditCondition>
+			</NotCondition>
+		</FixedValues>
+		<FixedValues>
+			<FixedValue>
+				<Value>ldapProxyTypeInternet</Value>
+				<GuiLabels>
+					<Label language="EN">None</Label>
+				</GuiLabels>
+			</FixedValue>
+			<EditCondition>
+				<AttributeName>$profile.isCapabilitySupported(com.sap.it.capability.igwpro.manual-proxy:Manual Proxy Connectivity)</AttributeName>
+				<AttributeValue>true</AttributeValue>
+			</EditCondition>
+		</FixedValues>
+	</AttributeMetadata>
+	<!--  <AttributeMetadata>
+		<Name>ldapBaseDN</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>false</isparameterized>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">Distinguished Name</Label>
+		</GuiLabels>
+	</AttributeMetadata> -->
+	<AttributeMetadata>
+		<Name>ldapOperation</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>ldapOperationInsert</Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">Operation</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>ldapOperationInsert</Value>
+				<GuiLabels>
+					<Label language="EN">Insert</Label>
+				</GuiLabels>
+			</FixedValue>
+			<!-- <FixedValue> -->
+			<!-- <Value>ldapOperationDelete</Value> -->
+			<!-- <GuiLabels> -->
+			<!-- <Label language="EN">Delete</Label> -->
+			<!-- </GuiLabels> -->
+			<!-- </FixedValue> -->
+			<FixedValue>
+				<Value>ldapOperationModify</Value>
+				<GuiLabels>
+					<Label language="EN">Modify</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ldapInputType</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>ldapInputTypeXML</Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">Input Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>ldapInputTypeXML</Value>
+				<GuiLabels>
+					<Label language="EN">XML</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>ldapInputTypeLDAPAttributes</Value>
+				<GuiLabels>
+					<Label language="EN">Java(JNDI) Attributes</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<!-- <AttributeMetadata>
+		<Name>ldapOutputType</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Length></Length>
+		<isparameterized>false</isparameterized>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">Output Type</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>ldapOutputTypeXML</Value>
+				<GuiLabels>
+					<Label language="EN">XML</Label>
+				</GuiLabels>
+			</FixedValue>
+			<FixedValue>
+				<Value>ldapOutputTypeLDAPAttributes</Value>
+				<GuiLabels>
+					<Label language="EN">Java(JNDI) Attributes</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata> -->
+	<!-- <AttributeMetadata>
+		<Name>ldapSearchFilter</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>false</isparameterized>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">Search Filter</Label>
+		</GuiLabels>
+	</AttributeMetadata> -->
+	<!-- <AttributeMetadata> <Name>ldapContainer</Name> <Usage>true</Usage> 
+		<DataType>xsd:string</DataType> <Default></Default> <Length></Length> <isparameterized>true</isparameterized> 
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa"> <Label language="EN">Container</Label> 
+		</GuiLabels> </AttributeMetadata> -->
+	<AttributeMetadata>
+		<Name>ldapXMLSchema</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<HelpService>
+			<HelpServiceName>ldapF4Help</HelpServiceName>
+			<HelpServiceQueryAttributes>
+				<HelpServiceQueryAttribute>
+					<Name>Generate</Name>
+					<Value>Select...</Value>
+				</HelpServiceQueryAttribute>
+			</HelpServiceQueryAttributes>
+		</HelpService>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">XML Schema</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ldapAuthentication</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default>ldapAuthenticationSimple</Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">Authentication</Label>
+		</GuiLabels>
+		<FixedValues>
+			<FixedValue>
+				<Value>ldapAuthenticationSimple</Value>
+				<GuiLabels>
+					<Label language="EN">Simple</Label>
+				</GuiLabels>
+			</FixedValue>
+		</FixedValues>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ldapCredentialName</Name>
+		<Usage>true</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">Credential Name</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+	<AttributeMetadata>
+		<Name>ldapLocationID</Name>
+		<Usage>false</Usage>
+		<DataType>xsd:string</DataType>
+		<Default></Default>
+		<Length></Length>
+		<isparameterized>true</isparameterized>
+		<GuiLabels guid="522e82ce-ee8a-466e-ba0c-2220437256aa">
+			<Label language="EN">Location ID</Label>
+		</GuiLabels>
+	</AttributeMetadata>
+</ComponentMetadata>

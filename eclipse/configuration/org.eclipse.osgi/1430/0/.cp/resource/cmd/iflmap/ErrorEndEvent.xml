@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentMetadata ComponentId="ctype::Flowstep/cname::sap:EndEvent/version::1.0" ComponentName="sap:EndEvent" UIElementType="Flowstep" ComponentDisplayName="End Event" MetadataVersion="2.0" IsDefaultGenerator="false" xmlns:gen="http://www.sap.hci.adk.com/gen">
+	<Variant VariantId="ctype::FlowstepVariant/cname::ErrorEndEvent" VariantName="ErrorEndEvent" VariantDisplayName="Error End Event" gen:RuntimeComponentBaseUri="sap-error" gen:FirstUriPart="exception">
+		<InputContent Cardinality="1" Scope="insidepool" MessageCardinality="1" isStreaming="">
+			<Content>
+				<ContentType>Any</ContentType>
+				<Schema />
+			</Content>
+		</InputContent>		
+	</Variant>
+</ComponentMetadata>

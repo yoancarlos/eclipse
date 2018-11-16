@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="You can use this task if you want to simplify your integration process. It enables you to fragment your integration process into smaller processes (local integration processes), which are in turn called from the main integration process or from other local integration processes."/>
+<meta name="description" content="You can use this task if you want to simplify your integration process. It enables you to fragment your integration process into smaller processes (local integration processes), which are in turn called from the main integration process or from other local integration processes."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Defining a Local Integration Process</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loiobcb885971519439790aafb61ad6c5474">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Defining a Local Integration Process</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc">You can use this task if you want to simplify your integration process. It enables you
+		to fragment your integration process into smaller processes (local integration processes),
+		which are in turn called from the main integration process or from other local integration
+		processes. </p>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<div class="p">
+				<div class="note note"><span class="notetitle">Note</span> For the main integration process the SAP icon is displayed in the top left
+					corner, whereas for the local integration processes this icon is not
+					displayed.</div>
+
+			</div>
+
+			<div class="p">
+				<div class="note restriction"><span class="restrictiontitle">Restriction</span> 
+					<p class="p">You cannot use the following integration flow steps within the
+							<span class="ph uicontrol">Local Integration Process</span> step:</p>
+
+					<ul class="ul" id="loiobcb885971519439790aafb61ad6c5474__ul_s5l_3cl_mx">
+						<li class="li">
+							<p class="p">Another Local Integration Process</p>
+
+						</li>
+
+						<li class="li">
+							<p class="p">End Message</p>
+
+						</li>
+
+						<li class="li">
+							<p class="p">Sender</p>
+
+						</li>
+
+						<li class="li">
+							<p class="p">Receiver</p>
+
+						</li>
+
+						<li class="li">
+							<p class="p">Aggregator</p>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Open the &lt;integration flow&gt;.iflw in the Model Configuration editor. </span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Add a local integration process. </span>
+				<ol type="a" class="ol substeps" id="loiobcb885971519439790aafb61ad6c5474__substeps_tkv_pdj_x4">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want to add a local integration process to the integration flow,
+							choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Others</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Local Integration Process</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> from the palette. On the
+								<span class="ph uicontrol">Properties</span> tab, provide a name. </span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">You can add various elements between the start event and end event of
+							the process.</span>
+						<div class="itemgroup info">A local integration process does not support multicast and splitter
+							elements.</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Invoke the local integration process. </span>
+				<ol type="a" class="ol substeps" id="loiobcb885971519439790aafb61ad6c5474__substeps_yhr_rsh_x4">
+					<li class="li substep">
+						<span class="ph cmd">If you want to call the local integration process from the main
+							integration process, add a process call in the main integration process.
+							To do this, choose <span class="ph menucascade"><img src="../images/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"/> <span class="ph uicontrol">Tasks</span> <img src="../images/navstep.gif" alt="Next navigation step" title="Next navigation step"/> <span class="ph uicontrol">Process Call</span> <img src="../images/navend.gif" alt="End of the navigation path" title="End of the navigation path"/></span> from the palette. </span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">Choose <span class="ph uicontrol">Assign Local Integration Process</span> from the
+							context menu of the process call within the pool. Select the local
+							integration process that needs to be assigned to the process call in the
+							integration flow. </span>
+					</li>
+
+				</ol>
+
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> You can use an <span class="ph uicontrol">Error End</span> event to throw the
+						exception to default exception handlers.</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the changes. </span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.sap.core.tools.eclipse.server.branding;single
+ ton:=true
+Bundle-Version: 1.86.0
+Bundle-Name: SAP Cloud Platform Tools for Java
+Archiver-Version: Plexus Archiver
+Require-Bundle: org.eclipse.ui.intro,org.eclipse.ui.intro.universal,or
+ g.eclipse.ui
+Built-By: ppurple
+Bundle-ManifestVersion: 2
+Bundle-Vendor: SAP
+Build-Jdk: 1.7.0_13
+Created-By: Apache Maven 3.0.4
+
+Name: about.properties
+SHA-256-Digest: eknxP6VM3NGyhxM4ANjwGi2lC381k+F51iJeHFaGOgE=
+
+Name: intro/whatsnew.xml
+SHA-256-Digest: q4wEnnVXXysQsgZgzK9vF7kbx6MBE1zvns0htzEHkTM=
+
+Name: plugin.xml
+SHA-256-Digest: lSwXBEEGuIoLzQUEWVr6Hgzx+3Wt02t2BD+/d/zsVRU=
+
+Name: intro/css/style.css
+SHA-256-Digest: BlIVgDy/1Z30Zui+8vlvpPS2NqZlNoX8FHFtPEYbQkA=
+
+Name: META-INF/maven/com.sap.core.ide.toolset/com.sap.core.tools.eclip
+ se.server.branding/pom.properties
+SHA-256-Digest: T5C0044VDFwfrJi3mk1e32Wg30YGD3jDxvnbkM+JBn8=
+
+Name: intro/css/graphics/cloud_hov.png
+SHA-256-Digest: JKdrD3A2Pq5EPmCIiO7dySsYkGtxbLp6xnXLXLN1DuA=
+
+Name: intro/tutorials.xml
+SHA-256-Digest: 6BwC/V00FjYlcuoSjNQnjGVWtB5mhP+YsxGFWgzFlCY=
+
+Name: about.ini
+SHA-256-Digest: uHAZ9gNPomAaLF6dSsMBDhI1TihH64EnqaZonWRT9Eg=
+
+Name: intro/overview.xml
+SHA-256-Digest: +VJwASO0ZkoPWXfIBxknfN6TO4rk82HMkjnZHaIrLr0=
+
+Name: intro/css/graphics/cloud.png
+SHA-256-Digest: VkhHipKE2YCIjjL8Ho2Ri3WgHXzz1wlM2QGq80Aqth4=
+
+Name: intro/samples.xml
+SHA-256-Digest: 15LmxH2Fs9yFMQH0eVnMB7t3c/3rET2mwXXmAGwbwvk=
+
+Name: META-INF/maven/com.sap.core.ide.toolset/com.sap.core.tools.eclip
+ se.server.branding/pom.xml
+SHA-256-Digest: FVVOBcVB9K4AZl0KzdjCQhrKq28IBtCX4aITImscBjw=
+
+Name: images/nwcloud32.png
+SHA-256-Digest: yEqjMxxNixYo0Y2ul+4DhwOW+tQ4lasgyw87UhpBPzE=
+

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configuring a Channel with Ariba Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio4c56e943ad2f4228aac5da7e62868fc9">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configuring a Channel with Ariba Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<ul class="ul" id="loio4c56e943ad2f4228aac5da7e62868fc9__ul_w1m_tqn_ds">
+				<li class="li">
+					<p class="p">You have created an integration project and an integration flow.</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">You have the credentials to log on to the Ariba Network.</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">You have a certificate from Ariba or a trusted third party who is a certification
+						authority.</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">You have deployed the following artifacts: User Credentials and Keystore.</p>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">You use this procedure to configure a sender and receiver channel of an integration flow with
+				the Ariba Network adapter. These channels enable the SAP and non-SAP cloud
+				applications to send and receive business-specific documents in cXML format to and
+				from the Ariba Network. Examples of business documents are purchase orders and
+				invoices.</p>
+
+			<div class="note restriction"><span class="restrictiontitle">Restriction</span> An integration flow you deploy in <span class="ph pname">SAP Cloud Platform
+                        Integration</span> deploys in
+				multiple IFLMAP worker nodes. Polling is triggered from only one of the worker
+				nodes. The message monitoring currently displays the process status from the worker
+				nodes where the <span class="ph uicontrol">Scheduler</span> is not started. This results in the
+				message monitor displaying messages with less than a few milliseconds, where the
+				schedule was not triggered. These entries contain
+					<span class="ph uicontrol">firenow=true</span> in the log. You can ignore these
+				entries.</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Double-click the channel that you want to configure on the <span class="ph uicontrol">Model
+						Configuration</span> tab page.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">On the <span class="ph uicontrol">General</span> tab page, choose <span class="ph uicontrol">Browse</span> in the
+						<span class="ph uicontrol">Adapter Type</span> screen area.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Select <span class="ph uicontrol">Ariba</span> in the <span class="ph uicontrol">Choose
+						Adapter</span> window and choose <span class="ph uicontrol">OK</span>.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Choose the <span class="keyword uilabel">Adapter-Specific</span> tab page and enter the details as shown in
+					the table below: </span>
+				<div class="itemgroup info">
+					<div class="p">
+						
+<div class="table-wrapper tablenoborder"><table summary="" id="loio4c56e943ad2f4228aac5da7e62868fc9__table_xjj_tb5_b4" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Parameters and Values of a Channel for the Ariba Adapter </span></caption>
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+								
+								
+								
+								<thead class="thead" align="left">
+									<tr class="row">
+										<th class="entry" valign="top" width="33.33333333333333%" id="d1034522e133">Section</th>
+
+										<th class="entry" valign="top" width="33.33333333333333%" id="d1034522e136">Parameter</th>
+
+										<th class="entry" valign="top" width="33.33333333333333%" id="d1034522e139">Description</th>
+
+									</tr>
+
+								</thead>
+
+								<tbody class="tbody">
+									<tr class="row">
+										<td class="entry" rowspan="9" valign="top" width="33.33333333333333%" headers="d1034522e133 ">Connection Details</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">
+											<p class="p"> Connectivity URL</p>
+
+										</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">
+											<p class="p">You need URL to which the cXML requests are posted to/polled from or you need profile
+												URL to connect to Ariba network. </p>
+
+											<p class="p">If you do not have actual end-point URL, then you
+												need to enter <kbd class="ph userinput">/getprofile</kbd> at
+												the end of profile URL. This in turn sends a profile
+												request to this URL which internally takes care of
+												sending payload to the correct URL. </p>
+
+										</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">Connection Mode</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">Select one of the options based on the description given
+												below:<p class="p"><span class="ph uicontrol">Test</span> - If you
+												select this option, the Ariba Network will not
+												process the messages, and treats the messages as
+												test data.</p>
+<p class="p"><span class="ph uicontrol">Production</span> -
+												If you select this option, the Ariba Network
+												processes the messages.</p>
+ Default deployment mode
+											is “Production”.</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">Account Type</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">Select one of the options based on the description given
+												below:<p class="p"><span class="ph uicontrol">Buyer</span> - If you
+												hold a buyer account on the Ariba
+												Network.</p>
+<p class="p"><span class="ph uicontrol">Supplier</span> -
+												If you hold a supplier account on the Ariba
+												Network.</p>
+</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">Request Type (this field is available only in the sender channel)</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">
+											<p class="p">Select one of the options based on the request types of buyer/supplier that you want
+												to poll. </p>
+
+										</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">Maximum Messages (this field is available only in the sender channel)</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 "><p class="p">Enter the number of messages to be polled from the Ariba Network for the
+												above-selected <span class="ph uicontrol">Request Type</span>.
+											</p>
+The maximum allowed value is 200.</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">Authentication Domain</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">
+											<p class="p">Select one of the options based on the description given below:</p>
+
+											<p class="p"><span class="ph uicontrol">Network ID</span>: A unique alphanumeric value assigned to every
+												organization registered on Ariba SN; for example,
+												AN01000000001.</p>
+
+											<p class="p"><span class="ph uicontrol">Network User Id</span>: A login name of an Ariba SN user. These names
+												typically have the format of an e-mail address; for
+												example, xyz@abc.com.</p>
+
+										</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">Authentication</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">Select one of the options based on the description given below:<p class="p"><span class="ph uicontrol">Shared
+												Key</span>: If you have set the shared key in
+												your Ariba account.</p>
+<p class="p"><span class="ph uicontrol">Client
+												Certificate</span>: If you have configured
+												your certificate from a trusted certificate
+												authority in  the Ariba account. </p>
+</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">
+											<p class="p">Credential Name</p>
+
+										</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 "><p class="p">Enter a name. This name is treated as an alias to the secure store where the
+												user credentials are deployed. This value should be
+												set according to the Authentication selected above.
+												If you have selected <span class="ph uicontrol">Client
+												Certificate</span>Client, then enter the
+												alias details in the <span class="ph uicontrol">Private Key
+												Alias</span> field.</p>
+This alias is used to
+											identify the keystore credentials deployed on the <span class="ph pname">SAP Cloud Platform
+                        Integration</span> account.<p class="p">For <span class="ph uicontrol">User</span>, you can
+												enter <kbd class="ph userinput">Network User Id</kbd> or
+												<kbd class="ph userinput">Network ID</kbd>, depending on
+												the selected option for<span class="ph uicontrol"> Authentication
+												Domain</span>. </p>
+<p class="p">For
+												<span class="ph uicontrol">Password</span>, enter the shared
+												key.</p>
+</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">
+											<p class="p">Ariba Network ID</p>
+
+										</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">
+											<p class="p">Enter the ID that is associated with the Ariba Network. Default value is
+												AN01000000001.</p>
+
+										</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" rowspan="3" valign="top" width="33.33333333333333%" headers="d1034522e133 ">Processing Details</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">cXML version</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">
+											<p class="p">Default value provided by SAP is 1.2.025. If you are entering the version, it must be
+												above 1.2.018. </p>
+
+										</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">User Agent</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">Enter the user agent details. The convention is a textual string representing the
+											client system that is conducting the cXML conversation.
+											It must consist of the software company name and the
+											product name.</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">
+											<p class="p">Language</p>
+
+										</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 "><p class="p">Language that is used for constructing the cXML conversation.</p>
+The only
+											supported language is EN.</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" rowspan="8" valign="top" width="33.33333333333333%" headers="d1034522e133 ">
+											<p class="p">Scheduler (only valid for the sender channel)</p>
+
+										</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">Run Once</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">Run a data polling process immediately after deploying the project.</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">On Date</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">Specific date on which the data polling process has to be initiated to fetch data
+											from the Ariba system.</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">Daily</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">Run message polling every day to fetch data from the Ariba system.</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">
+											<p class="p">Weekly</p>
+
+										</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">
+											<p class="p">Run the message polling every week on specified days of the week to fetch data from
+												the SuccessFactors system.</p>
+
+										</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">
+											<p class="p">Monthly on Day</p>
+
+										</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">Execute the message polling every month on the specified date to fetch data from
+											the Ariba server. <div class="note note"><span class="notetitle">Note</span> If the specified date is not
+												applicable in a particular month, the data polling
+												is not executed in that month. For example, if the
+												30th day is selected, polling will not be executed
+												in the month of February, as 30th is not a valid day
+												for February.</div>
+</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">
+											<p class="p">Time</p>
+
+										</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">The time at which the data polling cycle has to be initiated. For example, if you
+											want the data polling to be started at 4:10 p.m., enter
+											16:10. Note that the time must be entered in 24-hour
+											format.</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">Every <kbd class="ph userinput">xx</kbd> minutes between
+												<kbd class="ph userinput">HH</kbd> hours and
+												<kbd class="ph userinput">HH</kbd> hours</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">The connector fetches data from the Ariba system every ‘xx’ minutes between HH
+											hours and HH hours.<div class="note note"><span class="notetitle">Note</span> If you want the polling to run
+												for the entire day, enter 1 and 59.</div>
+</td>
+
+									</tr>
+
+									<tr class="row">
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e136 ">Time Zone</td>
+
+										<td class="entry" valign="top" width="33.33333333333333%" headers="d1034522e139 ">Select the time zone that you want to use as reference for scheduling the data
+											polling cycle.</td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+</div>
+
+					</div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save the configuration of the channel editors.</span>
+				<div class="itemgroup info">
+					<div class="note note"><span class="notetitle">Note</span> 
+						<div class="p">You can use headers and properties to set values for <span class="ph uicontrol">Ariba Network
+								URL</span>, <span class="ph uicontrol">Credential Name</span>,
+								<span class="ph uicontrol">Private Key Alias</span> and <span class="ph uicontrol">Ariba
+								Network ID</span>. You can enter values in the following
+								format:<ul class="ul" id="loio4c56e943ad2f4228aac5da7e62868fc9__ul_mhn_lrn_dt">
+								<li class="li">${header.url}</li>
+
+								<li class="li">${property.credentialName}</li>
+
+							</ul>
+</div>
+
+					</div>
+
+				</div>
+			</li>
+</ol>
+
+		<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div>In the <span class="keyword uilabel">Model Configuration</span> editor, right-click and choose
+				<span class="ph uicontrol">Deploy Integration Content</span> to apply the configuration
+			settings and run the integration flow. </div>
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="org.eclipse.pde.swt"
+  		style="css/style.css"
+  		name="SAP Cloud Platform" path="samples/@">
+		<group id="neo-samples-group"
+			label="SAP Cloud Platform"
+			style-id="content-group">
+       		<link label="Samples"
+       			url="http://org.eclipse.ui.intro/openBrowser?url=https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/937ce0d172bb101490cf767db0e91070.html"
+       			id="neo-link"
+       			style-id="content-link">
+          		<text>Explore the core functionality of SAP Cloud Platform with sample applications</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>

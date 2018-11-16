@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Configure Communication Channel with ODC Adapter</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio3cdbc29ca2b641738513ab8665bab9fd">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Configure Communication Channel with ODC Adapter</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<div class="p">
+				<ul class="ul" id="loio3cdbc29ca2b641738513ab8665bab9fd__ul_uv3_rqp_gr">
+					<li class="li">
+						<p class="p">You have logged into your customer workspace in <span class="ph pname">SAP Cloud Platform
+                        Integration</span> web
+							application.</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">You have assigned the ODC adapter to the communication channel.</p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<p class="p">The ODC adapter enables you to communicate with systems that expose data through the OData
+				Channel for SAP Gateway.</p>
+
+			<div class="note note"><span class="notetitle">Note</span> The ODC adapter is available only in the receiver channel.</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph uicontrol">Adapter Specific</span> tab page.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Provide values in fields based on description in table.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio3cdbc29ca2b641738513ab8665bab9fd__choicetable_jcb_2f4_bx">
+<thead><tr><th valign="bottom" align="left" id="d1494946e64-option">
+							<p class="p">Field</p>
+
+						</th>
+<th valign="bottom" align="left" id="d1494946e64-desc">
+							<p class="p">Description</p>
+
+						</th></tr></thead>
+<tbody>
+					
+					<tr class="strow chrow">
+						<td valign="top" headers="d1494946e64-option" id="d1494946e83" class="stentry choption" width="50%"><strong>
+							<p class="p">Address</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1494946e64-desc d1494946e83" class="stentry chdesc" width="50%">
+							<p class="p">URL of the SAP NetWeaver Gateway OData Channel that you are
+								accessing</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1494946e64-option" id="d1494946e98" class="stentry choption" width="50%"><strong>
+							<p class="p">Client</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1494946e64-desc d1494946e98" class="stentry chdesc" width="50%">
+							<p class="p">Backend sytem client that you want to connect to</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1494946e64-option" id="d1494946e113" class="stentry choption" width="50%"><strong>
+							<p class="p">Namespace</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1494946e64-desc d1494946e113" class="stentry chdesc" width="50%">
+							<p class="p">Namespace of the service</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1494946e64-option" id="d1494946e128" class="stentry choption" width="50%"><strong>
+							<p class="p">Service Name</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1494946e64-desc d1494946e128" class="stentry chdesc" width="50%">
+							<p class="p">Name of the service</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1494946e64-option" id="d1494946e144" class="stentry choption" width="50%"><strong>
+							<p class="p">Version</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1494946e64-desc d1494946e144" class="stentry chdesc" width="50%">
+							<p class="p">Version of the service</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1494946e64-option" id="d1494946e159" class="stentry choption" width="50%"><strong>
+							<p class="p">Credential Name</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1494946e64-desc d1494946e159" class="stentry chdesc" width="50%">
+							<p class="p">Alias that you used while deploying basic authentication
+								credentials</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1494946e64-option" id="d1494946e174" class="stentry choption" width="50%"><strong>
+							<p class="p">Operation</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1494946e64-desc d1494946e174" class="stentry chdesc" width="50%">
+							<p class="p">Select the operation that you want to perform from the dropdown
+								list.</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d1494946e64-option" id="d1494946e189" class="stentry choption" width="50%"><strong>
+							<p class="p">Resource Path</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d1494946e64-desc d1494946e189" class="stentry chdesc" width="50%">
+							<p class="p">Path to the resource that you want to perform the operation on</p>
+
+						</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In the <var class="keyword varname field">&lt;EDMX&gt;</var> field, choose <span class="ph uicontrol">Select</span>.</span>
+				<div class="itemgroup stepresult">
+					<p class="p">You see a prompt to connect to the system.</p>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you have already added a system, perform the following substeps:</span>
+				<ol type="a" class="ol substeps" id="loio3cdbc29ca2b641738513ab8665bab9fd__substeps_urk_wfp_bx">
+					<li class="li substep">
+						<span class="ph cmd">In the <var class="keyword varname field">&lt;System&gt;</var> field, select the system from dropdown
+							list.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">If you want to use basic authentication, in <var class="keyword varname field">&lt;Authenticate
+								Using&gt;</var> field, choose <kbd class="ph userinput">Basic
+								Authentication</kbd> from dropdown list. Provide username and
+							password in the relevant fields and choose
+								<span class="ph uicontrol">Connect</span>.</span>
+					</li>
+
+					<li class="li substep">
+						<span class="ph cmd">If you want to use the deployed credentials, in <var class="keyword varname field">&lt;Authenticate
+								Using&gt;</var> field, choose <kbd class="ph userinput">Deployed
+								Credentials</kbd> from dropdown list. In <var class="keyword varname field">&lt;Credential
+								Name&gt;</var> field, enter the alias you used while deploying basic
+							authentication credentials and choose
+							<span class="ph uicontrol">Connect</span>.</span>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">If you want to connect to a new system, perform the following substeps:</span>
+				<ol type="a" class="ol substeps" id="loio3cdbc29ca2b641738513ab8665bab9fd__substeps_isd_f3p_bx">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Choose <img class="image" id="loio3cdbc29ca2b641738513ab8665bab9fd__image_swr_f3p_bx" src="loio89b84958486548d299d68c56c0516e27_LowRes.png"/>.</span>
+					</li>
+
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Provide values in fields based on description in table and choose
+								<span class="ph uicontrol">Connect</span>.</span>
+						<div class="itemgroup info">
+							<div class="table-wrapper"><table summary="" id="loio3cdbc29ca2b641738513ab8665bab9fd__simpletable_fwv_p3p_bx" border="1" class="simpletable"><tr class="sthead">
+									<th valign="bottom" align="left" id="d1494946e302" class="stentry" width="50%">
+										<p class="p">Field</p>
+
+									</th>
+
+									<th valign="bottom" align="left" id="d1494946e308" class="stentry" width="50%">
+										<p class="p">Description</p>
+
+									</th>
+
+								</tr>
+<tr class="strow">
+									<td valign="top" headers="d1494946e302" class="stentry">
+										<p class="p">System</p>
+
+									</td>
+
+									<td valign="top" headers="d1494946e308" class="stentry">
+										<p class="p">System name that you want to specify. You can use this
+											name as reference for selecting the same system for
+											future use.</p>
+
+									</td>
+
+								</tr>
+<tr class="strow">
+									<td valign="top" headers="d1494946e302" class="stentry">
+										<p class="p">Address</p>
+
+									</td>
+
+									<td valign="top" headers="d1494946e308" class="stentry">
+										<p class="p">URL of the system that you are connecting to</p>
+
+									</td>
+
+								</tr>
+<tr class="strow">
+									<td valign="top" headers="d1494946e302" class="stentry">
+										<p class="p">Client</p>
+
+									</td>
+
+									<td valign="top" headers="d1494946e308" class="stentry">
+										<p class="p">Backend system client that you are connecting to</p>
+
+									</td>
+
+								</tr>
+<tr class="strow">
+									<td valign="top" headers="d1494946e302" class="stentry">
+										<p class="p">Namespace</p>
+
+									</td>
+
+									<td valign="top" headers="d1494946e308" class="stentry">
+										<p class="p">Namespace of the service</p>
+
+									</td>
+
+								</tr>
+<tr class="strow">
+									<td valign="top" headers="d1494946e302" class="stentry">
+										<p class="p">Service Name</p>
+
+									</td>
+
+									<td valign="top" headers="d1494946e308" class="stentry">
+										<p class="p">Name of the service</p>
+
+									</td>
+
+								</tr>
+<tr class="strow">
+									<td valign="top" headers="d1494946e302" class="stentry">
+										<p class="p">Version</p>
+
+									</td>
+
+									<td valign="top" headers="d1494946e308" class="stentry">
+										<p class="p">Version of the service</p>
+
+									</td>
+
+								</tr>
+<tr class="strow">
+									<td valign="top" headers="d1494946e302" class="stentry">
+										<p class="p">Authenticate Using</p>
+
+									</td>
+
+									<td valign="top" headers="d1494946e308" class="stentry">
+										<p class="p">Authentication method you want to use for connecting to
+											the system. You can choose <kbd class="ph userinput">Basic
+												Authentication</kbd> or <kbd class="ph userinput">Deployed
+												Credentials</kbd>.</p>
+
+									</td>
+
+								</tr>
+</table></div>
+
+						</div>
+					</li>
+
+				</ol>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the integration flow.</span>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet
+      title="Creating ABAP Projects">
+   <intro
+         href="/org.eclipse.platform.doc.user/reference/ref-cheatsheets.htm">
+      <description>
+         This tutorial demonstrates step by step how to set up your development environment when you start working with ABAP Development Tools.
+<br/> 
+<br/>
+To begin the development process, you first need to establish a back-end system connection and create a corresponding ABAP project. An <b> ABAP project </b> is used to manage the <b>system connection</b> on the frontend and also serves there as a <b>container for all development objects </b> that are located in the backend system.   
+<br/>
+<br/>
+By the end of this tutorial, you will be able to:
+<br/>
+<b>&gt; </b>  Create new ABAP projects from scratch
+<br/>
+<b>&gt; </b>  Understand the navigation tree of ABAP projects 
+<br/>  
+<b>&gt; </b>  Add individual packages to your favorites 
+<br/> 
+<b>&gt; </b>  Work in multiple ABAP development systems in parallel. 
+<br/>
+<br/>
+      </description>
+   </intro>
+   <item
+         skip="true"
+         title="Before you Start …">
+      <description>
+         Make sure that a corresponding entry for the ABAP system you wish to work with is already defined in the <b>SAP Logon Pad</b> of your desktop.   
+<br/>
+<br/>
+<b>NOTE</b>
+<br/>
+For the sake of convenience, you can use the single sign-on (SSO) option for system authentication.  
+<br/>
+</description>
+   </item>
+   <item
+         href="/org.eclipse.platform.doc.user/concepts/concepts-4.htm"
+         skip="true"
+         title="Open the ABAP Perspective">
+      <description>
+         To switch to the ABAP perspective (if not already done), choose <b>Window &gt; Open Perspective &gt; Other… &gt; ABAP </b> in the menu bar or choose &quot;Click to perform&quot;.
+      </description>
+      <command
+            required="false"
+            serialization="org.eclipse.ui.perspectives.showPerspective(org.eclipse.ui.perspectives.showPerspective.perspectiveId=com.sap.adt.ui.AbapPerspective)"/>
+   </item>
+   <item
+         title="Create an ABAP Project" dialog="true">
+      <description>
+         On the frontend, an ABAP project serves as container for the development objects that are stored in the backend ABAP system. 
+<br/>
+ To create a new ABAP project, you first need to specify the connection data for the ABAP system you wish to work with. 
+<br/>
+<br/>
+Proceed as follows: 
+<br/>
+      </description>
+      <subitem
+            label="To launch the ABAP project creation wizard, choose &quot;New &quot; in the toolbar and then select &quot;ABAP&quot; &gt; &quot;ABAP Project&quot;, or choose &quot;Click to perform&quot;."
+            skip="false">
+         <command
+               required="false"
+               serialization="org.eclipse.ui.newWizard(newWizardId=com.sap.adt.abapProjectWizard)"/>
+      </subitem>
+      <subitem
+            label="In the &quot;Connection&quot; field, enter the ABAP system or choose &quot;Browse …&quot; for system selection. Then choose &quot;Next&quot;.">
+      </subitem>
+      <subitem
+            label="Enter the logon data, such as client, user, password (not required for SSO system connection), and the logon language. Then choose &quot;Next&quot;.">     
+            </subitem>
+      <subitem
+            label="Accept the suggested values for the project name and the favorite packages. Then choose &quot;Finish.">
+      </subitem>
+   </item>
+   <item
+         title="Browse the Project Structure">
+      <description>
+         1. To check the results of the last procedure, switch to the <b>Project Explorer</b> and expand the navigation tree of the new project. 
+<br/>
+<br/>
+2. Verify that the project structure already includes the following nodes:
+<br/>
+<b>&gt; Favorite Packages</b> – defines the root of your ABAP project. Initially it contains the temporary package $TMP.  
+<br/>
+<b>&gt; System Library</b> – contains all packages that are located in the system 
+<br/>
+<br/>
+3. Expand the navigation tree of a package of your choice and search for development objects, such as global ABAP classes or function modules.  
+<br/>
+      </description>
+   </item>
+   <item
+         title="Add a Package to Favorites">
+      <description>
+         1. Expand the navigation tree of the <b>System Library</b> node and search for a package you wish to work with.
+<br/>
+<br/>
+2. Select the package node, open the context menu, and choose <b>Add to Favorites</b>.  
+<br/>
+      </description>
+   </item>
+   <item
+         skip="true"
+         title="Create Yet Another ABAP Project">
+      <description>
+         To be able to work in multiple ABAP systems in parallel, repeat the steps above and create another project that is linked to a <b>different backend ABAP system</b>.
+<br/> 
+However, now modify the creation options a little. 
+<br/>
+For example , you can …
+<br/>
+&gt;  change the project name 
+<br/>
+and
+<br/>
+&gt; add a package to your favorites during project creation.  
+<br/> </description>
+      </item>   
+      
+   <item
+         skip="false"
+         title="Open a Separate Window for Each New Project - Optional">
+
+      <command
+            required="false"
+            serialization="org.eclipse.ui.window.newWindow"/>
+      <description>
+    By default, new (ABAP) projects are opened in the current Workbench window.  
+<br/>
+<br/>
+<b>TIP</b>
+<br/>
+However, if you are working with different back-end systems in parallel and have, in each case, a number of project resources open, you can easily become confused. 
+In such a case, it could be helpful for you to open a separate Workbench window for each new ABAP project. In this way, you can switch back and forth comfortably between projects from different systems.
+<br/>
+<br/>
+To change this default behavior, choose <b>Window &gt; New Window</b>, or choose &quot;Click to perform&quot;.  
+               </description>
+   </item>
+
+</cheatsheet>

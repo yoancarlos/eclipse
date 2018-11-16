@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content="The integration runtime supports the following two kinds of (internal) data representations: binary data and string (sequence of characters). Conversions between these representations may cause issues that can result in erroneous message processing."/>
+<meta name="description" content="The integration runtime supports the following two kinds of (internal) data representations: binary data and string (sequence of characters). Conversions between these representations may cause issues that can result in erroneous message processing."/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Avoiding Encoding Issues</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio3018480fa8ba40a7a5eda8a21b11e67f">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Avoiding Encoding Issues</h1>
+
+	
+	<div class="body conbody"><p class="shortdesc">The integration runtime supports the following two kinds of (internal) data
+		representations: binary data and string (sequence of characters). Conversions between these
+		representations may cause issues that can result in erroneous message processing. </p>
+
+		<p class="p">This topic lists the main measures to help you avoid any such issues.</p>
+
+		<p class="p">The <span class="ph uicontrol">Content Modifier</span> step provides the following options for configuring
+			how data is to be encoded (based on the <samp class="ph codeph">CamelCharsetName</samp> element): </p>
+
+		<ul class="ul" id="loio3018480fa8ba40a7a5eda8a21b11e67f__ul_xvb_2mn_tt">
+			<li class="li">
+				<p class="p">Configuring the <span class="ph uicontrol">Exchange Property</span>
+				</p>
+
+			</li>
+
+			<li class="li">
+				<p class="p">Configuring the <span class="ph uicontrol">Message Header</span></p>
+
+			</li>
+
+		</ul>
+
+		<div class="section"><div class="section_title">General Recommendations</div><div type="General Recommendations">
+			
+			<p class="p">As far as applicable for your scenario, try to implement the following measures:</p>
+
+			
+<div class="table-wrapper tablenoborder"><table summary="" id="loio3018480fa8ba40a7a5eda8a21b11e67f__table_llw_gnn_tt" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1: Recommendations</span></caption>
+<colgroup><col width="33.333333333333336%"/><col width="33.333333333333336%"/><col width="33.333333333333336%"/></colgroup>
+
+					
+					
+					
+					<thead class="thead" align="left">
+						<tr class="row">
+							<th class="entry" valign="top" width="33.33333333333333%" id="d1155006e73">
+								<p class="p">Recommendation</p>
+
+							</th>
+
+							<th class="entry" valign="top" width="33.33333333333333%" id="d1155006e79">Required Tasks</th>
+
+							<th class="entry" valign="top" width="33.33333333333333%" id="d1155006e82">
+								<p class="p">Conditions and Challenges</p>
+
+							</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr class="row">
+							<td class="entry" valign="top" width="33.33333333333333%" headers="d1155006e73 ">
+								<p class="p"><span class="ph emphasis emphasis">Use UTF-8 character encoding only</span>
+								</p>
+
+								<p class="p">Try to use UTF-8 encoding for all binary character
+									representations throughout the scenario. </p>
+
+							</td>
+
+							<td class="entry" valign="top" width="33.33333333333333%" headers="d1155006e79 ">
+								<p class="p">You do not have to set any <samp class="ph codeph">CamelCharsetName</samp> property or header (as UTF-8
+									is the default), or any XML declaration (as UTF-8 is also the
+									default for XML). </p>
+
+							</td>
+
+							<td class="entry" valign="top" width="33.33333333333333%" headers="d1155006e82 ">
+								<p class="p">Make sure that all mappings use UTF-8 for output encoding. If you do not define an output
+									encoding, UTF-8 is used as the default. </p>
+
+								<p class="p">The challenge with this solution is that it requires all your communication partners to
+									send and receive data in UTF-8 character encoding (which,
+									although not uncommon, is unfortunately not always the case). </p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="33.33333333333333%" headers="d1155006e73 ">
+								<p class="p"><span class="ph emphasis emphasis">Use a fixed character encoding throughout the whole
+										integration flow</span></p>
+
+								<p class="p">If your communication partners require a character encoding for
+									communication other than UTF-8 (for example, ISO-8859-15), and
+									this character encoding is the same for all communication
+									partners, you can set up your integration flow to use that
+									character encoding.</p>
+
+							</td>
+
+							<td class="entry" valign="top" width="33.33333333333333%" headers="d1155006e79 ">
+								<p class="p">Perform the following steps:</p>
+
+								<ul class="ul" id="loio3018480fa8ba40a7a5eda8a21b11e67f__ul_zx1_d4n_tt">
+									<li class="li">
+										<p class="p">Set the <samp class="ph codeph">CamelCharsetName</samp> exchange
+											property to your character set. </p>
+
+									</li>
+
+									<li class="li">
+										<p class="p">Make sure that all your mappings have the required
+											output. Make sure that you do not remove the XML
+											declaration for binary XML representation as this could
+											cause the parsing of binary XML content to fail. </p>
+
+									</li>
+
+								</ul>
+
+							</td>
+
+							<td class="entry" valign="top" width="33.33333333333333%" headers="d1155006e82 ">
+								<p class="p">The challenge with this solution is that if you have more than
+									one communication partner, it is rather unlikely that they all
+									agree on a character encoding different from UTF-8.</p>
+
+							</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="33.33333333333333%" headers="d1155006e73 ">
+								<p class="p"><span class="ph emphasis emphasis">Avoid binary-to-string conversions</span></p>
+
+							</td>
+
+							<td class="entry" valign="top" width="33.33333333333333%" headers="d1155006e79 ">
+								<p class="p">If you are working with XML data and you are communicating with different communication
+									partners using different character encodings, one way to avoid
+									character encoding issues is to avoid the serialized string
+									representation of XML documents altogether. </p>
+
+								<p class="p">In this case, the content of the <samp class="ph codeph">CamelCharsetName</samp> is irrelevant as no
+									string-to-binary conversion occurs (only XML parsing and
+									marshaling). </p>
+
+							</td>
+
+							<td class="entry" valign="top" width="33.33333333333333%" headers="d1155006e82 ">
+								<p class="p">If using this solution, the integration flow developer must not modify a message body
+									that contains an XML document with a content modifier or a
+									string-based script. </p>
+
+								<p class="p">The filter and XSLT mapping steps both have the option to provide string output. This
+									option should only be used if the result is a non-XML string,
+									not an XML document or fragment. </p>
+
+								<p class="p">The integration developer must therefore exercise caution and due care if applying these
+									measures. </p>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+</div>
+
+		</div></div>
+
+	</div>
+
+	<div class="related-links"> 
+<div class="relinfo"><div class="relinfotitle ">Related Information</div>
+<div><a class="link" href="083c971d418c44848d45b865eafe5b4c.html">Character Encodings: Background Information</a></div>
+</div>
+</div>
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>

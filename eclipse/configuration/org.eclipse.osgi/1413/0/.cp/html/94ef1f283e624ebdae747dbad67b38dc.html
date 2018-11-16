@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../css/documentation.css"/>
+<title>Define Gather</title>
+<!--[if lte IE 7]><style>
+      .codeblock{
+          overflow:visible;
+      }</style><![endif]-->
+</head>
+<body class="" id="loio94ef1f283e624ebdae747dbad67b38dc">
+<div id="wrapper"><div id="container">
+
+	<h1 class="title topictitle1">Define Gather</h1>
+
+	
+	<div class="body taskbody"><p class="shortdesc"/>
+
+		<div class="section prereq p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div>
+			<ul class="ul" id="loio94ef1f283e624ebdae747dbad67b38dc__ul_yhr_jr1_lt">
+				<li class="li">
+					<p class="p">You have accessed the customer workspace in SAP HCI web application.</p>
+
+				</li>
+
+				<li class="li">
+					<p class="p">You are editing the integration flow in the editor.</p>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+		<div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Context</h2></div>
+			<div class="p">The Gather step enables you to merge messages from more than one route in an integration
+				process. You define conditions based on the type of messages that you are gathering
+				using the Gather step. You can choose to gather:<ul class="ul" id="loio94ef1f283e624ebdae747dbad67b38dc__ul_pym_qp1_lt">
+					<li class="li">
+						<p class="p">XML messages of different format</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">XML messages of the same format</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">Plain text messages</p>
+
+					</li>
+
+				</ul>
+</div>
+
+			<div class="p">Based on this, you choose the strategy to combine the two messages. <ul class="ul" id="loio94ef1f283e624ebdae747dbad67b38dc__ul_dt2_5p1_lt">
+					<li class="li">
+						<p class="p">For XML messages of the same format, you can combine without any
+							conditions (multimapping format) or specify the XPath to the node at
+							which the messages have to be combined</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">For XML messages of different formats, you can only combine the messages
+							For plain text messages, you can only specify concatenation as the
+							combine strategy</p>
+
+					</li>
+
+					<li class="li">
+						<p class="p">Specify valid xpath expression that includes namespace prefixes if
+							incoming payload contains namespace declarations, including default
+							namespace declarations</p>
+
+					</li>
+
+				</ul>
+</div>
+
+			<p class="p">If your incoming payload contains namespace declarations including default namespace,
+				ensure that you specify xpath with namespace prefixes. Also ensure that the
+				namespace prefix mapping is defined in the runtime configuration. If the xpath you
+				have defined does not exist in any of the branches of the incoming XML, the scenario
+				fails with an exception.</p>
+
+			<div class="p">Consider the following XML:<div class="note sap-samplecodeblock samplecode"><span class="samplecodetitle">Sample Code</span> 
+					<div class="div_pre_codeblock"><pre class="pre codeblock prettyprint">&lt;root xmlns="http:defaultnamespace.com"&gt;
+                &lt;f:table xmlns:f="http://www.w3schools.com/furniture"&gt;
+                                &lt;f:name&gt;African Coffee Table&lt;/f:name&gt;
+                                &lt;f:width&gt;80&lt;/f:width&gt;
+                                &lt;f:length&gt;120&lt;/f:length&gt;
+                &lt;/f:table&gt;
+                &lt;table&gt;
+                                &lt;name&gt;African Coffee Table&lt;/name&gt;
+                                &lt;width&gt;80&lt;/width&gt;
+                                &lt;length&gt;120&lt;/length&gt;
+                &lt;/table&gt;
+&lt;/root&gt;</pre></div>
+
+				</div>
+</div>
+
+			<div class="p"><span class="ph emphasis emphasis">f</span> and <span class="ph emphasis emphasis">d</span> are the prefixes defined in the
+					<span class="ph uicontrol">Namespace Mapping</span> field of Runtime Configuration and
+				mapped to the namespaces http://www.w3schools.com/furniture and
+				http:defaultnamespace.com respectively. Examples of valid xpaths for the above XML
+					are:<ul class="ul" id="loio94ef1f283e624ebdae747dbad67b38dc__ul_r4k_nq1_lt">
+					<li class="li">
+						<p class="p"><samp class="ph codeph">//f:table</samp></p>
+
+					</li>
+
+					<li class="li">
+						<p class="p"><samp class="ph codeph">/d:root/f:table</samp></p>
+
+					</li>
+
+					<li class="li">
+						<p class="p"><samp class="ph codeph"> /d:root/d:table</samp></p>
+
+					</li>
+
+				</ul>
+</div>
+
+			<div class="p">
+				<div class="note note"><span class="notetitle">Note</span> 
+					<p class="p">You can only edit the properties of gather and the integration elements of
+						the integration flow that support editing. Modeling palette is not available
+						for integration flows containing gather.</p>
+
+				</div>
+
+			</div>
+
+		</div>
+		<div class="ol steps tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Choose the gather element you want to configure.</span>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Incoming Format</span> dropdown list, select value based on
+					description in table.</span>
+				
+<div class="table-wrapper"><table border="1" frame="border" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder" id="loio94ef1f283e624ebdae747dbad67b38dc__choicetable_kwn_sr1_lt">
+<thead><tr><th valign="bottom" align="left" id="d3200789e153-option">
+							<p class="p">Value</p>
+
+						</th>
+<th valign="bottom" align="left" id="d3200789e153-desc">
+							<p class="p">Description</p>
+
+						</th></tr></thead>
+<tbody>
+					
+					<tr class="strow chrow">
+						<td valign="top" headers="d3200789e153-option" id="d3200789e172" class="stentry choption" width="50%"><strong>
+							<p class="p">XML (Same Format)</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d3200789e153-desc d3200789e172" class="stentry chdesc" width="50%">
+							<p class="p">If messages from different routes are of the same format</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d3200789e153-option" id="d3200789e187" class="stentry choption" width="50%"><strong>
+							<p class="p">XML (Different Format)</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d3200789e153-desc d3200789e187" class="stentry chdesc" width="50%">
+							<p class="p">If messages from different routes are of the different format</p>
+
+						</td>
+
+					</tr>
+
+					<tr class="strow chrow">
+						<td valign="top" headers="d3200789e153-option" id="d3200789e202" class="stentry choption" width="50%"><strong>
+							<p class="p">Plain Text</p>
+
+						</strong></td>
+
+						<td valign="top" headers="d3200789e153-desc d3200789e202" class="stentry chdesc" width="50%">
+							<p class="p">If messages from different routes are of the plain text format</p>
+
+						</td>
+
+					</tr>
+
+				</tbody></table></div>
+
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">In <span class="ph uicontrol">Aggregation Algorithm</span> dropdown list, select value
+					based on description in table.</span>
+				<div class="itemgroup info">
+					<div class="table-wrapper"><table summary="" id="loio94ef1f283e624ebdae747dbad67b38dc__simpletable_wl3_1s1_lt" border="1" class="simpletable"><tr class="sthead">
+							<th valign="bottom" align="left" id="d3200789e231" class="stentry" width="20%">
+								<p class="p">Incoming Format</p>
+
+							</th>
+
+							<th valign="bottom" align="left" id="d3200789e237" class="stentry" width="20%">
+								<p class="p">Aggregation Algorithm</p>
+
+							</th>
+
+							<th valign="bottom" align="left" id="d3200789e243" class="stentry" width="20%">
+								<p class="p">Description</p>
+
+							</th>
+
+							<th valign="bottom" align="left" id="d3200789e249" class="stentry" width="20%">
+								<p class="p">Additional Fields</p>
+
+							</th>
+
+							<th valign="bottom" align="left" id="d3200789e255" class="stentry" width="20%">
+								<p class="p">Description</p>
+
+							</th>
+
+						</tr>
+<tr class="strow">
+							<td valign="top" headers="d3200789e231" class="stentry">
+								<p class="p">XML (Same Format)</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e237" class="stentry">
+								<p class="p">Combine</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e243" class="stentry">
+								<div class="p">Combine the incoming messages without any conditions. The
+									messages are combined in Multimapping format.<div class="note note"><span class="notetitle">Note</span> 
+										<p class="p">In case you are using the mapping step to map the output
+											of this strategy you can have the source XSD in the LHS
+											and specify the Occurrence as 0..Unbounded.</p>
+
+									</div>
+</div>
+
+							</td>
+
+							<td valign="top" headers="d3200789e249" class="stentry">
+								<p class="p">NA</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e255" class="stentry">
+								<p class="p">NA</p>
+
+							</td>
+
+						</tr>
+<tr class="strow">
+							<td valign="top" headers="d3200789e231" class="stentry">
+								<p class="p"/>
+
+							</td>
+
+							<td valign="top" headers="d3200789e237" class="stentry">
+								<p class="p">Combine at XPath</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e243" class="stentry">
+								<p class="p">Combine the incoming messages at the specified XPath</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e249" class="stentry">
+								<p class="p">Combine from Source (XPath)</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e255" class="stentry">
+								<p class="p">XPath of the node that you are using as reference in the source
+									message to retrieve the information.</p>
+
+							</td>
+
+						</tr>
+<tr class="strow">
+							<td valign="top" headers="d3200789e231" class="stentry">
+								<p class="p"/>
+
+							</td>
+
+							<td valign="top" headers="d3200789e237" class="stentry">
+								<p class="p"/>
+
+							</td>
+
+							<td valign="top" headers="d3200789e243" class="stentry">
+								<p class="p"/>
+
+							</td>
+
+							<td valign="top" headers="d3200789e249" class="stentry">
+								<p class="p">Combine at Target (Path)</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e255" class="stentry">
+								<p class="p">Path to node which would act as the root for combined message</p>
+
+							</td>
+
+						</tr>
+<tr class="strow">
+							<td valign="top" headers="d3200789e231" class="stentry">
+								<p class="p">XML (Different Format)</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e237" class="stentry">
+								<p class="p">Combine</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e243" class="stentry">
+								<div class="p">Combine the incoming messages without any conditions in multi
+									mapping format.<div class="note note"><span class="notetitle">Note</span> 
+										<p class="p">In case you are using the mapping step to map the output
+											of this strategy you can add the XSD’s from the
+											different multicast branches one after another in LHS.
+											The sequence of the messages is important and so this
+											strategy makes sense only with the sequential
+											multicast.</p>
+
+									</div>
+</div>
+
+							</td>
+
+							<td valign="top" headers="d3200789e249" class="stentry">
+								<p class="p">NA</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e255" class="stentry">
+								<p class="p">NA</p>
+
+							</td>
+
+						</tr>
+<tr class="strow">
+							<td valign="top" headers="d3200789e231" class="stentry">
+								<p class="p">Plain Text</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e237" class="stentry">
+								<p class="p">Concatenate</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e243" class="stentry">
+								<p class="p">Concatenate the information from the different sources one after
+									another</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e249" class="stentry">
+								<p class="p">NA</p>
+
+							</td>
+
+							<td valign="top" headers="d3200789e255" class="stentry">
+								<p class="p">NA</p>
+
+							</td>
+
+						</tr>
+</table></div>
+
+				</div>
+			</li>
+<li class="li step stepexpand">
+				<span class="ph cmd">Save or deploy the changes.</span>
+				
+				<div class="itemgroup info">
+					<p class="p">This flow element does not work directly with <span class="ph uicontrol">Router</span>.
+						It is recommended to model the flow using <span class="ph uicontrol">Local Integration
+							Process</span>.</p>
+
+				</div>
+			</li>
+</ol>
+
+	</div>
+
+</div></div><div class="footer" id="custom-footer">
+	<div id="custom-footerSpacer"><hr width="350px" align="left"/></div>
+	<a class="copyright" href="copyright.html">Copyright</a><span class="separator"> | </span><a class="disclaimer" href="disclaimer.html">Important Disclaimers and Legal Information</a>
+</div>
+
+</body>
+</html>
